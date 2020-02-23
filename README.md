@@ -6,8 +6,11 @@ symlink files from a normal git repo into the home folder.
 This repo was initially created using 
 
 `git init --bare $HOME/.cfg`
+
 `alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'`
+
 `config config --local status.showUntrackedFiles no`
+
 `echo "alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'" >> $HOME/.bashrc`
 
 The home directory can now be treated like a normal git repository except using `config` instead of `git`.
