@@ -1,0 +1,70 @@
+snippet / "Fraction" i
+\frac{${1:${VISUAL:numerator}}}{${2:denominator}}${0}
+endsnippet
+
+snippet _ "Subscript" iA
+_{$1}$0
+endsnippet
+
+snippet ^ "Superscript" iA
+^{$1}$0
+endsnippet
+
+snippet E "Power of 10" i
+\times 10^{$1}$0
+endsnippet
+
+snippet sum "Summation" i
+\sum\limits_{${1:n}}^{${2:\infty}}$0
+endsnippet
+
+# Greek
+snippet 'D "Delta" iA
+\Delta
+endsnippet
+
+snippet 'd "delta" iA
+\delta
+endsnippet
+
+snippet 'L "Lambda" iA
+\Lambda
+endsnippet
+
+snippet 'l "lambda" iA
+\lambda
+endsnippet
+
+snippet 'C "Psi" iA
+\Psi
+endsnippet
+
+snippet 'c "psi" iA
+\psi
+endsnippet
+
+snippet sympy "sympy block " w
+sympy $1 sympy$0
+endsnippet
+
+priority 10000
+snippet 'sympy(.*)sympy' "evaluate sympy" wr
+`!p
+from sympy import *
+x, y, z, t = symbols('x y z t')
+k, m, n = symbols('k m n', integer=True)
+f, g, h = symbols('f g h', cls=Function)
+init_printing()
+snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
+    .replace('^', '**') \
+    .replace('{', '(') \
+    .replace('}', ')') + ')')
+`
+endsnippet
+
+snippet version "print version"
+`!p
+import sys
+snip.rv = print(!which python)
+`
+endsnippet
