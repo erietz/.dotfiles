@@ -1,0 +1,36 @@
+# File contains aliases for bash and is sourced in ~/.bashrc
+
+# Search my notes
+nls() { ls -c ~/Dropbox/notebook/content/ | grep "$*" ; }
+
+# Combine PDFs
+joinPDF() { /System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py -o "$*" ; }
+
+# View manpage as postscript
+manp() { man -t "${1}" | open -f -a Skim ; }
+
+# View text file as postscript
+catskim() { cat "${1}" | enscript -p - | open -f -a Skim ; }
+
+# Find pdf in library
+
+libsearch() { grep -i -C 1 "$*" ~/Box/library/bib.bib ; }
+
+# Aliases
+alias chrome="open -a Google\ Chrome"
+alias firefox="open -a Firefox"
+alias pdf="open -a TeXShop"
+alias mvim="open -a MacVim"
+alias gview="sh /Applications/gv/gview.sh"
+alias skim="open -a Skim"
+
+# Popular directories
+alias cdref='cd ~/Dropbox/references/'
+
+# Bookmarks
+alias bookmarks="view ~/Google\ Drive/references/bookmarks.md"
+
+export BIB="$HOME/github/papers/bib.bib"
+
+# Use my modules from anywhere
+export PYTHONPATH="$HOME/github/python/modules/:$PYTHONPATH"
