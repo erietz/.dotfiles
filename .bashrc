@@ -1,8 +1,13 @@
 # File contains configurations for bash and is sourced in ~/.bash_profile
 
-# Aliases 
-if [ -f ~/.bash_local ]; then
-	source ~/.bash_local
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	if [ -f ~/.bash_local/bash_mac ]; then
+		source ~/.bash_local/bash_mac
+	fi
+else
+	if [ -f ~/.bash_local/bash_hpc ]; then
+		source ~/.bash_local/bash_hpc
+	fi
 fi
 
 if [ -f ~/.profile ]; then
