@@ -30,113 +30,122 @@ l2
 r2
 
 # Left window history (oldest to newest):
-d/Users/ethan/Documents/Documents/home
-	life
-3
-d/Users/ethan/Documents/Documents
-	home
-3
-d/Users/ethan/Documents
-	Documents
+d/Users/ethan/Dropbox
+	Notes
 1
+d/Users/ethan/Dropbox/Notes
+	papers
+3
+d/Users/ethan/Dropbox/Notes/papers
+	papers.tex
+5
+d/Users/ethan/Dropbox/Notes
+	papers
+3
+d/Users/ethan/Dropbox/Notes/papers
+	papers.tex
+5
+d/Users/ethan/Dropbox/Notes
+	papers
+3
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	Carbocations.pdf
+2
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+4
+d/Users/ethan/Dropbox/carbocationPapers/references/theory
+	..
+0
+d/Users/ethan/Dropbox/carbocationPapers/references
+	isotopeEffect
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+d/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008_C3H5+.pdf
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	irrelivant
+2
+d/Users/ethan/Dropbox/carbocationPapers
+	Carbocations.pdf
+2
+d/Users/ethan/Dropbox
+	Notes
+1
+d/Users/ethan/Dropbox/Notes
+	esm
+1
+d/Users/ethan/Dropbox/Notes/esm
+	..
+0
+d/Users/ethan/Dropbox/Notes
+	meetings
+2
+d/Users/ethan/Dropbox/Notes/meetings
+	..
+0
+d/Users/ethan/Dropbox/Notes
+	papers
+3
+d/Users/ethan/Dropbox/Notes/papers
+	papers.tex
+5
+d/Users/ethan/Dropbox/Notes
+	esm
+1
+d/Users/ethan/Dropbox/Notes/esm
+	esm_notes.md
+1
+d/Users/ethan/Dropbox/Notes
+	esm
+1
+d/Users/ethan/Dropbox/Notes/esm
+	esm_notes.md
+1
+d/Users/ethan/Dropbox/Notes
+	meetings
+2
+d/Users/ethan/Dropbox/Notes/meetings
+	meetings.md
+1
+d/Users/ethan/Dropbox/Notes
+	meetings
+2
+d/Users/ethan
+	.vifm
+27
+d/Users/ethan/.vifm
+	vifmrc
+5
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	algebra
+2
+d/Users/ethan
+	Desktop
+3
+d/Users/ethan/Desktop
+	Screen Shot 2020-03-05 at 9.21.24 AM.png
+9
 d/Users/ethan
 	Box
-2
-d/Users/ethan/Box
-	classes
-6
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c117_principals
-1
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	students
-16
-d/Users/ethan/Box/classes/2019_spring/c117_principals/students
-	absense
-1
-d/Users/ethan/Box/classes/2019_spring/c117_principals/students/absense
-	2020-02-23_c117.pdf
-1
-d/Users/ethan/Box/classes/2019_spring/c117_principals/students
-	absense
-1
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	students
-16
-d/Users/ethan/Box/classes/2019_spring
-	c117_principals
-1
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box
-	textbooks
-11
-d/Users/ethan/Box/textbooks
-	Exploring Chemistry With Electronic Structure Methods.pdf
-2
-d/Users/ethan/Box
-	cc
-5
-d/Users/ethan/Box/cc
-	esm_notes.html
-2
-d/Users/ethan/Box
-	cc
-5
-d/Users/ethan/Box/cc
-	esm_notes.md
-3
-d/Users/ethan/Box
-	notes
-8
-d/Users/ethan/Box/notes
-	..
-0
-d/Users/ethan/Box
-	notes
-8
-d/Users/ethan/Box/notes
-	esm_notes.md.pdf
-2
-d/Users/ethan/Box
-	notes
-8
-d/Users/ethan/Box/notes
-	esm_notes.md.pdf
-2
-d/Users/ethan/Box
-	library
-7
-d/Users/ethan/Box/library
-	..
-0
-d/Users/ethan/Box
-	3Chemists1Physicist
-2
-d/Users/ethan/Box/3Chemists1Physicist
-	angmom.pdf
-1
-d/Users/ethan/Box
-	iu
-5
-d/Users/ethan/Box/iu
-	2019
-1
-d/Users/ethan/Box/iu/2019
-	..
-0
-d/Users/ethan/Box/iu
-	2020
-2
-d/Users/ethan/Box/iu/2020
-	..
-0
-d/Users/ethan/Box/iu
-	2020
 2
 d/Users/ethan/Box
 	classes
@@ -147,60 +156,147 @@ d/Users/ethan/Box/classes
 d/Users/ethan/Box/classes/2019_spring
 	c562_computational
 2
+d/Users/ethan/Box/classes/2019_spring/c562_computational
+	hw
+1
+d/Users/ethan/Box/classes/2019_spring/c562_computational/hw
+	Problem_set_1.pdf
+1
+d/Users/ethan/Desktop
+	test.xyz
+26
+d/Users/ethan
+	Desktop
+3
+d/Users/ethan/Desktop
+	test.xyz
+26
+d/Users/ethan
+	Desktop
+3
+d/Users/ethan/Desktop
+	test.xyz
+26
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	classes
+5
 d/Users/ethan/Box/classes
 	2019_spring
 2
 d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	answers
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/answers
-	PS1 answer key.pdf
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	uploaded
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/uploaded
-	HW01.pdf
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	problems
+	c562_computational
 2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/problems
-	problem set 1.pdf
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	uploaded
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/uploaded
-	HW01.pdf
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	uploaded
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
+d/Users/ethan/Box/classes/2019_spring/c562_computational
 	hw
 1
+d/Users/ethan/Box/classes/2019_spring/c562_computational/hw
+	Problem_set_1.pdf
+1
+d/Users/ethan/Box/classes/2019_spring/c562_computational
+	foresman_exploringChemicalAnalysis.pdf
+6
 d/Users/ethan/Box/classes/2019_spring
 	c562_computational
 2
+d/Users/ethan/Box/classes
+	2019_spring
+2
+d/Users/ethan/Box
+	classes
+5
+d/Users/ethan/Box/classes
+	2019_spring
+2
+d/Users/ethan/Box/classes/2019_spring
+	c117_principals
+1
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_09
+9
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_09
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_10
+10
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_10
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_11
+11
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_11
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	previousSemester
+15
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
+	Week_08
+8
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_08
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
+	Week_07
+7
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_07
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
+	Week_07
+7
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_06
+6
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_06
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_07
+7
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_07
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_08
+8
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_08
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_08
+8
+d/Users/ethan/Box/classes/2019_spring
+	c117_principals
+1
 d/Users/ethan/Box/classes
 	2019_fall
 1
 d/Users/ethan/Box/classes/2019_fall
 	C561_quantumMechanics
 4
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
+	lectures
+3
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/lectures
+	..
+0
 d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
 	hw
 2
 d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/hw
-	problem set 9.pdf
-15
+	hw8
+1
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/hw/hw8
+	hw8.pdf
+3
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/hw
+	hw8
+1
 d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
 	hw
 2
@@ -208,431 +304,335 @@ d/Users/ethan/Box/classes/2019_fall
 	C561_quantumMechanics
 4
 d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	hw
+	2019_fall
 1
-d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes
-	2019_spring
-2
 d/Users/ethan/Box
 	classes
-4
+5
 d/Users/ethan
-	Pictures
-13
-d/Users/ethan/Pictures
-	wallPics
-6
-d/Users/ethan/Pictures/wallPics
-	boobs
-2
-d/Users/ethan/Pictures/wallPics/boobs
-	ISO.jpg
-4
-d/Users/ethan/Pictures/wallPics
-	beach
-1
-d/Users/ethan/Pictures/wallPics/beach
-	5x7.jpg
-4
-d/Users/ethan/Pictures/wallPics
-	beach
-1
-d/Users/ethan/Pictures
-	wallPics
-6
-d/Users/ethan
-	Box
-2
-d/Users/ethan/Box
-	classes
-4
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box
-	ppt
+	Dropbox
 7
-d/Users/ethan/Box/ppt
-	QC Delta ppt STUDENT SLIDES 20.pptx
-8
-d/Users/ethan/Box
-	Notability
-2
-d/Users/ethan/Box/Notability
-	C562_computational
-3
-d/Users/ethan/Box/Notability/C562_computational
-	..
-0
-d/Users/ethan/Box/Notability
-	C566_spectroscopy
-4
-d/Users/ethan/Box/Notability/C566_spectroscopy
-	..
-0
-d/Users/ethan/Box/Notability
-	C566_spectroscopy
-4
-d/Users/ethan/Box
-	Notability
-2
+d/Users/ethan/Dropbox
+	Ethan-update.pdf
+9
 d/Users/ethan
-	Box
-2
-d/Users/ethan/Box
-	classes
-4
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	problems
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/problems
-	problem set 2.pdf
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	problems
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	lectures
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/lectures
-	Lecture+7.pdf
+	Dropbox
 7
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	Carbocations.pdf
+2
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
 d/Users/ethan
-	Applications
-1
+	Dropbox
+7
 d
 
 # Right window history (oldest to newest):
-D/Users/ethan/.vim
-	UltiSnips
-1
-D/Users/ethan
-	.vim
-26
-D/Users
-	ethan
+D/Users/ethan/Dropbox/Notes
+	meetings
 2
-D/Users/ethan
-	Box
-2
-D/Users/ethan/Box
-	classes
-6
-D/Users/ethan/Box/classes
-	2019_spring
-2
-D/Users/ethan/Box/classes/2019_spring
-	c117_principals
-1
-D/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_04
-4
-D/Users/ethan/Box/classes/2019_spring/c117_principals/Week_04
-	spectra.png
-3
-D/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_07
-7
-D/Users/ethan/Box/classes/2019_spring
-	c117_principals
-1
-D/Users/ethan/Box/classes
-	2019_spring
-2
-D/Users/ethan/Box
-	classes
-6
-D/Users/ethan
-	Desktop
-3
-D/Users/ethan/Desktop
-	~$ Assignments for resources C103 Fall 19 v2.docx
-2
-D/Users/ethan
-	Downloads
-6
-D/Users/ethan/Downloads
-	2019-08-24T1603_Grades-FA19-BL-CHEM-C103-1414.csv
-27
-D/Users/ethan
-	Music
-12
-D/Users/ethan/Music
-	..
-0
-D/Users/ethan
-	Mail
-10
-D/Users/ethan/Mail
-	..
-0
-D/Users/ethan
-	Google Drive
-8
-D/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/lectures
-	..
-0
-D/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	lectures
-2
-D/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-D/Users/ethan/Box/classes
-	2019_fall
-1
-D/Users/ethan/Box/classes/2019_fall
-	C561_quantumMechanics
-4
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
-	hw
-2
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/hw
-	hw_answersKeys
-3
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/hw/hw_answersKeys
-	PS6 key.pdf
-6
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/hw
-	problem set 6.pdf
-12
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
-	hw
-2
-D/Users/ethan/Box/classes/2019_fall
-	C561_quantumMechanics
-4
-D/Users/ethan/Box/classes
-	2019_fall
-1
-D/Users/ethan/Box
-	classes
-6
-D/Users/ethan
-	Box
-2
-D/Users/ethan/Box
-	Notability
-3
-D/Users/ethan/Box/Notability
-	C561 - Quantum
-2
-D/Users/ethan/Box/Notability/C561 - Quantum
-	HW06-C561.pdf
-7
-D/Users/ethan/Box/Notability
-	C561 - Quantum
-2
-D/Users/ethan/Box
-	classes
-6
-D/Users/ethan/Box/classes
-	2019_fall
-1
-D/Users/ethan/Box/classes/2019_fall
-	C561_quantumMechanics
-4
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
-	examReview
-1
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/examReview
-	Equations+Exam+final.pdf
-2
-D/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
-	examReview
-1
-D/Users/ethan/Box/classes/2019_fall
-	C561_quantumMechanics
-4
-D/Users/ethan/Box/classes
-	2019_fall
-1
-D/Users/ethan/Box
-	classes
-6
-D/Users/ethan
-	Desktop
-4
-D/Users/ethan/Desktop
-	stuff
-1
-D/Users/ethan/Desktop/stuff
-	table
-4
-D/Users/ethan/Desktop/stuff/table
-	table.tex
-2
-D/Users/ethan/Desktop
-	..
-0
-D/Users/ethan
-	Desktop
-3
-D/Users/ethan/Desktop
-	Untitled.ipynb
-2
-D/Users/ethan
-	Downloads
-6
-D/Users/ethan/Downloads
-	..
-0
-D/Users/ethan
-	Box
-2
-D/Users/ethan/Box
-	classes
-6
-D/Users/ethan
-	Google Drive
-8
-D/Users/ethan/Google Drive
-	ScannerPro
-2
-D/Users/ethan/Google Drive/ScannerPro
-	..
-0
-D/Users/ethan/Google Drive
-	umn
-9
-D/Users/ethan
-	Google Drive
-8
-D/Users
-	Shared
-1
-D/
-	Users
-3
-D/Users
-	ethan
-2
-D/Users/ethan
-	Mail
-10
-D/Users/ethan/Mail
-	..
-0
-D/Users/ethan
-	github
-17
-D/Users/ethan/github
+D/Users/ethan/Dropbox
 	Notes
 1
-D/Users/ethan/github/Notes
+D/Users/ethan/Dropbox/Notes
 	esm
 1
-D/Users/ethan/github/Notes/esm
+D/Users/ethan/Dropbox/Notes/esm
+	..
+0
+D/Users/ethan/Dropbox/Notes
+	esm
+1
+D/Users/ethan/Dropbox/Notes/esm
 	esm_notes.pdf
 2
-D/Users/ethan/github/Notes
-	esm
-1
-D/Users/ethan/github
-	Notes
-1
-D/Users/ethan
-	Downloads
-6
-D/Users/ethan/Downloads
-	Exercise_1
-1
-D/Users/ethan/Downloads/Exercise_1
-	..
-0
-D/Users/ethan/Downloads
-	Exercise_6
+D/Users/ethan/Dropbox/Notes
+	meetings
 2
-D/Users/ethan/Downloads/Exercise_6
-	..
-0
-D/Users/ethan/Downloads
-	JupyterLab_files
-1
-D/Users/ethan/Downloads/JupyterLab_files
-	..
-0
-D/Users/ethan/Downloads
-	JupyterLab_files
-1
-D/Users/ethan/Downloads/JupyterLab_files
-	..
-0
-D/Users/ethan/Downloads
-	Lectures_export
-1
-D/Users/ethan/Downloads/Lectures_export
-	Lecture 1.pdf
-1
-D/Users/ethan/Downloads
-	exteditor-master
-1
-D/Users/ethan/Downloads/exteditor-master
-	..
-0
-D/Users/ethan/Downloads
-	finished
-1
-D/Users/ethan/Downloads/finished
-	..
-0
-D/Users/ethan/Downloads
-	lghub_installer.app
-1
-D/Users/ethan/Downloads/lghub_installer.app
-	..
-0
-D/Users/ethan/Downloads
-	HW06 (3).pdf
-40
-D/Users/ethan
-	Desktop
+D/Users/ethan/Dropbox/Notes/meetings
+	meetings.pdf
+2
+D/Users/ethan/Dropbox/Notes
+	papers
 3
-D/Users/ethan/Desktop
-	test.dlog
+D/Users/ethan/Dropbox/Notes/papers
+	..
+0
+D/Users/ethan/Dropbox/Notes
+	papers
+3
+D/Users/ethan/Dropbox
+	the wire frames
+7
+D/Users/ethan/Dropbox/the wire frames
+	..
+0
+D/Users/ethan/Dropbox
+	the wire frames
+7
+D/Users/ethan/Dropbox/the wire frames
+	Video
+4
+D/Users/ethan/Dropbox/the wire frames/Video
+	..
+0
+D/Users/ethan/Dropbox/the wire frames
+	Video
+4
+D/Users/ethan/Dropbox
+	notebook
+4
+D/Users/ethan/Dropbox/notebook
+	notebook.pdf
+6
+D/Users/ethan/Dropbox
+	notebook
+4
+D/Users/ethan/Dropbox/notebook
+	notebook.md
+5
+D/Users/ethan/Dropbox
+	pa
+4
+D/Users/ethan
+	Google Drive
 8
+D/Users/ethan/Google Drive
+	notebook
+5
 D/Users/ethan
-	Desktop
+	Dropbox
+7
+D/Users/ethan/Dropbox
+	learning
 3
+D/Users/ethan/Dropbox/learning
+	..
+0
+D/Users/ethan/Dropbox
+	Icon
+9
+D/Users/ethan
+	Dropbox
+7
 D/Users
 	ethan
 2
 D/Users/ethan
-	.vifm
-26
-D/Users/ethan/.vifm
-	vifmrc
+	Google Drive
+8
+D/Users/ethan/Google Drive
+	Ralph Waldo. Emerson - The Complete Essays and other Writings of Ralph Waldo Emerson  (1950, The Modern Library).pdf
+15
+D/Users/ethan
+	Dropbox
+7
+D/Users/ethan/Dropbox
+	papers
 5
+D/Users/ethan/Dropbox/papers
+	Carbocations.pdf
+2
+D/Users/ethan/Dropbox
+	papers
+5
+D/Users/ethan/Dropbox/papers
+	li2016_C2H3+.pdf
+3
+D/Users/ethan/Dropbox
+	papers
+5
+D/Users/ethan/Dropbox/papers
+	references
+1
+D/Users/ethan/Dropbox/papers/references
+	duncan2008_acetylene.pdf
+7
+D/Users/ethan/Dropbox/papers
+	references
+1
+D/Users/ethan/Dropbox
+	papers
+5
+D/Users/ethan/Dropbox/papers
+	references
+1
+D/Users/ethan/Dropbox
+	carbocationPapers
+3
+D/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008_C3H5+.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	tantillo2008rebb.pdf
+5
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2012_massSelected.pdf
+4
+D/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+2
+D/Users/ethan/Dropbox/carbocationPapers/references/theory
+	Gutta2005_sandwiches.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+2
+D/Users/ethan/Dropbox/carbocationPapers/references/theory
+	tantillo2008rebb.pdf
+4
+D/Users/ethan/Dropbox/carbocationPapers/references
+	isotopeEffect
+2
+D/Users/ethan/Dropbox/carbocationPapers/references/isotopeEffect
+	kieOrganometallicChemRev.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2012_massSelected.pdf
+4
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008benzene.pdf
+2
+D/Users/ethan/Dropbox/carbocationPapers/references
+	irrelivant
+2
+D/Users/ethan/Dropbox/carbocationPapers/references/irrelivant
+	duncan2008_acetylene.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008_C3H5+.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	irrelivant
+2
+D/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008_C3H5+.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	irrelivant
+2
+D/Users/ethan/Dropbox/carbocationPapers/references/irrelivant
+	duncan2008_acetylene.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+4
+D/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+D/Users/ethan/Dropbox
+	Notes
+1
+D/Users/ethan/Dropbox/Notes
+	meetings
+2
+D/Users/ethan/Dropbox/Notes/meetings
+	meetings.pdf
+2
+D/Users/ethan/Dropbox/Notes
+	papers
+3
+D/Users/ethan/Dropbox/Notes/papers
+	..
+0
+D/Users/ethan/Dropbox/Notes
+	esm
+1
+D/Users/ethan/Dropbox/Notes/esm
+	esm_notes.pdf
+2
+D/Users/ethan/Dropbox/Notes
+	esm
+1
+D/Users/ethan/Dropbox
+	carbocationPapers
+3
+D/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+D/Users/ethan/Dropbox
+	carbocationPapers
+3
+D/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+4
+D/Users/ethan/Dropbox/carbocationPapers/references/theory
+	tantillo2008rebb.pdf
+4
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008_C3H5+.pdf
+2
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	ja00534a044.pdf
+4
+D/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+4
+D/Users/ethan/Dropbox/carbocationPapers/references/theory
+	tantillo2008rebb.pdf
+4
+D/Users/ethan/Dropbox/carbocationPapers/references
+	isotopeEffect
+3
+D/Users/ethan/Dropbox/carbocationPapers
+	Carbocations.pdf
+2
+D/Users/ethan/Dropbox
+	carbocationPapers
+3
+D/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+D/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008_C3H5+.pdf
+1
+D/Users/ethan/Dropbox/carbocationPapers/references
+	irrelivant
+2
 D
 
 # Command line history (oldest to newest):
@@ -659,7 +659,6 @@ D
 :mkdir .vifm
 :!zathura new.pdf &
 :touch luke.vifm
-:mkdir hw
 :cd %c
 :sync
 :mkdir table
@@ -677,6 +676,22 @@ D
 :mkdir problems
 :mkdir beach
 :mkdir boobs
+:mkdir readings
+:mkdir hw
+:mkdir experiment
+:mkdir 
+:mkdir theory
+:mkdir isotopeEffect
+:mkdir irrelivant
+:!open aue2011_carbocations.pdf
+:diff esm_notes.md ../meetings/meetings.md
+:grep
+:find *.pdf
+:find -name "*.pdf"
+:find pdf
+:!config status %q
+:touch diagram.md
+:!open Ethan-update.pdf
 :q
 
 # Search history (oldest to newest):
@@ -699,11 +714,20 @@ pbomd
 pDonald A. McQuarrie, John D. Simon - Physical Chemistry_ A Molecular Approach-University Science Books (1997)
 pDonald A. Mc
 platex
+pcarbocationPapers
+pTantillo-2008-Journal_of_Physical_Organic_Chemistry.pdf
+pTantillo-2008
+ptantillo2008
+ptantillo2008rebb
+pGeorge A. Olah, G. K. Surya Prakash, Kenneth Wade, Arpad Molnar, Robert E. Williams(auth.) - Hypercarbon Chemistry, Second Edition (2011)
+polahHyper
+pGeorge A. Olah, G. K. Surya Prakash, Kenneth Wade, Arpad Molnar, Robert E. Williams(auth.) - Hypercarbon Chemistry, Second Edition (2011).pdf
+polahHypercarbonChemistry
 
 # Local filter history (oldest to newest):
 
 # Registers:
-""/Users/ethan/.local/share/vifm/Trash/000_ppt
+""/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
 
 # Directory stack (oldest to newest):
 
@@ -892,6 +916,24 @@ t/Users/ethan/.local/share/vifm/Trash/000_Exercises.zip
 	/Users/ethan/Downloads/Exercises.zip
 t/Users/ethan/.local/share/vifm/Trash/000_ppt
 	/Users/ethan/Box/ppt
+t/Users/ethan/.local/share/vifm/Trash/000_beliefs.md
+	/Users/ethan/Dropbox/diary/beliefs.md
+t/Users/ethan/.local/share/vifm/Trash/000_diary
+	/Users/ethan/Dropbox/diary
+t/Users/ethan/.local/share/vifm/Trash/000_README.md
+	/Users/ethan/Dropbox/Notes/README.md
+t/Users/ethan/.local/share/vifm/Trash/000_Carbocations (1).pdf
+	/Users/ethan/Dropbox/papers/Carbocations (1).pdf
+t/Users/ethan/.local/share/vifm/Trash/000_Icon
+	/Users/ethan/Dropbox/Icon
+t/Users/ethan/.local/share/vifm/Trash/000_iyengar
+	/Users/ethan/iyengar
+t/Users/ethan/.local/share/vifm/Trash/000_update.html
+	/Users/ethan/Desktop/update.html
+t/Users/ethan/.local/share/vifm/Trash/000_update.pdf
+	/Users/ethan/Desktop/update.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
+	/Users/ethan/Desktop/~$ Assignments for resources C103 Fall 19 v2.docx
 
 # State:
 f
@@ -900,6 +942,6 @@ i1
 [F
 F
 I1
-].0
+].1
 ]F
 s0
