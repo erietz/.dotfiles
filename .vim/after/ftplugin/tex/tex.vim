@@ -5,7 +5,7 @@
 autocmd BufWinLeave *.tex !latexmk -c
 "autocmd VimLeave !latexmk -c
 
-set textwidth=105 	" force text to new line after 80 characters
+set textwidth=80 	" force text to new line after 80 characters
 
 autocmd BufNewFile,BufRead *.cls set syntax=tex
 map <leader>c :w<CR><space>:!latexmk -pdf %<CR>
