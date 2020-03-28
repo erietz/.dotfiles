@@ -1,4 +1,26 @@
 let g:netrw_dirhistmax  =10
+<<<<<<< HEAD
 let g:netrw_dirhist_cnt =2
 let g:netrw_dirhist_1='/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/2-propenyl/c3h4d-7'
 let g:netrw_dirhist_2='/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/2-propenyl/c3h4d-7'
+=======
+<<<<<<< HEAD
+let g:netrw_dirhist_cnt =7
+=======
+let g:netrw_dirhist_cnt =9
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+let g:netrw_dirhist_1='/Users/ethan/Box/notes/config/computer'
+let g:netrw_dirhist_2='/Users/ethan/Google Drive/notes/config/computer'
+let g:netrw_dirhist_3='/Users/ethan/.dotfiles/vim/after'
+let g:netrw_dirhist_4='/Users/ethan/.bash_local'
+let g:netrw_dirhist_5='/Users/ethan/.dotfiles/vim/after/ftplugin/tex'
+<<<<<<< HEAD
+let g:netrw_dirhist_6='/geode2/home/u030/ewrietz/Karst/.bash_local'
+let g:netrw_dirhist_7='/geode2/home/u030/ewrietz/Karst/.vim/bundle'
+=======
+let g:netrw_dirhist_6='/Users/ethan/Dropbox/Notes'
+let g:netrw_dirhist_7='/Users/ethan/Dropbox/carbocationPapers/references/irrelivant'
+let g:netrw_dirhist_8='/Users/ethan/Dropbox/Notes'
+let g:netrw_dirhist_9='/Users/ethan/Dropbox/carbocationPapers/references/irrelivant'
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+>>>>>>> 2a6f785331ee5cdfab89269d03828e02837674ce
