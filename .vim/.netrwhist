@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/ethan/Box/notes/config/computer'
 let g:netrw_dirhist_2='/Users/ethan/Google Drive/notes/config/computer'
 let g:netrw_dirhist_3='/Users/ethan/.dotfiles/vim/after'
 let g:netrw_dirhist_4='/Users/ethan/.bash_local'
 let g:netrw_dirhist_5='/Users/ethan/.dotfiles/vim/after/ftplugin/tex'
+let g:netrw_dirhist_6='/geode2/home/u030/ewrietz/Karst/.bash_local'
+let g:netrw_dirhist_7='/geode2/home/u030/ewrietz/Karst/.vim/bundle'
