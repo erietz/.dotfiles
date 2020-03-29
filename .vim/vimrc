@@ -136,3 +136,6 @@ nnoremap  gx viW"xy \| :call Open(@x)<CR>
 autocmd FileType python nnoremap <leader>c :w<CR>:!python3 %<CR>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+" Shell
+autocmd FileType sh nnoremap <leader>c :w<CR>:!./%<CR>

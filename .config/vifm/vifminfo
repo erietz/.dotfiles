@@ -6,17 +6,17 @@
 	..
 1580660126
 'b
-	/Users/ethan/bin/
+	/N/u/ewrietz/Karst/bin/
 	..
-1580660126
+1582821697
 'd
 	/Users/ethan/Desktop
 	test.md
 1580686616
 'h
-	/Users/ethan/
+	/N/u/ewrietz/Karst/
 	..
-1580660126
+1582821697
 
 # Bookmarks:
 
@@ -30,10 +30,18 @@ l2
 r2
 
 # Left window history (oldest to newest):
+<<<<<<< HEAD
 d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
 	Week_07
 7
 d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_07
+=======
+<<<<<<< HEAD
+d/Users/ethan/Box/library
+=======
+<<<<<<< HEAD
+d/Users/ethan/Downloads/movie
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 	..
 0
 d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
@@ -217,8 +225,59 @@ d/Users/ethan/Dropbox/carbocationPapers
 	Carbocations.pdf
 2
 d/Users/ethan/Dropbox
+<<<<<<< HEAD
 	olahHypercarbonChemistry.pdf
 12
+=======
+	Notes
+1
+d/Users/ethan/Dropbox/Notes
+	esm
+1
+d/Users/ethan/Dropbox/Notes/esm
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+	..
+0
+d/Users/ethan/Dropbox/Notes
+	meetings
+2
+d/Users/ethan/Dropbox/Notes/meetings
+	..
+0
+d/Users/ethan/Dropbox/Notes
+	papers
+3
+d/Users/ethan/Dropbox/Notes/papers
+	papers.tex
+5
+d/Users/ethan/Dropbox/Notes
+	esm
+1
+d/Users/ethan/Dropbox/Notes/esm
+	esm_notes.md
+1
+d/Users/ethan/Dropbox/Notes
+	esm
+1
+d/Users/ethan/Dropbox/Notes/esm
+	esm_notes.md
+1
+d/Users/ethan/Dropbox/Notes
+	meetings
+2
+d/Users/ethan/Dropbox/Notes/meetings
+	meetings.md
+1
+d/Users/ethan/Dropbox/Notes
+	meetings
+2
+d/Users/ethan
+	.vifm
+27
+d/Users/ethan/.vifm
+	vifmrc
+5
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 d/Users/ethan
 	Dropbox
 7
@@ -307,7 +366,225 @@ d/Users/ethan/Box/C500-Ethan
 	input
 2
 d/Users/ethan/Box
+<<<<<<< HEAD
 	C500-Ethan
+=======
+	classes
+5
+d/Users/ethan/Box/classes
+	2019_spring
+2
+d/Users/ethan/Box/classes/2019_spring
+<<<<<<< HEAD
+	c566_spectroscopy
+3
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
+	hw
+1
+d/Users/ethan/Box/classes/2019_spring
+	c566_spectroscopy
+3
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
+	hw
+1
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
+	problems
+2
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/problems
+	problem set 2.pdf
+2
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
+	problems
+2
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
+	lectures
+2
+d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/lectures
+	Lecture+7.pdf
+7
+d/Users/ethan
+	Applications
+1
+d/N/dc2/scratch/ewrietz/rotations
+	allyl
+3
+d/N/dc2/scratch/ewrietz/rotations/allyl
+	dynamics
+1
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics
+	1000
+1
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
+	to_Ethane
+1
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics
+	2000
+2
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/2000
+	2000-bomd-c3h4d_4.o4802662
+7
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics
+	1000
+1
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
+	vmdTest
+3
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/vmdTest
+	..
+0
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
+	vmdtest
+4
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/vmdtest
+	..
+0
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
+	velscorr
+2
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/velscorr
+	bomd-c3h4d_2.com.4802656.m2
+1
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
+	to_Ethane
+1
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/to_Ethane
+	velscorr
+3
+d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
+	to_Ethane
+1
+d/N/u/ewrietz/Karst
+	molecule-C.gjf
+12
+d/N/u/ewrietz
+	Karst
+3
+d/N/u/ewrietz/Karst
+	molecule-C.gjf
+12
+d/N/u/ewrietz
+	Karst
+3
+d/N/u/ewrietz/Karst
+	molecule-C.gjf
+12
+d/N/dc2/projects/carbocation
+	ethan
+13
+d/N/dc2/projects/carbocation/ethan
+	dynamics
+2
+d/N/dc2/projects/carbocation/ethan/dynamics
+	bomd
+2
+d/N/dc2/projects/carbocation/ethan/dynamics/bomd
+	b3lyp
+1
+d/N/dc2/projects/carbocation/ethan/dynamics
+	progress
+3
+d/N/dc2/projects/carbocation/ethan/dynamics/progress
+	job.pbs
+2
+d
+
+# Right window history (oldest to newest):
+D/Users/ethan
+	.vim
+26
+D/Users
+	ethan
+2
+D/Users/ethan
+	Box
+2
+D/Users/ethan/Box
+	classes
+6
+D/Users/ethan/Box/classes
+	2019_spring
+2
+D/Users/ethan/Box/classes/2019_spring
+=======
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+	c117_principals
+1
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_09
+9
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_09
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_10
+10
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_10
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_11
+11
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_11
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	previousSemester
+15
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
+	Week_08
+8
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_08
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
+	Week_07
+7
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_07
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
+	Week_07
+7
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_06
+6
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_06
+>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_07
+7
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_07
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_08
+8
+d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_08
+	..
+0
+d/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_08
+8
+d/Users/ethan/Box/classes/2019_spring
+	c117_principals
+1
+d/Users/ethan/Box/classes
+	2019_fall
+1
+d/Users/ethan/Box/classes/2019_fall
+	C561_quantumMechanics
+4
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
+	lectures
+3
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/lectures
+	..
+0
+d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
+	hw
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 2
 d/Users/ethan
 	Box
@@ -585,6 +862,11 @@ D/Users/ethan
 D/Users/ethan/.vifm
 	vifmrc
 5
+<<<<<<< HEAD
+D/
+	.sllocal
+0
+=======
 D/Users/ethan
 	Box
 2
@@ -633,6 +915,12 @@ D/Users/ethan
 D/Users/ethan/Documents
 	2019Taxes
 1
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 D
 
 # Command line history (oldest to newest):
@@ -676,6 +964,14 @@ D
 :mkdir problems
 :mkdir beach
 :mkdir boobs
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+:cd $HOME
+:cd $CARB
+=======
+<<<<<<< HEAD
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 :!git clone https://github.com/dracula/vim.git
 :mkdir papers
 :mkdir movie
@@ -697,7 +993,12 @@ D
 :!config status %q
 :touch diagram.md
 :!open Ethan-update.pdf
+<<<<<<< HEAD
 :!open duncan2008_C3H5+.pdf
+=======
+>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 :q
 
 # Search history (oldest to newest):
@@ -735,119 +1036,136 @@ polahHypercarbonChemistry
 # Local filter history (oldest to newest):
 
 # Registers:
+<<<<<<< HEAD
 ""/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
+=======
+<<<<<<< HEAD
+""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_test.sh
+=======
+<<<<<<< HEAD
+=======
+""/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
+>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 
 # Directory stack (oldest to newest):
 
 # Trash content:
-t/Users/ethan/.local/share/vifm/Trash/000_FastRawViewer-1.4.9.1358.dmg
-	/Users/ethan/Downloads/FastRawViewer-1.4.9.1358.dmg
-t/Users/ethan/.local/share/vifm/Trash/000_test.tex
-	/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_03/test.tex
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_test.sh
+	/N/dc2/projects/carbocation/ethan/dynamics/progress/test.sh
+t/Users/ethan/.local/share/vifm/Trash/000_.vifm
+	/Users/ethan/.vifm
+t/Users/ethan/.local/share/vifm/Trash/000_3Chemists1Physicist
+	/Users/ethan/Box/3Chemists1Physicist
+t/Users/ethan/.local/share/vifm/Trash/000_IU - Payment Receipt.pdf
+	/Users/ethan/Box/IU - Payment Receipt.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_Report.PDF
+	/Users/ethan/Box/Report.PDF
+t/Users/ethan/.local/share/vifm/Trash/000_cc
+	/Users/ethan/Box/cc
+t/Users/ethan/.local/share/vifm/Trash/000_notes.boxnote
+	/Users/ethan/Box/classes/2019_spring/c117_principals/notes.boxnote
 t/Users/ethan/.local/share/vifm/Trash/000_Discussions 3 Worksheet Answer Key.txt
 	/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_03/Discussions 3 Worksheet Answer Key.txt
 t/Users/ethan/.local/share/vifm/Trash/000_test.md
 	/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_03/test.md
-t/Users/ethan/.local/share/vifm/Trash/000_.vifm
-	/Users/ethan/.vifm
+t/Users/ethan/.local/share/vifm/Trash/000_test.tex
+	/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_03/test.tex
+t/Users/ethan/.local/share/vifm/Trash/000_notes
+	/Users/ethan/Box/notes
+t/Users/ethan/.local/share/vifm/Trash/000_ppt
+	/Users/ethan/Box/ppt
 t/Users/ethan/.local/share/vifm/Trash/000_This is the best file mangaer?.png
 	/Users/ethan/Desktop/This is the best file mangaer?.png
-t/Users/ethan/.local/share/vifm/Trash/001_test.md
-	/Users/ethan/Desktop/test.md
 t/Users/ethan/.local/share/vifm/Trash/000_answers.pdf
 	/Users/ethan/Desktop/answers.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_qustions.pdf
 	/Users/ethan/Desktop/qustions.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_iTerm.app
-	/Users/ethan/Downloads/iTerm.app
-t/Users/ethan/.local/share/vifm/Trash/000_insurance
-	/Users/ethan/Docs/home/insurance
+t/Users/ethan/.local/share/vifm/Trash/001_test.md
+	/Users/ethan/Desktop/test.md
 t/Users/ethan/.local/share/vifm/Trash/000_cycling
 	/Users/ethan/Docs/home/cycling
-t/Users/ethan/.local/share/vifm/Trash/000_2019-09-16_EthanQuizComments.pdf
-	/Users/ethan/Google Drive/ScannerPro/2019-09-16_EthanQuizComments.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2019-09-18_.pdf
-	/Users/ethan/Google Drive/ScannerPro/2019-09-18_.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2019-09-22_contents.pdf
-	/Users/ethan/Google Drive/ScannerPro/2019-09-22_contents.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2019-10-13_absense.pdf
-	/Users/ethan/Google Drive/ScannerPro/2019-10-13_absense.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2019-10-30_gas.pdf
-	/Users/ethan/Google Drive/ScannerPro/2019-10-30_gas.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_notes.boxnote
-	/Users/ethan/Box/classes/2019_spring/c117_principals/notes.boxnote
-t/Users/ethan/.local/share/vifm/Trash/000_Report.PDF
-	/Users/ethan/Box/Report.PDF
-t/Users/ethan/.local/share/vifm/Trash/000_IU - Payment Receipt.pdf
-	/Users/ethan/Box/IU - Payment Receipt.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_cc
-	/Users/ethan/Box/cc
-t/Users/ethan/.local/share/vifm/Trash/000_notes
-	/Users/ethan/Box/notes
-t/Users/ethan/.local/share/vifm/Trash/000_3Chemists1Physicist
-	/Users/ethan/Box/3Chemists1Physicist
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 1.pdf
-	/Users/ethan/Downloads/problem set 1.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 3.pdf
-	/Users/ethan/Downloads/problem set 3.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 4.pdf
-	/Users/ethan/Downloads/problem set 4.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 5.pdf
-	/Users/ethan/Downloads/problem set 5.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 6.pdf
-	/Users/ethan/Downloads/problem set 6.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 8 (1).pdf
-	/Users/ethan/Downloads/problem set 8 (1).pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 8.pdf
-	/Users/ethan/Downloads/problem set 8.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_problem set 9.pdf
-	/Users/ethan/Downloads/problem set 9.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2016-11-30_hydrogen_molecular_orbital
-	/Users/ethan/Downloads/2016-11-30_hydrogen_molecular_orbital
-t/Users/ethan/.local/share/vifm/Trash/000_Agur, A. M. R._ Dalley, Arthur F._ Moore, Keith L. - Clinically oriented anatomy-Wolters Kluwer (2018).pdf.download
-	/Users/ethan/Downloads/Agur, A. M. R._ Dalley, Arthur F._ Moore, Keith L. - Clinically oriented anatomy-Wolters Kluwer (2018).pdf.download
-t/Users/ethan/.local/share/vifm/Trash/000_Calibri and Cambria Fonts
-	/Users/ethan/Downloads/Calibri and Cambria Fonts
-t/Users/ethan/.local/share/vifm/Trash/000_Exercise_1
-	/Users/ethan/Downloads/Exercise_1
-t/Users/ethan/.local/share/vifm/Trash/000_Exercise_6
-	/Users/ethan/Downloads/Exercise_6
-t/Users/ethan/.local/share/vifm/Trash/000_Exercise_8
-	/Users/ethan/Downloads/Exercise_8
-t/Users/ethan/.local/share/vifm/Trash/000_JupyterLab_files
-	/Users/ethan/Downloads/JupyterLab_files
-t/Users/ethan/.local/share/vifm/Trash/000_Lectures_export
-	/Users/ethan/Downloads/Lectures_export
-t/Users/ethan/.local/share/vifm/Trash/000_MacVim
-	/Users/ethan/Downloads/MacVim
-t/Users/ethan/.local/share/vifm/Trash/000_Spectacle.app
-	/Users/ethan/Downloads/Spectacle.app
-t/Users/ethan/.local/share/vifm/Trash/000_exteditor-master
-	/Users/ethan/Downloads/exteditor-master
-t/Users/ethan/.local/share/vifm/Trash/000_finished
-	/Users/ethan/Downloads/finished
-t/Users/ethan/.local/share/vifm/Trash/000_lghub_installer.app
-	/Users/ethan/Downloads/lghub_installer.app
-t/Users/ethan/.local/share/vifm/Trash/000_mutt-wizard
-	/Users/ethan/Downloads/mutt-wizard
+t/Users/ethan/.local/share/vifm/Trash/000_insurance
+	/Users/ethan/Docs/home/insurance
 t/Users/ethan/.local/share/vifm/Trash/000_(Robbins Pathology) Vinay Kumar, Abul K. Abbas, Jon C. Aster - Robbins Basic Pathology-Elsevier (2017).pdf
 	/Users/ethan/Downloads/(Robbins Pathology) Vinay Kumar, Abul K. Abbas, Jon C. Aster - Robbins Basic Pathology-Elsevier (2017).pdf
+t/Users/ethan/.local/share/vifm/Trash/000_1098e_interest_statement-2.pdf
+	/Users/ethan/Downloads/1098e_interest_statement-2.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_1098e_interest_statement.pdf
+	/Users/ethan/Downloads/1098e_interest_statement.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_2016-11-30_hydrogen_molecular_orbital
+	/Users/ethan/Downloads/2016-11-30_hydrogen_molecular_orbital
+t/Users/ethan/.local/share/vifm/Trash/000_2019-08-24T1603_Grades-FA19-BL-CHEM-C103-1414.csv
+	/Users/ethan/Downloads/2019-08-24T1603_Grades-FA19-BL-CHEM-C103-1414.csv
+t/Users/ethan/.local/share/vifm/Trash/000_2019-08-24T1612_Grades-FA19-BL-CHEM-C103-7359.csv
+	/Users/ethan/Downloads/2019-08-24T1612_Grades-FA19-BL-CHEM-C103-7359.csv
 t/Users/ethan/.local/share/vifm/Trash/000_5A. Math Review Chapter 1 Short Answer Practice.docx
 	/Users/ethan/Downloads/5A. Math Review Chapter 1 Short Answer Practice.docx
 t/Users/ethan/.local/share/vifm/Trash/000_5JCG5AG7-2.pdf
 	/Users/ethan/Downloads/5JCG5AG7-2.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_5JCG5AG7.pdf
 	/Users/ethan/Downloads/5JCG5AG7.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_1098e_interest_statement-2.pdf
-	/Users/ethan/Downloads/1098e_interest_statement-2.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_1098e_interest_statement.pdf
-	/Users/ethan/Downloads/1098e_interest_statement.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2019-08-24T1603_Grades-FA19-BL-CHEM-C103-1414.csv
-	/Users/ethan/Downloads/2019-08-24T1603_Grades-FA19-BL-CHEM-C103-1414.csv
-t/Users/ethan/.local/share/vifm/Trash/000_2019-08-24T1612_Grades-FA19-BL-CHEM-C103-7359.csv
-	/Users/ethan/Downloads/2019-08-24T1612_Grades-FA19-BL-CHEM-C103-7359.csv
 t/Users/ethan/.local/share/vifm/Trash/000_6271516.ris
 	/Users/ethan/Downloads/6271516.ris
+t/Users/ethan/.local/share/vifm/Trash/000_Agur, A. M. R._ Dalley, Arthur F._ Moore, Keith L. - Clinically oriented anatomy-Wolters Kluwer (2018).pdf.download
+	/Users/ethan/Downloads/Agur, A. M. R._ Dalley, Arthur F._ Moore, Keith L. - Clinically oriented anatomy-Wolters Kluwer (2018).pdf.download
+t/Users/ethan/.local/share/vifm/Trash/000_Calibri and Cambria Fonts
+	/Users/ethan/Downloads/Calibri and Cambria Fonts
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_1
+	/Users/ethan/Downloads/Exercise_1
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_1.tar.gz
+	/Users/ethan/Downloads/Exercise_1.tar.gz
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_2.zip
+	/Users/ethan/Downloads/Exercise_2.zip
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_6
+	/Users/ethan/Downloads/Exercise_6
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_6.zip
+	/Users/ethan/Downloads/Exercise_6.zip
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_8
+	/Users/ethan/Downloads/Exercise_8
+t/Users/ethan/.local/share/vifm/Trash/000_Exercise_8.zip
+	/Users/ethan/Downloads/Exercise_8.zip
+t/Users/ethan/.local/share/vifm/Trash/000_Exercises.zip
+	/Users/ethan/Downloads/Exercises.zip
+t/Users/ethan/.local/share/vifm/Trash/000_FastRawViewer-1.4.9.1358.dmg
+	/Users/ethan/Downloads/FastRawViewer-1.4.9.1358.dmg
+t/Users/ethan/.local/share/vifm/Trash/000_JupyterLab_files
+	/Users/ethan/Downloads/JupyterLab_files
+t/Users/ethan/.local/share/vifm/Trash/000_Lectures_export
+	/Users/ethan/Downloads/Lectures_export
+t/Users/ethan/.local/share/vifm/Trash/000_MacVim
+	/Users/ethan/Downloads/MacVim
+t/Users/ethan/.local/share/vifm/Trash/000_PS1 key.pdf
+	/Users/ethan/Downloads/PS1 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS2 key.pdf
+	/Users/ethan/Downloads/PS2 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS3 key.pdf
+	/Users/ethan/Downloads/PS3 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS4 key.pdf
+	/Users/ethan/Downloads/PS4 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS6 key.pdf
+	/Users/ethan/Downloads/PS6 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS7 key.pdf
+	/Users/ethan/Downloads/PS7 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS9 key (1).pdf
+	/Users/ethan/Downloads/PS9 key (1).pdf
+t/Users/ethan/.local/share/vifm/Trash/000_PS9 key.pdf
+	/Users/ethan/Downloads/PS9 key.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_Spectacle+1.2.zip
+	/Users/ethan/Downloads/Spectacle+1.2.zip
+t/Users/ethan/.local/share/vifm/Trash/000_Spectacle.app
+	/Users/ethan/Downloads/Spectacle.app
+t/Users/ethan/.local/share/vifm/Trash/000_exteditor-master
+	/Users/ethan/Downloads/exteditor-master
+t/Users/ethan/.local/share/vifm/Trash/000_exteditor-master.zip
+	/Users/ethan/Downloads/exteditor-master.zip
+t/Users/ethan/.local/share/vifm/Trash/000_exteditor_v100 (1).xpi
+	/Users/ethan/Downloads/exteditor_v100 (1).xpi
+t/Users/ethan/.local/share/vifm/Trash/000_exteditor_v100.xpi
+	/Users/ethan/Downloads/exteditor_v100.xpi
+t/Users/ethan/.local/share/vifm/Trash/000_finished
+	/Users/ethan/Downloads/finished
 t/Users/ethan/.local/share/vifm/Trash/000_fourier-Copy1.slides (1).html
 	/Users/ethan/Downloads/fourier-Copy1.slides (1).html
 t/Users/ethan/.local/share/vifm/Trash/000_fourier-Copy1.slides (2).html
@@ -868,6 +1186,28 @@ t/Users/ethan/.local/share/vifm/Trash/000_hw09.slides (4).html
 	/Users/ethan/Downloads/hw09.slides (4).html
 t/Users/ethan/.local/share/vifm/Trash/000_hw09.slides.html
 	/Users/ethan/Downloads/hw09.slides.html
+t/Users/ethan/.local/share/vifm/Trash/000_iTerm.app
+	/Users/ethan/Downloads/iTerm.app
+t/Users/ethan/.local/share/vifm/Trash/000_lghub_installer.app
+	/Users/ethan/Downloads/lghub_installer.app
+t/Users/ethan/.local/share/vifm/Trash/000_mutt-wizard
+	/Users/ethan/Downloads/mutt-wizard
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 1.pdf
+	/Users/ethan/Downloads/problem set 1.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 3.pdf
+	/Users/ethan/Downloads/problem set 3.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 4.pdf
+	/Users/ethan/Downloads/problem set 4.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 5.pdf
+	/Users/ethan/Downloads/problem set 5.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 6.pdf
+	/Users/ethan/Downloads/problem set 6.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 8 (1).pdf
+	/Users/ethan/Downloads/problem set 8 (1).pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 8.pdf
+	/Users/ethan/Downloads/problem set 8.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_problem set 9.pdf
+	/Users/ethan/Downloads/problem set 9.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_rietzCV-2.pdf
 	/Users/ethan/Downloads/rietzCV-2.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_rietzCV-3.pdf
@@ -876,6 +1216,8 @@ t/Users/ethan/.local/share/vifm/Trash/000_rietzCV.pdf
 	/Users/ethan/Downloads/rietzCV.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_rietzPersonalStatement.pdf
 	/Users/ethan/Downloads/rietzPersonalStatement.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_sin_plot.png
+	/Users/ethan/Downloads/sin_plot.png
 t/Users/ethan/.local/share/vifm/Trash/000_stanford.tex
 	/Users/ethan/Downloads/stanford.tex
 t/Users/ethan/.local/share/vifm/Trash/000_try1.docx
@@ -886,6 +1228,18 @@ t/Users/ethan/.local/share/vifm/Trash/000_yograf_cvim.tex
 	/Users/ethan/Downloads/yograf_cvim.tex
 t/Users/ethan/.local/share/vifm/Trash/000_zathura-0.4.1.tar.xz
 	/Users/ethan/Downloads/zathura-0.4.1.tar.xz
+<<<<<<< HEAD
+t/Users/ethan/.local/share/vifm/Trash/000_2019-09-16_EthanQuizComments.pdf
+	/Users/ethan/Google Drive/ScannerPro/2019-09-16_EthanQuizComments.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_2019-09-18_.pdf
+	/Users/ethan/Google Drive/ScannerPro/2019-09-18_.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_2019-09-22_contents.pdf
+	/Users/ethan/Google Drive/ScannerPro/2019-09-22_contents.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_2019-10-13_absense.pdf
+	/Users/ethan/Google Drive/ScannerPro/2019-10-13_absense.pdf
+t/Users/ethan/.local/share/vifm/Trash/000_2019-10-30_gas.pdf
+	/Users/ethan/Google Drive/ScannerPro/2019-10-30_gas.pdf
+=======
 t/Users/ethan/.local/share/vifm/Trash/000_sin_plot.png
 	/Users/ethan/Downloads/sin_plot.png
 t/Users/ethan/.local/share/vifm/Trash/000_exteditor-master.zip
@@ -994,6 +1348,11 @@ t/Users/ethan/.local/share/vifm/Trash/000_update.pdf
 	/Users/ethan/Desktop/update.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
 	/Users/ethan/Desktop/~$ Assignments for resources C103 Fall 19 v2.docx
+<<<<<<< HEAD
+=======
+>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
+>>>>>>> c40440038fa6c7abf24ced191072af364ed02fec
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 
 # State:
 f

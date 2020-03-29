@@ -10,9 +10,9 @@ else
 	fi
 fi
 
-if [ -f ~/.profile ]; then
-	source ~/.profile
-fi
+#if [ -f ~/.profile ]; then
+#	source ~/.profile
+#fi
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 # vim keys for bash
@@ -20,9 +20,14 @@ set -o vi
 
 # Environmental Variables-------------------------------------------------------
 
+<<<<<<< HEAD
 export VISUAL="vim"
 export EDITOR="vim"
 export BROWSER="Brave Browser"
+=======
+#export VISUAL=vim
+#export EDITOR=vim
+>>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 
 # color of ls output
 export CLICOLOR=1
@@ -30,7 +35,7 @@ export CLICOLOR=1
 # Put things in PATH------------------------------------------------------------
 
 # call my scripts from any directory
-export PATH=$PATH:~/.dotfiles/scripts:~/.local/bin/:~/bin
+export PATH=$PATH:~/.scripts:~/.local/bin/:~/bin
 
 # Safety
 alias rm="rm -i"
