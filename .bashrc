@@ -20,14 +20,9 @@ set -o vi
 
 # Environmental Variables-------------------------------------------------------
 
-<<<<<<< HEAD
 export VISUAL="vim"
 export EDITOR="vim"
 export BROWSER="Brave Browser"
-=======
-#export VISUAL=vim
-#export EDITOR=vim
->>>>>>> d4c79b9c2f2c682b701b5f2e9e8618c82119479a
 
 # color of ls output
 export CLICOLOR=1
