@@ -1,4 +1,4 @@
-# You can edit this file by hand, but it's recommended not to do that.
+ # You can edit this file by hand, but it's recommended not to do that.
 
 # Marks:
 'H
@@ -30,525 +30,6 @@ l2
 r2
 
 # Left window history (oldest to newest):
-<<<<<<< HEAD
-d/Users/ethan/Downloads/movie
-	..
-0
-d/Users/ethan/Downloads
-	movie
-9
-d/Users/ethan/Downloads/movie
-	..
-0
-d/Users/ethan/Downloads
-	movie
-9
-d/Users/ethan/Downloads/movie
-	..
-0
-d/Users/ethan/Downloads
-	movie
-9
-d/Users/ethan
-	Box
-2
-d/Users/ethan/Box
-	Notability
-4
-d/Users/ethan
-	Box
-2
-d/Users/ethan/Box
-	Notability
-4
-d/Users/ethan
-	Dropbox
-7
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	Carbocations.pdf
-2
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	li2016_C2H3+.pdf
-3
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan
-	Desktop
-4
-d/Users/ethan/Desktop
-	plots
-4
-d/Users/ethan/Desktop/plots
-	2dplots
-1
-d/Users/ethan/Desktop/plots/2dplots
-	propenyl-0500-2d.pdf
-11
-d/Users/ethan/Desktop/plots
-	2dplots
-1
-d/Users/ethan/Desktop/plots/2dplots
-	propenyl-0500-2d.pdf
-11
-d/Users/ethan
-	Dropbox
-7
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	li2016_C2H3+.pdf
-3
-d/Users/ethan
-	Desktop
-4
-d/Users/ethan/Desktop
-	plots
-4
-d/Users/ethan/Desktop/plots
-	2dplots
-1
-d/Users/ethan/Desktop/plots/2dplots
-	propenyl-0500-2d.pdf
-11
-d/Users/ethan
-	Desktop
-4
-d/Users/ethan/Desktop
-	energies
-2
-d/Users/ethan/Desktop/energies
-	Untitled.ipynb
-1
-d/Users/ethan/Desktop
-	2019Taxes
-1
-d/Users/ethan/Desktop/2019Taxes
-	..
-0
-d/Users/ethan/Desktop
-	energies
-2
-d/Users/ethan/Desktop/energies
-	Untitled.ipynb
-1
-d/Users/ethan/Desktop
-	energies
-2
-d/Users/ethan/Desktop/energies
-	Untitled.ipynb
-1
-d/Users/ethan/Desktop
-	img
-3
-d/Users/ethan/Desktop/img
-	allyl_0500_2d.pdf
-4
-d/Users/ethan/Desktop
-	plots
-3
-d/Users/ethan/Desktop/plots
-	2-propenyl-anharmonic.pdf
-2
-d/Users/ethan/Desktop
-	plots
-3
-d/Users/ethan/Desktop/plots
-	2-propenyl-harmonic.pdf
-3
-d/Users/ethan/Desktop
-	stuff
-3
-d/Users/ethan/Desktop/stuff
-	stuff.txt
-6
-d/Users/ethan/Desktop
-	test
-4
-d/Users/ethan/Desktop/test
-	vibs.cjson
-12
-d/Users/ethan/Desktop
-	test
-4
-=======
-d/Users/ethan/Dropbox
-	Notes
-1
-d/Users/ethan/Dropbox/Notes
-	papers
-3
-d/Users/ethan/Dropbox/Notes/papers
-	papers.tex
-5
-d/Users/ethan/Dropbox/Notes
-	papers
-3
-d/Users/ethan/Dropbox/Notes/papers
-	papers.tex
-5
-d/Users/ethan/Dropbox/Notes
-	papers
-3
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	Carbocations.pdf
-2
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	theory
-4
-d/Users/ethan/Dropbox/carbocationPapers/references/theory
-	..
-0
-d/Users/ethan/Dropbox/carbocationPapers/references
-	isotopeEffect
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008_C3H5+.pdf
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	irrelivant
-2
-d/Users/ethan/Dropbox/carbocationPapers
-	Carbocations.pdf
-2
-d/Users/ethan/Dropbox
-	Notes
-1
-d/Users/ethan/Dropbox/Notes
-	esm
-1
-d/Users/ethan/Dropbox/Notes/esm
-	..
-0
-d/Users/ethan/Dropbox/Notes
-	meetings
-2
-d/Users/ethan/Dropbox/Notes/meetings
-	..
-0
-d/Users/ethan/Dropbox/Notes
-	papers
-3
-d/Users/ethan/Dropbox/Notes/papers
-	papers.tex
-5
-d/Users/ethan/Dropbox/Notes
-	esm
-1
-d/Users/ethan/Dropbox/Notes/esm
-	esm_notes.md
-1
-d/Users/ethan/Dropbox/Notes
-	esm
-1
-d/Users/ethan/Dropbox/Notes/esm
-	esm_notes.md
-1
-d/Users/ethan/Dropbox/Notes
-	meetings
-2
-d/Users/ethan/Dropbox/Notes/meetings
-	meetings.md
-1
-d/Users/ethan/Dropbox/Notes
-	meetings
-2
-d/Users/ethan
-	.vifm
-27
-d/Users/ethan/.vifm
-	vifmrc
-5
-d/Users/ethan
-	Dropbox
-7
-d/Users/ethan/Dropbox
-	algebra
-2
-d/Users/ethan
-	Desktop
-3
-d/Users/ethan/Desktop
-	Screen Shot 2020-03-05 at 9.21.24 AM.png
-9
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
-d/Users/ethan
-	Desktop
-4
-<<<<<<< HEAD
-d/Users/ethan/Desktop
-	stuff
-3
-d/Users/ethan/Desktop/stuff
-	table
-5
-d/Users/ethan/Desktop/stuff/table
-	..
-0
-d/Users/ethan/Desktop/stuff
-	table
-5
-d/Users/ethan/Desktop
-	energies
-2
-d/Users/ethan/Desktop/energies
-	energies.pdf
-2
-d/Users/ethan/Desktop
-	energies
-2
-d/Users/ethan/Desktop/energies
-	Untitled.ipynb
-1
-d/Users/ethan/Desktop
-	stuff
-2
-d/Users/ethan/Desktop/stuff
-	table
-5
-d/Users/ethan/Desktop/stuff/table
-	..
-0
-d/Users/ethan/Desktop/stuff
-	test
-6
-d/Users/ethan/Desktop/stuff/test
-	test.py
-11
-d/Users/ethan/Desktop/stuff
-	yaneli_PW.rtf
-7
-d/Users/ethan/Desktop
-	stuff
-3
-d/Users/ethan/Desktop/stuff
-	yaneli_PW.rtf
-7
-d/Users/ethan/Desktop
-	delete
-2
-d/Users/ethan/Desktop/delete
-	562_HW01.pdf
-1
-d/Users/ethan/Desktop
-	..
-0
-d/Users/ethan
-	Desktop
-4
-d/Users/ethan/Desktop
-	..
-0
-=======
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c562_computational
-2
-d/Users/ethan/Box/classes/2019_spring/c562_computational
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring/c562_computational/hw
-	Problem_set_1.pdf
-1
-d/Users/ethan/Desktop
-	test.xyz
-26
-d/Users/ethan
-	Desktop
-3
-d/Users/ethan/Desktop
-	test.xyz
-26
-d/Users/ethan
-	Desktop
-3
-d/Users/ethan/Desktop
-	test.xyz
-26
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
-d/Users/ethan
-	Dropbox
-7
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	Carbocations.pdf
-2
-<<<<<<< HEAD
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008_C3H5+.pdf
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	theory
-4
-d/Users/ethan/Dropbox/carbocationPapers/references/theory
-	Hong2015_intramolecular.pdf
-3
-d/Users/ethan/Dropbox/carbocationPapers/references
-	aue2011_carbocations.pdf
-5
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	isotopeEffect
-3
-d/Users/ethan/Dropbox/carbocationPapers/references/isotopeEffect
-	kieOrganometallicChemRev.pdf
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008_C3H5+.pdf
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008_C3H5+.pdf
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	theory
-4
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008_C3H5+.pdf
-1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers
-	li2016_C2H3+.pdf
-3
-d
-
-# Right window history (oldest to newest):
-D/Users/ethan/Downloads
-	2019-08-24T1603_Grades-FA19-BL-CHEM-C103-1414.csv
-27
-D/Users/ethan
-	Music
-12
-D/Users/ethan/Music
-=======
-d/Users/ethan/Box
-	classes
-5
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c562_computational
-2
-d/Users/ethan/Box/classes/2019_spring/c562_computational
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring/c562_computational/hw
-	Problem_set_1.pdf
-1
-d/Users/ethan/Box/classes/2019_spring/c562_computational
-	foresman_exploringChemicalAnalysis.pdf
-6
-d/Users/ethan/Box/classes/2019_spring
-	c562_computational
-2
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box
-	classes
-5
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	c117_principals
-1
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_09
-9
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_09
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_10
-10
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_10
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_11
-11
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_11
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	previousSemester
-15
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
-	Week_08
-8
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_08
-	..
-0
 d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
 	Week_07
 7
@@ -562,8 +43,7 @@ d/Users/ethan/Box/classes/2019_spring/c117_principals
 	Week_06
 6
 d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_06
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
-	..
+	>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
 0
 d/Users/ethan/Box/classes/2019_spring/c117_principals
 	Week_07
@@ -640,63 +120,219 @@ d/Users/ethan/Dropbox
 d/Users/ethan
 	Dropbox
 7
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	li2016_C2H3+.pdf
+3
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan/Box/C500-Ethan
+	C500_EthanRietz.pdf
+4
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	Carbocations.pdf
+2
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan/Box/C500-Ethan
+	input
+2
+d/Users/ethan/Box/C500-Ethan/input
+	references.bib
+4
+d/Users/ethan/Box/C500-Ethan
+	input
+2
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan/Box/library
+	cite
+1
+d/Users/ethan/Box/library/cite
+	..
+0
+d/Users/ethan/Box/library
+	notes
+3
+d/Users/ethan/Box/library/notes
+	..
+0
+d/Users/ethan/Box/library
+	reading
+5
+d/Users/ethan/Box/library/reading
+	test.py
+17
+d/Users/ethan/Box/library
+	reading
+5
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+d/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2012_massSelected.pdf
+3
+d/Users/ethan/Dropbox/carbocationPapers/references
+	irrelivant
+2
+d/Users/ethan/Dropbox/carbocationPapers
+	Carbocations.pdf
+2
+d/Users/ethan/Dropbox
+	olahHypercarbonChemistry.pdf
+12
+d/Users/ethan
+	Dropbox
+7
+d/Users
+	ethan
+3
+d/
+	Users
+4
+d/Users
+	ethan
+3
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan/Box/C500-Ethan
+	input
+2
+d/Users/ethan/Box/C500-Ethan/input
+	references.bib
+4
+d/Users/ethan/Box/C500-Ethan
+	input
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	li2016_C2H3+.pdf
+3
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+d/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2008benzene.pdf
+2
+d/Users/ethan/Dropbox/carbocationPapers/references
+	ja00099a052.pdf
+6
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan/Box/C500-Ethan
+	input
+2
+d/Users/ethan/Box/C500-Ethan/input
+	references.bib
+4
+d/Users/ethan/Box/C500-Ethan
+	input
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	C500-Ethan
+2
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	carbocationPapers
+3
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	experiment
+1
+d/Users/ethan/Dropbox/carbocationPapers/references/experiment
+	duncan2012_massSelected.pdf
+3
 d
 
 # Right window history (oldest to newest):
-D/Users/ethan/Dropbox/Notes
-	meetings
-2
-D/Users/ethan/Dropbox
-	Notes
-1
-D/Users/ethan/Dropbox/Notes
-	esm
-1
-D/Users/ethan/Dropbox/Notes/esm
-	..
-0
-D/Users/ethan/Dropbox/Notes
-	esm
-1
-D/Users/ethan/Dropbox/Notes/esm
-	esm_notes.pdf
-2
-D/Users/ethan/Dropbox/Notes
-	meetings
-2
-D/Users/ethan/Dropbox/Notes/meetings
-	meetings.pdf
-2
-D/Users/ethan/Dropbox/Notes
-	papers
-3
-D/Users/ethan/Dropbox/Notes/papers
-	..
-0
-D/Users/ethan/Dropbox/Notes
-	papers
-3
-D/Users/ethan/Dropbox
-	the wire frames
-7
-D/Users/ethan/Dropbox/the wire frames
-	..
-0
-D/Users/ethan/Dropbox
-	the wire frames
-7
-D/Users/ethan/Dropbox/the wire frames
-	Video
-4
-D/Users/ethan/Dropbox/the wire frames/Video
-	..
-0
-D/Users/ethan/Dropbox/the wire frames
-	Video
-4
-D/Users/ethan/Dropbox
-	notebook
-4
 D/Users/ethan/Dropbox/notebook
 	notebook.pdf
 6
@@ -943,7 +579,6 @@ D/Users/ethan/Dropbox/carbocationPapers/references/experiment
 D/Users/ethan/Dropbox/carbocationPapers/references
 	irrelivant
 2
-<<<<<<< HEAD
 D/Users/ethan
 	.vifm
 26
@@ -998,8 +633,6 @@ D/Users/ethan
 D/Users/ethan/Documents
 	2019Taxes
 1
-=======
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
 D
 
 # Command line history (oldest to newest):
@@ -1043,13 +676,11 @@ D
 :mkdir problems
 :mkdir beach
 :mkdir boobs
-<<<<<<< HEAD
 :!git clone https://github.com/dracula/vim.git
 :mkdir papers
 :mkdir movie
 :!defaults write org.macosforge.xquartz.X11 enable_iglx -bool true 
 :mkdir delete
-=======
 :mkdir readings
 :mkdir hw
 :mkdir experiment
@@ -1066,10 +697,12 @@ D
 :!config status %q
 :touch diagram.md
 :!open Ethan-update.pdf
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
+:!open duncan2008_C3H5+.pdf
 :q
 
 # Search history (oldest to newest):
+/bash
+/profil
 /an
 /pre
 /problem set
@@ -1102,10 +735,7 @@ polahHypercarbonChemistry
 # Local filter history (oldest to newest):
 
 # Registers:
-<<<<<<< HEAD
-=======
 ""/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
 
 # Directory stack (oldest to newest):
 
@@ -1294,7 +924,6 @@ t/Users/ethan/.local/share/vifm/Trash/000_Exercises.zip
 	/Users/ethan/Downloads/Exercises.zip
 t/Users/ethan/.local/share/vifm/Trash/000_ppt
 	/Users/ethan/Box/ppt
-<<<<<<< HEAD
 t/Users/ethan/.local/share/vifm/Trash/000_YouCompleteMe
 	/Users/ethan/.vim/bundle/YouCompleteMe
 t/Users/ethan/.local/share/vifm/Trash/000_backedup.txt
@@ -1347,7 +976,6 @@ t/Users/ethan/.local/share/vifm/Trash/000_R_DNA_Gel.docx
 	/Users/ethan/Documents/R_DNA_Gel.docx
 t/Users/ethan/.local/share/vifm/Trash/000_library.bib
 	/Users/ethan/Documents/library.bib
-=======
 t/Users/ethan/.local/share/vifm/Trash/000_beliefs.md
 	/Users/ethan/Dropbox/diary/beliefs.md
 t/Users/ethan/.local/share/vifm/Trash/000_diary
@@ -1366,7 +994,6 @@ t/Users/ethan/.local/share/vifm/Trash/000_update.pdf
 	/Users/ethan/Desktop/update.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
 	/Users/ethan/Desktop/~$ Assignments for resources C103 Fall 19 v2.docx
->>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
 
 # State:
 f
