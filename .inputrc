@@ -1,5 +1,0 @@
-# Configuration file for "readline" applications, such as ipython.
-#
-set editing-mode vi
-set keymap vi
-set show-mode-in-prompt on
