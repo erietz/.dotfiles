@@ -48,3 +48,6 @@ note() { vim "$(date +%F)_${*}.md" ; }
 c() { cd "$1" && ls ; }
 
 alias jlremote="jupyter lab --no-browser --port=9876"
+
+eval $(~/.linuxbrew/bin/brew shellenv)
+
