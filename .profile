@@ -1,4 +1,4 @@
-export ZDOTDIR="$HOME/.dotfiles/zsh/"
+export ZDOTDIR="$HOME/.zsh"
 # Prompt Customization ---------------------------------------------------------
 
 DEFAULT=$PS1
