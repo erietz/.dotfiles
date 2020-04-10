@@ -7,6 +7,8 @@ export BROWSER="Brave Browser"
 export INPUTRC="$HOME/.config/inputrc"
 export LESSHISTFILE="-"
 
+export PYTHONPATH="/Users/ethan/github/python/modules/:$PYTHONPATH"
+
 # <<< conda init <<<
 # added by Anaconda3 2019.10 installer
 # >>> conda init >>>
