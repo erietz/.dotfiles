@@ -1,28 +1,10 @@
-export PATH="$PATH:$HOME/.local/bin"
-export ZDOTDIR="$HOME/.config/zsh/"
+export ZDOTDIR="$HOME/.config/zsh"
 export CLICOLOR=1
 export VISUAL="vim"
 export EDITOR="vim"
 export BROWSER="Brave Browser"
 export INPUTRC="$HOME/.config/inputrc"
 export LESSHISTFILE="-"
+export PATH="$PATH:$HOME/.local/bin"
 
-export PYTHONPATH="/Users/ethan/github/python/modules/:$PYTHONPATH"
-
-# <<< conda init <<<
-# added by Anaconda3 2019.10 installer
-# >>> conda init >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$(CONDA_REPORT_ERRORS=false '/Users/ethan/opt/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    \eval "$__conda_setup"
-else
-    if [ -f "/Users/ethan/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ethan/opt/anaconda3/etc/profile.d/conda.sh"
-        CONDA_CHANGEPS1=false conda activate base
-    else
-        \export PATH="/Users/ethan/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda init <<<
+[ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
