@@ -13,9 +13,10 @@ PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magent
 
 autoload -U compinit
 zstyle ':completion:*' menu select
-	zmodload zsh/complist
-	compinit
-	_comp_options+=(globdots)
+zmodload zsh/complist
+compinit
+setopt globdots
+_comp_options+=(globdots) 	# include hidden files
 
 bindkey -v
 export KEYTIMEOUT=1
@@ -30,15 +31,11 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias jlremote="jupyter lab --no-browser --port=9876"
-eval $(~/.linuxbrew/bin/brew shellenv)
 
-<<<<<<< HEAD
 #source $HOME/.bash_local/bash_hpc
 [ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
 [ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 source $ZDOTDIR/.zsh_hpc.sh
-=======
 [ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
->>>>>>> aced217ab762af8cab7ba3de9873c64d888e670e
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
