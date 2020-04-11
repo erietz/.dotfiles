@@ -32,9 +32,13 @@ alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias jlremote="jupyter lab --no-browser --port=9876"
 eval $(~/.linuxbrew/bin/brew shellenv)
 
+<<<<<<< HEAD
 #source $HOME/.bash_local/bash_hpc
 [ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
 [ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 source $ZDOTDIR/.zsh_hpc.sh
+=======
+[ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
+>>>>>>> aced217ab762af8cab7ba3de9873c64d888e670e
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
