@@ -13,7 +13,6 @@ export PATH="$PATH:/N/slate/ewrietz/applications/scripts/"
 
 alias scratch="cd $SCRATCH"
 alias gview='sh /N/soft/rhel6/gaussian/gv/gview.sh -soft'
-alias myjobs='qstat -u ewrietz'
 
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
