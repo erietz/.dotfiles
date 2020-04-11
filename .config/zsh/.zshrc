@@ -28,5 +28,6 @@ bindkey -v '^?' backward-delete-char
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+[ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
