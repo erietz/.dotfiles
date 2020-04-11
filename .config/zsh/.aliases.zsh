@@ -6,7 +6,7 @@ back() {
 }
 
 config() {
-	/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME $@ 
+	command /usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME $* 
 }
 
 alias \

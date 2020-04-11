@@ -1,9 +1,35 @@
-# IU supercomputers
-export SCRATCH="/N/dc2/scratch/ewrietz"
-export SLATE="/N/slate/ewrietz"
-export GAUSS_SCRDIR="${SCRATCH}/gaussScratch"
-
 export FPATH=/usr/share/zsh/functions/Completion:$FPATH
 fpath=( /usr/share/zsh/functions/**/*(/) )
 
 eval $(~/.linuxbrew/bin/brew shellenv)
+
+[ -f $HOME/.config/zsh/.zsh_hpc.sh ] && source $HOME/.config/zsh/.zsh_hpc.sh
+
+isjobrunning () {
+	job=$(echo $1 | grep -o "[0-9]*" | tail -n 1)
+	job=$(squeue -u ewrietz | grep $job)
+	if [ -z "$job" ]; then
+		echo "No"
+	else
+		echo "$job"
+	fi
+	}
+
+arejobsqueued () {
+	job=$(grep 'job-name' *.slurm | awk -F"=" '{print $2}')
+	squeue -u ewrietz | grep $job
+}
+arejobsrunning () {
+	for file in $(ls *.out)
+	do
+		isjobrunning $file
+	done
+}
+anyjobs () {
+	arejobsrunning
+	arejobsqueued
+}
+steps () {
+	grep -c -F "Summary information" $1
+}
+
