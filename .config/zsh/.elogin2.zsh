@@ -3,6 +3,10 @@ fpath=( /usr/share/zsh/functions/**/*(/) )
 
 eval $(~/.linuxbrew/bin/brew shellenv)
 
+export LS_OPTIONS='--color=auto'
+eval "$(dircolors -b)"
+alias ls='ls $LS_OPTIONS'
+
 [ -f $HOME/.config/zsh/.zsh_hpc.sh ] && source $HOME/.config/zsh/.zsh_hpc.sh
 
 isjobrunning () {
