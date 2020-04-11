@@ -30,6 +30,7 @@ l2
 r2
 
 # Left window history (oldest to newest):
+<<<<<<< HEAD
 d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl/c3h4d-4
 	c3h4d-4.com
 1
@@ -344,7 +345,311 @@ D/Users/ethan/Dropbox/carbocationPapers
 1
 D/Users/ethan/Dropbox/carbocationPapers/references
 	experiment
+=======
+d/private/tmp
+	vim-anywhere
+9
+d/Users/ethan
+	.vim
+10
+d/Users/ethan/.vim
+	after
+2
+d/Users/ethan/.vim/after
+	ftplugin
 1
+d/Users/ethan/.vim/after/ftplugin
+	markdown
+1
+d/Users/ethan/.vim/after/ftplugin/markdown
+	markdown.vim
+1
+d/Users/ethan/.vim/after/ftplugin
+	markdown
+1
+d/Users/ethan/.vim/after
+	ftplugin
+1
+d/Users/ethan/.vim
+	after
+2
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	klumpp2020.pdf
+12
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan/Box/library
+	cite
+1
+d/Users/ethan/Box/library/cite
+	..
+0
+d/Users/ethan/Box/library
+	non-academic
+2
+d/Users/ethan/Box/library/non-academic
+	fun
+1
+d/Users/ethan/Box/library/non-academic/fun
+	..
+0
+d/Users/ethan/Box/library/non-academic
+	textbooks
+2
+d/Users/ethan/Box/library/non-academic/textbooks
+	..
+0
+d/Users/ethan/Box/library/non-academic
+	fun
+1
+d/Users/ethan/Box/library/non-academic/fun
+	..
+0
+d/Users/ethan/Box/library/non-academic
+	fun
+1
+d/Users/ethan/Box/library
+	notes
+3
+d/Users/ethan/Box/library/notes
+	..
+0
+d/Users/ethan/Box/library
+	notes
+3
+d/Users/ethan/Box/library/notes
+	5cs.md
+1
+d/Users/ethan/Box/library
+	papers
+4
+d/Users/ethan/Box/library/papers
+	jacs.8b00821.pdf
+5
+d/Users/ethan/Box/library
+	reading
+5
+d/Users/ethan/Box/library/reading
+	..
+0
+d/Users/ethan/Box/library
+	papers
+4
+d/Users/ethan/Box/library/papers
+	jacs.8b00821.pdf
+5
+d/Users/ethan/Box/library
+	papers
+4
+d/Users/ethan/Box/library/papers
+	jacs.8b00821.pdf
+5
+d/Users/ethan/Box/library
+	reading
+5
+d/Users/ethan/Box/library/reading
+	..
+0
+d/Users/ethan/Box/library
+	notes
+3
+d/Users/ethan/Box/library/notes
+	5cs.md
+1
+d/Users/ethan/Box/library
+	notes
+3
+d/Users/ethan/Box/library/notes
+	..
+0
+d/Users/ethan/Box/library
+	non-academic
+2
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	notes
+4
+d/Users/ethan/Dropbox/notes
+	papers
+3
+d/Users/ethan/Dropbox/notes/papers
+	..
+0
+d/Users/ethan/Dropbox/notes
+	papers
+3
+d/Users/ethan/Dropbox
+	carbocationPapers
+2
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox
+	22BBook.pdf
+8
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan/Box/library
+	cite
+1
+d/Users/ethan/Box/library/cite
+	..
+0
+d/Users/ethan/Box/library
+	non-academic
+1
+d/Users/ethan/Box/library/non-academic
+	fun
+1
+d/Users/ethan/Box/library/non-academic/fun
+	keshav2007read.pdf
+1
+d/Users/ethan/Box/library/non-academic
+	fun
+1
+d/Users/ethan/Box/library/non-academic/fun
+	workflow-apps.pdf
+2
+d/Users/ethan/Box/library/non-academic
+	fun
+1
+d/Users/ethan/Box/library
+	papers
+2
+d/Users/ethan/Box/library/papers
+	jacs.8b00821.pdf
+5
+d/Users/ethan/Box/library
+	reading
+3
+d/Users/ethan/Box/library/reading
+	schaugaard2018redox.pdf
+14
+d/Users/ethan/Box/library
+	reading
+3
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	notes
+4
+d/Users/ethan/Dropbox/notes
+	papers
+3
+d/Users/ethan/Dropbox
+	papers
+6
+d/Users/ethan/Dropbox/papers
+	li2008.pdf
+3
+d/Users/ethan/Dropbox
+	papers
+6
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	papers
+6
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	carbocationPapers
+2
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	..
+0
+d/Users/ethan/Dropbox/carbocationPapers
+	li2016_C2H3+.pdf
+3
+d/Users/ethan
+	Desktop
+4
+d/Users/ethan/Desktop
+	energies-c3h5-Copy1.html
+10
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	learning
+3
+d/Users/ethan
+	Box
+2
+d/Users/ethan/Box
+	library
+10
+d/Users/ethan
+	Dropbox
+7
+d/Users/ethan/Dropbox
+	carbocationPapers
+2
+d/Users/ethan/Dropbox/carbocationPapers
+	references
+1
+d/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+4
+d/Users/ethan/Dropbox/carbocationPapers/references/theory
+	tantillo2008rebb.pdf
+4
+d/Users/ethan/Dropbox/carbocationPapers/references
+	theory
+4
+d/Users/ethan/Dropbox/carbocationPapers
+	sager2017_C2H5+.pdf
+4
+d/Users/ethan/Dropbox
+	papers
+6
+d/Users/ethan/Dropbox/papers
+	li2008.pdf
+3
+d/Users/ethan/Dropbox
+	notes
+4
+d/Users/ethan
+	Documents
+5
+d/Users/ethan/Documents
+	Zoom
+3
+d/Users/ethan/Documents/Zoom
+	2020-04-07 18.01.59 Exam 3-room3-Ethan  956994651
+21
+d/Users/ethan/Documents/Zoom/2020-04-07 18.01.59 Exam 3-room3-Ethan  956994651
+	meeting_saved_chat.txt
+>>>>>>> origin/master
+1
+d
+
+# Right window history (oldest to newest):
 D/Users/ethan/Dropbox/carbocationPapers/references/experiment
 	duncan2008_C3H5+.pdf
 1
@@ -499,8 +804,96 @@ D/Users/ethan/Documents
 	2019Taxes
 1
 D/
-	N
+	Library
+1
+D/Users/ethan
+	Downloads
+6
+D/Users/ethan/Downloads
+	movie
+8
+D/Users/ethan/Downloads/movie
+	..
 0
+D/Users/ethan/Downloads
+	movie
+8
+D/Users/ethan/Downloads/movie
+	..
+0
+D/Users/ethan/Downloads
+	gnuplot-5.0.6
+7
+D/Users/ethan/Downloads/gnuplot-5.0.6
+	..
+0
+D/Users/ethan/Downloads
+	ScienceDirect_articles_27Aug2019_18-09-41.543
+4
+D/Users/ethan/Downloads/ScienceDirect_articles_27Aug2019_18-09-41.543
+	..
+0
+D/Users/ethan/Downloads
+	Module 6 - Mixed Questions 8-15-18_files
+3
+D/Users/ethan/Downloads/Module 6 - Mixed Questions 8-15-18_files
+	..
+0
+D/Users/ethan/Downloads
+	Install Spotify.app
+2
+D/Users/ethan/Downloads/Install Spotify.app
+	..
+0
+D/Users/ethan/Downloads
+	Galaxy31-[bamCoverage_on_data_4].bigwig.download
+1
+D/Users/ethan/Downloads/Galaxy31-[bamCoverage_on_data_4].bigwig.download
+	..
+0
+D/Users/ethan/Downloads
+	journal.pgen.1005000.s027.XLSX
+4
+D/Users/ethan
+	Downloads
+6
+D/Users/ethan/Downloads
+	diversity-statement-pdf.pdf
+5
+D/Users/ethan
+	Dropbox
+7
+D/Users/ethan/Dropbox
+	notes
+4
+D/Users/ethan/Dropbox/notes
+	meetings
+2
+D/Users/ethan/Dropbox/notes/meetings
+	meetings.md
+1
+D/Users/ethan/Dropbox/notes
+	meetings
+2
+D/Users/ethan/Dropbox
+	papers.txt
+15
+D/Users/ethan
+	Box
+2
+D/Users/ethan/Box
+	library
+10
+D/Users/ethan/Box/library
+	..
+0
+D/Users/ethan/Box
+	iu
+9
+D/Users/ethan/Box/iu
+	..
+0
+<<<<<<< HEAD
 D/N/u/ewrietz/Karst
 	..
 0
@@ -633,6 +1026,65 @@ D/N/u/ewrietz/Karst/.local
 D/N/u/ewrietz/Karst
 	README.md
 5
+=======
+D/Users/ethan/Box
+	WORKING_SCRIPTS
+6
+D/Users/ethan
+	Box
+2
+D/Users/ethan/Box
+	classes
+8
+D/Users/ethan/Box/classes
+	2019_spring
+2
+D/Users/ethan/Box/classes/2019_spring
+	c562_computational
+2
+D/Users/ethan/Box/classes/2019_spring/c562_computational
+	hw
+1
+D/Users/ethan/Box/classes/2019_spring/c562_computational/hw
+	Problem_set_2.pdf
+2
+D/Users/ethan/Box/classes/2019_spring/c562_computational
+	hw
+1
+D/Users/ethan/Box/classes/2019_spring
+	c562_computational
+2
+D/Users/ethan/Box/classes
+	2019_spring
+2
+D/Users/ethan/Box
+	classes
+8
+D/Users/ethan
+	Box
+2
+D/Users/ethan/Box
+	classes
+8
+D/Users/ethan/Box/classes
+	2019_spring
+2
+D/Users/ethan/Box/classes/2019_spring
+	c117_principals
+1
+D/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_10
+10
+D/Users/ethan/Box/classes/2019_spring/c117_principals/Week_10
+	worksheet 10.docx
+2
+D/Users/ethan/Box/classes/2019_spring/c117_principals
+	Week_10
+10
+D/Users/ethan/Box/classes/2019_spring/c117_principals/Week_10
+	worksheet 10.docx
+3
+>>>>>>> origin/master
 D
 
 # Command line history (oldest to newest):
@@ -678,7 +1130,6 @@ D
 :mkdir boobs
 :cd $HOME
 :!git clone https://github.com/dracula/vim.git
-:mkdir papers
 :mkdir movie
 :!defaults write org.macosforge.xquartz.X11 enable_iglx -bool true 
 :mkdir delete
@@ -698,6 +1149,7 @@ D
 :touch diagram.md
 :!open Ethan-update.pdf
 :!open duncan2008_C3H5+.pdf
+<<<<<<< HEAD
 :!mkdir 
 :!mk
 :!~/.scripts/mkjobs.py c3h4d-4.com
@@ -711,6 +1163,12 @@ D
 :!mkjobs.py c3h4d-8.com
 :!qsub job.pbs
 :mkdir 
+=======
+:vsp
+:mkdir papers
+:!open worksheet\ 10.docx
+:!open worksheet\ 10\ anwser\ key.docx
+>>>>>>> origin/master
 :q
 
 # Search history (oldest to newest):
@@ -724,6 +1182,8 @@ D
 /bra
 /dot
 /iTerm
+/li
+/died
 
 # Prompt history (oldest to newest):
 pScreen Shot 2020-02-01 at 9.47.16 PM.png test.png
@@ -744,16 +1204,24 @@ pGeorge A. Olah, G. K. Surya Prakash, Kenneth Wade, Arpad Molnar, Robert E. Will
 polahHyper
 pGeorge A. Olah, G. K. Surya Prakash, Kenneth Wade, Arpad Molnar, Robert E. Williams(auth.) - Hypercarbon Chemistry, Second Edition (2011).pdf
 polahHypercarbonChemistry
+<<<<<<< HEAD
 pc3h4d-8
 pc3h4d-2
 pc3h4d-4
+=======
+pdiedrich2012
+pdiedrich2012zundel
+>>>>>>> origin/master
 
 # Local filter history (oldest to newest):
 
 # Registers:
+<<<<<<< HEAD
 ""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5106070
 ""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5106074
 ""/N/u/ewrietz/Karst/.local/share/vifm/Trash/002_c3h4d-4.log
+=======
+>>>>>>> origin/master
 
 # Directory stack (oldest to newest):
 
@@ -1052,6 +1520,33 @@ t/Users/ethan/.local/share/vifm/Trash/000_2019-10-30_gas.pdf
 	/Users/ethan/Google Drive/ScannerPro/2019-10-30_gas.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_iyengar
 	/Users/ethan/iyengar
+<<<<<<< HEAD
+=======
+t/Users/ethan/.local/share/vifm/Trash/000_movie
+	/Users/ethan/Downloads/movie
+t/Users/ethan/.local/share/vifm/Trash/000_gnuplot-5.0.6
+	/Users/ethan/Downloads/gnuplot-5.0.6
+t/Users/ethan/.local/share/vifm/Trash/000_SolsticeClientMac_V2A0A1942BEPCF6C.app
+	/Users/ethan/Downloads/SolsticeClientMac_V2A0A1942BEPCF6C.app
+t/Users/ethan/.local/share/vifm/Trash/000_ScienceDirect_articles_27Aug2019_18-09-41.543
+	/Users/ethan/Downloads/ScienceDirect_articles_27Aug2019_18-09-41.543
+t/Users/ethan/.local/share/vifm/Trash/000_Module 6 - Mixed Questions 8-15-18_files
+	/Users/ethan/Downloads/Module 6 - Mixed Questions 8-15-18_files
+t/Users/ethan/.local/share/vifm/Trash/000_Install Spotify.app
+	/Users/ethan/Downloads/Install Spotify.app
+t/Users/ethan/.local/share/vifm/Trash/000_Galaxy31-[bamCoverage_on_data_4].bigwig.download
+	/Users/ethan/Downloads/Galaxy31-[bamCoverage_on_data_4].bigwig.download
+t/Users/ethan/.local/share/vifm/Trash/000_pandoc-2.1
+	/Users/ethan/Downloads/pandoc-2.1
+t/Users/ethan/.local/share/vifm/Trash/000_pivotTable.html
+	/Users/ethan/Downloads/pivotTable.html
+t/Users/ethan/.local/share/vifm/Trash/000_5cs.md
+	/Users/ethan/Box/library/notes/5cs.md
+t/Users/ethan/.local/share/vifm/Trash/000_notes
+	/Users/ethan/Box/library/notes
+t/Users/ethan/.local/share/vifm/Trash/000_cite
+	/Users/ethan/Box/library/cite
+>>>>>>> origin/master
 
 # State:
 f

@@ -1,5 +1,6 @@
 {
 	"optOut": false,
+<<<<<<< HEAD
 	"lastUpdateCheck": 1586485156028,
 	"update": {
 		"latest": "6.14.4",
@@ -7,4 +8,11 @@
 		"type": "minor",
 		"name": "npm"
 	}
+=======
+<<<<<<< HEAD
+	"lastUpdateCheck": 1586541415589
+=======
+	"lastUpdateCheck": 1586226252102
+>>>>>>> aced217ab762af8cab7ba3de9873c64d888e670e
+>>>>>>> origin/master
 }
