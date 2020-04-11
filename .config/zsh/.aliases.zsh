@@ -4,3 +4,12 @@ back() {
 		string+=$(printf "../")
 	cd $string
 }
+
+config() {
+	/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME $@ 
+}
+
+alias \
+	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
+	jlremote="jupyter lab --no-browser --port=9876"
+
