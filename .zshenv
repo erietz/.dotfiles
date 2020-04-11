@@ -7,3 +7,7 @@ export INPUTRC="$HOME/.config/inputrc"
 export LESSHISTFILE="-"
 export PATH="$PATH:$HOME/.local/bin"
 
+<<<<<<< HEAD
+[ -f $ZDOTDIR/.$(hostname).zsh ] && source $ZDOTDIR/.$(hostname).zsh
+=======
+>>>>>>> origin/master
