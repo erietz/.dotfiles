@@ -6,540 +6,333 @@
 	..
 1580660126
 'b
-	/Users/ethan/bin/
+	/N/u/ewrietz/Karst/bin/
 	..
-1585508349
+1585879782
 'd
 	/Users/ethan/Desktop
 	test.md
 1580686616
 'h
-	/Users/ethan/
+	/N/u/ewrietz/Karst/
 	..
-1585508349
+1585879782
 
 # Bookmarks:
 
 # TUI:
 al
-q1
+q0
 v2
-oh
+ov
 m-1
 l2
 r2
 
 # Left window history (oldest to newest):
-<<<<<<< HEAD
-d/Users/ethan/Box/classes/2019_spring/c562_computational
-	foresman_exploringChemicalAnalysis.pdf
-6
-d/Users/ethan/Box/classes/2019_spring
-	c562_computational
-=======
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl/c3h4d-4
+	c3h4d-4.com
 1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008benzene.pdf
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-4
 2
-d/Users/ethan/Dropbox/carbocationPapers/references
-	ja00099a052.pdf
-6
-d/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan
-	Box
-2
-d/Users/ethan/Box
-	C500-Ethan
-2
-d/Users/ethan/Box/C500-Ethan
-	input
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
-2
-d/Users/ethan/Box/C500-Ethan/input
-	references.bib
-4
-d/Users/ethan/Box/C500-Ethan
-	input
-2
-d/Users/ethan/Box
-	<<<<<<< HEAD
-0
-d/Users/ethan/Box/classes
-	2019_spring
-2
-d/Users/ethan/Box/classes/2019_spring
-	<<<<<<< HEAD
-0
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring
-	c566_spectroscopy
-3
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	hw
-1
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	problems
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw/problems
-	problem set 2.pdf
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/hw
-	problems
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy
-	lectures
-2
-d/Users/ethan/Box/classes/2019_spring/c566_spectroscopy/lectures
-	Lecture+7.pdf
-7
-d/Users/ethan
-	Applications
-1
-d/N/dc2/scratch/ewrietz/rotations
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01
 	allyl
 3
-d/N/dc2/scratch/ewrietz/rotations/allyl
-	dynamics
-1
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics
-	1000
-1
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
-	to_Ethane
-1
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics
-	2000
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x
+	basis02
 2
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/2000
-	2000-bomd-c3h4d_4.o4802662
-7
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics
-	1000
-1
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
-	vmdTest
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02
+	allyl
 3
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/vmdTest
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02
+	allyl
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x
+	basis01
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01
+	allyl
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl/c3h4d-4
+	c3h4d-4.com
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl/c3h4d-4
+	c3h4d-4.log
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl/c3h4d-8
+	c3h4d-8.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01
+	allyl
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl/c3h4d-8
+	c3h4d-8.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis01
+	allyl
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x
+	basis02
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02
+	allyl
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-4
 	..
 0
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
-	vmdtest
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-2
+	c3h4d-2.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-4
+	c3h4d-4.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-8
+	..
+0
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-2
+	c3h4d-2.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-4
+	c3h4d-4.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-8
+	c3h4d-8.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-4
+	c3h4d-4.log
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-8
+	c3h4d-8.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-8
+	c3h4d-8.log
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-4
+	c3h4d-4.log
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	obsolete
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/obsolete
+	c3h4d-2.chk
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-2
+	c3h4d-2.com
 4
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/vmdtest
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS
+	irc
+7
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-2
+	c3h4d-2.log
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
 	..
 0
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
-	velscorr
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/c3h4d-2
+	c3h4d-2.chk
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/c3h4d-2
+	c3h4d-2.log
+3
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS
+	irc
+7
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-2
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-2
+	c3h4d-2.log
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-4
 2
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/velscorr
-	bomd-c3h4d_2.com.4802656.m2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4
+	..
+0
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-2
 1
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
-	to_Ethane
-1
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000/to_Ethane
-	velscorr
-3
-d/N/dc2/scratch/ewrietz/rotations/allyl/dynamics/1000
-	to_Ethane
-1
-d/N/u/ewrietz/Karst
-	molecule-C.gjf
-12
-d/N/u/ewrietz
-	Karst
-3
-d/N/u/ewrietz/Karst
-	molecule-C.gjf
-12
-d/N/u/ewrietz
-	Karst
-3
-d/N/u/ewrietz/Karst
-	molecule-C.gjf
-12
-d/N/dc2/projects/carbocation
-	ethan
-13
-d/N/dc2/projects/carbocation/ethan
-	dynamics
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-2
+	c3h4d-2.com
+4
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-4
 2
-d/N/dc2/projects/carbocation/ethan/dynamics
-	bomd
-2
-d/N/dc2/projects/carbocation/ethan/dynamics/bomd
-	b3lyp
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4
+	c3h4d-2.com
 1
-d/N/dc2/projects/carbocation/ethan/dynamics
-	progress
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-6
 3
-d/N/dc2/projects/carbocation/ethan/dynamics/progress
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-6
+	c3h4d-2.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-7
+4
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-7
+	c3h4d-2.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-8
+5
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-8
+	c3h4d-2.com
+1
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc
+	c3h4d-4
+2
+d/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4
 	job.pbs
 2
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_09
-9
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_09
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=-1
+1
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=-1
 	..
 0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_10
-10
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_10
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_11
-11
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_11
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	previousSemester
-15
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
-	Week_08
-8
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_08
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
-	Week_07
-7
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester/Week_07
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals/previousSemester
-	Week_07
-7
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_06
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=0
+2
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=0
+	All_Temps
+1
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=0/All_Temps
+	temperatures.txt
 6
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_06
-	>>>>>>> 7d7d970cdd181c64d6536d3c83a2cba3803b748b
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_07
-7
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_07
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=0
+	All_Temps
+1
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=1
+3
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=1
 	..
 0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_08
-8
-d/Users/ethan/Box/classes/2019_spring/c117_principals/Week_08
-	..
-0
-d/Users/ethan/Box/classes/2019_spring/c117_principals
-	Week_08
-8
-d/Users/ethan/Box/classes/2019_spring
-	c117_principals
-1
-d/Users/ethan/Box/classes
-	2019_fall
-1
-d/Users/ethan/Box/classes/2019_fall
-	C561_quantumMechanics
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=2
 4
-d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
-	lectures
-3
-d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics/lectures
-	..
-0
-d/Users/ethan/Box/classes/2019_fall/C561_quantumMechanics
-	hw
-0
-d/Users/ethan
-	Box
-2
-d/Users/ethan/Box
-	C500-Ethan
-2
-d/Users/ethan
-	Dropbox
-7
-d/Users/ethan/Dropbox
-	carbocationPapers
-3
-d/Users/ethan/Dropbox/carbocationPapers
-	references
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=2
+	All_Temps
 1
-d/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-d/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2012_massSelected.pdf
-3
-d/Users/ethan/.oh-my-zsh/plugins/vi-mode
-	README.md
-1
-d/Users/ethan/.oh-my-zsh/plugins
-	ufw
-9
-d/Users/ethan/.oh-my-zsh
-	plugins
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=3
 5
-d/Users/ethan
-<<<<<<< HEAD
-	Dropbox
-7
-d/
-	mnt
-16
-d/N/u/ewrietz/Karst
-	backup-vifm
-1
-d/N/u/ewrietz/Karst/backup-vifm
-	colors
-1
-d/N/u/ewrietz/Karst/backup-vifm/colors
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=3
 	..
 0
-d/N/u/ewrietz/Karst/backup-vifm
-	scripts
-2
-d/N/u/ewrietz/Karst/backup-vifm/scripts
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=6
+8
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test/OP=6
 	..
 0
-d/N/u/ewrietz/Karst/backup-vifm
-	vifmrc
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Code_Test
+	OP=6
+8
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential
+	c3h5-b3lyp
 5
-d/N/u/ewrietz/Karst
-	backup-vifm
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/c3h5-b3lyp
+	Nicole_Potential
 1
-d/N/u/ewrietz/Karst/backup-vifm
-	vimfiles
-6
-d/N/u/ewrietz/Karst
-	dotfiles
-2
-d/N/u/ewrietz/Karst/dotfiles
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/c3h5-b3lyp/Nicole_Potential
 	..
 0
-d/N/u/ewrietz/Karst
-	files
-3
-d/N/u/ewrietz/Karst/files
-	0500
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/c3h5-b3lyp
+	Nicole_Potential
 1
-d/N/u/ewrietz/Karst/files/0500
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential
+	c3h5-b3lyp
+5
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/c3h5-b3lyp
+	c3h5.data
+38
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential
+	c3h5-b3lyp
+5
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/c3h5-b3lyp
 	..
 0
-d/N/u/ewrietz/Karst/files
-	1000
-2
-d/N/u/ewrietz/Karst/files/1000
-	..
-0
-d/N/u/ewrietz/Karst/files
-	1000
-2
-d/N/u/ewrietz/Karst
-	job
-3
-d/N/u/ewrietz/Karst/job
-	job.pbs
-=======
-	.vim
-10
-d/Users/ethan/.vim
-	after
-2
-d/Users/ethan/.vim/after
-	ftplugin
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential
+	Benzene_Fortran
 1
-d/Users/ethan/.vim/after/ftplugin
-	markdown
-1
-d/Users/ethan/.vim/after/ftplugin/markdown
-	markdown.vim
-1
-d/private/tmp/vim-anywhere
-	.doc-200329191418.md.swp
-1
-d/private/tmp
-	vim-anywhere
-9
-d/private
-	tmp
-3
-d/private/tmp
-	vim-anywhere
-9
-d/Users/ethan
-	.vim
-10
-d/Users/ethan/.vim
-	after
-2
-d/Users/ethan/.vim/after
-	ftplugin
-1
-d/Users/ethan/.vim/after/ftplugin
-	markdown
-1
-d/Users/ethan/.vim/after/ftplugin/markdown
-	markdown.vim
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
-1
+d/N/dc2/projects/carbocation/Nicole/Adam_Potential/Benzene_Fortran
+	script
+7
 d
 
 # Right window history (oldest to newest):
-<<<<<<< HEAD
-=======
-D/Users/ethan/Dropbox
-	notebook
-4
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
-D/Users/ethan/Dropbox/notebook
-	notebook.md
-5
-D/Users/ethan/Dropbox
-	pa
-4
-D/Users/ethan
-	Google Drive
-8
-D/Users/ethan/Google Drive
-	notebook
-5
-D/Users/ethan
-	Dropbox
-7
-D/Users/ethan/Dropbox
-	learning
-3
-D/Users/ethan/Dropbox/learning
-	..
-0
-D/Users/ethan/Dropbox
-	Icon
-9
-D/Users/ethan
-	Dropbox
-7
-D/Users
-	ethan
-2
-D/Users/ethan
-	Google Drive
-8
-D/Users/ethan/Google Drive
-	Ralph Waldo. Emerson - The Complete Essays and other Writings of Ralph Waldo Emerson  (1950, The Modern Library).pdf
-15
-D/Users/ethan
-	Dropbox
-7
-D/Users/ethan/Dropbox
-	papers
-5
-D/Users/ethan/Dropbox/papers
-	Carbocations.pdf
-2
-D/Users/ethan/Dropbox
-	papers
-5
-D/Users/ethan/Dropbox/papers
-	li2016_C2H3+.pdf
-3
-D/Users/ethan/Dropbox
-	papers
-5
-D/Users/ethan/Dropbox/papers
-	references
-1
-D/Users/ethan/Dropbox/papers/references
-	duncan2008_acetylene.pdf
-7
-D/Users/ethan/Dropbox/papers
-	references
-1
-D/Users/ethan/Dropbox
-	papers
-5
-D/Users/ethan/Dropbox/papers
-	references
-1
-D/Users/ethan/Dropbox
-	carbocationPapers
-3
-D/Users/ethan/Dropbox/carbocationPapers
-	references
-1
-D/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-D/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008_C3H5+.pdf
-1
-D/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-D/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	tantillo2008rebb.pdf
-5
-D/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-D/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2012_massSelected.pdf
-4
-D/Users/ethan/Dropbox/carbocationPapers/references
-	theory
-2
-D/Users/ethan/Dropbox/carbocationPapers/references/theory
-	Gutta2005_sandwiches.pdf
-1
-D/Users/ethan/Dropbox/carbocationPapers/references
-	theory
-2
-D/Users/ethan/Dropbox/carbocationPapers/references/theory
-	tantillo2008rebb.pdf
-4
-D/Users/ethan/Dropbox/carbocationPapers/references
-	isotopeEffect
-2
-D/Users/ethan/Dropbox/carbocationPapers/references/isotopeEffect
-	kieOrganometallicChemRev.pdf
-1
-D/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-D/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2012_massSelected.pdf
-4
-D/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
-D/Users/ethan/Dropbox/carbocationPapers/references/experiment
-	duncan2008benzene.pdf
-2
-D/Users/ethan/Dropbox/carbocationPapers/references
-	irrelivant
-2
-D/Users/ethan/Dropbox/carbocationPapers/references/irrelivant
-	duncan2008_acetylene.pdf
-1
-D/Users/ethan/Dropbox/carbocationPapers/references
-	experiment
-1
 D/Users/ethan/Dropbox/carbocationPapers/references/experiment
 	duncan2008_C3H5+.pdf
 1
@@ -705,12 +498,141 @@ D/Users/ethan
 D/Users/ethan/Documents
 	2019Taxes
 1
-<<<<<<< HEAD
 D/
 	N
 0
-=======
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
+D/N/u/ewrietz/Karst
+	..
+0
+D/N/dc2/projects/carbocation
+	ethan
+13
+D/N/dc2/projects/carbocation/ethan
+	opt_freq
+4
+D/N/dc2/projects/carbocation/ethan/opt_freq
+	analysis
+2
+D/N/dc2/projects/carbocation/ethan/opt_freq/analysis
+	__pycache__
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq
+	deuterated
+3
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated
+	b3lyp
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq
+	deuterated
+3
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated
+	b3lyp
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp
+	basis02
+2
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02
+	allyl
+3
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-2
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-2
+	c3h4d-2.com
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-4
+2
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-4
+	c3h4d-2.com
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-8
+5
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-8
+	c3h4d-2.com
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-4
+2
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-4
+	c3h4d-4.com
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-8
+5
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-8
+	c3h4d-8.com
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-4
+2
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-4
+	c3h4d-4.com
+1
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl
+	c3h4d-8
+5
+D/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis02/allyl/c3h4d-8
+	c3h4d-8.com
+1
+D/N/u/ewrietz/Karst
+	.scripts
+25
+D/N/u/ewrietz/Karst/.scripts
+	mkjobs.py
+5
+D/N/u/ewrietz/Karst
+	.local
+18
+D/N/u/ewrietz/Karst/.local
+	bin
+1
+D/N/u/ewrietz/Karst/.local/bin
+	..
+0
+D/N/u/ewrietz/Karst/.local
+	bin
+1
+D/N/u/ewrietz/Karst/.local/bin
+	..
+0
+D/N/u/ewrietz/Karst/.local
+	bin
+2
+D/N/u/ewrietz/Karst/.local/bin
+	ipython2
+2
+D/N/u/ewrietz/Karst/.local
+	.scripts
+1
+D/N/u/ewrietz/Karst/.local/.scripts
+	..
+0
+D/N/u/ewrietz/Karst/.local
+	bin
+2
+D/N/u/ewrietz/Karst/.local/bin
+	getbib.sh
+1
+D/N/u/ewrietz/Karst/.local
+	.scripts
+1
+D/N/u/ewrietz/Karst
+	.local
+18
+D/N/u/ewrietz/Karst/.local
+	bin
+1
+D/N/u/ewrietz/Karst/.local/bin
+	getbib.sh
+1
+D/N/u/ewrietz/Karst/.local
+	bin
+1
+D/N/u/ewrietz/Karst
+	README.md
+5
 D
 
 # Command line history (oldest to newest):
@@ -755,7 +677,6 @@ D
 :mkdir beach
 :mkdir boobs
 :cd $HOME
-:cd $CARB
 :!git clone https://github.com/dracula/vim.git
 :mkdir papers
 :mkdir movie
@@ -764,7 +685,6 @@ D
 :mkdir readings
 :mkdir hw
 :mkdir experiment
-:mkdir 
 :mkdir theory
 :mkdir isotopeEffect
 :mkdir irrelivant
@@ -777,10 +697,20 @@ D
 :!config status %q
 :touch diagram.md
 :!open Ethan-update.pdf
-<<<<<<< HEAD
-=======
 :!open duncan2008_C3H5+.pdf
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
+:!mkdir 
+:!mk
+:!~/.scripts/mkjobs.py c3h4d-4.com
+:cd $CARB
+:!~/.scripts/mkjobs.py
+:!source ~/.zshenv
+:!mkjob
+:mkdir c3h4d-4
+:mkdir c3h4d-8
+:!mkjobs.py c3h4d-4.com
+:!mkjobs.py c3h4d-8.com
+:!qsub job.pbs
+:mkdir 
 :q
 
 # Search history (oldest to newest):
@@ -814,22 +744,58 @@ pGeorge A. Olah, G. K. Surya Prakash, Kenneth Wade, Arpad Molnar, Robert E. Will
 polahHyper
 pGeorge A. Olah, G. K. Surya Prakash, Kenneth Wade, Arpad Molnar, Robert E. Williams(auth.) - Hypercarbon Chemistry, Second Edition (2011).pdf
 polahHypercarbonChemistry
+pc3h4d-8
+pc3h4d-2
+pc3h4d-4
 
 # Local filter history (oldest to newest):
 
 # Registers:
-<<<<<<< HEAD
-""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_files
-=======
-""/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
-""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_test.sh
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
+""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5106070
+""/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5106074
+""/N/u/ewrietz/Karst/.local/share/vifm/Trash/002_c3h4d-4.log
 
 # Directory stack (oldest to newest):
 
 # Trash content:
 t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_test.sh
 	/N/dc2/projects/carbocation/ethan/dynamics/progress/test.sh
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/003_c3h4d-2.chk
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4/c3h4d-2.chk
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/002_c3h4d-4.log
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4/c3h4d-4.log
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5106070
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4/c3h4d-4.o5106070
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5106074
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/TS/irc/c3h4d-4/c3h4d-4.o5106074
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.log
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-4/c3h4d-4.log
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/001_c3h4d-4.log
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-4/c3h4d-4.log
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5098010
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-4/c3h4d-4.o5098010
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-4.o5098012
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-4/c3h4d-4.o5098012
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/002_c3h5.chk
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-4/c3h5.chk
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/003_c3h5.chk
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-4/c3h5.chk
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/002_c3h4d-8.log
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-8/c3h4d-8.log
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/003_c3h4d-8.log
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-8/c3h4d-8.log
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-8.o5098009
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-8/c3h4d-8.o5098009
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_c3h4d-8.o5098011
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-8/c3h4d-8.o5098011
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/001_c3h5.chk
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-8/c3h5.chk
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/004_c3h5.chk
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/b3lyp/basis01/allyl/c3h4d-8/c3h5.chk
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_job.slurm
+	/N/dc2/projects/carbocation/ethan/opt_freq/deuterated/m062x/basis02/allyl/c3h4d-4/job.slurm
+t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_.scripts
+	/N/u/ewrietz/Karst/.local/.scripts
 t/N/u/ewrietz/Karst/.local/share/vifm/Trash/000_files
 	/N/u/ewrietz/Karst/files
 t/Users/ethan/.local/share/vifm/Trash/000_.vifm
@@ -1064,7 +1030,6 @@ t/Users/ethan/.local/share/vifm/Trash/000_yograf_cvim.tex
 	/Users/ethan/Downloads/yograf_cvim.tex
 t/Users/ethan/.local/share/vifm/Trash/000_zathura-0.4.1.tar.xz
 	/Users/ethan/Downloads/zathura-0.4.1.tar.xz
-<<<<<<< HEAD
 t/Users/ethan/.local/share/vifm/Trash/000_Icon
 	/Users/ethan/Dropbox/Icon
 t/Users/ethan/.local/share/vifm/Trash/000_README.md
@@ -1075,8 +1040,6 @@ t/Users/ethan/.local/share/vifm/Trash/000_beliefs.md
 	/Users/ethan/Dropbox/diary/beliefs.md
 t/Users/ethan/.local/share/vifm/Trash/000_Carbocations (1).pdf
 	/Users/ethan/Dropbox/papers/Carbocations (1).pdf
-=======
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
 t/Users/ethan/.local/share/vifm/Trash/000_2019-09-16_EthanQuizComments.pdf
 	/Users/ethan/Google Drive/ScannerPro/2019-09-16_EthanQuizComments.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_2019-09-18_.pdf
@@ -1087,86 +1050,13 @@ t/Users/ethan/.local/share/vifm/Trash/000_2019-10-13_absense.pdf
 	/Users/ethan/Google Drive/ScannerPro/2019-10-13_absense.pdf
 t/Users/ethan/.local/share/vifm/Trash/000_2019-10-30_gas.pdf
 	/Users/ethan/Google Drive/ScannerPro/2019-10-30_gas.pdf
-<<<<<<< HEAD
 t/Users/ethan/.local/share/vifm/Trash/000_iyengar
 	/Users/ethan/iyengar
-=======
-t/Users/ethan/.local/share/vifm/Trash/000_YouCompleteMe
-	/Users/ethan/.vim/bundle/YouCompleteMe
-t/Users/ethan/.local/share/vifm/Trash/000_backedup.txt
-	/Users/ethan/Desktop/backedup.txt
-t/Users/ethan/.local/share/vifm/Trash/000_data.txt
-	/Users/ethan/Desktop/data.txt
-t/Users/ethan/.local/share/vifm/Trash/000_savedrecs.bib
-	/Users/ethan/Desktop/savedrecs.bib
-t/Users/ethan/.local/share/vifm/Trash/000_untitled.dio
-	/Users/ethan/Desktop/untitled.dio
-t/Users/ethan/.local/share/vifm/Trash/000_4. Tips __ - Welcome_ (Desktop).pdf
-	/Users/ethan/Desktop/4. Tips __ - Welcome_ (Desktop).pdf
-t/Users/ethan/.local/share/vifm/Trash/000_1. Welcome to Joplin_ ___ - Welcome_ (Desktop).pdf
-	/Users/ethan/Desktop/1. Welcome to Joplin_ ___ - Welcome_ (Desktop).pdf
-t/Users/ethan/.local/share/vifm/Trash/000_C117_S2020_syllabus.doc
-	/Users/ethan/Desktop/C117_S2020_syllabus.doc
-t/Users/ethan/.local/share/vifm/Trash/000_Screen Shot 2020-02-16 at 7.22.15 PM.png
-	/Users/ethan/Desktop/Screen Shot 2020-02-16 at 7.22.15 PM.png
-t/Users/ethan/.local/share/vifm/Trash/000_gjf
-	/Users/ethan/Desktop/gjf
-t/Users/ethan/.local/share/vifm/Trash/000_Calendar — Week — 3:22:20 to 3:28:20.pdf
-	/Users/ethan/Desktop/Calendar — Week — 3:22:20 to 3:28:20.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_Screen Shot 2020-03-13 at 10.05.28 PM.png
-	/Users/ethan/Desktop/Screen Shot 2020-03-13 at 10.05.28 PM.png
-t/Users/ethan/.local/share/vifm/Trash/000_tl-4.9.0_5775-client-osx.iso
-	/Users/ethan/Desktop/tl-4.9.0_5775-client-osx.iso
-t/Users/ethan/.local/share/vifm/Trash/000_vibs.html
-	/Users/ethan/Desktop/vibs.html
-t/Users/ethan/.local/share/vifm/Trash/000_img
-	/Users/ethan/Desktop/img
-t/Users/ethan/.local/share/vifm/Trash/000_plots
-	/Users/ethan/Desktop/plots
-t/Users/ethan/.local/share/vifm/Trash/000_Untitled.ipynb
-	/Users/ethan/Desktop/Untitled.ipynb
-t/Users/ethan/.local/share/vifm/Trash/000_allyl-harmonic-isotope.pdf
-	/Users/ethan/Desktop/allyl-harmonic-isotope.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_2-propenyl-harmonic-isotope.pdf
-	/Users/ethan/Desktop/2-propenyl-harmonic-isotope.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_energies
-	/Users/ethan/Desktop/energies
-t/Users/ethan/.local/share/vifm/Trash/000_stuff.txt
-	/Users/ethan/Desktop/stuff/stuff.txt
-t/Users/ethan/.local/share/vifm/Trash/000_Heading.md
-	/Users/ethan/Documents/Heading.md
-t/Users/ethan/.local/share/vifm/Trash/000_Heading.pdf
-	/Users/ethan/Documents/Heading.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_Heading.tex
-	/Users/ethan/Documents/Heading.tex
-t/Users/ethan/.local/share/vifm/Trash/000_R_DNA_Gel.docx
-	/Users/ethan/Documents/R_DNA_Gel.docx
-t/Users/ethan/.local/share/vifm/Trash/000_library.bib
-	/Users/ethan/Documents/library.bib
-t/Users/ethan/.local/share/vifm/Trash/000_beliefs.md
-	/Users/ethan/Dropbox/diary/beliefs.md
-t/Users/ethan/.local/share/vifm/Trash/000_diary
-	/Users/ethan/Dropbox/diary
-t/Users/ethan/.local/share/vifm/Trash/000_README.md
-	/Users/ethan/Dropbox/Notes/README.md
-t/Users/ethan/.local/share/vifm/Trash/000_Carbocations (1).pdf
-	/Users/ethan/Dropbox/papers/Carbocations (1).pdf
-t/Users/ethan/.local/share/vifm/Trash/000_Icon
-	/Users/ethan/Dropbox/Icon
-t/Users/ethan/.local/share/vifm/Trash/000_iyengar
-	/Users/ethan/iyengar
-t/Users/ethan/.local/share/vifm/Trash/000_update.html
-	/Users/ethan/Desktop/update.html
-t/Users/ethan/.local/share/vifm/Trash/000_update.pdf
-	/Users/ethan/Desktop/update.pdf
-t/Users/ethan/.local/share/vifm/Trash/000_~$ Assignments for resources C103 Fall 19 v2.docx
-	/Users/ethan/Desktop/~$ Assignments for resources C103 Fall 19 v2.docx
->>>>>>> 40271fffe6b5d913b234dcb53dab521e0c6c91c2
 
 # State:
 f
 i1
-[.0
+[.1
 [F
 F
 I1

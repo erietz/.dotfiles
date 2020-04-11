@@ -27,6 +27,8 @@ bindkey -v '^?' backward-delete-char
 
 
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias jlremote="jupyter lab --no-browser --port=9876"
 
+source ~/.bash_local/bash_hpc
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
