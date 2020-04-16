@@ -1,1 +1,3 @@
-alias myjobs='qstat -u ewrietz'
+alias \
+	myjobs='qstat -u ewrietz'\
+	ls="ls --color=auto"
