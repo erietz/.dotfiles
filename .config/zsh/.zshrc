@@ -1,6 +1,12 @@
 #ZSH_DISABLE_COMPFIX=true
 
+export PATH="$PATH:$HOME/.local/bin"
+
 autoload -U colors && colors
+
+set -o noclobber
+alias cp='cp -i'
+alias mv='mv -i'
 
 git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /'
