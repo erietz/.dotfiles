@@ -115,7 +115,9 @@ set statusline="  Hint: %z%= %A %10u:%-7g %15s %20d  "
 " :mark mark /full/directory/path [filename]
 
 mark b ~/bin/
+mark d ~/Desktop/
 mark h ~/
+mark c ~/GD_IU/courses/2019_spring/
 
 " ------------------------------------------------------------------------------
 
@@ -169,14 +171,14 @@ command! reload :write | restart
 " program.
 
 " Pdf
-filextype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu,*.epub zathura %f 2>/dev/null &,
 filetype *.pdf
-       \ {Open in Preview}
-       \ open -a Preview.app,
        \ {Open in Skim}
        \ open -a Skim.app,
+       \ {Open in Preview}
+       \ open -a Preview.app,
 fileviewer *.pdf pdftotext -nopgbrk %c -
 
+filextype *.pdf,*.ps,*.eps,*.ps.gz,*.djvu,*.epub zathura %f 2>/dev/null &,
 " PostScript
 filetype *.ps,*.eps open -a Preview.app
 
