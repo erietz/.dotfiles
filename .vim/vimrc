@@ -11,9 +11,11 @@ syntax enable
 "colorscheme palenight
 "let g:airline_theme='one'
 "colorscheme one
+colorscheme gruvbox
 "set background=dark
 "let g:vifm_home="${HOME}/.config/vifm"
-colorscheme dracula
+"colorscheme dracula
+set background=dark 
 set number 		" numbered lines
 "set relativenumber	" number lines relative to cursor
 set colorcolumn=85 	" red line at 106th column
