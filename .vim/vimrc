@@ -1,113 +1,97 @@
 execute pathogen#infect()
+
+"-------------------------------------------------------------------------------
+"Global settings
+"-------------------------------------------------------------------------------
 filetype plugin indent on	" Indent style depending on syntax
 " must come before syntax enable?
 syntax enable
-"if has('gui_running')
-"	set background=light
-"	colorscheme solarized
-"endif
-"colo elflord
-"set background=dark
-"colorscheme palenight
-"let g:airline_theme='one'
-"colorscheme one
-colorscheme gruvbox
-"set background=dark
-"let g:vifm_home="${HOME}/.config/vifm"
-"colorscheme dracula
-set background=dark 
 set number 		" numbered lines
-"set relativenumber	" number lines relative to cursor
-set colorcolumn=85 	" red line at 106th column
+set colorcolumn=85 	" red line at 85th column
 set ignorecase		" case insensitive searching
 set smartcase		" case insensitive searching
 set omnifunc=syntaxcomplete#Complete	" omnicompletion
-set nocursorline	" get rid of highlighting current line for faster scrolling on macos
-set lazyredraw		" renders vim fewer times to speed up scrolling on macos
-"set clipboard=unnamed	" use system clipboard
-"nnoremap <leader>s :set spell<CR>	" spell checking
-"nnoremap <leader>ns :set nospell<CR>	" spell checking
+set nocursorline	"  faster scrolling 
+set lazyredraw		" renders vim fewer times to speed up scrolling 
 set spellfile=~/.vim/spell/en.utf-8.add
 set wildmenu
 set wildmode=longest:full,full
 set conceallevel=2
+"set clipboard=unnamed	" use system clipboard
 
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" General Mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"-------------------------------------------------------------------------------
+"Global mappings
+"-------------------------------------------------------------------------------
 let mapleader=","
 let maplocalleader=";"
 
 " Yank to clipboard
-	vnoremap ,y "*y
+vnoremap ,y "*y
 
 " Easier to save 
-	inoremap ;w :w<Enter>
-	nnoremap ;w :w<Enter>
+inoremap ;w :w<Enter>
+nnoremap ;w :w<Enter>
 	
 " Status line
-	set laststatus=2 			" Always show status line
-	set statusline=%F 			" Full path to file
-"	set statusline+=%= 			" Switch to right aligned
-"	set statusline+=line\ %l\ of\ %L 	" Current line / total lines
+set laststatus=2 			" Always show status line
+set statusline=%F 			" Full path to file
+"set statusline+=%= 			" Switch to right aligned
+"set statusline+=line\ %l\ of\ %L 	" Current line / total lines
 
 " Quickly edit/reload vimrc
-	nnoremap <silent> <leader>ev :vsplit ~/.vim/vimrc <CR>
-	nnoremap <silent> <leader>sv :so ~/.vim/vimrc <CR>
+nnoremap <silent> <leader>ev :vsplit ~/.vim/vimrc <CR>
+nnoremap <silent> <leader>sv :so ~/.vim/vimrc <CR>
 
 " Jump around with tags 
-	inoremap <leader><Tab> <Esc>/<++><CR>"_c4l
-	vnoremap <leader><Tab> <Esc>/<++><CR>"_c4l
-	nnoremap <leader><Tab> <Esc>/<++><CR>"_c4l
-	inoremap <leader>tag <++>
+inoremap <leader><Tab> <Esc>/<++><CR>"_c4l
+vnoremap <leader><Tab> <Esc>/<++><CR>"_c4l
+nnoremap <leader><Tab> <Esc>/<++><CR>"_c4l
+inoremap <leader>tag <++>
 
 " Changing window splits
-	nnoremap <C-j> <C-w>j
-	nnoremap <C-h> <C-w>h
-	nnoremap <C-k> <C-w>k
-	nnoremap <C-l> <C-w>l
-	nnoremap <A-l> <C-w>>
-	nnoremap <A-h> <C-w><
-	nnoremap <leader>f <C-w>f<C-w>L
+nnoremap <C-j> <C-w>j
+nnoremap <C-h> <C-w>h
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <A-l> <C-w>>
+nnoremap <A-h> <C-w><
+nnoremap <leader>f <C-w>f<C-w>L
 	
 " Parenthesis and Brackets
-"	inoremap { {}<Esc>i
-"	inoremap {{ {
-"	inoremap ( ()<Esc>i
-"	inoremap (( (
-"	inoremap [ []<Esc>i
-"	inoremap [[ [
-"	inoremap " ""<Esc>i
-"	inoremap "" "
-"	inoremap ' ''<Esc>i
-"	inoremap '' '
+"inoremap { {}<Esc>i
+"inoremap {{ {
+"inoremap ( ()<Esc>i
+"inoremap (( (
+"inoremap [ []<Esc>i
+"inoremap [[ [
+"inoremap " ""<Esc>i
+"inoremap "" "
+"inoremap ' ''<Esc>i
+"inoremap '' '
 	
-	vnoremap <leader>{ <Esc>`>a}<Esc>`<i{<Esc>
-	vnoremap <leader>( <Esc>`>a)<Esc>`<i(<Esc>
-	vnoremap <leader>[ <Esc>`>a]<Esc>`<i[<Esc>
-	vnoremap <leader>' <Esc>`>a'<Esc>`<i'<Esc>
-	vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
-	vnoremap <leader>* <Esc>`>a*<Esc>`<i*<Esc>
-	vnoremap <leader>** <Esc>`>a**<Esc>`<i**<Esc>
-	vnoremap <leader>$ <Esc>`>a$<Esc>`<i$<Esc>
-	vnoremap <leader>$$ <Esc>`>a$$<Esc>`<i$$<Esc>
+" Wrap visual selection in delimiter
+vnoremap <leader>{ <Esc>`>a}<Esc>`<i{<Esc>
+vnoremap <leader>( <Esc>`>a)<Esc>`<i(<Esc>
+vnoremap <leader>[ <Esc>`>a]<Esc>`<i[<Esc>
+vnoremap <leader>' <Esc>`>a'<Esc>`<i'<Esc>
+vnoremap <leader>" <Esc>`>a"<Esc>`<i"<Esc>
+vnoremap <leader>* <Esc>`>a*<Esc>`<i*<Esc>
+vnoremap <leader>** <Esc>`>a**<Esc>`<i**<Esc>
+vnoremap <leader>$ <Esc>`>a$<Esc>`<i$<Esc>
+vnoremap <leader>$$ <Esc>`>a$$<Esc>`<i$$<Esc>
 	
 " Formatting paragraphs
-	inoremap <leader>q gqap
-	nnoremap <leader>q gqap
+inoremap <leader>q gqap
+nnoremap <leader>q gqap
 
 " Moving of code blocks
 vnoremap < <gv  
 vnoremap > >gv  
 
-" Getting todays date
-"inoremap <leader>date <Esc>:r !date +%F<CR><CR>
+"nnoremap <leader>s :set spell<CR>	" spell checking
+"nnoremap <leader>ns :set nospell<CR>	" spell checking
 
-let g:markdown_folding = 1	" markdown folding
-let g:tex_fold_enabled=1	" latex folding  
-
-" Open URLs """"""""""""""""""""""""""""""""""""""""""""""""""""
+" Open URLs with gx mapping ------------------------------
 " let g:netrw_browser_viewer='open' " cannot get to work
 " This is my workaround 
 " First disable the default gx
@@ -119,7 +103,14 @@ function! Open(url)
 endfunction
 " Call the function with gx
 nnoremap  gx viW"xy \| :call Open(@x)<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"---------------------------------------------------------
+ 
+ 
+"-------------------------------------------------------------------------------
+" Filetype settings that I don't know how to put in another vim file
+"-------------------------------------------------------------------------------
+let g:markdown_folding = 1	" markdown folding
+let g:tex_fold_enabled=1	" latex folding  
 
 " Python
 autocmd FileType python nnoremap <leader>c :w<CR>:!python3 %<CR>
@@ -130,26 +121,22 @@ au BufNewFile,BufFilePre,BufRead *.zsh set filetype=zsh
 
 " Shell
 autocmd FileType *sh nnoremap <leader>c :w<CR>:!./%<CR>
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"-------------------------------------------------------------------------------
+" Plugin settings
+"-------------------------------------------------------------------------------
 
-" Ultisnips Plugin
-"
+" color scheme
+colorscheme gruvbox
+set background=dark 
+
+" ultisnips
 "set runtimepath-=~/.vim/bundle/ultisnips/
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
-" You complete me
-let g:ycm_python_binary_path = 'python3'
-let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-
-" Markdown
+" vim-markdown
 let g:vim_markdown_math = 1
 let g:vim_markdown_auto_insert_bullets = 0
 let g:vim_markdown_new_list_item_indent = 0
@@ -159,3 +146,9 @@ let g:tex_flavor='latex'
 let g:vimtex_view_method='skim'
 "let g:vimtex_quickfix_mode=0
 "let g:tex_conceal='abdmg'
+
+"-------------------------------------------------------------------------------
+" Experimental settings
+"-------------------------------------------------------------------------------
+"
+"let g:vifm_home="${HOME}/.config/vifm"
