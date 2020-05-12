@@ -4,3 +4,4 @@
 .config/msmtp/*
 .config/mutt/*
 .config/configstore/update-notifier-npm.json
+.vim/.netrwhist

@@ -136,10 +136,10 @@ let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger = '<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 
-" vim-markdown
-let g:vim_markdown_math = 1
-let g:vim_markdown_auto_insert_bullets = 0
-let g:vim_markdown_new_list_item_indent = 0
+"" vim-markdown
+"let g:vim_markdown_math = 1
+"let g:vim_markdown_auto_insert_bullets = 0
+"let g:vim_markdown_new_list_item_indent = 0
 
 " vimtex
 let g:tex_flavor='latex'
