@@ -19,3 +19,9 @@
 [submodule ".vim/bundle/vim-pandoc-syntax"]
 	path = .vim/bundle/vim-pandoc-syntax
 	url = https://github.com/vim-pandoc/vim-pandoc-syntax.git
+[submodule ".config/zsh/zsh-autosuggestions"]
+	path = .config/zsh/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule ".config/zsh/zsh-syntax-highlighting"]
+	path = .config/zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
