@@ -15,7 +15,7 @@ syntax enable
 "let g:vifm_home="${HOME}/.config/vifm"
 colorscheme dracula
 set number 		" numbered lines
-set relativenumber	" number lines relative to cursor
+"set relativenumber	" number lines relative to cursor
 set colorcolumn=85 	" red line at 106th column
 set ignorecase		" case insensitive searching
 set smartcase		" case insensitive searching
@@ -47,8 +47,8 @@ let maplocalleader=";"
 " Status line
 	set laststatus=2 			" Always show status line
 	set statusline=%F 			" Full path to file
-	set statusline+=%= 			" Switch to right aligned
-	set statusline+=line\ %l\ of\ %L 	" Current line / total lines
+"	set statusline+=%= 			" Switch to right aligned
+"	set statusline+=line\ %l\ of\ %L 	" Current line / total lines
 
 " Quickly edit/reload vimrc
 	nnoremap <silent> <leader>ev :vsplit ~/.vim/vimrc <CR>
@@ -123,6 +123,8 @@ nnoremap  gx viW"xy \| :call Open(@x)<CR>
 autocmd FileType python nnoremap <leader>c :w<CR>:!python3 %<CR>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
+au BufNewFile,BufFilePre,BufRead *.zsh set filetype=zsh
 
 " Shell
 autocmd FileType *sh nnoremap <leader>c :w<CR>:!./%<CR>

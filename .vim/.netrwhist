@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/N/dc2/projects/carbocation/ethan/dynamics/bomd/vmd'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/Users/ethan/Desktop/grades'
+let g:netrw_dirhist_3='/Users/ethan'
+let g:netrw_dirhist_2='/Users/ethan/Desktop'
+let g:netrw_dirhist_1='/Users/ethan/Desktop/grades'

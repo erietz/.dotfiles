@@ -1,10 +1,39 @@
-priority -50
-
 extends sh
 
-priority -49
-
-snippet #! "#!/usr/bin/env zsh" b
+snippet shebang "#!/usr/bin/env zsh" b
 #!/usr/bin/env zsh
 $0
+endsnippet
+
+snippet slurm "slurm gaussian job" b
+#!/usr/bin/env zsh
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16
+#SBATCH --mem=10gb
+#SBATCH --time=${1:0-00:20:00}
+#SBATCH --job-name=${2:jobname}
+${3:#SBATCH --mail-user=ewrietz@iu.edu}
+${4:#SBATCH --mail-type=FAIL,BEGIN,END}
+
+cd $SLURM_SUBMIT_DIR
+g16 < ${5:filename}.com > $5.log
+
+$0
+
+endsnippet
+
+snippet pbs "pbs gaussian job" b
+#!/usr/bin/env zsh
+#PBS -l nodes=1:ppn=16
+#PBS -l vmem=10gb
+#PBS -l walltime=${1:0-00:20:00}
+#PBS -N ${2:jobname}
+${3:#PBS -M ewrietz@iu.edu}
+${4:#PBS -m abe}
+
+cd $PBS_O_WORKDIR
+g16 < ${5:filename}.com > $5.log
+
+$0
+
 endsnippet

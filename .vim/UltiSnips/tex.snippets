@@ -1,6 +1,6 @@
 extends texmath
 
-snippet preamble "Preample" b
+snippet preamble "Preamble" b
 \documentclass{article}
 \usepackage{geometry}
 \usepackage{hyperref}
@@ -80,6 +80,10 @@ snippet "subsub(section)?" "Subsubsection" br
 \subsubsection{${1:${VISUAL:Subsubsection name}}}
 
 $0
+endsnippet
+
+snippet "lab(el)?" "Section" r
+\label{${1:${VISUAL:label name}}} $0
 endsnippet
 
 snippet "i(tem)?" "Item" br
