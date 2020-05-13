@@ -1,7 +1,7 @@
 export FPATH=/usr/share/zsh/functions/Completion:$FPATH
 fpath=( /usr/share/zsh/functions/**/*(/) )
 
-eval $(~/.linuxbrew/bin/brew shellenv)
+eval $(/N/slate/ewrietz/linuxbrew/bin/brew shellenv)
 
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
