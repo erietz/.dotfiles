@@ -117,7 +117,7 @@ autocmd FileType python nnoremap <leader>c :w<CR>:!python3 %<CR>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
-au BufNewFile,BufFilePre,BufRead *.zsh set filetype=zsh
+au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 
 " Shell
 autocmd FileType *sh nnoremap <leader>c :w<CR>:!./%<CR>
