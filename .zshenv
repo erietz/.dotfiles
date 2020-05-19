@@ -19,5 +19,4 @@ alias gpg2="gpg2 --homedir ${XDG_DATA_HOME}/gnupg"
 export LESSHISTFILE="-"
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
-export ATOM_HOME="$XDG_DATA_HOME"/atom
 #export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
