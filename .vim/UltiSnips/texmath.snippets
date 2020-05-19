@@ -1,41 +1,46 @@
-global !p
-texMathZones = ['texMathZone' + x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z', 'AmsA', 'AmsB', 'AmsC', 'AmsD', 'AmsE', 'AmsF', 'AmsG', 'AmsAS', 'AmsBS', 'AmsCS', 'AmsDS', 'AmsES', 'AmsFS', 'AmsGS' ]]
-texIgnoreMathZones = ['texMathText']
-texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
-texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
-ignore = texIgnoreMathZoneIds[0]
-def math():
-	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
-	try:
-		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
-		return first != ignore
-	except StopIteration:
-		return False
-endglobal
+#global !p
+#texMathZones = ['texMathZone' + x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z', 'AmsA', 'AmsB', 'AmsC', 'AmsD', 'AmsE', 'AmsF', 'AmsG', 'AmsAS', 'AmsBS', 'AmsCS', 'AmsDS', 'AmsES', 'AmsFS', 'AmsGS' ]]
+#texIgnoreMathZones = ['texMathText']
+#texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
+#texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
+#ignore = texIgnoreMathZoneIds[0]
+#def math():
+#	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
+#	try:
+#		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
+#		return first != ignore
+#	except StopIteration:
+#		return False
+#endglobal
 
-context "math()"
+#context "math()"
 snippet / "Fraction" i
 \frac{${1:${VISUAL:numerator}}}{${2:denominator}}${0}
 endsnippet
 
-context "math()"
+#context "math()"
 snippet _ "Subscript" iA
 _{$1}$0
 endsnippet
 
-context "math()"
+#context "math()"
 snippet ^ "Superscript" iA
 ^{$1}$0
 endsnippet
 
-context "math()"
+#context "math()"
 snippet E "Power of 10" i
 \times 10^{$1}$0
 endsnippet
 
-context "math()"
+#context "math()"
 snippet sum "Summation" i
 \sum\limits_{${1:n}}^{${2:\infty}}$0
+endsnippet
+
+#context "math()"
+snippet * "times" i
+\times $0
 endsnippet
 
 ## Greek

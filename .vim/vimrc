@@ -16,7 +16,7 @@ set lazyredraw		" renders vim fewer times to speed up scrolling
 set spellfile=~/.vim/spell/en.utf-8.add
 set wildmenu
 set wildmode=longest:full,full
-set conceallevel=2
+"set conceallevel=2
 "set clipboard=unnamed	" use system clipboard
 
 "-------------------------------------------------------------------------------
@@ -49,10 +49,10 @@ nnoremap <leader><Tab> <Esc>/<++><CR>"_c4l
 inoremap <leader>tag <++>
 
 " Changing window splits
-nnoremap <C-j> <C-w>j
-nnoremap <C-h> <C-w>h
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 nnoremap <A-l> <C-w>>
 nnoremap <A-h> <C-w><
 nnoremap <leader>f <C-w>f<C-w>L
@@ -132,23 +132,48 @@ set background=dark
 
 " ultisnips
 "set runtimepath-=~/.vim/bundle/ultisnips/
-let g:UltiSnipsExpandTrigger = '<tab>'
-let g:UltiSnipsJumpForwardTrigger = '<tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"let g:UltiSnipsExpandTrigger = '<tab>'
+"let g:UltiSnipsJumpForwardTrigger = '<tab>'
+"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+"let g:UltiSnipsExpandTrigger       = '<C-k>'
+"let g:UltiSnipsJumpForwardTrigger  = '<C-k>'
+"let g:UltiSnipsJumpBackwardTrigger = '<C-j>'
+let g:UltiSnipsExpandTrigger = '<localleader><space>'
+let g:UltiSnipsJumpForwardTrigger = '<localleader><space>'
+let g:UltiSnipsJumpBackwardTrigger = '<localleader><localleader><space>'
 
 "" vim-markdown
-"let g:vim_markdown_math = 1
-"let g:vim_markdown_auto_insert_bullets = 0
-"let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_math = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
 
 " vimtex
 let g:tex_flavor='latex'
 let g:vimtex_view_method='skim'
 "let g:vimtex_quickfix_mode=0
 "let g:tex_conceal='abdmg'
+"let g:vimtex_fold_manual
+
+" Nerd Tree
+nnoremap <localleader>n :NERDTreeFind<CR>
 
 "-------------------------------------------------------------------------------
 " Experimental settings
 "-------------------------------------------------------------------------------
 "
 "let g:vifm_home="${HOME}/.config/vifm"
+
+" VimCompletesMe
+"let g:vcm_tab_complete
+let b:vcm_tab_complete = 'omni'
+
+" Fuzzy finder
+set rtp+=/usr/local/opt/fzf
+nnoremap <localleader>f :FZF<CR>
+
+" vim-rainbow
+let g:rainbow_active = 1
+
+"let g:lightline = {
+"      \ 'colorscheme': 'wombat',
+"      \ }
