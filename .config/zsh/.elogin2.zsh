@@ -1,13 +1,15 @@
 export FPATH=/usr/share/zsh/functions/Completion:$FPATH
 fpath=( /usr/share/zsh/functions/**/*(/) )
 
-eval $(/N/slate/ewrietz/linuxbrew/bin/brew shellenv)
-
 export LS_OPTIONS='--color=auto'
 eval "$(dircolors -b)"
 alias ls='ls $LS_OPTIONS'
 
 [ -f $HOME/.config/zsh/.zsh_hpc.sh ] && source $HOME/.config/zsh/.zsh_hpc.sh
+
+
+source activate ethan
+
 
 isjobrunning () {
 	job=$(echo $1 | grep -o "[0-9]*" | tail -n 1)
