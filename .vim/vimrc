@@ -138,9 +138,10 @@ set background=dark
 "let g:UltiSnipsExpandTrigger       = '<C-k>'
 "let g:UltiSnipsJumpForwardTrigger  = '<C-k>'
 "let g:UltiSnipsJumpBackwardTrigger = '<C-j>'
-let g:UltiSnipsExpandTrigger = '<localleader><space>'
-let g:UltiSnipsJumpForwardTrigger = '<localleader><space>'
-let g:UltiSnipsJumpBackwardTrigger = '<localleader><localleader><space>'
+let g:UltiSnipsExpandTrigger = '<localleader><tab>'
+let g:UltiSnipsJumpForwardTrigger = '<localleader><tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<localleader><localleader><tab>'
+let g:UltiSnipsListSnippets="<localleader>u"
 
 "" vim-markdown
 let g:vim_markdown_math = 1

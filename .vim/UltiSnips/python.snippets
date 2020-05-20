@@ -15,3 +15,29 @@ snippet shebang "shebang" b
 $0
 endsnippet
 
+snippet slurm "slurm job" b
+#!/usr/bin/env python3
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=32
+#SBATCH --mem=20gb
+#SBATCH --time=${1:0-00:20:00}
+#SBATCH --job-name=${2:jobname}
+${3:#SBATCH --mail-user=ewrietz@iu.edu}
+${4:#SBATCH --mail-type=FAIL,BEGIN,END}
+
+$0
+
+endsnippet
+
+snippet pbs "pbs job" b
+#!/usr/bin/env zsh
+#PBS -l nodes=1:ppn=32
+#PBS -l vmem=20gb
+#PBS -l walltime=${1:0-00:20:00}
+#PBS -N ${2:jobname}
+${3:#PBS -M ewrietz@iu.edu}
+${4:#PBS -m abe}
+
+$0
+
+endsnippet
