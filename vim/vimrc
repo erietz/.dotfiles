@@ -178,3 +178,14 @@ let g:rainbow_active = 1
 "let g:lightline = {
 "      \ 'colorscheme': 'wombat',
 "      \ }
+let g:lightline = {
+      \ 'colorscheme': 'gruvbox',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
+
