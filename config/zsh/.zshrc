@@ -1,6 +1,6 @@
 #ZSH_DISABLE_COMPFIX=true
 
-export PATH="/usr/local/anaconda3/bin:$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 autoload -U colors && colors
 
