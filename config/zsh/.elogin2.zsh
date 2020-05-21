@@ -5,10 +5,9 @@ fpath=( /usr/share/zsh/functions/**/*(/) )
 #eval "$(dircolors -b)"
 #alias ls='ls $LS_OPTIONS'
 #
-alias ls='ls --color=auto'
+export LS_OPTIONS='--color=auto'
 
 [ -f $HOME/.config/zsh/.zsh_hpc.sh ] && source $HOME/.config/zsh/.zsh_hpc.sh
-
 
 source activate ethan
 
