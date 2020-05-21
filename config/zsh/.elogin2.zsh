@@ -1,9 +1,9 @@
 export FPATH=/usr/share/zsh/functions/Completion:$FPATH
 fpath=( /usr/share/zsh/functions/**/*(/) )
 
-export LS_OPTIONS='--color=auto'
-eval "$(dircolors -b)"
-alias ls='ls $LS_OPTIONS'
+#export LS_OPTIONS='--color=auto'
+#eval "$(dircolors -b)"
+#alias ls='ls $LS_OPTIONS'
 
 [ -f $HOME/.config/zsh/.zsh_hpc.sh ] && source $HOME/.config/zsh/.zsh_hpc.sh
 
