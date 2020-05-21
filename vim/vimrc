@@ -49,10 +49,10 @@ nnoremap <leader><Tab> <Esc>/<++><CR>"_c4l
 inoremap <leader>tag <++>
 
 " Changing window splits
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <c-h> :wincmd h<CR>
+nnoremap <c-j> :wincmd j<CR>
+nnoremap <c-k> :wincmd k<CR>
+nnoremap <c-l> :wincmd l<CR>
 nnoremap <A-l> <C-w>>
 nnoremap <A-h> <C-w><
 nnoremap <leader>f <C-w>f<C-w>L
