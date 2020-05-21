@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "coc-jedi": ">=0.10.1",
+    "coc-python": ">=1.2.12",
+    "coc-texlab": ">=2.1.0"
+  }
+}
