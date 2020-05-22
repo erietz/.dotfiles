@@ -1,4 +1,8 @@
+export PYTHONPATH="$HOME/github/python/modules/"
 
+# Add anaconda to path 
+# Created using: conda init zsh 
+#
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/usr/local/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
