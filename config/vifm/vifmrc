@@ -418,12 +418,3 @@ nnoremap <f8> :delete<cr>
 
 command equal :cd %d %d
 
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.xpm
-        \ vifmimg draw %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
-fileviewer *.gif
-        \ vifmimg gifpreview %px %py %pw %ph %c
-        \ %pc
-        \ vifmimg clear
-
