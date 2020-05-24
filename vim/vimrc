@@ -157,6 +157,7 @@ let g:vimtex_view_method='skim'
 
 " Nerd Tree
 nnoremap <localleader>n :NERDTreeFind<CR>
+set encoding=utf8 " for nerdtree icons
 
 "-------------------------------------------------------------------------------
 " Experimental settings
@@ -265,6 +266,7 @@ let g:coc_global_extensions = [
       \'coc-jedi',
       \'coc-texlab',
       \'coc-ultisnips',
+      \'coc-sh',
       \'coc-git'
       \]
 
@@ -280,3 +282,14 @@ augroup vimwikigroup
     autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
 augroup end
 let g:vimwiki_table_mappings = 0
+
+function! ZoteroCite()
+  " pick a format based on the filetype (customize at will)
+  let format = &filetype =~ '.*tex' ? 'citep' : 'pandoc'
+  let api_call = 'http://127.0.0.1:23119/better-bibtex/cayw?format='.format.'&brackets=1'
+  let ref = system('curl -s '.shellescape(api_call))
+  return ref
+endfunction
+
+noremap <leader>z "=ZoteroCite()<CR>p
+inoremap <C-z> <C-r>=ZoteroCite()<CR>
