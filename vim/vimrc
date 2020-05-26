@@ -6,7 +6,8 @@ execute pathogen#infect()
 filetype plugin indent on	" Indent style depending on syntax
 " must come before syntax enable?
 syntax enable
-set number 		" numbered lines
+"set number 		" numbered lines
+set relativenumber 		" numbered lines
 set colorcolumn=85 	" red line at 85th column
 set ignorecase		" case insensitive searching
 set smartcase		" case insensitive searching
