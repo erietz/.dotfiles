@@ -1,0 +1,1 @@
+.elogin2.zsh

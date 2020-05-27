@@ -6,7 +6,8 @@ execute pathogen#infect()
 filetype plugin indent on	" Indent style depending on syntax
 " must come before syntax enable?
 syntax enable
-set number 		" numbered lines
+"set number 		" numbered lines
+set relativenumber 		" numbered lines
 set colorcolumn=85 	" red line at 85th column
 set ignorecase		" case insensitive searching
 set smartcase		" case insensitive searching
@@ -33,8 +34,8 @@ inoremap ;w :w<Enter>
 nnoremap ;w :w<Enter>
 	
 " Status line
-set laststatus=2 			" Always show status line
-set statusline=%F 			" Full path to file
+"set laststatus=2 			" Always show status line
+"set statusline=%F 			" Full path to file
 "set statusline+=%= 			" Switch to right aligned
 "set statusline+=line\ %l\ of\ %L 	" Current line / total lines
 
@@ -90,6 +91,9 @@ vnoremap > >gv
 
 "nnoremap <leader>s :set spell<CR>	" spell checking
 "nnoremap <leader>ns :set nospell<CR>	" spell checking
+
+" Adding comments until end of line
+nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
 
 " Open URLs with gx mapping ------------------------------
 " let g:netrw_browser_viewer='open' " cannot get to work
@@ -266,7 +270,6 @@ let g:coc_global_extensions = [
       \'coc-jedi',
       \'coc-texlab',
       \'coc-ultisnips',
-      \'coc-sh',
       \'coc-git'
       \]
 
