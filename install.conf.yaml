@@ -4,6 +4,9 @@
 
 - clean: ['~']
 
+- create:
+    - ~/.local/bin
+
 - link:
     ~/.zshenv: zshenv
     ~/.vim: vim
@@ -13,6 +16,7 @@
     ~/.local/bin/:
       glob: true
       path: local/bin/*
+
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
