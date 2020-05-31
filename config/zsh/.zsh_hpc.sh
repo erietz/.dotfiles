@@ -6,9 +6,9 @@ export GAUSS_SCRDIR="/N/dc2/scratch/ewrietz/"
 export CARB="/N/dc2/projects/carbocation"
 
 # Use my modules from anywhere
-export PYTHONPATH="/N/slate/ewrietz/python/modules/:$PYTHONPATH"
+export PYTHONPATH="/N/slate/ewrietz/IyengarLab/ethan/modules/:$PYTHONPATH"
 
-export PATH="$PATH:/N/slate/ewrietz/applications/apps"
+PATH="$PATH:/N/slate/ewrietz/applications/apps"
 export PATH="$PATH:/N/slate/ewrietz/hpc_codes/bin"
 
 
