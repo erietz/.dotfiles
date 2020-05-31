@@ -117,7 +117,7 @@ let g:markdown_folding = 1	" markdown folding
 let g:tex_fold_enabled=1	" latex folding  
 
 " Python
-autocmd FileType python nnoremap <leader>c :w<CR>:!clear<CR>:!python3 %<CR>
+autocmd FileType python nnoremap <leader>c :w<CR>:!python3 %<CR>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
