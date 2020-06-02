@@ -5,6 +5,10 @@ back() {
 	cd $string
 }
 
+newscript() {
+	touch $1 && chmod +x $1
+}
+
 alias \
 	sl="ls" \
 	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
