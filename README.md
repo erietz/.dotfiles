@@ -15,3 +15,6 @@ first few repos:
 
 We will see how it goes
 
+- The only thing that may need to be done is to build my vim coc plugin by running
+`yarn install`.
+	- If yarn is not installed, it can be done with conda

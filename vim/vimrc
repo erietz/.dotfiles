@@ -6,7 +6,8 @@ execute pathogen#infect()
 filetype plugin indent on	" Indent style depending on syntax
 " must come before syntax enable?
 syntax enable
-set number 		" numbered lines
+"set number 		" numbered lines
+set relativenumber 		" numbered lines
 set colorcolumn=85 	" red line at 85th column
 set ignorecase		" case insensitive searching
 set smartcase		" case insensitive searching
@@ -91,6 +92,9 @@ vnoremap > >gv
 "nnoremap <leader>s :set spell<CR>	" spell checking
 "nnoremap <leader>ns :set nospell<CR>	" spell checking
 
+" Adding comments until end of line
+nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
+
 " Open URLs with gx mapping ------------------------------
 " let g:netrw_browser_viewer='open' " cannot get to work
 " This is my workaround 
@@ -113,7 +117,7 @@ let g:markdown_folding = 1	" markdown folding
 let g:tex_fold_enabled=1	" latex folding  
 
 " Python
-autocmd FileType python nnoremap <leader>c :w<CR>:!clear<CR>:!python3 %<CR>
+autocmd FileType python nnoremap <leader>c :w<CR>:!python3 %<CR>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
@@ -122,148 +126,18 @@ au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 " Shell
 autocmd FileType *sh nnoremap <leader>c :w<CR>:!./%<CR>
 
-"-------------------------------------------------------------------------------
-" Plugin settings
-"-------------------------------------------------------------------------------
 
-" color scheme
-colorscheme gruvbox
-set background=dark 
-
-" ultisnips
-"set runtimepath-=~/.vim/bundle/ultisnips/
-"let g:UltiSnipsExpandTrigger = '<tab>'
-"let g:UltiSnipsJumpForwardTrigger = '<tab>'
-"let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-"let g:UltiSnipsExpandTrigger       = '<C-k>'
-"let g:UltiSnipsJumpForwardTrigger  = '<C-k>'
-"let g:UltiSnipsJumpBackwardTrigger = '<C-j>'
-let g:UltiSnipsExpandTrigger = '<localleader><tab>'
-let g:UltiSnipsJumpForwardTrigger = '<localleader><tab>'
-let g:UltiSnipsJumpBackwardTrigger = '<localleader><localleader><tab>'
-let g:UltiSnipsListSnippets="<localleader>u"
-
-"" vim-markdown
-let g:vim_markdown_math = 1
-let g:vim_markdown_auto_insert_bullets = 0
-let g:vim_markdown_new_list_item_indent = 0
-
-" vimtex
-let g:tex_flavor='latex'
-let g:vimtex_view_method='skim'
-"let g:vimtex_quickfix_mode=0
-"let g:tex_conceal='abdmg'
-"let g:vimtex_fold_manual
-
-" Nerd Tree
-nnoremap <localleader>n :NERDTreeFind<CR>
-
-"-------------------------------------------------------------------------------
-" Experimental settings
-"-------------------------------------------------------------------------------
-"
-"let g:vifm_home="${HOME}/.config/vifm"
-
-" VimCompletesMe
-"let g:vcm_tab_complete
-let b:vcm_tab_complete = 'omni'
-
-" Fuzzy finder
-set rtp+=/usr/local/opt/fzf
-nnoremap <localleader>f :FZF<CR>
-
-" vim-rainbow
-let g:rainbow_active = 1
-
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ }
-let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
-" COC """""""""""""""""""""""""""""""""""""""""""""""""""
-"
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Use tab for trigger completion with characters ahead and navigate.
-" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
-" other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+function! ZoteroCite()
+  " pick a format based on the filetype (customize at will)
+  let format = &filetype =~ '.*tex' ? 'citep' : 'pandoc'
+  let api_call = 'http://127.0.0.1:23119/better-bibtex/cayw?format='.format.'&brackets=1'
+  let ref = system('curl -s '.shellescape(api_call))
+  return ref
 endfunction
 
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+noremap <leader>z "=ZoteroCite()<CR>p
+inoremap <C-z> <C-r>=ZoteroCite()<CR>
 
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-let g:coc_global_extensions = [
-      \'coc-markdownlint',
-      \'coc-highlight',
-      \'coc-python',
-      \'coc-jedi',
-      \'coc-texlab',
-      \'coc-ultisnips',
-      \'coc-git'
-      \]
+" Seperating all of my plugin settings to a different file
+source <sfile>:h/plugins.vim
+"source ~/.vim/plugins.vim

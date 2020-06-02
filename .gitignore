@@ -4,3 +4,4 @@ config/zsh/.zsh_history
 config/configstore/update-notifier-npm.json
 vim/.netrwhist
 *.swp
+config/ipython/profile_default/history.sqlite

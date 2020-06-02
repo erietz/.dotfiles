@@ -1,3 +1,5 @@
+alias lib="cd $HOME/GD_IU/library"
+
 export PYTHONPATH="$HOME/github/python/modules/"
 
 # Add anaconda to path 

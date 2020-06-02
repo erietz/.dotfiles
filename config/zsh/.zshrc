@@ -39,3 +39,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 [ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+
