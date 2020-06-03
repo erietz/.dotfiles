@@ -44,3 +44,6 @@
 [submodule "vim/bundle/vim-devicons"]
 	path = vim/bundle/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
+[submodule "vim/bundle/gruvbox"]
+	path = vim/bundle/gruvbox
+	url = https://github.com/gruvbox-community/gruvbox.git
