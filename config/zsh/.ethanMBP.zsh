@@ -1,4 +1,7 @@
-alias lib="cd $HOME/GD_IU/library"
+alias \
+	lib="cd $HOME/GD_IU/library" \
+	gview="/Applications/gv/gview.sh"
+
 
 export PYTHONPATH="$HOME/github/python/modules/"
 
