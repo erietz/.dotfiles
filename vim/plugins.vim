@@ -245,5 +245,7 @@ let g:coc_global_extensions = [
       \'coc-jedi',
       \'coc-texlab',
       \'coc-ultisnips',
+      \'coc-json',
+      \'coc-vimtex',
       \'coc-git'
       \]
