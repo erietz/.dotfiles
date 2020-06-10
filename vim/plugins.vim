@@ -243,9 +243,8 @@ let g:coc_global_extensions = [
       \'coc-highlight',
       \'coc-python',
       \'coc-jedi',
-      \'coc-texlab',
       \'coc-ultisnips',
       \'coc-json',
-      \'coc-vimtex',
+      \'coc-texlab',
       \'coc-git'
       \]
