@@ -47,3 +47,6 @@
 [submodule "vim/bundle/gruvbox"]
 	path = vim/bundle/gruvbox
 	url = https://github.com/gruvbox-community/gruvbox.git
+[submodule "vim/bundle/julia-vim"]
+	path = vim/bundle/julia-vim
+	url = https://github.com/JuliaEditorSupport/julia-vim.git
