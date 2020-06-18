@@ -1,5 +1,9 @@
 #ZSH_DISABLE_COMPFIX=true
 
+[ -f $ZDOTDIR/.$(hostname -s).zsh ] && source $ZDOTDIR/.$(hostname -s).zsh
+[ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
+
+
 export PATH="$PATH:$HOME/.local/bin"
 
 autoload -U colors && colors
@@ -36,8 +40,6 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 #bindkey -v '^?' backward-delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
-[ -f $ZDOTDIR/.$(hostname -s).zsh ] && source $ZDOTDIR/.$(hostname -s).zsh
-[ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 

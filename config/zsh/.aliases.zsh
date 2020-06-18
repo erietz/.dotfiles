@@ -9,6 +9,10 @@ newscript() {
 	touch $1 && chmod +x $1 && vim $1
 }
 
+fcd () {
+	cd $(print -l $common_dirs | fzf)
+}
+
 alias \
 	sl="ls" \
 	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \

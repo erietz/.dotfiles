@@ -40,3 +40,11 @@ steps () {
 	grep -c -F "Summary information" $1
 }
 
+
+common_dirs=(
+	/N/slate/ewrietz 
+	/N/slate/ewrietz/IyengarLab 
+	/N/dc2/projects/carbocation/ 
+	/N/dc2/projects/carbocation/ethan
+)
+
