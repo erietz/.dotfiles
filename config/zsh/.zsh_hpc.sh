@@ -8,8 +8,10 @@ export CARB="/N/dc2/projects/carbocation"
 # Use my modules from anywhere
 export PYTHONPATH="/N/slate/ewrietz/IyengarLab/ethan/modules:$PYTHONPATH"
 
+PATH="$PATH:/N/slate/ewrietz/IyengarLab/ethan/bin"
 PATH="$PATH:/N/slate/ewrietz/applications/apps"
-export PATH="$PATH:/N/slate/ewrietz/hpc_codes/bin"
+PATH="$PATH:/N/slate/ewrietz/IyengarLab/ethan/velspack-ethan"
+export PATH
 
 
 alias scratch="cd $SCRATCH"
