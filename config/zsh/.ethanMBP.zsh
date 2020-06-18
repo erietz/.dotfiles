@@ -23,3 +23,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+common_dirs=(
+	$HOME/.config/zsh
+	$HOME/GD_IU/library
+	$HOME/Documents/scratch
+	$HOME/GD_EWR/notes
+)
