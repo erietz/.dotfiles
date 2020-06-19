@@ -251,5 +251,6 @@ let g:coc_global_extensions = [
       \'coc-json',
       \'coc-texlab',
       \'coc-julia',
+      \'coc-sh',
       \'coc-git'
       \]

@@ -1,10 +1,10 @@
-[submodule "vim/bundle/tabular"]
+[submodule "vim/pack/foobar/start/tabular"]
 	path = vim/pack/foobar/start/tabular
 	url = https://github.com/godlygeek/tabular.git
-[submodule "vim/bundle/ultisnips"]
+[submodule "vim/pack/foobar/start/ultisnips"]
 	path = vim/pack/foobar/start/ultisnips
 	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/bundle/vimtex"]
+[submodule "vim/pack/foobar/start/vimtex"]
 	path = vim/pack/foobar/start/vimtex
 	url = https://github.com/lervag/vimtex.git
 [submodule "config/zsh/zsh-autosuggestions"]
@@ -13,40 +13,43 @@
 [submodule "config/zsh/zsh-syntax-highlighting"]
 	path = config/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "vim/bundle/fzf"]
+[submodule "vim/pack/foobar/start/fzf"]
 	path = vim/pack/foobar/start/fzf
 	url = https://github.com/junegunn/fzf.git
-[submodule "vim/bundle/lightline.vim"]
+[submodule "vim/pack/foobar/start/lightline.vim"]
 	path = vim/pack/foobar/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule "vim/bundle/nerdtree"]
+[submodule "vim/pack/foobar/start/nerdtree"]
 	path = vim/pack/foobar/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
-[submodule "vim/bundle/rainbow"]
+[submodule "vim/pack/foobar/start/rainbow"]
 	path = vim/pack/foobar/start/rainbow
 	url = https://github.com/luochen1990/rainbow.git
-[submodule "vim/bundle/vim-markdown"]
+[submodule "vim/pack/foobar/start/vim-markdown"]
 	path = vim/pack/foobar/start/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot
 	ignore = dirty
-[submodule "vim/bundle/vim-fugitive"]
+[submodule "vim/pack/foobar/start/vim-fugitive"]
 	path = vim/pack/foobar/start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/bundle/coc.nvim"]
+[submodule "vim/pack/foobar/start/coc.nvim"]
 	path = vim/pack/foobar/start/coc.nvim
 	url = https://github.com/neoclide/coc.nvim.git
-[submodule "vim/bundle/vimwiki"]
+[submodule "vim/pack/foobar/start/vimwiki"]
 	path = vim/pack/foobar/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
-[submodule "vim/bundle/vim-devicons"]
+[submodule "vim/pack/foobar/start/vim-devicons"]
 	path = vim/pack/foobar/start/vim-devicons
 	url = https://github.com/ryanoasis/vim-devicons.git
-[submodule "vim/bundle/gruvbox"]
+[submodule "vim/pack/foobar/start/gruvbox"]
 	path = vim/pack/foobar/start/gruvbox
 	url = https://github.com/gruvbox-community/gruvbox.git
-[submodule "vim/bundle/julia-vim"]
+[submodule "vim/pack/foobar/start/julia-vim"]
 	path = vim/pack/foobar/start/julia-vim
 	url = https://github.com/JuliaEditorSupport/julia-vim.git
+[submodule "vim/pack/foobar/start/fzf.vim"]
+	path = vim/pack/foobar/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
