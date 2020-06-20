@@ -1,8 +1,9 @@
 export CLICOLOR=1
 export VISUAL="vim"
 export EDITOR="vim"
-export BROWSER="Brave Browser"
+export BROWSER="Firefox"
 export GPG_TTY=$(tty) # fix pass not prompting for password
+export FZF_DEFAULT_COMMAND='find .'
 
 # Clean up ~/
 #unset XDG_RUNTIME_DIR

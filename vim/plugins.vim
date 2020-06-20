@@ -45,6 +45,8 @@ set encoding=utf8 " for nerdtree icons
 " Fuzzy finder
 set rtp+=/usr/local/opt/fzf
 nnoremap <localleader>f :FZF<CR>
+nnoremap // :BLines<CR>
+nnoremap ?? :Rg<CR>
 
 " vim-rainbow
 let g:rainbow_active = 1
@@ -242,6 +244,11 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" Explorer
+nmap <space>e :CocCommand explorer<CR>
+nmap <space>f :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
 let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
@@ -252,5 +259,7 @@ let g:coc_global_extensions = [
       \'coc-texlab',
       \'coc-julia',
       \'coc-sh',
+      \'coc-marketplace',
+      \'coc-explorer',
       \'coc-git'
       \]
