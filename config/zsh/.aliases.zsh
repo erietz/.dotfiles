@@ -1,11 +1,11 @@
-b() {
+b () {
 	local string=""
 	for i in {1..$1}
 		string+=$(printf "../")
 	cd $string
 }
 
-newscript() {
+newscript () {
 	touch $1 && chmod +x $1 && vim $1
 }
 
@@ -15,6 +15,10 @@ fcd () {
 
 fhist () {
 	cat ${ZDOTDIR}/.zsh_history | fzf
+}
+
+viman () {
+    vim -c "Man $1" -c 'silent only'
 }
 
 alias \
