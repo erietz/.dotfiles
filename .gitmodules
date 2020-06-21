@@ -53,3 +53,12 @@
 [submodule "vim/pack/foobar/start/fzf.vim"]
 	path = vim/pack/foobar/start/fzf.vim
 	url = https://github.com/junegunn/fzf.vim.git
+[submodule "vim/pack/foobar/start/vim-man"]
+	path = vim/pack/foobar/start/vim-man
+	url = https://github.com/vim-utils/vim-man.git
+[submodule "vim/pack/foobar/start/vim-polyglot"]
+	path = vim/pack/foobar/start/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "vim/pack/foobar/start/undotree"]
+	path = vim/pack/foobar/start/undotree
+	url = https://github.com/mbbill/undotree.git
