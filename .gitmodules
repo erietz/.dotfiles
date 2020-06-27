@@ -62,3 +62,6 @@
 [submodule "vim/pack/foobar/start/undotree"]
 	path = vim/pack/foobar/start/undotree
 	url = https://github.com/mbbill/undotree.git
+[submodule "config/zsh/zsh-completions"]
+	path = config/zsh/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions.git
