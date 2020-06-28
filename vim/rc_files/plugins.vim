@@ -256,6 +256,9 @@ nmap <space>e :CocCommand explorer<CR>
 nmap <space>f :CocCommand explorer --preset floating<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
+autocmd FileType tex let b:coc_pairs = [["$", "$"]]
+autocmd FileType markdown let b:coc_pairs_disabled = ['`']
+
 let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
@@ -265,5 +268,6 @@ let g:coc_global_extensions = [
       \'coc-json',
       \'coc-texlab',
       \'coc-julia',
+      \'coc-pairs',
       \'coc-git'
       \]

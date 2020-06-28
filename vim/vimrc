@@ -146,4 +146,6 @@ inoremap <C-z> <C-r>=ZoteroCite()<CR>
 
 " Seperating all of my plugin settings to a different file
 "source <sfile>:h/plugins.vim
-source ~/.vim/plugins.vim
+source ~/.vim/rc_files/plugins.vim
+
+command! Ethan call fzf#run({'source': 'cat ~/.vim/rc_files/common_files.txt', 'sink': 'e'})

@@ -2,4 +2,4 @@
 
 curl wttr.in
 
-mpv --loop-file=inf "https://radar.weather.gov/lite/N0R/IND_loop.gif"
+#mpv --loop-file=inf "https://radar.weather.gov/lite/N0R/IND_loop.gif"

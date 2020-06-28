@@ -1,0 +1,6 @@
+~/.vim/vimrc
+~/.config/zsh/.zshrc
+~/.vim/rc_files/plugins.vim
+~/.config/zsh/.aliases.zsh
+~/GD_IU/library/notes/index.md
+~/GD_EWR/notes/index.md
