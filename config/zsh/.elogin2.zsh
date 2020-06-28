@@ -41,12 +41,3 @@ steps () {
 }
 
 
-common_dirs=(
-	$HOME/.config/zsh
-	$HOME/.config/coc/extensions/node_modules
-	/N/slate/ewrietz 
-	/N/slate/ewrietz/IyengarLab 
-	/N/dc2/projects/carbocation 
-	/N/dc2/projects/carbocation/ethan
-)
-

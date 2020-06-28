@@ -10,7 +10,8 @@ newscript () {
 }
 
 fcd () {
-	cd $(print -l $common_dirs | fzf)
+    local dir=$(print -l $common_dirs | fzf)
+    [ -n "$dir" ] && cd $dir
 }
 
 fhist () {
