@@ -11,14 +11,13 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set mouse=a
+"set mouse=a
 set nowrap
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
 set termguicolors
 set scrolloff=8
-set updatetime=50
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
