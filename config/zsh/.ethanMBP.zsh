@@ -3,7 +3,7 @@ alias \
 	gview="/Applications/gv/gview.sh"
 
 
-export PYTHONPATH="$HOME/github/python/modules/"
+export PYTHONPATH="$HOME/github/ethan/modules/"
 
 # Add anaconda to path 
 # Created using: conda init zsh 
@@ -26,6 +26,6 @@ unset __conda_setup
 common_dirs=(
 	$HOME/.config/zsh
 	$HOME/GD_IU/library
-	$HOME/Documents/scratch
+	$HOME/GD_IU/scratch/
 	$HOME/GD_EWR/notes
 )

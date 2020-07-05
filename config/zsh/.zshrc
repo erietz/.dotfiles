@@ -3,7 +3,6 @@
 [ -f $ZDOTDIR/.$(hostname -s).zsh ] && source $ZDOTDIR/.$(hostname -s).zsh
 [ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 
-
 export PATH="$PATH:$HOME/.local/bin"
 
 autoload -U colors && colors

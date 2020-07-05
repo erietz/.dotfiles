@@ -1,0 +1,1 @@
+/N/u/ewrietz/Karst/.config/zsh/.h1.zsh

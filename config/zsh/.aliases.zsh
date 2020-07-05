@@ -10,7 +10,8 @@ newscript () {
 }
 
 fcd () {
-	cd $(print -l $common_dirs | fzf)
+    local dir=$(print -l $common_dirs | fzf)
+    [ -n "$dir" ] && cd $dir
 }
 
 fhist () {
@@ -26,4 +27,5 @@ alias \
 	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
 	jlremote="jupyter lab --no-browser --port=9876" \
 	vi="vim" \
+    code="open -a Visual\ Studio\ Code"
 
