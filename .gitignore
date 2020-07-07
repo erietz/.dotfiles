@@ -5,3 +5,5 @@ config/configstore/update-notifier-npm.json
 vim/.netrwhist
 *.swp
 config/ipython/profile_default/history.sqlite
+config/ipython/profile_default/db/
+vim/undodir/
