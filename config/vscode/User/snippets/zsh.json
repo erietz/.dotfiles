@@ -1,0 +1,41 @@
+{
+  "shebang": {
+    "prefix": "shebang",
+    "body": "#!/usr/bin/env zsh",\n$0",
+    "description": "#!/usr/bin/env zsh"
+  },
+  "gaussian-slurm": {
+    "prefix": "gaussian-slurm",
+    "body": "#!/usr/bin/env zsh\n#SBATCH --nodes=1\n#SBATCH --ntasks-per-node=16\n#SBATCH --mem=10gb\n#SBATCH --time=${1:0-00:20:00}\n#SBATCH --job-name=${2:jobname}\n${3:#SBATCH --mail-user=ewrietz@iu.edu}\n${4:#SBATCH --mail-type=FAIL,BEGIN,END}\n\ncd $SLURM_SUBMIT_DIR\ng16 < ${5:filename}.com > $5.log\n\n$0\n",
+    "description": "slurm gaussian job"
+  },
+  "slurm": {
+    "prefix": "slurm",
+    "body": "#!/usr/bin/env zsh\n#SBATCH --nodes=1\n#SBATCH --ntasks-per-node=48\n#SBATCH --mem=40gb\n#SBATCH --time=${1:0-00:20:00}\n#SBATCH --job-name=${2:jobname}\n${3:#SBATCH --mail-user=ewrietz@iu.edu}\n${4:#SBATCH --mail-type=FAIL,BEGIN,END}\n\n$0\n",
+    "description": "general slurm job"
+  },
+  "pbs": {
+    "prefix": "pbs",
+    "body": "#!/usr/bin/env zsh\n#PBS -l nodes=1:ppn=16\n#PBS -l vmem=10gb\n#PBS -l walltime=${1:0-00:20:00}\n#PBS -N ${2:jobname}\n${3:#PBS -M ewrietz@iu.edu}\n${4:#PBS -m abe}\n\ncd $PBS_O_WORKDIR\ng16 < ${5:filename}.com > $5.log\n\n$0\n",
+    "description": "pbs gaussian job"
+  }
+  "test-slurm": {
+    "prefix": "test-slurm",
+    "body": ["#!/usr/bin/env zsh",
+        "#SBATCH --nodes=1",
+        "#SBATCH --ntasks-per-node=16",
+        "#SBATCH --mem=10gb",
+        "#SBATCH --time=${1:0-00:20:00}",
+        "#SBATCH --job-name=${2:jobname}",
+        "${3:#SBATCH --mail-user=ewrietz@iu.edu}",
+        "${4:#SBATCH --mail-type=FAIL,BEGIN,END}",
+        "g16 < ${5:filename}.com > $5.log",
+    ]
+    "description": "slurm gaussian job"
+  },
+  "wowza": {
+  "prefix": "wowza",
+  "body": "insert a test",
+  "description": "this is a test"
+  }
+}

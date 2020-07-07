@@ -1,0 +1,25 @@
+{
+	"shebang": {
+		"prefix": "shebang",
+		"body": [
+			"#!/usr/bin/env ${1:zsh}",
+			"$0"
+		],
+		"description": "Insert a shebang line"
+	},
+	"test": {
+		"prefix": "test-slurm",
+		"body": ["#!/usr/bin/env zsh",
+			"#SBATCH --nodes=1",
+			"#SBATCH --ntasks-per-node=16",
+			"#SBATCH --mem=10gb",
+			"#SBATCH --time=${1:0-00:20:00}",
+			"#SBATCH --job-name=${2:jobname}",
+			"${3:#SBATCH --mail-user=ewrietz@iu.edu}",
+			"${4:#SBATCH --mail-type=FAIL,BEGIN,END}",
+			"g16 < ${5:filename}.com > $5.log",
+		],
+		"description": "slurm gaussian job"
+	  }
+
+}

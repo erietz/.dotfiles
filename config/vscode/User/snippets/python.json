@@ -1,0 +1,10 @@
+{
+	"shebang": {
+		"prefix": "shebang",
+		"body": [
+			"#!/usr/bin/env python3",
+			"$0"
+		],
+		"description": "Insert a shebang"
+	}
+}
