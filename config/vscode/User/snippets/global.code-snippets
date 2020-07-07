@@ -1,7 +1,8 @@
 {
   "today": {
     "prefix": "today",
-    "body": "`date +%F`",
+    "body": "$CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
     "description": "Date"
   }
 }
+

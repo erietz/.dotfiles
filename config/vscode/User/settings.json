@@ -1,0 +1,65 @@
+{
+    "telemetry.enableTelemetry": false,
+    "python.defaultInterpreterPath": "/usr/local/anaconda3/bin/python",
+    "window.zoomLevel": 0,
+    "python.dataScience.sendSelectionToInteractiveWindow": true,
+    "editor.minimap.enabled": false,
+    "vim.leader": ",",
+    "vim.vimrc.path": "$HOME/.vim/vimrc",
+    "terminal.integrated.inheritEnv": false,
+    "git.autofetch": true,
+    "python.dataScience.askForKernelRestart": false,
+    "path-intellisense.absolutePathToWorkspace": false,
+
+    // Vim mode commands 
+    "vim.normalModeKeyBindingsNonRecursive": [
+      // Fast save
+      {
+        "before": ["<leader>", "w"],
+        "after": [":", "w", "<CR>"]
+      },
+      // Window splits
+      {
+        "before": ["<C-h>"],
+        "after": ["<C-w>", "h"]
+      },
+      {
+        "before": ["<C-j>"],
+        "after": ["<C-w>", "j"]
+      },
+      {
+        "before": ["<C-k>"],
+        "after": ["<C-w>", "k"]
+      },
+      {
+        "before": ["<C-l>"],
+        "after": ["<C-w>", "l"]
+      },
+      // Close buffer
+      {
+         "before": ["Z", "Z"],
+         "after": [":", "x", "<CR>"]
+      },
+      // Close buffer forcefully
+      {
+         "before": ["Z", "Q"],
+         "after": [":", "q", "!", "<CR>"]
+      },
+      // "Compile" buffer
+      {
+          "before": ["<leader>", "c"],
+          "commands": [
+              "workbench.action.files.save",
+              "code-runner.run"
+          ]
+      }
+    ],
+    "editor.lineNumbers": "relative",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.removeExtensions": false,
+    "sync.gist": "3080ebb113045180343b61f6c4cd04ac",
+    "python.dataScience.alwaysScrollOnNewCell": true,
+    "code-runner.clearPreviousOutput": true,
+    "workbench.colorTheme": "Gruvbox Dark Medium"
+  }
