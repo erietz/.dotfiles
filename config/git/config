@@ -1,0 +1,10 @@
+[alias]
+  st = status
+  ci = commit
+  ca = commit -a -m
+  br = branch
+  cho = checkout
+  pom = push origin master
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p

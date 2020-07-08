@@ -5,3 +5,8 @@ config/configstore/update-notifier-npm.json
 vim/.netrwhist
 *.swp
 config/ipython/profile_default/history.sqlite
+config/ipython/profile_default/db/
+vim/undodir/
+config/vscode/User/globalStorage/
+config/vscode/User/syncLocalSettings.json
+config/vscode/User/workspaceStorage/

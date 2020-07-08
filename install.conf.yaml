@@ -6,6 +6,7 @@
 
 - create:
     - ~/.local/bin
+    - ~/.vim/undodir
 
 - link:
     ~/.zshenv: zshenv
