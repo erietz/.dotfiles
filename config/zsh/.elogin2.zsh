@@ -1,5 +1,5 @@
 export FPATH=/usr/share/zsh/functions/Completion:$FPATH
-fpath=( /usr/share/zsh/functions/**/*(/) )
+fpath=( /usr/share/zsh/functions/**/*(/) $fpath)
 
 #export LS_OPTIONS='--color=auto'
 #eval "$(dircolors -b)"
