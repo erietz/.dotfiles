@@ -3,6 +3,7 @@ export SCRATCH="/N/dc2/scratch/ewrietz"
 export SLATE="/N/slate/ewrietz"
 #export GAUSS_SCRDIR="/tmp/ewrietz/scratch"
 export GAUSS_SCRDIR="/N/dc2/scratch/ewrietz/gaussScratch"
+#[ -d $GAUSS_SCRDIR ] || mkdir $GAUSS_SCRDIR
 export CARB="/N/dc2/projects/carbocation"
 
 # Use my modules from anywhere
