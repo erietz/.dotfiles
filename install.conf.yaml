@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - create:
+    - ~/.config
     - ~/.local/bin
     - ~/.vim/undodir
 
