@@ -65,3 +65,6 @@
 [submodule "config/zsh/zsh-completions"]
 	path = config/zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
+[submodule "vim/pack/foobar/start/onedark.vim"]
+	path = vim/pack/foobar/start/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
