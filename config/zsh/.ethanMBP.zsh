@@ -2,6 +2,8 @@ alias \
 	lib="cd $HOME/GD_IU/library" \
 	gview="/Applications/gv/gview.sh"
 
+export GAUSS_SCRDIR="$HOME/GD_IU/scratch/"
+export g16root="/Applications/gv/"
 
 export PYTHONPATH="$HOME/github/ethan/modules/"
 

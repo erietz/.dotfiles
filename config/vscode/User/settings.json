@@ -65,5 +65,6 @@
     "workbench.colorCustomizations": {
       "editorCursor.foreground": "#00fff2",
       "terminalCursor.foreground": "#00fff2"
-  }
+  },
+  "latex-workshop.view.pdf.viewer": "tab"
   }
