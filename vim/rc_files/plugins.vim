@@ -4,14 +4,17 @@
 "-------------------------------------------------------------------------------
 
 " color scheme
-let g:gruvbox_contrast_dark = 'hard'
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
-set background=dark 
+"let g:gruvbox_contrast_dark = 'hard'
+"if exists('+termguicolors')
+"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"endif
+"let g:gruvbox_invert_selection='0'
+"colorscheme gruvbox
+"set background=dark 
+"
+packadd! onedark.vim
+colorscheme onedark
 
 
 " ultisnips
@@ -62,7 +65,7 @@ let g:rainbow_active = 1
 "      \ 'colorscheme': 'wombat',
 "      \ }
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
