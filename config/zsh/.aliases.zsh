@@ -28,9 +28,4 @@ alias \
 	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
 	jlremote="jupyter lab --no-browser --port=9876" \
 	vi="vim" \
-<<<<<<< HEAD
     today='date +"%F"'
-=======
-    #code="open -a Visual\ Studio\ Code"
-
->>>>>>> 4163aa54c337661593cfe65b07ded0deedc508f5
