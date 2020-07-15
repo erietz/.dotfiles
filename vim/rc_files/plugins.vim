@@ -13,9 +13,20 @@
 "colorscheme gruvbox
 "set background=dark 
 "
-packadd! onedark.vim
-colorscheme onedark
+"packadd! onedark.vim
+"colorscheme onedark
+"colorscheme one
+"set background=dark
 
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+let g:palenight_terminal_italics=1
+
+packadd! palenight.vim
+set background=dark
+colorscheme palenight
 
 " ultisnips
 "set runtimepath-=~/.vim/bundle/ultisnips/
@@ -65,7 +76,7 @@ let g:rainbow_active = 1
 "      \ 'colorscheme': 'wombat',
 "      \ }
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'palenight',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
