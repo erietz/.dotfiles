@@ -10,7 +10,7 @@ map <leader>v :!open -a "Brave Browser" %<CR><CR>
 
 set spell
 let g:table_mode_corner='|'
-
+let g:markdown_folding = 1	" markdown folding
 
 setlocal tabstop=2
 setlocal softtabstop=2

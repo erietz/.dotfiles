@@ -6,3 +6,5 @@ setlocal smarttab
 setlocal expandtab
 set autoindent
 set fileformat=unix
+
+nnoremap <leader>c :w<CR>:!python3 %<CR>

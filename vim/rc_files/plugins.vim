@@ -1,4 +1,3 @@
-
 "-------------------------------------------------------------------------------
 " Plugin settings
 "-------------------------------------------------------------------------------
@@ -10,23 +9,22 @@
 "    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 "endif
 "let g:gruvbox_invert_selection='0'
+"let g:gruvbox_bold=0
 "colorscheme gruvbox
 "set background=dark 
 "
-"packadd! onedark.vim
-"colorscheme onedark
-"colorscheme one
-"set background=dark
+set background=dark
+colorscheme one
 
 if (has("termguicolors"))
   set termguicolors
 endif
-
-let g:palenight_terminal_italics=1
-
-packadd! palenight.vim
-set background=dark
-colorscheme palenight
+"
+"let g:palenight_terminal_italics=1
+"
+"packadd! palenight.vim
+"set background=dark
+"colorscheme palenight
 
 " ultisnips
 "set runtimepath-=~/.vim/bundle/ultisnips/
@@ -72,11 +70,8 @@ nnoremap ?? :Rg<CR>
 " vim-rainbow
 let g:rainbow_active = 1
 
-"let g:lightline = {
-"      \ 'colorscheme': 'wombat',
-"      \ }
 let g:lightline = {
-      \ 'colorscheme': 'palenight',
+      \ 'colorscheme': 'one',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -107,6 +102,14 @@ augroup end
 let g:vimwiki_table_mappings = 0
 "let g:vimwiki_markdown_link_ext = 1
 "
+
+" vim-run
+let g:vim_run_command_map = {
+  \'javascript': 'node',
+  \'php': 'php',
+  \'python': 'python',
+  \'zsh': 'zsh',
+  \}
 "
 "
 "-------------------------------------------------------------------------------
@@ -247,8 +250,7 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " provide custom statusline: lightline.vim, vim-airline.
 set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
-" Mappings using CoCList:
-" Show all diagnostics.
+" Mappings using CoCList: " Show all diagnostics.
 nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
 " Manage extensions.
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
@@ -289,3 +291,4 @@ let g:coc_global_extensions = [
       \'coc-pairs',
       \'coc-git'
       \]
+
