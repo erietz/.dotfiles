@@ -283,7 +283,6 @@ let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
       \'coc-python',
-      \'coc-jedi',
       \'coc-snippets',
       \'coc-json',
       \'coc-texlab',
