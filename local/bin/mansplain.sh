@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
-man -k . | dmenu -l 30 | awk '{print $1}' | sed "s/[(][^)]*[)]//g"| xargs man -t | open -f -a Skim
+man -k . | fzf | awk '{print $1}' | sed "s/[(][^)]*[)]//g"| xargs man -t | open -f -a Skim
