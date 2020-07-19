@@ -64,7 +64,11 @@ set norunexec
 
 " Selected color scheme
 
+<<<<<<< HEAD
+colorscheme onedark
+=======
 colorscheme palenight
+>>>>>>> 98ad8b094f830fac1784292028ee1252d6e077ed
 
 " Format for displaying time in file list. For example:
 " TIME_STAMP_FORMAT=%m/%d-%H:%M

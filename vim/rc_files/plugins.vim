@@ -109,6 +109,7 @@ let g:vim_run_command_map = {
   \'php': 'php',
   \'python': 'python',
   \'zsh': 'zsh',
+  \'r': 'Rscript'
   \}
 "
 "
@@ -288,6 +289,7 @@ let g:coc_global_extensions = [
       \'coc-texlab',
       \'coc-julia',
       \'coc-pairs',
+      \'coc-r-lsp',
       \'coc-git'
       \]
 
