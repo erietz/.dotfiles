@@ -8,5 +8,12 @@
 		"v": "open:vsplit"
 	},
     "snippets.textmateSnippetsRoots": ["~/.ewr/config/vscode/User/snippets"],
-    "snippets.ultisnips.enable": false
+    "snippets.ultisnips.enable": false,
+    "languageserver": {
+     "fortran": {
+       "command": "fortls",
+       "filetypes": ["fortran"],
+       "rootPatterns": [".fortls", ".git/"]
+     }
+  }
 }

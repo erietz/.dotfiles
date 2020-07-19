@@ -7,4 +7,4 @@ setlocal expandtab
 set autoindent
 set fileformat=unix
 
-nnoremap <leader>c :w<CR>:!python3 %<CR>
+nnoremap <leader>c :w<CR>:!clear<CR>:!python3 %<CR>

@@ -46,4 +46,4 @@ set incsearch
 "set backupdir=~/codeBackups
 "set backup
 
-nnoremap <leader>c :!gfortran % -o %.exe
+nnoremap <leader>c :!gfortran % -o %.exe && ./%.exe
