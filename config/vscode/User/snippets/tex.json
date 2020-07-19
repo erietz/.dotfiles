@@ -1,7 +1,29 @@
 {
   "preamble": {
     "prefix": "preamble",
-    "body": "\\documentclass{article}\n\\usepackage{geometry}\n\\usepackage{hyperref}\n\\hypersetup{\n\tcolorlinks=true,\n\tlinkcolor=blue}\n\\usepackage{longtable,booktabs}\n%\\usepackage[style=chem-acs, autocite=superscript]{biblatex}\n%\\addbibresource{ref.bib}\n%\\usepackage{physics}\n%\\setcounter{secnumdepth}{0}\n%\\usepackage[usenames,dvipsnames]{xcolor}\n%\\usepackage{siunitx}\n%\\usepackage{mhchem}\n\n\\title{${1:Title}}\n\\author{Ethan Rietz}\n\\date{\\today}\n\n\\begin{document}\n\\maketitle\n\n$0\n\n\\end{document}",
+    "body": [
+    "\\documentclass{article}",
+    "\\usepackage{geometry}",
+    "\\usepackage{hyperref}",
+    "\\hypersetup{",
+        "colorlinks=true",
+        "linkcolor=blue}",
+    "\\usepackage{longtable,booktabs}",
+    "%\\usepackage[style=chem-acs, autocite=superscript]{biblatex}",
+    "%\\addbibresource{ref.bib}",
+    "%\\usepackage{physics}",
+    "%\\setcounter{secnumdepth}{0}",
+    "%\\usepackage[usenames,dvipsnames]{xcolor}",
+    "%\\usepackage{siunitx}",
+    "%\\usepackage{mhchem}",
+    "\\title{${1:Title}}",
+    "\\author{Ethan Rietz}",
+    "\\date{\\today}",
+    "\\begin{document}",
+    "\\maketitle",
+    "$0",
+    "\\end{document}"
+    ],
     "description": "Preamble"
   },
   "up": {
@@ -9,44 +31,68 @@
     "body": "\\usepackage{${1:package}}$0",
     "description": "Use Package"
   },
-  "\"beg(in)?\"": {
+  "\"begin\"": {
     "prefix": "\"beg(in)?\"",
-    "body": "\\begin{${1:<environment>}}\n\t$0\n\\end{$1}",
+    "body": [
+        "\\begin{${1:<environment>}}",
+        "\t$0",
+        "\\end{$1}"
+    ],
     "description": "begin{} / end{}"
   },
   "nc": {
     "prefix": "nc",
-    "body": "\t\\\\newcommand{\\\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}",
+    "body": "{\\\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}",
     "description": "New Command"
   },
   "\"fig(ure)?\"": {
     "prefix": "\"fig(ure)?\"",
-    "body": "\\begin{figure}[${2:htpb}]\n\t\\centering\n\t\\includegraphics[width=${3:0.8}\\linewidth]{${4:name.ext}}\n\t\\caption{$0}\n\t\\label{fig:${4}}\n\\end{figure}",
+    "body": "\\begin{figure}[${2:htpb}]",
+    \t\\centering",
+    "\t\\includegraphics[width=${3:0.8}\\linewidth]{${4:name.ext}}",
+    "\t\\caption{$0}",
+    \t\\label{fig:${4}}",
+    \\end{figure}",
     "description": "Figure environment"
   },
   "\"tab(le)?\"": {
     "prefix": "\"tab(le)?\"",
-    "body": "\\begin{table}[${1:htpb}]\n\t\\centering\n\t\\caption{${2:caption}}\n\t\\label{tab:${3:label}}\n\t\\begin{tabular}{${4:c}}\n\t$0\n\t\\end{tabular}\n\\end{table}",
+    "body": "\\begin{table}[${1:htpb}]",
+    \t\\centering",
+    "\t\\caption{${2:caption}}",
+    "\t\\label{tab:${3:label}}",
+    \t\\begin{tabular}{${4:c}}",
+    \t$0",
+    \t\\end{tabular}",
+    "\\end{table}",
     "description": "Table environment"
   },
   "\"tabu(lar)?\"": {
     "prefix": "\"tabu(lar)?\"",
-    "body": "\\begin{tabular}{${1:c}}\n$0\n\\end{tabular}",
+    "body": "\\begin{tabular}{${1:c}}",
+    "$0",
+    \\end{tabular}",
     "description": "Tabular environment"
   },
   "\"sec(tion)?\"": {
     "prefix": "\"sec(tion)?\"",
-    "body": "\\section{${1:${VISUAL:section name}}}\n\n$0",
+    "body": "\\section{${1:${VISUAL:section name}}}",
+    $,
+    0",
     "description": "Section"
   },
   "\"sub(section)?\"": {
     "prefix": "\"sub(section)?\"",
-    "body": "\\subsection{${1:${VISUAL:Subsection name}}}\n\n$0",
+    "body": "\\subsection{${1:${VISUAL:Subsection name}}}",
+    "",
+    $0",
     "description": "Subsection"
   },
   "\"subsub(section)?\"": {
     "prefix": "\"subsub(section)?\"",
-    "body": "\\subsubsection{${1:${VISUAL:Subsubsection name}}}\n\n$0",
+    "body": "\\subsubsection{${1:${VISUAL:Subsubsection name}}}",
+    "",
+    $0",
     "description": "Subsubsection"
   },
   "\"lab(el)?\"": {
@@ -56,12 +102,14 @@
   },
   "\"i(tem)?\"": {
     "prefix": "\"i(tem)?\"",
-    "body": "\\item{${1:${VISUAL:The item}}}\n$0",
+    "body": "\\item{${1:${VISUAL:The item}}}",
+    $0",
     "description": "Item"
   },
   "\"d(tem)?\"": {
     "prefix": "\"d(tem)?\"",
-    "body": "\\item[${1:Description word}]{${2:${VISUAL:The item}}}\n$0",
+    "body": "\\item[${1:Description word}]{${2:${VISUAL:The item}}}",
+    $0",
     "description": "Description item"
   },
   "it": {
@@ -79,13 +127,17 @@
     "body": "\\SI{${1:Number}}{${2:Units}} ${0}",
     "description": "SI Units"
   },
-  "\"que(stion)?\"": {
-    "prefix": "\"que(stion)?\"",
-    "body": "\\question[${1:Points}] ${2:The questions}\n\n\\begin{solution}\n${0}\n\\end{solution}\n\\vspace{\\stretch{1}}",
+  "question": {
+    "prefix": "question",
+    "body": "\\question[${1:Points}] ${2:The questions}",
+    "\\begin{solution}",
+    "${0}",
+    "\\end{solution}",
+    "\\vspace{\\stretch{1}}",
     "description": "Question"
   },
-  "\"c(hoices)?\"": {
-    "prefix": "\"c(hoices)?\"",
+  "choices": {
+    "prefix": "choices",
     "body": "\\choice{${1:${VISUAL:The choice}}}",
     "description": "Choices"
   },
