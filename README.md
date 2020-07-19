@@ -1,20 +1,15 @@
 # About
 
-This is now my third dotfiles repo and hope this is the final solution. For The 
-first few repos:
+These are my dotfiles and they are managed by
+[Dotbot](https://github.com/anishathalye/dotbot.git), a submodule in this
+repository. Files will be symlinked into the relevant directories using the
+install script. The Configuration for the install script is maintained by
+`install.conf.yaml`.
 
-1. Wrote a script to manually symlink things (became too complicated)
-2. Created a bare git repo with working tree as `$HOME`
-	- Using an alias or function instead of git caused problems
-	- 
-3. Now I have bit the bullet and started using 
-[Dotbot](https://github.com/anishathalye/dotbot.git) that does all of the work.
-	- Now I am back to symlinks.
-	- Dotbot is embedded in this repo as a submodule
-	- Configuration for install script is maintained in install.conf.yaml
 
-We will see how it goes
+# Installation
 
-- The only thing that may need to be done is to build my vim coc plugin by running
+- `./install`
+- The only thing that may need to be done is to build the vim-coc plugin by running
 `yarn install`.
-	- If yarn is not installed, it can be done with conda
+- Yarn can be installed with a package manager or `conda`
