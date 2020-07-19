@@ -3,22 +3,24 @@
 "-------------------------------------------------------------------------------
 
 " color scheme
-"let g:gruvbox_contrast_dark = 'hard'
-"if exists('+termguicolors')
-"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"endif
-"let g:gruvbox_invert_selection='0'
-"let g:gruvbox_bold=0
-"colorscheme gruvbox
-"set background=dark 
 "
-set background=dark
-colorscheme one
-
 if (has("termguicolors"))
   set termguicolors
 endif
+
+let g:gruvbox_contrast_dark = 'soft'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
+let g:gruvbox_bold=0
+set background=dark 
+colorscheme gruvbox
+"
+"set background=dark
+"colorscheme one
+
 "
 "let g:palenight_terminal_italics=1
 "
@@ -71,7 +73,7 @@ nnoremap ?? :Rg<CR>
 let g:rainbow_active = 1
 
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
