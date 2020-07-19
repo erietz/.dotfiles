@@ -4,10 +4,6 @@
 
 " color scheme
 "
-<<<<<<< HEAD
-=======
-
->>>>>>> 2940c68eb67c8510dfeeb79e7cf0c3c7b942f95d
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -19,15 +15,12 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 let g:gruvbox_bold=0
-<<<<<<< HEAD
-set background=dark 
-colorscheme gruvbox
-=======
-
 set background=dark 
 colorscheme gruvbox
 
->>>>>>> 2940c68eb67c8510dfeeb79e7cf0c3c7b942f95d
+"set background=dark 
+"colorscheme gruvbox
+
 "
 "set background=dark
 "colorscheme one
