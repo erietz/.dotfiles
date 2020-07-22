@@ -77,3 +77,6 @@
 [submodule "vim/pack/foobar/start/papercolor-theme"]
 	path = vim/pack/foobar/start/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "vim/pack/foobar/start/material.vim"]
+	path = vim/pack/foobar/start/material.vim
+	url = https://github.com/kaicataldo/material.vim.git

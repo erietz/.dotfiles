@@ -8,15 +8,19 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-let g:gruvbox_contrast_dark = 'soft'
-if exists('+termguicolors')
-    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-endif
-let g:gruvbox_invert_selection='0'
-let g:gruvbox_bold=0
-set background=dark 
-colorscheme gruvbox
+"let g:gruvbox_contrast_dark = 'soft'
+"if exists('+termguicolors')
+"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+"endif
+"let g:gruvbox_invert_selection='0'
+"let g:gruvbox_bold=0
+"set background=dark 
+"colorscheme gruvbox
+
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'palenight'
+colorscheme material
 
 "set background=dark 
 "colorscheme gruvbox
@@ -77,7 +81,7 @@ nnoremap ?? :Rg<CR>
 let g:rainbow_active = 1
 
 let g:lightline = {
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'material_vim',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -115,7 +119,8 @@ let g:vim_run_command_map = {
   \'php': 'php',
   \'python': 'python',
   \'zsh': 'zsh',
-  \'r': 'Rscript'
+  \'julia': 'julia',
+  \'r': 'Rscript',
   \}
 "
 "
@@ -293,7 +298,6 @@ let g:coc_global_extensions = [
       \'coc-snippets',
       \'coc-json',
       \'coc-texlab',
-      \'coc-julia',
       \'coc-pairs',
       \'coc-r-lsp',
       \'coc-git'
