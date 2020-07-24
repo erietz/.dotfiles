@@ -18,11 +18,8 @@ endif
 "set background=dark 
 "colorscheme gruvbox
 
-<<<<<<< HEAD
 let g:material_terminal_italics = 1
-=======
 "let g:material_terminal_italics = 1
->>>>>>> 9de4320b9e4834ebbb09ec13821a48091e55bf5e
 let g:material_theme_style = 'ocean'
 colorscheme material
 
