@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+config_file="$HOME/.config/fuzzy/config.json"
+
+fcd () {
+    local dir=$(jq --raw-output '.directories[]' $config_file | fzf)
+    [ -n "$dir" ] && cd $dir
+}
+
+fhist () {
+	cat ${ZDOTDIR}/.zsh_history | fzf
+}
+
+fpapers () {
+    find ~/GD_IU/library/zotero -name "*.pdf" | fzf | xargs open
+}
+
+fssh () {
+    local computer=$(grep "^Host" ~/.ssh/config | awk '{print $2}' | fzf) 
+    [ -n "$computer" ] && ssh $computer
+}
+
+fbookmarks () {
+    jq --raw-output '.websites[]' $config_file | fzf | xargs open -a $BROWSER
+}
+
+
+my_commands=(
+    fcd
+    fhist
+    fpapers
+    fssh
+    fbookmarks
+    )
+
+my_command=$(print -l $my_commands | fzf)
+
+$my_command

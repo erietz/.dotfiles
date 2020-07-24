@@ -1,6 +1,8 @@
 #ZSH_DISABLE_COMPFIX=true
 
-[ -f $ZDOTDIR/.$(hostname -s).zsh ] && source $ZDOTDIR/.$(hostname -s).zsh
+local computer=$(hostname -s | sed 's/[0-9]//g')
+
+[ -f $ZDOTDIR/.$computer.zsh ] && source $ZDOTDIR/.$computer.zsh
 [ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 
 export PATH="$PATH:$HOME/.local/bin"
