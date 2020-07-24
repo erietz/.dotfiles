@@ -1,3 +1,5 @@
+config_file="$HOME/.config/fuzzy/config.json"
+
 b () {
 	local string=""
 	for i in {1..$1}
@@ -10,7 +12,7 @@ newscript () {
 }
 
 fcd () {
-    local dir=$(print -l $common_dirs | fzf)
+    local dir=$(jq --raw-output --arg computer $computer '.[$computer].directories[]' $config_file | fzf)
     [ -n "$dir" ] && cd $dir
 }
 

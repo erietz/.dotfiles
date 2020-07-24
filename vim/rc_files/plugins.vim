@@ -18,8 +18,8 @@ endif
 "set background=dark 
 "colorscheme gruvbox
 
-let g:material_terminal_italics = 1
-let g:material_theme_style = 'palenight'
+"let g:material_terminal_italics = 1
+let g:material_theme_style = 'ocean'
 colorscheme material
 
 "set background=dark 
@@ -73,7 +73,7 @@ set encoding=utf8 " for nerdtree icons
 
 " Fuzzy finder
 set rtp+=/usr/local/opt/fzf
-nnoremap <localleader>f :FZF<CR>
+nnoremap <c-p> :FZF<CR>
 nnoremap // :BLines<CR>
 nnoremap ?? :Rg<CR>
 

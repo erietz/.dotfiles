@@ -1,12 +1,24 @@
-alias \
-	lib="cd $HOME/GD_IU/library" \
-	gview="/Applications/gv/gview.sh"\
-    avogadro="open -a Avogadro"
 
 export GAUSS_SCRDIR="$HOME/GD_IU/scratch/"
 export g16root="/Applications/gv/"
 
-export PYTHONPATH="$HOME/github/ethan/modules/"
+export PYTHONPATH="$HOME/git/ethan/modules/"
+
+export SCRATCH="~/GD_IU/scratch"
+
+export COMMON_DIRS=(
+	$HOME/.config/zsh
+	$HOME/GD_IU/library
+	$HOME/GD_IU/scratch/
+	$HOME/GD_EWR/notes
+)
+
+
+alias \
+	lib="cd $HOME/GD_IU/library" \
+	gview="/Applications/gv/gview.sh"\
+    avogadro="open -a Avogadro"\
+    scratch="cd $SCRATCH"
 
 # Add anaconda to path 
 # Created using: conda init zsh 
@@ -26,9 +38,3 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-common_dirs=(
-	$HOME/.config/zsh
-	$HOME/GD_IU/library
-	$HOME/GD_IU/scratch/
-	$HOME/GD_EWR/notes
-)
