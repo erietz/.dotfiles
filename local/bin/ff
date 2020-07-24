@@ -2,11 +2,6 @@
 
 config_file="$HOME/.config/fuzzy/config.json"
 
-fcd () {
-    local dir=$(jq --raw-output '.directories[]' $config_file | fzf)
-    [ -n "$dir" ] && cd $dir
-}
-
 fhist () {
 	cat ${ZDOTDIR}/.zsh_history | fzf
 }
@@ -21,7 +16,7 @@ fssh () {
 }
 
 fbookmarks () {
-    jq --raw-output '.websites[]' $config_file | fzf | xargs open -a $BROWSER
+    jq --raw-output '.global.websites[]' $config_file | fzf | xargs open -a $BROWSER
 }
 
 
