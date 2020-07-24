@@ -1,0 +1,36 @@
+{
+    "global":{
+        "directories": [
+            "$HOME/.config/zsh",
+            "$HOME/.ewr"
+        ],
+        "websites": [
+            "https://github.iu.edu/",
+            "https://gitlab.com/"
+        ]
+    },
+    "ethanMBP": {
+        "directories": [
+            "$HOME/GD_IU/library",
+            "$HOME/GD_IU/scratch/",
+            "$HOME/GD_EWR/notes"
+            ]
+    },
+    "elogin": {
+        "directories": [
+            "/N/slate/ewrietz",
+            "/N/slate/ewrietz/IyengarLab/ethan",
+            "/N/dc2/projects/carbocation",
+            "/N/dc2/projects/carbocation/ethan"
+        ]
+    },
+    "h": {
+        "directories": [
+            "/N/slate/ewrietz",
+            "/N/slate/ewrietz/IyengarLab/ethan",
+            "/N/dc2/projects/carbocation",
+            "/N/dc2/projects/carbocation/ethan"
+        ]
+    }
+}
+

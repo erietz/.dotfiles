@@ -12,7 +12,8 @@ newscript () {
 }
 
 fcd () {
-    local dir=$(jq --raw-output --arg computer $computer '.[$computer].directories[]' $config_file | fzf)
+    local dir=$(jq --raw-output --arg computer $computer '.global.directories[] , .[$computer].directories[]' $config_file | fzf)
+    local dir=${(e)dir}
     [ -n "$dir" ] && cd $dir
 }
 
