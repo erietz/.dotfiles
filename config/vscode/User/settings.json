@@ -63,7 +63,7 @@
     "sync.gist": "3080ebb113045180343b61f6c4cd04ac",
     "python.dataScience.alwaysScrollOnNewCell": true,
     "code-runner.clearPreviousOutput": true,
-    "workbench.colorTheme": "Community Material Theme Palenight",
+    "workbench.colorTheme": "Gruvbox Dark Hard",
     "workbench.colorCustomizations": {
       "editorCursor.foreground": "#00fff2",
       "terminalCursor.foreground": "#00fff2"
