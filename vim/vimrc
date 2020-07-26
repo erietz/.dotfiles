@@ -30,3 +30,4 @@ au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 
 source ~/.vim/rc_files/plugins.vim
 source ~/.vim/rc_files/mappings.vim
+source ~/.vim/rc_files/functions.vim
