@@ -1,62 +1,62 @@
 {
-  "modules-math": {
-    "prefix": "modules-math",
-    "body": [
-        "import numpy as np",
-        "import matplotlib.pyplot as plt",
-        "import pandas as pd"
-    ],
-    "description": "import math modules"
-  },
-  "modules-script": {
-    "prefix": "modules-script",
-    "body": [
-        "from pathlib import Path",
-        "import re",
-        "import subprocess",
-        "import sys"
-    ],
-    "description": "import scripting modules"
-  },
-  "shebang": {
-    "prefix": "shebang",
-    "body": [
-        "#!/usr/bin/env python3",
-        "$0"
-    ],
-    "description": "shebang"
-  },
-  "slurm": {
-    "prefix": "slurm",
-    "body": [
-        "#!/usr/bin/env python3",
-        "#SBATCH --nodes=1",
-        "#SBATCH --ntasks-per-node=32",
-        "#SBATCH --mem=20gb",
-        "#SBATCH --time=${1:0-00:20:00}",
-        "#SBATCH --job-name=${2:jobname}",
-        "${3:#SBATCH --mail-user=ewrietz@iu.edu}",
-        "${4:#SBATCH --mail-type=FAIL,BEGIN,END}",
-        "",
-        "$0",
-        ""
-    ],
-    "description": "slurm job"
-  },
-  "pbs": {
-    "prefix": "pbs",
-    "body": [
-        "#!/usr/bin/env zsh",
-        "#PBS -l nodes=1:ppn=32",
-        "#PBS -l vmem=20gb",
-        "#PBS -l walltime=${1:0-00:20:00}",
-        "#PBS -N ${2:jobname}",
-        "${3:#PBS -M ewrietz@iu.edu}",
-        "${4:#PBS -m abe}",
-        "",
-        "$0",
-        ""
-    ],
-    "description": "pbs job"
-  }
+    "modules-math": {
+        "prefix": "modules-math",
+        "description": "import math modules",
+        "body": [
+            "import numpy as np",
+            "import matplotlib.pyplot as plt",
+            "import pandas as pd"
+        ]
+    },
+    "modules-script": {
+        "prefix": "modules-script",
+        "description": "import scripting modules",
+        "body": [
+            "from pathlib import Path",
+            "import re",
+            "import subprocess",
+            "import sys"
+        ]
+    },
+    "shebang": {
+        "prefix": "shebang",
+        "description": "shebang",
+        "body": [
+            "#!/usr/bin/env python3",
+            "$0"
+        ]
+    },
+    "slurm": {
+        "prefix": "slurm",
+        "description": "slurm job",
+        "body": [
+            "#!/usr/bin/env python3",
+            "#SBATCH --nodes=1",
+            "#SBATCH --ntasks-per-node=32",
+            "#SBATCH --mem=20gb",
+            "#SBATCH --time=${1:0-00:20:00}",
+            "#SBATCH --job-name=${2:jobname}",
+            "${3:#SBATCH --mail-user=ewrietz@iu.edu}",
+            "${4:#SBATCH --mail-type=FAIL,BEGIN,END}",
+            "",
+            "$0",
+            ""
+        ]
+    },
+    "pbs": {
+        "prefix": "pbs",
+        "description": "pbs job",
+        "body": [
+            "#!/usr/bin/env zsh",
+            "#PBS -l nodes=1:ppn=32",
+            "#PBS -l vmem=20gb",
+            "#PBS -l walltime=${1:0-00:20:00}",
+            "#PBS -N ${2:jobname}",
+            "${3:#PBS -M ewrietz@iu.edu}",
+            "${4:#PBS -m abe}",
+            "",
+            "$0",
+            ""
+        ]
+    }
 }

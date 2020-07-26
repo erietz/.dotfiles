@@ -21,7 +21,6 @@ fbookmarks () {
 
 
 my_commands=(
-    fcd
     fhist
     fpapers
     fssh

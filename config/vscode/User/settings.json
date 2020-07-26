@@ -10,7 +10,9 @@
     "git.autofetch": true,
     "python.dataScience.askForKernelRestart": false,
     "path-intellisense.absolutePathToWorkspace": false,
-
+    "files.associations": {
+      "*.codesnippets": "json"
+    },
     // Vim mode commands 
     "vim.normalModeKeyBindingsNonRecursive": [
       // Fast save
@@ -47,7 +49,7 @@
       },
       // "Compile" buffer
       {
-          "before": ["<leader>", "c"],
+          "before": ["<leader>", "r"],
           "commands": [
               "workbench.action.files.save",
               "code-runner.run"
@@ -61,10 +63,12 @@
     "sync.gist": "3080ebb113045180343b61f6c4cd04ac",
     "python.dataScience.alwaysScrollOnNewCell": true,
     "code-runner.clearPreviousOutput": true,
-    "workbench.colorTheme": "Material Theme Ocean",
+    "workbench.colorTheme": "Community Material Theme Palenight",
     "workbench.colorCustomizations": {
       "editorCursor.foreground": "#00fff2",
       "terminalCursor.foreground": "#00fff2"
   },
-  "latex-workshop.view.pdf.viewer": "tab"
+  "latex-workshop.view.pdf.viewer": "tab",
+  "python.showStartPage": false,
+  "git.confirmSync": false
   }

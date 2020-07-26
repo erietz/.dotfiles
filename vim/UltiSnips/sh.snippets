@@ -1,99 +1,51 @@
-#snippet forin "for ... in ... done (forin)" b
-#for ${1:i}${2/.+/ in /}${2:words}; do
-#	${0:${VISUAL}}
-#done
-#endsnippet
-#
-priority -50
-
-global !p
-import vim
-# Tests for the existence of a variable declared by Vim's filetype detection
-# suggesting the type of shell script of the current file
-def testShell(scope, shell):
-	return vim.eval("exists('" + scope + ":is_" + shell + "')")
-# Loops over the possible variables, checking for global variables
-# first since they indicate an override by the user.
-def getShell():
-	for scope in ["g", "b"]:
-		for shell in ["bash", "posix", "sh", "kornshell"]:
-			if testShell(scope, shell) == "1":
-				if shell == "kornshell":
-					return "ksh"
-				if shell == "posix":
-					return "sh"
-				return shell
-	return "sh"
-endglobal
-
-###########################################################################
-#                            TextMate Snippets                            #
-###########################################################################
-snippet #! "#!/usr/bin/env (!env)" b
-`!p snip.rv = '#!/usr/bin/env ' + getShell() + "\n" `
+snippet shebang "#!/usr/bin/env zsh" b
+#!/usr/bin/env zsh
+$0
 endsnippet
 
-snippet sbash "safe bash options" b
-#!/usr/bin/env bash
-set -euo pipefail
-IFS=$'\n\t'
-`!p snip.rv ='\n\n' `
-endsnippet
+snippet gaussian-slurm "slurm gaussian job" b
+#!/usr/bin/env zsh
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=16
+#SBATCH --mem=10gb
+#SBATCH --time=${1:0-00:20:00}
+#SBATCH --job-name=${2:jobname}
+${3:#SBATCH --mail-user=ewrietz@iu.edu}
+${4:#SBATCH --mail-type=FAIL,BEGIN,END}
 
-snippet temp "Tempfile" b
-${1:TMPFILE}="$(mktemp -t ${3:--suffix=${4:.SUFFIX}} ${2:`!p
-snip.rv = re.sub(r'[^a-zA-Z]', '_', snip.fn) or "untitled"
-`}.XXXXXX)"
-${5:${6/(.+)/trap "/}${6:rm -f '$${1/.*\s//}'}${6/(.+)/" 0               # EXIT\n/}${7/(.+)/trap "/}${7:rm -f '$${1/.*\s//}'; exit 1}${7/(.+)/" 2       # INT\n/}${8/(.+)/trap "/}${8:rm -f '$${1/.*\s//}'; exit 1}${8/(.+)/" 1 15    # HUP TERM\n/}}
+cd $SLURM_SUBMIT_DIR
+g16 < ${5:filename}.com > $5.log
+
+$0
 
 endsnippet
 
-snippet /case|sw(itch)?/ "case .. esac (case)" rb
-case ${1:word} in
-	${2:pattern} )
-		${0:${VISUAL}};;
-esac
+snippet slurm "general slurm job" b
+#!/usr/bin/env zsh
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=48
+#SBATCH --mem=40gb
+#SBATCH --time=${1:0-00:20:00}
+#SBATCH --job-name=${2:jobname}
+${3:#SBATCH --mail-user=ewrietz@iu.edu}
+${4:#SBATCH --mail-type=FAIL,BEGIN,END}
+
+$0
+
 endsnippet
 
-snippet elif "elif .. (elif)" b
-elif ${2:[[ ${1:condition} ]]}; then
-	${0:${VISUAL}}
-endsnippet
+snippet pbs "pbs gaussian job" b
+#!/usr/bin/env zsh
+#PBS -l nodes=1:ppn=16
+#PBS -l vmem=10gb
+#PBS -l walltime=${1:0-00:20:00}
+#PBS -N ${2:jobname}
+${3:#PBS -M ewrietz@iu.edu}
+${4:#PBS -m abe}
 
-snippet for "for ... done (for)" b
-for (( i = 0; i < ${1:10}; i++ )); do
-	${0:${VISUAL}}
-done
-endsnippet
+cd $PBS_O_WORKDIR
+g16 < ${5:filename}.com > $5.log
 
-snippet forin "for ... in ... done (forin)" b
-for ${1:i}${2/.+/ in /}${2:words}; do
-	${0:${VISUAL}}
-done
-endsnippet
+$0
 
-snippet here "here document (here)"
-<<-${2:'${1:TOKEN}'}
-	$0
-${1/['"`](.+)['"`]/$1/}
 endsnippet
-
-snippet if "if ... then (if)" b
-if ${2:[[ ${1:condition} ]]}; then
-	${0:${VISUAL}}
-fi
-endsnippet
-
-snippet until "until ... (done)" b
-until ${2:[[ ${1:condition} ]]}; do
-	${0:${VISUAL}}
-done
-endsnippet
-
-snippet /wh(ile)?/ "while ... (done)" rb
-while ${2:[[ ${1:condition} ]]}; do
-	${0:${VISUAL}}
-done
-endsnippet
-
-# vim:ft=snippets:
