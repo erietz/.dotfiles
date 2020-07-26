@@ -70,5 +70,6 @@
   },
   "latex-workshop.view.pdf.viewer": "tab",
   "python.showStartPage": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "workbench.startupEditor": "newUntitledFile"
   }
