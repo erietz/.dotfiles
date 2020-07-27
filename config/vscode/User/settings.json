@@ -54,6 +54,10 @@
               "workbench.action.files.save",
               "code-runner.run"
           ]
+      },
+      {
+        "before": ["<C-c>"],
+        "after": ["code-runner.stop"]
       }
     ],
     "editor.lineNumbers": "relative",
@@ -71,5 +75,7 @@
   "latex-workshop.view.pdf.viewer": "tab",
   "python.showStartPage": false,
   "git.confirmSync": false,
-  "workbench.startupEditor": "newUntitledFile"
+  "git.autoRepositoryDetection": "openEditors",
+  "workbench.startupEditor": "newUntitledFile",
+  "code-runner.clearPreviousOutput": true
   }

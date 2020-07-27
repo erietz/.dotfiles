@@ -8,20 +8,20 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-"let g:gruvbox_contrast_dark = 'soft'
-"if exists('+termguicolors')
-"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"endif
-"let g:gruvbox_invert_selection='0'
-"let g:gruvbox_bold=0
-"set background=dark 
-"colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'medium'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
+let g:gruvbox_bold=0
+set background=dark 
+colorscheme gruvbox
 
 "let g:material_terminal_italics = 1
 "let g:material_terminal_italics = 1
-let g:material_theme_style = 'ocean'
-colorscheme material
+"let g:material_theme_style = 'ocean'
+"colorscheme material
 
 "set background=dark 
 "colorscheme gruvbox
@@ -82,7 +82,7 @@ nnoremap ?? :Rg<CR>
 let g:rainbow_active = 1
 
 let g:lightline = {
-      \ 'colorscheme': 'material_vim',
+      \ 'colorscheme': 'gruvbox',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
