@@ -7,7 +7,7 @@
 		"<cr>": ["expandable?", "expand", "open"],
 		"v": "open:vsplit"
 	},
-    "snippets.textmateSnippetsRoots": ["~/.ewr/config/vscode/User/snippets"],
+    //"snippets.textmateSnippetsRoots": ["~/.ewr/config/vscode/User/snippets"],
     //"snippets.ultisnips.enable": false,
     "languageserver": {
      "fortran": {

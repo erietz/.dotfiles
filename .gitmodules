@@ -80,3 +80,6 @@
 [submodule "vim/pack/foobar/start/material.vim"]
 	path = vim/pack/foobar/start/material.vim
 	url = https://github.com/kaicataldo/material.vim.git
+[submodule "vim/pack/foobar/start/vim-slime"]
+	path = vim/pack/foobar/start/vim-slime
+	url = https://github.com/jpalardy/vim-slime.git

@@ -6,6 +6,5 @@ setlocal smarttab
 setlocal expandtab
 set autoindent
 set fileformat=unix
-set foldmethod=indent
 
 nnoremap <leader>c :w<CR>:!clear<CR>:!python3 %<CR>
