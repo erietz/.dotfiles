@@ -2,7 +2,7 @@
   st = status
   pu = pull
   ci = commit
-  ca = commit -a -m
+  ca = commit -a
   br = branch
   cho = checkout
   pom = push origin master
