@@ -304,3 +304,7 @@ let g:coc_global_extensions = [
       \'coc-git'
       \]
 
+let g:slime_target = "vimterminal"
+let g:slime_python_ipython = 1
+let g:slime_cell_delimiter = "#%%"
+nnoremap <space>s <Plug>SlimeSendCell

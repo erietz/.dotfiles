@@ -12,6 +12,7 @@ autoload -U colors && colors
 set -o noclobber
 alias cp='cp -i'
 alias mv='mv -i'
+alias rm='rm -i'
 
 git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /'

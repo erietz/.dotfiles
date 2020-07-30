@@ -20,10 +20,10 @@
     },
     "elogin": {
         "directories": [
-            "/N/slate/ewrietz",
-            "/N/slate/ewrietz/IyengarLab/ethan",
             "/N/dc2/projects/carbocation",
-            "/N/dc2/projects/carbocation/ethan"
+            "/N/dc2/projects/carbocation/ethan",
+            "/N/slate/ewrietz",
+            "/N/slate/ewrietz/IyengarLab/ethan"
         ]
     },
     "h": {
