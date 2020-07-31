@@ -6,7 +6,7 @@
 map <leader>c :w<CR>:!pandoc % -o <c-r>%<backspace><backspace>pdf<CR><CR>
 
 " Open Markdown file in Chrome
-map <leader>v :!open -a "Brave Browser" %<CR><CR>
+map <leader>v :!open -a "$BROWSER" %<CR><CR>
 
 set spell
 let g:table_mode_corner='|'
