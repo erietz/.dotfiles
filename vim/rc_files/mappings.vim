@@ -100,3 +100,5 @@ nnoremap <leader>e :CommonFiles<CR>
 
 nnoremap <leader>r :Run<CR>
 vnoremap <leader>r :Run<CR>
+
+nnoremap <leader>b :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>

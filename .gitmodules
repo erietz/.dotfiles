@@ -19,9 +19,6 @@
 [submodule "vim/pack/foobar/start/lightline.vim"]
 	path = vim/pack/foobar/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule "vim/pack/foobar/start/nerdtree"]
-	path = vim/pack/foobar/start/nerdtree
-	url = https://github.com/preservim/nerdtree.git
 [submodule "vim/pack/foobar/start/rainbow"]
 	path = vim/pack/foobar/start/rainbow
 	url = https://github.com/luochen1990/rainbow.git
@@ -41,9 +38,6 @@
 [submodule "vim/pack/foobar/start/vimwiki"]
 	path = vim/pack/foobar/start/vimwiki
 	url = https://github.com/vimwiki/vimwiki.git
-[submodule "vim/pack/foobar/start/vim-devicons"]
-	path = vim/pack/foobar/start/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons.git
 [submodule "vim/pack/foobar/start/gruvbox"]
 	path = vim/pack/foobar/start/gruvbox
 	url = https://github.com/gruvbox-community/gruvbox.git
@@ -83,3 +77,9 @@
 [submodule "vim/pack/foobar/start/vim-slime"]
 	path = vim/pack/foobar/start/vim-slime
 	url = https://github.com/jpalardy/vim-slime.git
+[submodule "vim/pack/foobar/start/goyo.vim"]
+	path = vim/pack/foobar/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "vim/pack/foobar/start/vim-ipython-cell"]
+	path = vim/pack/foobar/start/vim-ipython-cell
+	url = https://github.com/hanschen/vim-ipython-cell.git

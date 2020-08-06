@@ -30,5 +30,6 @@ alias \
 	sl="ls" \
 	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
 	jlremote="jupyter lab --no-browser --port=9876" \
-	vi="vim" \
-    today='date +"%F"'
+    today='date +"%F"'\
+	vi="nvim" \
+    vim="nvim"

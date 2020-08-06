@@ -5,14 +5,12 @@ local computer=$(hostname -s | sed 's/[0-9]//g')
 [ -f $ZDOTDIR/.$computer.zsh ] && source $ZDOTDIR/.$computer.zsh
 [ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
 
-export PATH="$PATH:$HOME/.local/bin"
-
 autoload -U colors && colors
 
 set -o noclobber
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='rm -i'
+#alias rm='rm -i'
 
 git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /'

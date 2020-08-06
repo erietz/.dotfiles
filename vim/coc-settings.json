@@ -1,5 +1,4 @@
 {
-	// explorer
 	"explorer.width": 30,
 	"explorer.icon.enableNerdfont": true,
 	"explorer.previewAction.onHover": false,
@@ -7,8 +6,6 @@
 		"<cr>": ["expandable?", "expand", "open"],
 		"v": "open:vsplit"
 	},
-    //"snippets.textmateSnippetsRoots": ["~/.ewr/config/vscode/User/snippets"],
-    //"snippets.ultisnips.enable": false,
     "languageserver": {
      "fortran": {
        "command": "fortls",
@@ -16,7 +13,7 @@
        "rootPatterns": [".fortls", ".git/"]
      }
   },
-      "languageserver": {
+    "languageserver": {
     "julia": {
       "command": "/N/slate/ewrietz/applications/julia-1.4.2/bin/julia",
       "args" : ["--startup-file=no", "--history-file=no", "-e",
@@ -26,3 +23,4 @@
   },
     "python.jediPath": "/usr/local/anaconda3/lib/python3.7/site-packages"
 }
+
