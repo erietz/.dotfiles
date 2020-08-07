@@ -2,7 +2,7 @@ let mapleader=","
 let maplocalleader=";"
 
 " Yank to clipboard
-vnoremap ,y "*y
+vnoremap <leader>y "*y
 
 " Easier to save 
 inoremap ;w :w<Enter>
@@ -101,4 +101,4 @@ nnoremap <leader>e :CommonFiles<CR>
 nnoremap <leader>r :Run<CR>
 vnoremap <leader>r :Run<CR>
 
-nnoremap <leader>b :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
