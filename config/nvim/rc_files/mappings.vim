@@ -15,8 +15,8 @@ set statusline=%F 			" Full path to file
 "set statusline+=line\ %l\ of\ %L 	" Current line / total lines
 
 " Quickly edit/reload vimrc
-nnoremap <silent> <leader>ev :vsplit ~/.config/nvim/init.vim <CR>
-nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
+nnoremap <silent> <leader>ev :vsplit ~/.vim/vimrc <CR>
+nnoremap <silent> <leader>sv :so ~/.vim/vimrc <CR>
 
 " Jump around with tags 
 inoremap <leader><Tab> <Esc>/<++><CR>"_c4l
