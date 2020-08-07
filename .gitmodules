@@ -1,85 +1,13 @@
-[submodule "vim/pack/foobar/start/tabular"]
-	path = vim/pack/foobar/start/tabular
-	url = https://github.com/godlygeek/tabular.git
-[submodule "vim/pack/foobar/start/ultisnips"]
-	path = vim/pack/foobar/start/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/pack/foobar/start/vimtex"]
-	path = vim/pack/foobar/start/vimtex
-	url = https://github.com/lervag/vimtex.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+	ignore = dirty
 [submodule "config/zsh/zsh-autosuggestions"]
 	path = config/zsh/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "config/zsh/zsh-syntax-highlighting"]
 	path = config/zsh/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-[submodule "vim/pack/foobar/start/fzf"]
-	path = vim/pack/foobar/start/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "vim/pack/foobar/start/lightline.vim"]
-	path = vim/pack/foobar/start/lightline.vim
-	url = https://github.com/itchyny/lightline.vim.git
-[submodule "vim/pack/foobar/start/rainbow"]
-	path = vim/pack/foobar/start/rainbow
-	url = https://github.com/luochen1990/rainbow.git
-[submodule "vim/pack/foobar/start/vim-markdown"]
-	path = vim/pack/foobar/start/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-[submodule "dotbot"]
-	path = dotbot
-	url = https://github.com/anishathalye/dotbot
-	ignore = dirty
-[submodule "vim/pack/foobar/start/vim-fugitive"]
-	path = vim/pack/foobar/start/vim-fugitive
-	url = https://github.com/tpope/vim-fugitive.git
-[submodule "vim/pack/foobar/start/coc.nvim"]
-	path = vim/pack/foobar/start/coc.nvim
-	url = https://github.com/neoclide/coc.nvim.git
-[submodule "vim/pack/foobar/start/vimwiki"]
-	path = vim/pack/foobar/start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
-[submodule "vim/pack/foobar/start/gruvbox"]
-	path = vim/pack/foobar/start/gruvbox
-	url = https://github.com/gruvbox-community/gruvbox.git
-[submodule "vim/pack/foobar/start/julia-vim"]
-	path = vim/pack/foobar/start/julia-vim
-	url = https://github.com/JuliaEditorSupport/julia-vim.git
-[submodule "vim/pack/foobar/start/fzf.vim"]
-	path = vim/pack/foobar/start/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule "vim/pack/foobar/start/vim-man"]
-	path = vim/pack/foobar/start/vim-man
-	url = https://github.com/vim-utils/vim-man.git
-[submodule "vim/pack/foobar/start/vim-polyglot"]
-	path = vim/pack/foobar/start/vim-polyglot
-	url = https://github.com/sheerun/vim-polyglot.git
-[submodule "vim/pack/foobar/start/undotree"]
-	path = vim/pack/foobar/start/undotree
-	url = https://github.com/mbbill/undotree.git
 [submodule "config/zsh/zsh-completions"]
 	path = config/zsh/zsh-completions
 	url = https://github.com/zsh-users/zsh-completions.git
-[submodule "vim/pack/foobar/start/vim-one"]
-	path = vim/pack/foobar/start/vim-one
-	url = https://github.com/rakr/vim-one.git
-[submodule "vim/pack/foobar/start/palenight.vim"]
-	path = vim/pack/foobar/start/palenight.vim
-	url = https://github.com/drewtempelmeyer/palenight.vim.git
-[submodule "vim/pack/foobar/start/vim-run"]
-	path = vim/pack/foobar/start/vim-run
-	url = https://github.com/chemzqm/vim-run.git
-[submodule "vim/pack/foobar/start/papercolor-theme"]
-	path = vim/pack/foobar/start/papercolor-theme
-	url = https://github.com/NLKNguyen/papercolor-theme.git
-[submodule "vim/pack/foobar/start/material.vim"]
-	path = vim/pack/foobar/start/material.vim
-	url = https://github.com/kaicataldo/material.vim.git
-[submodule "vim/pack/foobar/start/vim-slime"]
-	path = vim/pack/foobar/start/vim-slime
-	url = https://github.com/jpalardy/vim-slime.git
-[submodule "vim/pack/foobar/start/goyo.vim"]
-	path = vim/pack/foobar/start/goyo.vim
-	url = https://github.com/junegunn/goyo.vim.git
-[submodule "vim/pack/foobar/start/vim-ipython-cell"]
-	path = vim/pack/foobar/start/vim-ipython-cell
-	url = https://github.com/hanschen/vim-ipython-cell.git
