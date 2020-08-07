@@ -28,6 +28,14 @@ au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 
+let g:netrw_browse_split = 2
+let g:netrw_banner = 0
+let g:netrw_winsize = 25
+
 source ~/.vim/rc_files/plugins.vim
 source ~/.vim/rc_files/mappings.vim
+<<<<<<< HEAD
 "source ~/.vim/rc_files/functions.vim
+=======
+source ~/.vim/rc_files/functions.vim
+>>>>>>> 6c9107f9b1994b0c17d5121ffe8ea9e14c8e3edc

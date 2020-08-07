@@ -62,10 +62,6 @@ let g:vimtex_view_method='skim'
 "let g:tex_conceal='abdmg'
 "let g:vimtex_fold_manual
 
-" Nerd Tree
-nnoremap <localleader>n :NERDTreeFind<CR>
-set encoding=utf8 " for nerdtree icons
-
 "-------------------------------------------------------------------------------
 " Experimental settings
 "-------------------------------------------------------------------------------
@@ -74,6 +70,8 @@ set encoding=utf8 " for nerdtree icons
 
 " Fuzzy finder
 set rtp+=/usr/local/opt/fzf
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
 nnoremap <c-p> :FZF<CR>
 nnoremap // :BLines<CR>
 nnoremap ?? :Rg<CR>
@@ -159,7 +157,6 @@ endif
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -296,6 +293,9 @@ let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
       \'coc-python',
+      \'coc-jedi',
+      \'coc-html',
+      \'coc-tsserver',
       \'coc-snippets',
       \'coc-json',
       \'coc-texlab',
@@ -304,7 +304,59 @@ let g:coc_global_extensions = [
       \'coc-git'
       \]
 
-let g:slime_target = "vimterminal"
+let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
-let g:slime_cell_delimiter = "#%%"
-nnoremap <space>s <Plug>SlimeSendCell
+let g:slime_cell_delimiter = "#--"
+nnoremap <leader>m <Plug>SlimeSendCell
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+
+"------------------------------------------------------------------------------
+" ipython-cell configuration
+"------------------------------------------------------------------------------
+
+let g:ipython_cell_delimit_cells_by = 'tags'
+let g:ipython_cell_tag = ['# %%', '#%%', '# <codecell>', '##']
+
+"
+" Keyboard mappings. <Leader> is \ (backslash) by default
+
+" map <localleader>s to start IPython
+nnoremap <localleader>s :SlimeSend1 ipython --matplotlib<CR>
+
+" map <localleader>r to run script
+nnoremap <localleader>r :IPythonCellRun<CR>
+
+" map <localleader>R to run script and time the execution
+nnoremap <localleader>R :IPythonCellRunTime<CR>
+
+" map <localleader>c to execute the current cell
+nnoremap <localleader>c :IPythonCellExecuteCell<CR>
+
+" map <localleader>C to execute the current cell and jump to the next cell
+nnoremap <localleader>C :IPythonCellExecuteCellJump<CR>
+
+" map <localleader>l to clear IPython screen
+nnoremap <localleader>l :IPythonCellClear<CR>
+
+" map <localleader>x to close all Matplotlib figure windows
+nnoremap <localleader>x :IPythonCellClose<CR>
+
+" map [c and ]c to jump to the previous and next cell header
+nnoremap [c :IPythonCellPrevCell<CR>
+nnoremap ]c :IPythonCellNextCell<CR>
+
+" map <localleader>h to send the current line or current selection to IPython
+nmap <localleader>h <Plug>SlimeLineSend
+xmap <localleader>h <Plug>SlimeRegionSend
+
+" map <localleader>p to run the previous command
+nnoremap <localleader>p :IPythonCellPrevCommand<CR>
+
+" map <localleader>Q to restart ipython
+nnoremap <localleader>Q :IPythonCellRestart<CR>
+
+" map <localleader>d to start debug mode
+nnoremap <localleader>d :SlimeSend1 %debug<CR>
+
+" map <localleader>q to exit debug mode or IPython
+nnoremap <localleader>q :SlimeSend1 exit<CR>
