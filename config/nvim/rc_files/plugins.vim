@@ -1,3 +1,22 @@
+call plug#begin("~/.local/share/nvim/plugged")
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-fugitive'
+Plug 'vim-utils/vim-man'
+Plug 'mbbill/undotree'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'theprimeagen/vim-be-good', {'do': './install.sh'}
+Plug 'gruvbox-community/gruvbox'
+Plug 'SirVer/ultisnips'
+Plug 'itchyny/lightline.vim'
+Plug 'luochen1990/rainbow'
+Plug 'vimwiki/vimwiki'
+Plug 'jpalardy/vim-slime'
+Plug 'lervag/vimtex'
+
+call plug#end()
 "-------------------------------------------------------------------------------
 " Plugin settings
 "-------------------------------------------------------------------------------
@@ -309,54 +328,3 @@ let g:slime_python_ipython = 1
 let g:slime_cell_delimiter = "#--"
 nnoremap <leader>m <Plug>SlimeSendCell
 let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
-
-"------------------------------------------------------------------------------
-" ipython-cell configuration
-"------------------------------------------------------------------------------
-
-let g:ipython_cell_delimit_cells_by = 'tags'
-let g:ipython_cell_tag = ['# %%', '#%%', '# <codecell>', '##']
-
-"
-" Keyboard mappings. <Leader> is \ (backslash) by default
-
-" map <localleader>s to start IPython
-nnoremap <localleader>s :SlimeSend1 ipython --matplotlib<CR>
-
-" map <localleader>r to run script
-nnoremap <localleader>r :IPythonCellRun<CR>
-
-" map <localleader>R to run script and time the execution
-nnoremap <localleader>R :IPythonCellRunTime<CR>
-
-" map <localleader>c to execute the current cell
-nnoremap <localleader>c :IPythonCellExecuteCell<CR>
-
-" map <localleader>C to execute the current cell and jump to the next cell
-nnoremap <localleader>C :IPythonCellExecuteCellJump<CR>
-
-" map <localleader>l to clear IPython screen
-nnoremap <localleader>l :IPythonCellClear<CR>
-
-" map <localleader>x to close all Matplotlib figure windows
-nnoremap <localleader>x :IPythonCellClose<CR>
-
-" map [c and ]c to jump to the previous and next cell header
-nnoremap [c :IPythonCellPrevCell<CR>
-nnoremap ]c :IPythonCellNextCell<CR>
-
-" map <localleader>h to send the current line or current selection to IPython
-nmap <localleader>h <Plug>SlimeLineSend
-xmap <localleader>h <Plug>SlimeRegionSend
-
-" map <localleader>p to run the previous command
-nnoremap <localleader>p :IPythonCellPrevCommand<CR>
-
-" map <localleader>Q to restart ipython
-nnoremap <localleader>Q :IPythonCellRestart<CR>
-
-" map <localleader>d to start debug mode
-nnoremap <localleader>d :SlimeSend1 %debug<CR>
-
-" map <localleader>q to exit debug mode or IPython
-nnoremap <localleader>q :SlimeSend1 exit<CR>
