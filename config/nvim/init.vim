@@ -1,5 +1,3 @@
-filetype plugin indent on
-syntax enable
 set relativenumber
 set ignorecase
 set smartcase
@@ -37,6 +35,6 @@ let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
-source ~/.config/nvim/rc_files/plugins.vim
 source ~/.config/nvim/rc_files/mappings.vim
 source ~/.config/nvim/rc_files/functions.vim
+source ~/.config/nvim/rc_files/plugins.vim

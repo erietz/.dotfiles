@@ -2,7 +2,6 @@ config/vifm/vifminfo
 config/zsh/.zcompdump
 config/zsh/.zsh_history
 config/configstore/update-notifier-npm.json
-vim/.netrwhist
 *.swp
 config/ipython/profile_default/history.sqlite
 config/ipython/profile_default/db/
@@ -10,3 +9,4 @@ config/nvim/undodir/
 config/vscode/User/globalStorage/
 config/vscode/User/syncLocalSettings.json
 config/vscode/User/workspaceStorage/
+config/nvim/.netrwhist
