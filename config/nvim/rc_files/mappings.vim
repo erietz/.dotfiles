@@ -1,5 +1,5 @@
-let mapleader=","
-let maplocalleader=";"
+let mapleader=" "
+let maplocalleader=","
 
 " Yank to clipboard
 vnoremap <leader>y "*y
@@ -28,7 +28,6 @@ nnoremap <A-h> <C-w><
 nnoremap <leader>f <C-w>f<C-w>L
 
 " Formatting paragraphs
-inoremap <leader>q gqap
 nnoremap <leader>q gqap
 
 " Moving of code blocks

@@ -17,12 +17,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'lervag/vimtex'
 
 call plug#end()
-"-------------------------------------------------------------------------------
-" Plugin settings
-"-------------------------------------------------------------------------------
 
-" color scheme
-"
 if (has("termguicolors"))
   set termguicolors
 endif
@@ -36,25 +31,6 @@ let g:gruvbox_invert_selection='0'
 let g:gruvbox_bold=0
 set background=dark 
 colorscheme gruvbox
-
-"let g:material_terminal_italics = 1
-"let g:material_terminal_italics = 1
-"let g:material_theme_style = 'ocean'
-"colorscheme material
-
-"set background=dark 
-"colorscheme gruvbox
-
-"
-"set background=dark
-"colorscheme one
-
-"
-"let g:palenight_terminal_italics=1
-"
-"packadd! palenight.vim
-"set background=dark
-"colorscheme palenight
 
 " ultisnips
 "set runtimepath-=~/.vim/bundle/ultisnips/
@@ -70,9 +46,9 @@ let g:UltiSnipsJumpBackwardTrigger = '<localleader><localleader><tab>'
 let g:UltiSnipsListSnippets="<localleader>u"
 
 "" vim-markdown
-let g:vim_markdown_math = 1
-let g:vim_markdown_auto_insert_bullets = 0
-let g:vim_markdown_new_list_item_indent = 0
+"let g:vim_markdown_math = 1
+"let g:vim_markdown_auto_insert_bullets = 0
+"let g:vim_markdown_new_list_item_indent = 0
 
 " vimtex
 let g:tex_flavor='latex'
@@ -84,20 +60,20 @@ let g:vimtex_view_method='skim'
 "-------------------------------------------------------------------------------
 " Experimental settings
 "-------------------------------------------------------------------------------
-"
-"let g:vifm_home="${HOME}/.config/vifm"
 
 " Fuzzy finder
 set rtp+=/usr/local/opt/fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
-nnoremap <c-p> :FZF<CR>
+nnoremap <c-p> :Files<CR>
+nnoremap <leader>b :Buffers<CR>
 nnoremap // :BLines<CR>
 nnoremap ?? :Rg<CR>
 
 " vim-rainbow
 let g:rainbow_active = 1
 
+" lightline
 let g:lightline = {
       \ 'colorscheme': 'gruvbox',
       \ 'active': {
@@ -140,37 +116,15 @@ let g:vim_run_command_map = {
   \'julia': 'julia',
   \'r': 'Rscript',
   \}
+
+let g:slime_target = "tmux"
+let g:slime_python_ipython = 1
+let g:slime_cell_delimiter = "#--"
+nnoremap <leader>m <Plug>SlimeSendCell
+let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}
+
+" COC
 "
-"
-"-------------------------------------------------------------------------------
-" COC---------------------------------------------------------------------------
-"-------------------------------------------------------------------------------
-" TextEdit might fail if hidden is not set.
-set hidden
-
-" Some servers have issues with backup files, see #649.
-set nobackup
-set nowritebackup
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
@@ -185,11 +139,12 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-let g:coc_snippet_next = '<tab>'
-let g:coc_snippet_prev = '<S-tab>'
-
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
 
 " Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
 " position. Coc only does snippet and additional edit on confirm.
@@ -200,113 +155,30 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
-" Use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
-
-" GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-
-" Use K to show documentation in preview window.
-nnoremap <silent> K :call <SID>show_documentation()<CR>
-
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
-
-" Symbol renaming.
-nmap <leader>rn <Plug>(coc-rename)
-
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder.
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
-
-" Applying codeAction to the selected region.
-" Example: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
-
-" Remap keys for applying codeAction to the current buffer.
-nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
-
-" Map function and class text objects
-" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
-xmap if <Plug>(coc-funcobj-i)
-omap if <Plug>(coc-funcobj-i)
-xmap af <Plug>(coc-funcobj-a)
-omap af <Plug>(coc-funcobj-a)
-xmap ic <Plug>(coc-classobj-i)
-omap ic <Plug>(coc-classobj-i)
-xmap ac <Plug>(coc-classobj-a)
-omap ac <Plug>(coc-classobj-a)
-
-" Use CTRL-S for selections ranges.
-" Requires 'textDocument/selectionRange' support of LS, ex: coc-tsserver
-nmap <silent> <C-s> <Plug>(coc-range-select)
-xmap <silent> <C-s> <Plug>(coc-range-select)
-
-" Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
-
-" Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
-
-" Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-
-" Add (Neo)Vim's native statusline support.
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline.
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
-
-" Mappings using CoCList: " Show all diagnostics.
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions.
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands.
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document.
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols.
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list.
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-" Explorer
-nmap <space>e :CocCommand explorer<CR>
-nmap <space>f :CocCommand explorer --preset floating<CR>
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
-
-autocmd FileType tex let b:coc_pairs = [["$", "$"]]
-autocmd FileType markdown let b:coc_pairs_disabled = ['`']
-
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
+
+" GoTo code navigation.
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>g[ <Plug>(coc-diagnostic-prev)
+nmap <leader>g] <Plug>(coc-diagnostic-next)
+nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
+nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+nnoremap <leader>cr :CocRestart
+
+" Explorer
+nmap <leader>e :CocCommand explorer<CR>
+nmap <leader>f :CocCommand explorer --preset floating<CR>
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+
+" Coc-pairs
+autocmd FileType tex let b:coc_pairs = [["$", "$"]]
+autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 
 let g:coc_global_extensions = [
       \'coc-markdownlint',
@@ -322,9 +194,3 @@ let g:coc_global_extensions = [
       \'coc-r-lsp',
       \'coc-git'
       \]
-
-let g:slime_target = "tmux"
-let g:slime_python_ipython = 1
-let g:slime_cell_delimiter = "#--"
-nnoremap <leader>m <Plug>SlimeSendCell
-let g:slime_default_config = {"socket_name": "default", "target_pane": "{last}"}

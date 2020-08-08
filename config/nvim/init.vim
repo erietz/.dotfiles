@@ -13,7 +13,6 @@ set smartindent
 set mouse=a
 set nowrap
 set noswapfile
-set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
@@ -23,6 +22,12 @@ set colorcolumn=80
 set updatetime=50
 set backspace=indent,eol,start
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+"COC
+set nobackup
+set nowritebackup
+set hidden
+set cmdheight=2
+set shortmess+=c
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
