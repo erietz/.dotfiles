@@ -7,6 +7,7 @@ Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/goyo.vim'
 Plug 'theprimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'gruvbox-community/gruvbox'
 Plug 'SirVer/ultisnips'
@@ -23,7 +24,7 @@ if (has("termguicolors"))
   set termguicolors
 endif
 
-let g:gruvbox_contrast_dark = 'medium'
+let g:gruvbox_contrast_dark = 'soft'
 if exists('+termguicolors')
     let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
     let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
@@ -92,7 +93,7 @@ let g:vimwiki_table_mappings = 0
 let g:vim_run_command_map = {
   \'javascript': 'node',
   \'php': 'php',
-  \'python': 'python',
+  \'python': 'python3',
   \'zsh': 'zsh',
   \'julia': 'julia',
   \'r': 'Rscript',

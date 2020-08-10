@@ -5,33 +5,5 @@
         "body": [
             "`date +%F`"
         ]
-    },
-    "()": {
-        "prefix": "()",
-        "description": "Parenthesis",
-        "body": [
-            "(${0:${TM_SELECTED_TEXT}})"
-        ]
-    },
-    "[]": {
-        "prefix": "[]",
-        "description": "Brackets",
-        "body": [
-            "[${0:${TM_SELECTED_TEXT}}]"
-        ]
-    },
-    "{}": {
-        "prefix": "{}",
-        "description": "Braces",
-        "body": [
-            "{${0:${TM_SELECTED_TEXT}}}"
-        ]
-    },
-    "$$": {
-        "prefix": "$$",
-        "description": "Math code",
-        "body": [
-            "$${0:${TM_SELECTED_TEXT}}$"
-        ]
     }
 }

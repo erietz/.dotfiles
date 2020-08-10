@@ -4,7 +4,7 @@
     "window.zoomLevel": 0,
     "python.dataScience.sendSelectionToInteractiveWindow": true,
     "editor.minimap.enabled": false,
-    "vim.leader": ",",
+    "vim.leader": " ",
     "vim.vimrc.path": "$HOME/.vim/vimrc",
     "terminal.integrated.inheritEnv": false,
     "git.autofetch": true,
@@ -17,7 +17,7 @@
     "vim.normalModeKeyBindingsNonRecursive": [
       // Fast save
       {
-        "before": ["<leader>", "w"],
+        "before": [";", "w"],
         "after": [":", "w", "<CR>"]
       },
       // Window splits
@@ -67,7 +67,7 @@
     "sync.gist": "3080ebb113045180343b61f6c4cd04ac",
     "python.dataScience.alwaysScrollOnNewCell": true,
     "code-runner.clearPreviousOutput": true,
-    "workbench.colorTheme": "Gruvbox Dark Hard",
+    "workbench.colorTheme": "Gruvbox Dark Soft",
     "workbench.colorCustomizations": {
       "editorCursor.foreground": "#00fff2",
       "terminalCursor.foreground": "#00fff2"
@@ -77,5 +77,6 @@
   "git.confirmSync": false,
   "git.autoRepositoryDetection": "openEditors",
   "workbench.startupEditor": "newUntitledFile",
-  "code-runner.clearPreviousOutput": true
+  "code-runner.clearPreviousOutput": true,
+  "editor.fontSize": 13
   }
