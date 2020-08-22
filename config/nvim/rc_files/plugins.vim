@@ -112,7 +112,6 @@ let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
       \'coc-python',
-      \'coc-jedi',
       \'coc-html',
       \'coc-tsserver',
       \'coc-snippets',

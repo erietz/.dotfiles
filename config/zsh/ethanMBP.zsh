@@ -4,7 +4,7 @@ export g16root="/Applications/gv/"
 
 export PYTHONPATH="$HOME/git/ethan/modules/"
 
-export SCRATCH="~/GD_IU/scratch"
+export SCRATCH="$HOME/GD_IU/scratch"
 
 export COMMON_DIRS=(
 	$HOME/.config/zsh
