@@ -17,8 +17,8 @@ export COMMON_DIRS=(
 alias \
 	lib="cd $HOME/GD_IU/library" \
 	gview="/Applications/gv/gview.sh"\
-    avogadro="open -a Avogadro"\
-    scratch="cd $SCRATCH"
+	avogadro="open -a Avogadro"\
+	scratch="cd $SCRATCH"
 
 # Add anaconda to path 
 # Created using: conda init zsh 
