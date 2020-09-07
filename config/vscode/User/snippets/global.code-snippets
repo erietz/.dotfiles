@@ -1,9 +1,0 @@
-{
-    "today": {
-        "prefix": "today",
-        "description": "Date",
-        "body": [
-            "`date +%F`"
-        ]
-    }
-}
