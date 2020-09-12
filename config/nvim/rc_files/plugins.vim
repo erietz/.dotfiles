@@ -16,7 +16,11 @@ Plug 'luochen1990/rainbow'
 Plug 'vimwiki/vimwiki'
 Plug 'jpalardy/vim-slime'
 Plug 'lervag/vimtex'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'chemzqm/vim-run'
+Plug 'erietz/vim-doconce'
+Plug 'kevinoid/vim-jsonc'
 
 call plug#end()
 
