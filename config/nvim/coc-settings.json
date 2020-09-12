@@ -1,4 +1,5 @@
 {
+	// Explorer settings
 	"explorer.width": 30,
 	"explorer.icon.enableNerdfont": true,
 	"explorer.previewAction.onHover": false,
@@ -21,6 +22,7 @@
       "filetypes": ["julia"]
      }
   },
-    "python.jediPath": "/usr/local/anaconda3/lib/python3.7/site-packages"
+  // Make sure that this works for all computers
+    //"python.jediPath": "/usr/local/anaconda3/lib/python3.7/site-packages"
 }
 
