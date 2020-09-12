@@ -30,6 +30,7 @@ set shortmess+=c
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
+au BufNewFile,BufFilePre,BufRead *.do,*.do.txt set filetype=doconce
 
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
