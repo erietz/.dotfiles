@@ -1,3 +1,4 @@
+# Laptop configuration
 
 export GAUSS_SCRDIR="$HOME/GD_IU/scratch/"
 export g16root="/Applications/gv/"
@@ -5,14 +6,6 @@ export g16root="/Applications/gv/"
 export PYTHONPATH="$HOME/git/ethan/modules/"
 
 export SCRATCH="$HOME/GD_IU/scratch"
-
-export COMMON_DIRS=(
-	$HOME/.config/zsh
-	$HOME/GD_IU/library
-	$HOME/GD_IU/scratch/
-	$HOME/GD_EWR/notes
-)
-
 
 alias \
 	lib="cd $HOME/GD_IU/library" \
@@ -37,4 +30,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
