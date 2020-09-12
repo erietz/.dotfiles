@@ -5,7 +5,7 @@
 " Compile markdown into pdf
 map <leader>c :w<CR>:!pandoc % -o <c-r>%<backspace><backspace>pdf<CR><CR>
 
-" Open Markdown file in Chrome
+" Open Markdown file in browser
 map <leader>v :!open -a "$BROWSER" %<CR><CR>
 
 set spell
