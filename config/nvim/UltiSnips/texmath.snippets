@@ -1,95 +1,39 @@
-#global !p
-#texMathZones = ['texMathZone' + x for x in ['A', 'AS', 'B', 'BS', 'C', 'CS', 'D', 'DS', 'E', 'ES', 'F', 'FS', 'G', 'GS', 'H', 'HS', 'I', 'IS', 'J', 'JS', 'K', 'KS', 'L', 'LS', 'DS', 'V', 'W', 'X', 'Y', 'Z', 'AmsA', 'AmsB', 'AmsC', 'AmsD', 'AmsE', 'AmsF', 'AmsG', 'AmsAS', 'AmsBS', 'AmsCS', 'AmsDS', 'AmsES', 'AmsFS', 'AmsGS' ]]
-#texIgnoreMathZones = ['texMathText']
-#texMathZoneIds = vim.eval('map('+str(texMathZones)+", 'hlID(v:val)')")
-#texIgnoreMathZoneIds = vim.eval('map('+str(texIgnoreMathZones)+", 'hlID(v:val)')")
-#ignore = texIgnoreMathZoneIds[0]
-#def math():
-#	synstackids = vim.eval("synstack(line('.'), col('.') - (col('.')>=2 ? 1 : 0))")
-#	try:
-#		first = next(i for i in reversed(synstackids) if i in texIgnoreMathZoneIds or i in texMathZoneIds)
-#		return first != ignore
-#	except StopIteration:
-#		return False
-#endglobal
-
-#context "math()"
 snippet / "Fraction" i
 \frac{${1:${VISUAL:numerator}}}{${2:denominator}}${0}
 endsnippet
 
-#context "math()"
-#snippet _ "Subscript" iA
-#_{$1}$0
-#endsnippet
-
-##context "math()"
-#snippet ^ "Superscript" iA
-#^{$1}$0
-#endsnippet
-
-#context "math()"
 snippet E "Power of 10" i
 \times 10^{$1}$0
 endsnippet
 
-#context "math()"
 snippet sum "Summation" i
 \sum\limits_{${1:n}}^{${2:\infty}}$0
 endsnippet
 
-#context "math()"
 snippet * "times" i
 \times $0
 endsnippet
 
-## Greek
-#snippet 'D "Delta" iA
-#\Delta
-#endsnippet
-#
-#snippet 'd "delta" iA
-#\delta
-#endsnippet
-#
-#snippet 'L "Lambda" iA
-#\Lambda
-#endsnippet
-#
-#snippet 'l "lambda" iA
-#\lambda
-#endsnippet
-#
-#snippet 'C "Psi" iA
-#\Psi
-#endsnippet
-#
-#snippet 'c "psi" iA
-#\psi
-#endsnippet
-
-snippet sympy "sympy block " w
-sympy $1 sympy$0
+snippet () "Parenthesis" i
+\left( $1 \right) $0
 endsnippet
 
-priority 10000
-snippet 'sympy(.*)sympy' "evaluate sympy" wr
-`!p
-from sympy import *
-x, y, z, t = symbols('x y z t')
-k, m, n = symbols('k m n', integer=True)
-f, g, h = symbols('f g h', cls=Function)
-init_printing()
-snip.rv = eval('latex(' + match.group(1).replace('\\', '') \
-    .replace('^', '**') \
-    .replace('{', '(') \
-    .replace('}', ')') + ')')
-`
+snippet [] "Brackets" i
+\left[ $1 \right] $0
 endsnippet
 
-#snippet version "print version"
-#`!p
-#import sys
-#snip.rv = print(!which python)
-#`
-#endsnippet
+snippet {} "Braces" i
+\left{ $1 \right} $0
+endsnippet
+
+snippet <> "Angled Brackets" i
+\left< $1 \right> $0
+endsnippet
+
+snippet |> "Ket" i
+\left| $1 \right> $0
+endsnippet
+
+snippet <| "Bra" i
+\left< $1 \right| $0
+endsnippet
