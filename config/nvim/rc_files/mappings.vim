@@ -5,6 +5,7 @@ let maplocalleader=","
 vnoremap <leader>y "*y
 
 " Easier to save 
+nnoremap ;w :update<CR>
 nnoremap <leader>s :update<CR>
 	
 " Status line
