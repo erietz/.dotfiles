@@ -3,15 +3,20 @@ extends texmath
 snippet preamble "Preamble" b
 \documentclass{article}
 \usepackage{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{longtable,booktabs}
+\usepackage{graphicx}
+\graphicspath{{images/}{plots/}{figures/}}
 \usepackage{hyperref}
 \hypersetup{
 	colorlinks=true,
-	linkcolor=blue}
-\usepackage{longtable,booktabs}
+	linkcolor=blue
+}
 %\usepackage[style=chem-acs, autocite=superscript]{biblatex}
 %\addbibresource{ref.bib}
 %\usepackage{physics}
 %\setcounter{secnumdepth}{0}
+%\setlength\parindent{0pt}
 %\usepackage[usenames,dvipsnames]{xcolor}
 %\usepackage{siunitx}
 %\usepackage{mhchem}
