@@ -104,6 +104,7 @@ let g:vim_run_command_map = {
   \'zsh': 'zsh',
   \'julia': 'julia',
   \'r': 'Rscript',
+  \'ruby': 'ruby',
   \}
 
 let g:slime_target = "tmux"
