@@ -23,6 +23,9 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'joshdick/onedark.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'flazz/vim-colorschemes'
+Plug 'yggdroot/indentline'
 
 call plug#end()
 
@@ -52,7 +55,7 @@ endif
 "let g:gruvbox_bold=0
 "set background=dark 
 "colorscheme gruvbox
-colorscheme onedark
+colorscheme codedark
 
 " ultisnips
 let g:UltiSnipsExpandTrigger = '<localleader><tab>'
@@ -77,7 +80,7 @@ let g:rainbow_active = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'codedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -86,6 +89,10 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+
+"" Indent Guids
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
 
 " Vim Wiki
 let g:vimwiki_global_ext = 0
