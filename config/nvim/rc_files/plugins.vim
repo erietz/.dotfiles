@@ -23,12 +23,28 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'joshdick/onedark.vim'
+Plug 'tomasiser/vim-code-dark'
+Plug 'flazz/vim-colorschemes'
+Plug 'yggdroot/indentline'
 
 call plug#end()
 
-if (has("termguicolors"))
-  set termguicolors
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
 endif
+
 
 "let g:gruvbox_contrast_dark = 'soft'
 "if exists('+termguicolors')
@@ -39,9 +55,10 @@ endif
 "let g:gruvbox_bold=0
 "set background=dark 
 "colorscheme gruvbox
-colorscheme onedark
+colorscheme codedark
 
 " ultisnips
+let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
 let g:UltiSnipsExpandTrigger = '<localleader><tab>'
 let g:UltiSnipsJumpForwardTrigger = '<localleader><tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<localleader><localleader><tab>'
@@ -64,7 +81,7 @@ let g:rainbow_active = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'onedark',
+      \ 'colorscheme': 'codedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -73,6 +90,10 @@ let g:lightline = {
       \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
+
+"" Indent Guids
+"let g:indent_guides_start_level = 2
+"let g:indent_guides_guide_size = 1
 
 " Vim Wiki
 let g:vimwiki_global_ext = 0
@@ -104,6 +125,7 @@ let g:vim_run_command_map = {
   \'zsh': 'zsh',
   \'julia': 'julia',
   \'r': 'Rscript',
+  \'ruby': 'ruby',
   \}
 
 let g:slime_target = "tmux"
@@ -123,7 +145,7 @@ let g:coc_global_extensions = [
       \'coc-tsserver',
       \'coc-snippets',
       \'coc-json',
-      \'coc-texlab',
+      \'coc-vimtex',
       \'coc-pairs',
       \'coc-r-lsp',
       \'coc-git'

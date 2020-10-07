@@ -6,8 +6,8 @@
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/.gem/bin"
 export CLICOLOR=1
-export VISUAL="nvim"
-export EDITOR="nvim"
+export VISUAL="vim"
+export EDITOR="vim"
 export BROWSER="Brave Browser"
 export GPG_TTY=$(tty) # fix pass not prompting for password
 export FZF_DEFAULT_COMMAND='find .'
