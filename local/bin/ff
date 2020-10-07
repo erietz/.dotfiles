@@ -19,12 +19,19 @@ fbookmarks () {
     jq --raw-output '.global.websites[]' $config_file | fzf | xargs open -a $BROWSER
 }
 
+fcode () {
+    #echo $(cat $HOME/.config/nvim/rc_files/common_files.txt | fzf | xargs greadlink -f)
+    file=$(cat $HOME/.config/nvim/rc_files/common_files.txt | fzf)
+    file=$(realpath $file)
+    echo $file
+}
 
 my_commands=(
     fhist
     fpapers
     fssh
     fbookmarks
+    fcode
     )
 
 my_command=$(print -l $my_commands | fzf)

@@ -2,8 +2,8 @@
 
 local computer=$(hostname -s | sed 's/[0-9]//g')
 
-[ -f $ZDOTDIR/.$computer.zsh ] && source $ZDOTDIR/.$computer.zsh
-[ -f $ZDOTDIR/.aliases.zsh ] && source $ZDOTDIR/.aliases.zsh
+[ -f $ZDOTDIR/$computer.zsh ] && source $ZDOTDIR/$computer.zsh
+[ -f $ZDOTDIR/aliases.zsh ] && source $ZDOTDIR/aliases.zsh
 
 autoload -U colors && colors
 

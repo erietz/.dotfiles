@@ -5,8 +5,8 @@ let maplocalleader=","
 vnoremap <leader>y "*y
 
 " Easier to save 
-inoremap ;w :w<Enter>
-nnoremap ;w :w<Enter>
+nnoremap ;w :update<CR>
+nnoremap <leader>s :update<CR>
 	
 " Status line
 set laststatus=2

@@ -2,7 +2,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LaTeX Math mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-inoremap <leader>/ \frac{}{<++>}<Esc>F}i
+"inoremap <leader>/ \frac{}{<++>}<Esc>F}i
 inoremap `a \alpha
 inoremap `b \beta
 inoremap `g \gamma
