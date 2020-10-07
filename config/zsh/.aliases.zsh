@@ -27,9 +27,9 @@ viman () {
 
 alias \
     g="git"\
-	sl="ls" \
+    sl="ls" \
 	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
 	jlremote="jupyter lab --no-browser --port=9876" \
     today='date +"%F"'\
 	vi="nvim" \
-    vim="nvim"
+    #vim="nvim"
