@@ -7,7 +7,7 @@ fpath=( /usr/share/zsh/functions/**/*(/) $fpath)
 #
 export LS_OPTIONS='--color=auto'
 
-[ -f $HOME/.config/zsh/.zsh_hpc.sh ] && source $HOME/.config/zsh/.zsh_hpc.sh
+[ -f $HOME/.config/zsh/zsh_hpc.sh ] && source $HOME/.config/zsh/zsh_hpc.sh
 
 source activate ethan
 
