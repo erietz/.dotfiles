@@ -9,7 +9,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'theprimeagen/vim-be-good', {'do': './install.sh'}
-Plug 'gruvbox-community/gruvbox'
 Plug 'SirVer/ultisnips'
 Plug 'itchyny/lightline.vim'
 Plug 'luochen1990/rainbow'
@@ -22,7 +21,6 @@ Plug 'erietz/vim-doconce'
 Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
-Plug 'joshdick/onedark.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'flazz/vim-colorschemes'
 Plug 'yggdroot/indentline'
@@ -45,16 +43,6 @@ if (empty($TMUX))
   endif
 endif
 
-
-"let g:gruvbox_contrast_dark = 'soft'
-"if exists('+termguicolors')
-"    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-"    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-"endif
-"let g:gruvbox_invert_selection='0'
-"let g:gruvbox_bold=0
-"set background=dark 
-"colorscheme gruvbox
 colorscheme codedark
 
 " ultisnips
