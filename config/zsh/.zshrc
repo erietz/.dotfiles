@@ -12,12 +12,13 @@ alias cp='cp -i'
 alias mv='mv -i'
 #alias rm='rm -i'
 
-git_branch() {
+git_branch () {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /'
 }
 
-#PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$fg[cyan]%} $(git_branch)%{$reset_color%}$%b "
-PS1="%B%{$fg[yellow]%}[%{$fg[cyan]%}%m %{$fg[magenta]%}%3~%{$fg[yellow]%}]%{$reset_color%}$%b "
+# PS1 variable has weird problems with single quotes
+setopt prompt_subst
+prompt='%B%{$bg[black]%}%{$fg[red]%}[%{$fg[cyan]%}%m %{$fg[white]%}%3~%{$fg[red]%}] %{$fg[magenta]%}$(git_branch)%{$reset_color%}$%b '
 
 #autoload -Uz promptinit && promptinit
 #prompt suse
