@@ -1,11 +1,8 @@
 {
-<<<<<<< HEAD
-    "suggest.autoTrigger": "trigger",
+    "suggest.autoTrigger": "always",
     "suggest.triggerAfterInsertEnter": true,
-    "snippets.userSnippetsDirectory": "~/.config/nvim/UltiSnips",
-=======
+    "snippets.userSnippetsDirectory": "~/.config/nvim/UltiSnips/",
 	// Explorer settings
->>>>>>> 10976a6e7390b69ceb1da6c3b1468476734d2b03
 	"explorer.width": 30,
 	"explorer.icon.enableNerdfont": true,
 	"explorer.previewAction.onHover": false,

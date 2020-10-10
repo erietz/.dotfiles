@@ -1,13 +1,11 @@
-# - I may end up switching to using zprofile instead of this file.
-# 
 # - I have found that some of these settings do not get loaded on linux
 # systems due to another file (/etc/zprofile ?) being sourced after this
 # file.
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/.gem/bin"
 export CLICOLOR=1
-export VISUAL="vim"
-export EDITOR="vim"
+export VISUAL="nvim"
+export EDITOR="nvim"
 export BROWSER="Brave Browser"
 export GPG_TTY=$(tty) # fix pass not prompting for password
 export FZF_DEFAULT_COMMAND='find .'

@@ -18,7 +18,7 @@ git_branch () {
 
 # PS1 variable has weird problems with single quotes
 setopt prompt_subst
-prompt='%B%{$bg[black]%}%{$fg[red]%}[%{$fg[cyan]%}%m %{$fg[white]%}%3~%{$fg[red]%}] %{$fg[magenta]%}$(git_branch)%{$reset_color%}$%b '
+prompt='%B%{$fg[blue]%}[%{$fg[green]%}%m %{$fg[magenta]%}%3~%{$fg[blue]%}] %{$fg[cyan]%}$(git_branch)%{$reset_color%}$%b '
 
 #autoload -Uz promptinit && promptinit
 #prompt suse

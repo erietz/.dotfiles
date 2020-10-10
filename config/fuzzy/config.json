@@ -37,17 +37,10 @@
     },
     "h": {
         "directories": [
-<<<<<<< HEAD
             "/N/slate/ewrietz",
             "/N/slate/ewrietz/IyengarLab/ethan",
             "/N/project/carbocation",
             "/N/project/carbocation/ethan"
-=======
-            "/N/dc2/projects/carbocation",
-            "/N/dc2/projects/carbocation/ethan",
-            "/N/slate/ewrietz",
-            "/N/slate/ewrietz/IyengarLab/ethan"
->>>>>>> 3a16e9cd4e6c94926ed5da52e2eb7024d20424ab
         ]
     }
 }
