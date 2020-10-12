@@ -145,7 +145,6 @@ let g:coc_global_extensions = [
       \'coc-tsserver',
       \'coc-snippets',
       \'coc-json',
-      \'coc-vimtex',
       \'coc-pairs',
       \'coc-r-lsp',
       \'coc-git'
