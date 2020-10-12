@@ -1,7 +1,7 @@
 {
-    "suggest.autoTrigger": "trigger",
+    "suggest.autoTrigger": "always",
     "suggest.triggerAfterInsertEnter": true,
-    "snippets.userSnippetsDirectory": "~/.config/nvim/UltiSnips",
+    "snippets.userSnippetsDirectory": "~/.config/nvim/UltiSnips/",
 	// Explorer settings
 	"explorer.width": 30,
 	"explorer.icon.enableNerdfont": true,

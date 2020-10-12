@@ -32,5 +32,4 @@ alias \
 	jlremote="jupyter lab --no-browser --port=9876" \
 	today='date +"%F"'\
 	vi="nvim" \
-    #vim="nvim"
 	vim="nvim"

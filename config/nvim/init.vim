@@ -1,6 +1,7 @@
 set relativenumber
 set ignorecase
 set smartcase
+set incsearch
 set spellfile=~/.config/nvim/spell/en.utf-8.add
 set wildmenu
 set wildmode=longest:full,full
@@ -13,15 +14,15 @@ set nowrap
 set noswapfile
 set undodir=~/.config/nvim/undodir
 set undofile
-set incsearch
 set termguicolors
 set scrolloff=8
 set colorcolumn=80
-set updatetime=50
-set backspace=indent,eol,start
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+set backspace=indent,eol,start
+set foldmethod=syntax "may slow down vim (put in json specific file)
 "COC
 set nobackup
+set updatetime=50
 set nowritebackup
 set hidden
 set cmdheight=2
