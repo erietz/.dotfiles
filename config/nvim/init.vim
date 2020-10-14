@@ -19,7 +19,6 @@ set scrolloff=8
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set backspace=indent,eol,start
-set foldmethod=syntax "may slow down vim (put in json specific file)
 "COC
 set nobackup
 set updatetime=50
