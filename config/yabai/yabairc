@@ -35,8 +35,8 @@ then
     yabai -m config right_padding                200
     echo "ULTRAWIDE monitor detected... Adding padding to sides"
 else
-    yabai -m config left_padding                 12
-    yabai -m config right_padding                12
+    yabai -m config left_padding                 70
+    yabai -m config right_padding                70
 fi
 
 echo "yabai configuration loaded.."
