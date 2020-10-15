@@ -1,6 +1,7 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-commentary'
 Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'sheerun/vim-polyglot'
@@ -113,7 +114,6 @@ autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
-      \'coc-python',
       \'coc-html',
       \'coc-tsserver',
       \'coc-snippets',
