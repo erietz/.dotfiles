@@ -67,4 +67,6 @@ test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+bindkey -s '^p'  'nvim $(fzf)^M'
+
 export NODE_PATH=$(npm root --quiet -g)
