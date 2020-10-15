@@ -9,7 +9,7 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set mouse=a
+set mouse=i
 set nowrap
 set noswapfile
 set undodir=~/.config/nvim/undodir
