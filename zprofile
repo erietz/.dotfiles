@@ -29,3 +29,4 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 #export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export HISTFILE="${ZDOTDIR}/.zsh_history"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
