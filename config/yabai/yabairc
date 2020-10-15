@@ -31,12 +31,12 @@ yabai -m config bottom_padding               12
 ## Adds padding to sides if using ultrawide monitor
 if [ $(system_profiler SPDisplaysDataType | grep -c ULTRAWIDE) -ne 0 ]
 then
-    yabai -m config left_padding                 200
-    yabai -m config right_padding                200
+    yabai -m config left_padding                 250
+    yabai -m config right_padding                250
     echo "ULTRAWIDE monitor detected... Adding padding to sides"
 else
-    yabai -m config left_padding                 12
-    yabai -m config right_padding                12
+    yabai -m config left_padding                 70
+    yabai -m config right_padding                70
 fi
 
 echo "yabai configuration loaded.."

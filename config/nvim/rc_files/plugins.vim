@@ -50,6 +50,10 @@ let g:vimtex_compiler_progname = 'nvr'
 "let g:tex_conceal='abdmg'
 "let g:vimtex_fold_manual
 
+" markdown
+"let g:pandoc#syntax#conceal#use = 0
+
+
 " vim-rainbow
 let g:rainbow_active = 1
 
@@ -100,6 +104,7 @@ let g:vim_run_command_map = {
   \'julia': 'julia',
   \'r': 'Rscript',
   \'ruby': 'ruby',
+  \'swift': 'swift',
   \}
 
 let g:slime_target = "tmux"
