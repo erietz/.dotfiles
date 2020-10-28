@@ -27,6 +27,7 @@ Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 call plug#end()
 
+"set rtp+=~/git/vim-doconce/
 
 colorscheme codedark
 
@@ -53,6 +54,9 @@ let g:vimtex_compiler_progname = 'nvr'
 " markdown
 "let g:pandoc#syntax#conceal#use = 0
 
+" indentline
+let g:indentLine_setColors = 0    " use colorscheme rather than grey
+autocmd FileType tex,markdown,doconce let g:indentLine_setConceal = 0
 
 " vim-rainbow
 let g:rainbow_active = 1
