@@ -70,3 +70,6 @@ test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2
 bindkey -s '^p'  'fzf | xargs nvim^M'
 
 export NODE_PATH=$(npm root --quiet -g)
+
+# Fixes crazy problem with python environment not loading when starting tmux
+[[ -z $TMUX ]] || conda deactivate; conda activate base

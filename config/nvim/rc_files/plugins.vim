@@ -22,6 +22,7 @@ Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tomasiser/vim-code-dark'
+Plug 'arcticicestudio/nord-vim'
 Plug 'flazz/vim-colorschemes'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
@@ -29,7 +30,8 @@ call plug#end()
 
 set rtp+=~/git/vim-doconce/
 
-colorscheme codedark
+"colorscheme codedark
+colorscheme nord
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
@@ -64,7 +66,7 @@ let g:rainbow_active = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'codedark',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
