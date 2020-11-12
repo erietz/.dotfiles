@@ -17,7 +17,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'lervag/vimtex'
 Plug 'godlygeek/tabular'
 Plug 'chemzqm/vim-run'
-Plug 'erietz/vim-doconce'
+"Plug 'erietz/vim-doconce'
 Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -27,7 +27,7 @@ Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 call plug#end()
 
-"set rtp+=~/git/vim-doconce/
+set rtp+=~/git/vim-doconce/
 
 colorscheme codedark
 
