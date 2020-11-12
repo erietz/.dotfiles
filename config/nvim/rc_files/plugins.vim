@@ -128,6 +128,7 @@ let g:coc_global_extensions = [
       \'coc-html',
       \'coc-tsserver',
       \'coc-snippets',
+      \'coc-vimtex',
       \'coc-json',
       \'coc-pairs',
       \'coc-r-lsp',
