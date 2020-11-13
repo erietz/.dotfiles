@@ -17,7 +17,7 @@ Plug 'jpalardy/vim-slime'
 Plug 'lervag/vimtex'
 Plug 'godlygeek/tabular'
 Plug 'chemzqm/vim-run'
-Plug 'erietz/vim-doconce'
+"Plug 'erietz/vim-doconce'
 Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -27,8 +27,10 @@ Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 call plug#end()
 
+set rtp+=~/git/vim-doconce/
 
-colorscheme codedark
+"colorscheme codedark
+colorscheme nord
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
@@ -46,20 +48,24 @@ let $FZF_DEFAULT_OPTS='--reverse'
 let g:tex_flavor='latex'
 let g:vimtex_view_method='skim'
 let g:vimtex_compiler_progname = 'nvr'
-"let g:vimtex_quickfix_mode=0
-"let g:tex_conceal='abdmg'
+let g:vimtex_quickfix_mode=0
+set conceallevel=0
+let g:tex_conceal=''
 "let g:vimtex_fold_manual
 
 " markdown
 "let g:pandoc#syntax#conceal#use = 0
 
+" indentline
+let g:indentLine_setColors = 0    " use colorscheme rather than grey
+autocmd FileType tex,markdown,doconce let g:indentLine_setConceal = 0
 
 " vim-rainbow
 let g:rainbow_active = 1
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'codedark',
+      \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -123,6 +129,7 @@ let g:coc_global_extensions = [
       \'coc-html',
       \'coc-tsserver',
       \'coc-snippets',
+      \'coc-vimtex',
       \'coc-json',
       \'coc-pairs',
       \'coc-r-lsp',
