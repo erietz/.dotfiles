@@ -10,13 +10,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'theprimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'SirVer/ultisnips'
-Plug 'itchyny/lightline.vim'
-Plug 'luochen1990/rainbow'
+"Plug 'luochen1990/rainbow'
 Plug 'vimwiki/vimwiki'
 Plug 'jpalardy/vim-slime'
 Plug 'lervag/vimtex'
 Plug 'godlygeek/tabular'
 Plug 'chemzqm/vim-run'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Plug 'erietz/vim-doconce'
 Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
@@ -30,7 +31,8 @@ call plug#end()
 set rtp+=~/git/vim-doconce/
 
 "colorscheme codedark
-colorscheme nord
+colorscheme Tomorrow-Night
+let g:airline_theme='base16_tomorrow'
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
@@ -63,33 +65,17 @@ autocmd FileType tex,markdown,doconce let g:indentLine_setConceal = 0
 " vim-rainbow
 let g:rainbow_active = 1
 
-" lightline
-let g:lightline = {
-      \ 'colorscheme': 'nord',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
-      \ },
-      \ }
-
-"" Indent Guids
-"let g:indent_guides_start_level = 2
-"let g:indent_guides_guide_size = 1
-
 " Vim Wiki
 let g:vimwiki_global_ext = 0
 let g:vimwiki_list = [
-	\{'path': '~/GD_IU/library/notes/', 
-	\ 'syntax': 'markdown', 
-	\ 'ext': '.md',
-	\ 'path_html': '~/GD_IU/library/notes/formatted/html',
-	\ 'custom_wiki2html': '$HOME/github/python/utilities/convert_vimwiki.py',},
-	\{'path': '~/GD_EWR/notes/', 
-	\ 'syntax': 'markdown', 
-	\ 'ext': '.md'}]
+  \{'path': '~/GD_IU/library/notes/', 
+  \ 'syntax': 'markdown', 
+  \ 'ext': '.md',
+  \ 'path_html': '~/GD_IU/library/notes/formatted/html',
+  \ 'custom_wiki2html': '$HOME/github/python/utilities/convert_vimwiki.py',},
+  \{'path': '~/GD_EWR/notes/', 
+  \ 'syntax': 'markdown', 
+  \ 'ext': '.md'}]
 
 command! Diary VimwikiDiaryIndex
 augroup vimwikigroup
@@ -123,15 +109,14 @@ autocmd FileType tex let b:coc_pairs = [["$", "$"]]
 autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 
 let g:coc_global_extensions = [
-      \'coc-markdownlint',
-      \'coc-highlight',
-      \'coc-python',
-      \'coc-html',
-      \'coc-tsserver',
-      \'coc-snippets',
-      \'coc-vimtex',
-      \'coc-json',
-      \'coc-pairs',
-      \'coc-r-lsp',
-      \'coc-git'
-      \]
+  \'coc-markdownlint',
+  \'coc-explorer',
+  \'coc-highlight',
+  \'coc-python',
+  \'coc-html',
+  \'coc-snippets',
+  \'coc-json',
+  \'coc-pairs',
+  \'coc-r-lsp',
+  \'coc-git'
+  \]
