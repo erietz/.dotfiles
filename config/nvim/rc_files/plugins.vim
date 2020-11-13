@@ -119,6 +119,7 @@ autocmd FileType markdown let b:coc_pairs_disabled = ['`']
 let g:coc_global_extensions = [
       \'coc-markdownlint',
       \'coc-highlight',
+      \'coc-python',
       \'coc-html',
       \'coc-tsserver',
       \'coc-snippets',
