@@ -31,7 +31,7 @@ call plug#end()
 set rtp+=~/git/vim-doconce/
 
 "colorscheme codedark
-colorscheme Tomorrow-Night
+colorscheme hybrid
 let g:airline_theme='base16_tomorrow'
 
 " ultisnips
