@@ -45,6 +45,15 @@ nnoremap <leader>b :Buffers<CR>
 nnoremap // :BLines<CR>
 nnoremap ?? :Rg<CR>
 
+" Clean up whitespace
+" https://vi.stackexchange.com/questions/454/whats-the-simplest-way-to-strip-trailing-whitespace-from-all-lines-in-a-file
+fun! TrimWhitespace()
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
+endfun
+command! TrimWhitespace call TrimWhitespace()
+
 " Slime
 nnoremap <leader>m <Plug>SlimeSendCell
 

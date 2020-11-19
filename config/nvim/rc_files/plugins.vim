@@ -18,7 +18,7 @@ Plug 'godlygeek/tabular'
 Plug 'chemzqm/vim-run'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'erietz/vim-doconce'
+Plug '/Users/ethan/git/vim-doconce'
 Plug 'kevinoid/vim-jsonc'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
@@ -31,8 +31,8 @@ call plug#end()
 "set rtp+=~/git/vim-doconce/
 
 "colorscheme codedark
-colorscheme hybrid
-let g:airline_theme='base16_tomorrow'
+colorscheme gruvbox
+let g:airline_theme='base16_gruvbox_dark_hard'
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
