@@ -24,15 +24,12 @@ Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tomasiser/vim-code-dark'
 Plug 'flazz/vim-colorschemes'
+Plug 'joshdick/onedark.vim'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 call plug#end()
 
-"set rtp+=~/git/vim-doconce/
-
-"colorscheme codedark
-colorscheme gruvbox
-let g:airline_theme='base16_gruvbox_dark_hard'
+colorscheme onedark
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"

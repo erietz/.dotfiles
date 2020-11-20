@@ -39,3 +39,4 @@ let g:netrw_winsize = 25
 source ~/.config/nvim/rc_files/mappings.vim
 source ~/.config/nvim/rc_files/functions.vim
 source ~/.config/nvim/rc_files/plugins.vim
+source ~/.config/nvim/rc_files/airline.vim
