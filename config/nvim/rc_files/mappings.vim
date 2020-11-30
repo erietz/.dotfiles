@@ -7,6 +7,9 @@ vnoremap <leader>y "*y
 " Easier to save 
 nnoremap ;w :update<CR>
 nnoremap <leader>s :update<CR>
+
+" delete but don't yank
+vnoremap <leader>d "_d
 	
 " Status line
 set laststatus=2
