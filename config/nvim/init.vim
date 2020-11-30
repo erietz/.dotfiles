@@ -1,3 +1,5 @@
+syntax on
+filetype plugin indent on
 set relativenumber
 set ignorecase
 set smartcase
@@ -15,9 +17,9 @@ set noswapfile
 set undodir=~/.config/nvim/undodir
 set undofile
 set termguicolors
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 set scrolloff=8
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
 set backspace=indent,eol,start
 "COC
 set nobackup
@@ -26,6 +28,7 @@ set nowritebackup
 set hidden
 set cmdheight=2
 set shortmess+=c
+
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets

@@ -29,8 +29,8 @@ Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 call plug#end()
 
-colorscheme onedark
-
+colorscheme gruvbox
+highlight LineNr guifg=#83a598
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
 let g:UltiSnipsExpandTrigger = '<localleader><tab>'
