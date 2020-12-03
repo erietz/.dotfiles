@@ -27,10 +27,17 @@ Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
+Plug 'ayu-theme/ayu-vim' " or other package manager
 call plug#end()
 
-colorscheme gruvbox
-highlight LineNr guifg=#83a598
+"...
+set termguicolors     " enable true colors support
+let ayucolor="mirage" " for mirage version of theme
+colorscheme ayu
+
+"colorscheme gruvbox
+highlight LineNr guifg=#D4BFFF
+
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
 let g:UltiSnipsExpandTrigger = '<localleader><tab>'
