@@ -36,6 +36,9 @@ nnoremap <leader>q gqap
 vnoremap < <gv  
 vnoremap > >gv  
 
+" Explore
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+
 " Adding comments until end of line
 nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
 

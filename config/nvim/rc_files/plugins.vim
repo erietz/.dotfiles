@@ -30,13 +30,12 @@ Plug 'ap/vim-css-color'
 Plug 'ayu-theme/ayu-vim' " or other package manager
 call plug#end()
 
-"...
-set termguicolors     " enable true colors support
-let ayucolor="mirage" " for mirage version of theme
-colorscheme ayu
+"let ayucolor="mirage" " for mirage version of theme
+"colorscheme ayu
+colorscheme gruvbox
 
 "colorscheme gruvbox
-highlight LineNr guifg=#D4BFFF
+highlight LineNr guifg=#8ec07c
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
