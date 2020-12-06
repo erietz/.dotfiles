@@ -12,35 +12,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 #alias rm='rm -i'
 
-# Prompt------------------------------------------------------------------------
-git_branch () {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)\ /'
-}
-
-## PS1 variable has weird problems with single quotes
-setopt prompt_subst
-prompt='%B%{$fg[blue]%}[%{$fg[green]%}%m %{$fg[magenta]%}%3~%{$fg[blue]%}] %{$fg[cyan]%}$(git_branch)%{$reset_color%}$%b '
-
-## Updates editor information when the keymap changes.
-#function zle-keymap-select() {
-#  zle reset-prompt
-#  zle -R
-#}
-#
-#zle -N zle-keymap-select
-#
-#function vi_mode_prompt_info() {
-#  echo "${${KEYMAP/vicmd/[% NORMAL]%}/(main|viins)/[% INSERT]%}"
-#}
-#
-## define right prompt, regardless of whether the theme defined it
-#RPS1='$(vi_mode_prompt_info)'
-#RPS2=$RPS1
-
-#autoload -Uz promptinit && promptinit
-#prompt suse
-#-------------------------------------------------------------------------------
-
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -73,3 +44,5 @@ export NODE_PATH=$(npm root --quiet -g)
 
 # Fixes crazy problem with python environment not loading when starting tmux
 [[ -z $TMUX ]] || conda deactivate; conda activate base
+
+eval "$(starship init zsh)"
