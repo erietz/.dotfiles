@@ -33,6 +33,9 @@ call plug#end()
 "let ayucolor="mirage" " for mirage version of theme
 "colorscheme ayu
 colorscheme gruvbox
+set hlsearch
+hi Search guibg=Black
+hi Search guifg=LightGrey
 
 "colorscheme gruvbox
 highlight LineNr guifg=#8ec07c
