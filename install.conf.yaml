@@ -9,7 +9,7 @@
     - ~/.local/bin
 
 - link:
-    ~/.zprofile: zprofile
+    ~/.zshenv: zshenv
     ~/.config/:
       glob: true
       path: config/*

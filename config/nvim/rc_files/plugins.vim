@@ -28,16 +28,17 @@ Plug 'joshdick/onedark.vim'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 Plug 'ayu-theme/ayu-vim' " or other package manager
+Plug 'sainnhe/gruvbox-material'
 call plug#end()
 
-"let ayucolor="mirage" " for mirage version of theme
-"colorscheme ayu
 colorscheme gruvbox
+"let g:gruvbox_material_enable_bold = 1
+"let g:gruvbox_material_enable_italic = 1
+"colorscheme gruvbox-material
+
 set hlsearch
 hi Search guibg=Black
 hi Search guifg=LightGrey
-
-"colorscheme gruvbox
 highlight LineNr guifg=#8ec07c
 
 " ultisnips
@@ -57,8 +58,8 @@ let g:tex_flavor='latex'
 let g:vimtex_view_method='skim'
 let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_quickfix_mode=0
-set conceallevel=0
-let g:tex_conceal=''
+"set conceallevel=0
+"let g:tex_conceal=''
 "let g:vimtex_fold_manual
 
 " markdown
