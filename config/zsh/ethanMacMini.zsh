@@ -19,3 +19,11 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+export NODE_PATH=$(npm root --quiet -g)
+
+# Fixes crazy problem with python environment not loading when starting tmux
+#[[ -z $TMUX ]] || conda deactivate; conda activate base
+[[ -z $TMUX ]] || conda deactivate; conda activate base
+
+load_configs ( $ZDOTDIR/.iterm2_shell_integration.zsh )

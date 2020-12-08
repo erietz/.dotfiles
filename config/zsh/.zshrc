@@ -1,9 +1,5 @@
+echo "sourced \t ~/.config/zsh/.zshrc"
 #ZSH_DISABLE_COMPFIX=true
-
-local computer=$(hostname -s | sed 's/[0-9]//g')
-
-[ -f $ZDOTDIR/$computer.zsh ] && source $ZDOTDIR/$computer.zsh
-[ -f $ZDOTDIR/aliases.zsh ] && source $ZDOTDIR/aliases.zsh
 
 autoload -U colors && colors
 
@@ -30,19 +26,30 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 #bindkey -v '^?' backward-delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
-source $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
-
-test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 bindkey -s '^p'  'fzf | xargs nvim^M'
 
-export NODE_PATH=$(npm root --quiet -g)
+# load all source files---------------------------------------------------------
+#
+load_configs() {
+	local files=($@)
+	for file in $files;
+	do
+		[ -f $file ] && source $file && echo "sourced \t $file" || echo "$file has not been sourced"
+	done
+}
 
-# Fixes crazy problem with python environment not loading when starting tmux
-[[ -z $TMUX ]] || conda deactivate; conda activate base
+local computer=$(hostname -s | sed 's/[0-9]//g')
 
+source_files=(
+	$ZDOTDIR/$computer.zsh
+	$ZDOTDIR/aliases.zsh
+	$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+	$ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
+	~/.fzf.zsh
+)
+
+load_configs $source_files
+
+# Starship prompt---------------------------------------------------------------
 eval "$(starship init zsh)"
