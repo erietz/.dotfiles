@@ -32,4 +32,4 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export HISTFILE="${ZDOTDIR}/.zsh_history"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
-[[ $(uname) == "Linux" ]] && source ~/.config/zsh/profileManjaro && echo "sourced \t ~/.config/zsh/profileManjaro"
+[[ $(uname) == "Linux" ]] && source ~/.config/zsh/zshenv_manjaro.zsh && echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"

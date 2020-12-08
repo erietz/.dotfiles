@@ -12,3 +12,5 @@
 [user]
 	email = ewrietz@gmail.com
 	name = Ethan Rietz
+[credential]
+	helper = store
