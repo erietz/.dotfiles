@@ -593,6 +593,8 @@ background_opacity: 1.0
 # binding with the same triggers is defined. To unset a default binding, it can
 # be mapped to the `ReceiveChar` action. Alternatively, you can use `None` for
 # a no-op if you do not wish to receive input characters for that binding.
+#
+# Add and Subtract keybindings broke manjaro terminal!!!!!!!!!!!!!!!!
 key_bindings:
     # (Windows, Linux, and BSD only)
   - { key: V,        mods: Control|Shift, action: Paste            }
@@ -600,8 +602,8 @@ key_bindings:
   - { key: Insert,   mods: Shift,         action: PasteSelection   }
   - { key: Key0,     mods: Control,       action: ResetFontSize    }
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
+    #- { key: Add,      mods: Control,       action: IncreaseFontSize }
+    #- { key: Subtract, mods: Control,       action: DecreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
   - { key: Paste,                    action: Paste                            }
