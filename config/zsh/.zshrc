@@ -1,4 +1,4 @@
-echo "sourced \t ~/.config/zsh/.zshrc"
+#echo "sourced \t ~/.config/zsh/.zshrc"
 #ZSH_DISABLE_COMPFIX=true
 
 autoload -U colors && colors
@@ -34,7 +34,7 @@ load_configs() {
 	local files=($@)
 	for file in $files;
 	do
-		[ -f $file ] && source $file && echo "sourced \t $file" || echo "$file has not been sourced"
+		[ -f $file ] && source $file #&& echo "sourced \t $file" || echo "$file has not been sourced"
 	done
 }
 
