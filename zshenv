@@ -1,4 +1,4 @@
-echo "sourced \t ~/.zshenv"
+#echo "sourced \t ~/.zshenv"
 # - I have found that some of these settings do not get loaded on linux
 # systems due to another file (/etc/zprofile ?) being sourced after this
 # file.
@@ -32,4 +32,4 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export HISTFILE="${ZDOTDIR}/.zsh_history"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
-[[ $(uname) == "Linux" ]] && source ~/.config/zsh/zshenv_manjaro.zsh && echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"
+[[ $(uname) == "Linux" ]] && source ~/.config/zsh/zshenv_manjaro.zsh #&& echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"
