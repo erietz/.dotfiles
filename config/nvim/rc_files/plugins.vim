@@ -27,6 +27,7 @@ Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
 Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
+Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim' " or other package manager
 Plug 'sainnhe/gruvbox-material'
 call plug#end()
