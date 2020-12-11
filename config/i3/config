@@ -418,4 +418,4 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-exec xrandr --dpi 192
+exec xrandr --dpi 192 # increases menu bar on macbook pro
