@@ -2,7 +2,7 @@ let mapleader=" "
 let maplocalleader=","
 
 " Yank to clipboard
-vnoremap <leader>y "*y
+vnoremap <leader>y "+y
 
 " Easier to save 
 nnoremap ;w :update<CR>
