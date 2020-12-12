@@ -32,7 +32,7 @@ iframe.vimiumHUDFrame {
 div.vimiumHUD {
     /* Search bar at bottom */
     background-color: var(--bg0);
-    border-color: var(--purple);
+    border-color: var(--blue);
     border-radius: 0;
     border-style: solid;
     border-width: 0 3px 0 0;
@@ -46,7 +46,7 @@ div.vimiumHUD {
 
 div > .vimiumHintMarker {
     background: var(--bg0);
-    border-color: var(--purple);
+    border-color: var(--blue);
     border-radius: 0;
     border-style: solid;
     border-width: 0 0 0 3px;
@@ -79,7 +79,7 @@ div > .vimiumActiveHintMarker span {
     /* border around search bar */
     background-color: var(--bg0);
     border: none;
-    border-color: var(--purple);
+    border-color: var(--blue);
     border-radius: 0;
     border-style: solid;
     border-width: 0 0 0 4px;
@@ -101,7 +101,7 @@ div > .vimiumActiveHintMarker span {
 #vomnibar li {
     /* each result background of search dropdown */
     background-color: var(--bg0);
-    border-color: var(--purple);
+    border-color: var(--blue);
     border-style: solid;
     border-width: 0;
     margin-top: 10px;
