@@ -26,7 +26,7 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 #bindkey -v '^?' backward-delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
-bindkey -s '^p'  'fzf | xargs nvim^M'
+[[ $(uname) == "Linux" ]] && bindkey -s '^p'  'fzf | xargs -r nvim^M' || bindkey -s '^p'  'fzf | xargs nvim^M'
 
 # load all source files---------------------------------------------------------
 #
