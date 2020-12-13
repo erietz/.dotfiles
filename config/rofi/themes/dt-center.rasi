@@ -3,14 +3,15 @@
  * NAME: dt-center.rasi
  * DESCRIPTION: This is a centered prompt.
  * AUTHOR: Derek Taylor (DT)
+ * TWEAKED: Ethan Rietz
  */
 
 * {
     background-color:            #282828;
     border-color:                #282828;
     text-color:                  #ebdbb2;
-    font:                        "SauceCodePro Nerd Font Mono 19";
-    prompt-font:                 "Ubuntu Bold 19";
+    font:                        "SauceCodePro Nerd Font Mono 21";
+    prompt-font:                 "Ubuntu Bold 21";
     prompt-background:           #458588;
     prompt-foreground:           #282828;
     prompt-padding:              4px;
