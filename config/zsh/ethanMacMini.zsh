@@ -27,3 +27,5 @@ export NODE_PATH=$(npm root --quiet -g)
 [[ -z $TMUX ]] || conda deactivate; conda activate base
 
 load_configs $ZDOTDIR/.iterm2_shell_integration.zsh
+
+stty discard undef # control-o does nothing on macos by default (make it work)

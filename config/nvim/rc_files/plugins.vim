@@ -101,6 +101,7 @@ let g:vim_run_command_map = {
   \'php': 'php',
   \'python': 'python3',
   \'zsh': 'zsh',
+  \'sh': 'sh',
   \'julia': 'julia',
   \'r': 'Rscript',
   \'ruby': 'ruby',
