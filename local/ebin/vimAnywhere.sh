@@ -8,6 +8,6 @@ TMPFILE=$TMPFILE_DIR/doc-$(date +"%y%m%d%H%M%S").md
 mkdir -p $TMPFILE_DIR
 touch $TMPFILE
 
-vim $TMPFILE
+/usr/local/bin/vimr $TMPFILE
 
-pbcopy < $TMPFILE
+cat $TMPFILE | pbcopy

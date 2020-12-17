@@ -6,16 +6,16 @@
 
 - create:
     - ~/.config
-    - ~/.local/bin
+    - ~/.local/ebin
 
 - link:
     ~/.zshenv: zshenv
     ~/.config/:
       glob: true
       path: config/*
-    ~/.local/bin/:
+    ~/.local/ebin/:
       glob: true
-      path: local/bin/*
+      path: local/ebin/*
 
 
 - shell:

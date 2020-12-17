@@ -3,7 +3,7 @@
 # systems due to another file (/etc/zprofile ?) being sourced after this
 # file.
 
-export PATH="$PATH:$HOME/.local/bin:$HOME/.gem/bin"
+export PATH="$PATH:$HOME/.local/ebin:$HOME/.gem/bin"
 export CLICOLOR=1
 export VISUAL="nvim"
 export EDITOR="nvim"
@@ -21,7 +21,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
-export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+#export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 #export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 #alias gpg2="gpg2 --homedir ${XDG_DATA_HOME}/gnupg"
