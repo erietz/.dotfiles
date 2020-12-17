@@ -6,17 +6,13 @@
 
 - create:
     - ~/.config
-    - ~/.local/ebin
 
 - link:
     ~/.zshenv: zshenv
     ~/.config/:
       glob: true
       path: config/*
-    ~/.local/ebin/:
-      glob: true
-      path: local/ebin/*
-
+    ~/.local/ebin: local/ebin
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]

@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
 # Stolen from Luke Smith's Github and adjusted to suit my needs
 

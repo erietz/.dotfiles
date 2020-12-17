@@ -24,7 +24,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'tomasiser/vim-code-dark'
 Plug 'flazz/vim-colorschemes'
 Plug 'joshdick/onedark.vim'
-Plug 'yggdroot/indentline'
+"Plug 'yggdroot/indentline'
 Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim' " or other package manager

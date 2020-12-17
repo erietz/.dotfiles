@@ -4,7 +4,9 @@
 
 let g:tex_fold_enabled=1	" latex folding  
 
-autocmd BufWinLeave *.tex !latexmk -c
+"this works but annoying
+"autocmd BufWinLeave *.tex !latexmk -c
+"
 "autocmd VimLeave !latexmk -c
 "set textwidth=80 	" force text to new line after 80 characters
 set tabstop=2

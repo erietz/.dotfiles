@@ -28,7 +28,7 @@ set nowritebackup
 set hidden
 set cmdheight=2
 set shortmess+=c
-
+set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
