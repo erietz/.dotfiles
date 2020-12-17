@@ -1,4 +1,5 @@
 ~/.config/nvim/init.vim
+~/.config/nvim/rc_files/mappings.vim
 ~/.config/nvim/rc_files/plugins.vim
 ~/.config/nvim/rc_files/common_files.txt
 ~/.config/nvim/coc-settings.json
@@ -6,4 +7,4 @@
 ~/.config/zsh/.aliases.zsh
 ~/GD_IU/library/notes/index.md
 ~/GD_EWR/notes/index.md
-~/.zprofile
+~/.zshenv
