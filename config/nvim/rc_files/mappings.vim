@@ -43,7 +43,7 @@ nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
 
 " Quickly edit common files
-command! CommonFiles call fzf#run({'source': 'cat ~/.config/nvim/rc_files/common_files.txt', 'sink': 'e'})
+command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})
 nnoremap <leader>f :CommonFiles<CR>
 
 nnoremap <c-p> :Files<CR>
