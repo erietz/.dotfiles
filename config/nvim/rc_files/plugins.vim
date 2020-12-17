@@ -8,7 +8,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'theprimeagen/vim-be-good', {'do': './install.sh'}
 Plug 'SirVer/ultisnips'
 "Plug 'luochen1990/rainbow'
 Plug 'vimwiki/vimwiki'
@@ -30,8 +29,10 @@ Plug 'ap/vim-css-color'
 Plug 'morhetz/gruvbox'
 Plug 'ayu-theme/ayu-vim' " or other package manager
 Plug 'sainnhe/gruvbox-material'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 call plug#end()
 
+set background=dark
 colorscheme gruvbox
 "let g:gruvbox_material_enable_bold = 1
 "let g:gruvbox_material_enable_italic = 1

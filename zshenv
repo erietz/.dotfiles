@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.local/ebin:$HOME/.gem/bin"
 export CLICOLOR=1
 export VISUAL="nvim"
 export EDITOR="nvim"
-export BROWSER="Brave Browser"
+export BROWSER="firefox"
 #export GPG_TTY=$(tty) # fix pass not prompting for password
 export FZF_DEFAULT_COMMAND='find .'
 export GEM_HOME="$HOME/.gem"
@@ -15,7 +15,7 @@ export GEM_PATH="$GEM_PATH:$GEM_HOME/bin"
 
 # Clean up ~/
 #unset XDG_RUNTIME_DIR
-export XDG_RUNTIME_DIR=""
+#export XDG_RUNTIME_DIR=""
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
