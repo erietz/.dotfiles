@@ -1,6 +1,6 @@
 export PYTHONPATH="$HOME/git/ethan/modules/"
 
-export PATH="$PATH:/Applications/MATLAB_R2020a.app/bin/matlab"
+#export PATH="$PATH:/Applications/MATLAB_R2020a.app/bin/matlab"
 
 # Created using /usr/local/anaconda3/bin/conda init zsh
 #   - Then copy the content of ~/.zshrc to here
