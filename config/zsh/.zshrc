@@ -46,7 +46,6 @@ source_files=(
 	$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 	$ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
-	~/.fzf.zsh
 )
 
 load_configs $source_files
