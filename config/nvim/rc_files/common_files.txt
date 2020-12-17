@@ -1,5 +1,5 @@
 ~/.config/zsh/.zshrc
-~/.config/zsh/.aliases.zsh
+~/.config/zsh/aliases.zsh
 ~/GD_IU/library/notes/index.md
 ~/GD_EWR/notes/index.md
 ~/.zshenv
