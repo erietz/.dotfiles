@@ -26,6 +26,11 @@ export NODE_PATH=$(npm root --quiet -g)
 #[[ -z $TMUX ]] || conda deactivate; conda activate base
 [[ -z $TMUX ]] || conda deactivate; conda activate base
 
-load_configs $ZDOTDIR/.iterm2_shell_integration.zsh
+ethanMacMini_files=(
+    $ZDOTDIR/.iterm2_shell_integration.zsh
+	~/.fzf.zsh
+    )
+
+load_configs $ethanMacMini_files
 
 stty discard undef # control-o does nothing on macos by default (make it work)
