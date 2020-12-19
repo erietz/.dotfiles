@@ -1,4 +1,6 @@
-export PYTHONPATH="$HOME/git/ethan/modules/"
+#export PYTHONPATH="$HOME/git/ethan/modules/"
+# fixes neovim breaks over ssh???
+export LANG="en_US.UTF-8"
 
 #export PATH="$PATH:/Applications/MATLAB_R2020a.app/bin/matlab"
 
