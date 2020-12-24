@@ -3,6 +3,9 @@
 export LANG="en_US.UTF-8"
 
 #export PATH="$PATH:/Applications/MATLAB_R2020a.app/bin/matlab"
+#
+# I may be permenantly joining the church of emacs!
+export PATH="$PATH:/Users/ethan/.emacs.d/bin/"
 
 # Created using /usr/local/anaconda3/bin/conda init zsh
 #   - Then copy the content of ~/.zshrc to here
