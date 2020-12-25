@@ -1,14 +1,14 @@
 config_file="$HOME/.config/fuzzy/config.json"
 
 b () {
-	local string=""
-	for i in {1..$1}
-		string+=$(printf "../")
-	cd $string
+    local string=""
+    for i in {1..$1}
+        string+=$(printf "../")
+    cd $string
 }
 
 newscript () {
-	touch $1 && chmod +x $1 && nvim $1
+    touch $1 && chmod +x $1 && nvim $1
 }
 
 fcd () {
@@ -28,9 +28,10 @@ viman () {
 alias \
     g="git"\
     sl="ls" \
-	tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
-	jlremote="jupyter lab --no-browser --port=9876" \
-	today='date +"%F"'\
-	vi="nvim" \
-	vim="nvim" \
-    grep="grep --color"
+    tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
+    jlremote="jupyter lab --no-browser --port=9876" \
+    today='date +"%F"'\
+    vi="nvim" \
+    vim="nvim" \
+    grep="grep --color" \
+    e="emacs -nw"
