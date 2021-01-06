@@ -24,13 +24,13 @@
     --orange: #d65d0e
 }
 
+/* Search bar at bottom */
 iframe.vimiumHUDFrame {
     height: 30px;
     min-height: 30px;
 }
 
 div.vimiumHUD {
-    /* Search bar at bottom */
     background-color: var(--bg0);
     border-color: var(--blue);
     border-radius: 0;
@@ -42,11 +42,46 @@ div.vimiumHUD {
     text-shadow: none;
 }
 
+div.vimiumHUD .vimiumHUDSearchArea {
+  background: var(--bg0);
+}
+
+div.vimiumHUD .hud-find {
+  background: var(--bg0);
+  border: none;
+  color: var(--fg1);
+}
+
+div.vimiumHUD span#hud-find-input {
+    background-color: var(--bg0);
+    color: var(--fg1);
+    font-family: "monospace";
+}
+div.vimiumHUD span#hud-match-count {
+  margin-left: 10px;
+}
+div.vimiumHUD .vimiumHUDSearchAreaInner {
+  color: var(--purple);  /* 'Comment' color */
+}
+
+div > .vimiumHUD {
+    height: auto;
+    max-width: 600px;
+    min-width: 200px;
+    padding: 0.5em 1em;
+    color: #EEE8D5;
+    background-color: #073642;
+    border: 1px solid #B58900;
+    font-size: 12px;
+    font-family: "Source Code Pro", Consolas, Courier;
+    text-shadow: none;
+}
+
 /* Link Hints */
 
 div > .vimiumHintMarker {
     background: var(--bg0);
-    border-color: var(--blue);
+    border-color: var(--aqua);
     border-radius: 0;
     border-style: solid;
     border-width: 0 0 0 3px;
@@ -55,7 +90,7 @@ div > .vimiumHintMarker {
 }
 
 div > .vimiumHintMarker span {
-    color: var(--aqua);
+    color: var(--yellow);
     cursor: default;
     font-size: 12px;
     font-weight: bold;
@@ -63,7 +98,7 @@ div > .vimiumHintMarker span {
 }
 
 div > .vimiumActiveHintMarker span {
-    color: var(--aqua)!important;
+    color: var(--yellow)!important;
 }
 
 /* Vomnibar */
@@ -79,17 +114,17 @@ div > .vimiumActiveHintMarker span {
     /* border around search bar */
     background-color: var(--bg0);
     border: none;
-    border-color: var(--blue);
+    border-color: var(--aqua);
     border-radius: 0;
     border-style: solid;
     border-width: 0 0 0 4px;
 }
 
 #vomnibar .vomnibarSearchArea > input {
-    /* search bar background */
+    /* search bar background and text */
     background-color: var(--bg1);
     border: none;
-    color: var(--aqua);
+    color: var(--fg1);
 }
 
 #vomnibar ul {
@@ -101,7 +136,7 @@ div > .vimiumActiveHintMarker span {
 #vomnibar li {
     /* each result background of search dropdown */
     background-color: var(--bg0);
-    border-color: var(--blue);
+    border-color: var(--aqua);
     border-style: solid;
     border-width: 0;
     margin-top: 10px;
@@ -127,5 +162,5 @@ div > .vimiumActiveHintMarker span {
 
 #vomnibar li.vomnibarSelected {
     /* selected text??? */
-    background-color: var(--red);
+    background-color: var(--purple);
 }
