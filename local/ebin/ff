@@ -3,7 +3,7 @@
 config_file="$HOME/.config/fuzzy/config.json"
 
 fhist () {
-	cat ${ZDOTDIR}/.zsh_history | fzf
+    cat ${ZDOTDIR}/.zsh_history | fzf
 }
 
 fpapers () {
