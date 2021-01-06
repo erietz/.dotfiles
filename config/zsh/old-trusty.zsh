@@ -9,3 +9,5 @@ old_trusty_files=(
 	)
 
 load_configs $old_trusty_files
+
+export PATH="$PATH:/Users/ethan/.emacs.d/bin/"
