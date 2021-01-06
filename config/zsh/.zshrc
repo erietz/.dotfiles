@@ -26,6 +26,10 @@ bindkey -M menuselect 'j' vi-down-line-or-history
 #bindkey -v '^?' backward-delete-char
 bindkey -M menuselect '^[[Z' reverse-menu-complete
 
+# Edit line in vim with ctrl-e
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+
 [[ $(uname) == "Linux" ]] && bindkey -s '^p'  'fzf | xargs -r nvim^M' || bindkey -s '^p'  'fzf | xargs nvim^M'
 
 # load all source files---------------------------------------------------------
