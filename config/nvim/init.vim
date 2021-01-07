@@ -59,8 +59,20 @@ call plug#end()
 " }}}
 " Plugin Settings {{{
 
-colorscheme PaperColor
-"colorscheme tender
+" Weird workaround to fix git highlighting in gutter for tender theme
+function! MyHighlights() abort
+    hi SignColumn guibg=#282828 ctermbg=235 gui=NONE cterm=NONE
+endfunction
+augroup MyColors
+    autocmd!
+    "autocmd ColorScheme * call MyHighlights() " for all colorscheme
+    autocmd ColorScheme tender call MyHighlights()
+augroup END
+colorscheme tender
+
+"call AddColor()
+
+"colorscheme PaperColor
 "colorscheme base16-default-dark
 " Colorscheme
 "set background=dark
@@ -290,7 +302,7 @@ nnoremap <leader>ta :call GotoBuffer(3)<CR>
 command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})
 nnoremap <leader>f :CommonFiles<CR>
 
-nnoremap <c-p> :Files<CR>
+nnoremap <c-p> :GFiles<CR>
 nnoremap <leader>. :Files<CR>
 nnoremap <leader><leader> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
