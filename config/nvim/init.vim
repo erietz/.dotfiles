@@ -92,11 +92,11 @@ let g:vimtex_quickfix_mode=0
 "let g:vimtex_fold_manual
 
 " markdown
-"let g:pandoc#syntax#conceal#use = 0  " does nothing
+"let g:pandoc#syntax#conceal#use=0  " overwritted by indentline plugin
 
 " indentline
 let g:indentLine_setColors = 0    " use colorscheme rather than grey
-autocmd FileType tex,markdown,doconce let g:indentLine_setConceal = 0
+autocmd FileType tex,markdown,doconce,pandoc let g:indentLine_setConceal = 0
 
 " vim-rainbow
 let g:rainbow_active = 1
