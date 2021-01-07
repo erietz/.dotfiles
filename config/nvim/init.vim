@@ -9,9 +9,15 @@
 " Plug section {{{
 
 call plug#begin('~/.local/share/nvim/plugged')
+" Neovim lsp Plugins
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
+"Plug 'tjdevries/nlua.nvim'
+"Plug 'tjdevries/lsp_extensions.nvim'
 
 " Useful ones
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
@@ -46,6 +52,7 @@ Plug '/Users/ethan/git/vim-doconce'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'tomasiser/vim-code-dark'
+Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -57,13 +64,24 @@ call plug#end()
 " }}}
 " Plugin Settings {{{
 
+colorscheme tender
+"colorscheme PaperColor
 " Colorscheme
-set background=dark
-colorscheme gruvbox
-hi Search guibg=Black
-hi Search guifg=LightGrey
-highlight LineNr guifg=#8ec07c
-let g:airline_theme = 'gruvbox'
+"set background=dark
+"colorscheme gruvbox
+"hi Search guibg=Black
+"hi Search guifg=LightGrey
+"highlight LineNr guifg=#8ec07c
+"let g:airline_theme = 'gruvbox'
+
+set completeopt=menuone,noinsert,noselect
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+lua require'lspconfig'.tsserver.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.clangd.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.pyls.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.gopls.setup{ on_attach=require'completion'.on_attach }
+lua require'lspconfig'.rust_analyzer.setup{ on_attach=require'completion'.on_attach }
+"lua require'nvim_lsp'.sumneko_lua.setup{ on_attach=require'completion'.on_attach }
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
@@ -176,7 +194,7 @@ set noswapfile
 set undodir=~/.config/nvim/undodir
 set undofile
 set spellfile=~/.config/nvim/spell/en.utf-8.add
-"set termguicolors
+set termguicolors
 set scrolloff=8
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
@@ -196,7 +214,7 @@ let g:netrw_winsize = 25
 
 " file is large from 10mb
 let g:LargeFile = 1024 * 1024 * 10
-augroup LargeFile 
+augroup LargeFile
   au!
   autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
 augroup END
@@ -224,16 +242,16 @@ au BufNewFile,BufFilePre,BufRead *.do,*.do.txt set filetype=doconce
 let mapleader=" "
 let maplocalleader=","
 
-" Yank to clipboard 
+" Yank to clipboard
 vnoremap <leader>y "+y
 
-" Easier to save 
+" Easier to save
 nnoremap ;w :update<CR>
 nnoremap <leader>s :update<CR>
 
 " delete but don't yank
 vnoremap <leader>d "_d
-	
+
 " Status line
 set laststatus=2
 set statusline=%F
@@ -256,8 +274,8 @@ nnoremap <A-h> <C-w><
 nnoremap <leader>q gqap
 
 " Moving of code blocks
-vnoremap < <gv  
-vnoremap > >gv  
+vnoremap < <gv
+vnoremap > >gv
 
 " Resize windows----------------------------------------------------------------
 nnoremap <Left> :vertical resize +2<CR>
@@ -266,7 +284,8 @@ nnoremap <Up> :resize -2<CR>
 nnoremap <Down> :resize +2<CR>
 
 " Explore-----------------------------------------------------------------------
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+"nnoremap <leader>pv :wincmd v<bar> :Vex <bar> :vertical resize 30<CR>
+nnoremap <leader>pv :Vex<CR>
 
 " Adding comments until end of line---------------------------------------------
 nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
@@ -300,44 +319,44 @@ nnoremap <leader>m <Plug>SlimeSendCell
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
-" position. Coc only does snippet and additional edit on confirm.
-" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
-if exists('*complete_info')
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
-
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
-
-" GoTo code navigation.
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>rr <Plug>(coc-rename)
-nmap <leader>g[ <Plug>(coc-diagnostic-prev)
-nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
-nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
-nnoremap <leader>cr :CocRestart
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"" Use <c-space> to trigger completion.
+"inoremap <silent><expr> <c-space> coc#refresh()
+"
+"" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current
+"" position. Coc only does snippet and additional edit on confirm.
+"" <cr> could be remapped by other vim plugin, try `:verbose imap <CR>`.
+"if exists('*complete_info')
+"  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+"else
+"  inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"endif
+"
+"nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+"nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+"nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
+"
+"" GoTo code navigation.
+"nmap <leader>gd <Plug>(coc-definition)
+"nmap <leader>gy <Plug>(coc-type-definition)
+"nmap <leader>gi <Plug>(coc-implementation)
+"nmap <leader>gr <Plug>(coc-references)
+"nmap <leader>rr <Plug>(coc-rename)
+"nmap <leader>g[ <Plug>(coc-diagnostic-prev)
+"nmap <leader>g] <Plug>(coc-diagnostic-next)
+"nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
+"nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
+"nnoremap <leader>cr :CocRestart
 
 " vim-run-----------------------------------------------------------------------
 nnoremap <leader>r :Run<CR>
