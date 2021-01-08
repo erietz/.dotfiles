@@ -17,8 +17,9 @@ Plug 'tpope/vim-commentary'
 
 Plug 'mbbill/undotree'
 Plug 'yggdroot/indentline'
-Plug 'jpalardy/vim-slime'
+"Plug 'jpalardy/vim-slime'
 Plug 'chemzqm/vim-run'
+Plug 'kassio/neoterm'
 Plug 'ThePrimeagen/harpoon'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -60,19 +61,17 @@ call plug#end()
 " Plugin Settings {{{
 
 " Weird workaround to fix git highlighting in gutter for tender theme
-function! MyHighlights() abort
-    hi SignColumn guibg=#282828 ctermbg=235 gui=NONE cterm=NONE
-endfunction
-augroup MyColors
-    autocmd!
-    "autocmd ColorScheme * call MyHighlights() " for all colorscheme
-    autocmd ColorScheme tender call MyHighlights()
-augroup END
-colorscheme tender
+"function! MyHighlights() abort
+"    hi SignColumn guibg=#282828 ctermbg=235 gui=NONE cterm=NONE
+"endfunction
+"augroup MyColors
+"    autocmd!
+"    "autocmd ColorScheme * call MyHighlights() " for all colorscheme
+"    autocmd ColorScheme tender call MyHighlights()
+"augroup END
+"colorscheme tender
 
-"call AddColor()
-
-"colorscheme PaperColor
+colorscheme PaperColor
 "colorscheme base16-default-dark
 " Colorscheme
 "set background=dark
@@ -81,6 +80,14 @@ colorscheme tender
 "hi Search guifg=LightGrey
 "highlight LineNr guifg=#8ec07c
 "let g:airline_theme = 'gruvbox'
+
+"neoterm
+"function! Chomp(string)
+"    return substitute(a:string, '\n\+$', '', '')
+"endfunction
+"let g:neoterm_repl_python = Chomp(system('which jupyter')) . ' console'
+let g:neoterm_default_mod = 'botright'
+vnoremap <c-c><c-c> :TREPLSendSelection<CR>
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
@@ -291,7 +298,8 @@ nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
 nnoremap <leader>_ :set ri<cr>50A-<esc>51<bar>d$0:set nori<cr>
 
 " Open a terminal in split
-nnoremap <leader>t :new \| terminal<CR><c-w>J :resize 10<CR>
+nnoremap <leader>t :split <bar> terminal<CR><c-w>J :resize 10<CR>
+tnoremap <leader><Esc> <c-\><c-n>
 
 nnoremap <leader>tf :call GotoBuffer(0)<CR>
 nnoremap <leader>td :call GotoBuffer(1)<CR>
