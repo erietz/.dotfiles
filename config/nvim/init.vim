@@ -33,6 +33,7 @@ Plug 'SirVer/ultisnips'
 
 " Language support
 Plug 'sheerun/vim-polyglot'
+Plug 'euclidianAce/BetterLua.vim'
 Plug 'lervag/vimtex'
 Plug 'kevinoid/vim-jsonc'
 Plug 'vimwiki/vimwiki'
@@ -49,6 +50,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'tomasiser/vim-code-dark'
 Plug 'jacoborus/tender.vim'
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'KeitaNakamura/neodark.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -70,8 +73,12 @@ call plug#end()
 "    autocmd ColorScheme tender call MyHighlights()
 "augroup END
 "colorscheme tender
-
-colorscheme PaperColor
+"colorscheme gruvbox
+" colorscheme PaperColor
+"colorscheme onedark
+colorscheme neodark
+let g:neodark#use_256color = 1 " default: 0
+"let g:neodark#terminal_transparent = 1 " default: 0
 "colorscheme base16-default-dark
 " Colorscheme
 "set background=dark
@@ -89,11 +96,43 @@ colorscheme PaperColor
 let g:neoterm_default_mod = 'botright'
 vnoremap <c-c><c-c> :TREPLSendSelection<CR>
 
-" send everything between delimeters of #-- to the terminal
-"   TODO: put cursor backto starting position
-"   TODO: trim leading and trailing new line characters
-"   TODO: write lua function to accomplish this
-nnoremap <c-c><c-d> ?#--jVNk"ay :T <c-r>a<CR>
+
+lua << EOF
+function _G.TrimString(s)
+    local fixedString = string.gsub(s, "^%^M+", ""):gsub("%^M+$", "")
+    local fixedString = fixedString..'^M'
+    print(fixedString)
+    return fixedString
+end
+EOF
+
+fun! SendCell()
+    call feedkeys(?#--jVNk"ay)
+    let l:text = <c-r>a
+    echom(l:text)
+    let l:T_arg = call v:lua.trimString(a:text))
+    echom T l:T_arg
+endfunction
+
+lua << EOF
+function _G.TrimString(s)
+    local fixedString = string.gsub(s, "^%^M+", ""):gsub("%^M+$", ""):gsub("%^M+", "\n")
+    --local fixedString = fixedString..'^M'
+    print(fixedString)
+    return fixedString
+end
+EOF
+
+fun! SendCell()
+    call feedkeys('?#--jVNk"ay')
+    let l:text = @a
+    let l:t_argument = v:lua.TrimString(l:text)
+    let l:my_command = ":T " . '''' . l:t_argument . ''''
+    execute l:my_command
+endfunction
+
+"nnoremap <c-c><c-d> ?#--jVNk"ay :call v:lua.TCellCommand(test_string))
+nnoremap <c-c><c-d> ?#--jVNk"ay :call SendCell(<c-r>a)
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
@@ -159,6 +198,7 @@ let g:vim_run_command_map = {
   \'r': 'Rscript',
   \'ruby': 'ruby',
   \'swift': 'swift',
+  \'lua': 'lua',
   \}
 
 " vim-slime
@@ -190,7 +230,7 @@ let g:coc_global_extensions = [
 "-------------------------------------------------------------------------------
 syntax on
 filetype plugin indent on
-"set relativenumber
+set relativenumber
 set ignorecase smartcase
 set incsearch hlsearch
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
@@ -218,6 +258,8 @@ set nowritebackup
 set hidden
 set cmdheight=2
 set shortmess+=c
+
+let g:vimsyn_embed = 'l'
 
 let g:netrw_browse_split = 2
 let g:netrw_banner = 0
