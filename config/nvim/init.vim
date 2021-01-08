@@ -132,7 +132,7 @@ fun! SendCell()
 endfunction
 
 "nnoremap <c-c><c-d> ?#--jVNk"ay :call v:lua.TCellCommand(test_string))
-nnoremap <c-c><c-d> ?#--jVNk"ay :call SendCell(<c-r>a)
+nnoremap <c-c><c-d> :call SendCell()
 
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
