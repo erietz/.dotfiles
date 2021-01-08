@@ -89,6 +89,12 @@ colorscheme PaperColor
 let g:neoterm_default_mod = 'botright'
 vnoremap <c-c><c-c> :TREPLSendSelection<CR>
 
+" send everything between delimeters of #-- to the terminal
+"   TODO: put cursor backto starting position
+"   TODO: trim leading and trailing new line characters
+"   TODO: write lua function to accomplish this
+nnoremap <c-c><c-d> ?#--jVNk"ay :T <c-r>a<CR>
+
 " ultisnips
 let g:UltiSnipsSnippetsDir = "~/.config/nvim/UltiSnips/"
 let g:UltiSnipsExpandTrigger = '<localleader><tab>'
