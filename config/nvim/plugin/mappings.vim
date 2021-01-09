@@ -7,10 +7,10 @@ nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
 
 " Changing window splits
-nnoremap <c-h> :wincmd h<CR>
-nnoremap <c-j> :wincmd j<CR>
-nnoremap <c-k> :wincmd k<CR>
-nnoremap <c-l> :wincmd l<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 nnoremap <A-l> <C-w>>
 nnoremap <A-h> <C-w><
 "nnoremap <leader>f <C-w>f<C-w>L
@@ -41,12 +41,16 @@ nnoremap <leader>t :split <bar> terminal<CR><c-w>J :resize 10<CR>
 tnoremap <leader><Esc> <c-\><c-n>
 
 " Quickly edit common files-----------------------------------------------------
-command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})
-nnoremap <leader>f :CommonFiles<CR>
+"command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})
+command! CommonFiles call fzf#run({'source': 'cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*"', 'sink': 'e'})
+command! -bang ProjectFiles call fzf#vim#files(expand("%:h"), <bang>0)
+
+" emulate doom emacs
+nnoremap <leader>. :Files<CR>
+nnoremap <leader><leader> :ProjectFiles<CR>
+nnoremap <leader><CR> :CommonFiles<CR>
 
 nnoremap <c-p> :GFiles<CR>
-nnoremap <leader>. :Files<CR>
-nnoremap <leader><leader> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap // :BLines<CR>
 nnoremap ?? :Rg<CR>
