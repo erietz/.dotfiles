@@ -1,15 +1,17 @@
 " File: init.vim
 " Author: Ethan Rietz
-" Description: Configuration file for neovim
+" Description: 
+"   - Main file for neovim
+"   - This file gets sourced first
+"   - This file has been split up in the after/ directory which is in the rtp
 
 call plug#begin('~/.local/share/nvim/plugged')
+
 " Useful ones
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
-"Plug 'yggdroot/indentline'
-"Plug 'jpalardy/vim-slime'
 Plug 'chemzqm/vim-run'
 Plug 'kassio/neoterm'
 Plug 'ThePrimeagen/harpoon'
@@ -46,23 +48,20 @@ Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'KeitaNakamura/neodark.vim'
 Plug 'chriskempson/base16-vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
+
 call plug#end()
 
-" markdown
+" pandoc
 "let g:pandoc#syntax#conceal#use=0  " overwritted by indentline plugin
-
-" indentline
-"let g:indentLine_setColors = 0    " use colorscheme rather than grey
-"autocmd FileType tex,markdown,doconce,pandoc let g:indentLine_setConceal = 0
-
-" vim-rainbow
-"let g:rainbow_active = 1
 
 set relativenumber
 set ignorecase smartcase
 set incsearch hlsearch
+set inccommand=split
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 set wildmenu
 set wildmode=longest:full,full
@@ -81,13 +80,6 @@ set scrolloff=8
 set colorcolumn=80
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 set backspace=indent,eol,start
-"COC
-set nobackup
-set updatetime=50
-set nowritebackup
-set hidden
-set cmdheight=2
-set shortmess+=c
 
 " Status line
 set laststatus=2
@@ -95,9 +87,15 @@ set statusline=%F
 "set statusline+=%=
 "set statusline+=line\ %l\ of\ %L
 
+let g:mapleader = "\<Space>"
+let g:maplocalleader = ','
+nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+
 let g:vimsyn_embed = 'l'
 
 "au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 au BufNewFile,BufFilePre,BufRead *.do,*.do.txt set filetype=doconce
+

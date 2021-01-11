@@ -1,8 +1,3 @@
-let g:mapleader = "\<Space>"
-let g:maplocalleader = ','
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
-
 " Quickly reload vimrc
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
 
@@ -37,8 +32,10 @@ nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
 nnoremap <leader>_ :set ri<cr>50A-<esc>51<bar>d$0:set nori<cr>
 
 " Open a terminal in split
-nnoremap <leader>t :split <bar> terminal<CR><c-w>J :resize 10<CR>
+" for some reason overriding harpoon mapping
+"nnoremap <leader>t :split <bar> terminal<CR><c-w>J :resize 10<CR> 
 tnoremap <leader><Esc> <c-\><c-n>
+tnoremap <Esc><Esc> <c-\><c-n>
 
 " Quickly edit common files-----------------------------------------------------
 "command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})

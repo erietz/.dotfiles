@@ -1,3 +1,10 @@
+"COC
+set nobackup
+set updatetime=50
+set nowritebackup
+set hidden
+set cmdheight=2
+set shortmess+=c
 " COC---------------------------------------------------------------------------
 "
 " Use tab for trigger completion with characters ahead and navigate.
