@@ -58,17 +58,20 @@ call plug#end()
 " pandoc
 "let g:pandoc#syntax#conceal#use=0  " overwritted by indentline plugin
 
-set relativenumber
+set tabstop=4 softtabstop=4
+set smartindent
+set shiftwidth=4
+set expandtab smarttab
+set exrc
+set guicursor=
+set number
+set relativenumber 
 set ignorecase smartcase
-set incsearch hlsearch
+set incsearch nohlsearch
 set inccommand=split
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 set wildmenu
 set wildmode=longest:full,full
-set tabstop=4 softtabstop=4
-set shiftwidth=4
-set expandtab smarttab
-set smartindent
 set mouse=i
 set nowrap
 set noswapfile
@@ -82,8 +85,8 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 set backspace=indent,eol,start
 
 " Status line
-set laststatus=2
-set statusline=%F
+"set laststatus=2
+"set statusline=%F
 "set statusline+=%=
 "set statusline+=line\ %l\ of\ %L
 

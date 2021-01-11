@@ -3,7 +3,7 @@ set nobackup
 set updatetime=50
 set nowritebackup
 set hidden
-set cmdheight=2
+"set cmdheight=2
 set shortmess+=c
 " COC---------------------------------------------------------------------------
 "
