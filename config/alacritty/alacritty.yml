@@ -102,7 +102,7 @@ scrolling:
 # Font configuration
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
@@ -117,7 +117,9 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    #family: SauceCodePro Nerd Font
+    #
+    # family: NotoSansMono Nerd Font
+    family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -135,8 +137,10 @@ font:
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
-    # family: TerminessTTF Nerd Font
-    #family: SauceCodePro Nerd Font
+    #family: TerminessTTF Nerd Font
+    #
+    #family: NotoSansMono Nerd Font
+    #family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Bold
@@ -154,8 +158,11 @@ font:
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
-    # family: TerminessTTF Nerd Font
-    #family: SauceCodePro Nerd Font
+    #family: TerminessTTF Nerd Font
+    # family: SauceCodePro Nerd Font
+    #
+    #family: NotoSansMono Nerd Font
+    #family: Hack Nerd Font Mono
 
     # The `style` can be specified to pick a specific face.
     #style: Italic
@@ -173,14 +180,18 @@ font:
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
-    # family: TerminessTTF Nerd Font
-    #family: SauceCodePro Nerd Font
+    #family: TerminessTTF Nerd Font
+    # family: SauceCodePro Nerd Font
+    #
+    #family: NotoSansMono Nerd Font
+    #family: Hack Nerd Font Mono
+
 
     # The `style` can be specified to pick a specific face.
     #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 13.0
 
   # # Offset is the extra space around each character. `offset.y` can be thought of
   # # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -214,134 +225,74 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-## Colors (Tomorrow Night Bright)
-#colors:
-#  # Default colors
-#  primary:
-#    background: '0x282c34'
-#    foreground: '0xbbc2cf'
-#
-#    # Bright and dim foreground colors
-#    #
-#    # The dimmed foreground color is calculated automatically if it is not present.
-#    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-#    # is `false`, the normal foreground color will be used.
-#    #dim_foreground: '0x9a9a9a'
-#    #bright_foreground: '0xffffff'
-#
-#  # Cursor colors
-#  #
-#  # Colors which should be used to draw the terminal cursor. If these are unset,
-#  # the cursor color will be the inverse of the cell color.
-#  #cursor:
-#  #  text: '0x000000'
-#  #  cursor: '0xffffff'
-#
-#  # Selection colors
-#  #
-#  # Colors which should be used to draw the selection area. If selection
-#  # background is unset, selection color will be the inverse of the cell colors.
-#  # If only text is unset the cell text color will remain the same.
-#  selection:
-#    text: '0xbbc2cf'
-#    background: '0x282c34'
-#
-#  # Normal colors
-#  normal:
-#    black:   '0x1c1f24'
-#    red:     '0xff6c6b'
-#    green:   '0x98be65'
-#    yellow:  '0xda8548'
-#    blue:    '0x51afef'
-#    magenta: '0xc678dd'
-#    cyan:    '0x5699af'
-#    white:   '0x202328'
-#
-#  # Bright colors
-#  bright:
-#    black:   '0x5b6268'
-#    red:     '0xda8548'
-#    green:   '0x4db5bd'
-#    yellow:  '0xecbe7b'
-#    blue:    '0x3071db'   # This is 2257a0 in Doom Emacs but I lightened it.
-#    magenta: '0xa9a1e1'
-#    cyan:    '0x46d9ff'
-#    white:   '0xdfdfdf'
-#
-#  # Dim colors
-#  #
-#  # If the dim colors are not set, they will be calculated automatically based
-#  # on the `normal` colors.
-#  #dim:
-#  #  black:   '0x000000'
-#  #  red:     '0x8c3336'
-#  #  green:   '0x7a8530'
-#  #  yellow:  '0x97822e'
-#  #  blue:    '0x506d8f'
-#  #  magenta: '0x80638e'
-#  #  cyan:    '0x497e7a'
-#  #  white:   '0x9a9a9a'
+schemes:
+  gruvbox_light: &light
+  # Default colors
+    primary:
+      # hard contrast: background = '#f9f5d7'
+      background: '#fbf1c7'
+      # soft contrast: background = '#f2e5bc'
+      foreground: '#3c3836'
+    # deleting this section will make the cursor change color all over the place
+    cursor:
+      cursor: '#282828'
+      text: '#fbf1c7'
+    # Normal colors
+    normal:
+      black:   '#fbf1c7'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#7c6f64'
 
-# # Colors (vscode-dark)
-# colors:
-#   bright:
-#     black: '#a6a6a6'
-#     blue: '#6799e6'
-#     cyan: '#9cdcfe'
-#     green: '#b5cea8'
-#     magenta: '#c586c0'
-#     red: '#d16969'
-#     white: '#d4d4d4'
-#     yellow: '#cd9731'
-#   cursor:
-#     cursor: '#9cdcfe'
-#     text: '#282828'
-#   normal:
-#     black: '#000000'
-#     blue: '#569cd6'
-#     cyan: '#8db9e2'
-#     green: '#6a9955'
-#     magenta: '#c586c0'
-#     red: '#ce9178'
-#     white: '#eaeaea'
-#     yellow: '#dcdcaa'
-#   primary:
-#     background: '#1e1e1e'
-#     foreground: '#dcdcdc'
-#   selection:
-#     background: '#264f78'
-#     text: '#ffffff'
-#   # Colors (Gruvbox Dark)
-#
-#
-colors:
-  bright:
-    black: '#7f7061'
-    blue: '#719586'
-    cyan: '#7db669'
-    green: '#aab01e'
-    magenta: '#c77089'
-    red: '#f73028'
-    white: '#e6d4a3'
-    yellow: '#f7b125'
-  cursor:
-    cursor: '#e6d4a3'
-    text: '#1e1e1e'
-  normal:
-    black: '#1e1e1e'
-    blue: '#377375'
-    cyan: '#578e57'
-    green: '#868715'
-    magenta: '#a04b73'
-    red: '#be0f17'
-    white: '#978771'
-    yellow: '#cc881a'
-  primary:
-    background: '#1e1e1e'
-    foreground: '#e6d4a3'
-  selection:
-    background: '#e6d4a3'
-    text: '#534a42'
+    # Bright colors
+    bright:
+      black:   '#928374'
+      red:     '#9d0006'
+      green:   '#79740e'
+      yellow:  '#b57614'
+      blue:    '#076678'
+      magenta: '#8f3f71'
+      cyan:    '#427b58'
+      white:   '#3c3836'
+  #---------------------------------------------------------------------------
+  gruvbox_dark: &dark
+    primary: 
+      # hard contrast: background = '#1d2021'
+      background: '#282828'
+      # soft contrast: background = '#32302f'
+      foreground: '#ebdbb2'
+    # make the cursor easier to find........ see gruvbox light
+    cursor:
+      cursor: '#fbf1c7'
+      text: '#282828'
+
+    # Normal colors
+    normal:
+      black:   '#282828'
+      red:     '#cc241d'
+      green:   '#98971a'
+      yellow:  '#d79921'
+      blue:    '#458588'
+      magenta: '#b16286'
+      cyan:    '#689d6a'
+      white:   '#a89984'
+
+    # Bright colors
+    bright:
+      black:   '#928374'
+      red:     '#fb4934'
+      green:   '#b8bb26'
+      yellow:  '#fabd2f'
+      blue:    '#83a598'
+      magenta: '#d3869b'
+      cyan:    '#8ec07c'
+      white:   '#ebdbb2'
+
+colors: *dark
 
   # Indexed Colors
   #
@@ -383,7 +334,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.75
+# background_opacity: 0.75
 # background_opacity: 0.95
 
 #selection:
@@ -407,6 +358,7 @@ background_opacity: 0.75
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
   #unfocused_hollow: true
+
 
 # Live config reload (changes require restart)
 #live_config_reload: true
