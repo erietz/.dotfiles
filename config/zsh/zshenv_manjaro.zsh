@@ -8,3 +8,5 @@ export BROWSER=/usr/bin/firefox
 #export GDK_SCALE=2
 # fix huge fonts in firefox caused by previous line
 #export GDK_DPI_SCALE=0.5
+
+export PATH="$PATH:/home/ethan/.emacs.d/bin/"

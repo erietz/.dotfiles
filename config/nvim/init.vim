@@ -13,7 +13,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'mbbill/undotree'
 Plug 'chemzqm/vim-run'
-Plug 'kassio/neoterm'
 Plug 'ThePrimeagen/harpoon'
 Plug 'liuchengxu/vim-which-key'
 
@@ -39,6 +38,7 @@ Plug 'ap/vim-css-color'
 
 " My plugins
 Plug '/Users/ethan/git/vim-doconce'
+Plug '/home/ethan/git/vim-voodoo'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -58,24 +58,22 @@ call plug#end()
 " pandoc
 "let g:pandoc#syntax#conceal#use=0  " overwritted by indentline plugin
 
-set tabstop=4 softtabstop=4
-set smartindent
-set shiftwidth=4
-set expandtab smarttab
+set tabstop=4 softtabstop=4 shiftwidth=4 smartindent expandtab smarttab
 set exrc
 set guicursor=
 set number
-set relativenumber 
-set ignorecase smartcase
-set incsearch nohlsearch
-set inccommand=split
+set relativenumber
+" searching
+set ignorecase smartcase incsearch nohlsearch
+set inccommand=split " neovim only preview regexes
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 set wildmenu
 set wildmode=longest:full,full
 set mouse=i
 set nowrap
-set noswapfile
-set undodir=~/.config/nvim/undodir
+set backupdir=~/.config/nvim/.backup/
+set directory=~/.config/nvim/.swp/
+set undodir=~/.config/nvim/undodir/
 set undofile
 set spellfile=~/.config/nvim/spell/en.utf-8.add
 set termguicolors
@@ -87,13 +85,15 @@ set backspace=indent,eol,start
 " Status line
 "set laststatus=2
 "set statusline=%F
-"set statusline+=%=
+"set statusline+=%=%y
 "set statusline+=line\ %l\ of\ %L
+set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
+
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
-nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
+"nnoremap <silent> <localleader> :<c-u>WhichKey  ','<CR>
 
 let g:vimsyn_embed = 'l'
 
@@ -102,3 +102,32 @@ au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 au BufNewFile,BufFilePre,BufRead *.do,*.do.txt set filetype=doconce
 
+" Vim Wiki
+
+au FileType mdvimwiki UltiSnipsAddFiletypes vimwiki
+
+let g:vimwiki_global_ext = 0
+let g:vimwiki_list = [
+  \{'path': '~/GD_IU/library/notes/',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.mdvimwiki',
+  \ 'path_html': '~/GD_IU/library/notes/formatted/html',
+  \ 'custom_wiki2html': '$HOME/github/python/utilities/convert_vimwiki.py',},
+  \{'path': '~/GD_EWR/notes/',
+  \ 'syntax': 'markdown',
+  \ 'ext': '.mdvimwiki'}]
+
+command! Diary VimwikiDiaryIndex
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
+augroup end
+let g:vimwiki_table_mappings = 0
+"let g:vimwiki_markdown_link_ext = 1
+"
+
+"set filetype=vimwiki.markdown
+"setlocal shiftwidth=2
+"let g:vimwiki_folding='syntax'
+""let g:vimwiki_folding='expr'

@@ -2,7 +2,6 @@ alias \
     ls="ls --color=auto" \
     spotify="spotify --force-device-scale-factor=2 &> /dev/null & disown" \
     keybindings='grep "bindsym \$mod+" .config/i3/config | fzf' \
-    open='xdg-open'
 
 old_trusty_files=(
     /usr/share/fzf/key-bindings.zsh
@@ -10,3 +9,7 @@ old_trusty_files=(
     )
 
 load_configs $old_trusty_files
+
+open (){
+    xdg-open $1 &> /dev/null & disown
+}

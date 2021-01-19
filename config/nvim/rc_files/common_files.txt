@@ -3,3 +3,5 @@
 ~/GD_IU/library/notes/index.md
 ~/GD_EWR/notes/index.md
 ~/.zshenv
+~/.config/i3/config
+~/.config/alacritty/alacritty.yml

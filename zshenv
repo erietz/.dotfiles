@@ -8,6 +8,7 @@ export CLICOLOR=1
 export VISUAL="nvim"
 export EDITOR="nvim"
 export BROWSER="firefox"
+export TERMINAL="/usr/bin/alacritty"
 #export GPG_TTY=$(tty) # fix pass not prompting for password
 export FZF_DEFAULT_COMMAND='find .'
 export GEM_HOME="$HOME/.gem"
@@ -30,6 +31,16 @@ export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 #export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export HISTFILE="${ZDOTDIR}/.zsh_history"
+export SAVEHIST=1000000
+export HISTSIZE=1000000
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
+# Manpages
+export LESS_TERMCAP_md=$'\e[32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[100;37m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[34m'
 
 [[ $(uname) == "Linux" ]] && source ~/.config/zsh/zshenv_manjaro.zsh #&& echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"

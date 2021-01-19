@@ -9,14 +9,3 @@ map <leader>c :w<CR>:!pandoc % -o <c-r>%<backspace><backspace>pdf<CR><CR>
 map <leader>v :!open -a "$BROWSER" %<CR><CR>
 
 set spell
-let g:table_mode_corner='|'
-let g:markdown_folding = 1	" markdown folding
-
-setlocal tabstop=2
-setlocal softtabstop=2
-setlocal shiftwidth=2
-"setlocal textwidth=80
-setlocal smarttab
-setlocal expandtab
-set autoindent
-set fileformat=unix

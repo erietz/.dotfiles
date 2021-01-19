@@ -15,6 +15,8 @@ compinit
 setopt globdots
 _comp_options+=(globdots) 	# include hidden files
 
+setopt COMPLETE_ALIASES
+
 bindkey -v
 export KEYTIMEOUT=1
 
@@ -30,7 +32,8 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-[[ $(uname) == "Linux" ]] && bindkey -s '^p'  'fzf | xargs -r nvim^M' || bindkey -s '^p'  'fzf | xargs nvim^M'
+# breaks neoterm
+# [[ $(uname) == "Linux" ]] && bindkey -s '^p'  'fzf | xargs -r nvim^M' || bindkey -s '^p'  'fzf | xargs nvim^M'
 
 # load all source files---------------------------------------------------------
 #

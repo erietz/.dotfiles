@@ -6,8 +6,12 @@
 
 - create:
     - ~/.config
+    - ~/.config/nvim/undodir
+    - ~/.config/nvim/.swp
+    - ~/.config/nvim/.backup
 
 - link:
+    # be careful with trailing slashes "/" which indicate being inside a dir
     ~/.zshenv: zshenv
     ~/.config/:
       glob: true

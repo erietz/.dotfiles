@@ -2,10 +2,10 @@
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
 
 " Changing window splits
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <c-h> :wincmd h<CR>
+nnoremap <c-j> :wincmd j<CR>
+nnoremap <c-k> :wincmd k<CR>
+nnoremap <c-l> :wincmd l<CR>
 nnoremap <A-l> <C-w>>
 nnoremap <A-h> <C-w><
 "nnoremap <leader>f <C-w>f<C-w>L
@@ -34,8 +34,12 @@ nnoremap <leader>_ :set ri<cr>50A-<esc>51<bar>d$0:set nori<cr>
 " Open a terminal in split
 " for some reason overriding harpoon mapping
 "nnoremap <leader>t :split <bar> terminal<CR><c-w>J :resize 10<CR> 
-tnoremap <leader><Esc> <c-\><c-n>
+"tnoremap <leader><Esc> <c-\><c-n>
 tnoremap <Esc><Esc> <c-\><c-n>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 
 " Quickly edit common files-----------------------------------------------------
 "command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})
@@ -77,10 +81,6 @@ silent! exe "set <S-Right>=\<Esc>f"
 
 " Yank to clipboard
 vnoremap <leader>y "+y
-
-" Easier to save
-nnoremap ;w :update<CR>
-nnoremap <leader>s :update<CR>
 
 " delete but don't yank
 vnoremap <leader>d "_d

@@ -26,6 +26,8 @@ viman () {
 }
 
 alias \
+    ls="ls --color=auto" \
+    grep="grep --color=auto" \
     g="git"\
     sl="ls" \
     tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
@@ -33,5 +35,4 @@ alias \
     today='date +"%F"'\
     vi="$EDITOR" \
     vim="$EDITOR" \
-    grep="grep --color" \
-    e="emacs -nw"
+    e="emacs -nw" \
