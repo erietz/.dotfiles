@@ -38,7 +38,7 @@ Plug 'ap/vim-css-color'
 
 " My plugins
 Plug '/Users/ethan/git/vim-doconce'
-Plug '/home/ethan/git/vim-voodoo'
+Plug '/Users/ethan/git/vim-voodoo'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'

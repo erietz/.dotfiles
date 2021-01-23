@@ -26,7 +26,6 @@ viman () {
 }
 
 alias \
-    ls="ls --color=auto" \
     grep="grep --color=auto" \
     g="git"\
     sl="ls" \
