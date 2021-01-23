@@ -14,8 +14,8 @@ nnoremap <A-h> <C-w><
 nnoremap <leader>q gqap
 
 " Moving of code blocks
-vnoremap < <gv
-vnoremap > >gv
+"vnoremap < <gv
+"vnoremap > >gv
 
 " Resize windows----------------------------------------------------------------
 nnoremap <Left> :vertical resize +2<CR>
