@@ -28,7 +28,11 @@
 "highlight LineNr guifg=#8ec07c
 "let g:airline_theme = 'gruvbox'
 
-lua require('colorbuddy').colorscheme('voodoo')
+"let g:voodoo_variant = 'light'
+
 "lua require('colorbuddy').colorscheme('gruvbuddy')
 "colorscheme gruvbox
 "set background=dark
+
+let g:voodoo_variant = 'light'
+lua require('colorbuddy').colorscheme('voodoo')

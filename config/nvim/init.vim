@@ -15,6 +15,7 @@ Plug 'mbbill/undotree'
 Plug 'chemzqm/vim-run'
 Plug 'ThePrimeagen/harpoon'
 Plug 'liuchengxu/vim-which-key'
+Plug 'puremourning/vimspector'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -79,14 +80,8 @@ set spellfile=~/.config/nvim/spell/en.utf-8.add
 set termguicolors
 set scrolloff=8
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
 set backspace=indent,eol,start
-
-" Status line
-"set laststatus=2
-"set statusline=%F
-"set statusline+=%=%y
-"set statusline+=line\ %l\ of\ %L
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
 
 
