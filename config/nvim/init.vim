@@ -8,9 +8,11 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Useful ones
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-markdown'
 Plug 'mbbill/undotree'
 Plug 'chemzqm/vim-run'
 Plug 'ThePrimeagen/harpoon'
@@ -39,7 +41,7 @@ Plug 'ap/vim-css-color'
 
 " My plugins
 Plug '/Users/ethan/git/vim-doconce'
-Plug '/Users/ethan/git/vim-voodoo'
+Plug '/home/ethan/git/vim-voodoo'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -73,7 +75,8 @@ set wildmode=longest:full,full
 set mouse=i
 set nowrap
 set backupdir=~/.config/nvim/.backup/
-set directory=~/.config/nvim/.swp/
+set noswapfile
+"set directory=~/.config/nvim/.swp/
 set undodir=~/.config/nvim/undodir/
 set undofile
 set spellfile=~/.config/nvim/spell/en.utf-8.add
@@ -83,6 +86,7 @@ set colorcolumn=80
 "highlight ColorColumn ctermbg=0 guibg=lightgrey
 set backspace=indent,eol,start
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
+set cursorline
 
 
 let g:mapleader = "\<Space>"

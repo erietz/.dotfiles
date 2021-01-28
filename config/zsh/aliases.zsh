@@ -25,6 +25,10 @@ viman () {
     vim -c "Man $1" -c 'silent only'
 }
 
+zathura () {
+    /usr/bin/zathura $1 &> /dev/null & disown
+}
+
 alias \
     grep="grep --color=auto" \
     g="git"\

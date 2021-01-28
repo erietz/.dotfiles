@@ -4,8 +4,8 @@ read -p "Are you really really sure you want to run this script? (y/n) " respons
 
 case $response in
     y|Y|yes|Yes)
-        echo "Syncing ~/Documents/osu-rclone/ to GD_OSU/manjaro-rclone/"
-        rclone sync ~/Documents/osu-rclone/ GD_OSU:/manjaro-rclone/
+        echo "Syncing ~/Documents/GD_OSU_RCLONE/manjaro to GD_OSU/manjaro"
+        rclone sync ~/Documents/GD_OSU_RCLONE/manjaro GD_OSU:/manjaro
         ;;
     *)
         echo "Okay, I'm not doing anything then"

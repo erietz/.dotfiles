@@ -33,6 +33,16 @@ else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
 
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
@@ -61,7 +71,8 @@ let g:coc_global_extensions = [
   \'coc-markdownlint',
   \'coc-explorer',
   \'coc-highlight',
-  \'coc-pyright',
+  \'coc-vimtex',
+  \'coc-jedi',
   \'coc-html',
   \'coc-snippets',
   \'coc-json',
