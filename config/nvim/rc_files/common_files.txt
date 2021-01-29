@@ -5,3 +5,4 @@
 ~/.zshenv
 ~/.config/i3/config
 ~/.config/alacritty/alacritty.yml
+~/.config/tmux/tmux.conf

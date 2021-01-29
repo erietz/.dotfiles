@@ -15,6 +15,12 @@
             "$HOME/GD_OSU/classes/term1/"
             ]
     },
+    "old-trusty": {
+        "directories": [
+            "$HOME/Documents/GD_OSU_RCLONE/manjaro/scratch",
+            "$HOME/Documents/GD_OSU_RCLONE/manjaro/classes/term1/"
+            ]
+    },
     "elogin": {
         "directories": [
             "/N/project/carbocation",

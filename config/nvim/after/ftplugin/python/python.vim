@@ -8,3 +8,7 @@ set autoindent
 set fileformat=unix
 
 nnoremap <leader>c :w<CR>:!clear<CR>:!python3 %<CR>
+
+if !exists("current_compiler")
+  compiler python
+endif

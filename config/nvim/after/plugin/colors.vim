@@ -34,16 +34,17 @@
 
 "dark ------------------------
 "let g:voodoo_variant = 'light'
-lua require('colorbuddy').colorscheme('Set3')
+"lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('deep')
 
 "light background -----------------
-"let g:voodoo_variant = 'light'
+let g:voodoo_variant = 'light'
 "lua require('colorbuddy').colorscheme('husl')
-"lua require('colorbuddy').colorscheme('Dark2_r')
+lua require('colorbuddy').colorscheme('Dark2_r')
 "lua require('colorbuddy').colorscheme('gnuplot')
 "lua require('colorbuddy').colorscheme('brg')
 
 "low contrast --------------
 "let g:voodoo_contrast = 'soft'
 "lua require('colorbuddy').colorscheme('Pastel2')
+"lua require('colorbuddy').colorscheme('Pastel1')

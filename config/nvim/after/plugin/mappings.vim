@@ -1,3 +1,7 @@
+nnoremap <leader>mf :update<bar>make<bar>cw<CR>
+nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
+nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
+
 " Quickly reload vimrc
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
 
@@ -10,8 +14,9 @@ nnoremap <A-l> <C-w>>
 nnoremap <A-h> <C-w><
 "nnoremap <leader>f <C-w>f<C-w>L
 
-" Formatting paragraphs
-nnoremap <leader>q gqap
+" toggle quickfix
+nnoremap <leader>q :cw<CR>
+nnoremap <leader>l :lw<CR>
 
 " Moving of code blocks
 "vnoremap < <gv
@@ -84,3 +89,15 @@ vnoremap <leader>y "+y
 
 " delete but don't yank
 vnoremap <leader>d "_d
+
+" use real mans grep 
+command! -nargs=+ SoyGrep execute 'silent lgrep! <args>' | lopen
+command! -nargs=+ SoyVimGrep execute 'silent lvimgrep! <args>' | lopen
+nnoremap <leader>gg :SoyGrep 
+nnoremap <leader>vg :SoyVimGrep 
+
+" quickfix list mappings
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprev<CR>
+nnoremap ]l :lnext<CR>
+nnoremap [l :lprev<CR>
