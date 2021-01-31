@@ -73,3 +73,5 @@ cmd - l : ~/.local/ebin/moveWindowRightAndFollowFocus.sh
 
 alt - d : ~/.local/ebin/choose.zsh
 alt - v : ~/.local/ebin/vimAnywhere.sh
+
+alt + shift - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)

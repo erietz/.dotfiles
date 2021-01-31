@@ -40,8 +40,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ap/vim-css-color'
 
 " My plugins
-Plug '/Users/ethan/git/vim-doconce'
-Plug '/home/ethan/git/vim-voodoo'
+Plug $HOME . '/git/vim-doconce'
+Plug $HOME . '/git/vim-voodoo'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
