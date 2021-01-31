@@ -1,6 +1,6 @@
-nnoremap <leader>mf :update<bar>make<bar>cw<CR>
-nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
-nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
+nnoremap <leader>mf :update<bar>Make<CR>
+nnoremap <leader>mt :update<bar>Make test<CR>
+nnoremap <leader>mc :update<bar>Make clean<CR>
 
 " Quickly reload vimrc
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
