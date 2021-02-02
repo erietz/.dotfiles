@@ -1,6 +1,12 @@
-nnoremap <leader>mf :update<bar>make<bar>cw<CR>
-nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
-nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
+"nnoremap <leader>mf :update<bar>make<bar>cw<CR>
+"nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
+"nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
+nnoremap <leader>mf :update<bar>Make<CR>
+nnoremap <leader>mt :update<bar>Make test<CR>
+nnoremap <leader>mc :update<bar>Make clean<CR>
+nnoremap `<CR> :update<bar>Dispatch<CR>
+
+
 
 " Quickly reload vimrc
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
@@ -15,6 +21,7 @@ nnoremap <A-h> <C-w><
 "nnoremap <leader>f <C-w>f<C-w>L
 
 " toggle quickfix
+"nnoremap <leader>q :copen<bar>wincmd k<CR>
 nnoremap <leader>q :cw<CR>
 nnoremap <leader>l :lw<CR>
 

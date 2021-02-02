@@ -12,7 +12,8 @@
     "ethanMacMini": {
         "directories": [
             "$HOME/GD_EWR/notes",
-            "$HOME/GD_OSU/classes/term1/"
+            "$HOME/GD_OSU/manjaro/classes/term1/",
+            "$HOME/GD_OSU/manjaro/scratch/"
             ]
     },
     "old-trusty": {

@@ -7,8 +7,15 @@ setlocal expandtab
 set autoindent
 set fileformat=unix
 
-nnoremap <leader>c :w<CR>:!clear<CR>:!python3 %<CR>
+"noremap <leader>r :update<bar>!python3 %<CR>
+"
+"if !exists("current_compiler")
+"  "compiler python
+"  compiler pyunit
+"endif
+compiler pyunit
+set makeprg=python3\ %
 
-if !exists("current_compiler")
-  compiler python
-endif
+let $PYTHONUNBUFFERED=1
+let b:dispatch = './%'
+"nnoremap <leader>r :Dispatch<CR>:copen<CR>
