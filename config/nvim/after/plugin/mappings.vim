@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 "nnoremap <leader>mf :update<bar>make<bar>cw<CR>
 "nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
 "nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
@@ -7,6 +8,11 @@ nnoremap <leader>mc :update<bar>Make clean<CR>
 nnoremap `<CR> :update<bar>Dispatch<CR>
 
 
+=======
+nnoremap <leader>mf :update<bar>Make<CR>
+nnoremap <leader>mt :update<bar>Make test<CR>
+nnoremap <leader>mc :update<bar>Make clean<CR>
+>>>>>>> d883948a43c5eca45374729f9d3a39de213d4a72
 
 " Quickly reload vimrc
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
