@@ -16,11 +16,9 @@
 compiler pyunit
 set makeprg=python3\ %
 
-<<<<<<< HEAD
 let $PYTHONUNBUFFERED=1
 let b:dispatch = './%'
 "nnoremap <leader>r :Dispatch<CR>:copen<CR>
-=======
 
 " Additions to Vim's filetype plugin for Python, to set up PyUnit as
 " the 'compiler' for Python files.
@@ -36,7 +34,6 @@ let b:dispatch = './%'
 
 
 
-if !exists("current_compiler")
-  compiler python
-endif
->>>>>>> d883948a43c5eca45374729f9d3a39de213d4a72
+"if !exists("current_compiler")
+"  compiler python
+"endif
