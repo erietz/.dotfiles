@@ -9,3 +9,4 @@ map <leader>c :w<CR>:!pandoc % -o <c-r>%<backspace><backspace>pdf<CR><CR>
 map <leader>v :!open -a "$BROWSER" %<CR><CR>
 
 set spell
+set tabstop=2 softtabstop=2 shiftwidth=2 smartindent expandtab smarttab

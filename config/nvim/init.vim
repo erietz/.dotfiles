@@ -33,7 +33,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'euclidianAce/BetterLua.vim'
 Plug 'lervag/vimtex'
 Plug 'kevinoid/vim-jsonc'
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
@@ -88,7 +88,7 @@ let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
 let $RTP=split(&runtimepath, ',')[0]
 let $RC="$HOME/.config/nvim/init.vim"
-let g:vimsyn_embed = 'l'
+let g:vimsyn_embed = 'lPr'
 
 "au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
