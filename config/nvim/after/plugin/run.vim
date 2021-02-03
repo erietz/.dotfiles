@@ -1,6 +1,6 @@
 " vim-run-----------------------------------------------------------------------
-nnoremap <leader>r :Run<CR>
-vnoremap <leader>r :Run<CR>
+"nnoremap <leader>r :Run<CR>
+"vnoremap <leader>r :Run<CR>
 
 " vim-run
 let g:vim_run_command_map = {

@@ -1,35 +1,22 @@
 # grid=<rows>:<cols>:<start-x>:<start-y>:<width>:<height>
-#
-#
+
 # focus window
 alt - h : yabai -m window --focus west
 alt - j : yabai -m window --focus south
 alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
-
-## swap managed window
-#shift + alt - h : yabai -m window --swap west
-#shift + alt - j : yabai -m window --swap south
-#shift + alt - k : yabai -m window --swap north
-#shift + alt - l : yabai -m window --swap east
-
-# move managed window
+# swap managed window
 shift + alt - h : yabai -m window --swap west
 shift + alt - j : yabai -m window --swap south
 shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
-# float / unfloat window and center on screen
-#alt - t : yabai -m window --toggle float;\
-#          yabai -m window --grid 4:4:1:1:2:2
-#
-#
-# put window in center 3/5ths of screen
+# float/unfloat window in center 3/5ths of screen
 alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 1:5:1:1:3:1
 
-# put window in center 3/5ths of screen
+# float window on most of the screen
 alt - f : yabai -m window --toggle float;\
           yabai -m window --grid 1:5:0:1:5:1
 
@@ -41,7 +28,6 @@ shift + alt - x : yabai -m space --mirror x-axis
 shift + alt - y : yabai -m space --mirror y-axis
 
 alt - r : yabai -m space --rotate 90
-
 
 # Resize windows
 shift + alt - left : \
@@ -61,17 +47,56 @@ shift + alt - right : \
     yabai -m window --resize right:20:0 ; \
     yabai -m window --resize left:20:0
 
-default < alt - return : open -a /Applications/iTerm.app
 
 # send window to desktop and follow focus (workaround for SIP)
 shift + alt - 1 : ~/.local/ebin/moveWindowNumberAndFollowFocus.sh 1
 shift + alt - 2 : ~/.local/ebin/moveWindowNumberAndFollowFocus.sh 2
 shift + alt - 3 : ~/.local/ebin/moveWindowNumberAndFollowFocus.sh 3
 
+# send window to left and right desktops and follow focus
 cmd - h : ~/.local/ebin/moveWindowLeftAndFollowFocus.sh
 cmd - l : ~/.local/ebin/moveWindowRightAndFollowFocus.sh
+
+# open a terminal if not already open
+alt - return : open -a /Applications/iTerm.app
+
+# toggle between bsp and stack
+alt - s : yabai -m config layout stack
+alt - b : yabai -m config layout bsp
 
 alt - d : ~/.local/ebin/choose.zsh
 alt - v : ~/.local/ebin/vimAnywhere.sh
 
+# close window
 alt + shift - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
+
+
+# TODO: create a stack mode and shortcuts to toggle between stacks like i3
+# yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+# Resize mode-------------------------------------------------------------------
+# defines a new mode 'resize' that captures keypresses and executes a command
+:: resize @ : ~/.local/ebin/macNotify.sh "Resize mode" "Press shift + alt - r to go back to normal mode"
+#
+# from 'default' mode, activate mode 'resize'
+shift + alt - r ; resize
+#
+# from 'resize' mode, activate mode 'default'
+resize < shift + alt - r ; default
+
+resize < h : \
+    yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:-20:0
+
+resize < j : \
+    yabai -m window --resize left:-20:0 ; \
+    yabai -m window --resize right:+20:0
+
+resize < k : \
+    yabai -m window --resize left:+20:0 ; \
+    yabai -m window --resize right:-20:0
+
+
+resize < l : \
+    yabai -m window --resize right:20:0 ; \
+    yabai -m window --resize left:20:0

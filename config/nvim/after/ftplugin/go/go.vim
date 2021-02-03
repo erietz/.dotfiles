@@ -1,5 +1,5 @@
 if !exists("current_compiler")
-  compiler gcc
+  compiler go
 endif
 
 let b:dispatch = './%<'

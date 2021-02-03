@@ -33,18 +33,45 @@
 "set background=dark
 
 "dark ------------------------
+"let g:voodoo_contrast = 'hard'
 "let g:voodoo_variant = 'light'
 lua require('colorbuddy').colorscheme('Set3')
+"lua require('colorbuddy').colorscheme('Set3_r')
+"lua require('colorbuddy').colorscheme('Set2_r')
 "lua require('colorbuddy').colorscheme('deep')
+"lua require('colorbuddy').colorscheme('hls')
+"lua require('colorbuddy').colorscheme('husl')
+"lua require('colorbuddy').colorscheme('Paired')
+"lua require('colorbuddy').colorscheme('Paired_r')
+"lua require('colorbuddy').colorscheme('Spectral')
+"lua require('colorbuddy').colorscheme('Spectral_r')
+"lua require('colorbuddy').colorscheme('RdYlBu')
+"lua require('colorbuddy').colorscheme('RdYlGn')
+"lua require('colorbuddy').colorscheme('PiYG')
+"lua require('colorbuddy').colorscheme('Accent_r')
+"lua require('colorbuddy').colorscheme('spring_r')
+"lua require('colorbuddy').colorscheme('tab20c')
 
 "light background -----------------
 "let g:voodoo_variant = 'light'
+"lua require('colorbuddy').colorscheme('twilight_r')
+"lua require('colorbuddy').colorscheme('tab20b_r')
 "lua require('colorbuddy').colorscheme('husl')
 "lua require('colorbuddy').colorscheme('Dark2_r')
 "lua require('colorbuddy').colorscheme('gnuplot')
 "lua require('colorbuddy').colorscheme('brg')
+"lua require('colorbuddy').colorscheme('dark')
+"lua require('colorbuddy').colorscheme('Set1_r')
+"lua require('colorbuddy').colorscheme('plasma')
+"lua require('colorbuddy').colorscheme('prism_r')
+"lua require('colorbuddy').colorscheme('tab10')
+"lua require('colorbuddy').colorscheme('tab10_r')
 
 "low contrast --------------
 "let g:voodoo_contrast = 'soft'
 "lua require('colorbuddy').colorscheme('Pastel2')
-"lua require('colorbuddy').colorscheme('Pastel1')
+"lua require('colorbuddy').colorscheme('Pastel2_r')
+"lua require('colorbuddy').colorscheme('Pastel1_r')
+"lua require('colorbuddy').colorscheme('Set3_r')
+"lua require('colorbuddy').colorscheme('coolwarm_r')
+"lua require('colorbuddy').colorscheme('vlag_r')
