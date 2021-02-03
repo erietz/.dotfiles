@@ -13,3 +13,14 @@ autocmd FileType c nnoremap <c-c><c-c> :update<bar>:call SendTerminalCommand(0, 
 
 
 
+function GetInDelimeter()
+    let save_pos = getpos(".")
+    let last_delim = search('# In\[.*\]:', 'b')
+    call setpos('.', save_pos)
+    let next_delim = search('\(# In\[.*\]:\|\%$\)')
+    call setpos('.', save_pos)
+    let cell = nvim_buf_get_lines(0, last_delim + 1, next_delim - 1, v:false)
+    return join(cell, "\n") . "\n"
+endfunction
+
+nnoremap <leader>z :call SendTerminalCommand(0, GetInDelimeter())<CR>
