@@ -73,8 +73,7 @@ set wildmenu
 set wildmode=longest:full,full
 set mouse=i
 set nowrap
-set backup
-set backupdir=~/.config/nvim/.backup/
+set nobackup
 set noswapfile
 set undodir=~/.config/nvim/undodir/
 set undofile
