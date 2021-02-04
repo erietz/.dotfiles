@@ -1,3 +1,4 @@
+nnoremap <leader>sf :so %<CR>
 "nnoremap <leader>mf :update<bar>make<bar>cw<CR>
 "nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
 "nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
