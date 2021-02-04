@@ -6,8 +6,8 @@ nnoremap <leader>ta :call GotoBuffer(3)<CR>
 
 nnoremap <leader>tp :call GotoBuffer(0)<CR><c-\><c-n><bar>:sbuffer #<bar>:call SendTerminalCommand(0, "ipython --no-autoindent" . "\n")<CR>
 vnoremap <c-c><c-c> "zy :call SendTerminalCommand(0, @z)<CR>
-"nnoremap <c-c><c-c> :update<bar>:call SendTerminalCommand(0, "%run " . expand("%") . "\n")<CR>
-nnoremap <c-c><c-d> mz/\(# In\[.*\]:\)\\|\(\%$\)<CR>NjVnk:w! ~/.tmp_please_delete<CR>:call SendTerminalCommand(0, "%run " . "~/.tmp_please_delete" . "\n")<CR>`z
+nnoremap <c-c><c-c> :update<bar>:call SendTerminalCommand(0, "%run " . expand("%") . "\n")<CR>
+"nnoremap <c-c><c-d> mz/\(# In\[.*\]:\)\\|\(\%$\)<CR>NjVnk:w! ~/.tmp_please_delete<CR>:call SendTerminalCommand(0, "%run " . "~/.tmp_please_delete" . "\n")<CR>`z
 
 autocmd FileType c nnoremap <c-c><c-c> :update<bar>:call SendTerminalCommand(0, "gcc " . expand("%") . " && ./a.out" . "\n")<CR>
 
@@ -28,7 +28,8 @@ function GetInDelimeter()
     " return cursor to original position
     call setpos('.', save_pos)
     " cell is a list of all the lines between the delimeters
-    let cell = nvim_buf_get_lines(0, last_delim + 1, next_delim - 1, v:false)
+    "let cell = nvim_buf_get_lines(0, last_delim + 1, next_delim - 1, v:false)
+    let cell = getbufline(bufnr('%'), last_delim + 1, next_delim - 1)
     " remove all of the blank lines to not clog up the repl feed as much
     let cell = filter(cell, '!empty(v:val)')
     " if last line is indented, add a new line so the repl enters text
