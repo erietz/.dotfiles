@@ -1,13 +1,7 @@
+" Source current file
 nnoremap <leader>sf :so %<CR>
-"nnoremap <leader>mf :update<bar>make<bar>cw<CR>
-"nnoremap <leader>mt :update<bar>make test<bar>cw<CR>
-"nnoremap <leader>mc :update<bar>make clean<bar>cw<CR>
-nnoremap <leader>mf :update<bar>Make<CR>
-nnoremap <leader>mt :update<bar>Make test<CR>
-nnoremap <leader>mc :update<bar>Make clean<CR>
-nnoremap `<CR> :update<bar>Dispatch<CR>
 
-" Quickly reload vimrc
+" Source vimrc
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
 
 " Changing window splits
@@ -15,8 +9,6 @@ nnoremap <c-h> :wincmd h<CR>
 nnoremap <c-j> :wincmd j<CR>
 nnoremap <c-k> :wincmd k<CR>
 nnoremap <c-l> :wincmd l<CR>
-nnoremap <A-l> <C-w>>
-nnoremap <A-h> <C-w><
 "nnoremap <leader>f <C-w>f<C-w>L
 
 " toggle quickfix
@@ -24,9 +16,23 @@ nnoremap <A-h> <C-w><
 nnoremap <leader>q :cw<CR>
 nnoremap <leader>l :lw<CR>
 
-" Moving of code blocks
-"vnoremap < <gv
-"vnoremap > >gv
+" Yank to clipboard
+vnoremap <leader>y "+y
+
+" delete but don't yank
+vnoremap <leader>d "_d
+
+" quickfix list mappings
+nnoremap ]q :cnext<CR>
+nnoremap [q :cprev<CR>
+nnoremap ]l :lnext<CR>
+nnoremap [l :lprev<CR>
+
+" use real mans grep 
+command! -nargs=+ SoyGrep execute 'silent lgrep! <args>' | lopen
+command! -nargs=+ SoyVimGrep execute 'silent lvimgrep! <args>' | lopen
+nnoremap <leader>gg :SoyGrep 
+nnoremap <leader>vg :SoyVimGrep 
 
 " Resize windows----------------------------------------------------------------
 nnoremap <Left> :vertical resize -2<CR>
@@ -52,21 +58,6 @@ tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 
-" Quickly edit common files-----------------------------------------------------
-"command! CommonFiles call fzf#run({'source': '( cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*" ; ) ', 'sink': 'e'})
-command! CommonFiles call fzf#run({'source': 'cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*"', 'sink': 'e'})
-command! -bang ProjectFiles call fzf#vim#files(expand("%:h"), <bang>0)
-
-" emulate doom emacs
-nnoremap <leader>. :Files<CR>
-nnoremap <leader><leader> :ProjectFiles<CR>
-nnoremap <leader><CR> :CommonFiles<CR>
-
-nnoremap <c-p> :GFiles<CR>
-nnoremap <leader>b :Buffers<CR>
-nnoremap // :BLines<CR>
-nnoremap ?? :Rg<CR>
-
 " Clean up whitespace-----------------------------------------------------------
 " https://vi.stackexchange.com/questions/454/whats-the-simplest-way-to-strip-trailing-whitespace-from-all-lines-in-a-file
 fun! TrimWhitespace()
@@ -89,21 +80,3 @@ cnoremap <expr> <C-F> getcmdpos()>strlen(getcmdline())?&cedit:"\<Lt>Right>"
 " cnoremap        <M-f> <S-Right>
 silent! exe "set <S-Left>=\<Esc>b"
 silent! exe "set <S-Right>=\<Esc>f"
-
-" Yank to clipboard
-vnoremap <leader>y "+y
-
-" delete but don't yank
-vnoremap <leader>d "_d
-
-" use real mans grep 
-command! -nargs=+ SoyGrep execute 'silent lgrep! <args>' | lopen
-command! -nargs=+ SoyVimGrep execute 'silent lvimgrep! <args>' | lopen
-nnoremap <leader>gg :SoyGrep 
-nnoremap <leader>vg :SoyVimGrep 
-
-" quickfix list mappings
-nnoremap ]q :cnext<CR>
-nnoremap [q :cprev<CR>
-nnoremap ]l :lnext<CR>
-nnoremap [l :lprev<CR>
