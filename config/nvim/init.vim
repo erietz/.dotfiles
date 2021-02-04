@@ -1,14 +1,5 @@
-" File: init.vim
-" Author: Ethan Rietz
-" Description: 
-"   - Main file for neovim
-"   - This file gets sourced first
-"   - This file has been split up in the after/ directory which is in the rtp
-
 call plug#begin('~/.local/share/nvim/plugged')
 
-"Plug 'skywind3000/asynctasks.vim'
-"Plug 'skywind3000/asyncrun.vim'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
@@ -44,6 +35,7 @@ Plug 'ap/vim-css-color'
 " My plugins
 Plug $HOME . '/git/vim-doconce'
 Plug $HOME . '/git/vim-voodoo'
+Plug $HOME . '/git/vim-simple-repl'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -90,9 +82,3 @@ let g:maplocalleader = ','
 let $RTP=split(&runtimepath, ',')[0]
 let $RC="$HOME/.config/nvim/init.vim"
 let g:vimsyn_embed = 'lPr'
-
-"au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
-au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
-au BufNewFile,BufFilePre,BufRead *.do,*.do.txt set filetype=doconce
-au FileType mdvimwiki UltiSnipsAddFiletypes vimwiki

@@ -42,7 +42,7 @@ nnoremap <Down> :resize +2<CR>
 
 " Explore-----------------------------------------------------------------------
 "nnoremap <leader>pv :wincmd v<bar> :Vex <bar> :vertical resize 30<CR>
-nnoremap <leader>pv :Vex<CR>
+nnoremap <leader>pv :Lex<CR>
 
 " Adding comments until end of line---------------------------------------------
 nnoremap <leader>- :set ri<cr>80A-<esc>81<bar>d$0:set nori<cr>
