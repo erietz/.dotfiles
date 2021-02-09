@@ -9,12 +9,12 @@
 
 "noremap <leader>r :update<bar>!python3 %<CR>
 "
-"if !exists("current_compiler")
+if !exists("current_compiler")
 "  "compiler python
-"  compiler pyunit
-"endif
-compiler pyunit
-set makeprg=python3\ %
+  compiler pyunit
+endif
+"compiler pyunit
+"set makeprg=python3\ %
 
 let $PYTHONUNBUFFERED=1
 let b:dispatch = './%'

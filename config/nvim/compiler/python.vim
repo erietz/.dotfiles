@@ -6,7 +6,13 @@
 "
 " however this only gives one line of context where the error occurs
 
+if exists("current_compiler")
+  finish
+endif
 
+if (!filereadable('Makefile') && !filereadable('makefile'))
+    let current_compiler = "pyunit"
+    let &l:makeprg="python3 %"
 
 
 " here is a custom compiler

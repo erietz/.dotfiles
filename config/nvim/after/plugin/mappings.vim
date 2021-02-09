@@ -22,6 +22,8 @@ nnoremap <A-h> <C-w><
 "nnoremap <leader>q :copen<bar>wincmd k<CR>
 nnoremap <leader>q :cw<CR>
 nnoremap <leader>l :lw<CR>
+nnoremap <leader>co :copen<CR>
+nnoremap <leader>cc :cclose<CR>
 
 " Moving of code blocks
 "vnoremap < <gv

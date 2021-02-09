@@ -37,6 +37,7 @@
 "let g:voodoo_variant = 'light'
 lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('Set3_r')
+"lua require('colorbuddy').colorscheme('Set2')
 "lua require('colorbuddy').colorscheme('Set2_r')
 "lua require('colorbuddy').colorscheme('deep')
 "lua require('colorbuddy').colorscheme('hls')
@@ -63,7 +64,6 @@ lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('dark')
 "lua require('colorbuddy').colorscheme('Set1_r')
 "lua require('colorbuddy').colorscheme('plasma')
-"lua require('colorbuddy').colorscheme('prism_r')
 "lua require('colorbuddy').colorscheme('tab10')
 "lua require('colorbuddy').colorscheme('tab10_r')
 
