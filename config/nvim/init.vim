@@ -11,6 +11,7 @@ Plug 'mbbill/undotree'
 Plug 'chemzqm/vim-run'
 Plug 'ThePrimeagen/harpoon'
 Plug 'puremourning/vimspector'
+Plug 'chrisbra/unicode.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'

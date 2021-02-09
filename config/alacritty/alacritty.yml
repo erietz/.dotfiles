@@ -300,6 +300,9 @@ schemes:
     #cursor:
     #  cursor: '#B73037'
     #  text: '#21221B'
+    cursor:
+      cursor: '#fbf1c7'
+      text: '#282828'
 
     # Normal colors
     normal:
