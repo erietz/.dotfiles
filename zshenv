@@ -10,7 +10,10 @@ export EDITOR="nvim"
 export BROWSER="firefox"
 export TERMINAL="/usr/bin/alacritty"
 #export GPG_TTY=$(tty) # fix pass not prompting for password
-export FZF_DEFAULT_COMMAND='find .'
+#export FZF_DEFAULT_COMMAND='find .'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$GEM_PATH:$GEM_HOME/bin"
 
@@ -33,7 +36,6 @@ export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
 export HISTFILE="${ZDOTDIR}/.zsh_history"
 export SAVEHIST=1000000
 export HISTSIZE=1000000
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 # Manpages
 export LESS_TERMCAP_md=$'\e[32m'
