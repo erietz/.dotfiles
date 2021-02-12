@@ -9,15 +9,25 @@
 
 "noremap <leader>r :update<bar>!python3 %<CR>
 "
-if !exists("current_compiler")
+"if !exists("current_compiler")
 "  "compiler python
-  compiler pyunit
-endif
+"  compiler pyunit
+"endif
 "compiler pyunit
 "set makeprg=python3\ %
 
 let $PYTHONUNBUFFERED=1
 let b:dispatch = './%'
+
+function RunPython()
+    copen
+    wincmd p
+    AsyncRun python3 %:p
+endfunction
+
+nnoremap <leader>r :call RunPython()<CR>
+compiler python
+"set makeprg=python3\ %
 "nnoremap <leader>r :Dispatch<CR>:copen<CR>
 
 " Additions to Vim's filetype plugin for Python, to set up PyUnit as

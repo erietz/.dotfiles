@@ -33,15 +33,14 @@
 "set background=dark
 
 "dark ------------------------
-"let g:voodoo_contrast = 'hard'
-"let g:voodoo_variant = 'light'
-lua require('colorbuddy').colorscheme('Set3')
+let g:voodoo_background = 'light'
+"lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('Set3_r')
 "lua require('colorbuddy').colorscheme('Set2')
 "lua require('colorbuddy').colorscheme('Set2_r')
 "lua require('colorbuddy').colorscheme('deep')
 "lua require('colorbuddy').colorscheme('hls')
-"lua require('colorbuddy').colorscheme('husl')
+lua require('colorbuddy').colorscheme('husl')
 "lua require('colorbuddy').colorscheme('Paired')
 "lua require('colorbuddy').colorscheme('Paired_r')
 "lua require('colorbuddy').colorscheme('Spectral')
@@ -55,17 +54,7 @@ lua require('colorbuddy').colorscheme('Set3')
 
 "light background -----------------
 "let g:voodoo_variant = 'light'
-"lua require('colorbuddy').colorscheme('twilight_r')
-"lua require('colorbuddy').colorscheme('tab20b_r')
-"lua require('colorbuddy').colorscheme('husl')
-"lua require('colorbuddy').colorscheme('Dark2_r')
-"lua require('colorbuddy').colorscheme('gnuplot')
-"lua require('colorbuddy').colorscheme('brg')
 "lua require('colorbuddy').colorscheme('dark')
-"lua require('colorbuddy').colorscheme('Set1_r')
-"lua require('colorbuddy').colorscheme('plasma')
-"lua require('colorbuddy').colorscheme('tab10')
-"lua require('colorbuddy').colorscheme('tab10_r')
 
 "low contrast --------------
 "let g:voodoo_contrast = 'soft'
@@ -75,3 +64,17 @@ lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('Set3_r')
 "lua require('colorbuddy').colorscheme('coolwarm_r')
 "lua require('colorbuddy').colorscheme('vlag_r')
+"
+
+
+function ColorChange()
+    let voodoo_favs = ['Set3', 'husl', 'Pastel2']
+    let current_scheme_index = index(voodoo_favs, g:colors_name)
+    if current_scheme_index == len(voodoo_favs) - 1
+        let current_scheme_index = -1
+    endif
+    let next_scheme = voodoo_favs[current_scheme_index + 1]
+    let cmd = 'lua require(''colorbuddy'').colorscheme(''' . next_scheme . ''')'
+    execute(cmd)
+    echo cmd
+endfunction

@@ -1,5 +1,6 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'skywind3000/asyncrun.vim'
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
@@ -12,6 +13,7 @@ Plug 'chemzqm/vim-run'
 Plug 'ThePrimeagen/harpoon'
 Plug 'puremourning/vimspector'
 Plug 'chrisbra/unicode.vim'
+"Plug 'mtth/scratch.vim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -83,3 +85,27 @@ let g:maplocalleader = ','
 let $RTP=split(&runtimepath, ',')[0]
 let $RC="$HOME/.config/nvim/init.vim"
 let g:vimsyn_embed = 'lPr'
+
+function! Scratch()
+    belowright split
+    resize 30
+    noswapfile hide enew
+    setlocal buftype=nofile
+    setlocal bufhidden=hide
+    "setlocal nobuflisted
+    "lcd ~
+    file scratch
+endfunction
+
+function! s:save_and_exec() abort
+  if &filetype == 'vim'
+    :silent! write
+    :source %
+  elseif &filetype == 'lua'
+    :silent! write
+    :luafile %
+  endif
+
+  return
+endfunction
+nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
