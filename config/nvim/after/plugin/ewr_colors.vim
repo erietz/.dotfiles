@@ -34,13 +34,13 @@
 
 "dark ------------------------
 let g:voodoo_background = 'light'
-"lua require('colorbuddy').colorscheme('Set3')
+lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('Set3_r')
 "lua require('colorbuddy').colorscheme('Set2')
 "lua require('colorbuddy').colorscheme('Set2_r')
 "lua require('colorbuddy').colorscheme('deep')
 "lua require('colorbuddy').colorscheme('hls')
-lua require('colorbuddy').colorscheme('husl')
+"lua require('colorbuddy').colorscheme('husl')
 "lua require('colorbuddy').colorscheme('Paired')
 "lua require('colorbuddy').colorscheme('Paired_r')
 "lua require('colorbuddy').colorscheme('Spectral')

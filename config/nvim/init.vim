@@ -73,7 +73,7 @@ set noswapfile
 set undodir=~/.config/nvim/undodir/
 set undofile
 set spellfile=~/.config/nvim/spell/en.utf-8.add
-set termguicolors
+"set termguicolors
 set scrolloff=8
 set colorcolumn=80
 set backspace=indent,eol,start

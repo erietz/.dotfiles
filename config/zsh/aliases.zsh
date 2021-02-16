@@ -39,3 +39,4 @@ alias \
     vi="$EDITOR" \
     vim="$EDITOR" \
     e="emacs -nw" \
+    l="ls -lah" \
