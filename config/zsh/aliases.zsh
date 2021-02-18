@@ -40,3 +40,5 @@ alias \
     vim="$EDITOR" \
     e="emacs -nw" \
     l="ls -lah" \
+    c="code --reuse-window" \
+    ci="code-insiders --reuse-window" \
