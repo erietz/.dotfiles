@@ -9,12 +9,12 @@
 
 "noremap <leader>r :update<bar>!python3 %<CR>
 "
-"if !exists("current_compiler")
-"  "compiler python
-"  compiler pyunit
-"endif
-"compiler pyunit
-"set makeprg=python3\ %
+if !exists("current_compiler")
+  "compiler python
+  compiler pyunit
+endif
+compiler pyunit
+set makeprg=python3\ %
 
 let $PYTHONUNBUFFERED=1
 let b:dispatch = './%'
@@ -25,7 +25,7 @@ function RunPython()
     AsyncRun python3 %:p
 endfunction
 
-nnoremap <leader>r :call RunPython()<CR>
+nnoremap <leader>a :call RunPython()<CR>
 compiler python
 "set makeprg=python3\ %
 "nnoremap <leader>r :Dispatch<CR>:copen<CR>

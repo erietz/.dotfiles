@@ -45,4 +45,4 @@ export LESS_TERMCAP_so=$'\e[100;37m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[34m'
 
-[[ $(uname) == "Linux" ]] && source ~/.config/zsh/zshenv_manjaro.zsh #&& echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"
+[[ "$OSTYPE" != "darwin"* ]] && source ~/.config/zsh/zshenv_manjaro.zsh #&& echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"

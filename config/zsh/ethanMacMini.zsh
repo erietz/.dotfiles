@@ -6,6 +6,7 @@ export LANG="en_US.UTF-8"
 #
 # I may be permenantly joining the church of emacs!
 export PATH="$PATH:/Users/ethan/.emacs.d/bin/"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 # Created using /usr/local/anaconda3/bin/conda init zsh
 #   - Then copy the content of ~/.zshrc to here

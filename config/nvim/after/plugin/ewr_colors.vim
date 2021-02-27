@@ -31,16 +31,21 @@
 "lua require('colorbuddy').colorscheme('gruvbuddy')
 "colorscheme gruvbox
 "set background=dark
+"
+let g:lightline = {
+      \ 'colorscheme': 'Set3',
+      \ }
+
 
 "dark ------------------------
 "let g:voodoo_background = 'hard'
-"lua require('colorbuddy').colorscheme('Set3')
+lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('Set3_r')
 "lua require('colorbuddy').colorscheme('Set2')
 "lua require('colorbuddy').colorscheme('Set2_r')
 "lua require('colorbuddy').colorscheme('deep')
 "lua require('colorbuddy').colorscheme('hls')
-lua require('colorbuddy').colorscheme('husl')
+"lua require('colorbuddy').colorscheme('husl')
 "lua require('colorbuddy').colorscheme('Paired')
 "lua require('colorbuddy').colorscheme('Paired_r')
 "lua require('colorbuddy').colorscheme('Spectral')
@@ -78,3 +83,5 @@ function ColorChange()
     execute(cmd)
     echo cmd
 endfunction
+
+

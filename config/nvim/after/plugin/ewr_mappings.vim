@@ -1,3 +1,4 @@
+nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>a :AsyncRun<space>
 nnoremap <leader>x :!chmod +x %<CR>
 " Source current file
