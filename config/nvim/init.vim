@@ -41,7 +41,7 @@ Plug 'ap/vim-css-color'
 Plug $HOME . '/git/vim-doconce'
 Plug $HOME . '/git/vim-voodoo'
 Plug $HOME . '/git/vim-terminator'
-Plug $HOME . '/git/vim-run'
+"Plug $HOME . '/git/vim-run'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -166,4 +166,4 @@ nnoremap <silent> <F5> :call <SID>run_this_script(0)<cr>
 nnoremap <silent> <F6> :call <SID>run_this_script(1)<cr>
 
 nnoremap <leader>rr :RunFile <CR>
-let g:run_command = {}
+nnoremap <leader>rs :RunStop <CR>

@@ -35,7 +35,7 @@ nnoremap [l :lprev<CR>
 
 " use real mans grep 
 command! -nargs=+ SoyGrep execute 'silent lgrep! <args>' | lopen
-command! -nargs=+ SoyVimGrep execute 'silent lvimgrep! <args>' | lopen
+command! -nargs=+ SoyVimGrep execute 'silent lvimgrep! <q-args>' . '**/*' | lopen
 nnoremap <leader>gg :SoyGrep 
 nnoremap <leader>vg :SoyVimGrep 
 

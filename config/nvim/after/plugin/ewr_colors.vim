@@ -38,7 +38,7 @@ let g:lightline = {
 
 
 "dark ------------------------
-"let g:voodoo_background = 'hard'
+let g:voodoo_background = 'hard'
 lua require('colorbuddy').colorscheme('Set3')
 "lua require('colorbuddy').colorscheme('Set3_r')
 "lua require('colorbuddy').colorscheme('Set2')
