@@ -1,15 +1,17 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
 if has("nvim")
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-Plug 'radenling/vim-dispatch-neovim'
-Plug $HOME . '/git/vim-voodoo'
-Plug 'tjdevries/colorbuddy.vim'
-Plug 'tjdevries/gruvbuddy.nvim'
+  if has('nvim-0.5')
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+  endif
+  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+  Plug 'radenling/vim-dispatch-neovim'
+  Plug $HOME . '/git/vim-voodoo'
+  Plug 'tjdevries/colorbuddy.vim'
+  Plug 'tjdevries/gruvbuddy.nvim'
 endif
 
 Plug $HOME . '/git/vim-terminator'
@@ -73,7 +75,7 @@ set relativenumber
 " searching
 set ignorecase smartcase incsearch nohlsearch
 if has("nvim")
-    set inccommand=split " neovim only preview regexes
+  set inccommand=split " neovim only preview regexes
 endif
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 set wildmenu
@@ -92,8 +94,8 @@ set backspace=indent,eol,start
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
 set cursorline
 set formatoptions 
-            \ +=r " auto insert comment on next line
-            \ +=o " auto insert comment on next line after pressing o
+      \ +=r " auto insert comment on next line
+      \ +=o " auto insert comment on next line after pressing o
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
@@ -102,14 +104,14 @@ let $RC="$HOME/.config/nvim/init.vim"
 let g:vimsyn_embed = 'lPr'
 
 function! Scratch()
-    belowright split
-    resize 30
-    noswapfile hide enew
-    setlocal buftype=nofile
-    setlocal bufhidden=hide
-    "setlocal nobuflisted
-    "lcd ~
-    file scratch
+  belowright split
+  resize 30
+  noswapfile hide enew
+  setlocal buftype=nofile
+  setlocal bufhidden=hide
+  "setlocal nobuflisted
+  "lcd ~
+  file scratch
 endfunction
 
 nnoremap <leader>mf :update<bar>TerminatorSendToTerminal make<CR>
