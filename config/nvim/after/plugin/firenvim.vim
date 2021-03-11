@@ -14,7 +14,7 @@ if exists("g:started_by_firenvim")
   setlocal norelativenumber
   setlocal noruler
   setlocal noshowcmd
-  setlocal guifont=monospace:h20
+  setlocal guifont=monospace:h12
 
   "inoremap <tab> <c-n>
   "inoremap <s-tab> <c-p>

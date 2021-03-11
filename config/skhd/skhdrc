@@ -13,12 +13,20 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
 # float/unfloat window in center 3/5ths of screen
+#alt - t : yabai -m window --toggle float;\
+#          yabai -m window --grid 1:5:1:1:3:1
 alt - t : yabai -m window --toggle float;\
           yabai -m window --grid 1:5:1:1:3:1
 
 # float window on most of the screen
-alt - f : yabai -m window --toggle float;\
-          yabai -m window --grid 1:5:0:1:5:1
+#alt - f : yabai -m window --toggle float;\
+#          yabai -m window --grid 1:5:0:1:5:1
+
+alt - f : yabai -m config left_padding 750;\
+          yabai -m config right_padding 750
+
+shift + alt - f : yabai -m config left_padding 350;\
+                  yabai -m config right_padding 350
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
@@ -100,3 +108,19 @@ resize < k : \
 resize < l : \
     yabai -m window --resize right:20:0 ; \
     yabai -m window --resize left:20:0
+
+# Stacks------------------------------------------------------------------------
+# Focus window up/down in stack
+alt - n : yabai -m window --focus stack.next
+alt - p : yabai -m window --focus stack.prev
+shift + alt - n : yabai -m window --warp west 
+shift + alt - p : yabai -m window --warp east 
+
+# Add the active window  to the window or stack to the {direction}
+# Note that this only works when the active window does *not* already belong to a stack
+ctrl + alt - left  : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - down  : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - up    : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+ctrl + alt - right : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
+
+

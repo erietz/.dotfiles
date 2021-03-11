@@ -11,9 +11,9 @@ command! CommonFiles call fzf#run(fzf#wrap(
 command! -bang ProjectFiles call fzf#vim#files(expand("%:h"), <bang>0)
 
 " emulate doom emacs
-nnoremap <leader>. :Files<CR>
-nnoremap <leader><leader> :ProjectFiles<CR>
-nnoremap <leader><CR> :CommonFiles<CR>
+nnoremap <silent> <leader>. :Files<CR>
+nnoremap <silent> <leader><leader> :ProjectFiles<CR>
+nnoremap <silent> <leader><CR> :CommonFiles<CR>
 
 nnoremap <c-p> :GFiles<CR>
 nnoremap <leader>b :Buffers<CR>

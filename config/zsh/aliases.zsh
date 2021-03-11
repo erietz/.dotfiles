@@ -29,6 +29,12 @@ zathura () {
     /usr/bin/zathura $1 &> /dev/null & disown
 }
 
+gpu () {
+    pushd $1
+    git pull
+    popd
+}
+
 alias \
     grep="grep --color=auto" \
     g="git"\

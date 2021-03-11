@@ -1,16 +1,27 @@
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'skywind3000/asyncrun.vim'
+if has("nvim")
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
+Plug 'radenling/vim-dispatch-neovim'
+Plug $HOME . '/git/vim-voodoo'
+Plug 'tjdevries/colorbuddy.vim'
+Plug 'tjdevries/gruvbuddy.nvim'
+endif
+
+Plug $HOME . '/git/vim-terminator'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
-Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-markdown'
 Plug 'mbbill/undotree'
-"Plug 'chemzqm/vim-run'
-Plug 'ThePrimeagen/harpoon'
+Plug 'chemzqm/vim-run'
+"Plug 'ThePrimeagen/harpoon'
 Plug 'puremourning/vimspector'
 Plug 'chrisbra/unicode.vim'
 Plug 'itchyny/lightline.vim'
@@ -39,9 +50,7 @@ Plug 'ap/vim-css-color'
 
 " My plugins
 Plug $HOME . '/git/vim-doconce'
-Plug $HOME . '/git/vim-voodoo'
-Plug $HOME . '/git/vim-terminator'
-"Plug $HOME . '/git/vim-run'
+"Plug 'erietz/vim-terminator'
 
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
@@ -53,8 +62,6 @@ Plug 'KeitaNakamura/neodark.vim'
 Plug 'chriskempson/base16-vim'
 "Plug 'vim-airline/vim-airline'
 "Plug 'vim-airline/vim-airline-themes'
-Plug 'tjdevries/colorbuddy.vim'
-Plug 'tjdevries/gruvbuddy.nvim'
 
 call plug#end()
 
@@ -65,7 +72,9 @@ set number
 set relativenumber
 " searching
 set ignorecase smartcase incsearch nohlsearch
-set inccommand=split " neovim only preview regexes
+if has("nvim")
+    set inccommand=split " neovim only preview regexes
+endif
 set list listchars=nbsp:¬,tab:»·,trail:·,extends:>
 set wildmenu
 set wildmode=longest:full,full
@@ -76,12 +85,15 @@ set noswapfile
 set undodir=~/.config/nvim/undodir/
 set undofile
 set spellfile=~/.config/nvim/spell/en.utf-8.add
-"set termguicolors
+set termguicolors
 set scrolloff=8
 set colorcolumn=80
 set backspace=indent,eol,start
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
 set cursorline
+set formatoptions 
+            \ +=r " auto insert comment on next line
+            \ +=o " auto insert comment on next line after pressing o
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
@@ -100,70 +112,10 @@ function! Scratch()
     file scratch
 endfunction
 
-function! s:save_and_exec() abort
-  if &filetype == 'vim'
-    :silent! write
-    :source %
-  elseif &filetype == 'lua'
-    :silent! write
-    :luafile %
-  endif
+nnoremap <leader>mf :update<bar>TerminatorSendToTerminal make<CR>
+nnoremap <leader>mt :update<bar>TerminatorSendToTerminal make test<CR>
+nnoremap <leader>mc :update<bar>TerminatorSendToTerminal make clean<CR>
 
-  return
-endfunction
-nnoremap <leader><leader>x :call <SID>save_and_exec()<CR>
-
-
-" ----------------------------------------------------------------------------
-" <F5> / <F6> | Run script
-" ----------------------------------------------------------------------------
-function! s:run_this_script(output)
-  let head   = getline(1)
-  let pos    = stridx(head, '#!')
-  let file   = expand('%:p')
-  let ofile  = tempname()
-  let rdr    = " 2>&1 | tee ".ofile
-  let win    = winnr()
-  let prefix = a:output ? 'silent !' : '!'
-  " Shebang found
-  if pos != -1
-    execute prefix.strpart(head, pos + 2).' '.file.rdr
-  " Shebang not found but executable
-  elseif executable(file)
-    execute prefix.file.rdr
-  elseif &filetype == 'ruby'
-    execute prefix.'/usr/bin/env ruby '.file.rdr
-  elseif &filetype == 'tex'
-    execute prefix.'latex '.file. '; [ $? -eq 0 ] && xdvi '. expand('%:r').rdr
-  elseif &filetype == 'dot'
-    let svg = expand('%:r') . '.svg'
-    let png = expand('%:r') . '.png'
-    " librsvg >> imagemagick + ghostscript
-    execute 'silent !dot -Tsvg '.file.' -o '.svg.' && '
-          \ 'rsvg-convert -z 2 '.svg.' > '.png.' && open '.png.rdr
-  else
-    return
-  end
-  redraw!
-  if !a:output | return | endif
-
-  " Scratch buffer
-  if exists('s:vim_exec_buf') && bufexists(s:vim_exec_buf)
-    execute bufwinnr(s:vim_exec_buf).'wincmd w'
-    %d
-  else
-    silent!  bdelete [vim-exec-output]
-    silent!  vertical botright split new
-    silent!  file [vim-exec-output]
-    setlocal buftype=nofile bufhidden=wipe noswapfile
-    let      s:vim_exec_buf = winnr()
-  endif
-  execute 'silent! read' ofile
-  normal! gg"_dd
-  execute win.'wincmd w'
-endfunction
-nnoremap <silent> <F5> :call <SID>run_this_script(0)<cr>
-nnoremap <silent> <F6> :call <SID>run_this_script(1)<cr>
-
-nnoremap <leader>rr :RunFile <CR>
-nnoremap <leader>rs :RunStop <CR>
+let g:terminator_repl_delimiter_regex = '--'
+"let g:terminator_split_fraction = 0.35
+"let g:terminator_split_location = 'vertical botright'

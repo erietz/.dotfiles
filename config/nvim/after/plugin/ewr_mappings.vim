@@ -8,10 +8,10 @@ nnoremap <leader>s5 :so %<CR>
 nnoremap <silent> <leader>sv :so ~/.config/nvim/init.vim <CR>
 
 " Changing window splits
-nnoremap <c-h> :wincmd h<CR>
-nnoremap <c-j> :wincmd j<CR>
-nnoremap <c-k> :wincmd k<CR>
-nnoremap <c-l> :wincmd l<CR>
+nnoremap <silent> <c-h> :wincmd h<CR>
+nnoremap <silent> <c-j> :wincmd j<CR>
+nnoremap <silent> <c-k> :wincmd k<CR>
+nnoremap <silent> <c-l> :wincmd l<CR>
 "nnoremap <leader>f <C-w>f<C-w>L
 
 " toggle quickfix
