@@ -26,7 +26,7 @@ function RunPython()
 endfunction
 
 nnoremap <leader>a :call RunPython()<CR>
-compiler python
+"compiler python
 "set makeprg=python3\ %
 "nnoremap <leader>r :Dispatch<CR>:copen<CR>
 

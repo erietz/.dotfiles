@@ -21,7 +21,7 @@
 
 if has("nvim")
     let g:lightline = {
-          \ 'colorscheme': 'Set3',
+          \ 'colorscheme': 'Set2',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ],
           \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -30,7 +30,9 @@ if has("nvim")
           \   'gitbranch': 'FugitiveHead'
           \ },
           \ }
-    lua require('colorbuddy').colorscheme('Set3')
+    "let g:voodoo_background = 'soft'
+    let g:voodoo_variant = 'light'
+    lua require('colorbuddy').colorscheme('Set2')
 else
     "let g:lightline = { 'colorscheme': 'gruvbox' }
     colorscheme gruvbox

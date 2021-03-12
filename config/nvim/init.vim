@@ -81,3 +81,5 @@ let g:maplocalleader = ','
 let $RTP=split(&runtimepath, ',')[0]
 let $RC="$HOME/.config/nvim/init.vim"
 let g:vimsyn_embed = 'lPr'
+
+command TestCommand -nargs=+ default text here <q-args>
