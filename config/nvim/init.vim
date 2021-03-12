@@ -8,7 +8,7 @@ if has("nvim")
   endif
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   Plug 'radenling/vim-dispatch-neovim'
-  Plug $HOME . '/git/vim-voodoo'
+  Plug 'erietz/vim-voodoo'
   Plug 'tjdevries/colorbuddy.vim'
   Plug 'tjdevries/gruvbuddy.nvim'
 endif
