@@ -1,6 +1,6 @@
 "setlocal tabstop=4
-"setlocal softtabstop=4
 "setlocal shiftwidth=4
+"setlocal softtabstop=4
 ""setlocal textwidth=80
 "setlocal smarttab
 "setlocal expandtab
@@ -13,19 +13,12 @@ if !exists("current_compiler")
   "compiler python
   compiler pyunit
 endif
-compiler pyunit
+"compiler pyunit
 set makeprg=python3\ %
 
 let $PYTHONUNBUFFERED=1
 let b:dispatch = './%'
 
-function RunPython()
-    copen
-    wincmd p
-    AsyncRun python3 %:p
-endfunction
-
-nnoremap <leader>a :call RunPython()<CR>
 "compiler python
 "set makeprg=python3\ %
 "nnoremap <leader>r :Dispatch<CR>:copen<CR>

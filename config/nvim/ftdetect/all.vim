@@ -2,6 +2,7 @@
 au BufNewFile,BufFilePre,BufRead *.snippets set filetype=snippets
 au BufNewFile,BufFilePre,BufRead *.zsh,*.slurm,*.torque,*.pbs set filetype=zsh
 au BufNewFile,BufFilePre,BufRead *.do,*.do.txt set filetype=doconce
+au BufNewFile,BufFilePre,BufRead *.cls set filetype=tex
 au FileType mdvimwiki UltiSnipsAddFiletypes vimwiki
 
 " file is large from 10mb

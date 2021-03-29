@@ -7,3 +7,4 @@
 ~/.config/alacritty/alacritty.yml
 ~/.config/tmux/tmux.conf
 ~/.config/polybar/config
+~/GD_OSU/todo.md

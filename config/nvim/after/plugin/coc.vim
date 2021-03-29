@@ -75,10 +75,6 @@ nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
 " Use <leader>x for convert visual selected code to snippet
 "xmap <leader>x  <Plug>(coc-convert-snippet)
 
-" Coc-pairs
-autocmd FileType tex let b:coc_pairs = [["$", "$"]]
-autocmd FileType markdown let b:coc_pairs_disabled = ['`']
-
 " coc-exporer-------------------------------------------------------------------
 nnoremap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
@@ -93,7 +89,6 @@ let g:coc_global_extensions = [
   \'coc-html',
   \'coc-snippets',
   \'coc-json',
-  \'coc-pairs',
   \'coc-r-lsp',
   \'coc-git'
   \]

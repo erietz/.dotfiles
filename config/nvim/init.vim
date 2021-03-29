@@ -20,7 +20,6 @@ Plug 'tpope/vim-markdown'
 Plug 'mbbill/undotree'
 Plug 'puremourning/vimspector'
 Plug 'itchyny/lightline.vim'
-Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -33,20 +32,21 @@ Plug 'sheerun/vim-polyglot'
 Plug 'euclidianAce/BetterLua.vim'
 Plug 'lervag/vimtex'
 Plug 'kevinoid/vim-jsonc'
-Plug 'vimwiki/vimwiki'
+"Plug 'vimwiki/vimwiki'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ap/vim-css-color'
 " My plugins
 Plug $HOME . '/git/vim-terminator'
+"Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'erietz/vim-doconce'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
 call plug#end()
 
-set tabstop=4 softtabstop=4 shiftwidth=4 smartindent expandtab smarttab
+set tabstop=2 shiftwidth=2 expandtab smarttab
 set exrc
 set guicursor=
 set number
@@ -71,6 +71,7 @@ set scrolloff=8
 set colorcolumn=80
 set backspace=indent,eol,start
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
+set laststatus=2
 set cursorline
 set formatoptions 
       \ +=r " auto insert comment on next line
@@ -83,3 +84,6 @@ let $RC="$HOME/.config/nvim/init.vim"
 let g:vimsyn_embed = 'lPr'
 
 command TestCommand -nargs=+ default text here <q-args>
+
+nnoremap <silent> <leader>rr :TerminatorRunFileInTerminal<CR>:wincmd p<CR>i<CR>
+

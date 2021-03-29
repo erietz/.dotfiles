@@ -1,27 +1,6 @@
-" TODO: do global variables defined in this directory
-" get properly loaded? This seems not to be the case for
-
-" Weird workaround to fix git highlighting in gutter for tender theme
-"function! MyHighlights() abort
-"    hi SignColumn guibg=#282828 ctermbg=235 gui=NONE cterm=NONE
-"endfunction
-"augroup MyColors
-"    autocmd!
-"    "autocmd ColorScheme * call MyHighlights() " for all colorscheme
-"    autocmd ColorScheme tender call MyHighlights()
-"augroup END
-"colorscheme tender
-
-
-"hi Search guibg=Black
-"hi Search guifg=LightGrey
-"highlight LineNr guifg=#8ec07c
-
-"lua require('colorbuddy').colorscheme('gruvbuddy')
-
 if has("nvim")
     let g:lightline = {
-          \ 'colorscheme': 'Set2',
+          \ 'colorscheme': 'Set3',
           \ 'active': {
           \   'left': [ [ 'mode', 'paste' ],
           \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
@@ -31,10 +10,11 @@ if has("nvim")
           \ },
           \ }
     "let g:voodoo_background = 'soft'
-    let g:voodoo_variant = 'light'
-    lua require('colorbuddy').colorscheme('Set2')
+    "let g:voodoo_variant = 'light'
+    lua require('colorbuddy').colorscheme('Set3')
+    "colorscheme seoul256
 else
-    "let g:lightline = { 'colorscheme': 'gruvbox' }
+    let g:lightline = { 'colorscheme': 'gruvbox' }
     colorscheme gruvbox
     set background=dark
 endif
