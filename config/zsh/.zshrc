@@ -53,9 +53,13 @@ source_files=(
 	$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 	$ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
+	$HOME/.git-prompt.sh
 )
 
 load_configs $source_files
 
+setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[white]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
+
+#prompt='%B%{$bg[black]%}%{$fg[red]%}[%{$fg[cyan]%}%m %{$fg[white]%}%3~%{$fg[red]%}] %{$fg[magenta]%}$(git_branch)%{$reset_color%}$%b '
 # Starship prompt---------------------------------------------------------------
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"

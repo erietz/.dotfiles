@@ -12,18 +12,25 @@ DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 .DEFAULT_GOAL := help
 
-# How to build a dotfile from a dotless file
-$(HOME)/.%: %
-	ln -s $(HOME)/.ewr/$^ $@
-
-zsh: ## Install zsh and change default interactive shell to zsh
+#-------------------------------------------------------------------------------
+zsh: $(HOME)/.git-prompt.sh ## Install zsh and change default interactive shell to zsh
 	sudo apt install -y zsh
 	chsh -s $(shell which zsh)
 
-dirs: ## Create Directories in case so things can get linked there
+$(HOME)/.git-prompt.sh:
+	curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+#-------------------------------------------------------------------------------
+
+#-------------------------------------------------------------------------------
+dirs:
 	mkdir -p ~/.config ~/.local
 
 links: dirs $(DOT_FILES) ## Create symlinks for all my dotfiles
+
+# How to build a dotfile from a dotless file
+$(HOME)/.%: %
+	ln -s $(HOME)/.ewr/$^ $@
+#-------------------------------------------------------------------------------
 
 vim-plugins:
 	curl -fLo $(HOME)/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -31,6 +38,7 @@ vim-plugins:
 
 programs:
 	sudo apt install -y \
+	fzf \
 	fd-find \
 	ripgrep \
 	neovim \
@@ -38,6 +46,8 @@ programs:
 	nodejs \
 	npm \
 	yarn 
+
+everything: zsh programs vim-plugins links ## Take care of everything for fresh install
 
 help: ## Print help message
 	@echo "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\033[36m\1\\033[m:\2/' | column -c2 -t -s :)"
