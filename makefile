@@ -52,11 +52,13 @@ programs:
 	ripgrep \
 	neovim \
 	python3 \
+	python3-pip \
 	nodejs \
 	npm \
 	yarn 
 
 install: zsh programs vim-plugins links ## Take care of everything for fresh install
+	@echo "Go grab a coffee"
 
 help: ## Print help message
 	@echo "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\033[36m\1\\033[m:\2/' | column -c2 -t -s :)"
