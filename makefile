@@ -13,12 +13,23 @@ DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 .DEFAULT_GOAL := help
 
 #-------------------------------------------------------------------------------
-zsh: $(HOME)/.git-prompt.sh ## Install zsh and change default interactive shell to zsh
+ZSH_HOME := $(HOME)/.config/zsh
+
+zsh: $(HOME)/.git-prompt.sh $(ZSH_HOME)/zsh-autosuggestions $(ZSH_HOME)/zsh-syntax-highlighting $(ZSH_HOME)/zsh-completions ## Install zsh and change default interactive shell to zsh
 	sudo apt install -y zsh
-	chsh -s $(shell which zsh)
+	#chsh -s $(shell which zsh)
 
 $(HOME)/.git-prompt.sh:
 	curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+
+$(ZSH_HOME)/zsh-autosuggestions:
+	git clone https://github.com/zsh-users/zsh-autosuggestions.git $@
+
+$(ZSH_HOME)/zsh-syntax-highlighting:
+	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $@
+
+$(ZSH_HOME)/zsh-completions:
+	git clone https://github.com/zsh-users/zsh-completions.git $@
 #-------------------------------------------------------------------------------
 
 #-------------------------------------------------------------------------------
