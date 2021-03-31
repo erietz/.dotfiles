@@ -1,7 +1,7 @@
 # TODO: figure out how to implement this: ln -s $(which fdfind) ~/.local/bin/fd
 
 .DEFAULT_GOAL := help
-.PHONY: Reset Red Green Yellow help
+.PHONY: help
 Reset        := "\\033[0m"
 Red          := "\\033[31m"
 Green        := "\\033[32m"
