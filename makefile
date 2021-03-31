@@ -10,7 +10,7 @@ help: ## Print this help message
 	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
 	@echo "$(Green)                            Usage of this makefile                               $(Reset)"
 	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
-	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/:.*##/:/' | column -t -s :
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/:.*##/:,/' | column -t -s ,
 	@echo
 	@echo "For a dry run use $(Green)make -n <target>$(Reset)"
 	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
