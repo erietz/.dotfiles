@@ -14,8 +14,8 @@ else ifeq (, $(APT))
 	INSTALL := sudo apt-get install -y
 	ODDBALL_PACKAGES := fd-find python3-pip
 else ifeq (, $(BREW))
-	INSTALL := brew
-	ODDBALL_PACKAGES := fd pip3 yabai shkd
+	INSTALL := brew install
+	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd
 else
 	$(error no installer found)
 endif
