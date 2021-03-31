@@ -5,3 +5,4 @@ nnoremap <leader>mc :update<bar>TerminatorSendToTerminal make clean<CR>
 "let g:terminator_split_location = 'vertical botright'
 "let g:terminator_repl_delimiter_regex = '--'
 let g:terminator_auto_shrink_output = 1
+let g:terminator_runfile_map = { 'python': 'python3' }
