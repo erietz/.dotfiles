@@ -25,7 +25,8 @@ PACKAGES := neovim \
 	python3-pip \
 	nodejs \
 	npm \
-	yarn 
+	yarn \
+	bat
 
 DOTLESS_FILES := $(wildcard config/*)
 DOTLESS_FILES += zshenv
@@ -77,8 +78,9 @@ vim-plugins:
 	nvim +'PlugInstall --sync' +qa
 
 programs:
-	@echo "Go grab a coffee"
+	@echo "\033[36m-------Go grab a coffee----------\\033[m"
 	$(INSTALL) $(PACKAGES) $(ODDBALL_PACKAGES)
+	@echo "\033[36m-------Now get to work----------\\033[m"
 
 install: zsh programs vim-plugins links ## Take care of everything for fresh install
 
