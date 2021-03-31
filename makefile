@@ -1,6 +1,20 @@
 # TODO: figure out how to implement this: ln -s $(which fdfind) ~/.local/bin/fd
 
 .DEFAULT_GOAL := help
+.PHONY: Reset Red Green Yellow help
+Reset        := "\\033[0m"
+Red          := "\\033[31m"
+Green        := "\\033[32m"
+Yellow       := "\\033[33m"
+help: ## Print this help message
+	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
+	@echo "$(Green)                            Usage of this makefile                               $(Reset)"
+	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/:.*##/:/' | column -t -s :
+	@echo
+	@echo "For a dry run use $(Green)make -n <target>$(Reset)"
+	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
+
 
 # Find package manager and programs to install----------------------------------
 PACMAN := $(shell which pacman >/dev/null 2>&1 || (echo "Your command failed with $$?"))
@@ -38,10 +52,7 @@ DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 # ZSH related-------------------------------------------------------------------
 ZSHDOTDIR := $(HOME)/.config/zsh
 
-zsh: $(HOME)/.git-prompt.sh \
-	$(ZSHDOTDIR)/zsh-autosuggestions \
-	$(ZSHDOTDIR)/zsh-syntax-highlighting \
-	$(ZSHDOTDIR)/zsh-completions ## Install zsh and change default interactive shell to zsh
+zsh: $(HOME)/.git-prompt.sh $(ZSHDOTDIR)/zsh-autosuggestions $(ZSHDOTDIR)/zsh-syntax-highlighting $(ZSHDOTDIR)/zsh-completions  ## Install zsh and change default interactive shell to zsh 
 
 	$(INSTALL) zsh
 	chsh -s $(shell which zsh)
@@ -77,14 +88,8 @@ vim-plugins:
 	nvim +'PlugInstall --sync' +qa
 
 programs:
-	@echo "\033[36m-------Go grab a coffee---------\\033[m"
+	@echo "$(Green)-------Go grab a coffee---------$(Reset)"
 	$(INSTALL) $(PACKAGES) $(ODDBALL_PACKAGES)
-	@echo "\033[36m-------Now get to work---------\\033[m"
+	@echo "$(Green)-------Now get to work----------$(Reset)"
 
 install: zsh programs vim-plugins links ## Take care of everything for fresh install
-
-help: ## Print help message
-	@echo "$$(grep -hE '^\S+:.*##' $(MAKEFILE_LIST) | sed -e 's/:.*##\s*/:/' -e 's/^\(.\+\):\(.*\)/\\033[36m\1\\033[m:\2/' | column -c2 -t -s :)"
-	@echo
-	@echo "For a dry run use <make -n install>"
-	@echo
