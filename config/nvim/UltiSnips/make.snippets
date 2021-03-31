@@ -1,15 +1,15 @@
 snippet help "Self documenting help" b
 .DEFAULT_GOAL := help
-.PHONY: Reset Red Green Yellow help
-Reset        := "\\033[0m"
-Red          := "\\033[31m"
-Green        := "\\033[32m"
-Yellow       := "\\033[33m"
+.PHONY: help
+Reset        := "\\\\033[0m"
+Red          := "\\\\033[31m"
+Green        := "\\\\033[32m"
+Yellow       := "\\\\033[33m"
 help: ## Print this help message
 	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
 	@echo "$(Green)                            Usage of this makefile                               $(Reset)"
 	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
-	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/:.*##/:/' | column -t -s :
+	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\\\$$//' | sed -e 's/:.*##/:,/' | column -t -s ,
 	@echo
 	@echo "For a dry run use $(Green)make -n <target>$(Reset)"
 	@echo "$(Yellow)--------------------------------------------------------------------------------$(Reset)"
