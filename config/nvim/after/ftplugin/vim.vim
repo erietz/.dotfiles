@@ -1,1 +1,1 @@
-setlocal shiftwidth=2
+nnoremap <leader>rf :source %<CR>

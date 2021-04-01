@@ -40,9 +40,9 @@ function! s:show_documentation()
   endif
 endfunction
 
-nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
+"nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
+"nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
+"nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
 
 " GoTo code navigation.
 "nmap <leader>gd <Plug>(coc-definition)
