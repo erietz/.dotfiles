@@ -12,7 +12,7 @@ help: ## Print this help message
 	@echo "For a dry run use this command: make -n <target>"
 	@echo "----------------------------------------------------------------------"
 
-# Find package manager and programs to install----------------------------------
+# Find package manager (some versions of "which" print text even when not found)
 PACMAN := $(shell which pacman >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 APT := $(shell which apt-get >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$?"))
@@ -30,25 +30,25 @@ else
 	$(error no installer found)
 endif
 
-PACKAGES := neovim \
-	fzf \
-	ripgrep \
-	python3 \
-	nodejs \
-	npm \
-	yarn \
-	bat
+# All of these packages are currently required by neovim config
+# TODO: Get on native nvim lsp since coc requires so much stuff
+PACKAGES := neovim fzf ripgrep python3 nodejs npm yarn bat
 
-# Find dotfiles-----------------------------------------------------------------
+# These dirs need to exist before symlinks are created
+DIRS := $(HOME)/.config $(HOME)/.local
+
+# Manual control of which files are symlinked
+# NOTE: Another approach is to use $(shell find .) then filter out .gitignore etc.
 DOTLESS_FILES := $(wildcard config/*)
 DOTLESS_FILES += zshenv
 DOTLESS_FILES += local/ebin
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
-# ZSH related-------------------------------------------------------------------
-ZSHDOTDIR := $(HOME)/.config/zsh
+ZDOTDIR := $(HOME)/.config/zsh
+ZSHPLUGINS := zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 
-zsh: $(HOME)/.git-prompt.sh $(ZSHDOTDIR)/zsh-autosuggestions $(ZSHDOTDIR)/zsh-syntax-highlighting $(ZSHDOTDIR)/zsh-completions  ## Install zsh and change default interactive shell to zsh 
+# ZSH related-------------------------------------------------------------------
+zsh: $(HOME)/.git-prompt.sh ## Install zsh and change default interactive shell to zsh
 
 	$(INSTALL) zsh
 	chsh -s $(shell which zsh)
@@ -56,20 +56,18 @@ zsh: $(HOME)/.git-prompt.sh $(ZSHDOTDIR)/zsh-autosuggestions $(ZSHDOTDIR)/zsh-sy
 $(HOME)/.git-prompt.sh:
 	curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o $@
 
-$(ZSHDOTDIR)/zsh-autosuggestions:
-	git clone https://github.com/zsh-users/zsh-autosuggestions.git $@
-
-$(ZSHDOTDIR)/zsh-syntax-highlighting:
-	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $@
-
-$(ZSHDOTDIR)/zsh-completions:
-	git clone https://github.com/zsh-users/zsh-completions.git $@
+# TODO: would using ohmyzsh simplify things or make them worse?
+zsh-plugins: ## Install zsh plugins from zsh-users github
+	for plugin in $(ZSHPLUGINS); do \
+		[ -d $(ZDOTDIR)/$${plugin} ] || \
+		git clone https://github.com/zsh-users/$${plugin}.git $(ZDOTDIR)/$${plugin} ; \
+	done
 
 # Sybolic link related----------------------------------------------------------
-dirs:
-	mkdir -p ~/.config ~/.local
+$(DIRS):
+	mkdir -p $@
 
-links: dirs $(DOT_FILES) ## Create symlinks all dotfiles if they don't exists
+links: $(DIRS) $(DOT_FILES) ## Create symlinks all dotfiles if they don't exists
 
 # How to build a dotfile from a dotless file
 $(HOME)/.%: %
@@ -83,7 +81,7 @@ vim-plugins:
 	curl -fLo $(HOME)/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 	nvim +'PlugInstall --sync' +qa
 
-programs:
+programs: ## Installs basic packages to get functioning-------------------------
 	$(INSTALL) $(PACKAGES) $(ODDBALL_PACKAGES)
 
 install: zsh programs vim-plugins links ## Take care of everything for fresh install
