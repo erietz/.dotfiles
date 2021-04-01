@@ -58,7 +58,7 @@ source_files=(
 
 load_configs $source_files
 
-setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[white]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
+setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[blue]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
 
 #prompt='%B%{$bg[black]%}%{$fg[red]%}[%{$fg[cyan]%}%m %{$fg[white]%}%3~%{$fg[red]%}] %{$fg[magenta]%}$(git_branch)%{$reset_color%}$%b '
 # Starship prompt---------------------------------------------------------------
