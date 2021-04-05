@@ -10,7 +10,7 @@ set $term "/usr/bin/alacritty"
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 4
+default_border pixel 2
 default_floating_border normal
 
 # Hide borders
@@ -154,22 +154,22 @@ bindsym $mod+bracketleft workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-# set $ws1 1
-# set $ws2 2
-# set $ws3 3
-# set $ws4 4
-# set $ws5 5
-# set $ws6 6
-# set $ws7 7
-# set $ws8 8
-set $ws1 "1: Shell 🐚"
-set $ws2 "2: Surf 🏄"
-set $ws3 "3: 🔮"
-set $ws4 "4: 🔮"
-set $ws5 "5: 🔮"
-set $ws6 "6: 🔮"
-set $ws7 "7: 🔮"
-set $ws8 "8: Spotify 🎙"
+set $ws1 1
+set $ws2 2
+set $ws3 3
+set $ws4 4
+set $ws5 5
+set $ws6 6
+set $ws7 7
+set $ws8 8
+#set $ws1 "1: Shell 🐚"
+#set $ws2 "2: Surf 🏄"
+#set $ws3 "3: 🔮"
+#set $ws4 "4: 🔮"
+#set $ws5 "5: 🔮"
+#set $ws6 "6: 🔮"
+#set $ws7 "7: 🔮"
+#set $ws8 "8: Spotify 🎙"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -373,7 +373,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #556064 #80FFF9 #FDF6E3
+  client.focused          #556064 #BE7572 #80FFF9 #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
