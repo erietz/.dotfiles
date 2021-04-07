@@ -26,7 +26,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-markdown'
 Plug 'mbbill/undotree'
 "Plug 'puremourning/vimspector'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -47,6 +46,7 @@ Plug 'ap/vim-css-color'
 " My plugins
 Plug 'erietz/vim-terminator'
 Plug 'erietz/vim-doconce'
+Plug $HOME . '/git/vim/vim-todo'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
@@ -79,10 +79,11 @@ set colorcolumn=80
 set backspace=indent,eol,start
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
 set laststatus=2
-set cursorline
+" see :h fo-table
 set formatoptions 
       \ +=r " auto insert comment on next line
       \ +=o " auto insert comment on next line after pressing o
+      \ +=n " format numbered lists
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
@@ -158,6 +159,15 @@ fun! TrimWhitespace()
   call winrestview(l:save)
 endfun
 
+function Cheat(query)
+  let query = 'cheat.sh/' . a:query
+  execute 'split | term curl ' . query
+  execute 'resize ' . string(&lines/3)
+endfunction
+
+command! -nargs=1 CheatSh call Cheat(<q-args>)
+nnoremap <leader>h :CheatSh <C-R>=&filetype<CR>/
+
 command! TrimWhitespace call TrimWhitespace()
 " }}}
 " {{{ Colors
@@ -181,8 +191,6 @@ function EWRcolorscheme(nvim_scheme, vim_scheme)
         \ },
         \ }
   if has('nvim')
-    "let g:voodoo_background = 'soft'
-    "let g:voodoo_variant = 'light'
     let g:lightline = l:lightline_status_dict
     execute printf('colorscheme %s', l:scheme)
   else
@@ -191,6 +199,6 @@ function EWRcolorscheme(nvim_scheme, vim_scheme)
   endif
 endfunction
 
-call EWRcolorscheme('Set3', 'seoul256')
+call EWRcolorscheme('husl', 'seoul256')
 
 " }}}

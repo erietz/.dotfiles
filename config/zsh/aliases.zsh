@@ -1,5 +1,9 @@
 config_file="$HOME/.config/fuzzy/config.json"
 
+viw () {
+    nvim $(which $1)
+}
+
 b () {
     local string=""
     for i in {1..$1}
@@ -48,3 +52,4 @@ alias \
     l="ls -lah" \
     c="code --reuse-window" \
     ci="code-insiders --reuse-window" \
+    rcp="rsync --progress --verbose --recursive"

@@ -4,6 +4,7 @@
 ~/GD_EWR/notes/index.md
 ~/.zshenv
 ~/.config/i3/config
+~/.config/i3status/config
 ~/.config/alacritty/alacritty.yml
 ~/.config/tmux/tmux.conf
 ~/.config/polybar/config
