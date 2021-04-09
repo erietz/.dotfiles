@@ -26,7 +26,7 @@ BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$
 
 ifeq (, $(PACMAN))
 	INSTALL := sudo pacman -Sy
-	ODDBALL_PACKAGES := fd pip3
+	ODDBALL_PACKAGES := fd python-pip
 else ifeq (, $(APT))
 	INSTALL := sudo apt-get install -y
 	ODDBALL_PACKAGES := fd-find python3-pip
