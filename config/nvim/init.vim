@@ -50,6 +50,7 @@ Plug $HOME . '/git/vim/vim-todo'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 call plug#end()
 " }}}
 " {{{ Options
