@@ -3,7 +3,7 @@
 # systems due to another file (/etc/zprofile ?) being sourced after this
 # file.
 
-export PATH="$PATH:$HOME/.local/ebin:$HOME/.gem/bin"
+export PATH="$HOME/.local/bin:$HOME/.local/ebin:$HOME/.gem/bin:$PATH"
 export CLICOLOR=1
 export VISUAL="nvim"
 export EDITOR="nvim"
