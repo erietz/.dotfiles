@@ -52,7 +52,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ap/vim-css-color'
 " My plugins
-Plug $HOME . '/git/vim-terminator'
+Plug 'erietz/vim-terminator'
 Plug 'erietz/vim-doconce'
 Plug 'erietz/vim-todo'
 " Colorschemes
