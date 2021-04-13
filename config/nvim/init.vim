@@ -44,9 +44,9 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'ap/vim-css-color'
 " My plugins
-Plug 'erietz/vim-terminator'
+Plug $HOME . '/git/vim-terminator'
 Plug 'erietz/vim-doconce'
-Plug $HOME . '/git/vim/vim-todo'
+Plug 'erietz/vim-todo'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
@@ -55,7 +55,7 @@ call plug#end()
 " }}}
 " {{{ Options
 
-set tabstop=2 shiftwidth=2 expandtab smarttab
+set tabstop=4 shiftwidth=4 expandtab smarttab
 set guicursor=
 set number
 set relativenumber
@@ -200,6 +200,6 @@ function EWRcolorscheme(nvim_scheme, vim_scheme)
   endif
 endfunction
 
-call EWRcolorscheme('husl', 'seoul256')
+call EWRcolorscheme('Set2', 'seoul256')
 
 " }}}

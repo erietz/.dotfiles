@@ -22,7 +22,7 @@ fcd () {
 }
 
 fhist () {
-	cat ${ZDOTDIR}/.zsh_history | fzf
+    cat ${ZDOTDIR}/.zsh_history | fzf
 }
 
 viman () {

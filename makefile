@@ -39,7 +39,7 @@ endif
 
 # All of these packages are currently required by neovim config
 # TODO: Get on native nvim lsp since coc requires so much stuff
-PACKAGES := neovim fzf ripgrep python3 nodejs npm yarn bat jq
+PACKAGES := neovim fzf python3 nodejs npm yarn bat jq
 
 # }}}
 # {{{ ZSH

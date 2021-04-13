@@ -1,10 +1,6 @@
-#export PYTHONPATH="$HOME/git/ethan/modules/"
 # fixes neovim breaks over ssh???
 export LANG="en_US.UTF-8"
 
-#export PATH="$PATH:/Applications/MATLAB_R2020a.app/bin/matlab"
-#
-# I may be permenantly joining the church of emacs!
 export PATH="$PATH:/Users/ethan/.emacs.d/bin/"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
@@ -29,14 +25,7 @@ unset __conda_setup
 export NODE_PATH=$(npm root --quiet -g)
 
 # Fixes crazy problem with python environment not loading when starting tmux
-#[[ -z $TMUX ]] || conda deactivate; conda activate base
 [[ -z $TMUX ]] || conda deactivate; conda activate base
 
-ethanMacMini_files=(
-    $ZDOTDIR/.iterm2_shell_integration.zsh
-	~/.fzf.zsh
-    )
-
-load_configs $ethanMacMini_files
 
 stty discard undef # control-o does nothing on macos by default (make it work)

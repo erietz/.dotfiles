@@ -22,6 +22,12 @@
             "$HOME/Documents/GD_OSU_RCLONE/manjaro/classes/term1/"
             ]
     },
+    "optiplex": {
+        "directories": [
+            "/mnt/c/Users/ewrie",
+            "/mnt/c/Users/ewrie/Google Drive/manjaro/classes/term2/"
+        ]
+    },
     "elogin": {
         "directories": [
             "/N/project/carbocation",
