@@ -8,7 +8,7 @@ let s:windows = has('win32') || has('win64')
 " {{{ Plugins
 
 if s:windows
-    let s:plugin_dir = '~/AppData/Local/nvim/plugged'
+    let s:plugin_dir = '~/AppData/Local/nvim-data/plugged'
 else
     let s:plugin_dir = '~/.local/share/nvim/plugged'
 endif
