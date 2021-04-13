@@ -3,9 +3,17 @@
 " Date: 0 A.D.
 " Description: Filetype, plugin, and compiler settings are loaded elsewhere
 
+let s:windows = has('win32') || has('win64')
+
 " {{{ Plugins
 
-call plug#begin('~/.local/share/nvim/plugged')
+if s:windows
+    let s:plugin_dir = '~/AppData/Local/nvim/plugged'
+else
+    let s:plugin_dir = '~/.local/share/nvim/plugged'
+endif
+
+call plug#begin(s:plugin_dir)
 if has("nvim")
   if has('nvim-0.5')
     Plug 'nvim-lua/popup.nvim'
