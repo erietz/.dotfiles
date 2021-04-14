@@ -56,4 +56,4 @@ export LESS_TERMCAP_so=$'\e[100;37m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[34m'
 
-[[ "$OSTYPE" != "darwin"* ]] && source $ZDOTDIR/zshenv-old-trusy.zsh #&& echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"
+[[ "$OSTYPE" != "darwin"* ]] && source $ZDOTDIR/zshenv-old-trusty.zsh #&& echo "sourced \t ~/.config/zsh/zshenv_manjaro.zsh"

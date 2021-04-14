@@ -80,7 +80,6 @@ nnoremap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 let g:coc_global_extensions = [
-  \'coc-markdownlint',
   \'coc-explorer',
   \'coc-highlight',
   \'coc-vimtex',
