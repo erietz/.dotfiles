@@ -7,10 +7,13 @@ let s:windows = has('win32') || has('win64')
 
 " {{{ Plugins
 
+" The default plugin directories can be found with the command 
+" :echo stdpath('data')
+" however the directories below give a self contained nvim config
 if s:windows
-    let s:plugin_dir = '~/AppData/Local/nvim-data/plugged'
+    let s:plugin_dir = '~/AppData/Local/nvim/plugged'
 else
-    let s:plugin_dir = '~/.local/share/nvim/plugged'
+    let s:plugin_dir = '~/.config/nvim/plugged'
 endif
 
 call plug#begin(s:plugin_dir)
@@ -133,7 +136,7 @@ nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
 
 " native grep better than plugins
-command! -nargs=+ Grep execute 'silent lgrep! <args>' | lopen
+command! -nargs=+ -complete=file Grep execute 'silent lgrep! <args>' | lopen
 command! -nargs=+ VimGrep execute 'silent lvimgrep! <q-args>' . '**/*' | lopen
 nnoremap <leader>gg :Grep 
 nnoremap <leader>vg :VimGrep 
