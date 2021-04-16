@@ -10,10 +10,14 @@ let s:windows = has('win32') || has('win64')
 " The default plugin directories can be found with the command 
 " :echo stdpath('data')
 " however the directories below give a self contained nvim config
+
 if s:windows
-    let s:plugin_dir = '~/AppData/Local/nvim/plugged'
-else
-    let s:plugin_dir = '~/.config/nvim/plugged'
+    let s:plugin_dir = '~/AppData/Local/nvim-data/plugged'
+    if !has('nvim')
+        set runtimepath^=s:plugin_dir
+    endif
+    else
+    let s:plugin_dir = '~/.local/share/nvim/plugged'
 endif
 
 call plug#begin(s:plugin_dir)
