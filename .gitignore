@@ -11,6 +11,7 @@ config/configstore/update-notifier-npm.json
 config/ipython/profile_default/history.sqlite
 config/ipython/profile_default/db/
 config/nvim/undodir/
+config/nvim/plugged/
 config/vscode/User/globalStorage/
 config/vscode/User/syncLocalSettings.json
 config/vscode/User/workspaceStorage/

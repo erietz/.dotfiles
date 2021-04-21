@@ -24,5 +24,6 @@
         "filetypes": ["julia"]
     }
   },
-  "clangd.path": "/home/ethan/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd"
+  "clangd.path": "/home/ethan/.config/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin/clangd",
+  "jedi.executable.command": "jedi-language-server"
 }

@@ -26,7 +26,7 @@ BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$
 
 ifeq (, $(PACMAN))
 	INSTALL := sudo pacman -Sy
-	ODDBALL_PACKAGES := fd pip3
+	ODDBALL_PACKAGES := fd python-pip
 else ifeq (, $(APT))
 	INSTALL := sudo apt-get install -y
 	ODDBALL_PACKAGES := fd-find python3-pip
@@ -39,7 +39,7 @@ endif
 
 # All of these packages are currently required by neovim config
 # TODO: Get on native nvim lsp since coc requires so much stuff
-PACKAGES := neovim fzf ripgrep python3 nodejs npm yarn bat
+PACKAGES := neovim fzf python3 nodejs npm yarn bat jq
 
 # }}}
 # {{{ ZSH
@@ -84,6 +84,7 @@ DIRS := $(HOME)/.config $(HOME)/.local
 DOTLESS_FILES := $(wildcard config/*)
 DOTLESS_FILES += zshenv
 DOTLESS_FILES += local/ebin
+DOTLESS_FILES += Xmodmap
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 $(DIRS):

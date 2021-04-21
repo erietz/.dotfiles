@@ -3,9 +3,24 @@
 " Date: 0 A.D.
 " Description: Filetype, plugin, and compiler settings are loaded elsewhere
 
+let s:windows = has('win32') || has('win64')
+
 " {{{ Plugins
 
-call plug#begin('~/.local/share/nvim/plugged')
+" The default plugin directories can be found with the command 
+" :echo stdpath('data')
+" however the directories below give a self contained nvim config
+
+if s:windows
+    let s:plugin_dir = '~/AppData/Local/nvim-data/plugged'
+    if !has('nvim')
+        set runtimepath^=s:plugin_dir
+    endif
+    else
+    let s:plugin_dir = '~/.local/share/nvim/plugged'
+endif
+
+call plug#begin(s:plugin_dir)
 if has("nvim")
   if has('nvim-0.5')
     Plug 'nvim-lua/popup.nvim'
@@ -46,7 +61,7 @@ Plug 'ap/vim-css-color'
 " My plugins
 Plug 'erietz/vim-terminator'
 Plug 'erietz/vim-doconce'
-Plug $HOME . '/git/vim/vim-todo'
+Plug 'erietz/vim-todo'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'
 Plug 'morhetz/gruvbox'
@@ -55,7 +70,7 @@ call plug#end()
 " }}}
 " {{{ Options
 
-set tabstop=2 shiftwidth=2 expandtab smarttab
+set tabstop=4 shiftwidth=4 expandtab smarttab
 set guicursor=
 set number
 set relativenumber
@@ -125,7 +140,7 @@ nnoremap ]t :tabn<cr>
 nnoremap [t :tabp<cr>
 
 " native grep better than plugins
-command! -nargs=+ Grep execute 'silent lgrep! <args>' | lopen
+command! -nargs=+ -complete=file Grep execute 'silent lgrep! <args>' | lopen
 command! -nargs=+ VimGrep execute 'silent lvimgrep! <q-args>' . '**/*' | lopen
 nnoremap <leader>gg :Grep 
 nnoremap <leader>vg :VimGrep 
