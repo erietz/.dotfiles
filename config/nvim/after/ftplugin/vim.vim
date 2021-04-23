@@ -1,1 +1,1 @@
-nnoremap <leader>rf :source %<CR>
+"nnoremap <leader>rf :source %<CR>
