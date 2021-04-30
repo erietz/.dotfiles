@@ -324,7 +324,7 @@ schemes:
       cyan:    '#8dd3c7'
       white:   '#ededed'
 
-colors: *dark
+colors: *voodoo
 
   # Indexed Colors
   #

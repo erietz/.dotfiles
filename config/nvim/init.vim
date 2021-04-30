@@ -215,6 +215,6 @@ function EWRcolorscheme(nvim_scheme, vim_scheme)
   endif
 endfunction
 
-call EWRcolorscheme('Set3', 'seoul256')
+call EWRcolorscheme('Set2', 'seoul256')
 
 " }}}

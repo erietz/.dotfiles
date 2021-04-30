@@ -8,6 +8,7 @@
 "set fileformat=unix
 
 "noremap <leader>r :update<bar>!python3 %<CR>
+set foldmethod=indent
 "
 if !exists("current_compiler")
   "compiler python
