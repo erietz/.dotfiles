@@ -23,6 +23,7 @@ help: ## Print this help message
 PACMAN := $(shell which pacman >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 APT := $(shell which apt-get >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$?"))
+CHOCO := $(shell which choco >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 
 ifeq (, $(PACMAN))
 	INSTALL := sudo pacman -Sy
@@ -33,8 +34,10 @@ else ifeq (, $(APT))
 else ifeq (, $(BREW))
 	INSTALL := brew install
 	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+else ifeq (, $(CHOCO))
+	INSTALL := choco install
 else
-	$(error no installer found)
+	$(warning no installer found)
 endif
 
 # All of these packages are currently required by neovim config
