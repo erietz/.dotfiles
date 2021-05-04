@@ -3,6 +3,7 @@
 # Description: Deploy my dotfiles
 
 # TODO: figure out how to implement this: ln -s $(which fdfind) ~/.local/bin/fd
+# TODO: move all definition to top of file like a normal readable program
 
 # {{{ Help
 
@@ -88,6 +89,7 @@ DOTLESS_FILES := $(wildcard config/*)
 DOTLESS_FILES += zshenv
 DOTLESS_FILES += local/ebin
 DOTLESS_FILES += Xmodmap
+DOTLESS_FILES += bashrc bash_profile
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 $(DIRS):
