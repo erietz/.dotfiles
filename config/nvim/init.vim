@@ -2,6 +2,8 @@
 " Author: Ethan Rietz
 " Date: 0 A.D.
 " Description: Filetype, plugin, and compiler settings are loaded elsewhere
+"
+" TODO: convert this back to ~/.vimrc cuz windows is so dumb
 
 let s:windows = has('win32') || has('win64')
 
