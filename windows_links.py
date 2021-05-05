@@ -18,19 +18,19 @@ else:
 
 PATH_PAIRS = [
     {
-        'git_file': 'C:/Users/ewrie/git/.ewr/config/nvim/',
+        'git_file': 'C:/Users/ewrie/.ewr/config/nvim/',
         'win_file': 'C:/Users/ewrie/AppData/Local/nvim/',
     },
     {
-        'git_file': 'C:/Users/ewrie/git/.ewr/config/nvim/',
+        'git_file': 'C:/Users/ewrie/.ewr/config/nvim/',
         'win_file': 'C:/Users/ewrie/vimfiles/',
     },
     {
-        'git_file': 'C:/Users/ewrie/git/.ewr/config/nvim/init.vim',
+        'git_file': 'C:/Users/ewrie/.ewr/config/nvim/init.vim',
         'win_file': 'C:/Users/ewrie/_vimrc/',
     },
     {
-        'git_file': 'C:/Users/ewrie/git/.ewr/config/alacritty/',
+        'git_file': 'C:/Users/ewrie/.ewr/config/alacritty/',
         'win_file': 'C:/Users/ewrie/AppData/Roaming/alacritty/',
     },
 ]

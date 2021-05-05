@@ -3,6 +3,7 @@
 # Description: Deploy my dotfiles
 
 # TODO: figure out how to implement this: ln -s $(which fdfind) ~/.local/bin/fd
+# TODO: move all definition to top of file like a normal readable program
 
 # {{{ Help
 
@@ -23,6 +24,7 @@ help: ## Print this help message
 PACMAN := $(shell which pacman >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 APT := $(shell which apt-get >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$?"))
+CHOCO := $(shell which choco >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 
 ifeq (, $(PACMAN))
 	INSTALL := sudo pacman -Sy
@@ -33,8 +35,10 @@ else ifeq (, $(APT))
 else ifeq (, $(BREW))
 	INSTALL := brew install
 	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+else ifeq (, $(CHOCO))
+	INSTALL := choco install
 else
-	$(error no installer found)
+	$(warning no installer found)
 endif
 
 # All of these packages are currently required by neovim config
@@ -85,6 +89,7 @@ DOTLESS_FILES := $(wildcard config/*)
 DOTLESS_FILES += zshenv
 DOTLESS_FILES += local/ebin
 DOTLESS_FILES += Xmodmap
+DOTLESS_FILES += bashrc bash_profile
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 $(DIRS):
