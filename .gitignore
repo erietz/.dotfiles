@@ -16,3 +16,6 @@ config/vscode/User/globalStorage/
 config/vscode/User/syncLocalSettings.json
 config/vscode/User/workspaceStorage/
 config/nvim/.netrwhist
+vim/plugged
+vim/autoload/plug.vim
+vim/undodir

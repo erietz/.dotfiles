@@ -90,6 +90,7 @@ DOTLESS_FILES += zshenv
 DOTLESS_FILES += local/ebin
 DOTLESS_FILES += Xmodmap
 DOTLESS_FILES += bashrc bash_profile
+DOTLESS_FILES += vim
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 $(DIRS):
