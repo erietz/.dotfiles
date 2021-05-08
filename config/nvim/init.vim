@@ -116,8 +116,8 @@ nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 
 " toggle quickfix
-nnoremap <leader>q :cw<CR>
-nnoremap <leader>l :lw<CR>
+nnoremap <leader>q :copen<CR>
+nnoremap <leader>l :lopen<CR>
 nnoremap <leader>c :cclose<bar>lclose<CR>
 
 " Yank to clipboard
@@ -216,5 +216,7 @@ function EWRcolorscheme(nvim_scheme, vim_scheme)
 endfunction
 
 call EWRcolorscheme('Set2', 'seoul256')
+
+command! Light call EWRcolorscheme('solarized8_light', 'solarized8_light')
 
 " }}}

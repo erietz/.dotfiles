@@ -41,9 +41,9 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id dmenu_recency
 
 # spotlight and d-menu replacement/supplement
-bindsym $mod+space exec "rofi -show drun"
+bindsym $mod+space exec --no-startup-id "rofi -show drun"
 
-bindsym $mod+period exec "rofi -show window"
+bindsym $mod+period exec --no-startup-id "rofi -show window"
 
 # launch categorized menu
 bindsym $mod+z exec --no-startup-id morc_menu
@@ -439,7 +439,7 @@ mode "$mode_gaps_outer" {
 }
 
 # increases menu bar on macbook pro
-exec xrandr --dpi 192 
+#exec xrandr --dpi 192 
 #exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # vim: filetype=i3config
