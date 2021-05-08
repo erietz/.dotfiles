@@ -2,6 +2,8 @@
 " Author: Ethan Rietz
 " Date: 0 A.D.
 " Description: Filetype, plugin, and compiler settings are loaded elsewhere
+"
+" TODO: convert this back to ~/.vimrc cuz windows is so dumb
 
 let s:windows = has('win32') || has('win64')
 
@@ -13,9 +15,20 @@ let s:windows = has('win32') || has('win64')
 
 if s:windows
     let s:plugin_dir = '~/AppData/Local/nvim-data/plugged'
+    " TODO: how to get vanilla vim to work with plugins on all systems
     if !has('nvim')
         set runtimepath^=s:plugin_dir
     endif
+    " Change the shell to using git-bash
+    " TODO: what if I want to use nvim from powershell for some reason????
+    let &shell='bash.exe'
+    let &shellcmdflag = '-c'
+    let &shellredir = '>%s 2>&1'
+    set shellquote= shellxescape=
+    " set noshelltemp
+    set shellxquote=
+    let &shellpipe='2>&1| tee'
+    let $TMP="/tmp"
     else
     let s:plugin_dir = '~/.local/share/nvim/plugged'
 endif
