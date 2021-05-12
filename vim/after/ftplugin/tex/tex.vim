@@ -14,7 +14,7 @@ set shiftwidth=2
 set expandtab
 
 "autocmd BufNewFile,BufRead *.cls set syntax=tex
-map <leader>c :w<CR><space>:!latexmk -pdf %<CR>
+"map <leader>c :w<CR><space>:!latexmk -pdf %<CR>
 "map  :w<CR><space>:!latexmk -pdf %<CR>
 "<CR>
 
