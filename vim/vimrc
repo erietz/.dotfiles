@@ -164,15 +164,9 @@ nnoremap <Down> :resize +2<CR>
 nnoremap <leader>fv :Vex<bar>set winfixwidth<CR>
 nnoremap <leader>dv :Lex<bar>set winfixwidth<CR>
 
-<<<<<<< HEAD
 " Adding comments until end of line---------------------------------------------
 nnoremap <leader>- 80A-<esc>81<bar>d$_<cr>
 nnoremap <leader>_ 50A-<esc>51<bar>d$_<cr>
-=======
-" Adding comment section breaks------------------------------------------------
-nnoremap <leader>- 80A-<esc>80<bar>d$_
-nnoremap <leader>_ 60A-<esc>60<bar>d$_
->>>>>>> 157b950e379a2fd078cfcc04064a3fb372575f32
 
 " Terminal mappings
 tnoremap <leader><Esc> <c-\><c-n>
