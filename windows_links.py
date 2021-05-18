@@ -9,22 +9,24 @@ import sys
 import os
 from pathlib import WindowsPath
 
+HOME = WindowsPath().home()
+
 PATH_PAIRS = [
     {
-        'git_file': 'C:/Users/ewrie/.ewr/config/nvim/',
-        'win_file': 'C:/Users/ewrie/AppData/Local/nvim/',
+        'git_file': HOME / '.ewr/config/nvim/',
+        'win_file': HOME / 'AppData/Local/nvim/',
     },
     {
-        'git_file': 'C:/Users/ewrie/.ewr/vim/',
-        'win_file': 'C:/Users/ewrie/vimfiles/',
+        'git_file': HOME / '.ewr/vim/',
+        'win_file': HOME / 'vimfiles/',
     },
     {
-        'git_file': 'C:/Users/ewrie/.ewr/vim/',
-        'win_file': 'C:/Users/ewrie/.vim/',
+        'git_file': HOME / '.ewr/vim/',
+        'win_file': HOME / '.vim/',
     },
     {
-        'git_file': 'C:/Users/ewrie/.ewr/config/alacritty/',
-        'win_file': 'C:/Users/ewrie/AppData/Roaming/alacritty/',
+        'git_file': HOME / '.ewr/config/alacritty/',
+        'win_file': HOME / 'AppData/Roaming/alacritty/',
     },
 ]
 

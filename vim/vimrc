@@ -58,7 +58,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'pandoc'] }
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 " Language support
 Plug 'sheerun/vim-polyglot'
 Plug 'euclidianAce/BetterLua.vim'
