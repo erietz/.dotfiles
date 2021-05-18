@@ -3,15 +3,17 @@
 " Date: 0 A.D.
 " Description: Filetype, plugin, and compiler settings are loaded elsewhere
 
-let s:nvim = has('nvim')
-let s:windows = has('win32') || has('win64')
+let g:nvim = has('nvim')
+let g:windows = has('win32') || has('win64')
+let g:mac = has('mac')
+let g:unix = has('unix')
 
 " {{{ Plugins
 
 " The default plugin directories can be found with the command 
 " :echo stdpath('data')
 
-if s:windows
+if g:windows
   let s:plugin_dir = '~/vimfiles/plugged'
 
   " " Change the shell to using git-bash
@@ -30,7 +32,7 @@ else
 endif
 
 call plug#begin(s:plugin_dir)
-if s:nvim
+if g:nvim
   Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
   Plug 'radenling/vim-dispatch-neovim'
   Plug 'erietz/vim-voodoo'
@@ -101,11 +103,12 @@ set colorcolumn=80
 set backspace=indent,eol,start
 set statusline=%<%f\ %h%m%r%=%-10.(%y%)\ %-14.(%l,%c%V%)\ %P
 set laststatus=2
+
 " see :h fo-table
-set formatoptions 
-    \ +=r " auto insert comment on next line
-    \ +=o " auto insert comment on next line after pressing o
-    \ +=n " format numbered lists
+augroup DoNotOverrideMySettings
+  au!
+  au FileType * setlocal formatoptions+=ron formatoptions-=c
+augroup end
 
 let g:mapleader = "\<Space>"
 let g:maplocalleader = ','
@@ -161,9 +164,15 @@ nnoremap <Down> :resize +2<CR>
 nnoremap <leader>fv :Vex<bar>set winfixwidth<CR>
 nnoremap <leader>dv :Lex<bar>set winfixwidth<CR>
 
+<<<<<<< HEAD
 " Adding comments until end of line---------------------------------------------
 nnoremap <leader>- 80A-<esc>81<bar>d$_<cr>
 nnoremap <leader>_ 50A-<esc>51<bar>d$_<cr>
+=======
+" Adding comment section breaks------------------------------------------------
+nnoremap <leader>- 80A-<esc>80<bar>d$_
+nnoremap <leader>_ 60A-<esc>60<bar>d$_
+>>>>>>> 157b950e379a2fd078cfcc04064a3fb372575f32
 
 " Terminal mappings
 tnoremap <leader><Esc> <c-\><c-n>

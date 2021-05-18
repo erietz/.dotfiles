@@ -81,7 +81,6 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 
 let g:coc_global_extensions = [
   \'coc-explorer',
-  \'coc-highlight',
   \'coc-vimtex',
   \'coc-jedi',
   \'coc-clangd',
