@@ -105,14 +105,14 @@ $(HOME)/.%: %
 
 .PHONY: clean-links
 clean-links: ## Remove all symbolic links
-	for file in $(DOT_FILES); do unlink $$file; done
+	echo $(DOT_FILES) | xargs -t -n1 unlink
 # }}}
 # {{{ Vim
 
 .PHONY: vim-plugins
 vim-plugins: ## Installs all of the vim plugins
-	curl -fLo $(HOME)/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-	nvim +'PlugInstall --sync' +qa
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	vim +'PlugInstall --sync' +qa
 
 # TODO: clean-vim (how to determine where plugins are installed?)
 

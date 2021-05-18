@@ -5,7 +5,7 @@
   ca = commit -a
   br = branch
   cho = checkout
-  pom = push origin master
+  pom = push origin main
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p

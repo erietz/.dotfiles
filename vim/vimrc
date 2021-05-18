@@ -51,7 +51,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-markdown'
 Plug 'mbbill/undotree'
-"Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
@@ -121,8 +121,8 @@ nnoremap <silent> <c-h> :wincmd h<CR>
 nnoremap <silent> <c-j> :wincmd j<CR>
 nnoremap <silent> <c-k> :wincmd k<CR>
 nnoremap <silent> <c-l> :wincmd l<CR>
-nnoremap <tab>   <c-w>w
-nnoremap <S-tab> <c-w>W
+"nnoremap <tab>   <c-w>w
+"nnoremap <S-tab> <c-w>W
 
 " toggle quickfix
 nnoremap <leader>q :copen<CR>
@@ -211,3 +211,4 @@ set background=dark
 colorscheme gruvbox
 
 " }}}
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
