@@ -58,7 +58,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/goyo.vim', { 'for': ['markdown', 'pandoc'] }
 autocmd! User goyo.vim echom 'Goyo is now loaded!'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 " Language support
 Plug 'sheerun/vim-polyglot'
 Plug 'euclidianAce/BetterLua.vim'
@@ -164,9 +164,9 @@ nnoremap <Down> :resize +2<CR>
 nnoremap <leader>fv :Vex<bar>set winfixwidth<CR>
 nnoremap <leader>dv :Lex<bar>set winfixwidth<CR>
 
-" Adding comment section breaks------------------------------------------------
-nnoremap <leader>- 80A-<esc>80<bar>d$_
-nnoremap <leader>_ 60A-<esc>60<bar>d$_
+" Adding comments until end of line---------------------------------------------
+nnoremap <leader>- 80A-<esc>81<bar>d$_<cr>
+nnoremap <leader>_ 50A-<esc>51<bar>d$_<cr>
 
 " Terminal mappings
 tnoremap <leader><Esc> <c-\><c-n>
