@@ -8,7 +8,7 @@
 "set fileformat=unix
 
 "noremap <leader>r :update<bar>!python3 %<CR>
-set foldmethod=indent
+"set foldmethod=indent
 "
 if !exists("current_compiler")
   "compiler python
@@ -18,7 +18,7 @@ endif
 set makeprg=python3\ %
 
 let $PYTHONUNBUFFERED=1
-let b:dispatch = './%'
+let b:dispatch = 'make test'
 
 "compiler python
 "set makeprg=python3\ %
