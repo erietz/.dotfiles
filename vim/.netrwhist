@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/mnt/c/Users/ewrie/git/CS271/osu-cs271-project5'
+let g:netrw_dirhist_5='/mnt/c/Users/ewrie/git/CS271/osu-cs271-project5/.git'
+let g:netrw_dirhist_4='/mnt/c/Users/ewrie/git/CS271/osu-cs271-project5'
+let g:netrw_dirhist_3='/home/ethan/git/osu-cs162-s21/project-8b-erietz'
+let g:netrw_dirhist_2='/home/ethan/git/osu-cs162-s21/project-7-erietz'
+let g:netrw_dirhist_1='/home/ethan/exercises/task2'
+let g:netrw_dirhist_0='/home/ethan/exercises'
+let g:netrw_dirhist_9='/home/ethan/.ewr/vim/UltiSnips'
+let g:netrw_dirhist_8='/mnt/c/Users/ewrie/git/CS271/osu-cs271-project4'
+let g:netrw_dirhist_7='/home/ethan/.ewr/vim/after/ftplugin'
