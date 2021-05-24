@@ -1,8 +1,7 @@
 # Author: Ethan Rietz
-# Date: 04/01/2021
+# Date: 05/19/2021
 # Description: Deploy my dotfiles
 
-# TODO: figure out how to implement this: ln -s $(which fdfind) ~/.local/bin/fd
 # TODO: move all definition to top of file like a normal readable program
 
 # {{{ Help
@@ -23,18 +22,22 @@ help: ## Print this help message
 # Find package manager (some versions of "which" print text even when not found)
 PACMAN := $(shell which pacman >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 APT := $(shell which apt-get >/dev/null 2>&1 || (echo "Your command failed with $$?"))
+APK := $(shell which apk >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 CHOCO := $(shell which choco >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 
 ifeq (, $(PACMAN))
 	INSTALL := sudo pacman -Sy
-	ODDBALL_PACKAGES := fd python-pip
+	ODDBALL_PACKAGES := fd python-pip bat
 else ifeq (, $(APT))
 	INSTALL := sudo apt-get install -y
-	ODDBALL_PACKAGES := fd-find python3-pip
+	ODDBALL_PACKAGES := fd-find python3-pip bat
+else ifeq (, $(APK))
+	INSTALL := apk add
+	ODDBALL_PACKAGES :=
 else ifeq (, $(BREW))
 	INSTALL := brew install
-	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd
+	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd bat
 else ifeq (, $(CHOCO))
 	INSTALL := choco install
 else
@@ -43,7 +46,7 @@ endif
 
 # All of these packages are currently required by neovim config
 # TODO: Get on native nvim lsp since coc requires so much stuff
-PACKAGES := neovim fzf python3 nodejs npm yarn bat jq
+PACKAGES := neovim fzf python3 nodejs npm yarn jq
 
 # }}}
 # {{{ ZSH
