@@ -2,8 +2,6 @@
 # Date: 05/19/2021
 # Description: Deploy my dotfiles
 
-# TODO: move all definition to top of file like a normal readable program
-
 # {{{ Help
 
 .DEFAULT_GOAL := help
@@ -28,7 +26,7 @@ CHOCO := $(shell which choco >/dev/null 2>&1 || (echo "Your command failed with 
 
 ifeq (, $(PACMAN))
 	INSTALL := sudo pacman -Sy
-	ODDBALL_PACKAGES := fd python-pip bat
+	ODDBALL_PACKAGES := fd python-pip bat alacritty ttf-ubuntu-font-family
 else ifeq (, $(APT))
 	INSTALL := sudo apt-get install -y
 	ODDBALL_PACKAGES := fd-find python3-pip bat
@@ -127,7 +125,7 @@ programs: ## Installs basic packages to get functioning on a new computer
 	$(INSTALL) $(PACKAGES) $(ODDBALL_PACKAGES)
 
 .PHONY: install
-install: zsh programs vim-plugins links ## Take care of everything for fresh install
+install: zsh programs links vim-plugins ## Take care of everything for fresh install
 
 .PHONY: clean
 clean: clean-zsh clean-links ## Removes everything except installed packages (and vim plugins)
