@@ -1,25 +1,17 @@
+local map = vim.api.nvim_set_keymap
+local noremap = {noremap = true}
+local silent_noremap = {noremap = true, silent = true}
+
 -- Changing Window splits
-vim.api.nvim_set_keymap( 'n', '<c-h>', ':wincmd h<CR>', {
-  noremap = true,
-  silent = true
-})
-vim.api.nvim_set_keymap( 'n', '<c-j>', ':wincmd j<CR>', {
-  noremap = true,
-  silent = true
-})
-vim.api.nvim_set_keymap( 'n', '<c-k>', ':wincmd k<CR>', {
-  noremap = true,
-  silent = true
-})
-vim.api.nvim_set_keymap('n', '<c-l>', ':wincmd l<CR>', {
-  noremap = true,
-  silent = true
-})
+map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
+map('n', '<c-j>', ':wincmd j<CR>', silent_noremap)
+map('n', '<c-k>', ':wincmd k<CR>', silent_noremap)
+map('n', '<c-l>', ':wincmd l<CR>', silent_noremap)
 
 -- Toggle quickfix
-vim.api.nvim_set_keymap('n', '<leader>q', ':copen<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>l', ':lopen<CR>', {noremap = true})
-vim.api.nvim_set_keymap('n', '<leader>c', ':cclose<bar>lclose<CR>', {noremap = true})
+map('n', '<leader>q', ':copen<CR>', noremap)
+map('n', '<leader>l', ':lopen<CR>', noremap)
+map('n', '<leader>c', ':cclose<bar>lclose<CR>', noremap)
 
 --[[ TODO
 " Yank to clipboard
@@ -33,28 +25,24 @@ vnoremap <leader>p "_dP
 --]]
 
 -- Navigation
-vim.api.nvim_set_keymap('n', ']q', ':cnext<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '[q', ':cprev<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', ']l', ':lnext<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '[l', ':lprev<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', ']b', ':bnext<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '[b', ':bprev<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', ']t', ':tnext<CR>zz', {noremap = true})
-vim.api.nvim_set_keymap('n', '[t', ':tprev<CR>zz', {noremap = true})
+map('n', ']q', ':cnext<CR>zz', noremap)
+map('n', '[q', ':cprev<CR>zz', noremap)
+map('n', ']l', ':lnext<CR>zz', noremap)
+map('n', '[l', ':lprev<CR>zz', noremap)
+map('n', ']b', ':bnext<CR>zz', noremap)
+map('n', '[b', ':bprev<CR>zz', noremap)
+map('n', ']t', ':tnext<CR>zz', noremap)
+map('n', '[t', ':tprev<CR>zz', noremap)
 
 -- Resize windows
-vim.api.nvim_set_keymap('n', '<Left>', ':vertical resize -2', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Right>', ':vertical resize +2', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Up>', ':resize -2', {noremap = true})
-vim.api.nvim_set_keymap('n', '<Down>', ':resize +2', {noremap = true})
+map('n', '<Left>', ':vertical resize -2', noremap)
+map('n', '<Right>', ':vertical resize +2', noremap)
+map('n', '<Up>', ':resize -2', noremap)
+map('n', '<Down>', ':resize +2', noremap)
 
 -- View current file and current directory
-vim.api.nvim_set_keymap('n', '<leader>fv', ':Vex<bar> set winfixwidth', {
-  noremap = true
-})
-vim.api.nvim_set_keymap('n', '<leader>dv', ':Lex<bar> set winfixwidth', {
-  noremap = true
-})
+map('n', '<leader>fv', ':Vex<bar> set winfixwidth', noremap)
+map('n', '<leader>dv', ':Lex<bar> set winfixwidth', noremap)
 
 --[[ TODO
 " Adding comments until end of line---------------------------------------------
@@ -98,48 +86,22 @@ endfunction
 --]]
 
 -- Telescope
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>ff',
-  [[:lua require('telescope.builtin').find_files()<cr>]],
-  {noremap = true}
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fg',
-  [[:lua require('telescope.builtin').live_grep()<cr>]],
-  {noremap = true}
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fb',
-  [[:lua require('telescope.builtin').buffers()<cr>]],
-  {noremap = true}
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fd',
-  [[:lua require('telescope.builtin').file_browser()<cr>]],
-  {noremap = true}
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader>fh',
-  [[:lua require('telescope.builtin').help_tags()<cr>]],
-  {noremap = true}
-)
-vim.api.nvim_set_keymap(
-  'n',
-  '<leader><CR>',
+map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
+map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
+map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
+map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
+map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
+map('n', '<leader><CR>',
   [[:lua << EOF
-    require('telescope.builtin').find_files({
-      search_dirs = {
-        "/home/ethan/.config/nvim",
-        "/home/ethan/.config/i3",
-        "/home/ethan/.config/i3status",
-        "/home/ethan/.config/alacritty"
-      }
-    })
-  EOF<cr>]],
-  {noremap = true}
+require('telescope.builtin').find_files({
+  search_dirs = {
+    "/home/ethan/.config/nvim",
+    "/home/ethan/.config/i3",
+    "/home/ethan/.config/i3status",
+    "/home/ethan/.config/alacritty"
+  }
+})
+EOF
+<cr>]],
+  noremap
 )
