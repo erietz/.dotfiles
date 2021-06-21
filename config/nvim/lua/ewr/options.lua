@@ -29,7 +29,7 @@ vim.o.wrap = false  -- Don't wrap long lines
 
 vim.o.backup = false  -- No backup files
 vim.o.swapfile = false  -- No swap files
-vim.o.undodir = vim.fn.stdpath('config') .. '/undodir'
+vim.o.undodir = vim.fn.stdpath('data') .. '/undodir'
 vim.o.undofile = true
 
 vim.o.spellfile = '~/.config/nvim/spell/en.utf-8.add'

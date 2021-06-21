@@ -128,3 +128,18 @@ vim.api.nvim_set_keymap(
   [[:lua require('telescope.builtin').help_tags()<cr>]],
   {noremap = true}
 )
+vim.api.nvim_set_keymap(
+  'n',
+  '<leader><CR>',
+  [[:lua << EOF
+    require('telescope.builtin').find_files({
+      search_dirs = {
+        "/home/ethan/.config/nvim",
+        "/home/ethan/.config/i3",
+        "/home/ethan/.config/i3status",
+        "/home/ethan/.config/alacritty"
+      }
+    })
+  EOF<cr>]],
+  {noremap = true}
+)
