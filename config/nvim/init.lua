@@ -13,8 +13,8 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 require('ewr.plugins')
-require('ewr.mappings')
 require('ewr.options')
+require('ewr.mappings')
 
 require('plugin.lspconfig')
 require('plugin.telescope')
