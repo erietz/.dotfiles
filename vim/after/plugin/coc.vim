@@ -79,15 +79,14 @@ endfunction
 nnoremap <leader>e :CocCommand explorer<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
-let g:coc_global_extensions = [
-  \'coc-explorer',
-  \'coc-highlight',
-  \'coc-vimtex',
-  \'coc-jedi',
-  \'coc-clangd',
-  \'coc-html',
-  \'coc-snippets',
-  \'coc-json',
-  \'coc-r-lsp',
-  \'coc-git'
-  \]
+" let g:coc_global_extensions = [
+"   \'coc-explorer',
+"   \'coc-vimtex',
+"   \'coc-jedi',
+"   \'coc-clangd',
+"   \'coc-html',
+"   \'coc-snippets',
+"   \'coc-json',
+"   \'coc-r-lsp',
+"   \'coc-git'
+"   \]

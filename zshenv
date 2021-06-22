@@ -24,7 +24,7 @@ export TERMINAL="/usr/bin/alacritty"
 #export FZF_DEFAULT_COMMAND='find .'
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$GEM_PATH:$GEM_HOME/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"

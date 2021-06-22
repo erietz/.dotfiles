@@ -324,7 +324,7 @@ schemes:
       cyan:    '#8dd3c7'
       white:   '#ededed'
 
-colors: *dark
+colors: *voodoo
 
   # Indexed Colors
   #
@@ -632,9 +632,11 @@ key_bindings:
   - { key: End,      mods:   Shift,         action: ScrollToBottom,  mode: ~Alt }
 
 ################################################################
-  - { key: PageUp,   mods:   Shift,         action: ScrollPageUp     }
-  - { key: PageDown, mods:   Shift,         action: ScrollPageDown   }
-  - { key: Home,     mods:   Shift,         action: ScrollToTop      }
-  - { key: End,      mods:   Shift,         action: ScrollToBottom   }
-    # Fixes <c-6> for last buffer in vim
-  - { key: Key6,     mods:   Control,       chars:  "\x1e"           }
+  - { key: PageUp,   mods: Shift,   action: ScrollPageUp   }
+  - { key: PageDown, mods: Shift,   action: ScrollPageDown }
+  - { key: Home,     mods: Shift,   action: ScrollToTop    }
+  - { key: End,      mods: Shift,   action: ScrollToBottom }
+    # Fixes <c-6> for last buffer in vim on windows
+  - { key: Key6,     mods: Control, chars:  "\x1e"         }
+    # Fixes ctrl-space for tmux prefix in wsl on windows
+  - { key: Space,    mods: Control, chars:  "\x00"         }

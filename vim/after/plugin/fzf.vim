@@ -1,11 +1,15 @@
 " Fuzzy finder
 set rtp+=/usr/local/opt/fzf
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+
+"let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let g:fzf_layout = { 'down': '--40%' }
+
+
 "let $FZF_DEFAULT_OPTS='--reverse'
 
 " Quickly edit common files-----------------------------------------------------
 command! CommonFiles call fzf#run(fzf#wrap(
-    \{ 'source': 'cat ~/.config/nvim/rc_files/common_files.txt && find ~/.config/nvim/ -type f -not -path "*undodir*"',
+    \{ 'source': 'cat ~/.vim/rc_files/common_files.txt && find ~/.vim/ -type f -not -path "*undodir*" -not -path "*plugged*"',
     \ 'sink': 'e',
     \ 'options': ['--layout=reverse', '--info=inline', '--preview', '~/.local/share/nvim/plugged/fzf.vim/bin/preview.sh {}']}))
 command! -bang ProjectFiles call fzf#vim#files(expand("%:h"), <bang>0)
