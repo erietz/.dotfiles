@@ -44,7 +44,7 @@ map('n', '<Down>', ':resize +2', noremap)
 map('n', '<leader>fv', ':Vex<bar> set winfixwidth', noremap)
 map('n', '<leader>dv', ':Lex<bar> set winfixwidth', noremap)
 
---[[ TODO
+--[[ todo
 " Adding comments until end of line---------------------------------------------
 nnoremap <leader>- 80A-<esc>81<bar>d$_<cr>
 nnoremap <leader>_ 50A-<esc>51<bar>d$_<cr>
@@ -96,10 +96,10 @@ map('n', '<leader><CR>',
   [[:lua << EOF
 require('telescope.builtin').find_files({
   search_dirs = {
-    "/home/ethan/.config/nvim",
-    "/home/ethan/.config/i3",
-    "/home/ethan/.config/i3status",
-    "/home/ethan/.config/alacritty"
+    "$HOME/.config/nvim",
+    "$HOME/.config/i3",
+    "$HOME/.config/i3status",
+    "$HOME/.config/alacritty"
   }
 })
 EOF
