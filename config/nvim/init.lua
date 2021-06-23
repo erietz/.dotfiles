@@ -18,6 +18,7 @@ require('ewr.mappings')
 
 require('plugin.lspconfig')
 require('plugin.telescope')
+require('plugin.terminator')
 
 -- Fix LSP being loaded before colorscheme?
 vim.cmd([[ autocmd ColorScheme * :lua require('vim.lsp.diagnostic')._define_default_signs_and_highlights() ]])

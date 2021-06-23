@@ -14,7 +14,19 @@ return require('packer').startup(function()
     use {'erietz/vim-terminator'}
     use {'neovim/nvim-lspconfig'}
     use {'hrsh7th/nvim-compe'}
+    use {'norcalli/snippets.nvim'}
     -- Post-install/update hook with neovim command
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use {'tpope/vim-fugitive'}
+    use {'tpope/vim-commentary'}
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      },
+      config = function()
+        require('gitsigns').setup()
+      end
+    }
 end
 )

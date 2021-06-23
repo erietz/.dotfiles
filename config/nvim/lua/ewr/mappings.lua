@@ -87,6 +87,7 @@ endfunction
 
 -- Telescope
 map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
+map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
 map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
 map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
 map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
