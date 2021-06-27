@@ -94,17 +94,14 @@ map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], no
 map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
 map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
 map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
-map('n', '<leader><CR>',
-  [[:lua << EOF
-require('telescope.builtin').find_files({
-  search_dirs = {
-    "$HOME/.config/nvim",
-    "$HOME/.config/i3",
-    "$HOME/.config/i3status",
-    "$HOME/.config/alacritty"
-  }
-})
-EOF
-<cr>]],
-  noremap
-)
+map('n', '<leader><CR>', ':lua dotfiles()<cr>', noremap)
+
+function dotfiles()
+  require('telescope.builtin').find_files({
+    follow = true,
+    hidden = true,
+    search_dirs = {
+      "$HOME/.ewr/",
+    }
+  })
+end

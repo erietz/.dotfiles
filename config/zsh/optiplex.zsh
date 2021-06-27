@@ -1,5 +1,3 @@
-WINHOME=/mnt/c/Users/ewrie
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ethan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -14,4 +12,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

@@ -1,0 +1,20 @@
+snippet debugpy "vimspector debugpy" b
+{
+  "configurations": {
+    "foo": {
+      "adapter": "debugpy",
+      "configuration": {
+        "name": "foo bar baz",
+        "type": "python",
+        "request": "launch",
+        "python": "${1:/path/to/python/interpreter/to/use}",
+        "program": "${2:/path/to/main.py}",
+        //"cwd": "<working directory>",
+        //"stopOnEntry": true,
+        //"console": "externalTerminal",
+        //"debugOptions": [],
+      }
+    }
+  }
+}
+endsnippet

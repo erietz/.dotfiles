@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/ethan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -79,52 +79,68 @@ _G.packer_plugins = {
   },
   gruvbox = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-compe"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["packer.nvim"] = {
     loaded = false,
     needs_bufread = false,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/opt/packer.nvim"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/opt/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  ["snippets.nvim"] = {
-    loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+<<<<<<< HEAD
+    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+=======
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+>>>>>>> 45b91c6c887cbf30959b3080027c1e187740f52a
+  },
+  ultisnips = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/ultisnips"
   },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
+  ["vim-dispatch"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-dispatch"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
+  ["vim-polyglot"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-polyglot"
+  },
   ["vim-terminator"] = {
     loaded = true,
-    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/vim-terminator"
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-terminator"
   }
 }
 
