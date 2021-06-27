@@ -14,3 +14,5 @@
 	name = Ethan Rietz
 [credential]
 	helper = store
+[init]
+	defaultBranch = main

@@ -373,7 +373,7 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #556064 #BE7572 #80FFF9 #FDF6E3
+  client.focused          #556064 #556064 #80FFF9 #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
@@ -442,20 +442,16 @@ mode "$mode_gaps_outer" {
 }
 
 mode "$mode_gaps_ultrawide" {
-        bindsym plus  gaps right current plus 5 gaps left current plus 5
-        bindsym minus gaps right current minus 5 gaps left current minus 5
-        bindsym 0     gaps right current set 0 gaps left current set 0
+        bindsym plus  gaps right current plus  10   gaps left current plus  10
+        bindsym minus gaps right current minus 10   gaps left current minus 10
+        bindsym 0     gaps right current set   0    gaps left current set   0
+        bindsym 9     gaps right current set   600  gaps left current set   600
 
-        bindsym Shift+plus  gaps right all plus 5 gaps left all plus 5
-        bindsym Shift+minus gaps right all minus 5 gaps left all minus 5
-        bindsym Shift+0     gaps right all set 0 gaps left all set 0
+        bindsym Shift+plus  gaps right all plus  10   gaps left all plus  10
+        bindsym Shift+minus gaps right all minus 10   gaps left all minus 10
+        bindsym Shift+0     gaps right all set   0    gaps left all set   0
+        bindsym Shift+9     gaps right all set   600  gaps left all set   600
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
-# increases menu bar on macbook pro
-#exec xrandr --dpi 192 
-#exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# vim: filetype=i3config

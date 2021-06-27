@@ -1,9 +1,13 @@
 -- snippets
-require'snippets'.use_suggested_mappings()
+--require'snippets'.use_suggested_mappings()
 
 -- lspconfig setup
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.tsserver.setup{}
+require'lspconfig'.pyright.setup{
+  capabilities = capabilities
+}
+require'lspconfig'.tsserver.setup{
+  capabilities = capabilities
+}
 
 --Enable (broadcasting) snippet capability for completion
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -22,6 +26,7 @@ require'compe'.setup {
   preselect = 'enable';
   throttle_time = 80;
   source_timeout = 200;
+  resolve_timeout = 800;
   incomplete_delay = 400;
   max_abbr_width = 100;
   max_kind_width = 100;
@@ -30,9 +35,15 @@ require'compe'.setup {
 
   source = {
     path = true;
+    buffer = true;
+    calc = true;
     nvim_lsp = true;
+    nvim_lua = true;
+    --vsnip = true;
+    ultisnips = true;
   };
 }
+
 
 local t = function(str)
   return vim.api.nvim_replace_termcodes(str, true, true, true)

@@ -54,7 +54,7 @@ ZSHPLUGINS := zsh-autosuggestions zsh-syntax-highlighting zsh-completions
 ZSHPLUGIN_PATHS := $(addprefix $(ZDOTDIR)/,$(ZSHPLUGINS))
 
 .PHONY: zsh
-zsh: $(HOME)/.git-prompt.sh ## Install zsh and change default interactive shell to zsh 
+zsh: $(HOME)/.git-prompt.sh zsh-plugins ## Install zsh and change default interactive shell to zsh 
 
 	$(INSTALL) zsh
 	chsh -s $(shell which zsh)
