@@ -117,6 +117,11 @@ vim-plugins: ## Installs all of the vim plugins
 
 # TODO: clean-vim (how to determine where plugins are installed?)
 
+nvim-lsp:
+	npm install -g typescript typescript-language-server
+	npm install -g pyright 
+	npm install -g vscode-langservers-extracted
+
 # }}}
 # {{{ Meat and potatoes
 

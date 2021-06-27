@@ -75,7 +75,7 @@ _G.packer_plugins = {
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   gruvbox = {
     loaded = true,
@@ -108,7 +108,7 @@ _G.packer_plugins = {
   },
   ["snippets.nvim"] = {
     loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/snippets.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -116,11 +116,11 @@ _G.packer_plugins = {
   },
   ["vim-commentary"] = {
     loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-commentary"
+    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/vim-commentary"
   },
   ["vim-fugitive"] = {
     loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+    path = "/Users/ethan/.local/share/nvim/site/pack/packer/start/vim-fugitive"
   },
   ["vim-terminator"] = {
     loaded = true,

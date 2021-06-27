@@ -16,6 +16,15 @@ require('ewr.plugins')
 require('ewr.options')
 require('ewr.mappings')
 
+
+--[[
+strFiles = vim.fn.glob('lua/plugin/*')
+files = {}
+for file in strFiles:gmatch('[^\n]+') do
+  table.insert(files, file)
+end
+--]]
+
 require('plugin.lspconfig')
 require('plugin.telescope')
 require('plugin.terminator')

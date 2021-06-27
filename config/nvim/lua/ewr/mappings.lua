@@ -20,9 +20,11 @@ vnoremap <leader>y "+y
 " delete but don't yank
 vnoremap <leader>d "_d
 
-" paste without 
+" paste without
 vnoremap <leader>p "_dP
 --]]
+map('v', '<leader>y', '"*y', noremap)
+map('v', '<leader>d', '"_d', noremap)
 
 -- Navigation
 map('n', ']q', ':cnext<CR>zz', noremap)

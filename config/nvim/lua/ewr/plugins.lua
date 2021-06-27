@@ -3,7 +3,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use {'wbthomason/packer.nvim', opt = true}
-    use 'morhetz/gruvbox'
+    use {'morhetz/gruvbox'}
     use {
       'nvim-telescope/telescope.nvim',
       requires = {
