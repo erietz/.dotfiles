@@ -105,3 +105,10 @@ function dotfiles()
     }
   })
 end
+
+-- vim-test
+map('n', '<leader>tn', ':TestNearest<cr>', noremap)
+map('n', '<leader>ts', ':TestSuite<cr>', noremap)
+map('n', '<leader>tf', ':TestFile<cr>', noremap)
+map('n', '<leader>tl', ':TestLast<cr>', noremap)
+map('n', '<leader>tv', ':TestVisit<cr>', noremap)

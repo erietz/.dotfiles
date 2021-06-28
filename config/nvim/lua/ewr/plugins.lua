@@ -33,5 +33,7 @@ return require('packer').startup(function()
     use {'sheerun/vim-polyglot'}
     use {'norcalli/nvim-colorizer.lua'}
     use {'SirVer/ultisnips'}
+    use {'vim-test/vim-test'}
+    use {'tartansandal/vim-compiler-pytest'}
 end
 )
