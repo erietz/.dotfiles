@@ -38,6 +38,8 @@ vim.o.backspace = 'indent,eol,start'  -- Make backspace actually erase
 vim.o.statusline = '%<%f %h%m%r%=%-10.(%y%) %-14.(%l,%c%V%) %P'   -- Add filetype
 vim.o.laststatus = 2  -- Last window always has status line
 
+vim.o.foldmethod = 'marker'
+
 vim.o.termguicolors = true    -- Better colors
 vim.o.background = "dark"     -- Dark theme
 vim.cmd([[colorscheme gruvbox]])  -- TODO is there a better way to set this?

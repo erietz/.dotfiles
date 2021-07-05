@@ -35,5 +35,6 @@ return require('packer').startup(function()
     use {'SirVer/ultisnips'}
     use {'vim-test/vim-test'}
     use {'tartansandal/vim-compiler-pytest'}
+    use {'puremourning/vimspector'}
 end
 )
