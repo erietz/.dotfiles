@@ -5,7 +5,6 @@ autoload -U colors && colors
 set -o noclobber
 alias cp='cp -i'
 alias mv='mv -i'
-#alias rm='rm -i' # not sure I'm sold in this one
 
 # tab completion----------------------------------------------------------------
 autoload -U compinit

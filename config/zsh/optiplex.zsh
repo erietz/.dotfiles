@@ -12,3 +12,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+
+source /usr/share/fzf/completion.zsh
+source /usr/share/fzf/key-bindings.zsh
