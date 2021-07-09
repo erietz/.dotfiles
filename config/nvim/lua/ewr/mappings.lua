@@ -43,8 +43,8 @@ map('n', '<Up>', ':resize -2', noremap)
 map('n', '<Down>', ':resize +2', noremap)
 
 -- View current file and current directory
-map('n', '<leader>fv', ':Vex<bar> set winfixwidth', noremap)
-map('n', '<leader>dv', ':Lex<bar> set winfixwidth', noremap)
+map('n', '<leader>fv', ':Vex<bar> set winfixwidth<CR>', noremap)
+map('n', '<leader>dv', ':Lex<bar> set winfixwidth<CR>', noremap)
 
 --[[ todo
 " Adding comments until end of line---------------------------------------------

@@ -3,7 +3,6 @@
 " Date: 0 A.D.
 " Description: Filetype, plugin, and compiler settings are loaded elsewhere
 
-let g:nvim = has('nvim')
 let g:windows = has('win32') || has('win64')
 let g:mac = has('mac')
 let g:unix = has('unix')
@@ -32,19 +31,6 @@ else
 endif
 
 call plug#begin(s:plugin_dir)
-if g:nvim
-  Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
-  Plug 'radenling/vim-dispatch-neovim'
-  Plug 'erietz/vim-voodoo'
-  Plug 'tjdevries/colorbuddy.vim'
-  Plug 'tjdevries/gruvbuddy.nvim'
-  if has('nvim-0.5')
-    Plug 'nvim-lua/popup.nvim'
-    Plug 'nvim-lua/plenary.nvim'
-    Plug 'nvim-telescope/telescope.nvim'
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-  endif
-endif
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
