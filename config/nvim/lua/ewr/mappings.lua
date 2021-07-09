@@ -13,17 +13,16 @@ map('n', '<leader>q', ':copen<CR>', noremap)
 map('n', '<leader>l', ':lopen<CR>', noremap)
 map('n', '<leader>c', ':cclose<bar>lclose<CR>', noremap)
 
---[[ TODO
-" Yank to clipboard
-vnoremap <leader>y "+y
+-- Yank to clipboard
+if vim.fn.has('mac') == 1 then
+  map('v', '<leader>y', '"*y', noremap)
+  map('v', '<leader>p', '"*p', noremap)
+else
+  map('v', '<leader>y', '"+y', noremap)
+  map('v', '<leader>p', '"+p', noremap)
+end
 
-" delete but don't yank
-vnoremap <leader>d "_d
-
-" paste without
-vnoremap <leader>p "_dP
---]]
-map('v', '<leader>y', '"*y', noremap)
+-- Delete without fudging registers
 map('v', '<leader>d', '"_d', noremap)
 map('n', '<leader>d', '"_d', noremap)
 
