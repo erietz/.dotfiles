@@ -43,8 +43,8 @@ map('n', '<Up>', ':resize -2', noremap)
 map('n', '<Down>', ':resize +2', noremap)
 
 -- View current file and current directory
-map('n', '<leader>fv', ':Vex<bar> set winfixwidth<CR>', noremap)
-map('n', '<leader>dv', ':Lex<bar> set winfixwidth<CR>', noremap)
+map('n', '<leader>fv', ':NvimTreeFindFile<CR>', noremap)
+map('n', '<leader>dv', ':NvimTreeToggle<CR>', noremap)
 
 --[[ todo
 " Adding comments until end of line---------------------------------------------
@@ -87,7 +87,9 @@ function Retab()
 endfunction
 --]]
 
+--------------------------------------------------------------------------------
 -- Telescope
+--------------------------------------------------------------------------------
 map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
 map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
 map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
@@ -106,7 +108,9 @@ function dotfiles()
   })
 end
 
+--------------------------------------------------------------------------------
 -- vim-test
+--------------------------------------------------------------------------------
 map('n', '<leader>tn', ':TestNearest<cr>', noremap)
 map('n', '<leader>ts', ':TestSuite<cr>', noremap)
 map('n', '<leader>tf', ':TestFile<cr>', noremap)
