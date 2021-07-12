@@ -86,6 +86,18 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-compe"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-dap"
+  },
+  ["nvim-dap-python"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-dap-python"
+  },
+  ["nvim-dap-ui"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-dap-ui"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -149,10 +161,6 @@ _G.packer_plugins = {
   ["vim-test"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-test"
-  },
-  vimspector = {
-    loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vimspector"
   }
 }
 

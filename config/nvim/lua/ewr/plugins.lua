@@ -19,9 +19,7 @@ return require('packer').startup(function()
     use {'tpope/vim-dispatch'}
     use {
       'lewis6991/gitsigns.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim'
-      },
+      requires = {'nvim-lua/plenary.nvim'},
       config = function()
         require('gitsigns').setup()
       end
@@ -30,9 +28,15 @@ return require('packer').startup(function()
     use {'norcalli/nvim-colorizer.lua'}
     use {'vim-test/vim-test'}
     use {'tartansandal/vim-compiler-pytest'}
-    use {'puremourning/vimspector'}
     use {'kyazdani42/nvim-tree.lua',
       requires = {'kyazdani42/nvim-web-devicons'}
     }
+    use {
+    'mfussenegger/nvim-dap',
+    requires = {
+      {'rcarriga/nvim-dap-ui'},
+      {'mfussenegger/nvim-dap-python'},
+    }
+  }
 end
 )

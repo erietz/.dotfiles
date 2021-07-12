@@ -111,8 +111,23 @@ end
 --------------------------------------------------------------------------------
 -- vim-test
 --------------------------------------------------------------------------------
-map('n', '<leader>tn', ':TestNearest<cr>', noremap)
-map('n', '<leader>ts', ':TestSuite<cr>', noremap)
-map('n', '<leader>tf', ':TestFile<cr>', noremap)
-map('n', '<leader>tl', ':TestLast<cr>', noremap)
-map('n', '<leader>tv', ':TestVisit<cr>', noremap)
+map('n', '<leader>tn', ':TestNearest<CR>', noremap)
+map('n', '<leader>ts', ':TestSuite<CR>', noremap)
+map('n', '<leader>tf', ':TestFile<CR>', noremap)
+map('n', '<leader>tl', ':TestLast<CR>', noremap)
+map('n', '<leader>tv', ':TestVisit<CR>', noremap)
+
+--------------------------------------------------------------------------------
+-- nvim-dap
+--------------------------------------------------------------------------------
+map('n', '<F5>',  [[:lua require('dap').continue()<CR>]], silent_noremap)
+map('n', '<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
+map('n', '<F10>', [[:lua require('dap').step_over()<CR>]], silent_noremap)
+map('n', '<F11>', [[:lua require('dap').step_into()<CR>]], silent_noremap)
+map('n', '<F12>', [[:lua require('dap').step_out()<CR>]], silent_noremap)
+-- UI
+map('n', '<F8>', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
+-- python
+map('n', '<leader>dc', [[:lua require("dap-python").test_class()<CR>]], silent_noremap)
+map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_noremap)
+map('n', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
