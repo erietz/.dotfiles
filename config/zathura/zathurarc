@@ -14,4 +14,4 @@ map J zoom out
 map i recolor
 map p print
 set selection-clipboard clipboard
-set font "monospace normal 16"
+set font "monospace normal 12"
