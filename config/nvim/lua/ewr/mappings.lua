@@ -56,8 +56,9 @@ function print_range(start, stop, step)
   list =  '[' .. table.concat(list, ', ') .. ']'
   vim.cmd('normal a' .. list)
 end
-
-map('n', '<leader>pr', [[:lua print_range(<c-r>]], noremap)
+vim.cmd(':command -nargs=+ PrintRange :lua print_range(<f-args>)<CR>')
+--map('n', '<leader>pr', [[:lua print_range(<c-r><CR>]], noremap)
+map('n', '<leader>pr', [[:PrintRange <c-r><CR>]], noremap)
 
 --[[ todo
 " Adding comments until end of line---------------------------------------------
