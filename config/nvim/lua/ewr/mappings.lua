@@ -50,13 +50,14 @@ map('n', '<leader>dv', ':NvimTreeToggle<CR>', noremap)
 function print_range(start, stop, step)
   local step = step or 1
   local list = {}
-  for i = start, stop - 1, step do
+  for i = start, stop, step do
     table.insert(list, i)
   end
-  vim.cmd('normal! a' .. vim.inspect(list))
+  list =  '[' .. table.concat(list, ', ') .. ']'
+  vim.cmd('normal a' .. list)
 end
 
-map('n', '<leader>pr', [[:lua print_range(<c-r>)]], noremap)
+map('n', '<leader>pr', [[:lua print_range(<c-r>]], noremap)
 
 --[[ todo
 " Adding comments until end of line---------------------------------------------
