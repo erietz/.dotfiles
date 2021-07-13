@@ -69,6 +69,14 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  edge = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/edge"
+  },
+  everforest = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/everforest"
+  },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n6\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\rgitsigns\frequire\0" },
     loaded = true,
@@ -77,6 +85,10 @@ _G.packer_plugins = {
   gruvbox = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
+  ["gruvbox-material"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -126,6 +138,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  sonokai = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/sonokai"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/telescope.nvim"
@@ -154,6 +170,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-polyglot"
   },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-surround"
+  },
   ["vim-terminator"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-terminator"
@@ -161,6 +181,10 @@ _G.packer_plugins = {
   ["vim-test"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-test"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vimtex"
   }
 }
 

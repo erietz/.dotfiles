@@ -14,7 +14,14 @@
 
 export GITHUB="https://github.com/erietz"
 
-export PATH="/home/ethan/.gem/ruby/3.0.0/bin:$HOME/.local/bin:$HOME/.local/ebin:$PATH"
+PATH_SAVE="$PATH"
+PATH="$HOME/.local/bin"
+PATH+=":$HOME/.local/ebin"
+PATH+=":$HOME/.gem/ruby/3.0.0/bin"
+PATH+=":$HOME/.cargo/bin"
+PATH+=":$PATH_SAVE"
+export PATH
+
 export CLICOLOR=1 # TODO is this mac specific?
 export VISUAL="nvim"
 export EDITOR="nvim"

@@ -18,6 +18,10 @@ require'lspconfig'.clangd.setup{
   capabilities = capabilities
 }
 
+require'lspconfig'.texlab.setup{
+  capabilities = capabilities
+}
+
 function install_language_servers()
   local command = {
     'sudo',

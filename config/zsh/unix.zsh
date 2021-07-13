@@ -33,6 +33,10 @@ zathura () {
     /usr/bin/zathura $1 &> /dev/null & disown
 }
 
+okular () {
+    /usr/bin/okular $1 &> /dev/null & disown
+}
+
 gpu () {
     pushd $1
     git pull

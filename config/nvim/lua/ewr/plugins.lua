@@ -1,6 +1,7 @@
 return require('packer').startup(function()
+    -- packer can manage itself
     use {'wbthomason/packer.nvim'}
-    use {'gruvbox-community/gruvbox'}
+    -- managing files
     use {
       'nvim-telescope/telescope.nvim',
       requires = {
@@ -8,15 +9,24 @@ return require('packer').startup(function()
         {'nvim-lua/plenary.nvim'}
       }
     }
+    use {'kyazdani42/nvim-tree.lua',
+      requires = {'kyazdani42/nvim-web-devicons'}
+    }
+    -- code running
     use {'erietz/vim-terminator'}
+    -- language support
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'neovim/nvim-lspconfig'}
+    use {'sheerun/vim-polyglot'}
+    use {'lervag/vimtex'}
+    -- autocomplete
     use {'hrsh7th/nvim-compe'}
     use {'SirVer/ultisnips'}
-    -- Post-install/update hook with neovim command
-    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
-    use {'tpope/vim-fugitive'}
+    -- text editing
     use {'tpope/vim-commentary'}
-    use {'tpope/vim-dispatch'}
+    use {'tpope/vim-surround'}
+    -- git
+    use {'tpope/vim-fugitive'}
     use {
       'lewis6991/gitsigns.nvim',
       requires = {'nvim-lua/plenary.nvim'},
@@ -24,19 +34,24 @@ return require('packer').startup(function()
         require('gitsigns').setup()
       end
     }
-    use {'sheerun/vim-polyglot'}
-    use {'norcalli/nvim-colorizer.lua'}
+    -- unit testing
+    use {'tpope/vim-dispatch'}
     use {'vim-test/vim-test'}
     use {'tartansandal/vim-compiler-pytest'}
-    use {'kyazdani42/nvim-tree.lua',
-      requires = {'kyazdani42/nvim-web-devicons'}
-    }
+    -- debugging
     use {
-    'mfussenegger/nvim-dap',
-    requires = {
-      {'rcarriga/nvim-dap-ui'},
-      {'mfussenegger/nvim-dap-python'},
+      'mfussenegger/nvim-dap',
+      requires = {
+        {'rcarriga/nvim-dap-ui'},
+        {'mfussenegger/nvim-dap-python'},
+      }
     }
-  }
+    -- colors
+    use {'norcalli/nvim-colorizer.lua'}
+    use {'gruvbox-community/gruvbox'}
+    use {'sainnhe/sonokai'}
+    use {'sainnhe/gruvbox-material'}
+    use {'sainnhe/everforest'}
+    use {'sainnhe/edge'}
 end
 )
