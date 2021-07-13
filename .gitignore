@@ -19,3 +19,5 @@ config/nvim/.netrwhist
 vim/plugged
 vim/autoload/plug.vim
 vim/undodir
+config/nvim/plugin/packer_compiled.vim
+config/nvim/plugin/packer_compiled.lua
