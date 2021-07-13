@@ -46,6 +46,18 @@ map('n', '<Down>', ':resize +2', noremap)
 map('n', '<leader>fv', ':NvimTreeFindFile<CR>', noremap)
 map('n', '<leader>dv', ':NvimTreeToggle<CR>', noremap)
 
+-- Printing lists
+function print_range(start, stop, step)
+  local step = step or 1
+  local list = {}
+  for i = start, stop - 1, step do
+    table.insert(list, i)
+  end
+  vim.cmd('normal! a' .. vim.inspect(list))
+end
+
+map('n', '<leader>pr', [[:lua print_range(<c-r>)]], noremap)
+
 --[[ todo
 " Adding comments until end of line---------------------------------------------
 nnoremap <leader>- 80A-<esc>81<bar>d$_<cr>
