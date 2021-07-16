@@ -17,7 +17,7 @@ return require('packer').startup(function()
     -- language support
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'neovim/nvim-lspconfig'}
-    use {'sheerun/vim-polyglot'}
+    --use {'sheerun/vim-polyglot'}
     use {'lervag/vimtex'}
     -- autocomplete
     use {'hrsh7th/nvim-compe'}
@@ -25,6 +25,7 @@ return require('packer').startup(function()
     -- text editing
     use {'tpope/vim-commentary'}
     use {'tpope/vim-surround'}
+    use {'junegunn/vim-easy-align'}
     -- git
     use {'tpope/vim-fugitive'}
     use {

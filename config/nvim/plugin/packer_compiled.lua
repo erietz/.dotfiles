@@ -162,6 +162,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-dispatch"
   },
+  ["vim-easy-align"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-easy-align"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-fugitive"

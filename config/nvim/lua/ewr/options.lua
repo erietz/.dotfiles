@@ -46,6 +46,7 @@ vim.opt.foldmethod = 'marker'
 -- For details see :h fo-table
 -- NOTE: running set formatoptions? indicates that these options are not
 -- entirely respected
+
 vim.opt.formatoptions = vim.opt.formatoptions
   - "c" -- Do not wrap comments using textwidth
   + "r" -- Insert comment on next line after pressing enter

@@ -47,8 +47,13 @@ map('n', '<leader>fv', ':NvimTreeFindFile<CR>', noremap)
 map('n', '<leader>dv', ':NvimTreeToggle<CR>', noremap)
 
 -- Printing lists
-function print_range(start, stop, step)
-  local step = step or 1
+function insert_range()
+  local start = vim.fn.input("start: ")
+  local stop = vim.fn.input("stop: ")
+  local step = vim.fn.input("[step]: ")
+  if step == "" then
+    step = 1
+  end
   local list = {}
   for i = start, stop, step do
     table.insert(list, i)
@@ -56,9 +61,8 @@ function print_range(start, stop, step)
   list =  '[' .. table.concat(list, ', ') .. ']'
   vim.cmd('normal a' .. list)
 end
-vim.cmd(':command -nargs=+ PrintRange :lua print_range(<f-args>)<CR>')
---map('n', '<leader>pr', [[:lua print_range(<c-r><CR>]], noremap)
-map('n', '<leader>pr', [[:PrintRange <c-r><CR>]], noremap)
+
+map('n', '<leader>ir', [[:lua insert_range()<CR>]], noremap)
 
 --[[ todo
 " Adding comments until end of line---------------------------------------------
@@ -130,6 +134,7 @@ map('n', '<leader>ts', ':TestSuite<CR>', noremap)
 map('n', '<leader>tf', ':TestFile<CR>', noremap)
 map('n', '<leader>tl', ':TestLast<CR>', noremap)
 map('n', '<leader>tv', ':TestVisit<CR>', noremap)
+map('n', '<leader>tt', ':TestNearest -strategy=neovim<CR>', noremap)
 
 --------------------------------------------------------------------------------
 -- nvim-dap
@@ -145,3 +150,9 @@ map('n', '<F8>', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
 map('n', '<leader>dc', [[:lua require("dap-python").test_class()<CR>]], silent_noremap)
 map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_noremap)
 map('n', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
+
+--------------------------------------------------------------------------------
+--       vim-easy-align
+--------------------------------------------------------------------------------
+map('n', 'ga', '<Plug>(EasyAlign)', {})
+map('x', 'ga', '<Plug>(EasyAlign)', {})

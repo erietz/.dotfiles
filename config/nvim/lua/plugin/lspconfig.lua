@@ -14,6 +14,10 @@ require'lspconfig'.html.setup {
   capabilities = capabilities
 }
 
+require'lspconfig'.cssls.setup {
+  capabilities = capabilities,
+}
+
 require'lspconfig'.clangd.setup{
   capabilities = capabilities
 }
