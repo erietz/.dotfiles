@@ -1,6 +1,8 @@
 {
     "global":{
         "directories": [
+            "$HOME/git/osu/cs261",
+            "$HOME/git/osu/cs290",
             "$HOME/.config/zsh",
             "$HOME/.ewr"
         ],
