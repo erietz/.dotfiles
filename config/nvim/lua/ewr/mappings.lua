@@ -7,6 +7,10 @@ map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
 map('n', '<c-j>', ':wincmd j<CR>', silent_noremap)
 map('n', '<c-k>', ':wincmd k<CR>', silent_noremap)
 map('n', '<c-l>', ':wincmd l<CR>', silent_noremap)
+map('t', '<C-h>', [[<C-\><C-n><C-w>h]], silent_noremap)
+map('t', '<C-j>', [[<C-\><C-n><C-w>j]], silent_noremap)
+map('t', '<C-k>', [[<C-\><C-n><C-w>k]], silent_noremap)
+map('t', '<C-l>', [[<C-\><C-n><C-w>l]], silent_noremap)
 
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
@@ -61,31 +65,20 @@ function insert_range()
   list =  '[' .. table.concat(list, ', ') .. ']'
   vim.cmd('normal a' .. list)
 end
-
 map('n', '<leader>ir', [[:lua insert_range()<CR>]], noremap)
 
+-- Trim Whitespace of current file
+function trim_whitespace() 
+  local save = vim.fn.winsaveview()
+  vim.cmd([[keeppatterns %s/\s\+$//e]])
+  vim.fn.winrestview(save)
+end
+
+-- Add comment to end of line
+map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
+map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
+
 --[[ todo
-" Adding comments until end of line---------------------------------------------
-nnoremap <leader>- 80A-<esc>81<bar>d$_<cr>
-nnoremap <leader>_ 50A-<esc>51<bar>d$_<cr>
-
-" Terminal mappings
-tnoremap <leader><Esc> <c-\><c-n>
-tnoremap <Esc><Esc> <c-\><c-n>
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
-
-" Clean up whitespace
-function! TrimWhitespace()
-  let l:save = winsaveview()
-  keeppatterns %s/\s\+$//e
-  call winrestview(l:save)
-endfunction
-
-command! TrimWhitespace call TrimWhitespace()
-
 function Cheat(query)
   let query = 'cheat.sh/' . a:query
   execute 'split | term curl ' . query
