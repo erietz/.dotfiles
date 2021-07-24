@@ -25,6 +25,7 @@ return require('packer').startup(function()
     -- text editing
     use {'tpope/vim-commentary'}
     use {'tpope/vim-surround'}
+    use {'tpope/vim-repeat'}
     use {'junegunn/vim-easy-align'}
     -- git
     use {'tpope/vim-fugitive'}
