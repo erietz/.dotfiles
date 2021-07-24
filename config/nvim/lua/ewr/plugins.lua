@@ -16,6 +16,9 @@ return require('packer').startup(function()
     use {'erietz/vim-terminator'}
     -- language support
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+    use {'nvim-treesitter/playground',
+      requires = {'nvim-treesitter/nvim-treesitter'}
+    }
     use {'neovim/nvim-lspconfig'}
     --use {'sheerun/vim-polyglot'}
     use {'lervag/vimtex'}
