@@ -69,6 +69,10 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["colorbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/colorbuddy.nvim"
+  },
   edge = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/edge"
@@ -89,6 +93,10 @@ _G.packer_plugins = {
   ["gruvbox-material"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gruvbox-material"
+  },
+  ["gruvbuddy.nvim"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gruvbuddy.nvim"
   },
   ["nvim-colorizer.lua"] = {
     loaded = true,
@@ -185,6 +193,10 @@ _G.packer_plugins = {
   ["vim-test"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-test"
+  },
+  ["vim-voodoo"] = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/vim-voodoo"
   },
   vimtex = {
     loaded = true,
