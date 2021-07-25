@@ -47,6 +47,7 @@ alias \
     grep="grep --color=auto" \
     g="git"\
     sl="ls" \
+    ll="lsd -l" \
     tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
     jlremote="jupyter lab --no-browser --port=9876" \
     today='date +"%F"'\
