@@ -30,6 +30,9 @@ end
 map('v', '<leader>d', '"_d', noremap)
 map('n', '<leader>d', '"_d', noremap)
 
+-- ThePrimeagen
+map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
+
 -- Navigation
 map('n', ']q', ':cnext<CR>zz', noremap)
 map('n', '[q', ':cprev<CR>zz', noremap)
@@ -142,7 +145,7 @@ map('n', '<F8>', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
 -- python
 map('n', '<leader>dc', [[:lua require("dap-python").test_class()<CR>]], silent_noremap)
 map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_noremap)
-map('n', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
+map('v', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
 
 --------------------------------------------------------------------------------
 --       vim-easy-align
