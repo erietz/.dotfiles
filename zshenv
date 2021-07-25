@@ -11,13 +11,14 @@
 #
 #echo "sourced \t ~/.zshenv"
 
-
 export GITHUB="https://github.com/erietz"
+
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
 PATH_SAVE="$PATH"
 PATH="$HOME/.local/bin"
 PATH+=":$HOME/.local/ebin"
-PATH+=":$HOME/.gem/ruby/3.0.0/bin"
+PATH+=":$GEM_HOME/bin"
 PATH+=":$HOME/.cargo/bin"
 PATH+=":$PATH_SAVE"
 export PATH
@@ -32,7 +33,7 @@ export TERMINAL="/usr/bin/alacritty"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
-export GEM_HOME="$HOME/.gem"
+#export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$GEM_PATH:$GEM_HOME/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
