@@ -12,6 +12,7 @@ return require('packer').startup(function()
     use {'kyazdani42/nvim-tree.lua',
       requires = {'kyazdani42/nvim-web-devicons'}
     }
+    use {'ThePrimeagen/harpoon'}
     -- code running
     use {'erietz/vim-terminator'}
     -- language support
@@ -28,6 +29,7 @@ return require('packer').startup(function()
     -- text editing
     use {'tpope/vim-commentary'}
     use {'tpope/vim-surround'}
+    use {'tpope/vim-repeat'}
     use {'junegunn/vim-easy-align'}
     -- git
     use {'tpope/vim-fugitive'}
@@ -46,10 +48,10 @@ return require('packer').startup(function()
     use {
       'mfussenegger/nvim-dap',
       requires = {
-        {'rcarriga/nvim-dap-ui'},
         {'mfussenegger/nvim-dap-python'},
       }
     }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     -- colors
     use {'norcalli/nvim-colorizer.lua'}
     use {'gruvbox-community/gruvbox'}

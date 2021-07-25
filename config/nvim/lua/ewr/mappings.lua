@@ -1,7 +1,14 @@
+-- Author      : Ethan Rietz
+-- Date        : now
+-- Description :
+--  Most keybindings are defined here. Completion and snippet plugins have a
+--  few keybindings defined in other files
+
 local map = vim.api.nvim_set_keymap
 local noremap = {noremap = true}
 local silent_noremap = {noremap = true, silent = true}
 
+-- {{{ Basic vim maps
 -- Changing Window splits
 map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
 map('n', '<c-j>', ':wincmd j<CR>', silent_noremap)
@@ -101,9 +108,9 @@ function Retab()
 endfunction
 --]]
 
---------------------------------------------------------------------------------
--- Telescope
---------------------------------------------------------------------------------
+--}}}
+-- {{{Telescope
+
 map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
 map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
 map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
@@ -122,9 +129,9 @@ function dotfiles()
   })
 end
 
---------------------------------------------------------------------------------
--- vim-test
---------------------------------------------------------------------------------
+--}}}
+--{{{ vim-test
+
 map('n', '<leader>tn', ':TestNearest<CR>', noremap)
 map('n', '<leader>ts', ':TestSuite<CR>', noremap)
 map('n', '<leader>tf', ':TestFile<CR>', noremap)
@@ -132,9 +139,9 @@ map('n', '<leader>tl', ':TestLast<CR>', noremap)
 map('n', '<leader>tv', ':TestVisit<CR>', noremap)
 map('n', '<leader>tt', ':TestNearest -strategy=neovim<CR>', noremap)
 
---------------------------------------------------------------------------------
--- nvim-dap
---------------------------------------------------------------------------------
+--}}}
+--{{{ nvim-dap
+
 map('n', '<F5>',  [[:lua require('dap').continue()<CR>]], silent_noremap)
 map('n', '<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
 map('n', '<F10>', [[:lua require('dap').step_over()<CR>]], silent_noremap)
@@ -147,8 +154,20 @@ map('n', '<leader>dc', [[:lua require("dap-python").test_class()<CR>]], silent_n
 map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_noremap)
 map('v', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
 
---------------------------------------------------------------------------------
---       vim-easy-align
---------------------------------------------------------------------------------
+--}}}
+--{{{ vim-easy-align
+
 map('n', 'ga', '<Plug>(EasyAlign)', {})
 map('x', 'ga', '<Plug>(EasyAlign)', {})
+
+--}}}
+--{{{ Harpoon
+
+map('n', '<leader>hh', [[:lua require('harpoon.mark').add_file()<CR>]], silent_noremap)
+map('n', '<leader>ht', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
+map('n', '<leader>hf', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
+map('n', '<leader>hd', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
+map('n', '<leader>hs', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
+map('n', '<leader>ha', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
+
+--}}}
