@@ -57,5 +57,13 @@ return require('packer').startup(function()
     use {'sainnhe/gruvbox-material'}
     use {'sainnhe/everforest'}
     use {'sainnhe/edge'}
+    use {
+      '~/git/vim-voodoo',
+      requires = 'tjdevries/colorbuddy.nvim'
+    }
+    use {
+      'tjdevries/gruvbuddy.nvim',
+      requires = 'tjdevries/colorbuddy.nvim'
+    }
 end
 )
