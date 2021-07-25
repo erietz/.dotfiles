@@ -12,6 +12,7 @@ vim.opt.tabstop = 2             -- Number of spaces a tab counts for
 vim.opt.shiftwidth = 2          -- Number of spaces used for each indent
 vim.opt.expandtab = true        -- Use spaces rather than tabs
 vim.opt.smarttab = true         -- idk I just always use this
+vim.opt.autoindent = true       -- copy indent level last line when inserting new line
 
 vim.opt.guicursor = ''          -- Always use block cursor
 vim.opt.scrolloff = 10          -- Adds ten lines between cursor and edge when scrolling
