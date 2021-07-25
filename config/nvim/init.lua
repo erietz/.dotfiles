@@ -1,11 +1,6 @@
---[[
-          __                                   __  __
-    _____/ /_  ____ __________  ___  ____     / /_/ /_  ___     ____ __  _____
-   / ___/ __ \/ __ `/ ___/ __ \/ _ \/ __ \   / __/ __ \/ _ \   / __ `/ |/_/ _ \
-  (__  ) / / / /_/ / /  / /_/ /  __/ / / /  / /_/ / / /  __/  / /_/ />  </  __/
- /____/_/ /_/\__,_/_/  / .___/\___/_/ /_/   \__/_/ /_/\___/   \__,_/_/|_|\___/
-                      /_/
---]]
+-- Author      : Ethan Rietz
+-- Date        : 2021-07-23
+-- Description : Primary neovim config file
 
 local fn = vim.fn
 
@@ -19,7 +14,6 @@ if fn.empty(fn.glob(install_path)) > 0 then
     'https://github.com/wbthomason/packer.nvim',
     install_path
   })
-  --vim.api.nvim_command 'packadd packer.nvim'
 end
 
 require('ewr.options')

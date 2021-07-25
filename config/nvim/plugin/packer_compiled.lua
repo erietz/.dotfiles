@@ -90,6 +90,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/gruvbox-material"
   },
+  harpoon = {
+    loaded = true,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/harpoon"
+  },
   ["nvim-colorizer.lua"] = {
     loaded = true,
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
