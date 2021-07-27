@@ -27,10 +27,10 @@ map('n', '<leader>c', ':cclose<bar>lclose<CR>', noremap)
 -- Yank to clipboard
 if vim.fn.has('mac') == 1 then
   map('v', '<leader>y', '"*y', noremap)
-  map('v', '<leader>p', '"*p', noremap)
+  map('n', '<leader>p', '"*p', noremap)
 else
   map('v', '<leader>y', '"+y', noremap)
-  map('v', '<leader>p', '"+p', noremap)
+  map('n', '<leader>p', '"+p', noremap)
 end
 
 -- Delete without fudging registers
@@ -163,11 +163,11 @@ map('x', 'ga', '<Plug>(EasyAlign)', {})
 --}}}
 --{{{ Harpoon
 
-map('n', '<leader>hh', [[:lua require('harpoon.mark').add_file()<CR>]], silent_noremap)
+map('n', '<leader>ha', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
 map('n', '<leader>ht', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
-map('n', '<leader>hf', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
-map('n', '<leader>hd', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
-map('n', '<leader>hs', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
-map('n', '<leader>ha', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
+map('n', '<leader>h1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
+map('n', '<leader>h2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
+map('n', '<leader>h3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
+map('n', '<leader>h4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
 
 --}}}

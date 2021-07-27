@@ -43,18 +43,26 @@ gpu () {
     popd
 }
 
+gst () {
+  for file in $(find . -name ".git" -type d); do
+    pushd $(dirname $file)
+    git status
+    popd
+  done
+}
+
 alias \
     grep="grep --color=auto" \
     g="git"\
     sl="ls" \
-    ll="lsd -l" \
+    l="lsd -l" \
     tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf" \
+    ta="tmux attach" \
     jlremote="jupyter lab --no-browser --port=9876" \
     today='date +"%F"'\
     vi="$EDITOR" \
     vim="$EDITOR" \
     e="emacs -nw" \
-    l="ls -lah" \
     c="code --reuse-window" \
     ci="code-insiders --reuse-window" \
     rcp="rsync --progress --verbose --recursive"
