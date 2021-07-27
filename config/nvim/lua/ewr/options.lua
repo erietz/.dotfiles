@@ -39,8 +39,25 @@ vim.opt.undofile = true         -- Use undodir for persistent undo history
 vim.opt.spellfile = vim.fn.stdpath('config') .. 'spell/en.utf-8.add'  -- Spelling
 
 vim.opt.backspace = 'indent,eol,start'  -- Make backspace actually erase
-vim.opt.statusline = '%<%f %h%m%r%=%-10.(%y%) %-14.(%l,%c%V%) %P'   -- Add filetype
-vim.opt.laststatus = 2  -- Last window always has status line
+
+-- Statusline-------------------------------------
+function harpoon_status()
+  local status = require('harpoon.mark').status()
+  if status == '' then
+    return ''
+  end
+  return string.format('⇁ %s', status)
+end
+
+local status_line = '' ..               -- break long string onto multiple lines
+  '%{luaeval("harpoon_status()")} ' ..  -- harpoon mark
+  '%<%f' ..                             -- filename
+  ' %h%m%r%=%-10.(%y%)' ..              -- dont remember
+  ' %-14.(%l,%c%V%) %P'                 -- dont remember
+
+vim.opt.statusline = status_line
+vim.opt.laststatus = 2                  -- Last window always has status line
+--------------------------------------------------
 
 vim.opt.foldmethod = 'marker'
 
