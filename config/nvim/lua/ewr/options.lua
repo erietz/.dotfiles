@@ -46,7 +46,7 @@ function harpoon_status()
   if status == '' then
     return ''
   end
-  return string.format('⇁ %s', status)
+  return string.format('⥤ %s', status)
 end
 
 local status_line = '' ..               -- break long string onto multiple lines
