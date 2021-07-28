@@ -18,7 +18,8 @@ font:
     family: Ubuntu Mono
   size: 15
 
-# TODO: Are these strictly necessary for Windows?
+# TODO: Move these keybindings to a new alacritty.yml for windows and load
+# this file using an include section
 # key_bindings:
   # For using ctrl-6 in vim to switch to last file
   # - { key: Key6,     mods: Control, chars:  "\x1e"         }
