@@ -43,13 +43,9 @@ return require('packer').startup(function()
   use 'vim-test/vim-test'
   use 'tartansandal/vim-compiler-pytest'
   -- debugging
-  use {
-    'mfussenegger/nvim-dap',
-    requires = {
-      {'rcarriga/nvim-dap-ui', opt = true},
-      {'mfussenegger/nvim-dap-python', opt = true},
-    }
-  }
+  use 'mfussenegger/nvim-dap'
+  use {'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap'}
+  use {'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap'}
   -- colors
   use {
     'norcalli/nvim-colorizer.lua',
@@ -61,7 +57,10 @@ return require('packer').startup(function()
   }
   use {
     'erietz/vim-voodoo',
-    'tjdevries/gruvbuddy.nvim',
+    requires = 'tjdevries/colorbuddy.nvim'
+  }
+  use {
+  'tjdevries/gruvbuddy.nvim',
     requires = 'tjdevries/colorbuddy.nvim'
   }
 end

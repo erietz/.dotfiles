@@ -30,4 +30,4 @@ for _, file in pairs(files) do
 end
 
 -- Fix LSP being loaded before colorscheme?
-vim.cmd([[ autocmd ColorScheme * :lua require('vim.lsp.diagnostic')._define_default_signs_and_highlights() ]])
+-- vim.cmd([[ autocmd ColorScheme * :lua require('vim.lsp.diagnostic')._define_default_signs_and_highlights() ]])
