@@ -13,7 +13,7 @@
 
 export GITHUB="https://github.com/erietz"
 
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
 PATH_SAVE="$PATH"
 PATH="$HOME/.local/bin"

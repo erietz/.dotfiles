@@ -115,12 +115,14 @@ _G.packer_plugins = {
     path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-dap"
   },
   ["nvim-dap-python"] = {
-    loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-dap-python"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/opt/nvim-dap-python"
   },
   ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/home/ethan/.local/share/nvim/site/pack/packer/start/nvim-dap-ui"
+    loaded = false,
+    needs_bufread = false,
+    path = "/home/ethan/.local/share/nvim/site/pack/packer/opt/nvim-dap-ui"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
