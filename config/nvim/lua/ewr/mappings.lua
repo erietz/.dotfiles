@@ -8,7 +8,8 @@ local map = vim.api.nvim_set_keymap
 local noremap = {noremap = true}
 local silent_noremap = {noremap = true, silent = true}
 
--- {{{ Basic vim maps
+-- Basic vim maps {{{
+
 -- Changing Window splits
 map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
 map('n', '<c-j>', ':wincmd j<CR>', silent_noremap)
@@ -38,7 +39,19 @@ map('v', '<leader>d', '"_d', noremap)
 map('n', '<leader>d', '"_d', noremap)
 
 -- ThePrimeagen
-map('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
+map('n', '<leader>sw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
+map('n', 'Y', 'y$', noremap)
+map('n', 'n', 'nzzzv', noremap)
+map('n', 'N', 'Nzzzv', noremap)
+map('n', 'J', 'mzJ`z', noremap)
+map('i', ',', ',<c-g>u', noremap)
+map('i', '.', '.<c-g>u', noremap)
+map('i', '!', '!<c-g>u', noremap)
+map('i', '?', '?<c-g>u', noremap)
+map('v', 'J', [[:m '>+1<CR>gv=gv]], noremap)
+map('v', 'K', [[:m '<-2<CR>gv=gv]], noremap)
+map('n', '<leader>j', ':m .+1<CR>==', noremap)
+map('n', '<leader>k', ':m .-2<CR>==', noremap)
 
 -- Navigation
 map('n', ']q', ':cnext<CR>zz', noremap)
@@ -57,8 +70,8 @@ map('n', '<Up>', ':resize -2', noremap)
 map('n', '<Down>', ':resize +2', noremap)
 
 -- View current file and current directory
-map('n', '<leader>fv', ':NvimTreeFindFile<CR>', noremap)
-map('n', '<leader>dv', ':NvimTreeToggle<CR>', noremap)
+map('n', '<leader>fv', ':NvimTreeFindFile<CR>', silent_noremap)
+map('n', '<leader>dv', ':NvimTreeToggle<CR>', silent_noremap)
 
 -- Printing lists
 function insert_range()
@@ -88,28 +101,8 @@ end
 map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
 map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 
---[[ todo
-function Cheat(query)
-  let query = 'cheat.sh/' . a:query
-  execute 'split | term curl ' . query
-  execute 'resize ' . string(&lines/3)
-endfunction
-
-command! -nargs=1 CheatSh call Cheat(<q-args>)
-nnoremap <leader>h :CheatSh <C-R>=&filetype<CR>/
-
-function Retab()
-  " change all four spases to a tab
-  set ts=4 sts=4 noet
-  retab!
-  " change all tabs to two spaces
-  set ts=2 sts=2 et
-  retab
-endfunction
---]]
-
 --}}}
--- {{{Telescope
+-- Telescope {{{
 
 map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
 map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
@@ -130,7 +123,7 @@ function dotfiles()
 end
 
 --}}}
---{{{ vim-test
+-- vim-test {{{
 
 map('n', '<leader>tn', ':TestNearest<CR>', noremap)
 map('n', '<leader>ts', ':TestSuite<CR>', noremap)
@@ -140,7 +133,7 @@ map('n', '<leader>tv', ':TestVisit<CR>', noremap)
 map('n', '<leader>tt', ':TestNearest -strategy=neovim<CR>', noremap)
 
 --}}}
---{{{ nvim-dap
+-- nvim-dap {{{
 
 map('n', '<F5>',  [[:lua require('dap').continue()<CR>]], silent_noremap)
 map('n', '<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
@@ -155,13 +148,13 @@ map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_
 map('v', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
 
 --}}}
---{{{ vim-easy-align
+-- vim-easy-align {{{
 
 map('n', 'ga', '<Plug>(EasyAlign)', {})
 map('x', 'ga', '<Plug>(EasyAlign)', {})
 
 --}}}
---{{{ Harpoon
+-- Harpoon {{{
 
 map('n', '<leader>ha', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
 map('n', '<leader>ht', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
