@@ -118,7 +118,7 @@ vim-plugins: ## Installs all of the vim plugins
 	vim +'PlugInstall --sync' +qa
 
 # TODO: should this be managed by nvim config?
-nvim-lsp:
+nvim-lsp: ## Install language servers for neovim LSP
 	npm install -g typescript typescript-language-server
 	npm install -g pyright 
 	npm install -g vscode-langservers-extracted
