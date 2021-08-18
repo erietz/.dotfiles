@@ -132,7 +132,7 @@ programs: ## Installs basic packages to get functioning on a new computer
 	$(INSTALL) $(PACKAGES) $(ODDBALL_PACKAGES)
 
 .PHONY: install
-install: zsh programs links vim-plugins ## Take care of everything for fresh install
+install: links zsh programs vim-plugins ## Take care of everything for fresh install
 
 .PHONY: clean
 clean: clean-zsh clean-links ## Removes everything except installed packages (and vim plugins)
