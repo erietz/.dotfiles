@@ -64,10 +64,10 @@ map('n', ']t', ':tnext<CR>zz', noremap)
 map('n', '[t', ':tprev<CR>zz', noremap)
 
 -- Resize windows
-map('n', '<Left>', ':vertical resize -2', noremap)
-map('n', '<Right>', ':vertical resize +2', noremap)
-map('n', '<Up>', ':resize -2', noremap)
-map('n', '<Down>', ':resize +2', noremap)
+map('n', '<Left>', ':vertical resize -2<CR>', noremap)
+map('n', '<Right>', ':vertical resize +2<CR>', noremap)
+map('n', '<Up>', ':resize -2<CR>', noremap)
+map('n', '<Down>', ':resize +2<CR>', noremap)
 
 -- View current file and current directory
 map('n', '<leader>fv', ':NvimTreeFindFile<CR>', silent_noremap)
@@ -136,12 +136,24 @@ map('n', '<leader>tt', ':TestNearest -strategy=neovim<CR>', noremap)
 -- nvim-dap {{{
 
 map('n', '<F5>',  [[:lua require('dap').continue()<CR>]], silent_noremap)
+-- map('n', '<leader>5',  [[:lua require('dap').continue()<CR>]], silent_noremap)
+
 map('n', '<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
+-- map('n', '<leader>9',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
+
 map('n', '<F10>', [[:lua require('dap').step_over()<CR>]], silent_noremap)
+-- map('n', '<leader>0', [[:lua require('dap').step_over()<CR>]], silent_noremap)
+
 map('n', '<F11>', [[:lua require('dap').step_into()<CR>]], silent_noremap)
+-- map('n', '<leader>-', [[:lua require('dap').step_into()<CR>]], silent_noremap)
+
 map('n', '<F12>', [[:lua require('dap').step_out()<CR>]], silent_noremap)
+-- map('n', '<leader>=', [[:lua require('dap').step_out()<CR>]], silent_noremap)
+
 -- UI
 map('n', '<F8>', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
+-- map('n', '<leader>8', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
+
 -- python
 map('n', '<leader>dc', [[:lua require("dap-python").test_class()<CR>]], silent_noremap)
 map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_noremap)
