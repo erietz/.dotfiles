@@ -8,8 +8,8 @@ vim.g.vimsyn_embed = 'lPr'      -- Support embedded lua, python and ruby highlig
 vim.opt.number = true           -- Line numbers
 vim.opt.relativenumber = true   -- Relative line numbers
 
-vim.opt.tabstop = 2             -- Number of spaces a tab counts for
-vim.opt.shiftwidth = 2          -- Number of spaces used for each indent
+vim.opt.tabstop = 4             -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 4          -- Number of spaces used for each indent
 vim.opt.expandtab = true        -- Use spaces rather than tabs
 vim.opt.smarttab = true         -- idk I just always use this
 vim.opt.autoindent = true       -- copy indent level last line when inserting new line
