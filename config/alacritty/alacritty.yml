@@ -94,12 +94,12 @@ schemes:
 
     normal:
       black:   '#333333'
-      red:     '#f77189'
-      green:   '#82a931'
-      yellow:  '#c69432'
-      blue:    '#37aabb'
-      magenta: '#f45deb'
-      cyan:    '#34af8a'
+      red:     '#fc8d62'
+      green:   '#a6d854'
+      yellow:  '#ffd92f'
+      blue:    '#8da0cb'
+      magenta: '#e78ac3'
+      cyan:    '#66c2a5'
       white:   '#ededed'
     bright:
       black:   '#928374'
