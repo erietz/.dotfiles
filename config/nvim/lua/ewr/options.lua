@@ -14,6 +14,16 @@ vim.opt.expandtab = true        -- Use spaces rather than tabs
 vim.opt.smarttab = true         -- idk I just always use this
 vim.opt.autoindent = true       -- copy indent level last line when inserting new line
 
+vim.cmd([[
+  augroup Indentation
+    autocmd!
+    autocmd FileType html setlocal tabstop=2 shiftwidth=2
+    autocmd FileType css setlocal tabstop=2  shiftwidth=2
+    autocmd FileType tex setlocal tabstop=2 shiftwidth=2
+    autocmd FileType md setlocal tabstop=2 shiftwidth=2
+  augroup END
+]])
+
 vim.opt.guicursor = ''          -- Always use block cursor
 vim.opt.scrolloff = 10          -- Adds ten lines between cursor and edge when scrolling
 vim.opt.colorcolumn = '80'      -- Vertical column at 80 characters
