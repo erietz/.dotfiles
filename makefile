@@ -12,7 +12,7 @@ DIRS := $(HOME)/.config $(HOME)/.local
 # Manual control of which files are symlinked
 # NOTE: Another approach is to use $(shell find .) then filter out .gitignore etc.
 DOTLESS_FILES := $(wildcard config/*)
-DOTLESS_FILES += zshenv local/ebin Xmodmap vim/
+DOTLESS_FILES += zshenv local/ebin Xresources Xmodmap
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 ZDOTDIR := $(HOME)/.config/zsh
