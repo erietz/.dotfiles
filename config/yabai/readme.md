@@ -1,6 +1,6 @@
 # About
 
-- This is a tiling window manager that seems to be better than amethyst.
+- Tiling window manager for macos
 - I followed the minimal install
 
 `brew install koekeishiya/formulae/yabai`
