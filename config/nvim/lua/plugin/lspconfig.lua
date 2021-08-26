@@ -18,6 +18,10 @@ require'lspconfig'.cssls.setup {
   capabilities = capabilities,
 }
 
+require'lspconfig'.jsonls.setup {
+  capabilities = capabilities,
+}
+
 require'lspconfig'.clangd.setup{
   capabilities = capabilities
 }
