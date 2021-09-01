@@ -21,3 +21,7 @@ vim/autoload/plug.vim
 vim/undodir
 config/nvim/plugin/packer_compiled.vim
 config/nvim/plugin/packer_compiled.lua
+config/emacs/elpa
+config/emacs/auto-save-list
+config/emacs/transient
+*~
