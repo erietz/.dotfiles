@@ -1,4 +1,7 @@
 #!/bin/sh
+# Author      : Ethan Rietz
+# Date        : 2021-09-11
+# Description : DWM Status Bar
 
 print_memory(){
     awk '/MemAvailable/ { printf "%.0f GB", $2/1024 }' /proc/meminfo
