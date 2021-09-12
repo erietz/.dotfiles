@@ -3,8 +3,8 @@
 # ~/.xinitrc
 #
 # Executed by startx (run your window manager from here)
-
-echo "from xinitrc" >> ~/login.log
+#
+# NOTE: this file is not sourced by LightDM (the display manager).
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
@@ -59,10 +59,6 @@ get_session(){
         mate) dbus_args+=(mate-session) ;;
         xfce) dbus_args+=(xfce4-session) ;;
         openbox) dbus_args+=(openbox-session) ;;
-        dwm)
-            dbus_args+=(dwm)
-            /home/ethan/.dwm/autostart.sh
-            ;;
         *) dbus_args+=($DEFAULT_SESSION) ;;
     esac
 
