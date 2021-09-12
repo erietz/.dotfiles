@@ -1,0 +1,15 @@
+#!/bin/sh
+# Author      : Ethan Rietz
+# Date        : 2021-09-12
+# Description :
+#   This script is sourced by LightDM (my display manager) when I login to an X
+#   session.
+
+# Start programs at login
+case $DESKTOP_SESSION in
+    dwm) ~/.local/ebin/dwm_login.sh ;;
+esac
+
+# Source shell variables in ~/.zshenv that are important for my display (e.g.
+# Gtk and QT themes, GNUPUG location config overrides, etc)
+[[ -f ~/.zshenv ]] && source ~/.zshenv
