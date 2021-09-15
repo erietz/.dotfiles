@@ -36,6 +36,7 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 #export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$GEM_PATH:$GEM_HOME/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"
+export BAT_THEME="gruvbox-dark"
 
 #-------------------------------------------------------------------------------
 # Avoid polluting $HOME with dotfiles

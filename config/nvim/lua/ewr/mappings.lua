@@ -110,6 +110,8 @@ map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], no
 map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
 map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
 map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
+map('n', '<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]], noremap)
+map('n', '<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]], noremap)
 map('n', '<leader><CR>', ':lua dotfiles()<cr>', noremap)
 
 function dotfiles()

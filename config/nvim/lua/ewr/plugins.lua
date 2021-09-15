@@ -9,7 +9,7 @@ return require('packer').startup(function()
       'nvim-lua/plenary.nvim'
     }
   }
-  use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  -- use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
   use 'ThePrimeagen/harpoon'
   -- code running
   use 'erietz/vim-terminator'
@@ -19,7 +19,7 @@ return require('packer').startup(function()
     requires = {'nvim-treesitter/nvim-treesitter'}
   }
   use 'neovim/nvim-lspconfig'
-  use {'sheerun/vim-polyglot'}
+  -- use {'sheerun/vim-polyglot'}
   use 'lervag/vimtex'
   -- autocomplete
   use 'hrsh7th/nvim-compe'
