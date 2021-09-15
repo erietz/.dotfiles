@@ -19,7 +19,7 @@ return require('packer').startup(function()
     requires = {'nvim-treesitter/nvim-treesitter'}
   }
   use 'neovim/nvim-lspconfig'
-  use {'sheerun/vim-polyglot'}
+  -- use {'sheerun/vim-polyglot'}
   use 'lervag/vimtex'
   -- autocomplete
   use 'hrsh7th/nvim-compe'
