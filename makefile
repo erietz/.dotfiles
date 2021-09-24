@@ -30,23 +30,22 @@ BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$
 CHOCO := $(shell which choco >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 
 ifeq (, $(PACMAN))
-	# On a rolling release distro, `-Syu` should always be used to upgrade the
-	# system before installing any packages to prevent bricking your system.
-	INSTALL := sudo pacman -Syu
-	ODDBALL_PACKAGES := fd python-pip bat alacritty ttf-ubuntu-font-family
+# On a rolling release distro, `-Syu` should always be used to upgrade the
+# system before installing any packages to prevent bricking your system.
+INSTALL := sudo pacman -Syu
+ODDBALL_PACKAGES := fd python-pip bat alacritty ttf-ubuntu-font-family
 else ifeq (, $(APT))
-	INSTALL := sudo apt-get install -y
-	ODDBALL_PACKAGES := fd-find python3-pip bat
+INSTALL := sudo apt-get install -y
+ODDBALL_PACKAGES := fd-find python3-pip bat
 else ifeq (, $(APK))
-	INSTALL := apk add
-	ODDBALL_PACKAGES :=
+INSTALL := apk add
 else ifeq (, $(BREW))
-	INSTALL := brew install
-	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd bat
+INSTALL := brew install
+ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd bat
 else ifeq (, $(CHOCO))
-	INSTALL := choco install
+INSTALL := choco install
 else
-	$(warning no installer found)
+$(warning no installer found)
 endif
 
 # All of these packages are currently required by neovim config
