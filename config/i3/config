@@ -135,7 +135,7 @@ bindsym $mod+n border normal    # reset border including title bar
 # alternate program launcher
 bindsym $mod+space exec --no-startup-id "rofi -show drun"
 bindsym $mod+period exec --no-startup-id "rofi -show window"
-bindsym $mod+Tab exec --no-startup-id "rofi -show window"
+bindsym $alt+Tab exec --no-startup-id "rofi -show window"
 # need access to $PATH from /bin/sh
 bindsym $alt+space exec --no-startup-id "rofi -show run"
 
