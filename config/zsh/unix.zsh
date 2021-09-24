@@ -82,8 +82,6 @@ alias \
     ta="tmux attach" \
     jlremote="jupyter lab --no-browser --port=9876" \
     today='date +"%F"'\
-    vi="$EDITOR" \
-    vim="$EDITOR" \
     e="emacs -nw" \
     c="code --reuse-window" \
     ci="code-insiders --reuse-window" \
