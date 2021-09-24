@@ -34,8 +34,8 @@ bindkey '^e' edit-command-line
 
 # load all source files---------------------------------------------------------
 load_configs() {
-    local files=($@)
-    for file in $files;
+    #local files=($@)
+    for file in $@;
     do
         [ -f $file ] && source $file #&& echo "sourced \t $file" || echo "$file has not been sourced"
     done

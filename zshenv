@@ -1,7 +1,7 @@
 #-------------------------------------------------------------------------------
 # Author: Ethan Rietz
 # Date: 2021-04-13
-# Description: 
+# Description:
 #   Settings for login shells
 #   Other zsh config files are in ZDOTDIR for interactive shells
 #-------------------------------------------------------------------------------
@@ -24,8 +24,9 @@ PATH+=":$HOME/.cargo/bin"
 PATH+=":$PATH_SAVE"
 export PATH
 
-export VISUAL="nvim"
-export EDITOR="nvim"
+hash nvim 2>/dev/null && export EDITOR="nvim" || export EDITOR="vim"
+hash nvim 2>/dev/null && export VISUAL="nvim" || export VISUAL="vim"
+
 export BROWSER="firefox"
 # export TERMINAL="/usr/bin/alacritty"
 #export GPG_TTY=$(tty) # fix pass not prompting for password
