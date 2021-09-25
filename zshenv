@@ -11,6 +11,8 @@
 #
 #echo "sourced \t ~/.zshenv"
 
+export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
+
 export SAVEHIST=1000000
 export HISTSIZE=1000000
 
@@ -24,6 +26,7 @@ PATH+=":$HOME/.cargo/bin"
 PATH+=":$PATH_SAVE"
 export PATH
 
+# Remote system may not have neovim
 hash nvim 2>/dev/null && export EDITOR="nvim" || export EDITOR="vim"
 hash nvim 2>/dev/null && export VISUAL="nvim" || export VISUAL="vim"
 
