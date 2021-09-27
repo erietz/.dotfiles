@@ -2,6 +2,8 @@ return require('packer').startup(function()
   -- packer can manage itself
   use 'wbthomason/packer.nvim'
   -- managing files
+  use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+  use 'junegunn/fzf.vim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = {

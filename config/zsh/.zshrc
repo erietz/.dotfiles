@@ -62,3 +62,5 @@ load_configs $source_files
 
 # Prompt------------------------------------------------------------------------
 setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[blue]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
