@@ -16,8 +16,7 @@ _comp_options+=(globdots)   # include hidden files
 setopt COMPLETE_ALIASES
 
 # keybindings-------------------------------------------------------------------
-# vim
-bindkey -v
+bindkey -v  # vim
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
@@ -55,12 +54,8 @@ source_files=(
 )
 
 case $OSTYPE in
-    darwin*)
-        source_files+=($ZDOTDIR/mac.zsh)
-        ;;
-    linux*)
-        source_files+=($ZDOTDIR/linux.zsh)
-        ;;
+    darwin*) source_files+=($ZDOTDIR/mac.zsh) ;;
+    linux*) source_files+=($ZDOTDIR/linux.zsh) ;;
 esac
 
 load_configs $source_files
