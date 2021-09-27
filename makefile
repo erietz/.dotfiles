@@ -6,8 +6,13 @@
 
 .DEFAULT_GOAL := help
 
+# A directory to store downloaded configs from the internet. This avoids having
+# unnecessary things in this repo, having to worry about the order in which
+# folders are symlinked, and adding a bunch of stuff to .gitignore.
+EWR_PLUGIN_DIR := $(HOME)/.config/ewr-plugins
+
 # These dirs need to exist before symlinks are created
-DIRS := $(HOME)/.config $(HOME)/.local
+DIRS := $(HOME)/.config $(HOME)/.local $(EWR_PLUGIN_DIR)
 
 # Manual control of which files are symlinked
 # NOTE: Another approach is to use $(shell find .) then filter out .gitignore etc.
@@ -15,10 +20,15 @@ DOTLESS_FILES := $(wildcard config/*)
 DOTLESS_FILES += zshenv local/ebin Xmodmap xinitrc xprofile
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
-ZDOTDIR := $(HOME)/.config/zsh
 ZSHPLUGINS := zsh-autosuggestions zsh-syntax-highlighting zsh-completions
-ZSHPLUGIN_PATHS := $(addprefix $(ZDOTDIR)/,$(ZSHPLUGINS))
+ZSHPLUGIN_PATHS := $(addprefix $(EWR_PLUGIN_DIR)/,$(ZSHPLUGINS))
 
+# All of these packages are currently required by neovim config
+PACKAGES := neovim vim fzf python3 nodejs npm jq
+
+# TODO: use `hash` or `type` instead of `which`. Faster because builtin and
+# less discrepency between versions
+#
 # Find package manager (NOTE: some versions of "which" print text even when not
 # found). The approach here is to set the variables below to arbitrary text if
 # the executable is not found. Then later conditionally check to see if the
@@ -29,28 +39,24 @@ APK := $(shell which apk >/dev/null 2>&1 || (echo "Your command failed with $$?"
 BREW := $(shell which brew >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 CHOCO := $(shell which choco >/dev/null 2>&1 || (echo "Your command failed with $$?"))
 
+# These statements must be indented with spaces to be interpreted as a
+# conditional and not a recipe
 ifeq (, $(PACMAN))
-	# On a rolling release distro, `-Syu` should always be used to upgrade the
-	# system before installing any packages to prevent bricking your system.
-	INSTALL := sudo pacman -Syu
-	ODDBALL_PACKAGES := fd python-pip bat alacritty ttf-ubuntu-font-family
+    INSTALL := sudo pacman -Syu
+    ODDBALL_PACKAGES := fd python-pip bat alacritty ttf-ubuntu-font-family
 else ifeq (, $(APT))
-	INSTALL := sudo apt-get install -y
-	ODDBALL_PACKAGES := fd-find python3-pip bat
+    INSTALL := sudo apt-get install -y
+    ODDBALL_PACKAGES := fd-find python3-pip bat
 else ifeq (, $(APK))
-	INSTALL := apk add
-	ODDBALL_PACKAGES :=
+    INSTALL := apk add
 else ifeq (, $(BREW))
-	INSTALL := brew install
-	ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd bat
+    INSTALL := brew install
+    ODDBALL_PACKAGES := fd pip3 koekeishiya/formulae/yabai koekeishiya/formulae/skhd bat
 else ifeq (, $(CHOCO))
-	INSTALL := choco install
+    INSTALL := choco install
 else
-	$(warning no installer found)
+    $(warning no installer found)
 endif
-
-# All of these packages are currently required by neovim config
-PACKAGES := neovim vim fzf python3 nodejs npm jq
 
 # }}}
 # Help {{{
@@ -69,23 +75,23 @@ help: ## Print this help message
 # {{{ ZSH
 
 .PHONY: zsh
-zsh: $(HOME)/.git-prompt.sh zsh-plugins ## Install zsh and change default interactive shell to zsh 
+zsh: $(EWR_PLUGIN_DIR)/.git-prompt.sh zsh-plugins ## Install zsh and change default interactive shell to zsh 
 	$(INSTALL) zsh
 	chsh -s /usr/bin/zsh
 
-$(HOME)/.git-prompt.sh:
+$(EWR_PLUGIN_DIR)/.git-prompt.sh:
 	curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o $@
 
 .PHONY: zsh-plugins
 zsh-plugins: $(ZSHPLUGIN_PATHS) ## Clones all of the zsh plugins
 
-$(ZDOTDIR)/zsh-autosuggestions:
+$(EWR_PLUGIN_DIR)/zsh-autosuggestions:
 	git clone https://github.com/zsh-users/zsh-autosuggestions.git $@
 
-$(ZDOTDIR)/zsh-syntax-highlighting:
+$(EWR_PLUGIN_DIR)/zsh-syntax-highlighting:
 	git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $@
 
-$(ZDOTDIR)/zsh-completions:
+$(EWR_PLUGIN_DIR)/zsh-completions:
 	git clone https://github.com/zsh-users/zsh-completions.git $@
 
 .PHONY: clean-zsh
@@ -138,3 +144,5 @@ install: links zsh programs vim-plugins ## Take care of everything for fresh ins
 clean: clean-zsh clean-links ## Removes everything except installed packages (and vim plugins)
 
 # }}}
+
+# vim: foldmethod=marker

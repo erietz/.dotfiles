@@ -33,8 +33,8 @@ bindkey '^e' edit-command-line
 
 # load all source files---------------------------------------------------------
 load_configs() {
-    local files=($@)
-    for file in $files;
+    #local files=($@)
+    for file in $@;
     do
         [ -f $file ] && source $file #&& echo "sourced \t $file" || echo "$file has not been sourced"
     done
@@ -47,10 +47,10 @@ local computer=$(hostname -s | sed 's/[0-9]//g')
 source_files=(
     $ZDOTDIR/$computer.zsh
     $ZDOTDIR/unix.zsh
-    $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-    $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
-    $HOME/.git-prompt.sh
+    $EWR_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    $EWR_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+    $EWR_PLUGIN_DIR/zsh-completions/zsh-completions.plugin.zsh
+    $EWR_PLUGIN_DIR/.git-prompt.sh
 )
 
 case $OSTYPE in
