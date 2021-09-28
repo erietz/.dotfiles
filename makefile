@@ -75,11 +75,11 @@ help: ## Print this help message
 # {{{ ZSH
 
 .PHONY: zsh
-zsh: $(EWR_PLUGIN_DIR)/.git-prompt.sh zsh-plugins ## Install zsh and change default interactive shell to zsh 
+zsh: $(EWR_PLUGIN_DIR)/git-prompt.sh zsh-plugins ## Install zsh and change default interactive shell to zsh 
 	$(INSTALL) zsh
 	chsh -s /usr/bin/zsh
 
-$(EWR_PLUGIN_DIR)/.git-prompt.sh:
+$(EWR_PLUGIN_DIR)/git-prompt.sh:
 	curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o $@
 
 .PHONY: zsh-plugins
