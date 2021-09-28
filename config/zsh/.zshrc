@@ -16,8 +16,7 @@ _comp_options+=(globdots)   # include hidden files
 setopt COMPLETE_ALIASES
 
 # keybindings-------------------------------------------------------------------
-# vim
-bindkey -v
+bindkey -v  # vim
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
@@ -56,15 +55,13 @@ source_files=(
 )
 
 case $OSTYPE in
-    darwin*)
-        source_files+=($ZDOTDIR/mac.zsh)
-        ;;
-    linux*)
-        source_files+=($ZDOTDIR/linux.zsh)
-        ;;
+    darwin*) source_files+=($ZDOTDIR/mac.zsh) ;;
+    linux*) source_files+=($ZDOTDIR/linux.zsh) ;;
 esac
 
 load_configs $source_files
 
 # Prompt------------------------------------------------------------------------
 setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[blue]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
