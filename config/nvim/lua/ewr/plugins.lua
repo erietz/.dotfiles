@@ -12,7 +12,7 @@ return require('packer').startup(function()
   -- use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
   use 'ThePrimeagen/harpoon'
   -- code running
-  use 'erietz/vim-terminator'
+  use '/home/ethan/git/vim-terminator'
   -- language support
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'nvim-treesitter/playground',
@@ -29,6 +29,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'junegunn/vim-easy-align'
+  use 'junegunn/vader.vim'
   -- git
   use 'tpope/vim-fugitive'
   use {
