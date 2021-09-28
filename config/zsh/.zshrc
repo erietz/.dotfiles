@@ -44,6 +44,7 @@ load_configs() {
 # - Computer specific zshrc files are named via hostname.
 # - Sometimes hostname adds a number if logged in twice
 local computer=$(hostname -s | sed 's/[0-9]//g')
+export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
 
 source_files=(
     $ZDOTDIR/$computer.zsh
@@ -51,7 +52,7 @@ source_files=(
     $EWR_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     $EWR_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
     $EWR_PLUGIN_DIR/zsh-completions/zsh-completions.plugin.zsh
-    $EWR_PLUGIN_DIR/.git-prompt.sh
+    $EWR_PLUGIN_DIR/git-prompt.sh
 )
 
 case $OSTYPE in
