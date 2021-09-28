@@ -56,6 +56,7 @@ return require('packer').startup(function()
     'sainnhe/gruvbox-material',
     'sainnhe/everforest',
     'sainnhe/edge',
+    'junegunn/seoul256.vim'
   }
   use {
     'erietz/vim-voodoo',
