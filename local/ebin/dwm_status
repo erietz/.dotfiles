@@ -13,7 +13,11 @@ print_tempurature(){
 }
 
 print_battery(){
-    awk '{ sum += $1 } END { print sum "% charge"}' /sys/class/power_supply/BAT*/capacity
+    percent_charge=$(awk '{ sum += $1 } END { print sum "% charge"}' /sys/class/power_supply/BAT*/capacity)
+    echo $percent_charge
+    if [ "$percent_charge" -lt "5" ]; then
+        notify-send "charge your laptop" "please"
+    fi
 }
 
 print_date(){
