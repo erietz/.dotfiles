@@ -2,6 +2,8 @@ return require('packer').startup(function()
   -- packer can manage itself
   use 'wbthomason/packer.nvim'
   -- managing files
+  use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+  use 'junegunn/fzf.vim'
   use {
     'nvim-telescope/telescope.nvim',
     requires = {
@@ -9,17 +11,17 @@ return require('packer').startup(function()
       'nvim-lua/plenary.nvim'
     }
   }
-  use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
+  -- use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
   use 'ThePrimeagen/harpoon'
   -- code running
-  use 'erietz/vim-terminator'
+  use '/home/ethan/git/vim-terminator'
   -- language support
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'nvim-treesitter/playground',
     requires = {'nvim-treesitter/nvim-treesitter'}
   }
   use 'neovim/nvim-lspconfig'
-  use {'sheerun/vim-polyglot'}
+  -- use {'sheerun/vim-polyglot'}
   use 'lervag/vimtex'
   -- autocomplete
   use 'hrsh7th/nvim-compe'
@@ -29,6 +31,7 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'tpope/vim-repeat'
   use 'junegunn/vim-easy-align'
+  use 'junegunn/vader.vim'
   -- git
   use 'tpope/vim-fugitive'
   use {
@@ -54,6 +57,7 @@ return require('packer').startup(function()
     'sainnhe/gruvbox-material',
     'sainnhe/everforest',
     'sainnhe/edge',
+    'junegunn/seoul256.vim'
   }
   use {
     'erietz/vim-voodoo',

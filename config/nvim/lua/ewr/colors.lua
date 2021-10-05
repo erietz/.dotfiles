@@ -1,2 +1,3 @@
 --vim.cmd([[colorscheme gruvbox]])
-require('colorbuddy').colorscheme('Set3')
+vim.cmd([[colorscheme seoul256]])
+--require('colorbuddy').colorscheme('Set3')

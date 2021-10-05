@@ -102,27 +102,29 @@ map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
 map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 
 --}}}
--- Telescope {{{
+---- Telescope {{{
 
-map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
-map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
-map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
-map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
-map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
-map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
-map('n', '<leader><CR>', ':lua dotfiles()<cr>', noremap)
+--map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
+--map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
+--map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
+--map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
+--map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
+--map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
+--map('n', '<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]], noremap)
+--map('n', '<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]], noremap)
+--map('n', '<leader><CR>', ':lua dotfiles()<cr>', noremap)
 
-function dotfiles()
-  require('telescope.builtin').find_files({
-    follow = true,
-    hidden = true,
-    search_dirs = {
-      "$HOME/.ewr/",
-    }
-  })
-end
+--function dotfiles()
+--  require('telescope.builtin').find_files({
+--    follow = true,
+--    hidden = true,
+--    search_dirs = {
+--      "$HOME/.ewr/",
+--    }
+--  })
+--end
 
---}}}
+----}}}
 -- vim-test {{{
 
 map('n', '<leader>tn', ':TestNearest<CR>', noremap)
@@ -176,3 +178,15 @@ map('n', '<leader>h3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_no
 map('n', '<leader>h4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
 
 --}}}
+-- FZF {{{
+
+map('n', '<leader><Enter>', ':Files<CR>', noremap)
+map('n', '<leader><leader>', ':Buffers<CR>', noremap)
+map('n', '<leader>rg', ':Rg<CR>', noremap)
+map('n', '<leader>fz', ':FZF<CR>', noremap)
+map('n', '<leader>df', ':Files ~/.ewr<CR>', noremap)
+map('n', '<leader>gf', ':GFiles<CR>', noremap)
+map('n', '<leader>gs', ':GFiles?<CR>', noremap)
+map('n', '<leader>gc', ':Commits<CR>', noremap)
+
+-- }}}

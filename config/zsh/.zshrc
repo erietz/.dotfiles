@@ -16,8 +16,7 @@ _comp_options+=(globdots)   # include hidden files
 setopt COMPLETE_ALIASES
 
 # keybindings-------------------------------------------------------------------
-# vim
-bindkey -v
+bindkey -v  # vim
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
@@ -34,8 +33,8 @@ bindkey '^e' edit-command-line
 
 # load all source files---------------------------------------------------------
 load_configs() {
-    local files=($@)
-    for file in $files;
+    #local files=($@)
+    for file in $@;
     do
         [ -f $file ] && source $file #&& echo "sourced \t $file" || echo "$file has not been sourced"
     done
@@ -44,26 +43,25 @@ load_configs() {
 # - Computer specific zshrc files are named via hostname.
 # - Sometimes hostname adds a number if logged in twice
 local computer=$(hostname -s | sed 's/[0-9]//g')
+export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
 
 source_files=(
     $ZDOTDIR/$computer.zsh
     $ZDOTDIR/unix.zsh
-    $ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    $ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-    $ZDOTDIR/zsh-completions/zsh-completions.plugin.zsh
-    $HOME/.git-prompt.sh
+    $EWR_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+    $EWR_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+    $EWR_PLUGIN_DIR/zsh-completions/zsh-completions.plugin.zsh
+    $EWR_PLUGIN_DIR/git-prompt.sh
 )
 
 case $OSTYPE in
-    darwin*)
-        source_files+=($ZDOTDIR/mac.zsh)
-        ;;
-    linux*)
-        source_files+=($ZDOTDIR/linux.zsh)
-        ;;
+    darwin*) source_files+=($ZDOTDIR/mac.zsh) ;;
+    linux*) source_files+=($ZDOTDIR/linux.zsh) ;;
 esac
 
 load_configs $source_files
 
 # Prompt------------------------------------------------------------------------
 setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[blue]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
