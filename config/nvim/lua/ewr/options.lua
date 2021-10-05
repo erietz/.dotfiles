@@ -84,3 +84,5 @@ vim.opt.formatoptions = vim.opt.formatoptions
 
 vim.opt.termguicolors = true    -- Better colors
 vim.opt.background = "dark"     -- Dark theme
+
+vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])
