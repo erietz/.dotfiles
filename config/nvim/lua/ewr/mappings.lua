@@ -181,7 +181,7 @@ map('n', '<leader>h4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_no
 -- FZF {{{
 
 map('n', '<leader><Enter>', ':Files<CR>', noremap)
-map('n', '<leader><leader>', ':Buffers<CR>', noremap)
+map('n', '<leader><Tab>',   ':Buffers<CR>', noremap)
 map('n', '<leader>rg', ':Rg<CR>', noremap)
 map('n', '<leader>fz', ':FZF<CR>', noremap)
 map('n', '<leader>df', ':Files ~/.ewr<CR>', noremap)
