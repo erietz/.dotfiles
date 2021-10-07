@@ -73,16 +73,18 @@ gst () {
   done
 }
 
-alias grep="grep --color=auto"
-alias g="git"
-alias sl="ls"
-alias l="lsd -l"
-alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf"
-alias tm="tmux attach || tmux"
-alias ta="tmux attach"
-alias jlremote="jupyter lab --no-browser --port=9876"
-alias today='date +"%F"'
-alias e="emacs -nw"
 alias c="code --reuse-window"
 alias ci="code-insiders --reuse-window"
+alias e="emacs -nw"
+alias f="find . -type f -iname"
+alias g="git"
+alias grep="grep --color=auto"
+alias jlremote="jupyter lab --no-browser --port=9876"
+alias l="lsd -l"
 alias rcp="rsync --progress --verbose --recursive"
+alias sl="ls"
+alias ta="tmux attach"
+alias tm="tmux attach || tmux"
+alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf"
+alias today='date +"%F"'
+alias vim="nvim"
