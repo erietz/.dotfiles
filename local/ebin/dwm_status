@@ -20,20 +20,12 @@ print_tempurature() {
     echo "$(head -c 2 /sys/class/thermal/thermal_zone0/temp)C"
 }
 
-<<<<<<< HEAD
-print_battery(){
-    percent_charge=$(awk '{ sum += $1 } END { print sum "% charge"}' /sys/class/power_supply/BAT*/capacity)
-    echo $percent_charge
-    if [ "$percent_charge" -lt "5" ]; then
-        notify-send "charge your laptop" "please"
-=======
 print_battery() {
     battery_file="/sys/class/power_supply/BAT*/capacity"
     if [ -f "$battery_file" ]; then
         awk '{ sum += $1 } END { print sum "% charge"}' "$battery_file"
     else
         echo "no bat"
->>>>>>> 8df29304796a281792352b35226b714fbc5d88a0
     fi
 }
 
