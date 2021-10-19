@@ -111,4 +111,4 @@ schemes:
       cyan:    '#8dd3c7'
       white:   '#ededed'
 
-colors: *voodoo
+colors: *dark

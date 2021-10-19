@@ -10,6 +10,8 @@ local silent_noremap = {noremap = true, silent = true}
 
 -- Basic vim maps {{{
 
+map('n', '<leader><leader>', '<c-^>', noremap)
+
 -- Changing Window splits
 map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
 map('n', '<c-j>', ':wincmd j<CR>', silent_noremap)
@@ -48,10 +50,10 @@ map('i', ',', ',<c-g>u', noremap)
 map('i', '.', '.<c-g>u', noremap)
 map('i', '!', '!<c-g>u', noremap)
 map('i', '?', '?<c-g>u', noremap)
-map('v', 'J', [[:m '>+1<CR>gv=gv]], noremap)
-map('v', 'K', [[:m '<-2<CR>gv=gv]], noremap)
-map('n', '<leader>j', ':m .+1<CR>==', noremap)
-map('n', '<leader>k', ':m .-2<CR>==', noremap)
+-- map('v', 'J', [[:m '>+1<CR>gv=gv]], noremap)
+-- map('v', 'K', [[:m '<-2<CR>gv=gv]], noremap)
+-- map('n', '<leader>j', ':m .+1<CR>==', noremap)
+-- map('n', '<leader>k', ':m .-2<CR>==', noremap)
 
 -- Navigation
 map('n', ']q', ':cnext<CR>zz', noremap)

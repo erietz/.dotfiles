@@ -82,7 +82,4 @@ vim.opt.formatoptions = vim.opt.formatoptions
   + "q" -- Allow formatting of comments with "gq"
   + "n" -- Recognize numbered lists (markdown for example)
 
-vim.opt.termguicolors = true    -- Better colors
-vim.opt.background = "dark"     -- Dark theme
-
 vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])

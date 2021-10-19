@@ -5,7 +5,8 @@ start_process_if_not_running() {
 }
 
 # status bar
-start_process_if_not_running ~/.local/ebin/dwm_status
+# start_process_if_not_running ~/git/suckless/dwm/status/dwm_status
+start_process_if_not_running slstatus
 
 # system tray
 start_process_if_not_running nm-applet  # network manager applet

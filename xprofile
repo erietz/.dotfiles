@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Author      : Ethan Rietz
 # Date        : 2021-09-12
 # Description :
@@ -7,7 +7,10 @@
 
 # Start programs at login
 case $DESKTOP_SESSION in
-    dwm) ~/.local/ebin/dwm_login.sh ;;
+    dwm)
+        ~/.local/ebin/dwm_login.sh 
+        ~/.local/ebin/reset_keyboard.sh
+        ;;
 esac
 
 # Source shell variables in ~/.zshenv that are important for my display (e.g.

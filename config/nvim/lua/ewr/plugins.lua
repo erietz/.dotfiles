@@ -35,12 +35,14 @@ return require('packer').startup(function()
   -- git
   use 'tpope/vim-fugitive'
   use {
-    'lewis6991/gitsigns.nvim',
-    requires = 'nvim-lua/plenary.nvim',
-    config = function()
-      require('gitsigns').setup()
-    end
-  }
+  'lewis6991/gitsigns.nvim',
+  requires = {
+    'nvim-lua/plenary.nvim'
+  },
+  config = function()
+    require('gitsigns').setup()
+  end
+}
   -- unit testing
   use 'tpope/vim-dispatch'
   use 'vim-test/vim-test'
@@ -57,7 +59,8 @@ return require('packer').startup(function()
     'sainnhe/gruvbox-material',
     'sainnhe/everforest',
     'sainnhe/edge',
-    'junegunn/seoul256.vim'
+    'junegunn/seoul256.vim',
+    'junegunn/rainbow_parentheses.vim'
   }
   use {
     'erietz/vim-voodoo',
