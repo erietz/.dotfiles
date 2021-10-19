@@ -66,10 +66,12 @@ gpu () {
 }
 
 gst () {
+  echo "The following directories contain local changes"
   for file in $(find . -name ".git" -type d); do
-    pushd $(dirname $file)
-    git status
-    popd
+    dir="$(dirname $file)"
+    pushd -q "$dir"
+    git status | grep -q "working tree clean" || echo "$dir"
+    popd -q
   done
 }
 
