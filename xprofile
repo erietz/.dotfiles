@@ -2,14 +2,13 @@
 # Author      : Ethan Rietz
 # Date        : 2021-09-12
 # Description :
-#   This script is sourced by LightDM (my display manager) when I login to an X
+#   This script is called by LightDM (my display manager) when I login to an X
 #   session.
 
 # Start programs at login
 case $DESKTOP_SESSION in
     dwm)
-        ~/.local/ebin/dwm_login.sh 
-        ~/.local/ebin/reset_keyboard.sh
+        ${HOME}/.local/ebin/dwm_login.sh
         ;;
 esac
 
