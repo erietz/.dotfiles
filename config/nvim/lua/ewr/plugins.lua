@@ -15,6 +15,7 @@ return require('packer').startup(function()
   use 'ThePrimeagen/harpoon'
   -- code running
   use '/home/ethan/git/vim-terminator'
+  use '/home/ethan/git/postwoman.nvim'
   -- language support
   use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
   use {'nvim-treesitter/playground',
@@ -24,7 +25,9 @@ return require('packer').startup(function()
   -- use {'sheerun/vim-polyglot'}
   use 'lervag/vimtex'
   -- autocomplete
-  use 'hrsh7th/nvim-compe'
+  -- use 'hrsh7th/nvim-compe'
+  use 'ms-jpq/coq_nvim'
+  use 'ms-jpq/coq.artifacts'
   use 'SirVer/ultisnips'
   -- text editing
   use 'tpope/vim-commentary'
@@ -70,5 +73,10 @@ return require('packer').startup(function()
   'tjdevries/gruvbuddy.nvim',
     requires = 'tjdevries/colorbuddy.nvim'
   }
+  use {
+        'soywod/himalaya',
+        -- rtp = '/vim' -- TODO: thet rtp option of packer.nvim is broken.
+        -- https://github.com/wbthomason/packer.nvim/issues/274
+    }
 end
 )

@@ -83,3 +83,6 @@ vim.opt.formatoptions = vim.opt.formatoptions
   + "n" -- Recognize numbered lists (markdown for example)
 
 vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])
+
+
+vim.g.himalaya_mailbox_picker = 'fzf'
