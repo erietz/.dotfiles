@@ -10,7 +10,11 @@ local silent_noremap = {noremap = true, silent = true}
 
 -- Basic vim maps {{{
 
+-- Quick toggle between previous buffer
 map('n', '<leader><leader>', '<c-^>', noremap)
+
+-- Toggle netrw on left side
+map('n', '<leader>pv', ':Lex<CR>', noremap)
 
 -- Changing Window splits
 map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)

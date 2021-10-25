@@ -1,7 +1,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ','
 
-vim.opt.completeopt = "menuone,noselect"  -- Autocomplete menu
+vim.opt.completeopt = "menu,menuone,noselect"  -- Autocomplete menu
 vim.opt.hidden = true           -- Change buffers without having to save
 vim.g.vimsyn_embed = 'lPr'      -- Support embedded lua, python and ruby highlight
 
