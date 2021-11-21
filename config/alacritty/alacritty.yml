@@ -30,7 +30,39 @@ font:
 draw_bold_text_with_bright_colors: true
 
 schemes:
-  gruvbox_light: &light
+  solarized_light: &solarized_light
+    primary:
+      background: '#fdf6e3' # base3
+      foreground: '#657b83' # base00
+
+    # Cursor colors
+    cursor:
+      text:   '#fdf6e3' # base3
+      cursor: '#657b83' # base00
+
+    # Normal colors
+    normal:
+      black:   '#073642' # base02
+      red:     '#dc322f' # red
+      green:   '#859900' # green
+      yellow:  '#b58900' # yellow
+      blue:    '#268bd2' # blue
+      magenta: '#d33682' # magenta
+      cyan:    '#2aa198' # cyan
+      white:   '#eee8d5' # base2
+
+    # Bright colors
+    bright:
+      black:   '#002b36' # base03
+      red:     '#cb4b16' # orange
+      green:   '#586e75' # base01
+      yellow:  '#657b83' # base00
+      blue:    '#839496' # base0
+      magenta: '#6c71c4' # violet
+      cyan:    '#93a1a1' # base1
+      white:   '#fdf6e3' # base3
+
+  gruvbox_light: &gruvbox_light
     primary:
       background: '#fbf1c7'
       foreground: '#3c3836'
@@ -56,7 +88,7 @@ schemes:
       magenta: '#8f3f71'
       cyan:    '#427b58'
       white:   '#3c3836'
-  gruvbox_dark: &dark
+  gruvbox_dark: &gruvbox_dark
     primary: 
       background: '#282828'
       foreground: '#ebdbb2'
@@ -111,4 +143,4 @@ schemes:
       cyan:    '#8dd3c7'
       white:   '#ededed'
 
-colors: *dark
+colors: *gruvbox_dark

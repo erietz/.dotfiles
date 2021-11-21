@@ -15,7 +15,6 @@ return require('packer').startup(function()
     use 'ThePrimeagen/harpoon'
     -- code running
     use '/home/ethan/git/vim-terminator'
-    use '/home/ethan/git/postwoman.nvim'
     -- language support
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use {'nvim-treesitter/playground',
@@ -24,14 +23,19 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     -- use {'sheerun/vim-polyglot'}
     use 'lervag/vimtex'
+    use 'vim-pandoc/vim-pandoc'
+    use 'vim-pandoc/vim-pandoc-syntax'
     -- autocomplete
     use 'hrsh7th/nvim-cmp'
     use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp' }
     use { 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp' }
+    use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp' }
+    use { 'hrsh7th/cmp-nvim-lua', requires = 'hrsh7th/nvim-cmp' }
     use {
         'quangnguyen30192/cmp-nvim-ultisnips', 
         requires = { 'hrsh7th/nvim-cmp', 'SirVer/ultisnips' }
     }
+    use "folke/lua-dev.nvim"
 
     -- use 'ms-jpq/coq_nvim'
     -- use 'ms-jpq/coq.artifacts'
@@ -72,7 +76,8 @@ return require('packer').startup(function()
         'sainnhe/everforest',
         'sainnhe/edge',
         'junegunn/seoul256.vim',
-        'junegunn/rainbow_parentheses.vim'
+        'junegunn/rainbow_parentheses.vim',
+        'chriskempson/base16-vim',
     }
     use {
         'erietz/vim-voodoo',
@@ -87,5 +92,25 @@ return require('packer').startup(function()
         -- rtp = '/vim' -- TODO: thet rtp option of packer.nvim is broken.
         -- https://github.com/wbthomason/packer.nvim/issues/274
     }
+    use {
+        "NTBBloodbath/rest.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+        config = function()
+            require("rest-nvim").setup({
+                -- Open request results in a horizontal split
+                result_split_horizontal = false,
+                -- Skip SSL verification, useful for unknown certificates
+                skip_ssl_verification = false,
+                -- Highlight request on run
+                highlight = {
+                    enabled = true,
+                    timeout = 150,
+                },
+                -- Jump to request line on run
+                jump_to_request = false,
+            })
+        end
+}
+
 end
 )

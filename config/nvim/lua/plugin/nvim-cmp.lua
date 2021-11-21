@@ -8,16 +8,20 @@ cmp.setup({
         end,
     },
     mapping = {
+        ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+        ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-g>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.close(),
         ['<C-y>'] = cmp.config.disable, -- If you want to remove the default `<C-y>` mapping, You can specify `cmp.config.disable` value.
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<CR>'] = cmp.mapping.confirm({ select = false }),
     },
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
+        { name = 'path' },
         { name = 'ultisnips' }, -- For ultisnips users.
+        { name = 'nvim_lua' }, -- this does nothing
     },
     {
         { name = 'buffer' },
@@ -30,47 +34,67 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require'lspconfig'.jedi_language_server.setup{
-  capabilities = capabilities
+    capabilities = capabilities
 }
 
 require'lspconfig'.tsserver.setup{
-  capabilities = capabilities
+    capabilities = capabilities
 }
 
 require'lspconfig'.html.setup {
-  capabilities = capabilities
+    capabilities = capabilities
 }
 
 require'lspconfig'.cssls.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 require'lspconfig'.jsonls.setup {
-  capabilities = capabilities,
+    capabilities = capabilities,
 }
 
 require'lspconfig'.clangd.setup{
-  capabilities = capabilities
+    capabilities = capabilities
 }
 
 require'lspconfig'.texlab.setup{
-  capabilities = capabilities
+    capabilities = capabilities
 }
 
+require'lspconfig'.csharp_ls.setup{
+    capabilities = capabilities
+}
+
+-- require'lspconfig'.sqls.setup{
+    --     capabilities = capabilities
+    -- }
+
+local luadev = require("lua-dev").setup({
+  -- add any options here, or leave empty to use the default settings
+  lspconfig = {
+    cmd = {"lua-language-server"}
+  },
+})
+
+require('lspconfig').sumneko_lua.setup(luadev)
+
+
 function install_language_servers()
-  local command = {
-    'sudo',
-    'npm',
-    'install',
-    '-g',
-    -- python
-    'pyright',
-    -- javascript
-    'typescript', 'typescript-language-server',
-    -- html
-    'vscode-langservers-extracted',
-  }
-  local command = table.concat(command, " ") .. "\n"
-  vim.fn['terminator#open_terminal']()
-  vim.fn['terminator#send_to_terminal'](command)
+    local command = {
+        'sudo',
+        'npm',
+        'install',
+        '-g',
+        -- python
+        'pyright',
+        -- javascript
+        'typescript', 'typescript-language-server',
+        -- html
+        'vscode-langservers-extracted',
+        -- sql
+        'sql-language-server'
+    }
+    local command = table.concat(command, " ") .. "\n"
+    vim.fn['terminator#open_terminal']()
+    vim.fn['terminator#send_to_terminal'](command)
 end

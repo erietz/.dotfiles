@@ -13,8 +13,9 @@ local silent_noremap = {noremap = true, silent = true}
 -- Quick toggle between previous buffer
 map('n', '<leader><leader>', '<c-^>', noremap)
 
--- Toggle netrw on left side
-map('n', '<leader>pv', ':Lex<CR>', noremap)
+-- toggle netrw
+map('n', '<leader>dv', ':Lex<CR>', noremap)     -- project view
+map('n', '<leader>fv', ':Vex<CR>', noremap)     -- file view
 
 -- Changing Window splits
 map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
@@ -74,10 +75,6 @@ map('n', '<Left>', ':vertical resize -2<CR>', noremap)
 map('n', '<Right>', ':vertical resize +2<CR>', noremap)
 map('n', '<Up>', ':resize -2<CR>', noremap)
 map('n', '<Down>', ':resize +2<CR>', noremap)
-
--- View current file and current directory
-map('n', '<leader>fv', ':NvimTreeFindFile<CR>', silent_noremap)
-map('n', '<leader>dv', ':NvimTreeToggle<CR>', silent_noremap)
 
 -- Printing lists
 function insert_range()
@@ -196,3 +193,8 @@ map('n', '<leader>gs', ':GFiles?<CR>', noremap)
 map('n', '<leader>gc', ':Commits<CR>', noremap)
 
 -- }}}
+
+-- map('n', '<leader>mm', [[:lua require('satellite.ui').request()<CR>]], silent_noremap)
+map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], silent_noremap)
+map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], silent_noremap)
+map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], silent_noremap)
