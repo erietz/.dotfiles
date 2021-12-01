@@ -169,8 +169,8 @@ bindsym $mod+Ctrl+m exec pavucontrol
 # exec --no-startup-id volumeicon
 
 # Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioPlay exec playerctl play-pause
+# bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
@@ -319,26 +319,26 @@ bar {
     # strip_workspace_numbers yes
 
     colors {
-        background #222D31
-        statusline #F9FAF9
-        separator  #454947
+        background #333333
+        statusline #F2F2F2
+        separator  #88807C
 
                          # border  backgr. text
-        focused_workspace  #F9FAF9 #16a085 #292F34
+        focused_workspace  #F9FAF9 #34E2E2 #292F34
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #16a085 #2C2C2C #F9FAF9
-        urgent_workspace   #16a085 #FDF6E3 #E5201D
+        binding_mode       #06989A #2C2C2C #F9FAF9
+        urgent_workspace   #06989A #FDF6E3 #E5201D
     }
 }
 
 
 # Theme colors
 # class                 border  backgr. text    indic.   child_border
-client.focused          #556064 #16a085 #222D31 #FDF6E3
-client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
-client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
+client.focused          #556064 #34E2E2 #222D31 #FDF6E3
+client.focused_inactive #2F3D44 #2F3D44 #48B9C7 #454948
+client.unfocused        #2F3D44 #2F3D44 #48B9C7 #454948
+client.urgent           #CB4B16 #FDF6E3 #48B9C7 #268BD2
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 client.background       #2B2C2B
 
