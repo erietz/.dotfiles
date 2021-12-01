@@ -4,8 +4,6 @@
 #   - See http://i3wm.org/docs/userguide.html for a complete reference.
 #   - Do not use inline comments! They may be executed as code.
 
-exec --no-startup-id xrandr --dpi 192
-
 # Basic settings {{{
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
