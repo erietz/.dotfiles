@@ -57,6 +57,7 @@ export HISTFILE="${ZDOTDIR}/.zsh_history"
 
 # X11
 # export XINITRC="${XDG_CONFIG_HOME}/X11/xinitrc"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc-2.0"
 
 # Misc
 export INPUTRC="$XDG_CONFIG_HOME/inputrc"
