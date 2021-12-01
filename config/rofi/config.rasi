@@ -15,7 +15,7 @@ configuration {
   bg:               #151515;
   fg:               #e8e8d3;
   accent:           #687363;
-  button:           #1c1c1c;
+  button:           #3e3e3e;
   background-color: @bg;
   text-color:       @fg;
 }
