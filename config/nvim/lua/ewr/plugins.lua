@@ -47,6 +47,7 @@ return require('packer').startup(function()
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
     use 'junegunn/vim-easy-align'
+    use 'justinmk/vim-easy-align'
     use 'junegunn/vader.vim'
     -- git
     use 'tpope/vim-fugitive'
