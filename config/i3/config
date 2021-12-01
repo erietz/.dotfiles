@@ -133,7 +133,8 @@ bindsym $alt+Tab exec --no-startup-id "rofi -show window"
 # need access to $PATH from /bin/sh
 bindsym $alt+space exec --no-startup-id "rofi -show run"
 
-bindsym $mod+Shift+x exec --no-startup-id "xmodmap $HOME/.Xmodmap" # reset modified key maps
+# reset modified key maps
+bindsym $mod+Shift+x exec --no-startup-id "xmodmap $HOME/.Xmodmap"
 
 bindsym $mod+z exec --no-startup-id morc_menu # launch categorized menu
 
