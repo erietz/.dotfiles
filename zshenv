@@ -18,8 +18,11 @@ export HISTSIZE=1000000
 
 # export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 
+export DOTNET_ROOT="${HOME}/.dotnet"
+
 PATH_SAVE="$PATH"
 PATH="$HOME/.local/bin"
+PATH+=":$HOME/.dotnet"
 PATH+=":$HOME/.local/ebin"
 PATH+=":$GEM_HOME/bin"
 PATH+=":$HOME/.cargo/bin"

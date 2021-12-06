@@ -163,7 +163,14 @@ bindsym $mod+b bar mode toggle
 
 # }}}
 # Sound section {{{
-exec --no-startup-id pulseaudio
+
+# The following line caused pulseaudio to break. I had to run `pulseaudio
+# --kill` followed by `pulseaudio --start` to get it to work after a reboot.
+# Since pulseaudio does get started with the following line commented, it must
+# be getting start elsewhere even though it is not managed by systemctl.
+
+# exec --no-startup-id pulseaudio
+
 exec --no-startup-id pa-applet
 # bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 bindsym $mod+Ctrl+m exec pavucontrol
@@ -336,9 +343,9 @@ bar {
         separator  $gray
 
                          # border    backgr.   text
-        focused_workspace  $orange   $orange   $darkgray
-        active_workspace   $darkgray $darkgray $aqua
-        inactive_workspace $darkgray $darkgray $aqua
+        focused_workspace  $green    $green    $darkgray
+        active_workspace   $darkgray $darkgray $green
+        inactive_workspace $darkgray $darkgray $green
         urgent_workspace   $red      $red      $bg
 
         binding_mode       $blue $bg $yellow
@@ -347,7 +354,7 @@ bar {
 
 
 # class                 border    backgr    text      indicat child_border
-client.focused          $blue     $blue     $darkgray $purple $darkgray
+client.focused          $blue     $blue     $darkgray $purple $blue
 # client.focused          $green    $green    $darkgray $purple $darkgray
 client.focused_inactive $darkgray $darkgray $yellow   $purple $darkgray
 client.unfocused        $darkgray $darkgray $yellow   $purple $darkgray
