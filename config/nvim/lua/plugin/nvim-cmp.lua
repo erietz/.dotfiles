@@ -61,8 +61,18 @@ require'lspconfig'.texlab.setup{
     capabilities = capabilities
 }
 
-require'lspconfig'.csharp_ls.setup{
-    capabilities = capabilities
+-- require'lspconfig'.csharp_ls.setup{
+--     capabilities = capabilities
+-- }
+
+require'lspconfig'.omnisharp.setup{
+    cmd = {
+        "/home/ethan/.local/omnisharp/run",
+        "--languageserver",
+        "--hostPID",
+        tostring(vim.fn.getpid())
+    },
+    capabilities = capabilities,
 }
 
 -- require'lspconfig'.sqls.setup{
