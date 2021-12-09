@@ -25,3 +25,4 @@ config/emacs/elpa
 config/emacs/auto-save-list
 config/emacs/transient
 *~
+**/*.pyc
