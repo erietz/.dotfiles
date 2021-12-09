@@ -67,7 +67,7 @@ require'lspconfig'.texlab.setup{
 
 require'lspconfig'.omnisharp.setup{
     cmd = {
-        "/home/ethan/.local/omnisharp/run",
+        "/bin/omnisharp",
         "--languageserver",
         "--hostPID",
         tostring(vim.fn.getpid())
