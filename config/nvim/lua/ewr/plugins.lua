@@ -4,15 +4,21 @@ return require('packer').startup(function()
     -- managing files
     use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
     use 'junegunn/fzf.vim'
+    -- use {
+    --     'nvim-telescope/telescope.nvim',
+    --     requires = {
+    --         'nvim-lua/popup.nvim',
+    --         'nvim-lua/plenary.nvim'
+    --     }
+    -- }
+    -- use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
     use {
-        'nvim-telescope/telescope.nvim',
+        'ThePrimeagen/harpoon',
         requires = {
             'nvim-lua/popup.nvim',
             'nvim-lua/plenary.nvim'
         }
     }
-    -- use {'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons'}
-    use 'ThePrimeagen/harpoon'
     -- code running
     use '/home/ethan/git/vim-terminator'
     -- language support
