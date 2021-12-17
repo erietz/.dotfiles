@@ -60,6 +60,7 @@ end
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 beautiful.font = "Ubuntu 12"
+beautiful.useless_gap = 10
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -585,7 +586,7 @@ awful.rules.rules = {
         rule_any = {
             type = { "normal", "dialog" }
         },
-        properties = { titlebars_enabled = true }
+        properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
@@ -656,4 +657,27 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- }}}
+
+-- Startup Programs {{{
+
+-- The functions awful.spawn.once() and awful.spawn.single_instance() do not
+-- actually do what they promise they will do. Here is a work around
+local function run_single_instance(commands)
+    for _, cmd in ipairs(commands) do
+        awful.spawn.with_shell(
+            string.format("pgrep -u $USER -fx '%s' > /dev/null || %s", cmd, cmd)
+        )
+    end
+end
+
+run_single_instance({
+    "nm-applet",
+    "xfce4-power-manager",
+    "pamac-tray",
+    "clipit",
+    "xautolock -time 10 -locker blurlock",
+    "pa-applet",
+})
+
 -- }}}
