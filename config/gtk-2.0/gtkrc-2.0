@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ethan/.gtkrc-2.0.mine"
-gtk-theme-name="Adapta-Nokto-Maia"
-gtk-icon-theme-name="Arc"
+gtk-theme-name="oomox-gruvbox-dark-medium"
+gtk-icon-theme-name="oomox-gruvbox-dark-medium"
 gtk-font-name="Ubuntu 10"
 gtk-cursor-theme-name="xcursor-breeze"
 gtk-cursor-theme-size=0
