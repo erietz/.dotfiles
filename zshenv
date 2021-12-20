@@ -6,19 +6,13 @@
 #   Other zsh config files are in ZDOTDIR for interactive shells
 #-------------------------------------------------------------------------------
 
-# - I have found that some of these settings do not get loaded on linux systems
+# I have found that some of these settings do not get loaded on linux systems
 # due to another file (/etc/zprofile ?) being sourced after this file.
-#
-#echo "sourced \t ~/.zshenv"
 
 export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
 
 export SAVEHIST=1000000
 export HISTSIZE=1000000
-
-# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-
-# export DOTNET_ROOT="${HOME}/.dotnet"
 
 PATH_SAVE="$PATH"
 PATH="$HOME/.local/bin"
@@ -34,14 +28,10 @@ hash nvim 2>/dev/null && export EDITOR="nvim" || export EDITOR="vim"
 hash nvim 2>/dev/null && export VISUAL="nvim" || export VISUAL="vim"
 
 export BROWSER="firefox"
-# export TERMINAL="/usr/bin/alacritty"
-#export GPG_TTY=$(tty) # fix pass not prompting for password
-#export FZF_DEFAULT_COMMAND='find .'
+export TERMINAL="/bin/alacritty"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
-#export GEM_HOME="$HOME/.gem"
-export GEM_PATH="$GEM_PATH:$GEM_HOME/bin"
 export RANGER_LOAD_DEFAULT_RC="FALSE"
 
 #-------------------------------------------------------------------------------

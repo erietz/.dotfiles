@@ -6,7 +6,7 @@ configuration {
   display-drun:        "";
   drun-display-format: "{name}";
   sidebar-mode:        false;
-  dpi:                 0;
+  dpi:                 1;
 }
 
 @theme "/dev/null"
