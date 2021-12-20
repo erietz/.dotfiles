@@ -6,6 +6,8 @@
 
 -- TODO: get tabbed layout like in i3
 -- https://github.com/michaelbeaumont/awesome-leaved
+--
+-- https://obsolete.computer/geekery/my-awesome-awesome-config.html
 
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
