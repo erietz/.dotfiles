@@ -70,6 +70,10 @@ map('n', '[b', ':bprev<CR>zz', noremap)
 map('n', ']t', ':tnext<CR>zz', noremap)
 map('n', '[t', ':tprev<CR>zz', noremap)
 
+-- Scroll split
+map('n', '<c-m-f>', '<c-w><c-w><c-d><c-w><c-w>', noremap)
+map('n', '<c-m-b>', '<c-w><c-w><c-u><c-w><c-w>', noremap)
+
 -- Resize windows
 map('n', '<Left>', ':vertical resize -2<CR>', noremap)
 map('n', '<Right>', ':vertical resize +2<CR>', noremap)
@@ -193,8 +197,8 @@ map('n', '<leader>gs', ':GFiles?<CR>', noremap)
 map('n', '<leader>gc', ':Commits<CR>', noremap)
 
 -- }}}
-
--- map('n', '<leader>mm', [[:lua require('satellite.ui').request()<CR>]], silent_noremap)
+-- REST nvim {{{
 map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], silent_noremap)
 map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], silent_noremap)
 map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], silent_noremap)
+---}}}
