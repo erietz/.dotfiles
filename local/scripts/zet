@@ -1,0 +1,55 @@
+#!/bin/sh
+
+ARGC="$#"
+ARGV="$@"
+BASEDIR="${HOME}/git/zettelkasten"
+HELP=""
+
+echoerr() {
+    echo "$@" 1>&2;
+}
+
+add_help_string() {
+    [ $# -eq 2 ] || {
+        echoerr "add_help_string requires two parameters";
+        exit 1;
+    }
+
+    HELP+=$(echo "$1:   $2")
+}
+
+print_help() {
+    echo "------------------------"
+    echo "Help"
+    echo "------------------------"
+    echo "$HELP"
+}
+
+add_help_string "add" "Creates a new note in the zettelkasten directory"
+add() {
+
+    now=$(date -u +%Y%m%d%H%M%S)
+    new_dir="${BASEDIR}/${now}"
+    new_file="${new_dir}/README.md"
+    mkdir $new_dir
+    touch $new_file
+    $EDITOR $new_file
+}
+
+# main function-----------------------------------------------------------------
+
+[ -d $BASEDIR ] || {
+    echoerr "$BASEDIR does not exist ... please clone it";
+    exit 1;
+}
+
+# [ $ARGC -eq 0 ] && { print_help; exit 0; }
+
+case $ARGV in
+    add)
+        add
+        ;;
+    *)
+        print_help
+        ;;
+esac
