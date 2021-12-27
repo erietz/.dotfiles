@@ -8,7 +8,7 @@
 # Start programs at login
 case $DESKTOP_SESSION in
     dwm)
-        ${HOME}/.local/ebin/dwm_login.sh
+        ${HOME}/.local/scripts/dwm_login.sh
         ;;
 esac
 

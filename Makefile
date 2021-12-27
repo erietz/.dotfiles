@@ -17,7 +17,7 @@ DIRS := $(HOME)/.config $(HOME)/.local $(EWR_PLUGIN_DIR)
 # Manual control of which files are symlinked
 # NOTE: Another approach is to use $(shell find .) then filter out .gitignore etc.
 DOTLESS_FILES := $(wildcard config/*)
-DOTLESS_FILES += zshenv local/ebin Xmodmap xinitrc xprofile Xresources \
+DOTLESS_FILES += zshenv local/scripts Xmodmap xinitrc xprofile Xresources \
 				 themes/oomox-gruvbox-dark-medium icons/oomox-gruvbox-dark-medium
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
