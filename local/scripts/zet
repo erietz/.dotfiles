@@ -1,9 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
-ARGC="$#"
-ARGV="$@"
 BASEDIR="${HOME}/git/zettelkasten"
-HELP=""
+HELP=()
 
 echoerr() {
     echo "$@" 1>&2;
@@ -15,41 +13,66 @@ add_help_string() {
         exit 1;
     }
 
-    HELP+=$(echo "$1:   $2")
+    HELP+=("$1:     $2")
 }
 
 print_help() {
-    echo "------------------------"
+    echo "--------------------------------------------------------------------"
     echo "Help"
-    echo "------------------------"
-    echo "$HELP"
+    echo "--------------------------------------------------------------------"
+
+    for string in "${HELP[@]}"; do
+        echo "$string"
+    done
 }
 
 add_help_string "add" "Creates a new note in the zettelkasten directory"
 add() {
-
     now=$(date -u +%Y%m%d%H%M%S)
     new_dir="${BASEDIR}/${now}"
     new_file="${new_dir}/README.md"
-    mkdir $new_dir
-    touch $new_file
-    $EDITOR $new_file
+    mkdir "$new_dir"
+    touch "$new_file"
+    $EDITOR "$new_file"
 }
 
-# main function-----------------------------------------------------------------
+add_help_string "remove" "Deletes the most recent directory if the note is empty"
+remove() {
+    last_dir="${BASEDIR}/$(ls -tr "$BASEDIR" | tail -n1)"
+    last_zet="${last_dir}/README.md"
+    words=$(wc -w "$last_zet" | awk '{print $1}')
+    if [ "$words" -eq 0 ]; then
+         rm "$last_zet"
+         rmdir "$last_dir"
+     else
+        echo "$last_zet is not empty"
+        exit 1;
+    fi
+}
 
-[ -d $BASEDIR ] || {
+# main--------------------------------------------------------------------------
+
+[ -d "$BASEDIR" ] || {
     echoerr "$BASEDIR does not exist ... please clone it";
     exit 1;
 }
 
-# [ $ARGC -eq 0 ] && { print_help; exit 0; }
+[ "$#" -eq 0 ] && print_help && exit 0
 
-case $ARGV in
-    add)
-        add
-        ;;
-    *)
-        print_help
-        ;;
-esac
+while [[ $# -gt 0 ]]; do
+    key="$1"
+    case $key in
+        add|-a|--add)
+            add
+            shift
+            ;;
+        remove|-r|--remove)
+            remove
+            shift
+            ;;
+        *)
+            print_help
+            shift
+            ;;
+    esac
+done
