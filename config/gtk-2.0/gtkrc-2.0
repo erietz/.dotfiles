@@ -2,10 +2,10 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ethan/.gtkrc-2.0.mine"
-gtk-theme-name="oomox-gruvbox-dark-medium"
-gtk-icon-theme-name="oomox-gruvbox-dark-medium"
+gtk-theme-name="gtk-gruvbox-hidpi"
+gtk-icon-theme-name="gtk-gruvbox-hidpi"
 gtk-font-name="Ubuntu 10"
-gtk-cursor-theme-name="xcursor-breeze Xcursor.theme_core Xcursor.theme_core:"
+gtk-cursor-theme-name="xcursor-breeze"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
