@@ -31,8 +31,8 @@ yabai -m config mouse_drop_action            swap
 # general space settings
 yabai -m config layout                       bsp
 yabai -m config window_gap                   20
-yabai -m config top_padding                  35
-yabai -m config bottom_padding               35
+yabai -m config top_padding                  100
+yabai -m config bottom_padding               100
 
 # Ignore certain programs
 #yabai -m rule --add title='Preferences$' manage=off topmost=on # not sure this does anything
@@ -42,8 +42,8 @@ yabai -m rule --add app="^System Preferences$" layer=above manage=off #sticky=on
 if [ `system_profiler SPDisplaysDataType | grep -c ULTRAWIDE` -ne 0 ]
 then
     echo "ULTRAWIDE monitor detected... Adding padding to sides"
-    yabai -m config left_padding                 350
-    yabai -m config right_padding                350
+    yabai -m config left_padding                 700
+    yabai -m config right_padding                700
 else
     yabai -m config left_padding                 12
     yabai -m config right_padding                12

@@ -22,7 +22,7 @@ DOTLESS_FILES += zshenv local/scripts Xmodmap xinitrc xprofile Xresources \
 DOT_FILES := $(addprefix $(HOME)/.,$(DOTLESS_FILES))
 
 ZSHPLUGINS := zsh-autosuggestions zsh-syntax-highlighting zsh-completions
-ZSHPLUGIN_PATHS := $(addprefix $(EWR_PLUGIN_DIR)/,$(ZSHPLUGINS))
+ZSHPLUGIN_PATHS := $(addprefix $(EWR_PLUGIN_DIR)/,$(ZSHPLUGINS) git-prompt.sh)
 
 # All of these packages are currently required by neovim config
 PACKAGES := neovim vim fzf python3 nodejs npm jq

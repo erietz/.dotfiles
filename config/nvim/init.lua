@@ -28,8 +28,3 @@ for _, file in pairs(files) do
   local file = 'plugin.' .. fn.fnamemodify(file, ":t:r")
   require(file)
 end
-
--- Fix LSP being loaded before colorscheme?
--- vim.cmd([[ autocmd ColorScheme * :lua require('vim.lsp.diagnostic')._define_default_signs_and_highlights() ]])
-
-vim.o.runtimepath = vim.o.runtimepath .. ",/home/ethan/.local/share/nvim/site/pack/packer/start/himalaya/vim"
