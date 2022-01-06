@@ -108,6 +108,9 @@ end
 map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
 map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 
+-- fix lsp diagnostics
+map('n', '<leader>e', ':lua vim.lsp.diagnostic.set_loclist()<CR>', silent_noremap)
+
 --}}}
 ---- Telescope {{{
 
