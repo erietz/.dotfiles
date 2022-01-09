@@ -17,3 +17,21 @@ main(int argc, char *argv[])
 	return EXIT_SUCCESS;
 }
 endsnippet
+
+snippet docstring "description for a function" b
+/*
+ *------------------------------------------------------------------------------
+ * Function: $1()
+ *
+ * Description:
+ * $1() is used for ${2:...}
+ * 
+ * Function Arguments:
+ *     ${3:Any arguments are ignored.}
+ *
+ * Return Value:
+ *     ${4:Value does not change}
+ *------------------------------------------------------------------------------
+ */
+$0
+endsnippet

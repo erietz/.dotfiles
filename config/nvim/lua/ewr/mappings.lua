@@ -111,6 +111,17 @@ map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 -- fix lsp diagnostics
 map('n', '<leader>e', ':lua vim.lsp.diagnostic.set_loclist()<CR>', silent_noremap)
 
+-- Makefile
+map('n', '<leader>mr', ':Dispatch make run<CR>', silent_noremap)
+map('n', '<leader>ma', ':Dispatch make all<CR>', silent_noremap)
+map('n', '<leader>mt', ':Dispatch make test<CR>', silent_noremap)
+map('n', '<leader>mc', ':Dispatch make clean<CR>', silent_noremap)
+
+-- Grep word
+map('n', '<leader>gw', [[:grep -RI "\<<C-r><C-w>\>" .<CR>]], silent_noremap)
+map('n', '<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
+map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
+
 --}}}
 ---- Telescope {{{
 
