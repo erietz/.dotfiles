@@ -118,7 +118,7 @@ map('n', '<leader>mt', ':Dispatch make test<CR>', silent_noremap)
 map('n', '<leader>mc', ':Dispatch make clean<CR>', silent_noremap)
 
 -- Grep word
-map('n', '<leader>gw', [[:grep -RI "\<<C-r><C-w>\>" .<CR>]], silent_noremap)
+map('n', '<leader>gw', [[:grep -RI --exclude-dir=.git "\<<C-r><C-w>\>" .<CR>]], silent_noremap)
 map('n', '<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
 map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
 

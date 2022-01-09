@@ -26,6 +26,12 @@ return require('packer').startup(function()
         requires = {'nvim-treesitter/nvim-treesitter'}
     }
     use 'neovim/nvim-lspconfig'
+    use {
+        "ray-x/lsp_signature.nvim",
+        config = function()
+            require "lsp_signature".setup()
+        end
+    }
     -- use {'sheerun/vim-polyglot'}
     use 'lervag/vimtex'
     use 'vim-pandoc/vim-pandoc'
