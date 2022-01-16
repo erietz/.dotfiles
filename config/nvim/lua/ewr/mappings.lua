@@ -14,8 +14,8 @@ local silent_noremap = {noremap = true, silent = true}
 map('n', '<leader><leader>', '<c-^>', noremap)
 
 -- toggle netrw
-map('n', '<leader>dv', ':Lex<CR>', noremap)     -- project view
-map('n', '<leader>fv', ':Vex<CR>', noremap)     -- file view
+map('n', '<leader>dv', ':NERDTreeToggle<CR>', noremap)     -- project view
+map('n', '<leader>fv', ':NERDTreeFind<CR>', noremap)     -- file view
 
 -- Changing Window splits
 map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
@@ -25,7 +25,7 @@ map('n', '<c-l>', ':wincmd l<CR>', silent_noremap)
 map('t', '<C-h>', [[<C-\><C-n><C-w>h]], silent_noremap)
 map('t', '<C-j>', [[<C-\><C-n><C-w>j]], silent_noremap)
 map('t', '<C-k>', [[<C-\><C-n><C-w>k]], silent_noremap)
-map('t', '<C-l>', [[<C-\><C-n><C-w>l]], silent_noremap)
+map('t', '<leader><leader>', [[<C-\><C-n><C-^>l]], silent_noremap)
 
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
@@ -118,7 +118,7 @@ map('n', '<leader>mt', ':Dispatch make test<CR>', silent_noremap)
 map('n', '<leader>mc', ':Dispatch make clean<CR>', silent_noremap)
 
 -- Grep word
-map('n', '<leader>gw', [[:Ggrep -q -I "\<<C-r><C-w>\>" .<CR>]], silent_noremap)
+map('n', '<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], silent_noremap)
 map('n', '<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
 map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
 
@@ -197,6 +197,7 @@ map('n', '<leader>h1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_no
 map('n', '<leader>h2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
 map('n', '<leader>h3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
 map('n', '<leader>h4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
+map('n', '<leader>hh', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
 
 --}}}
 -- FZF {{{

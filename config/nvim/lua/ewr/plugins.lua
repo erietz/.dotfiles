@@ -14,6 +14,8 @@ return require('packer').startup(function()
         }
     }
 
+    use { 'preservim/nerdtree' }
+
     -- code running
     use 'erietz/vim-terminator'
     use 'tpope/vim-dispatch'
