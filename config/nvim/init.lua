@@ -1,6 +1,8 @@
+--------------------------------------------------------------------------------
 -- Author      : Ethan Rietz
 -- Date        : 2021-07-23
 -- Description : Primary neovim config file
+--------------------------------------------------------------------------------
 
 local fn = vim.fn
 
@@ -25,6 +27,6 @@ require('ewr.colors')
 local module_path = fn.stdpath('config') .. '/lua/plugin/'
 local files = fn.glob(module_path .. '*', 0, 1)
 for _, file in pairs(files) do
-  local file = 'plugin.' .. fn.fnamemodify(file, ":t:r")
-  require(file)
+  local filepath = 'plugin.' .. fn.fnamemodify(file, ":t:r")
+  require(filepath)
 end

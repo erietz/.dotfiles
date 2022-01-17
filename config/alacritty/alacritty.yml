@@ -1,8 +1,10 @@
+#-------------------------------------------------------------------------------
 # Author      : Ethan Rietz
 # Date        : 2021-07-28
 # Description : Main Alacritty config file
 #     The default config file (which is highly commented) can be found at
 #     /usr/share/doc/alacritty/example/alacritty.yml
+#-------------------------------------------------------------------------------
 
 env:
   # this must be xterm-256color for vim to get termguicolors inside tmux
@@ -15,7 +17,8 @@ scrolling:
 
 font:
   normal:
-    family: Ubuntu Mono
+    family: IBM Plex Mono
+    # family: Ubuntu Mono
   size: 15
 
 # TODO: Move these keybindings to a new alacritty.yml for windows and load

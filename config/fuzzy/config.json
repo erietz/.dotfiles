@@ -1,11 +1,9 @@
 {
     "global":{
         "directories": [
-            "$HOME/git/osu/cs261",
-            "$HOME/git/osu/cs290",
-            "$HOME/.config/zsh",
             "$HOME/.ewr",
-            "$HOME/Sync/classes/term4"
+            "$HOME/Sync/classes/term5",
+            "$HOME/git/osu/"
         ],
         "websites": [
             "https://github.iu.edu/",
@@ -27,25 +25,6 @@
     },
     "optiplex": {
         "directories": [
-            "/mnt/c/Users/ewrie",
-            "/mnt/c/Users/ewrie/GD_OSU/scratch",
-            "/mnt/c/Users/ewrie/GD_OSU/manjaro/classes/term2/"
-        ]
-    },
-    "elogin": {
-        "directories": [
-            "/N/project/carbocation",
-            "/N/project/carbocation/ethan",
-            "/N/slate/ewrietz",
-            "/N/slate/ewrietz/IyengarLab/ethan"
-        ]
-    },
-    "h": {
-        "directories": [
-            "/N/slate/ewrietz",
-            "/N/slate/ewrietz/IyengarLab/ethan",
-            "/N/project/carbocation",
-            "/N/project/carbocation/ethan"
         ]
     }
 }

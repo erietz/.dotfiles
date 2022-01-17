@@ -8,4 +8,5 @@ vim.g.terminator_runfile_map = {
 
 vim.g.terminator_repl_command = {
     ['sql'] = 'mysql -u ethan -p',
+    ['typescript'] = 'ts-node',
 }
