@@ -33,6 +33,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse'
 export RANGER_LOAD_DEFAULT_RC="FALSE"
+export BAT_THEME="ansi"
 
 #-------------------------------------------------------------------------------
 # Avoid polluting $HOME with dotfiles
