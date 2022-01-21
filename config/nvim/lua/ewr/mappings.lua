@@ -109,7 +109,7 @@ map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
 map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 
 -- fix lsp diagnostics
-map('n', '<leader>e', ':lua vim.lsp.diagnostic.set_loclist()<CR>', silent_noremap)
+map('n', '<leader>e', ':lua vim.lsp.diagnostic.setloclist()<CR>', silent_noremap)
 
 -- Makefile
 map('n', '<leader>mr', ':Dispatch make run<CR>', silent_noremap)
@@ -197,7 +197,8 @@ map('n', '<leader>h1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_no
 map('n', '<leader>h2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
 map('n', '<leader>h3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
 map('n', '<leader>h4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
-map('n', '<leader>hh', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
+map('n', '<leader>,', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
+map('n', '<leader>.', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], silent_noremap)
 
 --}}}
 -- FZF {{{
