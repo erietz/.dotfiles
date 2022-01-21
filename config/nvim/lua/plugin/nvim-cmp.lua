@@ -29,7 +29,9 @@ cmp.setup({
 })
 
 -- Setup lspconfig.
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').update_capabilities(
+    vim.lsp.protocol.make_client_capabilities()
+)
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
@@ -61,10 +63,6 @@ require'lspconfig'.texlab.setup{
     capabilities = capabilities
 }
 
--- require'lspconfig'.csharp_ls.setup{
---     capabilities = capabilities
--- }
-
 require'lspconfig'.omnisharp.setup{
     cmd = {
         "/bin/omnisharp",
@@ -75,18 +73,15 @@ require'lspconfig'.omnisharp.setup{
     capabilities = capabilities,
 }
 
--- require'lspconfig'.sqls.setup{
-    --     capabilities = capabilities
-    -- }
+if vim.fn.executable("lua-language-server") then
+    local luadev = require("lua-dev").setup({
+      lspconfig = {
+        cmd = {"lua-language-server"}
+      },
+    })
 
-local luadev = require("lua-dev").setup({
-  -- add any options here, or leave empty to use the default settings
-  lspconfig = {
-    cmd = {"lua-language-server"}
-  },
-})
-
-require('lspconfig').sumneko_lua.setup(luadev)
+    require('lspconfig').sumneko_lua.setup(luadev)
+end
 
 
 function install_language_servers()
@@ -101,8 +96,6 @@ function install_language_servers()
         'typescript', 'typescript-language-server',
         -- html
         'vscode-langservers-extracted',
-        -- sql
-        'sql-language-server'
     }
     local command = table.concat(command, " ") .. "\n"
     vim.fn['terminator#open_terminal']()

@@ -1,11 +1,9 @@
 vim.opt.termguicolors = true    -- Better colors
 vim.opt.background = "dark"    -- Sets theme below
 
+-- vim.env.BAT_THEME = "ansi"
 if vim.api.nvim_get_option("background") == "dark" then
-    -- vim.cmd("colorscheme gruvbox")
     vim.cmd("colorscheme base16-eighties")
-    vim.env.BAT_THEME = "gruvbox-dark"
 else
-    vim.cmd("colorscheme gruvbox")
-    vim.env.BAT_THEME = "gruvbox-light"
+    vim.cmd("colorscheme base16-solarized-light")
 end
