@@ -1,5 +1,5 @@
 !increases scale of everything for macbook pro
-Xft.dpi:       192 
+Xft.dpi:       192
 !the number 192 is an integer multiple of 96
 !Xft.dpi:       96
 Xft.antialias: true
@@ -57,7 +57,7 @@ XTerm*selectToClipboard: true
 *color7:                          #d8d8d8
 *color15:                         #f8f8f8
 
-! THE LINE BELOW IS CHANGED BY SOME PROGAM??!?!?!?!?!?!!?!?!
+! the line below is changed fix-xcursor
 Xcursor.theme: xcursor-breeze Xcursor.theme_core Xcursor.theme_core:
 
 ! Xcursor.size:  0
