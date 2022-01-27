@@ -20,6 +20,7 @@ PATH="$HOME/.local/bin"
 PATH+=":$HOME/.local/scripts"
 PATH+=":$GEM_HOME/bin"
 PATH+=":$HOME/.cargo/bin"
+PATH+=":$HOME/.gem/ruby/3.0.0/bin"
 PATH+=":$PATH_SAVE"
 export PATH
 

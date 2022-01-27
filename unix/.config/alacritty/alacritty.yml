@@ -152,8 +152,8 @@ schemes:
       background: "#2d2d2d"
       foreground: "#d3d0c8"
     cursor:
-      cursor: '#2d2d2d'
-      text: '#f2f0ec'
+      cursor: "#f2f0ec"
+      text:   "#000000"
     normal:
       black:   "#2d2d2d"
       red:     "#f2777a"
@@ -173,4 +173,4 @@ schemes:
       cyan:    "#66cccc"
       white:   "#f2f0ec"
 
-colors: *base16_eighties
+colors: *gruvbox_dark
