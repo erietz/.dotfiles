@@ -1,5 +1,6 @@
 **/*zsh_history
 **/*__pycache__
-unix/.config/zsh/.iterm2
-unix/.config/zsh/.zcompdump
+**/zsh/.iterm2
+**/zsh/.zcompdump
+**/*packer_compiled.lua
 

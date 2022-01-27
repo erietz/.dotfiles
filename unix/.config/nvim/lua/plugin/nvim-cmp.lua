@@ -35,53 +35,81 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
 
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'lspconfig'.jedi_language_server.setup{
-    capabilities = capabilities
-}
+local missing_language_servers = {}
+local function setup_lsp_if_server_installed(language_server, func)
+    if vim.fn.executable(language_server) == 1 then
+        func()
+    else
+        table.insert(missing_language_servers, language_server)
+    end
+end
 
-require'lspconfig'.tsserver.setup{
-    capabilities = capabilities
-}
+function print_missing_language_servers()
+    print(vim.inspect(missing_language_servers))
+end
 
-require'lspconfig'.html.setup {
-    capabilities = capabilities
-}
+setup_lsp_if_server_installed("jedi-language-server", function()
+    require'lspconfig'.jedi_language_server.setup{
+        capabilities = capabilities
+    }
+end)
 
-require'lspconfig'.cssls.setup {
-    capabilities = capabilities,
-}
+setup_lsp_if_server_installed("tsserver", function()
+    require'lspconfig'.tsserver.setup{
+        capabilities = capabilities
+    }
+end)
 
-require'lspconfig'.jsonls.setup {
-    capabilities = capabilities,
-}
+setup_lsp_if_server_installed("vscode-langservers-extracted", function()
+    require'lspconfig'.html.setup {
+        capabilities = capabilities
+    }
+end)
 
-require'lspconfig'.clangd.setup{
-    capabilities = capabilities
-}
+setup_lsp_if_server_installed("vscode-langservers-extracted", function()
+    require'lspconfig'.cssls.setup {
+        capabilities = capabilities,
+    }
+end)
 
-require'lspconfig'.texlab.setup{
-    capabilities = capabilities
-}
+setup_lsp_if_server_installed("jsonls", function()
+    require'lspconfig'.jsonls.setup {
+        capabilities = capabilities,
+    }
+end)
 
-require'lspconfig'.omnisharp.setup{
-    cmd = {
-        "/bin/omnisharp",
-        "--languageserver",
-        "--hostPID",
-        tostring(vim.fn.getpid())
-    },
-    capabilities = capabilities,
-}
+setup_lsp_if_server_installed("clangd", function()
+    require'lspconfig'.clangd.setup{
+        capabilities = capabilities
+    }
+end)
 
-if vim.fn.executable("lua-language-server") then
+setup_lsp_if_server_installed("texlab", function()
+    require'lspconfig'.texlab.setup{
+        capabilities = capabilities
+    }
+end)
+
+setup_lsp_if_server_installed("omnisharp", function()
+    require'lspconfig'.omnisharp.setup{
+        cmd = {
+            "/bin/omnisharp",
+            "--languageserver",
+            "--hostPID",
+            tostring(vim.fn.getpid())
+        },
+        capabilities = capabilities,
+    }
+end)
+
+setup_lsp_if_server_installed("lua-language-server", function()
     local luadev = require("lua-dev").setup({
       lspconfig = {
         cmd = {"lua-language-server"}
       },
     })
-
     require('lspconfig').sumneko_lua.setup(luadev)
-end
+end)
 
 
 function install_language_servers()
@@ -91,7 +119,7 @@ function install_language_servers()
         'install',
         '-g',
         -- python
-        'pyright',
+        'jedi-language-server',
         -- javascript
         'typescript', 'typescript-language-server',
         -- html
