@@ -24,7 +24,7 @@ require'nvim-treesitter.configs'.setup {
       "javascript",  -- ‘for’ loop initial declarations are only allowed in C99 mode
       "json",
       "latex",
-      "lua",
+      -- "lua",
       "make",
       "python",
       "scss",

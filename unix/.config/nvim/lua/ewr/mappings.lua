@@ -218,3 +218,15 @@ map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], silent_noremap)
 map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], silent_noremap)
 map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], silent_noremap)
 ---}}}
+-- COC {{{
+
+map('n', ']g', [[<Plug>(coc-diagnostics-next)]], {})
+map('n', '[g', [[<Plug>(coc-diagnostics-prev)]], {})
+map('n', 'gd', [[<Plug>(coc-definition)]], {})
+map('n', 'gy', [[<Plug>(coc-type-definition)]], {})
+map('n', 'gi', [[<Plug>(coc-implementation)]], {})
+map('n', 'gr', [[<Plug>(coc-references)]], {})
+-- snippets extension
+map('i', '<c-l>', [[<Plug>(coc-snippets-expand)]], {})
+
+-- }}}

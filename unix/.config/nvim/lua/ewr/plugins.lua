@@ -40,15 +40,19 @@ return require('packer').startup(function()
     use 'vim-pandoc/vim-pandoc-syntax'
 
     -- autocomplete
-    use 'hrsh7th/nvim-cmp'
-    use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp' }
-    use { 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp' }
-    use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp' }
-    use { 'hrsh7th/cmp-nvim-lua', requires = 'hrsh7th/nvim-cmp' }
-    use { 'quangnguyen30192/cmp-nvim-ultisnips',
-        requires = { 'hrsh7th/nvim-cmp', 'SirVer/ultisnips' }
+    use {
+        'neoclide/coc.nvim',
+        branch = 'release'
     }
-    use "folke/lua-dev.nvim"
+    -- use 'hrsh7th/nvim-cmp'
+    -- use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp' }
+    -- use { 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp' }
+    -- use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp' }
+    -- use { 'hrsh7th/cmp-nvim-lua', requires = 'hrsh7th/nvim-cmp' }
+    -- use { 'quangnguyen30192/cmp-nvim-ultisnips',
+    --     requires = { 'hrsh7th/nvim-cmp', 'SirVer/ultisnips' }
+    -- }
+    -- use "folke/lua-dev.nvim"
 
     -- text editing
     use 'SirVer/ultisnips'
