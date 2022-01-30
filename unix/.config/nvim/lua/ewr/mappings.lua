@@ -226,7 +226,23 @@ map('n', 'gd', [[<Plug>(coc-definition)]], {})
 map('n', 'gy', [[<Plug>(coc-type-definition)]], {})
 map('n', 'gi', [[<Plug>(coc-implementation)]], {})
 map('n', 'gr', [[<Plug>(coc-references)]], {})
--- snippets extension
-map('i', '<c-l>', [[<Plug>(coc-snippets-expand)]], {})
+
+--function Coc_selection_confirm()
+--    if (vim.fn.pumvisible() ~= 0) then
+--        vim.cmd([[normal o]])
+--        -- vim.fn['coc#on_enter']()
+--        --
+--    else
+--        vim.fn['coc#_select_confirm']()
+--    end
+--end
+--map('i', '<cr>', '<c-o>:lua Coc_selection_confirm()<CR>', {})
+
+map(
+    'i',
+    '<cr>',                                 -- TODO: what the hell does this do?
+    [[pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
+    { expr = true, noremap = true, silent = true }
+)
 
 -- }}}

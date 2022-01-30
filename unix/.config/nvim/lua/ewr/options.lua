@@ -51,7 +51,7 @@ vim.opt.spellfile = vim.fn.stdpath('config') .. 'spell/en.utf-8.add'  -- Spellin
 vim.opt.backspace = 'indent,eol,start'  -- Make backspace actually erase
 
 -- Statusline-------------------------------------
-function harpoon_status()
+function Harpoon_status()
   local status = require('harpoon.mark').status()
   if status == '' then
     return ''
@@ -60,7 +60,7 @@ function harpoon_status()
 end
 
 local status_line = '' ..               -- break long string onto multiple lines
-  '%{luaeval("harpoon_status()")} ' ..  -- harpoon mark
+  '%{luaeval("Harpoon_status()")} ' ..  -- harpoon mark
   '%<%f' ..                             -- filename
   ' %h%m%r%=%-10.(%y%)' ..              -- dont remember
   ' %-14.(%l,%c%V%) %P'                 -- dont remember
@@ -84,5 +84,7 @@ vim.opt.formatoptions = vim.opt.formatoptions
 
 vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])
 
-
-vim.g.himalaya_mailbox_picker = 'fzf'
+-- coc
+vim.opt.cmdheight = 2       -- more space for displaying messages
+vim.opt.updatetime = 300    -- better performance
+vim.opt.shortmess = vim.opt.shortmess + "c"     -- dont pass messages to ins-completion-menu
