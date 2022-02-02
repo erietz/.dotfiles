@@ -106,5 +106,7 @@ return require('packer').startup(function()
     -- vimscript dev
     use 'junegunn/vader.vim'
 
+    use 'NLKNguyen/papercolor-theme'
+
 end)
 

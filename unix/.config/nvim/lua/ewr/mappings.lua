@@ -192,7 +192,7 @@ map('x', 'ga', '<Plug>(EasyAlign)', {})
 -- Harpoon {{{
 
 map('n', '<leader>ha', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
-map('n', '<leader>t', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
+map('n', '<leader>ht', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
 map('n', '<leader>1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
 map('n', '<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
 map('n', '<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)

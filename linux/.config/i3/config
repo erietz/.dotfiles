@@ -5,7 +5,6 @@
 #   - See http://i3wm.org/docs/userguide.html for a complete reference.
 #   - Do not use inline comments! They may be executed as code.
 #-------------------------------------------------------------------------------
-
 # Basic settings {{{
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -321,7 +320,6 @@ set $magenta #d3869b
 set $cyan #8ec07c
 set $gray #a89984
 set $orange #fe8019
-set $darkgray #1d2021
 
 # # base16 eighties
 # set $bg #2d2d2d
@@ -332,7 +330,7 @@ set $darkgray #1d2021
 # set $blue #6699cc
 # set $magenta #cc99cc
 # set $cyan #66cccc
-# set $darkgray #747369
+# set $gray #747369
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
@@ -352,24 +350,23 @@ bar {
     colors {
         background $bg
         statusline $fg
-        separator  $darkgray
+        separator  $gray
 
                          # border backgr. text
-        focused_workspace  $green  $green   $bg
+        focused_workspace  $green $green  $bg
         active_workspace   $bg    $bg     $green
         inactive_workspace $bg    $bg     $green
         urgent_workspace   $red   $red    $bg
-
-        binding_mode       $blue $bg $yellow
+        binding_mode       $blue  $bg     $yellow
     }
 }
 
 
-# class                 border    backgr    text    indicat  child_border
-client.focused          $bg       $bg       $green     $magenta $blue
-client.focused_inactive $darkgray $darkgray $yellow   $magenta $darkgray
-client.unfocused        $bg       $bg       $darkgray $magenta $bg
-client.urgent           $red      $red      $white    $red     $red
+# class                 bord  back  text    indic    child_border
+client.focused          $bg   $bg   $green  $magenta $blue
+client.focused_inactive $gray $gray $yellow $magenta $gray
+client.unfocused        $bg   $bg   $gray   $magenta $bg
+client.urgent           $red  $red  $white  $red     $red
 
 client.placeholder      #000000 #0c0c0c #ffffff #000000
 client.background       $bg
@@ -496,10 +493,10 @@ mode "$mode_gaps_ultrawide" {
         bindsym Shift+k gaps top   all     minus 10  gaps bottom all     minus 10
         bindsym Shift+j gaps top   all     plus  10  gaps bottom all     plus  10
 
-        bindsym 0       gaps right current set 0   gaps left current set 0
-        bindsym 9       gaps right current set 600 gaps left current set 600
+        bindsym 0       gaps right current set 0   gaps left current set 0 gaps top current set 0 gaps bottom current set 0
+        bindsym f       gaps right current set 600 gaps left current set 600 gaps top current set 50 gaps bottom current set 50
         bindsym Shift+0 gaps right all     set 0   gaps left all     set 0   gaps top all set 0  gaps bottom all set 0
-        bindsym Shift+9 gaps right all     set 600 gaps left all     set 600 gaps top all set 50 gaps bottom all set 50
+        bindsym Shift+f gaps right all     set 600 gaps left all     set 600 gaps top all set 50 gaps bottom all set 50
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
