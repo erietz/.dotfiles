@@ -1,0 +1,8 @@
+snippet header-gaurd "inserts a header gaurd" b
+#ifndef `!p snip.rv = snip.basename.upper() + "_H"`
+#define `!p snip.rv = snip.basename.upper() + "_H"`
+
+$0
+
+#endif // `!p snip.rv = snip.basename.upper() + "_H"`
+endsnippet

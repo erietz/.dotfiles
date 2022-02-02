@@ -226,6 +226,7 @@ map('n', 'gd', [[<Plug>(coc-definition)]], {})
 map('n', 'gy', [[<Plug>(coc-type-definition)]], {})
 map('n', 'gi', [[<Plug>(coc-implementation)]], {})
 map('n', 'gr', [[<Plug>(coc-references)]], {})
+map('n', 'rn', [[<Plug>(coc-rename)]], {})
 
 --function Coc_selection_confirm()
 --    if (vim.fn.pumvisible() ~= 0) then
