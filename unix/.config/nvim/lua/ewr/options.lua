@@ -85,6 +85,6 @@ vim.opt.formatoptions = vim.opt.formatoptions
 vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])
 
 -- coc
-vim.opt.cmdheight = 2       -- more space for displaying messages
+-- vim.opt.cmdheight = 2       -- more space for displaying messages
 vim.opt.updatetime = 300    -- better performance
 vim.opt.shortmess = vim.opt.shortmess + "c"     -- dont pass messages to ins-completion-menu

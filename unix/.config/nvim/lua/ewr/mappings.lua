@@ -25,7 +25,7 @@ map('n', '<c-l>', ':wincmd l<CR>', silent_noremap)
 map('t', '<C-h>', [[<C-\><C-n><C-w>h]], silent_noremap)
 map('t', '<C-j>', [[<C-\><C-n><C-w>j]], silent_noremap)
 map('t', '<C-k>', [[<C-\><C-n><C-w>k]], silent_noremap)
-map('t', '<leader><leader>', [[<C-\><C-n><C-^>l]], silent_noremap)
+map('t', '<C-^>', [[<C-\><C-n><C-^>l]], silent_noremap)
 
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
