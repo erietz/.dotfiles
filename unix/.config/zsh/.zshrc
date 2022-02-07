@@ -62,6 +62,17 @@ esac
 load_configs $source_files
 
 # Prompt------------------------------------------------------------------------
-setopt PROMPT_SUBST ; PS1='%{$fg[cyan]%}[%{$fg[red]%}%n%{$fg[white]%}@%{$fg[red]%}%m %{$fg[blue]%}%c%{$fg[magenta]%}$(__git_ps1 " (%s)")%{$fg[cyan]%}]\$ %{$reset_color%}'
+local prompt=''
+prompt+='%{$fg[cyan]%}['    # [
+prompt+='%{$fg[red]%}%n'    # $USERNAME
+prompt+='%{$fg[white]%}@'   # @
+prompt+='%{$fg[red]%}%m '   # hostname (up to first .)
+prompt+='%{$fg[blue]%}%~'   # working directory ($HOME replaced by ~)
+prompt+='%{$fg[magenta]%}$(__git_ps1 " (%s)")'  # git branch
+prompt+='%{$fg[cyan]%}]'    # ]
+prompt+=$'\n'               # newline
+prompt+='==> '              # =>
+prompt+='%{$reset_color%}'
+setopt PROMPT_SUBST ; PS1="${prompt}"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.zshrc-extra ] && source ~/.zshrc-extra

@@ -25,7 +25,8 @@ map('n', '<c-l>', ':wincmd l<CR>', silent_noremap)
 map('t', '<C-h>', [[<C-\><C-n><C-w>h]], silent_noremap)
 map('t', '<C-j>', [[<C-\><C-n><C-w>j]], silent_noremap)
 map('t', '<C-k>', [[<C-\><C-n><C-w>k]], silent_noremap)
-map('t', '<leader><leader>', [[<C-\><C-n><C-^>l]], silent_noremap)
+map('t', '<C-^>', [[<C-\><C-n><C-^>l]], silent_noremap)
+map('t', '<C-o>', [[<C-\><C-n><C-^>l]], silent_noremap)
 
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
@@ -198,7 +199,7 @@ map('n', '<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_nor
 map('n', '<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
 map('n', '<leader>4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
 map('n', '<leader>h1', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
-map('n', '<leader>h2.', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], silent_noremap)
+map('n', '<leader>h2', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], silent_noremap)
 
 --}}}
 -- FZF {{{
