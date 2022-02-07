@@ -27,32 +27,13 @@ return require('packer').startup(function()
     use { 'nvim-treesitter/playground',
         requires = {'nvim-treesitter/nvim-treesitter'}
     }
-    use 'neovim/nvim-lspconfig'
-    use {
-        "ray-x/lsp_signature.nvim",
-        config = function()
-            require "lsp_signature".setup()
-        end
-    }
-    -- use {'sheerun/vim-polyglot'}
     use 'lervag/vimtex'
     use 'vim-pandoc/vim-pandoc'
     use 'vim-pandoc/vim-pandoc-syntax'
+    use 'editorconfig/editorconfig-vim'
 
     -- autocomplete
-    use {
-        'neoclide/coc.nvim',
-        branch = 'release'
-    }
-    -- use 'hrsh7th/nvim-cmp'
-    -- use { 'hrsh7th/cmp-nvim-lsp', requires = 'hrsh7th/nvim-cmp' }
-    -- use { 'hrsh7th/cmp-buffer', requires = 'hrsh7th/nvim-cmp' }
-    -- use { 'hrsh7th/cmp-path', requires = 'hrsh7th/nvim-cmp' }
-    -- use { 'hrsh7th/cmp-nvim-lua', requires = 'hrsh7th/nvim-cmp' }
-    -- use { 'quangnguyen30192/cmp-nvim-ultisnips',
-    --     requires = { 'hrsh7th/nvim-cmp', 'SirVer/ultisnips' }
-    -- }
-    -- use "folke/lua-dev.nvim"
+    use { 'neoclide/coc.nvim', branch = 'release' }
 
     -- text editing
     use 'SirVer/ultisnips'
@@ -63,12 +44,6 @@ return require('packer').startup(function()
 
     -- git
     use 'tpope/vim-fugitive'
-    use { 'lewis6991/gitsigns.nvim',
-        requires = {
-            'nvim-lua/plenary.nvim'
-        },
-        config = function() require('gitsigns').setup() end
-    }
 
     -- debugging
     use 'mfussenegger/nvim-dap'
@@ -83,6 +58,7 @@ return require('packer').startup(function()
         'junegunn/seoul256.vim',
         'junegunn/rainbow_parentheses.vim',
         'chriskempson/base16-vim',
+        'NLKNguyen/papercolor-theme'
     }
     use { 'erietz/vim-voodoo', requires = 'tjdevries/colorbuddy.nvim' }
     use { 'tjdevries/gruvbuddy.nvim', requires = 'tjdevries/colorbuddy.nvim' }
@@ -106,7 +82,6 @@ return require('packer').startup(function()
     -- vimscript dev
     use 'junegunn/vader.vim'
 
-    use 'NLKNguyen/papercolor-theme'
 
 end)
 
