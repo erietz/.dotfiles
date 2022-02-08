@@ -31,6 +31,7 @@ return require('packer').startup(function()
     use 'vim-pandoc/vim-pandoc'
     use 'vim-pandoc/vim-pandoc-syntax'
     use 'editorconfig/editorconfig-vim'
+    use 'jlcrochet/vim-cs'
 
     -- autocomplete
     use { 'neoclide/coc.nvim', branch = 'release' }
@@ -62,6 +63,8 @@ return require('packer').startup(function()
     }
     use { 'erietz/vim-voodoo', requires = 'tjdevries/colorbuddy.nvim' }
     use { 'tjdevries/gruvbuddy.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+
+    use { 'vim-airline/vim-airline' } -- basically so I can see my git branch
 
     -- web dev
     use { "NTBBloodbath/rest.nvim",
