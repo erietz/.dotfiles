@@ -22,6 +22,9 @@ require('ewr.options')
 require('ewr.plugins')
 require('ewr.mappings')
 require('ewr.colors')
+if vim.fn.has('win32') then
+    require('ewr.windows')
+end
 
 -- load all lua files in lua/plugin/*
 local module_path = fn.stdpath('config') .. '/lua/plugin/'

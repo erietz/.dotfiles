@@ -38,7 +38,7 @@ vim.opt.listchars = 'nbsp:¬,tab:»·,trail:·,extends:>' -- TODO make tab more 
 
 vim.opt.wildmenu = true         -- Show command line completions
 vim.opt.wildmode = 'longest:full,full'
-vim.opt.mouse = 'i'             -- Mouse enabled in insert mode
+vim.opt.mouse = 'a'             -- Mouse enabled in insert mode
 vim.opt.wrap = false            -- Don't wrap long lines
 
 vim.opt.backup = false          -- No backup files
@@ -65,7 +65,7 @@ local status_line = '' ..               -- break long string onto multiple lines
   ' %h%m%r%=%-10.(%y%)' ..              -- dont remember
   ' %-14.(%l,%c%V%) %P'                 -- dont remember
 
-vim.opt.statusline = status_line
+-- vim.opt.statusline = status_line
 vim.opt.laststatus = 2                  -- Last window always has status line
 --------------------------------------------------
 

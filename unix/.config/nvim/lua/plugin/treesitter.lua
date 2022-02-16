@@ -1,6 +1,6 @@
-if vim.fn.has("win32") or vim.fn.has("win64") then
-    return
-end
+-- if vim.fn.has("win32") or vim.fn.has("win64") then
+--     return
+-- end
 
 local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
 parser_configs.http = {

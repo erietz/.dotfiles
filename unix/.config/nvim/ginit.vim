@@ -4,16 +4,16 @@
 " Description : Setting for neovim-qt on Windows
 "-------------------------------------------------------------------------------
 
+" don't start in a rediculous directory
+cd $HOME
+
 GuiFont! JetBrains Mono:h13
 
-" Use powershell rather than cmd (git bash is not a real shell)
-let &shell = has('win32') ? 'powershell' : 'pwsh'
-let &shellcmdflag = '-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;'
-let &shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
-let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
-set shellquote= shellxquote=
+" get rid of ugly gui for autocompletion  
+GuiPopupmenu 0
 
-" When in rome
-set mouse=a
+" get rid of ugly gui for autocompletion  
+GuiTabline 0
 
-let $FZF_DEFAULT_COMMAND = 'fd --hidden'
+" make cursor always a block
+set guicursor=i:block
