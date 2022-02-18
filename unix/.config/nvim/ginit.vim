@@ -7,7 +7,7 @@
 " don't start in a rediculous directory
 cd $HOME
 
-GuiFont! JetBrains Mono:h13
+GuiFont! JetBrainsMono NF:h13
 
 " get rid of ugly gui for autocompletion  
 GuiPopupmenu 0
