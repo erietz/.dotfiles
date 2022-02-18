@@ -22,7 +22,7 @@ require('ewr.options')
 require('ewr.plugins')
 require('ewr.mappings')
 require('ewr.colors')
-if vim.fn.has('win32') then
+if vim.fn.has('win32') == 1 then
     require('ewr.windows')
 end
 

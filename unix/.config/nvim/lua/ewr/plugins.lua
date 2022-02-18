@@ -4,16 +4,14 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- managing files
-    use { 'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
+    use { 'junegunn/fzf', run = './install --all' }
     use 'junegunn/fzf.vim'
-
     use { 'ThePrimeagen/harpoon',
         requires = {
             'nvim-lua/popup.nvim',
             'nvim-lua/plenary.nvim'
         }
     }
-
     use { 'preservim/nerdtree' }
 
     -- code running

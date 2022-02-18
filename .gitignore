@@ -4,3 +4,4 @@
 **/zsh/.zcompdump
 **/*packer_compiled.lua
 **/*undodir
+**/ipython/profile_default/history.sqlite
