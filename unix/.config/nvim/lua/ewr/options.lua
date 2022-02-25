@@ -34,7 +34,14 @@ vim.opt.incsearch = true        -- Move window to search result while typing
 vim.opt.hlsearch = false        -- Don't keep highlight after searching
 
 vim.opt.list = true             -- Show characters like spaces and tabs in buffer
-vim.opt.listchars = 'nbsp:¬,tab:»·,trail:·,extends:>' -- TODO make tab more visible
+-- vim.opt.listchars = 'nbsp:¬,tab:»·,trail:·,extends:>' -- TODO make tab more visible
+
+-- unicode may be slower
+-- vim.opt.showbreak = '↪ '
+-- vim.opt.listchars = 'tab:→ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
+
+-- ascii only
+vim.opt.listchars = 'tab:..,trail:_,extends:>,precedes:<,nbsp:~'
 
 vim.opt.wildmenu = true         -- Show command line completions
 vim.opt.wildmode = 'longest:full,full'
