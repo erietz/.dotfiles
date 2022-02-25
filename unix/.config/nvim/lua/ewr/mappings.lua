@@ -124,27 +124,27 @@ map('n', '<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left
 map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
 
 --}}}
----- Telescope {{{
+-- Telescope {{{
 
---map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
---map('n', '<leader><leader>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
---map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
---map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
---map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
---map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
---map('n', '<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]], noremap)
---map('n', '<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]], noremap)
---map('n', '<leader><CR>', ':lua dotfiles()<cr>', noremap)
+map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
+map('n', '<c-p>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
+map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
+map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
+map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
+map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
+map('n', '<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]], noremap)
+map('n', '<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]], noremap)
+map('n', '<leader>fd', ':lua dotfiles()<cr>', noremap)
 
---function dotfiles()
---  require('telescope.builtin').find_files({
---    follow = true,
---    hidden = true,
---    search_dirs = {
---      "$HOME/.ewr/",
---    }
---  })
---end
+function dotfiles()
+  require('telescope.builtin').find_files({
+    follow = true,
+    hidden = true,
+    search_dirs = {
+      "$HOME/.dotfiles/",
+    }
+  })
+end
 
 ----}}}
 -- vim-test {{{

@@ -13,6 +13,10 @@ return require('packer').startup(function()
         }
     }
     use { 'preservim/nerdtree' }
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- code running
     use 'erietz/vim-terminator'
