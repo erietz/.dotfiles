@@ -27,7 +27,7 @@ require'nvim-treesitter.configs'.setup {
       "javascript",  -- ‘for’ loop initial declarations are only allowed in C99 mode
       "json",
       "latex",
-      -- "lua",
+      "lua",
       "make",
       "python",
       "scss",
@@ -41,9 +41,9 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
   },
   indent = {
-    enable = true,
+    enable = false,
   },
   incremental_selection = {
-    enable = true,
+    enable = false,
   }
 }

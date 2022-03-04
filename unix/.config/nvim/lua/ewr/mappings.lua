@@ -1,12 +1,9 @@
--- Author      : Ethan Rietz
--- Date        : now
--- Description :
---  Most keybindings are defined here. Completion and snippet plugins have a
---  few keybindings defined in other files
+-- I try to keep most, if not all, of my remaps in this file including for
+-- plugins.
 
 local map = vim.api.nvim_set_keymap
-local noremap = {noremap = true}
-local silent_noremap = {noremap = true, silent = true}
+local noremap = { noremap = true }
+local silent_noremap = { noremap = true, silent = true }
 
 -- Basic vim maps {{{
 
@@ -216,9 +213,9 @@ map('n', '<leader>gc', ':Commits<CR>', noremap)
 
 -- }}}
 -- REST nvim {{{
-map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], silent_noremap)
-map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], silent_noremap)
-map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], silent_noremap)
+map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], {silent = true})
+map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], {silent = true})
+map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], {silent = true})
 ---}}}
 -- COC {{{
 

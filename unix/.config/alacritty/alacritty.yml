@@ -17,9 +17,9 @@ scrolling:
 
 font:
   normal:
-    # family: IBM Plex Mono
+    family: IBM Plex Mono
     # family: Ubuntu Mono
-    family: JetBrains Mono
+    # family: JetBrains Mono
   size: 15
 
 # TODO: Move these keybindings to a new alacritty.yml for windows and load

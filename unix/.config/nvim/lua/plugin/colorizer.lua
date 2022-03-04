@@ -1,1 +1,6 @@
-require('colorizer').setup({'css', 'javascript', 'html', 'i3config'})
+require('colorizer').setup({
+    'css',
+    'javascript',
+    'html',
+    'i3config'
+})

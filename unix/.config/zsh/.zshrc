@@ -76,3 +76,5 @@ prompt+='%{$reset_color%}'
 setopt PROMPT_SUBST ; PS1="${prompt}"
 
 [ -f ~/.zshrc-extra ] && source ~/.zshrc-extra
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
