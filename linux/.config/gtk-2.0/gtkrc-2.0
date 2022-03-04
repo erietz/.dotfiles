@@ -2,8 +2,8 @@
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 include "/home/ethan/.gtkrc-2.0.mine"
-gtk-theme-name="oomox-gruvbox-dark-hard"
-gtk-icon-theme-name="oomox-gruvbox-dark-hard"
+gtk-theme-name="oomox-eboda17"
+gtk-icon-theme-name="oomox-eboda17"
 gtk-font-name="Ubuntu 10"
 gtk-cursor-theme-name="xcursor-breeze"
 gtk-cursor-theme-size=0

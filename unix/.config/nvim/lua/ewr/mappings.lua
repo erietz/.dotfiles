@@ -112,11 +112,12 @@ map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 -- fix lsp diagnostics
 map('n', '<leader>e', ':lua vim.lsp.diagnostic.setloclist()<CR>', silent_noremap)
 
--- Makefile
-map('n', '<leader>mr', ':Dispatch make run<CR>', silent_noremap)
-map('n', '<leader>ma', ':Dispatch make all<CR>', silent_noremap)
-map('n', '<leader>mt', ':Dispatch make test<CR>', silent_noremap)
-map('n', '<leader>mc', ':Dispatch make clean<CR>', silent_noremap)
+-- Dispatch
+map('n', '<leader>mm', ':Make<CR>', silent_noremap)
+map('n', '<leader>mr', ':Make run<CR>', silent_noremap)
+map('n', '<leader>ma', ':Make all<CR>', silent_noremap)
+map('n', '<leader>mt', ':Make test<CR>', silent_noremap)
+map('n', '<leader>mc', ':Make clean<CR>', silent_noremap)
 
 -- Grep word
 map('n', '<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], silent_noremap)
