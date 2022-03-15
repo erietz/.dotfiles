@@ -35,6 +35,8 @@ return require('packer').startup(function()
     use 'editorconfig/editorconfig-vim'
     use 'neoclide/jsonc.vim'
     use 'tmadsen/vim-compiler-plugin-for-dotnet'
+    use 'erietz/vim-todo'
+    use 'erietz/vim-doconce'
 
     -- autocomplete
     use { 'neoclide/coc.nvim', branch = 'release' }

@@ -110,14 +110,13 @@ map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 map('n', '<leader>e', ':lua vim.lsp.diagnostic.setloclist()<CR>', silent_noremap)
 
 -- Dispatch
-map('n', '<leader>mm', ':Make<CR>', silent_noremap)
 map('n', '<leader>mr', ':Make run<CR>', silent_noremap)
-map('n', '<leader>ma', ':Make all<CR>', silent_noremap)
+map('n', '<leader>mb', ':Make build<CR>', silent_noremap)
 map('n', '<leader>mt', ':Make test<CR>', silent_noremap)
 map('n', '<leader>mc', ':Make clean<CR>', silent_noremap)
 
 -- Grep word
-map('n', '<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], silent_noremap)
+-- map('n', '<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], silent_noremap)
 map('n', '<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
 map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
 
@@ -127,6 +126,7 @@ map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
 map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
 map('n', '<c-p>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
 map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
+map('n', '<leader>gw', [[:lua require('telescope.builtin').grep_string()<cr>]], noremap)
 map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
 map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
 map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
@@ -145,6 +145,9 @@ function dotfiles()
 end
 
 ----}}}
+-- vim-terminator {{{
+map('n', '<leader>ra', ':TerminatorRunAltCmd ', noremap)
+-- }}}
 -- vim-test {{{
 
 map('n', '<leader>tn', ':TestNearest<CR>', noremap)
@@ -191,7 +194,7 @@ map('x', 'ga', '<Plug>(EasyAlign)', {})
 -- Harpoon {{{
 
 map('n', '<leader>ha', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
-map('n', '<leader>ht', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
+map('n', '<leader>hh', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
 map('n', '<leader>1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
 map('n', '<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
 map('n', '<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
