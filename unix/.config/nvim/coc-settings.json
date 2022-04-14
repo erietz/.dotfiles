@@ -1,45 +1,38 @@
 {
     "Lua.telemetry.enable": false,
     "diagnostic-languageserver.filetypes": {
-        "python": "pylint"
+        "python": "flake8"
     },
     "diagnostic-languageserver.linters": {
-        "pylint": {
-            "sourceName": "pylint",
-            "command": "pylint",
-            "debounce": 100,
+        "flake8": {
+            "sourceName": "flake8",
+            "command": "flake8",
+            "debounce": 200,
+            "rootPatterns": [".git", "pyproject.toml", "setup.py"],
             "args": [
-                "--max-line-length=79",
-                "--output-format",
-                "text",
-                "--score",
-                "no",
-                "--msg-template",
-                "'{line}:{column}:{category}:{msg} ({msg_id}:{symbol})'",
-                "%file"
+                "--ignore=E402,C901,W503,W504,E116,E702,C0103,C0114,C0115,C0116,C0103,C0301,W0613,W0102,R0903,R0902,R0914,R0915,R0205,W0703,W0702,W0603",
+                "--format=%(row)d,%(col)d,%(code).1s,%(code)s: %(text)s",
+                "-"
             ],
+            "offsetLine": 0,
+            "offsetColumn": 0,
+            "formatLines": 1,
             "formatPattern": [
-                "^(\\d+?):(\\d+?):([a-z]+?):(.*)$",
+                "(\\d+),(\\d+),([A-Z]),(.*)(\\r|\\n)*$",
                 {
                     "line": 1,
                     "column": 2,
-                    "endColumn": 2,
                     "security": 3,
                     "message": 4
                 }
             ],
-            "rootPatterns": ["pyproject.toml", "setup.py", ".git"],
             "securities": {
-                "informational": "hint",
-                "refactor": "info",
-                "convention": "info",
-                "warning": "warning",
-                "error": "error",
-                "fatal": "error"
-            },
-            "offsetColumn": 1,
-            "offsetColumnEnd": 1,
-            "formatLines": 1
+                "W": "info",
+                "E": "warning",
+                "F": "info",
+                "C": "info",
+                "N": "hint"
+            }
         }
     }
 }
