@@ -1,0 +1,48 @@
+#!/usr/bin/env node
+'use strict';
+
+const child_process = require('child_process');
+const process = require('process');
+
+function main() {
+    const branches = getBranches();
+    const userChoice = selectBranch(branches);
+    checkoutBranch(userChoice);
+}
+
+function getBranches() {
+    try {
+        return child_process.execSync("git branch -r").toString();
+    }
+    catch (error) {
+        // console.error(error.message);
+        process.exit(1);
+    }
+}
+
+function selectBranch(branches) {
+    try {
+        const branch = child_process.execSync(
+            "fzf",
+            { input: branches}
+        ).toString();
+        return branch.trim();
+    }
+    catch (error) {
+        // console.error(error.message);
+        process.exit(1);
+    }
+}
+
+function checkoutBranch(remoteBranch) {
+    const localBranch = remoteBranch.split("origin/")[1];
+    try {
+        child_process.execSync(`git checkout -b ${localBranch} ${remoteBranch}`);
+    }
+    catch (error) {
+        // console.error(error.message);
+        process.exit(1);
+    }
+}
+
+main();
