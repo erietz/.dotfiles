@@ -19,7 +19,8 @@ return require('packer').startup(function()
     }
 
     -- code running
-    use 'erietz/vim-terminator'
+    use '/home/ethan/git/vim-terminator'
+    use '/home/ethan/git/vim-tsl'
     use 'tpope/vim-dispatch'
     use 'vim-test/vim-test'
     use 'tartansandal/vim-compiler-pytest'

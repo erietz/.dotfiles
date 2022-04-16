@@ -52,11 +52,11 @@ viman () {
 }
 
 zathura () {
-    /usr/bin/zathura $1 &> /dev/null & disown
+    /usr/bin/zathura $1 &> /dev/null
 }
 
 okular () {
-    /usr/bin/okular $1 &> /dev/null & disown
+    /usr/bin/okular $1 &> /dev/null
 }
 
 gpu () {

@@ -17,6 +17,7 @@ vim.g.coc_global_extensions = {
     -- extras
     'coc-git',
     'coc-snippets',
+    'coc-diagnostic',
     'coc-json',
     'coc-xml',
     'coc-yaml',

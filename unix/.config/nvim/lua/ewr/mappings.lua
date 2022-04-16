@@ -28,7 +28,8 @@ map('t', '<C-o>', [[<C-\><C-n><C-^>l]], silent_noremap)
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
 map('n', '<leader>l', ':lopen<CR>', noremap)
-map('n', '<leader>c', ':cclose<bar>lclose<CR>', noremap)
+map('n', '<leader>oo', ':TerminatorOutputBufferToggle<CR>', noremap)
+map('n', '<leader>c', ':cclose<bar>lclose<bar>TerminatorOutputBufferClose<CR>', noremap)
 
 -- Yank to clipboard
 if vim.fn.has('mac') == 1 then
@@ -61,8 +62,8 @@ map('i', '?', '?<c-g>u', noremap)
 -- Navigation
 map('n', ']q', ':cnext<CR>zz', noremap)
 map('n', '[q', ':cprev<CR>zz', noremap)
-map('n', ']l', ':lnext<CR>zz', noremap)
-map('n', '[l', ':lprev<CR>zz', noremap)
+map('n', '<Tab>',   ':lnext<CR>zz', noremap)
+map('n', '<S-Tab>', ':lprev<CR>zz', noremap)
 map('n', ']b', ':bnext<CR>zz', noremap)
 map('n', '[b', ':bprev<CR>zz', noremap)
 map('n', ']t', ':tnext<CR>zz', noremap)
@@ -107,7 +108,7 @@ map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
 map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
 
 -- fix lsp diagnostics
-map('n', '<leader>e', ':lua vim.lsp.diagnostic.setloclist()<CR>', silent_noremap)
+map('n', '<leader>e', ':CocDiagnostics<CR>', silent_noremap)
 
 -- Dispatch
 map('n', '<leader>mr', ':Make run<CR>', silent_noremap)
@@ -224,6 +225,8 @@ map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], {silent = true}
 
 map('n', ']g', [[<Plug>(coc-diagnostics-next)]], {})
 map('n', '[g', [[<Plug>(coc-diagnostics-prev)]], {})
+map('n', ']r', [[:CocNext<CR>]], {})
+map('n', '[r', [[:CocPrev<CR>]], {})
 map('n', 'gd', [[<Plug>(coc-definition)]], {})
 map('n', 'gy', [[<Plug>(coc-type-definition)]], {})
 map('n', 'gi', [[<Plug>(coc-implementation)]], {})

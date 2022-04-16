@@ -4,7 +4,7 @@
 
 alias ls="ls --color=auto"
 alias open="xdg-open"
-alias spotify="spotify --force-device-scale-factor=2 &> /dev/null & disown"
+alias spotify="spotify --force-device-scale-factor=2 &> /dev/null"
 alias keybindings='grep "bindsym \$mod+" ${HOME}/.config/i3/config | fzf'
 
 is_ubuntu=$(grep -i "ubuntu" /etc/lsb-release)
