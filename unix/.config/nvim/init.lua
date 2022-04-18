@@ -9,13 +9,16 @@ local fn = vim.fn
 -- Install packer.nvim if not already installed
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-  print('Installing packer...')
-  fn.system({
-    'git',
-    'clone',
-    'https://github.com/wbthomason/packer.nvim',
-    install_path
-  })
+    print('Installing packer...')
+    fn.system({
+        'git',
+        'clone',
+        'https://github.com/wbthomason/packer.nvim',
+        install_path
+    })
+
+    print('Installing vim plugins')
+    vim.cmd('PackerSync')
 end
 
 require('ewr.options')
@@ -30,6 +33,6 @@ end
 local module_path = fn.stdpath('config') .. '/lua/plugin/'
 local files = fn.glob(module_path .. '*', 0, 1)
 for _, file in pairs(files) do
-  local filepath = 'plugin.' .. fn.fnamemodify(file, ":t:r")
-  require(filepath)
+    local filepath = 'plugin.' .. fn.fnamemodify(file, ":t:r")
+    require(filepath)
 end
