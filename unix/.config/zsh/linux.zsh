@@ -3,9 +3,13 @@
 #export LIBGL_ALWAYS_INDIRECT=1
 
 alias ls="ls --color=auto"
-alias open="xdg-open"
 alias spotify="spotify --force-device-scale-factor=2 &> /dev/null"
 alias keybindings='grep "bindsym \$mod+" ${HOME}/.config/i3/config | fzf'
+
+open () {
+    xdg-open $1 1>/dev/null 2>/dev/null &
+    disown
+}
 
 is_ubuntu=$(grep -i "ubuntu" /etc/lsb-release)
 
