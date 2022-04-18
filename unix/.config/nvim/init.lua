@@ -8,21 +8,21 @@ local fn = vim.fn
 
 -- Install packer.nvim if not already installed
 local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
+local no_packer = fn.empty(fn.glob(install_path))
+if no_packer > 0 then
     print('Installing packer...')
-    fn.system({
+    packer_bootstrap = fn.system({
         'git',
         'clone',
         'https://github.com/wbthomason/packer.nvim',
         install_path
     })
-
-    print('Installing vim plugins')
-    vim.cmd('PackerSync')
 end
 
 require('ewr.options')
 require('ewr.plugins')
+-- The :PackerSync command only exists after require('packer').startup(....)
+if no_packer > 0 then vim.cmd('PackerSync') end
 require('ewr.mappings')
 require('ewr.colors')
 if vim.fn.has('win32') == 1 then
