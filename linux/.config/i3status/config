@@ -83,8 +83,8 @@ tztime local {
 }
 
 cpu_temperature 0 {
-    format = "% °C"
-    max_threshold = 50
+    format = "%degrees °C"
+    max_threshold = 70
     format_above_threshold = "Warning T above threshold: %degrees °C"
     path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
 }
