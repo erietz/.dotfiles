@@ -33,6 +33,6 @@ end
 local module_path = fn.stdpath('config') .. '/lua/plugin/'
 local files = fn.glob(module_path .. '*', 0, 1)
 for _, file in pairs(files) do
-    local filepath = 'plugin.' .. fn.fnamemodify(file, ":t:r")
+    local filepath = 'ewr.plugin_config.' .. fn.fnamemodify(file, ":t:r")
     require(filepath)
 end
