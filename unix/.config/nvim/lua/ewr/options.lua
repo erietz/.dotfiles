@@ -1,5 +1,5 @@
 vim.g.mapleader = ' '
-vim.g.maplocalleader = ','
+vim.g.maplocalleader = '\\'
 
 vim.opt.completeopt = "menu,menuone,noselect"  -- Autocomplete menu
 vim.opt.hidden = true           -- Change buffers without having to save

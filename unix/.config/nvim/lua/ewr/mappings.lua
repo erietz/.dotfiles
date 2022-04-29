@@ -27,7 +27,7 @@ map('t', '<C-o>', [[<C-\><C-n><C-^>l]], silent_noremap)
 
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
-map('n', '<leader>l', ':lopen<CR>', noremap)
+map('n', '<leader>w', ':lopen<CR>', noremap)    -- "w"indow specific quickfix
 map('n', '<leader>oo', ':TerminatorOutputBufferToggle<CR>', noremap)
 map('n', '<leader>c', ':cclose<bar>lclose<bar>TerminatorOutputBufferClose<CR>', noremap)
 
@@ -62,8 +62,8 @@ map('i', '?', '?<c-g>u', noremap)
 -- Navigation
 map('n', ']q', ':cnext<CR>zz', noremap)
 map('n', '[q', ':cprev<CR>zz', noremap)
-map('n', ']l',   ':lnext<CR>zz', noremap)
-map('n', '[l', ':lprev<CR>zz', noremap)
+map('n', ']w',   ':lnext<CR>zz', noremap)
+map('n', '[w', ':lprev<CR>zz', noremap)
 map('n', ']b', ':bnext<CR>zz', noremap)
 map('n', '[b', ':bprev<CR>zz', noremap)
 map('n', ']t', ':tnext<CR>zz', noremap)
@@ -124,16 +124,16 @@ map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
 --}}}
 -- Telescope {{{
 
-map('n', '<leader>ff', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
+map('n', '<leader><Enter>', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
+map('n', '<leader><Tab>', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
 map('n', '<c-p>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
 map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
-map('n', '<leader>gw', [[:lua require('telescope.builtin').grep_string()<cr>]], noremap)
-map('n', '<leader>fb', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
-map('n', '<leader>fd', [[:lua require('telescope.builtin').file_browser()<cr>]], noremap)
+map('n', '<leader>fw', [[:lua require('telescope.builtin').grep_string()<cr>]], noremap)
 map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
 map('n', '<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]], noremap)
+map('n', '<leader>fb', [[:lua require('telescope.builtin').git_bcommits()<cr>]], noremap)
 map('n', '<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]], noremap)
-map('n', '<leader>fd', ':lua dotfiles()<cr>', noremap)
+map('n', '<leader>.', ':lua dotfiles()<cr>', noremap)
 
 function dotfiles()
   require('telescope.builtin').find_files({
@@ -194,28 +194,18 @@ map('x', 'ga', '<Plug>(EasyAlign)', {})
 --}}}
 -- Harpoon {{{
 
-map('n', '<leader>ha', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
-map('n', '<leader>hh', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
+map('n', '<leader>a', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
+map('n', '<leader>h', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
 map('n', '<leader>1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
 map('n', '<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
 map('n', '<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
 map('n', '<leader>4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
-map('n', '<leader>h1', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
-map('n', '<leader>h2', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], silent_noremap)
+map('n', '<leader>5', [[:lua require('harpoon.ui').nav_file(5)<CR>]], silent_noremap)
+map('n', '<localleader>1', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
+map('n', '<localleader>2', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], silent_noremap)
+map('n', '<localleader><localleader>', [[:lua run_harpoon_cmd_and_navigate()<CR>]], noremap)
 
 --}}}
--- FZF {{{
-
-map('n', '<leader><Enter>', ':Files<CR>', noremap)
-map('n', '<leader><Tab>',   ':Buffers<CR>', noremap)
-map('n', '<leader>rg', ':Rg<CR>', noremap)
-map('n', '<leader>fz', ':FZF<CR>', noremap)
-map('n', '<leader>df', ':Files ~/.dotfiles<CR>', noremap)
-map('n', '<leader>gf', ':GFiles<CR>', noremap)
-map('n', '<leader>gs', ':GFiles?<CR>', noremap)
-map('n', '<leader>gc', ':Commits<CR>', noremap)
-
--- }}}
 -- REST nvim {{{
 map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], {silent = true})
 map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], {silent = true})
