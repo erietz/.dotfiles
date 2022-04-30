@@ -8,33 +8,42 @@ else
     line_ending = "\n"
 end
 
-local filename = {
-    ["absolute"] = vim.fn.expand("%:p"),
-    ["dirname"] = vim.fn.expand("%:h"),
-    ["basename"] = vim.fn.expand("%:t"),
-    ["extension"] = vim.fn.expand("%:e"),
-    ["root"] = vim.fn.expand("%:r"),
-    ["root_absolute"] = vim.fn.expand("%:p:r"),
-}
-
 -- Local Functions--------------------------------------------------------------
+
+-- this is weird way to do this but whatever.
+local function filename(mod)
+    if mod == "absolute" then
+        return vim.fn.expand("%:p")
+    elseif mod == "dirname"  then
+        return vim.fn.expand("%:h")
+    elseif mod == "basename"  then
+        return vim.fn.expand("%:t")
+    elseif mod == "root"  then
+        return vim.fn.expand("%:f")
+    elseif mod == "root_absolute"  then
+        return vim.fn.expand("%:p:r")
+    else
+        error("invalid file modifier")
+    end
+end
+
 
 local harpoon_filetype_map = {
     ["python"] = function()
-        return "python " .. filename.absolute
+        return "python " .. filename("absolute")
     end,
     ["javascript"] = function()
-        return "node " .. filename.absolute
+        return "node " .. filename("absolute")
     end,
     ["typescript"] = function()
-        return "ts-node " .. filename.absolute
+        return "ts-node " .. filename("absolute")
     end,
     ["lua"] = function()
-        return "lua " .. filename.absolute
+        return "lua " .. filename("absolute")
     end,
     ["c"] = function()
-        return "gcc "..filename.absolute.." -o "..filename.root_absolute..
-            " && "..filename.root_absolute
+        return "gcc "..filename("absolute").." -o "..filename("root_absolute")..
+            " && "..filename("root_absolute")
     end
 }
 

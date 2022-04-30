@@ -30,7 +30,7 @@ if vim.fn.has('win32') == 1 then
 end
 
 -- load all lua files in lua/plugin/*
-local module_path = fn.stdpath('config') .. '/lua/plugin/'
+local module_path = fn.stdpath('config') .. '/lua/ewr/plugin_config/'
 local files = fn.glob(module_path .. '*', 0, 1)
 for _, file in pairs(files) do
     local filepath = 'ewr.plugin_config.' .. fn.fnamemodify(file, ":t:r")
