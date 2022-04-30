@@ -3,7 +3,7 @@ vim.g.coc_global_extensions = {
     'coc-clangd',       -- c, c++, objective c
     'coc-css',          -- css, scss, less
     'coc-html',         -- html, handlebars, razor
-    'coc-jedi',         -- python
+    'coc-python',         -- python
     'coc-omnisharp',    -- csharp and visual basic
     'coc-rls',          -- rust
     'coc-sh',           -- bash

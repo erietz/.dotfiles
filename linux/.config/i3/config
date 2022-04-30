@@ -155,7 +155,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # workspace back and forth (with/without active container)
-workspace_auto_back_and_forth yes
+workspace_auto_back_and_forth no
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab move container to workspace back_and_forth; workspace back_and_forth
 
@@ -218,10 +218,11 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 # }}}
 # How specific programs open {{{
 assign [class="firefox"] $ws2
-assign [class="discord"] $ws3
 assign [class="Thunderbird"] $ws4
+assign [class="Spotify"] $ws8
+assign [class="discord"] $ws9
 # assign [class="Spotify"] $ws8     # doesn't work (next line is work around)
-for_window [class="Spotify"] move to workspace $ws8
+# for_window [class="Spotify"] move to workspace $ws8
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -363,9 +364,9 @@ bar {
 
 
 # class                 bord  back  text    indic    child_border
-client.focused          $bg   $bg   $green  $magenta $blue
+client.focused          $bg   $fg   #000000 $magenta $blue
 client.focused_inactive $gray $gray $yellow $magenta $gray
-client.unfocused        $bg   $bg   $gray   $magenta $bg
+client.unfocused        $bg   $gray #000000 $magenta $bg
 client.urgent           $red  $red  $white  $red     $red
 
 client.placeholder      #000000 #0c0c0c #ffffff #000000
