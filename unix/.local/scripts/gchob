@@ -20,11 +20,17 @@ function getBranches() {
     }
 }
 
+// - fzf cleverly reads from /dev/tty instead of from stdin
+// - fzf's tui is printed to stderr
+// - the result of fzf's selection is printed to stdout
 function selectBranch(branches) {
     try {
         const branch = child_process.execSync(
             "fzf",
-            { input: branches}
+            {
+                input: branches,    // specifying input overrides stdio[0]
+                stdio: ['pipe', 'pipe', 'inherit'] // [stdin, stdout, stderr]
+            }
         ).toString();
         return branch.trim();
     }
