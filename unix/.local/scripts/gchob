@@ -11,9 +11,12 @@ function main() {
 }
 
 function dieOnFail(childProcess) {
-    if (childProcess.status != 0) {
-        console.log(childProcess.stdout.toString());
-        console.error(childProcess.stderr.toString());
+    if (childProcess.status !== 0) {
+        if (childProcess.signal !== null) {
+            console.log("signal", childProcess.signal);
+        }
+        console.log(childProcess.stdout?.toString());
+        console.error(childProcess.stderr?.toString());
         process.exit(1);
     }
 }
