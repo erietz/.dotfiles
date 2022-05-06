@@ -10,45 +10,42 @@ function main() {
     checkoutBranch(userChoice);
 }
 
-function getBranches() {
-    try {
-        return child_process.execSync("git branch -r").toString();
-    }
-    catch (error) {
-        // console.error(error.message);
+function dieOnFail(childProcess) {
+    if (childProcess.status != 0) {
+        console.log(childProcess.stdout.toString());
+        console.error(childProcess.stderr.toString());
         process.exit(1);
     }
+}
+
+function getBranches() {
+    const cp =  child_process.spawnSync("git", ["branch", "-r"]);
+    dieOnFail(cp);
+    return cp.stdout.toString();
 }
 
 // - fzf cleverly reads from /dev/tty instead of from stdin
 // - fzf's tui is printed to stderr
 // - the result of fzf's selection is printed to stdout
 function selectBranch(branches) {
-    try {
-        const branch = child_process.execSync(
-            "fzf",
-            {
-                input: branches,    // specifying input overrides stdio[0]
-                stdio: ['pipe', 'pipe', 'inherit'] // [stdin, stdout, stderr]
-            }
-        ).toString();
-        return branch.trim();
-    }
-    catch (error) {
-        // console.error(error.message);
-        process.exit(1);
-    }
+    const cp = child_process.spawnSync(
+        "fzf",
+        {
+            input: branches,    // specifying input overrides stdio[0]
+            stdio: ['pipe', 'pipe', 'inherit'] // [stdin, stdout, stderr]
+        }
+    )
+    dieOnFail(cp);
+    return cp.stdout.toString().trim();
 }
 
 function checkoutBranch(remoteBranch) {
     const localBranch = remoteBranch.split("origin/")[1];
-    try {
-        child_process.execSync(`git checkout -b ${localBranch} ${remoteBranch}`);
-    }
-    catch (error) {
-        // console.error(error.message);
-        process.exit(1);
-    }
+    const cp = child_process.spawnSync(
+        "git",
+        ["checkout", "-b", localBranch, remoteBranch]
+    );
+    dieOnFail(cp);
 }
 
 main();
