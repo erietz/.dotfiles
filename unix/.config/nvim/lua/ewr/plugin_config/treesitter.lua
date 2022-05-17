@@ -30,6 +30,7 @@ require'nvim-treesitter.configs'.setup {
       "lua",
       "make",
       "python",
+      "rust",
       "scss",
       "toml",
       "tsx",     -- ‘for’ loop initial declarations are only allowed in C99 mode

@@ -125,9 +125,13 @@ bindsym $mod+minus scratchpad show
 #bindsym $mod+bracketright workspace next
 #bindsym $mod+bracketleft workspace prev
 
+# ultrawide monitor gaps
+bindsym $mod+u gaps right current set 600 gaps left current set 600 gaps top current set 50 gaps bottom current set 50
+bindsym $mod+Shift+u gaps right all     set 600 gaps left all     set 600 gaps top all set 50 gaps bottom all set 50
+
 # change borders
 # hide border for window
-bindsym $mod+u border none
+# bindsym $mod+u border none
 # set border for window
 bindsym $mod+y border pixel 2
 # reset border including title bar
@@ -333,6 +337,9 @@ set $orange #fe8019
 # set $cyan #66cccc
 # set $gray #747369
 
+# popos theme
+set $pop_orange #FFAD00
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
     i3bar_command i3bar
@@ -354,11 +361,11 @@ bar {
         separator  $gray
 
                          # border backgr. text
-        focused_workspace  $green $green  $bg
-        active_workspace   $bg    $bg     $green
-        inactive_workspace $bg    $bg     $green
-        urgent_workspace   $red   $red    $bg
-        binding_mode       $blue  $bg     $yellow
+        focused_workspace  $pop_orange  $pop_orange $bg
+        active_workspace   $bg          $bg         $pop_orange
+        inactive_workspace $bg          $bg         $pop_orange
+        urgent_workspace   $red         $red        $bg
+        binding_mode       $blue        $bg         $yellow
     }
 }
 

@@ -17,11 +17,14 @@ scrolling:
 
 font:
   normal:
-    # family: IBM Plex Mono
+    # family: Roboto Mono
     # family: Ubuntu Mono
-    # family: JetBrains Mono
-    family: JuliaMono
+    family: JetBrains Mono
+    # family: JuliaMono
   size: 15
+
+window:
+  opacity: 1
 
 # TODO: Move these keybindings to a new alacritty.yml for windows and load
 # this file using an include section

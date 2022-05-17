@@ -64,14 +64,14 @@ load_configs $source_files
 # Prompt------------------------------------------------------------------------
 local prompt=''
 prompt+='%{$fg[cyan]%}['    # [
-prompt+='%{$fg[red]%}%n'    # $USERNAME
+prompt+='%{$fg[green]%}%n'    # $USERNAME
 prompt+='%{$fg[white]%}@'   # @
-prompt+='%{$fg[red]%}%m '   # hostname (up to first .)
+prompt+='%{$fg[green]%}%m '   # hostname (up to first .)
 prompt+='%{$fg[blue]%}%~'   # working directory ($HOME replaced by ~)
 prompt+='%{$fg[magenta]%}$(__git_ps1 " (%s)")'  # git branch
 prompt+='%{$fg[cyan]%}]'    # ]
 prompt+=$'\n'               # newline
-prompt+='> '                # >
+prompt+='~ '                # ~
 prompt+='%{$reset_color%}'
 setopt PROMPT_SUBST ; PS1="${prompt}"
 
