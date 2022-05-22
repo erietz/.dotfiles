@@ -58,6 +58,7 @@ return require('packer').startup(function()
     -- colors
     use
     {
+        -- '/home/ethan/git/vim/gruvbox',
         'norcalli/nvim-colorizer.lua',
         'gruvbox-community/gruvbox',
         'junegunn/seoul256.vim',
@@ -70,6 +71,7 @@ return require('packer').startup(function()
 
     use {
       'nvim-lualine/lualine.nvim',
+      disable = false,
       requires = { 'kyazdani42/nvim-web-devicons', opt = true },
       config = function()
           require('lualine').setup()

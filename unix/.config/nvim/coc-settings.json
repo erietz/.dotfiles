@@ -1,7 +1,9 @@
 {
     "Lua.telemetry.enable": false,
+    "pyright.disableDiagnostics": true,
     "diagnostic-languageserver.filetypes": {
-        "python": ["flake8", "pylint"]
+        "python": ["flake8"]
+        // "python": ["flake8", "pylint"]
     },
     "diagnostic-languageserver.linters": {
         "flake8": {

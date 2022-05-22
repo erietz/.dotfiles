@@ -28,7 +28,7 @@ map('t', '<localleader><localleader>', [[<C-\><C-n><C-^>l]], silent_noremap)
 
 -- Toggle quickfix
 map('n', '<leader>q', ':copen<CR>', noremap)
-map('n', '<leader>w', ':lopen<CR>', noremap)    -- "w"indow specific quickfix
+map('n', '<leader>w', ':lopen<CR>', noremap)    -- "window specific quickfix
 map('n', '<leader>oo', ':TerminatorOutputBufferToggle<CR>', noremap)
 map('n', '<leader>c', ':cclose<bar>lclose<bar>TerminatorOutputBufferClose<CR>', noremap)
 
@@ -69,6 +69,9 @@ map('n', ']b', ':bnext<CR>zz', noremap)
 map('n', '[b', ':bprev<CR>zz', noremap)
 map('n', ']t', ':tnext<CR>zz', noremap)
 map('n', '[t', ':tprev<CR>zz', noremap)
+
+-- scrolling down with left hand only gives me carpel tunnel
+map('n', '<c-y>', '<c-d>', noremap)
 
 -- Scroll split
 map('n', '<c-m-f>', '<c-w><c-w><c-d><c-w><c-w>', noremap)
@@ -222,7 +225,7 @@ map('n', 'gd', [[<Plug>(coc-definition)]], {})
 map('n', 'gy', [[<Plug>(coc-type-definition)]], {})
 map('n', 'gi', [[<Plug>(coc-implementation)]], {})
 map('n', 'gr', [[<Plug>(coc-references)]], {})
-map('n', 'rn', [[<Plug>(coc-rename)]], {})
+map('n', '<leader>rn', [[<Plug>(coc-rename)]], {})
 
 --function Coc_selection_confirm()
 --    if (vim.fn.pumvisible() ~= 0) then
