@@ -4,11 +4,6 @@
 -- Description : Main config file for the Awesome Window Manager
 --------------------------------------------------------------------------------
 
--- TODO: get tabbed layout like in i3
--- https://github.com/michaelbeaumont/awesome-leaved
---
--- https://obsolete.computer/geekery/my-awesome-awesome-config.html
-
 -- If LuaRocks is installed, make sure that packages installed through it are
 -- found (e.g. lgi). If LuaRocks is not installed, do nothing.
 pcall(require, "luarocks.loader")
@@ -81,6 +76,7 @@ modkey = "Mod4"
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
+    awful.layout.suit.max,
     awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
@@ -89,8 +85,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.fair.horizontal,
     -- awful.layout.suit.spiral,
     -- awful.layout.suit.spiral.dwindle,
-    awful.layout.suit.max,
-    awful.layout.suit.max.fullscreen,
+    -- awful.layout.suit.max.fullscreen,
     -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
