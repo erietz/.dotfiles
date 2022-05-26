@@ -297,7 +297,7 @@ globalkeys = gears.table.join(
                     left = 750,
                     right = 750,
                     top = 80,
-                    bottom = 20
+                    bottom = 80
                 }
             end)
         end,
