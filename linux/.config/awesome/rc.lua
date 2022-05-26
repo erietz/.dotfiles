@@ -63,6 +63,7 @@ end
 beautiful.init(
     gears.filesystem.get_configuration_dir() .. "themes/default/theme.lua"
 )
+beautiful.font = "JetBrains Mono 14"
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
