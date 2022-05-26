@@ -60,8 +60,8 @@ end
 
 -- Variable definitions {{{
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-beautiful.font = "Ubuntu 12"
+beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/default/theme.lua")
+beautiful.font = "Ubuntu 14"
 beautiful.useless_gap = 10
 
 -- This is used later as the default terminal and editor to run.
