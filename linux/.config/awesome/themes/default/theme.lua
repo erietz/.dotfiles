@@ -18,13 +18,14 @@ local theme = {}
 theme.font          = "sans 10"
 
 theme.bg_normal     = "#282828"
-theme.bg_focus      = "#83a598"
+theme.bg_focus      = "#504945"
 theme.bg_urgent     = "#ff0000"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
+theme.accent        = "#fe8019"
 
 theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#282828"
+theme.fg_focus      = "#ffffff"
 theme.fg_urgent     = "#ffffff"
 theme.fg_minimize   = "#ffffff"
 
@@ -123,7 +124,7 @@ theme.layout_cornerse = themes_path.."default/layouts/cornersew.png"
 
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(
-    theme.menu_height, theme.bg_normal, theme.fg_urgent
+    theme.menu_height, theme.accent, theme.bg_normal
 )
 
 -- Define the icon theme for application icons. If not set then the icons
