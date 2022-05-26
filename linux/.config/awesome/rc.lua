@@ -76,11 +76,12 @@ editor_cmd = terminal .. " -e " .. editor
 -- However, you can use another modifier like Mod1, but it may interact with others.
 modkey = "Mod4"
 
+
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
-    awful.layout.suit.tile.left,
+    -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
     -- awful.layout.suit.fair,
@@ -89,7 +90,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
+    -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.nw,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
@@ -255,10 +256,12 @@ root.buttons(gears.table.join(
 
 -- Key bindings {{{
 globalkeys = gears.table.join(
+
     awful.key({ modkey }, "s",
         hotkeys_popup.show_help,
         {description="show help", group="awesome"}
     ),
+
     awful.key({ modkey }, "Left",
         awful.tag.viewprev,
         {description = "view previous", group = "tag"}
@@ -280,9 +283,38 @@ globalkeys = gears.table.join(
         function () awful.client.focus.byidx(-1) end,
         {description = "focus previous by index", group = "client"}
     ),
+
     awful.key({ modkey }, "w",
         function () mymainmenu:show() end,
         {description = "show main menu", group = "awesome"}
+    ),
+
+    -- Gaps
+    awful.key({ modkey }, "u",
+        function()
+            awful.screen.connect_for_each_screen(function(s)
+                s.padding = {
+                    left = 750,
+                    right = 750,
+                    top = 80,
+                    bottom = 20
+                }
+            end)
+        end,
+        {description = "Set screen padding for ultrawide monitor", group = "client"}
+    ),
+    awful.key({ modkey, "Shift" }, "u",
+        function()
+            awful.screen.connect_for_each_screen(function(s)
+                s.padding = {
+                    left = 0,
+                    right = 0,
+                    top = 0,
+                    bottom = 0
+                }
+            end)
+        end,
+        {description = "Reset screen padding back to zero", group = "client"}
     ),
 
     -- Layout manipulation
