@@ -277,16 +277,16 @@ globalkeys = gears.table.join(
     ),
 
     awful.key({ modkey }, "j",
-        function () awful.client.focus.byidx( 1) end,
+        function() awful.client.focus.byidx( 1) end,
         {description = "focus next by index", group = "client"}
     ),
     awful.key({ modkey }, "k",
-        function () awful.client.focus.byidx(-1) end,
+        function() awful.client.focus.byidx(-1) end,
         {description = "focus previous by index", group = "client"}
     ),
 
     awful.key({ modkey }, "w",
-        function () mymainmenu:show() end,
+        function() mymainmenu:show() end,
         {description = "show main menu", group = "awesome"}
     ),
 
@@ -320,19 +320,19 @@ globalkeys = gears.table.join(
 
     -- Layout manipulation
     awful.key({ modkey, "Shift" }, "j",
-        function () awful.client.swap.byidx(1) end,
+        function() awful.client.swap.byidx(1) end,
         {description = "swap with next client by index", group = "client"}
     ),
     awful.key({ modkey, "Shift" }, "k",
-        function () awful.client.swap.byidx(-1) end,
+        function() awful.client.swap.byidx(-1) end,
         {description = "swap with previous client by index", group = "client"}
     ),
     awful.key({ modkey, "Control" }, "j",
-        function () awful.screen.focus_relative( 1) end,
+        function() awful.screen.focus_relative( 1) end,
         {description = "focus the next screen", group = "screen"}
     ),
     awful.key({ modkey, "Control" }, "k",
-        function () awful.screen.focus_relative(-1) end,
+        function() awful.screen.focus_relative(-1) end,
         {description = "focus the previous screen", group = "screen"}
     ),
     awful.key({ modkey }, "u",
@@ -340,7 +340,7 @@ globalkeys = gears.table.join(
         {description = "jump to urgent client", group = "client"}
     ),
     awful.key({ modkey }, "Tab",
-        function ()
+        function()
             awful.client.focus.history.previous()
             if client.focus then
                 client.focus:raise()
@@ -351,7 +351,7 @@ globalkeys = gears.table.join(
 
     -- Standard program
     awful.key({ modkey }, "Return",
-        function () awful.spawn(terminal) end,
+        function() awful.spawn(terminal) end,
         {description = "open a terminal", group = "launcher"}
     ),
     awful.key({ modkey, "Control" }, "r",
@@ -364,40 +364,40 @@ globalkeys = gears.table.join(
     ),
 
     awful.key({ modkey }, "l",
-        function () awful.tag.incmwfact(0.05) end,
+        function() awful.tag.incmwfact(0.05) end,
         {description = "increase master width factor", group = "layout"}
     ),
     awful.key({ modkey }, "h",
-        function () awful.tag.incmwfact(-0.05) end,
+        function() awful.tag.incmwfact(-0.05) end,
         {description = "decrease master width factor", group = "layout"}
     ),
     awful.key({ modkey, "Shift" }, "h",
-        function () awful.tag.incnmaster( 1, nil, true) end,
+        function() awful.tag.incnmaster( 1, nil, true) end,
         {description = "increase the number of master clients", group = "layout"}
     ),
     awful.key({ modkey, "Shift" }, "l",
-        function () awful.tag.incnmaster(-1, nil, true) end,
+        function() awful.tag.incnmaster(-1, nil, true) end,
         {description = "decrease the number of master clients", group = "layout"}
     ),
     awful.key({ modkey, "Control" }, "h",
-        function () awful.tag.incncol( 1, nil, true) end,
+        function() awful.tag.incncol( 1, nil, true) end,
         {description = "increase the number of columns", group = "layout"}
     ),
     awful.key({ modkey, "Control" }, "l",
-        function () awful.tag.incncol(-1, nil, true) end,
+        function() awful.tag.incncol(-1, nil, true) end,
         {description = "decrease the number of columns", group = "layout"}
     ),
     awful.key({ modkey }, "space",
-        function () awful.layout.inc( 1) end,
+        function() awful.layout.inc( 1) end,
         {description = "select next", group = "layout"}
     ),
     awful.key({ modkey, "Shift" }, "space",
-        function () awful.layout.inc(-1) end,
+        function() awful.layout.inc(-1) end,
         {description = "select previous", group = "layout"}
     ),
 
     awful.key({ modkey, "Control" }, "n",
-        function ()
+        function()
             local c = awful.client.restore()
             -- Focus restored client
             if c then
@@ -411,12 +411,12 @@ globalkeys = gears.table.join(
 
     -- Prompt
     awful.key({ modkey }, "r",
-        function () awful.screen.focused().mypromptbox:run() end,
+        function() awful.screen.focused().mypromptbox:run() end,
         {description = "run prompt", group = "launcher"}
     ),
 
     awful.key({ modkey }, "x",
-        function ()
+        function()
             awful.prompt.run {
                 prompt       = "Run Lua code: ",
                 textbox      = awful.screen.focused().mypromptbox.widget,
@@ -430,6 +430,36 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p",
         function() menubar.show() end,
         {description = "show the menubar", group = "launcher"}
+    ),
+
+    -- Multimedia keys
+    awful.key({}, "XF86AudioPlay",
+        function() awful.util.spawn("playerctl play-pause") end,
+        {description = "Toggle play/pause", group = "client"}
+    ),
+    awful.key({}, "XF86AudioNext",
+        function() awful.util.spawn("playerctl next") end,
+        {description = "Next song", group = "client"}
+    ),
+    awful.key({}, "XF86AudioPrev",
+        function() awful.util.spawn("playerctl previous") end,
+        {description = "Previous song", group = "client"}
+    ),
+    awful.key({}, "XF86AudioRaiseVolume",
+        function() awful.util.spawn("pulseaudio-ctl up") end,
+        {description = "Increase volume", group = "client"}
+    ),
+    awful.key({}, "XF86AudioLowerVolume",
+        function() awful.util.spawn("pulseaudio-ctl down") end,
+        {description = "Decrease volume", group = "client"}
+    ),
+    awful.key({}, "XF86AudioMute",
+        function() awful.util.spawn("pulseaudio-ctl mute") end,
+        {description = "Mute audio", group = "client"}
+    ),
+    awful.key({}, "XF86AudioMicMute",
+        function() awful.util.spawn("pulseaudio-ctl mute-input") end,
+        {description = "Mute Microphone", group = "client"}
     )
 )
 
@@ -713,6 +743,7 @@ run_single_instance({
     "clipit",
     "xautolock -time 10 -locker blurlock",
     "pa-applet",
+    "nitrogen --restore"
 })
 
 -- }}}
