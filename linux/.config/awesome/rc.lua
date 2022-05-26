@@ -60,9 +60,9 @@ end
 
 -- Variable definitions {{{
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/default/theme.lua")
-beautiful.font = "Ubuntu 14"
-beautiful.useless_gap = 10
+beautiful.init(
+    gears.filesystem.get_configuration_dir() .. "themes/default/theme.lua"
+)
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -223,7 +223,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s })
+    s.mywibox = awful.wibar({ position = "bottom", screen = s })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
