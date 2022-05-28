@@ -12,12 +12,9 @@ pcall(require, "luarocks.loader")
 local gears = require("gears")
 local awful = require("awful")
 require("awful.autofocus")
--- Widget and layout library
-local wibox = require("wibox")
--- Theme handling library
-local beautiful = require("beautiful")
--- Notification library
-local naughty = require("naughty")
+local wibox = require("wibox")          -- Widget and layout library
+local beautiful = require("beautiful")  -- Theme handling library
+local naughty = require("naughty")      -- Notification library
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
@@ -31,7 +28,7 @@ if awesome.startup_errors then
     naughty.notify({
         preset = naughty.config.presets.critical,
         title = "Oops, there were errors during startup!",
-        text = awesome.startup_errors 
+        text = awesome.startup_errors
     })
 end
 
@@ -53,23 +50,28 @@ do
 end
 -- }}}
 
--- Variable definitions {{{
+-- The Basics {{{
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(
     gears.filesystem.get_configuration_dir() .. "themes/default/theme.lua"
 )
 beautiful.font = "JetBrains Mono 14"
 
+-- size of notifications containing images
+naughty.config.defaults['icon_size'] = 100
+
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "vim"
 editor_cmd = terminal .. " -e " .. editor
 
--- Default modkey.
--- Usually, Mod4 is the key with a logo between Control and Alt.
--- If you do not like this or do not have such a key,
--- I suggest you to remap Mod4 to another key using xmodmap or other tools.
--- However, you can use another modifier like Mod1, but it may interact with others.
+--[[
+Usually, Mod4 is the key with a logo between Control and Alt.
+
+If you do not like this or do not have such a key, - I suggest you to remap
+Mod4 to another key using xmodmap or other tools. However, you can use another
+modifier like Mod1, but it may interact with others.
+--]]
 modkey = "Mod4"
 
 
@@ -191,7 +193,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag( { "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -219,7 +221,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "bottom", screen = s })
+    s.mywibox = awful.wibar({ position = "top", screen = s })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -349,11 +351,11 @@ globalkeys = gears.table.join(
         function() awful.spawn(terminal) end,
         {description = "open a terminal", group = "launcher"}
     ),
-    awful.key({ modkey, "Control" }, "r",
+    awful.key({ modkey, "Shift" }, "r",
         awesome.restart,
         {description = "reload awesome", group = "awesome"}
     ),
-    awful.key({ modkey, "Shift" }, "q",
+    awful.key({ modkey, "Shift" }, "c",
         awesome.quit,
         {description = "quit awesome", group = "awesome"}
     ),
@@ -466,7 +468,7 @@ clientkeys = gears.table.join(
         end,
         {description = "toggle fullscreen", group = "client"}
     ),
-    awful.key({ modkey, "Shift"   }, "c",
+    awful.key({ modkey }, "q",
         function (c) c:kill() end,
         {description = "close", group = "client"}
     ),
@@ -650,8 +652,15 @@ awful.rules.rules = {
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
-    -- { rule = { class = "Firefox" },
-    --   properties = { screen = 1, tag = "2" } },
+    { rule = { class = "Firefox" },
+      properties = { screen = 1, tag = "2" } },
+    { rule = { class = "Thunderbird" },
+      properties = { screen = 1, tag = "3" } },
+    -- spotify does not work (like in i3) ... need a work around
+    { rule = { class = "Spotify" },
+      properties = { screen = 1, tag = "8" } },
+    { rule = { class = "discord" },
+      properties = { screen = 1, tag = "9" } },
 }
 -- }}}
 
