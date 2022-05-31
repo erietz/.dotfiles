@@ -79,7 +79,7 @@ modkey = "Mod4"
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.max,
-    awful.layout.suit.floating,
+    -- awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
@@ -476,7 +476,7 @@ clientkeys = gears.table.join(
         awful.client.floating.toggle                     ,
         {description = "toggle floating", group = "client"}
     ),
-    awful.key({ modkey, "Control" }, "Return",
+    awful.key({ modkey, "Shift" }, "Return",
         function (c) c:swap(awful.client.getmaster()) end,
         {description = "move to master", group = "client"}
     ),
