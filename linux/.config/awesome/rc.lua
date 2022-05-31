@@ -392,6 +392,10 @@ globalkeys = gears.table.join(
         function() awful.layout.inc(-1) end,
         {description = "select previous", group = "layout"}
     ),
+    awful.key({ modkey, "Shift" }, "f",
+        function() awful.layout.set(awful.layout.suit.floating) end,
+        {description = "set layout to floating", group = "layout"}
+    ),
 
     awful.key({ modkey, "Control" }, "n",
         function()
