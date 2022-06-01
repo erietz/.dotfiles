@@ -520,6 +520,32 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "(un)maximize horizontally", group = "client"}
+    ),
+
+    -- Screenshots
+    awful.key({ }, "Print",
+        function()
+            awful.spawn.with_shell(
+                "scrot --focused --exec 'mv $f ~/Pictures/scrot/' && notify-send 'screenshot of window taken'"
+            )
+        end,
+        {description = "scrot window", group = "screenshot"}
+    ),
+    awful.key({ modkey }, "Print",
+        function()
+            awful.spawn.with_shell(
+                "scrot --select --exec 'mv $f ~/Pictures/scrot/' && notify-send 'screenshot of selection taken'"
+            )
+        end,
+        {description = "scrot select", group = "screenshot"}
+    ),
+    awful.key({ modkey, "Shift" }, "Print",
+        function()
+            awful.spawn.with_shell(
+                "scrot --exec 'mv $f ~/Pictures/scrot/' && notify-send 'screenshot of entire screen taken'"
+            )
+        end,
+        {description = "scrot entire screen", group = "screenshot"}
     )
 )
 
