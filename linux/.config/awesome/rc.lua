@@ -20,6 +20,7 @@ local hotkeys_popup = require("awful.hotkeys_popup")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+local vicious = require("vicious")
 
 -- Error handling {{{
 -- Check if awesome encountered an error during startup and fell back to
@@ -98,7 +99,7 @@ awful.layout.layouts = {
 
 -- {{{ Menu
 -- Create a launcher widget and a main menu
-myawesomemenu = {
+local myawesomemenu = {
    { "hotkeys",
         function() hotkeys_popup.show_help(nil, awful.screen.focused()) end
    },
@@ -108,14 +109,14 @@ myawesomemenu = {
    { "quit", function() awesome.quit() end },
 }
 
-mymainmenu = awful.menu({
+local mymainmenu = awful.menu({
     items = {
         { "awesome", myawesomemenu, beautiful.awesome_icon },
         { "open terminal", terminal }
     }
 })
 
-mylauncher = awful.widget.launcher({
+local mylauncher = awful.widget.launcher({
     image = beautiful.awesome_icon,
     menu = mymainmenu
 })
@@ -127,10 +128,10 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- Wibar {{{
 
 -- Keyboard map indicator and switcher
-mykeyboardlayout = awful.widget.keyboardlayout()
+local mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+local mytextclock = wibox.widget.textclock()
 
 -- Create a wibox for each screen and add it
 local taglist_buttons = gears.table.join(

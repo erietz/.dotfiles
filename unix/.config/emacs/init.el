@@ -15,7 +15,7 @@
     tab-width 4)
 
 ;; zenburn theme installed by m-x list-packages
-(load-theme 'zenburn t)
+;; (load-theme 'zenburn t)
 
 ;;------------------------------------------------------------------------------ 
 ;; evil mode ... I tried the emacs keybindings, I really did.

@@ -3,28 +3,9 @@
         "directories": [
             "$HOME/.ewr",
             "$HOME/Sync/classes/term6",
+            "$HOME/Sync/classes/term6/cs362",
+            "$HOME/Sync/classes/term6/cs372",
             "$HOME/git/osu/"
-        ],
-        "websites": [
-            "https://github.iu.edu/",
-            "https://gitlab.com/"
-        ]
-    },
-    "ethanMacMini": {
-        "directories": [
-            "$HOME/GD_EWR/notes",
-            "$HOME/Sync/manjaro/classes/term2/",
-            "$HOME/Sync/manjaro/scratch/"
-            ]
-    },
-    "old-trusty": {
-        "directories": [
-            "$HOME/Documents/GD_OSU_RCLONE/manjaro/scratch",
-            "$HOME/Documents/GD_OSU_RCLONE/manjaro/classes/term1/"
-            ]
-    },
-    "optiplex": {
-        "directories": [
         ]
     }
 }
