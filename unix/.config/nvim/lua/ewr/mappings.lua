@@ -101,7 +101,7 @@ function insert_range()
   list =  '[' .. table.concat(list, ', ') .. ']'
   vim.cmd('normal a' .. list)
 end
-nnoremap('<leader>ir', [[:lua insert_range()<CR>]])
+nnoremap('<leader>ir', insert_range)
 
 -- Trim Whitespace of current file
 function trim_whitespace()
@@ -131,15 +131,15 @@ nnoremap('<leader>pwu', [[:cfdo normal u]])
 --}}}
 -- Telescope {{{
 
-nnoremap('<leader><Enter>', [[:lua require('telescope.builtin').find_files()<cr>]])
-nnoremap('<leader><Tab>', [[:lua require('telescope.builtin').buffers()<cr>]])
-nnoremap('<c-p>', [[:lua require('telescope.builtin').git_files()<cr>]])
-nnoremap('<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]])
-nnoremap('<leader>fw', [[:lua require('telescope.builtin').grep_string()<cr>]])
-nnoremap('<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]])
-nnoremap('<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]])
-nnoremap('<leader>fb', [[:lua require('telescope.builtin').git_bcommits()<cr>]])
-nnoremap('<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]])
+nnoremap('<leader><Enter>', function() require('telescope.builtin').find_files() end)
+nnoremap('<leader><Tab>', function() require('telescope.builtin').buffers() end)
+nnoremap('<c-p>', function() require('telescope.builtin').git_files() end)
+nnoremap('<leader>fg', function() require('telescope.builtin').live_grep() end)
+nnoremap('<leader>fw', function() require('telescope.builtin').grep_string() end)
+nnoremap('<leader>fh', function() require('telescope.builtin').help_tags() end)
+nnoremap('<leader>fc', function() require('telescope.builtin').git_commits() end)
+nnoremap('<leader>fb', function() require('telescope.builtin').git_bcommits() end)
+nnoremap('<leader>fi', function() require('telescope.builtin').builtin() end)
 nnoremap('<leader>.', ':lua dotfiles()<cr>')
 
 function dotfiles()
@@ -168,29 +168,29 @@ nnoremap('<leader>tt', ':TestNearest -strategy=neovim<CR>')
 --}}}
 -- nvim-dap {{{
 
-nnoremap('<F5>',  [[:lua require('dap').continue()<CR>]], { silent = true })
--- noremap('<leader>5',  [[:lua require('dap').continue()<CR>]], { silent = true })
+nnoremap('<F5>',  function() require('dap').continue() end, { silent = true })
+-- noremap('<leader>5',  function() require('dap').continue() end, { silent = true })
 
-nnoremap('<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], { silent = true })
--- noremap('<leader>9',  [[:lua require('dap').toggle_breakpoint()<CR>]], { silent = true })
+nnoremap('<F9>',  function() require('dap').toggle_breakpoint() end, { silent = true })
+-- noremap('<leader>9',  function() require('dap').toggle_breakpoint() end, { silent = true })
 
-nnoremap('<F10>', [[:lua require('dap').step_over()<CR>]], { silent = true })
--- noremap('<leader>0', [[:lua require('dap').step_over()<CR>]], { silent = true })
+nnoremap('<F10>', function() require('dap').step_over() end, { silent = true })
+-- noremap('<leader>0', function() require('dap').step_over() end, { silent = true })
 
-nnoremap('<F11>', [[:lua require('dap').step_into()<CR>]], { silent = true })
--- noremap('<leader>-', [[:lua require('dap').step_into()<CR>]], { silent = true })
+nnoremap('<F11>', function() require('dap').step_into() end, { silent = true })
+-- noremap('<leader>-', function() require('dap').step_into() end, { silent = true })
 
-nnoremap('<F12>', [[:lua require('dap').step_out()<CR>]], { silent = true })
--- noremap('<leader>=', [[:lua require('dap').step_out()<CR>]], { silent = true })
+nnoremap('<F12>', function() require('dap').step_out() end, { silent = true })
+-- noremap('<leader>=', function() require('dap').step_out() end, { silent = true })
 
 -- UI
-nnoremap('<F8>', [[:lua require("dapui").toggle()<CR>]], { silent = true })
--- noremap('<leader>8', [[:lua require("dapui").toggle()<CR>]], { silent = true })
+nnoremap('<F8>', function() require("dapui").toggle() end, { silent = true })
+-- noremap('<leader>8', function() require("dapui").toggle() end, { silent = true })
 
 -- python
-nnoremap('<leader>dc', [[:lua require("dap-python").test_class()<CR>]], { silent = true })
-nnoremap('<leader>dm', [[:lua require("dap-python").test_method()<CR>]], { silent = true })
-vnoremap('<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], { silent = true })
+nnoremap('<leader>dc', function() require("dap-python").test_class() end, { silent = true })
+nnoremap('<leader>dm', function() require("dap-python").test_method() end, { silent = true })
+vnoremap('<leader>ds', function() require("dap-python").debug_selection() end, { silent = true })
 
 --}}}
 -- vim-easy-align {{{
@@ -201,22 +201,22 @@ xnoremap('ga', '<Plug>(EasyAlign)', {})
 --}}}
 -- Harpoon {{{
 
-nnoremap('<leader>a', [[:lua require('harpoon.mark').add_file()<CR>]])
-nnoremap('<leader>h', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], { silent = true })
-nnoremap('<leader>1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], { silent = true })
-nnoremap('<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], { silent = true })
-nnoremap('<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], { silent = true })
-nnoremap('<leader>4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], { silent = true })
-nnoremap('<leader>5', [[:lua require('harpoon.ui').nav_file(5)<CR>]], { silent = true })
-nnoremap('<localleader>1', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], { silent = true })
-nnoremap('<localleader>2', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], { silent = true })
-nnoremap('<localleader>r', [[:lua require('ewr.plugin_config.harpoon').run_harpoon_cmd_and_navigate()<CR>]])
+nnoremap('<leader>a', function() require('harpoon.mark').add_file() end)
+nnoremap('<leader>h', function() require('harpoon.ui').toggle_quick_menu() end, { silent = true })
+nnoremap('<leader>1', function() require('harpoon.ui').nav_file(1) end, { silent = true })
+nnoremap('<leader>2', function() require('harpoon.ui').nav_file(2) end, { silent = true })
+nnoremap('<leader>3', function() require('harpoon.ui').nav_file(3) end, { silent = true })
+nnoremap('<leader>4', function() require('harpoon.ui').nav_file(4) end, { silent = true })
+nnoremap('<leader>5', function() require('harpoon.ui').nav_file(5) end, { silent = true })
+nnoremap('<localleader>1', function() require('harpoon.term').gotoTerminal(1) end, { silent = true })
+nnoremap('<localleader>2', function() require('harpoon.term').gotoTerminal(2) end, { silent = true })
+nnoremap('<localleader>r', function() require('ewr.plugin_config.harpoon').run_harpoon_cmd_and_navigate() end)
 
 --}}}
 -- REST nvim {{{
-nnoremap('<leader>rr', [[:lua require('rest-nvim').run()<CR>]], {silent = true})
-nnoremap('<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], {silent = true})
-nnoremap('<leader>rl', [[:lua require('rest-nvim').last()<CR>]], {silent = true})
+nnoremap('<leader>rr', function() require('rest-nvim').run() end, {silent = true})
+nnoremap('<leader>rp', function() require('rest-nvim').run(true) end, {silent = true})
+nnoremap('<leader>rl', function() require('rest-nvim').last() end, {silent = true})
 ---}}}
 -- COC {{{
 
