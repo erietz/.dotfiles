@@ -1,5 +1,6 @@
 {
     "Lua.telemetry.enable": false,
+    "Lua.diagnostics.globals": ["vim"],
     "pyright.disableDiagnostics": true,
     "diagnostic-languageserver.filetypes": {
         "python": ["flake8"]

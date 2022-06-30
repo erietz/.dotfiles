@@ -1,5 +1,6 @@
 vim.g.coc_global_extensions = {
 
+    -- language servers
     'coc-clangd',       -- c, c++, objective c
     'coc-css',          -- css, scss, less
     'coc-html',         -- html, handlebars, razor
@@ -12,7 +13,7 @@ vim.g.coc_global_extensions = {
     'coc-texlab',       -- latex
     'coc-tsserver',     -- javascript and typescript
     'coc-vimlsp',       -- viml
-    -- language servers
+    'coc-flutter',      -- flutter
 
     -- extras
     'coc-git',

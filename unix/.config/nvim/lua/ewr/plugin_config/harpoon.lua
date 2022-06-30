@@ -41,6 +41,9 @@ local harpoon_filetype_map = {
     ["lua"] = function()
         return "lua " .. filename("absolute")
     end,
+    ["dart"] = function()
+        return "dart " .. filename("absolute")
+    end,
     ["c"] = function()
         return "gcc "..filename("absolute").." -o "..filename("root_absolute")..
             " && "..filename("root_absolute")

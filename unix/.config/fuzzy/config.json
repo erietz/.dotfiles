@@ -2,10 +2,10 @@
     "global":{
         "directories": [
             "$HOME/.ewr",
-            "$HOME/Sync/classes/term6",
-            "$HOME/Sync/classes/term6/cs362",
-            "$HOME/Sync/classes/term6/cs372",
-            "$HOME/git/osu/"
+            "$HOME/Sync/classes/term7/cs492",
+            "$HOME/git/osu/",
+            "$HOME/.dotfiles/",
+            "$HOME/.dotfiles/unix/.config/nvim/"
         ]
     }
 }

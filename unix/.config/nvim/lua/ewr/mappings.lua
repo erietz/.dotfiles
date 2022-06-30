@@ -1,87 +1,90 @@
 -- I try to keep most, if not all, of my remaps in this file including for
 -- plugins.
 
-local map = vim.api.nvim_set_keymap
-local noremap = { noremap = true }
-local silent_noremap = { noremap = true, silent = true }
+local remap = require("ewr.keymap")
+local nnoremap = remap.nnoremap
+local inoremap = remap.inoremap
+local vnoremap = remap.vnoremap
+local tnoremap = remap.tnoremap
+local xnoremap = remap.xnoremap
 
 -- Basic vim maps {{{
 
 -- Quick toggle between previous buffer
-map('n', '<leader><leader>', '<c-^>', noremap)
+nnoremap('<leader><leader>', '<c-^>')
 
 -- toggle netrw
-map('n', '<leader>dv', ':NERDTreeToggle<CR>', noremap)     -- project view
-map('n', '<leader>fv', ':NERDTreeFind<CR>', noremap)     -- file view
+nnoremap('<leader>dv', ':NERDTreeToggle<CR>')     -- project view
+nnoremap('<leader>fv', ':NERDTreeFind<CR>')     -- file view
 
 -- Changing Window splits
-map('n', '<c-h>', ':wincmd h<CR>', silent_noremap)
-map('n', '<c-j>', ':wincmd j<CR>', silent_noremap)
-map('n', '<c-k>', ':wincmd k<CR>', silent_noremap)
-map('n', '<c-l>', ':wincmd l<CR>', silent_noremap)
-map('t', '<C-h>', [[<C-\><C-n><C-w>h]], silent_noremap)
-map('t', '<C-j>', [[<C-\><C-n><C-w>j]], silent_noremap)
-map('t', '<C-k>', [[<C-\><C-n><C-w>k]], silent_noremap)
-map('t', '<C-^>', [[<C-\><C-n><C-^>l]], silent_noremap)
-map('t', '<C-o>', [[<C-\><C-n><C-^>l]], silent_noremap)
-map('t', '<localleader><localleader>', [[<C-\><C-n><C-^>l]], silent_noremap)
+nnoremap('<c-h>', ':wincmd h<CR>', { silent = true })
+nnoremap('<c-j>', ':wincmd j<CR>', { silent = true })
+nnoremap('<c-k>', ':wincmd k<CR>', { silent = true })
+nnoremap('<c-l>', ':wincmd l<CR>', { silent = true })
+tnoremap('<C-h>', [[<C-\><C-n><C-w>h]], { silent = true })
+tnoremap('<C-j>', [[<C-\><C-n><C-w>j]], { silent = true })
+tnoremap('<C-k>', [[<C-\><C-n><C-w>k]], { silent = true })
+tnoremap('<C-^>', [[<C-\><C-n><C-^>l]], { silent = true })
+tnoremap('<C-o>', [[<C-\><C-n><C-^>l]], { silent = true })
+tnoremap('<localleader><localleader>', [[<C-\><C-n><C-^>l]], { silent = true })
 
 -- Toggle quickfix
-map('n', '<leader>q', ':copen<CR>', noremap)
-map('n', '<leader>w', ':lopen<CR>', noremap)    -- "window specific quickfix
-map('n', '<leader>oo', ':TerminatorOutputBufferToggle<CR>', noremap)
-map('n', '<leader>c', ':cclose<bar>lclose<bar>TerminatorOutputBufferClose<CR>', noremap)
+nnoremap('<leader>q', ':copen<CR>')
+nnoremap('<leader>w', ':lopen<CR>')    -- "window specific quickfix
+nnoremap('<leader>oo', ':TerminatorOutputBufferToggle<CR>')
+nnoremap('<leader>c', ':cclose<bar>lclose<bar>TerminatorOutputBufferClose<CR>')
 
 -- Yank to clipboard
 if vim.fn.has('mac') == 1 then
-  map('v', '<leader>y', '"*y', noremap)
-  map('n', '<leader>p', '"*p', noremap)
+  vnoremap('<leader>y', '"*y')
+  nnoremap('<leader>p', '"*p')
 else
-  map('v', '<leader>y', '"+y', noremap)
-  map('n', '<leader>p', '"+p', noremap)
+  vnoremap('<leader>y', '"+y')
+  nnoremap('<leader>p', '"+p')
 end
 
 -- Delete without fudging registers
-map('v', '<leader>d', '"_d', noremap)
-map('n', '<leader>d', '"_d', noremap)
+vnoremap('<leader>d', '"_d')
+nnoremap('<leader>d', '"_d')
 
 -- ThePrimeagen
-map('n', '<leader>sw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
-map('n', 'Y', 'y$', noremap)
-map('n', 'n', 'nzzzv', noremap)
-map('n', 'N', 'Nzzzv', noremap)
-map('n', 'J', 'mzJ`z', noremap)
-map('i', ',', ',<c-g>u', noremap)
-map('i', '.', '.<c-g>u', noremap)
-map('i', '!', '!<c-g>u', noremap)
-map('i', '?', '?<c-g>u', noremap)
--- map('v', 'J', [[:m '>+1<CR>gv=gv]], noremap)
--- map('v', 'K', [[:m '<-2<CR>gv=gv]], noremap)
--- map('n', '<leader>j', ':m .+1<CR>==', noremap)
--- map('n', '<leader>k', ':m .-2<CR>==', noremap)
+nnoremap('<leader>sw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+nnoremap('Y', 'y$')
+nnoremap('n', 'nzzzv')
+nnoremap('N', 'Nzzzv')
+nnoremap('J', 'mzJ`z')
+inoremap(',', ',<c-g>u')
+inoremap('.', '.<c-g>u')
+inoremap('!', '!<c-g>u')
+inoremap('?', '?<c-g>u')
+-- vnoremap('J', [[:m '>+1<CR>gv=gv]])
+-- vnoremap('K', [[:m '<-2<CR>gv=gv]])
+-- noremap('<leader>j', ':m .+1<CR>==')
+-- noremap('<leader>k', ':m .-2<CR>==')
 
 -- Navigation
-map('n', ']q', ':cnext<CR>zz', noremap)
-map('n', '[q', ':cprev<CR>zz', noremap)
-map('n', ']w',   ':lnext<CR>zz', noremap)
-map('n', '[w', ':lprev<CR>zz', noremap)
-map('n', ']b', ':bnext<CR>zz', noremap)
-map('n', '[b', ':bprev<CR>zz', noremap)
-map('n', ']t', ':tnext<CR>zz', noremap)
-map('n', '[t', ':tprev<CR>zz', noremap)
+nnoremap(']q', ':cnext<CR>zz')
+nnoremap('[q', ':cprev<CR>zz')
+nnoremap(']w',   ':lnext<CR>zz')
+nnoremap('[w', ':lprev<CR>zz')
+nnoremap(']b', ':bnext<CR>zz')
+nnoremap('[b', ':bprev<CR>zz')
+nnoremap(']t', ':tnext<CR>zz')
+nnoremap('[t', ':tprev<CR>zz')
 
 -- scrolling down with left hand only gives me carpel tunnel
-map('n', '<c-y>', '<c-d>', noremap)
+nnoremap('<c-y>', '<c-d>')
 
 -- Scroll split
-map('n', '<c-m-f>', '<c-w><c-w><c-d><c-w><c-w>', noremap)
-map('n', '<c-m-b>', '<c-w><c-w><c-u><c-w><c-w>', noremap)
+nnoremap('<c-m-f>', '<c-w><c-w><c-d><c-w><c-w>')
+nnoremap('<c-m-b>', '<c-w><c-w><c-u><c-w><c-w>')
 
 -- Resize windows
-map('n', '<Left>', ':vertical resize -2<CR>', noremap)
-map('n', '<Right>', ':vertical resize +2<CR>', noremap)
-map('n', '<Up>', ':resize -2<CR>', noremap)
-map('n', '<Down>', ':resize +2<CR>', noremap)
+nnoremap('<Left>', ':vertical resize -2<CR>')
+nnoremap('<Right>', ':vertical resize +2<CR>')
+nnoremap('<Up>', ':resize -2<CR>')
+nnoremap('<Down>', ':resize +2<CR>')
 
 -- Printing lists
 function insert_range()
@@ -98,46 +101,46 @@ function insert_range()
   list =  '[' .. table.concat(list, ', ') .. ']'
   vim.cmd('normal a' .. list)
 end
-map('n', '<leader>ir', [[:lua insert_range()<CR>]], noremap)
+nnoremap('<leader>ir', [[:lua insert_range()<CR>]])
 
 -- Trim Whitespace of current file
-function trim_whitespace() 
+function trim_whitespace()
   local save = vim.fn.winsaveview()
   vim.cmd([[keeppatterns %s/\s\+$//e]])
   vim.fn.winrestview(save)
 end
 
 -- Add comment to end of line
-map('n', '<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], silent_noremap)
-map('n', '<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], silent_noremap)
+nnoremap('<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], { silent = true })
+nnoremap('<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], { silent = true })
 
 -- fix lsp diagnostics
-map('n', '<leader>e', ':CocDiagnostics<CR>', silent_noremap)
+nnoremap('<leader>e', ':CocDiagnostics<CR>', { silent = true })
 
 -- Dispatch
-map('n', '<leader>mr', ':Make run<CR>', silent_noremap)
-map('n', '<leader>mb', ':Make build<CR>', silent_noremap)
-map('n', '<leader>mt', ':Make test<CR>', silent_noremap)
-map('n', '<leader>mc', ':Make clean<CR>', silent_noremap)
+nnoremap('<leader>mr', ':Make run<CR>', { silent = true })
+nnoremap('<leader>mb', ':Make build<CR>', { silent = true })
+nnoremap('<leader>mt', ':Make test<CR>', { silent = true })
+nnoremap('<leader>mc', ':Make clean<CR>', { silent = true })
 
 -- Grep word
--- map('n', '<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], silent_noremap)
-map('n', '<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], noremap)
-map('n', '<leader>pwu', [[:cfdo normal u]], noremap)
+-- noremap('<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], { silent = true })
+nnoremap('<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+nnoremap('<leader>pwu', [[:cfdo normal u]])
 
 --}}}
 -- Telescope {{{
 
-map('n', '<leader><Enter>', [[:lua require('telescope.builtin').find_files()<cr>]], noremap)
-map('n', '<leader><Tab>', [[:lua require('telescope.builtin').buffers()<cr>]], noremap)
-map('n', '<c-p>', [[:lua require('telescope.builtin').git_files()<cr>]], noremap)
-map('n', '<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]], noremap)
-map('n', '<leader>fw', [[:lua require('telescope.builtin').grep_string()<cr>]], noremap)
-map('n', '<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]], noremap)
-map('n', '<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]], noremap)
-map('n', '<leader>fb', [[:lua require('telescope.builtin').git_bcommits()<cr>]], noremap)
-map('n', '<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]], noremap)
-map('n', '<leader>.', ':lua dotfiles()<cr>', noremap)
+nnoremap('<leader><Enter>', [[:lua require('telescope.builtin').find_files()<cr>]])
+nnoremap('<leader><Tab>', [[:lua require('telescope.builtin').buffers()<cr>]])
+nnoremap('<c-p>', [[:lua require('telescope.builtin').git_files()<cr>]])
+nnoremap('<leader>fg', [[:lua require('telescope.builtin').live_grep()<cr>]])
+nnoremap('<leader>fw', [[:lua require('telescope.builtin').grep_string()<cr>]])
+nnoremap('<leader>fh', [[:lua require('telescope.builtin').help_tags()<cr>]])
+nnoremap('<leader>fc', [[:lua require('telescope.builtin').git_commits()<cr>]])
+nnoremap('<leader>fb', [[:lua require('telescope.builtin').git_bcommits()<cr>]])
+nnoremap('<leader>fi', [[:lua require('telescope.builtin').builtin()<cr>]])
+nnoremap('<leader>.', ':lua dotfiles()<cr>')
 
 function dotfiles()
   require('telescope.builtin').find_files({
@@ -151,81 +154,81 @@ end
 
 ----}}}
 -- vim-terminator {{{
-map('n', '<leader>ra', ':TerminatorRunAltCmd ', noremap)
+nnoremap('<leader>ra', ':TerminatorRunAltCmd ')
 -- }}}
 -- vim-test {{{
 
-map('n', '<leader>tn', ':TestNearest<CR>', noremap)
-map('n', '<leader>ts', ':TestSuite<CR>', noremap)
-map('n', '<leader>tf', ':TestFile<CR>', noremap)
-map('n', '<leader>tl', ':TestLast<CR>', noremap)
-map('n', '<leader>tv', ':TestVisit<CR>', noremap)
-map('n', '<leader>tt', ':TestNearest -strategy=neovim<CR>', noremap)
+nnoremap('<leader>tn', ':TestNearest<CR>')
+nnoremap('<leader>ts', ':TestSuite<CR>')
+nnoremap('<leader>tf', ':TestFile<CR>')
+nnoremap('<leader>tl', ':TestLast<CR>')
+nnoremap('<leader>tv', ':TestVisit<CR>')
+nnoremap('<leader>tt', ':TestNearest -strategy=neovim<CR>')
 
 --}}}
 -- nvim-dap {{{
 
-map('n', '<F5>',  [[:lua require('dap').continue()<CR>]], silent_noremap)
--- map('n', '<leader>5',  [[:lua require('dap').continue()<CR>]], silent_noremap)
+nnoremap('<F5>',  [[:lua require('dap').continue()<CR>]], { silent = true })
+-- noremap('<leader>5',  [[:lua require('dap').continue()<CR>]], { silent = true })
 
-map('n', '<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
--- map('n', '<leader>9',  [[:lua require('dap').toggle_breakpoint()<CR>]], silent_noremap)
+nnoremap('<F9>',  [[:lua require('dap').toggle_breakpoint()<CR>]], { silent = true })
+-- noremap('<leader>9',  [[:lua require('dap').toggle_breakpoint()<CR>]], { silent = true })
 
-map('n', '<F10>', [[:lua require('dap').step_over()<CR>]], silent_noremap)
--- map('n', '<leader>0', [[:lua require('dap').step_over()<CR>]], silent_noremap)
+nnoremap('<F10>', [[:lua require('dap').step_over()<CR>]], { silent = true })
+-- noremap('<leader>0', [[:lua require('dap').step_over()<CR>]], { silent = true })
 
-map('n', '<F11>', [[:lua require('dap').step_into()<CR>]], silent_noremap)
--- map('n', '<leader>-', [[:lua require('dap').step_into()<CR>]], silent_noremap)
+nnoremap('<F11>', [[:lua require('dap').step_into()<CR>]], { silent = true })
+-- noremap('<leader>-', [[:lua require('dap').step_into()<CR>]], { silent = true })
 
-map('n', '<F12>', [[:lua require('dap').step_out()<CR>]], silent_noremap)
--- map('n', '<leader>=', [[:lua require('dap').step_out()<CR>]], silent_noremap)
+nnoremap('<F12>', [[:lua require('dap').step_out()<CR>]], { silent = true })
+-- noremap('<leader>=', [[:lua require('dap').step_out()<CR>]], { silent = true })
 
 -- UI
-map('n', '<F8>', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
--- map('n', '<leader>8', [[:lua require("dapui").toggle()<CR>]], silent_noremap)
+nnoremap('<F8>', [[:lua require("dapui").toggle()<CR>]], { silent = true })
+-- noremap('<leader>8', [[:lua require("dapui").toggle()<CR>]], { silent = true })
 
 -- python
-map('n', '<leader>dc', [[:lua require("dap-python").test_class()<CR>]], silent_noremap)
-map('n', '<leader>dm', [[:lua require("dap-python").test_method()<CR>]], silent_noremap)
-map('v', '<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], silent_noremap)
+nnoremap('<leader>dc', [[:lua require("dap-python").test_class()<CR>]], { silent = true })
+nnoremap('<leader>dm', [[:lua require("dap-python").test_method()<CR>]], { silent = true })
+vnoremap('<leader>ds', [[:lua require("dap-python").debug_selection()<CR>]], { silent = true })
 
 --}}}
 -- vim-easy-align {{{
 
-map('n', 'ga', '<Plug>(EasyAlign)', {})
-map('x', 'ga', '<Plug>(EasyAlign)', {})
+nnoremap('ga', '<Plug>(EasyAlign)', {})
+xnoremap('ga', '<Plug>(EasyAlign)', {})
 
 --}}}
 -- Harpoon {{{
 
-map('n', '<leader>a', [[:lua require('harpoon.mark').add_file()<CR>]], noremap)
-map('n', '<leader>h', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], silent_noremap)
-map('n', '<leader>1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], silent_noremap)
-map('n', '<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], silent_noremap)
-map('n', '<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], silent_noremap)
-map('n', '<leader>4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], silent_noremap)
-map('n', '<leader>5', [[:lua require('harpoon.ui').nav_file(5)<CR>]], silent_noremap)
-map('n', '<localleader>1', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], silent_noremap)
-map('n', '<localleader>2', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], silent_noremap)
-map('n', '<localleader>r', [[:lua require('ewr.plugin_config.harpoon').run_harpoon_cmd_and_navigate()<CR>]], noremap)
+nnoremap('<leader>a', [[:lua require('harpoon.mark').add_file()<CR>]])
+nnoremap('<leader>h', [[:lua require('harpoon.ui').toggle_quick_menu()<CR>]], { silent = true })
+nnoremap('<leader>1', [[:lua require('harpoon.ui').nav_file(1)<CR>]], { silent = true })
+nnoremap('<leader>2', [[:lua require('harpoon.ui').nav_file(2)<CR>]], { silent = true })
+nnoremap('<leader>3', [[:lua require('harpoon.ui').nav_file(3)<CR>]], { silent = true })
+nnoremap('<leader>4', [[:lua require('harpoon.ui').nav_file(4)<CR>]], { silent = true })
+nnoremap('<leader>5', [[:lua require('harpoon.ui').nav_file(5)<CR>]], { silent = true })
+nnoremap('<localleader>1', [[:lua require('harpoon.term').gotoTerminal(1)<CR>]], { silent = true })
+nnoremap('<localleader>2', [[:lua require('harpoon.term').gotoTerminal(2)<CR>]], { silent = true })
+nnoremap('<localleader>r', [[:lua require('ewr.plugin_config.harpoon').run_harpoon_cmd_and_navigate()<CR>]])
 
 --}}}
 -- REST nvim {{{
-map('n', '<leader>rr', [[:lua require('rest-nvim').run()<CR>]], {silent = true})
-map('n', '<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], {silent = true})
-map('n', '<leader>rl', [[:lua require('rest-nvim').last()<CR>]], {silent = true})
+nnoremap('<leader>rr', [[:lua require('rest-nvim').run()<CR>]], {silent = true})
+nnoremap('<leader>rp', [[:lua require('rest-nvim').run(true)<CR>]], {silent = true})
+nnoremap('<leader>rl', [[:lua require('rest-nvim').last()<CR>]], {silent = true})
 ---}}}
 -- COC {{{
 
-map('n', ']g', [[<Plug>(coc-diagnostics-next)]], {})
-map('n', '[g', [[<Plug>(coc-diagnostics-prev)]], {})
-map('n', ']r', [[:CocNext<CR>]], {})
-map('n', '[r', [[:CocPrev<CR>]], {})
-map('n', 'gd', [[<Plug>(coc-definition)]], {})
-map('n', 'gy', [[<Plug>(coc-type-definition)]], {})
-map('n', 'gi', [[<Plug>(coc-implementation)]], {})
-map('n', 'gr', [[<Plug>(coc-references)]], {})
-map('n', '<leader>rn', [[<Plug>(coc-rename)]], {})
+nnoremap(']g', [[<Plug>(coc-diagnostics-next)]], {})
+nnoremap('[g', [[<Plug>(coc-diagnostics-prev)]], {})
+nnoremap(']r', [[:CocNext<CR>]], {})
+nnoremap('[r', [[:CocPrev<CR>]], {})
+nnoremap('gd', [[<Plug>(coc-definition)]], {})
+nnoremap('gy', [[<Plug>(coc-type-definition)]], {})
+nnoremap('gi', [[<Plug>(coc-implementation)]], {})
+nnoremap('gr', [[<Plug>(coc-references)]], {})
+nnoremap('<leader>rn', [[<Plug>(coc-rename)]], {})
 
 --function Coc_selection_confirm()
 --    if (vim.fn.pumvisible() ~= 0) then
@@ -236,13 +239,12 @@ map('n', '<leader>rn', [[<Plug>(coc-rename)]], {})
 --        vim.fn['coc#_select_confirm']()
 --    end
 --end
---map('i', '<cr>', '<c-o>:lua Coc_selection_confirm()<CR>', {})
+--inoremap('<cr>', '<c-o>:lua Coc_selection_confirm()<CR>', {})
 
-map(
-    'i',
+inoremap(
     '<cr>',                                 -- TODO: what the hell does this do?
     [[pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]],
-    { expr = true, noremap = true, silent = true }
+    { expr = true, silent = true }
 )
 
 -- }}}
