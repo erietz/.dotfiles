@@ -1,3 +1,5 @@
+local keymap = require("ewr.keymap")
+
 vim.g.terminator_auto_shrink_output = 1
 vim.g.terminator_repl_delimiter_regex = "--"
 
@@ -11,3 +13,6 @@ vim.g.terminator_repl_command = {
     ['sql'] = 'mysql -u ethan -p',
     ['typescript'] = 'ts-node',
 }
+
+keymap.nnoremap('<leader>ra', ':TerminatorRunAltCmd ')
+keymap.nnoremap('<leader>oo', ':TerminatorOutputBufferToggle<CR>')
