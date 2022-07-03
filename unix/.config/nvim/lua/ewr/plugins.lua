@@ -4,16 +4,17 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- managing files
-    use { 'ThePrimeagen/harpoon',
+    use {
+        'ThePrimeagen/harpoon',
         requires = {
             'nvim-lua/popup.nvim',
             'nvim-lua/plenary.nvim'
         }
     }
-    use { 'preservim/nerdtree' }
+    use 'preservim/nerdtree'
     use {
         'nvim-telescope/telescope.nvim',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = 'nvim-lua/plenary.nvim'
     }
 
     -- code running
@@ -25,8 +26,9 @@ return require('packer').startup(function()
 
     -- language support
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-    use { 'nvim-treesitter/playground',
-        requires = {'nvim-treesitter/nvim-treesitter'}
+    use {
+        'nvim-treesitter/playground',
+        requires = 'nvim-treesitter/nvim-treesitter'
     }
     use 'lervag/vimtex'
     use 'vim-pandoc/vim-pandoc'
@@ -56,9 +58,7 @@ return require('packer').startup(function()
     use { 'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap' }
 
     -- colors
-    use
-    {
-        -- '/home/ethan/git/vim/gruvbox',
+    use {
         'norcalli/nvim-colorizer.lua',
         'gruvbox-community/gruvbox',
         'junegunn/seoul256.vim',
@@ -79,20 +79,7 @@ return require('packer').startup(function()
     }
 
     -- web dev
-    use { "NTBBloodbath/rest.nvim",
-        requires = { "nvim-lua/plenary.nvim" },
-        config = function()
-            require("rest-nvim").setup({
-                result_split_horizontal = false,
-                skip_ssl_verification = false,
-                highlight = {
-                    enabled = true,
-                    timeout = 150,
-                },
-                jump_to_request = false,
-            })
-        end
-    }
+    use { "NTBBloodbath/rest.nvim", requires = "nvim-lua/plenary.nvim" }
 
     -- vimscript dev
     use 'junegunn/vader.vim'

@@ -90,3 +90,11 @@ vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])
 -- vim.opt.cmdheight = 2       -- more space for displaying messages
 vim.opt.updatetime = 300    -- better performance
 vim.opt.shortmess = vim.opt.shortmess + "c"     -- dont pass messages to ins-completion-menu
+
+-- netrw
+-- vim.g.netrw_liststyle = 3   -- default view is tree
+vim.g.netrw_banner = 0      -- no nasty banner at top
+vim.g.netrw_split = 4       -- open files in previous window
+vim.g.netrw_winsize = 25    -- take up 25% of the window
+vim.g.netrw_keepdir = 0     -- change cwd while navigating
+
