@@ -1,6 +1,5 @@
 local keymap = require("ewr.keymap")
 
-
 local line_ending = nil
 if vim.fn.has("win32") == 1 then
     line_ending = "\r\n"
@@ -8,64 +7,53 @@ else
     line_ending = "\n"
 end
 
-
--- this is weird way to do this but whatever.
-local function filename(mod)
-    if mod == "absolute" then
+local path = {
+    absolute = function()
         return vim.fn.expand("%:p")
-    elseif mod == "dirname"  then
+    end,
+    dirname = function()
         return vim.fn.expand("%:h")
-    elseif mod == "basename"  then
+    end,
+    basename = function()
         return vim.fn.expand("%:t")
-    elseif mod == "root"  then
-        return vim.fn.expand("%:f")
-    elseif mod == "root_absolute"  then
+    end,
+    root = function()
+    end,
+    root_absolute = function()
         return vim.fn.expand("%:p:r")
-    else
-        error("invalid file modifier")
-    end
-end
-
-
-local harpoon_filetype_map = {
-    ["python"] = function()
-        return "python " .. filename("absolute")
-    end,
-    ["javascript"] = function()
-        return "node " .. filename("absolute")
-    end,
-    ["typescript"] = function()
-        return "ts-node " .. filename("absolute")
-    end,
-    ["lua"] = function()
-        return "lua " .. filename("absolute")
-    end,
-    ["dart"] = function()
-        return "dart " .. filename("absolute")
-    end,
-    ["c"] = function()
-        return "gcc "..filename("absolute").." -o "..filename("root_absolute")..
-            " && "..filename("root_absolute")
     end
 }
 
-local function get_harpoon_cmd()
-    local filetype = vim.bo.filetype
-    local cmd = harpoon_filetype_map[filetype]
-    if cmd == nil then
-        return nil
-    else
-        return cmd()
+local harpoon_filetype_map = {
+    ["python"] = function()
+        return "python " .. path:absolute()
+    end,
+    ["javascript"] = function()
+        return "node " .. path:absolute()
+    end,
+    ["typescript"] = function()
+        return "ts-node " .. path:absolute()
+    end,
+    ["lua"] = function()
+        return "lua " .. path:absolute()
+    end,
+    ["dart"] = function()
+        return "dart " .. path:absolute()
+    end,
+    ["c"] = function()
+        return "gcc " .. path:absolute() .. " -o " .. path:root_absolute() ..
+            " && " .. path:root_absolute()
     end
-end
+}
 
 local function run_harpoon_cmd_and_navigate()
-    local cmd = get_harpoon_cmd()
+    local filetype = vim.bo.filetype
+    local cmd = harpoon_filetype_map[filetype]
     if cmd == nil then
         print("no command for this filetype")
         return
     end
-    require('harpoon.term').sendCommand(1, cmd .. line_ending)
+    require('harpoon.term').sendCommand(1, cmd() .. line_ending)
     require('harpoon.term').gotoTerminal(1)
 end
 
