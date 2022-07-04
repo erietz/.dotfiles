@@ -5,3 +5,6 @@
 **/*packer_compiled.lua
 **/*undodir
 **/ipython/profile_default/history.sqlite
+**/emacs/elpa
+**/emacs/auto-save-list
+**/*~
