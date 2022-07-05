@@ -2,26 +2,63 @@
 'use strict';
 
 const child_process = require('child_process');
-const process = require('process');
 
 function main() {
-    const branches = getBranches();
-    const userChoice = selectBranch(branches);
-    checkoutBranch(userChoice);
+    const args = process.argv.slice(2);
+
+    let arg = "";
+    if (args.length == 0) {
+        arg = "--local";
+    } else {
+        arg = args[0];
+    }
+
+    switch (arg) {
+        case "-l":
+        case "--local":
+            checkoutLocalBranch(selectBranch(getLocalBranches()));
+            break;
+
+        case "-r":
+        case "--remote":
+            checkoutRemoteBranch(selectBranch(getRemoteBranches()));
+            break;
+
+        default:
+            console.error(printHelp());
+            break;
+    }
 }
+
+function printHelp() {
+    const argv = process.argv
+    return `Usage: ${argv[0]} ${argv[1]} <args>
+
+    args:
+        -l|--local      Checkout a local branch
+        -r|--remote     Checkout a remote branch
+`
+}
+
 
 function dieOnFail(childProcess) {
     if (childProcess.status !== 0) {
         if (childProcess.signal !== null) {
             console.log("signal", childProcess.signal);
         }
-        console.log(childProcess.stdout?.toString());
-        console.error(childProcess.stderr?.toString());
+        console.log(childProcess.stdout?.toString() || "");
+        console.error(childProcess.stderr?.toString() || "");
         process.exit(1);
     }
 }
 
-function getBranches() {
+function getLocalBranches() {
+    const cp =  child_process.spawnSync("git", ["branch"]);
+    dieOnFail(cp);
+    return cp.stdout.toString();
+}
+
+function getRemoteBranches() {
     const cp =  child_process.spawnSync("git", ["branch", "-r"]);
     dieOnFail(cp);
     return cp.stdout.toString();
@@ -42,7 +79,12 @@ function selectBranch(branches) {
     return cp.stdout.toString().trim();
 }
 
-function checkoutBranch(remoteBranch) {
+function checkoutLocalBranch(branch) {
+    const cp = child_process.spawnSync( "git", ["checkout", branch ]);
+    dieOnFail(cp);
+}
+
+function checkoutRemoteBranch(remoteBranch) {
     const localBranch = remoteBranch.split("origin/")[1];
     const cp = child_process.spawnSync(
         "git",
