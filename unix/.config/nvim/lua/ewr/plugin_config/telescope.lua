@@ -1,4 +1,5 @@
 local keymap = require("ewr.keymap")
+local action_layout = require("telescope.actions.layout")
 
 require("telescope").setup({
     defaults = {
@@ -6,6 +7,14 @@ require("telescope").setup({
         layout_config = {
             mirror = true,
             -- prompt_position = "top"
+        },
+        mappings = {
+            n = {
+                ["<c-j>"] = action_layout.toggle_preview
+            },
+            i = {
+                ["<c-j>"] = action_layout.toggle_preview
+            },
         }
     }
 })
