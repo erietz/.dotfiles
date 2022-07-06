@@ -1,3 +1,5 @@
+local use = require('packer').use
+
 return require('packer').startup(function()
 
     -- packer can manage itself
@@ -40,7 +42,17 @@ return require('packer').startup(function()
     use 'erietz/vim-doconce'
 
     -- autocomplete
-    use { 'neoclide/coc.nvim', branch = 'release' }
+    use {
+        'neovim/nvim-lspconfig', -- Configurations for Nvim LSP
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'saadparwaiz1/cmp_luasnip'  -- luasnip snippets
+    }
+
+    use 'L3MON4D3/LuaSnip'
 
     -- text editing
     use 'SirVer/ultisnips'
