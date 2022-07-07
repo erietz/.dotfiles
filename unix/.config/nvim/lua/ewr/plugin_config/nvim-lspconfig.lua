@@ -32,11 +32,11 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
     vim.lsp.protocol.make_client_capabilities()
 )
 
-local sumneko_root_path = ""
-local sumneko_binary = ""
+local sumneko_root_path = "/bin"
+local sumneko_binary = "lua-language-server"
 if vim.fn.has("win32") == 1 then
-    sumneko_root_path = [[C:\Users\erietz\Documents\lua-language-server-3.4.2-win32-x64]]
-    sumneko_binary = sumneko_root_path .. [[\bin\lua-language-server]]
+    sumneko_root_path = [[C:\Users\erietz\Documents\lua-language-server-3.4.2-win32-x64\]]
+    sumneko_binary = sumneko_root_path .. [[bin\lua-language-server]]
 end
 
 lspconfig['sumneko_lua'].setup({
@@ -81,6 +81,11 @@ lspconfig['html'].setup({
 })
 
 lspconfig['cssls'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig['dartls'].setup({
     on_attach = on_attach,
     capabilities = capabilities
 })

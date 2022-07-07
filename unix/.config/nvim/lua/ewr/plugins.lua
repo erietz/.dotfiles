@@ -49,6 +49,8 @@ return require('packer').startup(function()
         'hrsh7th/cmp-buffer',
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
+        'hrsh7th/cmp-nvim-lsp-signature-help',
+
         'saadparwaiz1/cmp_luasnip'  -- luasnip snippets
     }
 
@@ -78,7 +80,9 @@ return require('packer').startup(function()
         'junegunn/seoul256.vim',
         'junegunn/rainbow_parentheses.vim',
         'chriskempson/base16-vim',
-        'NLKNguyen/papercolor-theme'
+        'NLKNguyen/papercolor-theme',
+        'lifepillar/vim-solarized8',
+        'arzg/vim-colors-xcode',
     }
     use { 'erietz/vim-voodoo', requires = 'tjdevries/colorbuddy.nvim' }
     use { 'tjdevries/gruvbuddy.nvim', requires = 'tjdevries/colorbuddy.nvim' }
