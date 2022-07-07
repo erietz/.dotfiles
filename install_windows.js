@@ -22,7 +22,7 @@ function spawnAsync(cmd, argv) {
     });
 
     cp.stderr.on("data", (data) => {
-        console.error(cmd, "stderr", data.toString());
+        console.error(cmd, "stderr:", data.toString());
     })
 }
 
