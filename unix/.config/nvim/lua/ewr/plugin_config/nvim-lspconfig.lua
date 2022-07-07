@@ -32,9 +32,32 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(
     vim.lsp.protocol.make_client_capabilities()
 )
 
+local sumneko_root_path = ""
+local sumneko_binary = ""
+if vim.fn.has("win32") == 1 then
+    sumneko_root_path = [[C:\Users\erietz\Documents\lua-language-server-3.4.2-win32-x64]]
+    sumneko_binary = sumneko_root_path .. [[\bin\lua-language-server]]
+end
+
 lspconfig['sumneko_lua'].setup({
+    cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    settings = {
+        Lua = {
+            diagnostics = {
+                -- Get the language server to recognize the `vim` global
+                globals = { "vim" },
+            },
+            workspace = {
+                -- Make the server aware of Neovim runtime files
+                library = {
+                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+                },
+            },
+        }
+    }
 })
 
 lspconfig['pyright'].setup({
@@ -43,6 +66,21 @@ lspconfig['pyright'].setup({
 })
 
 lspconfig['tsserver'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig['csharp_ls'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig['html'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig['cssls'].setup({
     on_attach = on_attach,
     capabilities = capabilities
 })
