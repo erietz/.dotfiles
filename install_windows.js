@@ -13,6 +13,19 @@ function main() {
     nuget_install("csharp-ls");
 }
 
+function spawnAsync(cmd, argv) {
+    console.log("Running", cmd, argv);
+    const cp = child_process.spawn(cmd, argv)
+
+    cp.stdout.on("data", (data) => {
+        console.log(cmd, "stdout:", data.toString());
+    });
+
+    cp.stderr.on("data", (data) => {
+        console.error(cmd, "stderr", data.toString());
+    })
+}
+
 function npm_install(packages) {
     const argv = ["install", "-g"];
     if (packages instanceof Array) {
@@ -22,33 +35,13 @@ function npm_install(packages) {
     } else {
         argv.push(packages)
     }
-
-    console.log("Running npm ", argv);
-    const cp = child_process.spawn(NPM, argv)
-
-    cp.stdout.on("data", (data) => {
-        console.log("npm stdout:", data.toString());
-    });
-
-    cp.stderr.on("data", (data) => {
-        console.error("npm stderr", data.toString());
-    })
+    spawnAsync(NPM, argv);
 }
 
 function nuget_install(packages) {
     const argv = ["tool", "install", "--global"];
     argv.push(packages)
-
-    console.log("Running dotnet ", argv);
-    const cp = child_process.spawn("dotnet", argv)
-
-    cp.stdout.on("data", (data) => {
-        console.log("dotnet stdout:", data.toString());
-    });
-
-    cp.stderr.on("data", (data) => {
-        console.error("dotnet stderr:", data.toString());
-    })
+    spawnAsync("dotnet", argv);
 }
 
 main();
