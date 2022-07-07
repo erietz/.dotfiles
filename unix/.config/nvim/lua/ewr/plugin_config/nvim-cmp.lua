@@ -11,6 +11,7 @@ cmp.setup({
         { name = "buffer" },
         { name = "path" },
         { name = "cmdline" },
+        { name = "luasnip" },
     }),
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),

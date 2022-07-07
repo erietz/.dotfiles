@@ -52,10 +52,12 @@ return require('packer').startup(function()
         'saadparwaiz1/cmp_luasnip'  -- luasnip snippets
     }
 
-    use 'L3MON4D3/LuaSnip'
+    use {
+        'L3MON4D3/LuaSnip',
+        'rafamadriz/friendly-snippets'
+    }
 
     -- text editing
-    use 'SirVer/ultisnips'
     use 'tpope/vim-commentary'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
