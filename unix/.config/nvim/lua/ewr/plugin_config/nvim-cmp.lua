@@ -7,11 +7,11 @@ cmp.setup({
         end,
     },
     sources = cmp.config.sources({
+        { name = "luasnip" },
         { name = "nvim_lsp" },
         { name = "buffer" },
         { name = "path" },
         { name = "cmdline" },
-        { name = "luasnip" },
         { name = 'nvim_lsp_signature_help' },
     }),
     mapping = cmp.mapping.preset.insert({
