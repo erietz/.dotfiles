@@ -3,11 +3,13 @@ local action_layout = require("telescope.actions.layout")
 
 require("telescope").setup({
     defaults = {
+        --[[
         layout_strategy = "vertical",
         layout_config = {
             mirror = true,
             -- prompt_position = "top"
         },
+        --]]
         mappings = {
             n = {
                 ["<c-j>"] = action_layout.toggle_preview

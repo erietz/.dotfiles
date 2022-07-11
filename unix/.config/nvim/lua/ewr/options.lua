@@ -79,7 +79,7 @@ vim.opt.foldmethod = 'marker'
 
 vim.opt.formatoptions = vim.opt.formatoptions
   - "c" -- Do not wrap comments using textwidth
-  + "r" -- Insert comment on next line after pressing enter
+  - "r" -- Insert comment on next line after pressing enter
   + "o" -- Insert comment after pressing o or O
   + "q" -- Allow formatting of comments with "gq"
   + "n" -- Recognize numbered lists (markdown for example)
