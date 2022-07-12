@@ -1,5 +1,5 @@
 vim.opt.termguicolors = true    -- Better colors
-vim.opt.background = "light"     -- Sets theme below
+vim.opt.background = "dark"     -- Sets theme below
 
 function Set_colorscheme()
     if vim.api.nvim_get_option("background") == "dark" then

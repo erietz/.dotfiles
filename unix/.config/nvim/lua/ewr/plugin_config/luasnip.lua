@@ -137,6 +137,27 @@ namespace {}
 })
 
 -- }}}
+-- dart/flutter {{{
+luasnip.add_snippets("dart", {
+    s("stateless-widget", fmt([[
+class <> extends StatelessWidget {
+  const <>({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text("<> text here")
+      )
+    );
+  }
+}
+]],
+        { i(1, "MyWidget"), rep(1), rep(1) },
+        { delimiters = "<>" })
+    )
+})
+-- }}}
 -- gitcommit {{{
 
 luasnip.add_snippets("gitcommit", {
@@ -214,9 +235,73 @@ $0
 luasnip.filetype_extend("pandoc", {"markdown"})
 
 -- }}}
+-- nasm {{{
+
+luasnip.add_snippets("nasm", {
+    s("docstring", fmt([[
+; -----------------------------------------------------------------------------
+; Name: {}
+;
+; {}
+;
+; Preconditions: {}
+;
+; Postconditions: {}
+;
+; Receives: {}
+;
+; Returns: {}
+; -----------------------------------------------------------------------------
+]],
+        {
+            i(1), i(2, "Overall decription of procedure"), i(3), i(4), i(5), i(6)
+        }
+    ))
+})
+-- }}}
 -- sh {{{
 luasnip.add_snippets("sh", {
     s("shebang", t({"#!/usr/bin/env bash", "", ""}))
+})
+
+-- }}}
+-- tex {{{
+
+luasnip.add_snippets("tex", {
+    s("preamble", parse_snippet([[
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{longtable,booktabs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{images/}{plots/}{figures/}}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue
+}
+%\usepackage[style=chem-acs, autocite=superscript]{biblatex}
+%\addbibresource{ref.bib}
+%\usepackage{physics}
+%\setcounter{secnumdepth}{0}
+%\setlength\parindent{0pt}
+%\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage{siunitx}
+%\usepackage{mhchem}
+
+\title{${1:Title}}
+\author{Ethan Rietz}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+$0
+
+\end{document}
+]])),
+    s("up", parse_snippet([[ \usepackage{${1:package}}$0]])),
 })
 
 -- }}}
