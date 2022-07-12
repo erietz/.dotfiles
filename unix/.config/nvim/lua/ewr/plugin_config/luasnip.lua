@@ -268,7 +268,7 @@ luasnip.add_snippets("sh", {
 -- tex {{{
 
 luasnip.add_snippets("tex", {
-    s("preamble", parse_snippet([[
+    parse_snippet("preamble", [[
 \documentclass{article}
 \usepackage{geometry}
 \usepackage{amsmath,amsfonts,amssymb}
@@ -300,8 +300,8 @@ luasnip.add_snippets("tex", {
 $0
 
 \end{document}
-]])),
-    s("up", parse_snippet([[ \usepackage{${1:package}}$0]])),
+]]),
+    parse_snippet("up", [[ \usepackage{${1:package}}$0]]),
 })
 
 -- }}}
