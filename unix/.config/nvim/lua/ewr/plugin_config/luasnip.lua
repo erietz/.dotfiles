@@ -97,6 +97,27 @@ main(int argc, char *argv[])
 })
 
 -- }}}
+-- c header -> c++ {{{
+
+luasnip.add_snippets("cpp", {
+    s("header-gaurd", fmt([[
+#ifndef {gaurd}
+#define {gaurd}
+
+{contents}
+
+#endif {gaurd}
+]],
+    {
+            gaurd = f(function()
+                return string.upper(vim.fn.expand("%:t:r")) .. "_H"
+            end),
+            contents = i(1, "")
+    }
+)),
+})
+
+-- }}}
 -- cs {{{
 luasnip.add_snippets("cs", {
     s("main", fmt([[

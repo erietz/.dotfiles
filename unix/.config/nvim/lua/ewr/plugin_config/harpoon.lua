@@ -18,6 +18,7 @@ local path = {
         return vim.fn.expand("%:t")
     end,
     root = function()
+        return vim.fn.expand("%:r")
     end,
     root_absolute = function()
         return vim.fn.expand("%:p:r")
