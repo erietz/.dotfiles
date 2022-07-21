@@ -10,13 +10,13 @@ vim.opt.relativenumber = true   -- Relative line numbers
 
 vim.opt.tabstop = 4             -- Number of spaces a tab counts for
 vim.opt.shiftwidth = 4          -- Number of spaces used for each indent
-vim.opt.expandtab = true        -- Use spaces rather than tabs
+vim.opt.expandtab = false       -- Use tabs rather than spaces
 vim.opt.smarttab = true         -- idk I just always use this
 vim.opt.autoindent = true       -- copy indent level last line when inserting new line
 
 vim.api.nvim_create_autocmd("FileType", {
     pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
-    command = "setlocal tabstop=2 shiftwidth=2"
+    command = "setlocal tabstop=2 shiftwidth=2 expandtab"
 })
 
 vim.opt.guicursor = ''          -- Always use block cursor

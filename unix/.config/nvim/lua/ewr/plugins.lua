@@ -51,7 +51,8 @@ return require('packer').startup(function()
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-nvim-lsp-signature-help',
 
-        'saadparwaiz1/cmp_luasnip'  -- luasnip snippets
+        'saadparwaiz1/cmp_luasnip',  -- luasnip snippets
+        'Decodetalkers/csharpls-extended-lsp.nvim'
     }
 
     use {
@@ -67,7 +68,12 @@ return require('packer').startup(function()
 
     -- git
     use 'tpope/vim-fugitive'
-    use 'lewis6991/gitsigns.nvim'
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function()
+            require("gitsigns").setup()
+        end
+    }
 
     -- debugging
     use 'mfussenegger/nvim-dap'

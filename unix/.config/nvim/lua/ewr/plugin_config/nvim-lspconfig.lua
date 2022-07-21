@@ -70,9 +70,24 @@ lspconfig['tsserver'].setup({
     capabilities = capabilities
 })
 
+-- local pid = vim.fn.getpid()
+-- local omnisharp_bin = "/Users/erietz/Documents/omnisharp-win-x86/OmniSharp.exe"
+-- lspconfig['omnisharp'].setup({
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid)},
+-- })
+
+
+
+
 lspconfig['csharp_ls'].setup({
     on_attach = on_attach,
-    capabilities = capabilities
+    capabilities = capabilities,
+    filetypes = { "cs", "solution" },
+    handlers = {
+        ["textDocument/definition"] = require("csharpls_extended").handler,
+    },
 })
 
 lspconfig['html'].setup({
@@ -86,6 +101,13 @@ lspconfig['cssls'].setup({
 })
 
 lspconfig['dartls'].setup({
+    -- cmd = { "cmd.exe", "/C", "dart", "language-server", "--lsp" },
+    -- root_dir = function() return "/Users/erietz/git/osu-cs492-project3/call_me_maybe" end,
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
+lspconfig.gopls.setup({
     on_attach = on_attach,
     capabilities = capabilities
 })

@@ -1,14 +1,15 @@
 [alias]
-  st = status
-  pu = pull
-  ci = commit
-  ca = commit -a
-  br = branch
-  cho = checkout
-  pom = push origin main
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+	st = status
+	pu = pull
+	ci = commit
+	ca = commit -a
+	br = branch
+	ch = checkout
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
 [user]
 	email = ewrietz@gmail.com
 	name = Ethan Rietz
@@ -17,4 +18,4 @@
 [init]
 	defaultBranch = main
 [pull]
-    ff=only
+	ff=only
