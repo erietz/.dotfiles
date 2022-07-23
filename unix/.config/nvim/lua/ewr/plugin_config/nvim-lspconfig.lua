@@ -70,6 +70,11 @@ lspconfig['tsserver'].setup({
     capabilities = capabilities
 })
 
+lspconfig['clangd'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
+})
+
 lspconfig['csharp_ls'].setup({
     on_attach = on_attach,
     capabilities = capabilities

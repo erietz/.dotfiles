@@ -21,7 +21,7 @@ font:
     # family: Ubuntu Mono
     family: JetBrains Mono
     # family: JuliaMono
-  size: 15
+  size: 12
 
 window:
   opacity: 1
@@ -203,4 +203,4 @@ schemes:
       cyan:    '#3e999f'
       white:   '#f5f5f5'
 
-colors: *gruvbox_light
+colors: *gruvbox_dark

@@ -9,6 +9,7 @@ local d = luasnip.dynamic_node
 local r = luasnip.restore_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
+local types = require "luasnip.util.types"
 local parse_snippet = luasnip.parser.parse_snippet
 
 require("luasnip.loaders.from_vscode").lazy_load()
@@ -16,6 +17,13 @@ require("luasnip.loaders.from_vscode").lazy_load()
 luasnip.config.set_config({
     history = true,     -- jump back if you make a mistake
     updateevents = "TextChanged,TextChangedI",  -- for dynamic snippets
+    ext_opts = {
+        [types.choiceNode] = {
+            active = {
+                virt_text = { { " <- Current Choice", "NonTest" } },
+            },
+        },
+    },
 })
 
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
@@ -30,6 +38,13 @@ vim.keymap.set({ "i", "s" }, "<c-j>", function()
   end
 end, { silent = true })
 
+vim.keymap.set("i", "<c-l>", function()
+  if luasnip.choice_active() then
+    luasnip.change_choice(1)
+  end
+end)
+
+vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
 vim.keymap.set("n", "<leader>ss", "<cmd>source ~/.config/nvim/lua/ewr/plugin_config/luasnip.lua<CR>")
 
 -- all {{{
@@ -140,20 +155,27 @@ namespace {}
 -- dart/flutter {{{
 luasnip.add_snippets("dart", {
     s("stateless-widget", fmt([[
-class <> extends StatelessWidget {
-  const <>({Key? key}) : super(key: key);
+class <class_name> extends StatelessWidget {
+  const <constructor_name><constructor_parameters>;
 
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
       body: Center(
-        child: Text("<> text here")
+        child: Text("text here")
       )
     );
   }
 }
 ]],
-        { i(1, "MyWidget"), rep(1), rep(1) },
+        {
+            class_name = i(1, "MyWidget"),
+            constructor_name = rep(1),
+            constructor_parameters = c(2, {
+                t([[({Key? key}) : super(key: key)]]),
+                i(2, [[()]]),
+            })
+        },
         { delimiters = "<>" })
     )
 })

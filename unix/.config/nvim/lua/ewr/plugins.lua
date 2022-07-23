@@ -67,7 +67,10 @@ return require('packer').startup(function()
 
     -- git
     use 'tpope/vim-fugitive'
-    use 'lewis6991/gitsigns.nvim'
+    use {
+        'lewis6991/gitsigns.nvim',
+        config = function() require('gitsigns').setup() end
+    }
 
     -- debugging
     use 'mfussenegger/nvim-dap'
