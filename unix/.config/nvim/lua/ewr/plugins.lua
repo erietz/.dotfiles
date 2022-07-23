@@ -51,7 +51,8 @@ return require('packer').startup(function()
         'hrsh7th/cmp-cmdline',
         'hrsh7th/cmp-nvim-lsp-signature-help',
 
-        'saadparwaiz1/cmp_luasnip'  -- luasnip snippets
+        'saadparwaiz1/cmp_luasnip',  -- luasnip snippets
+        'Decodetalkers/csharpls-extended-lsp.nvim'
     }
 
     use {

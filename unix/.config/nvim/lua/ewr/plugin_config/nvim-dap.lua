@@ -54,6 +54,26 @@ dap.configurations.c = dap.configurations.cpp
 dap.configurations.rust = dap.configurations.cpp
 
 -- }}}
+-- c# dotnet {{{
+
+dap.adapters.coreclr = {
+  type = 'executable',
+  command = [[/Users/erietz/Documents/netcoredbg/netcoredbg.exe]],
+  args = {'--interpreter=vscode'}
+}
+
+dap.configurations.cs = {
+  {
+    type = "coreclr",
+    name = "launch - netcoredbg",
+    request = "launch",
+    program = function()
+        return vim.fn.input('Path to dll', vim.fn.getcwd() .. '/bin/Debug/', 'file')
+    end,
+  },
+}
+
+-- }}}
 
 -- key mappings {{{
 
