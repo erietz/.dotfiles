@@ -21,10 +21,3 @@ require('ewr.colors')
 if vim.fn.has('win32') == 1 then
     require('ewr.windows')
 end
-
--- load all lua files in lua/ewr/plugin_config
-local module_path = vim.fn.stdpath('config') .. '/lua/ewr/plugin_config/'
-for _, file in pairs(vim.fn.glob(module_path .. '*', 0, 1)) do
-    local modname = 'ewr.plugin_config.' .. vim.fn.fnamemodify(file, ":t:r")
-    require(modname)
-end
