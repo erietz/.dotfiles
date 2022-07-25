@@ -10,11 +10,8 @@
 # Start programs at login
 case $DESKTOP_SESSION in
     dwm)
-        while true; do
-            ${HOME}/.local/scripts/dwm_login.sh
-            dwm 2> ~/.dwm.log
-        done
-        ;;
+		${HOME}/.local/scripts/dwm_login.sh
+		;;
 esac
 
 # Source shell variables in ~/.zshenv that are important for my display (e.g.

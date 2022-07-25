@@ -8,22 +8,22 @@
 #     - Multimedia keys are set by xfce4-power-manager and volumeicon
 #-------------------------------------------------------------------------------
 
-start_if_not_running() {
-    pgrep "$@" || exec "$@" &
+start_daemon() {
+    pgrep -u $USER "$1" || exec "$@" &
 }
 
 # status bar
-start_if_not_running slstatus
+start_daemon slstatus
 
 # system tray
-start_if_not_running nm-applet  # network manager applet
-# start_if_not_running pamac-tray # pamac system update applet
-# start_if_not_running volumeicon # volume icon applet
-start_if_not_running pa-applet # pulse audio applet
+start_daemon nm-applet  # network manager applet
+# start_daemon pamac-tray # pamac system update applet
+# start_daemon volumeicon # volume icon applet
+start_daemon pa-applet # pulse audio applet
 
 # other
-start_if_not_running clipit                 # clipit icon
-start_if_not_running nitrogen --restore     # wallpaper
-start_if_not_running xfce4-power-manager    # power manager, brightness controls
-start_if_not_running xautolock -time 10 -locker blurlock    # screen lock
+start_daemon clipit                 # clipit icon
+start_daemon nitrogen --restore     # wallpaper
+start_daemon xfce4-power-manager    # power manager, brightness controls
+start_daemon xautolock -time 10 -locker blurlock    # screen lock
 
