@@ -4,7 +4,7 @@
 	ci = commit
 	ca = commit -a
 	br = branch
-	ch = checkout
+	co = checkout
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p

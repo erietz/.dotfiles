@@ -83,14 +83,13 @@ return require('packer').startup(function()
         'norcalli/nvim-colorizer.lua',
         'gruvbox-community/gruvbox',
         'junegunn/seoul256.vim',
-        'junegunn/rainbow_parentheses.vim',
         'chriskempson/base16-vim',
         'NLKNguyen/papercolor-theme',
         'lifepillar/vim-solarized8',
         'arzg/vim-colors-xcode',
     }
-    use { 'erietz/vim-voodoo', requires = 'tjdevries/colorbuddy.nvim' }
-    use { 'tjdevries/gruvbuddy.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+    use { 'erietz/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+    use 'p00f/nvim-ts-rainbow'
 
     use {
       'nvim-lualine/lualine.nvim',

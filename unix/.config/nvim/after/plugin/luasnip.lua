@@ -29,22 +29,28 @@ luasnip.config.set_config({
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
   if luasnip.expand_or_jumpable() then
     luasnip.expand_or_jump()
+  else
+    vim.cmd("wincmd k")
   end
 end, { silent = true })
 
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
   if luasnip.jumpable(-1) then
     luasnip.jump(-1)
+  else
+    vim.cmd("wincmd j")
   end
 end, { silent = true })
 
 vim.keymap.set("i", "<c-l>", function()
   if luasnip.choice_active() then
     luasnip.change_choice(1)
+  else
+    vim.cmd("wincmd l")
   end
 end)
 
-vim.keymap.set("i", "<c-u>", require "luasnip.extras.select_choice")
+vim.keymap.set("i", "<c-h>", require "luasnip.extras.select_choice")
 vim.keymap.set("n", "<leader>ss", "<cmd>source ~/.config/nvim/lua/ewr/plugin_config/luasnip.lua<CR>")
 
 -- all {{{
@@ -121,7 +127,7 @@ luasnip.add_snippets("cpp", {
 
 {contents}
 
-#endif {gaurd}
+#endif // {gaurd}
 ]],
     {
             gaurd = f(function()
@@ -281,6 +287,18 @@ luasnip.add_snippets("nasm", {
     ))
 })
 -- }}}
+-- python {{{
+
+luasnip.add_snippets("python", {
+  s("main", fmt([[
+if __name__ == "__main"__":
+    {}
+]],
+    { i(1, "main()") })
+  )
+})
+
+-- }}}
 -- sh {{{
 luasnip.add_snippets("sh", {
     s("shebang", t({"#!/usr/bin/env bash", "", ""}))
@@ -325,6 +343,152 @@ $0
 ]]),
     parse_snippet("up", [[ \usepackage{${1:package}}$0]]),
 })
+
+--[[
+extends texmath
+
+snippet preamble "Preamble" b
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{longtable,booktabs}
+\usepackage{listings}
+\usepackage{graphicx}
+\graphicspath{{images/}{plots/}{figures/}}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue
+}
+%\usepackage[style=chem-acs, autocite=superscript]{biblatex}
+%\addbibresource{ref.bib}
+%\usepackage{physics}
+%\setcounter{secnumdepth}{0}
+%\setlength\parindent{0pt}
+%\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage{siunitx}
+%\usepackage{mhchem}
+
+\title{${1:Title}}
+\author{Ethan Rietz}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+$0
+
+\end{document}
+endsnippet
+
+snippet up "Use Package"
+\usepackage{${1:package}}$0
+endsnippet
+
+snippet "beg(in)?" "begin{} / end{}" br
+\begin{${1:<environment>}}
+	${0:${VISUAL}}
+\end{$1}
+endsnippet
+
+snippet nc "New Command"
+	\\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}
+endsnippet
+
+snippet "fig" "Figure environment" br
+\begin{figure}[${2:htpb}]
+	\centering
+	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+	\caption{$0}
+	\label{fig:$5}
+\end{figure}
+endsnippet
+
+snippet "tab(le)?" "Table environment" br
+\begin{table}[${1:htpb}]
+	\centering
+	\caption{${2:caption}}
+	\label{tab:${3:label}}
+	\begin{tabular}{${4:c}}
+	$0
+	\end{tabular}
+\end{table}
+endsnippet
+
+snippet "tabu(lar)?" "Tabular environment" br
+\begin{tabular}{${1:c}}
+$0
+\end{tabular}
+endsnippet
+
+snippet "sec(tion)?" "Section" br
+\section{${1:${VISUAL:section name}}}
+
+$0
+endsnippet
+
+snippet "sub(section)?" "Subsection" br
+\subsection{${1:${VISUAL:Subsection name}}}
+
+$0
+endsnippet
+
+snippet "subsub(section)?" "Subsubsection" br
+\subsubsection{${1:${VISUAL:Subsubsection name}}}
+
+$0
+endsnippet
+
+snippet "lab(el)?" "Section" r
+\label{${1:${VISUAL:label name}}} $0
+endsnippet
+
+snippet "i(tem)?" "Item" br
+\item{${1:${VISUAL:The item}}}
+$0
+endsnippet
+
+snippet "d(tem)?" "Description item" br
+\item[${1:Description word}]{${2:${VISUAL:The item}}}
+$0
+endsnippet
+
+snippet it "Italics"
+\textit{${1:${VISUAL:italics}}} $0
+endsnippet
+
+snippet bf "Boldfont"
+\textbf{${1:${VISUAL:italics}}} $0
+endsnippet
+
+# Packages #################################################
+
+# SI Units----------------------------------------------------------------------
+
+snippet si "SI Units"
+\SI{${1:Number}}{${2:Units}} ${0}
+endsnippet
+
+# Exam Class-------------------------------
+
+snippet "que(stion)?" "Question" br
+\question[${1:Points}] ${2:The questions}
+
+\begin{solution}
+${0}
+\end{solution}
+\vspace{\stretch{1}}
+endsnippet
+
+snippet "c(hoices)?" "Choices" br
+\choice{${1:${VISUAL:The choice}}}
+endsnippet
+
+# mhchem
+snippet ce "Chemical equation"
+\ce{$1} $0
+endsnippet
+--]]
 
 -- }}}
 -- texmath {{{

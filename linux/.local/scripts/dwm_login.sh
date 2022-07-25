@@ -18,8 +18,8 @@ start_if_not_running slstatus
 # system tray
 start_if_not_running nm-applet  # network manager applet
 # start_if_not_running pamac-tray # pamac system update applet
-start_if_not_running volumeicon # volume icon applet
-# start_if_not_running pa-applet # pulse audio applet
+# start_if_not_running volumeicon # volume icon applet
+start_if_not_running pa-applet # pulse audio applet
 
 # other
 start_if_not_running clipit                 # clipit icon

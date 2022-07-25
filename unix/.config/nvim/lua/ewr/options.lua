@@ -15,7 +15,7 @@ vim.opt.smarttab = true         -- idk I just always use this
 vim.opt.autoindent = true       -- copy indent level last line when inserting new line
 
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
+    pattern = { "lua", "html", "css", "tex", "md", "pandoc", "dart" },
     command = "setlocal tabstop=2 shiftwidth=2 expandtab"
 })
 
