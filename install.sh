@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-os=$(/bin/uname -s)
+os=$(uname -s)
 
 stow_it() {
     stow -v $1
