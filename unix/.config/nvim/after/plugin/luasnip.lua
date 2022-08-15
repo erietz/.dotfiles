@@ -183,7 +183,33 @@ class <class_name> extends StatelessWidget {
             })
         },
         { delimiters = "<>" })
-    )
+    ),
+    s("stateful-widget", fmt([[
+class [] extends StatefulWidget {
+  const []({Key? key}) : super(key: key);
+
+  @override
+  State<[]> createState() => _[]State();
+}
+
+class _[]State extends State<[]> {
+
+  @override
+  Widget build(BuildContext context) {
+    return const Text("Stuff");
+  }
+}
+]],
+      {
+        i(1, "MyWidget"),
+        rep(1),
+        rep(1),
+        rep(1),
+        rep(1),
+        rep(1),
+      },
+      { delimiters = "[]" })
+    ),
 })
 -- }}}
 -- gitcommit {{{
