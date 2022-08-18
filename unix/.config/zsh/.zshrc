@@ -64,9 +64,9 @@ load_configs $source_files
 # Prompt------------------------------------------------------------------------
 local prompt=''
 prompt+='%{$fg[cyan]%}['    # [
-prompt+='%{$fg[green]%}%n'    # $USERNAME
+prompt+='%{$fg[green]%}%n'  # $USERNAME
 prompt+='%{$fg[white]%}@'   # @
-prompt+='%{$fg[green]%}%m '   # hostname (up to first .)
+prompt+='%{$fg[green]%}%m ' # hostname (up to first .)
 prompt+='%{$fg[blue]%}%~'   # working directory ($HOME replaced by ~)
 prompt+='%{$fg[magenta]%}$(__git_ps1 " (%s)")'  # git branch
 prompt+='%{$fg[cyan]%}]'    # ]

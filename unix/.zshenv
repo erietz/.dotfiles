@@ -2,12 +2,40 @@
 # Author: Ethan Rietz
 # Date: 2021-04-13
 # Description:
-#   Settings for login shells
-#   Other zsh config files are in ZDOTDIR for interactive shells
+#
+#   - Settings for login shells
+#   - This file gets sourced "every time" as apposed to .zprofile
+#   - Other zsh config files are in ZDOTDIR for interactive shells
+#   - The order of sourcing operations is as follows
+#
+#              +----------------+-----------+-----------+------+
+#              |                |Interactive|Interactive|Script|
+#              |                |login      |non-login  |      |
+#              +----------------+-----------+-----------+------+
+#              |/etc/zshenv     |    A      |    A      |  A   |
+#              +----------------+-----------+-----------+------+
+#              |~/.zshenv       |    B      |    B      |  B   |
+#              +----------------+-----------+-----------+------+
+#              |/etc/zprofile   |    C      |           |      |
+#              +----------------+-----------+-----------+------+
+#              |~/.zprofile     |    D      |           |      |
+#              +----------------+-----------+-----------+------+
+#              |/etc/zshrc      |    E      |    C      |      |
+#              +----------------+-----------+-----------+------+
+#              |~/.zshrc        |    F      |    D      |      |
+#              +----------------+-----------+-----------+------+
+#              |/etc/zlogin     |    G      |           |      |
+#              +----------------+-----------+-----------+------+
+#              |~/.zlogin       |    H      |           |      |
+#              +----------------+-----------+-----------+------+
+#              |~/.zlogout      |    I      |           |      |
+#              +----------------+-----------+-----------+------+
+#              |/etc/zlogout    |    J      |           |      |
+#              +----------------+-----------+-----------+------+
+#
+# NOTE: If PATH is set in this file, it may get overwritten by /etc/zprofile.
+#       A possible work around would be to source ~/.zshenv in ~/.zprofile
 #-------------------------------------------------------------------------------
-
-# I have found that some of these settings do not get loaded on linux systems
-# due to another file (/etc/zprofile ?) being sourced after this file.
 
 export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
 
@@ -77,3 +105,5 @@ if [[ "$OSTYPE" =~ ^linux ]]; then
 elif [[ "$OSTYPE" =~ ^darwin ]]; then
     export CLICOLOR=1
 fi
+
+[ -f ~/.zshenv-extra ] && source ~/.zshenv-extra
