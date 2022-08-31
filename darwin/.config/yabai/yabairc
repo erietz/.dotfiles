@@ -1,59 +1,61 @@
 #!/usr/bin/env sh
+#-------------------------------------------------------------------------------
+# Author:         Ethan Rietz
+# Date:           2022-08-31
+# Description:    Config file for yabai (tiling window manager for macOS)
+#
+#     https://github.com/koekeishiya/yabai
+#-------------------------------------------------------------------------------
 
 yabai -m config mouse_follows_focus off
 yabai -m config focus_follows_mouse off
 
 # first_child:
-#     spawns to the left if vertical split, or top if horizontal split
+#     - spawns to the left if vertical split, or top if horizontal split
 # second_child:
-#     spawns to the right if vertical split, or bottom if horizontal split
-yabai -m config window_placement first_child
+#     - spawns to the right if vertical split, or bottom if horizontal split
+yabai -m config window_placement second_child
 
 # floating windows should be above managed windows
-yabai -m config window_topmost               off
+yabai -m config window_topmost on
 
-yabai -m config window_shadow                on
-yabai -m config window_opacity               off
-yabai -m config window_opacity_duration      0.0
-yabai -m config active_window_opacity        1.0
-yabai -m config normal_window_opacity        0.90
-yabai -m config window_border                off
-yabai -m config window_border_width          6
-yabai -m config active_window_border_color   0xff775759
-yabai -m config normal_window_border_color   0xff555555
-yabai -m config insert_feedback_color        0xffd75f5f
-yabai -m config split_ratio                  0.55
-yabai -m config auto_balance                 off
-yabai -m config mouse_modifier               fn
-yabai -m config mouse_action1                move
-yabai -m config mouse_action2                resize
-yabai -m config mouse_drop_action            swap
+yabai -m config window_shadow on
+yabai -m config window_opacity off
+yabai -m config window_opacity_duration 0.0
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.90
+yabai -m config window_border off
+yabai -m config window_border_width 6
+yabai -m config active_window_border_color 0xff775759
+yabai -m config normal_window_border_color 0xff555555
+yabai -m config insert_feedback_color 0xffd75f5f
+yabai -m config split_ratio 0.55
+yabai -m config auto_balance off
+yabai -m config mouse_modifier fn
+yabai -m config mouse_action1 move
+yabai -m config mouse_action2 resize
+yabai -m config mouse_drop_action swap
 
 # general space settings
-yabai -m config layout                       bsp
-yabai -m config window_gap                   20
-
-# Spacebar
-# SPACEBAR_HEIGHT=$(spacebar -m config height)
-# yabai -m config external_bar all:0:$SPACEBAR_HEIGHT
-# yabai -m config external_bar all:0:26
+yabai -m config layout bsp
+yabai -m config window_gap 20
 
 # Ignore certain programs
 #yabai -m rule --add title='Preferences$' manage=off topmost=on # not sure this does anything
 yabai -m rule --add app="^System Preferences$" layer=above manage=off #sticky=on
 
-## Adds padding to sides if using ultrawide monitor
+# Adds padding to sides if using ultrawide monitor
 if system_profiler SPDisplaysDataType | grep -i "ultrawide"; then
     echo "ULTRAWIDE monitor detected... Adding padding to sides"
-    yabai -m config left_padding                 700
-    yabai -m config right_padding                700
-    yabai -m config top_padding                  100
-    yabai -m config bottom_padding               100
+    yabai -m config left_padding 700
+    yabai -m config right_padding 700
+    yabai -m config top_padding 100
+    yabai -m config bottom_padding 100
 else
-    yabai -m config left_padding                 0
-    yabai -m config right_padding                0
-    yabai -m config top_padding                  0
-    yabai -m config bottom_padding               0
+    yabai -m config left_padding 0
+    yabai -m config right_padding 0
+    yabai -m config top_padding 0
+    yabai -m config bottom_padding 0
 fi
 
 echo "yabai configuration loaded"

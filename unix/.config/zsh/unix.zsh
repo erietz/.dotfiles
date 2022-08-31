@@ -75,6 +75,7 @@ gst () {
   done
 }
 
+# Regular aliases
 alias c="code --reuse-window"
 alias ci="code-insiders --reuse-window"
 alias e="emacs -nw"
@@ -89,3 +90,7 @@ alias tm="tmux attach || tmux"
 alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf"
 alias today='date +"%F"'
 alias vim="nvim"
+
+# Global aliases (expanded anywhere they appear in a command)
+alias -g :silent="1>/dev/null 2>/dev/null"
+alias -g :daemon="1>/dev/null 2>/dev/null &|"

@@ -31,6 +31,9 @@ bindkey -M menuselect '^[[Z' reverse-menu-complete
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+# Expand aliases
+bindkey '^k' _expand_alias
+
 # load all source files---------------------------------------------------------
 load_configs() {
     #local files=($@)
