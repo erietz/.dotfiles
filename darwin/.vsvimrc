@@ -1,0 +1,49 @@
+let mapleader=" "
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set cursorline
+set autoindent
+set backspace=indent,eol,start " <-- Needed if you want the backspace key to work like you would expect!
+set tabstop=4
+set shiftwidth=4
+
+
+nnoremap gr :vsc MonoDevelop.Refactoring.RefactoryCommands.FindReferences <CR>
+nnoremap gk :vsc MonoDevelop.Ide.Commands.TextEditorCommands.ShowQuickInfo <CR> " <-- Show tooltip without mouse
+nnoremap gi :vsc MonoDevelop.Refactoring.RefactoryCommands.GotoImplementation<CR>
+
+nnoremap ]q :vsc MonoDevelop.Ide.Commands.ViewCommands.ShowNext<CR>
+nnoremap [q :vsc MonoDevelop.Ide.Commands.ViewCommands.ShowPrevious<CR>
+
+
+nnoremap <C-o> :vsc MonoDevelop.Ide.Commands.NavigationCommands.NavigateBack <CR>
+nnoremap <C-i> :vsc MonoDevelop.Ide.Commands.NavigationCommands.NavigateForward <CR>
+
+vnoremap <leader>y "+y
+
+" nnoremap <leader><leader> :vsc Edit.GoToRecentFile<CR>
+nnoremap <leader><CR> :vsc MonoDevelop.Ide.Commands.SearchCommands.GotoFile <CR>
+nnoremap <leader><Tab> :vsc Edit.GoToRecentFile<CR>
+
+" nnoremap <leader>to :vsc TestExplorer.ShowTestExplorer<CR>
+nnoremap <leader>st :vsc MonoDevelop.UnitTesting.Commands.TestCommands.SelectTestInTree<CR>
+nnoremap <leader>ta :vsc MonoDevelop.UnitTesting.Commands.TestCommands.RunAllTests<CR>
+nnoremap <leader>tn :vsc MonoDevelop.UnitTesting.Commands.TextEditorCommands.RunTestAtCaret <CR>
+nnoremap <leader>dn :vsc MonoDevelop.UnitTesting.Commands.TextEditorCommands.DebugTestAtCaret<CR>
+" nnoremap <leader>dl :vsc TestExplorer.DebugLastRun<CR>
+" nnoremap <leader>tv :vsc TestExplorer.RunAllTestsInView<CR>
+
+nnoremap <C-w><C-o> :vsc MonoDevelop.Ide.Commands.FileTabCommands.CloseAllButThis <CR>
+nnoremap <leader>c :vsc VisualStudioMac.MacIntegration.MacIntegrationCommands.HideOthers<CR>
+nnoremap ZA :vsc MonoDevelop.Ide.Commands.FileCommands.CloseAllFiles<CR>
+
+
+""""""
+nmap gs :vsc VsVim.ShowPadByTitle Solution<CR>
+
+" Emacs keys when in insert mode
+inoremap <C-d> MonoDevelop.Ide.Commands.EditCommands.Delete
+inoremap <C-a> MonoDevelop.Ide.Commands.TextEditorCommands.LineStart
