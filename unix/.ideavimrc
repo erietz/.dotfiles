@@ -1,5 +1,6 @@
 let g:mapleader = "\<Space>"
 
+set number
 set relativenumber
 set scrolloff=8
 

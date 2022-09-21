@@ -44,6 +44,9 @@ local harpoon_filetype_map = {
     ["c"] = function()
         return "gcc " .. path:absolute() .. " -o " .. path:root_absolute() ..
             " && " .. path:root_absolute()
+    end,
+    ["rust"] = function()
+        return "cargo run"
     end
 }
 

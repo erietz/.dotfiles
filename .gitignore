@@ -1,7 +1,9 @@
 **/*zsh_history
-**/*__pycache__
 **/zsh/.iterm2
 **/zsh/.zcompdump
+**/zsh/.zsh_sessions
+
+**/*__pycache__
 **/*packer_compiled.lua
 **/*undodir
 **/ipython/profile_default/history.sqlite

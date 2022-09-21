@@ -11,8 +11,18 @@ set tabstop=4
 set shiftwidth=4
 
 
-nnoremap gr :vsc MonoDevelop.Refactoring.RefactoryCommands.FindReferences <CR>
-nnoremap gk :vsc MonoDevelop.Ide.Commands.TextEditorCommands.ShowQuickInfo <CR> " <-- Show tooltip without mouse
+nnoremap <leader>1 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument1<CR>
+nnoremap <leader>2 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument2<CR>
+nnoremap <leader>3 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument3<CR>
+nnoremap <leader>4 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument4<CR>
+nnoremap <leader>5 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument5<CR>
+nnoremap <leader>6 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument6<CR>
+nnoremap <leader>7 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument7<CR>
+nnoremap <leader>8 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument8<CR>
+nnoremap <leader>9 :vsc MonoDevelop.Ide.Commands.WindowCommands.OpenDocument9<CR>
+
+nnoremap gr :vsc MonoDevelop.Refactoring.RefactoryCommands.FindReferences<CR>
+nnoremap gk :vsc MonoDevelop.Ide.Commands.TextEditorCommands.ShowQuickInfo<CR>
 nnoremap gi :vsc MonoDevelop.Refactoring.RefactoryCommands.GotoImplementation<CR>
 
 nnoremap ]q :vsc MonoDevelop.Ide.Commands.ViewCommands.ShowNext<CR>

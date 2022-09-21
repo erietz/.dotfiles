@@ -86,7 +86,7 @@ lspconfig['clangd'].setup({
 lspconfig['csharp_ls'].setup({
     on_attach = on_attach,
     capabilities = capabilities,
-    filetypes = { "cs", "solution" },
+    filetypes = { "cs", "solution", "csproj" },
     handlers = {
         ["textDocument/definition"] = require("csharpls_extended").handler,
     },

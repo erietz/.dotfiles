@@ -87,6 +87,9 @@ alt - f : yabai -m config layout float
 # close window
 alt - q : $(yabai -m window $(yabai -m query --windows --window | jq -re ".id") --close)
 
+# toggle window floating
+alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
 # stacks
 alt - n : yabai -m window --focus stack.next || yabai -m window --focus stack.first
 alt - p : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
