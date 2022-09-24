@@ -37,7 +37,6 @@ return require('packer').startup(function()
     use 'vim-pandoc/vim-pandoc-syntax'
     use 'editorconfig/editorconfig-vim'
     use 'neoclide/jsonc.vim'
-    use 'tmadsen/vim-compiler-plugin-for-dotnet'
     use 'erietz/vim-todo'
     use 'erietz/vim-doconce'
 

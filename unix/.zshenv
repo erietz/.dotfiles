@@ -42,15 +42,11 @@ export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
 export SAVEHIST=1000000
 export HISTSIZE=1000000
 
-PATH_SAVE="$PATH"
-PATH="$HOME/.local/bin"
-# PATH+=":$HOME/.dotnet"
-PATH+=":$HOME/.local/scripts"
-PATH+=":$GEM_HOME/bin"
-PATH+=":$HOME/.cargo/bin"
-PATH+=":$HOME/.gem/ruby/3.0.0/bin"
-PATH+=":$PATH_SAVE"
-export PATH
+path_prefix="$HOME/.local/bin"
+path_prefix+=":$GEM_HOME/bin"
+path_prefix+=":$HOME/.cargo/bin"
+path_prefix+=":$HOME/.gem/ruby/3.0.0/bin"
+export PATH="$path_prefix:$PATH"
 
 # Remote system may not have neovim
 hash nvim 2>/dev/null && export EDITOR="nvim" || export EDITOR="vim"
