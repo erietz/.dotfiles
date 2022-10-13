@@ -9,7 +9,7 @@ scripts.
 
 Though I would prefer for the key directly to the left of the space bar, call
 this key `X`, to be the mod key used for tiling window managers, I have settled
-on the following set modifier keys.
+on the following set of modifier keys.
 
 | Mac (Before) | Linux (Before) | Mac (After) | Linux (After) |
 | ---          | ---            | ---         | ---           |
@@ -34,6 +34,13 @@ given the constraints that
   programs.
 - On MacOS: `mod` must be `option` (a.k.a. `alt`) since `cmd` is used all over
   the OS.
+
+I used to map caps lock to escape for vim but later realize that relearning to
+use `ctrl-[` for escape is far superior. The iPad does not have an escape key
+for example. Have caps lock as control allows much easier access to `ctrl-f`,
+`ctrl-b`, `ctrl-d`, `ctrl-u`, `ctrl-o`, and `ctrl-i` in vim as well. Also its
+way easier to copy and paste into a terminal not having to stretch your pinky
+so far.
 
 # Essential Bindings On Any Window Manager
 
