@@ -43,6 +43,7 @@ export SAVEHIST=1000000
 export HISTSIZE=1000000
 
 path_prefix="$HOME/.local/bin"
+path_prefix+=":$HOME/go/bin"
 path_prefix+=":$GEM_HOME/bin"
 path_prefix+=":$HOME/.cargo/bin"
 path_prefix+=":$HOME/.gem/ruby/3.0.0/bin"

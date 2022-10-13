@@ -125,15 +125,15 @@ schemes:
       white:   "#ebdbb2"
 
   voodoo: &voodoo
-    primary: 
-      background: "#333333"
+    primary:
+      background: "#202224"
       foreground: "#ededed"
     cursor:
       cursor: "#fbf1c7"
       text: "#282828"
 
     normal:
-      black:   "#333333"
+      black:   "#202224"
       red:     "#fc8d62"
       green:   "#a6d854"
       yellow:  "#ffd92f"
@@ -203,4 +203,4 @@ schemes:
       cyan:    '#3e999f'
       white:   '#f5f5f5'
 
-colors: *gruvbox_dark
+colors: *voodoo

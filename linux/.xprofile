@@ -10,7 +10,9 @@
 # Start programs at login
 case $DESKTOP_SESSION in
     dwm)
-		${HOME}/.local/scripts/dwm_login.sh
+		${HOME}/.local/bin/dwm_login.sh
+		setxkbmap -option ctrl:nocaps
+		setxkbmap -option ctrl:swap_lalt_lctl
 		;;
 esac
 
