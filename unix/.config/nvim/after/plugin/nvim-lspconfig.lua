@@ -9,7 +9,7 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { silent=true, buffer=bufnr }
+  local bufopts = { silent = true, buffer = bufnr }
   keymap.nnoremap('gD', vim.lsp.buf.declaration, bufopts)
   keymap.nnoremap('gd', vim.lsp.buf.definition, bufopts)
   keymap.nnoremap('K', vim.lsp.buf.hover, bufopts)
@@ -24,97 +24,79 @@ local on_attach = function(client, bufnr)
   keymap.nnoremap('<space>rn', vim.lsp.buf.rename, bufopts)
   keymap.nnoremap('<space>ca', vim.lsp.buf.code_action, bufopts)
   keymap.nnoremap('gr', vim.lsp.buf.references, bufopts)
-  keymap.nnoremap('<space>f', vim.lsp.buf.formatting, bufopts)
+  keymap.nnoremap('<space>fm', vim.lsp.buf.formatting, bufopts)
 end
 
-
-local capabilities = require('cmp_nvim_lsp').update_capabilities(
-    vim.lsp.protocol.make_client_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities(
+  vim.lsp.protocol.make_client_capabilities()
 )
 
-local sumneko_root_path = "/bin"
-local sumneko_binary = "lua-language-server"
-if vim.fn.has("win32") == 1 then
-    sumneko_root_path = [[C:\Users\erietz\Documents\lua-language-server-3.4.2-win32-x64\]]
-    sumneko_binary = sumneko_root_path .. [[bin\lua-language-server]]
-end
-
 lspconfig['sumneko_lua'].setup({
-    -- cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
-    on_attach = on_attach,
-    capabilities = capabilities,
-    settings = {
-        Lua = {
-            diagnostics = {
-                -- Get the language server to recognize the `vim` global
-                globals = { "vim" },
-            },
-            workspace = {
-                -- Make the server aware of Neovim runtime files
-                library = {
-                    [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-                    [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-                },
-            },
-        }
+  -- cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = { "vim" },
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+        },
+      },
     }
+  }
 })
 
 lspconfig['pyright'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 lspconfig['rust_analyzer'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 lspconfig['tsserver'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 lspconfig['clangd'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
--- local pid = vim.fn.getpid()
--- local omnisharp_bin = "/Users/erietz/Documents/omnisharp-win-x86/OmniSharp.exe"
--- lspconfig['omnisharp'].setup({
---     on_attach = on_attach,
---     capabilities = capabilities,
---     cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid)},
--- })
-
 
 lspconfig['csharp_ls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { "cs", "solution", "csproj" },
-    handlers = {
-        ["textDocument/definition"] = require("csharpls_extended").handler,
-    },
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "cs", "solution", "csproj" },
+  handlers = {
+    ["textDocument/definition"] = require("csharpls_extended").handler,
+  },
 })
 
 lspconfig['html'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 lspconfig['cssls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 lspconfig['dartls'].setup({
-    -- cmd = { "cmd.exe", "/C", "dart", "language-server", "--lsp" },
-    -- root_dir = function() return "/Users/erietz/git/osu-cs492-project3/call_me_maybe" end,
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
 
 lspconfig.gopls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities
+  on_attach = on_attach,
+  capabilities = capabilities
 })
