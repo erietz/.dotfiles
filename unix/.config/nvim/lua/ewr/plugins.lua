@@ -1,7 +1,6 @@
 local use = require('packer').use
 
 return require('packer').startup(function()
-
     -- packer can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -105,6 +104,7 @@ return require('packer').startup(function()
     -- vimscript dev
     use 'junegunn/vader.vim'
 
-
+    -- Email
+    use 'https://git.sr.ht/~soywod/himalaya-vim'
 end)
 

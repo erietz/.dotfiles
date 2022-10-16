@@ -6,6 +6,14 @@ alias ls="ls --color=auto"
 alias spotify="spotify --force-device-scale-factor=2 &> /dev/null"
 alias keybindings='grep "bindsym \$mod+" ${HOME}/.config/i3/config | fzf'
 
+pacman_bigpacs() {
+	pacman -Qeti \
+		| egrep '(Name|Installed Size)' \
+		| paste - - \
+		| awk '{printf("%-25s %9s %5s\n", $3, $7, $8)}' \
+		| sort -k3 -k2n
+}
+
 open () {
     # in zsh, the `&!` and `&|` operators disown the job immediately
     xdg-open "$@" 1>/dev/null 2>/dev/null &|
