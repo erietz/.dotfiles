@@ -317,7 +317,7 @@ luasnip.add_snippets("nasm", {
 
 luasnip.add_snippets("python", {
   s("main", fmt([[
-if __name__ == "__main"__":
+if __name__ == "__main__":
     {}
 ]],
     { i(1, "main()") })

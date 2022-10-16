@@ -15,6 +15,7 @@ local on_attach = function(client, bufnr)
   keymap.nnoremap('K', vim.lsp.buf.hover, bufopts)
   keymap.nnoremap('gi', vim.lsp.buf.implementation, bufopts)
   keymap.nnoremap('<C-k>', vim.lsp.buf.signature_help, bufopts)
+  keymap.nnoremap('<C-j>', vim.lsp.buf.hover, bufopts)
   keymap.nnoremap('<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
   keymap.nnoremap('<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
   keymap.nnoremap('<space>wl', function()
@@ -52,9 +53,9 @@ lspconfig['sumneko_lua'].setup({
   }
 })
 
-lspconfig['pyright'].setup({
-  on_attach = on_attach,
-  capabilities = capabilities
+lspconfig['pylsp'].setup({
+    on_attach = on_attach,
+    capabilities = capabilities
 })
 
 lspconfig['rust_analyzer'].setup({
