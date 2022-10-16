@@ -8,7 +8,7 @@ alias keybindings='grep "bindsym \$mod+" ${HOME}/.config/i3/config | fzf'
 
 pacman_bigpacs() {
 	pacman -Qeti \
-		| egrep '(Name|Installed Size)' \
+		| grep -E '(Name|Installed Size)' \
 		| paste - - \
 		| awk '{printf("%-25s %9s %5s\n", $3, $7, $8)}' \
 		| sort -k3 -k2n
