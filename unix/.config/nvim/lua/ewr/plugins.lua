@@ -1,6 +1,7 @@
 local use = require('packer').use
 
 return require('packer').startup(function()
+
     -- packer can manage itself
     use 'wbthomason/packer.nvim'
 
@@ -38,6 +39,8 @@ return require('packer').startup(function()
     use 'neoclide/jsonc.vim'
     use 'erietz/vim-todo'
     use 'erietz/vim-doconce'
+    use 'bfrg/vim-jq'
+    use "lukas-reineke/indent-blankline.nvim"   -- reading yaml indented 2 spaces...
 
     -- autocomplete
     use {
@@ -105,6 +108,12 @@ return require('packer').startup(function()
     use 'junegunn/vader.vim'
 
     -- Email
-    use 'https://git.sr.ht/~soywod/himalaya-vim'
+    if vim.fn.executable("himalaya") == 1 then
+        use 'https://git.sr.ht/~soywod/himalaya-vim'
+    end
+
+    -- the dark side of the force
+    use 'nvim-orgmode/orgmode'
+
 end)
 

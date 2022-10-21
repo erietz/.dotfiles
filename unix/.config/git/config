@@ -1,3 +1,10 @@
+[user]
+	email = ewrietz@gmail.com
+	name = erietz
+[credential]
+	# Do not store credentials on disk. Using ssh protocol prevents having to
+	# enter username/password each time you push to GitHub.
+	helper = forget
 [alias]
 	st = status
 	pu = pull
@@ -8,14 +15,15 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
-	pr  = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
+	pr = "!f() { git fetch -fu ${2:-origin} refs/pull/$1/head:pr/$1 && git checkout pr/$1; }; f"
 	pr-clean = "!git for-each-ref refs/heads/pr/* --format='%(refname)' | while read ref ; do branch=${ref#refs/heads/} ; git branch -D $branch ; done"
-[user]
-	email = ewrietz@gmail.com
-	name = Ethan Rietz
-[credential]
-	helper = store
 [init]
 	defaultBranch = main
 [pull]
+	# Refuse to merge and exit with a non-zero status unless the current HEAD
+	# is already up-to-date or the merge can be resolved as a fast-forward
 	ff=only
+[core]
+	# On UNIX, if files exist locally with CRLF, convert CRLF to LF on commit.
+	# This should be set to `true` on Windows rather than `input`.
+	autocrlf = input

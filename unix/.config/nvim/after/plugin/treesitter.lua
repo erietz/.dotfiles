@@ -30,6 +30,7 @@ require'nvim-treesitter.configs'.setup {
     "latex",
     "lua",
     "make",
+    "org",
     "python",
     "rust",
     "scss",
@@ -41,6 +42,7 @@ require'nvim-treesitter.configs'.setup {
   },
   highlight = {
     enable = true,
+    additional_vim_regex_highlighting = {'org'}, -- Required for spellcheck, some LaTex highlights and code block highlights that do not have ts grammar
   },
   indent = {
     enable = true,

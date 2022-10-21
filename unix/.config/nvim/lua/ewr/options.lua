@@ -16,8 +16,8 @@ vim.opt.autoindent = true -- copy indent level last line when inserting new line
 
 -- two space non-tab languages
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
-  command = "setlocal tabstop=2 shiftwidth=2 expandtab"
+    pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
+    command = "setlocal tabstop=2 shiftwidth=2 expandtab"
 })
 
 -- space rather than tab languages

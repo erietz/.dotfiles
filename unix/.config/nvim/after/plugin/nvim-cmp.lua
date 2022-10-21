@@ -11,8 +11,7 @@ cmp.setup({
         { name = "nvim_lsp" },
         { name = "buffer" },
         { name = "path" },
-        -- { name = "cmdline" },
-        -- { name = 'nvim_lsp_signature_help' },
+        { name = 'orgmode' },
     }),
     mapping = cmp.mapping.preset.insert({
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
