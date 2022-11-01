@@ -1,10 +1,6 @@
 [user]
 	email = ewrietz@gmail.com
 	name = erietz
-[credential]
-	# Do not store credentials on disk. Using ssh protocol prevents having to
-	# enter username/password each time you push to GitHub.
-	helper = forget
 [alias]
 	st = status
 	pu = pull
