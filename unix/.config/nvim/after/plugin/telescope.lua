@@ -3,19 +3,12 @@ local action_layout = require("telescope.actions.layout")
 
 require("telescope").setup({
     defaults = {
-        --[[
-        layout_strategy = "vertical",
-        layout_config = {
-            mirror = true,
-            -- prompt_position = "top"
-        },
-        --]]
         mappings = {
             n = {
-                ["<c-j>"] = action_layout.toggle_preview
+                ["<c-k>"] = action_layout.toggle_preview
             },
             i = {
-                ["<c-j>"] = action_layout.toggle_preview
+                ["<c-k>"] = action_layout.toggle_preview
             },
         }
     }
@@ -83,11 +76,11 @@ end,
 
 keymap.nnoremap('<leader>.', function()
     require('telescope.builtin').find_files({
-      follow = true,
-      hidden = true,
-      search_dirs = {
-        "$HOME/.dotfiles/",
-      }
+        follow = true,
+        hidden = true,
+        search_dirs = {
+            "$HOME/.dotfiles/",
+        }
     })
 end,
     { desc = "Telescope: find through my dotfiles" }
