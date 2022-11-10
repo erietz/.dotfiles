@@ -1,6 +1,7 @@
 local lspconfig = require("lspconfig")
 local util = require("lspconfig").util
 local keymap = require("ewr.keymap")
+local spread = require("ewr.spread").spread
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -33,10 +34,13 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities(
     vim.lsp.protocol.make_client_capabilities()
 )
 
-lspconfig['sumneko_lua'].setup({
-    -- cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+local lsp_defaults = spread{
     on_attach = on_attach,
-    capabilities = capabilities,
+    capabilities = capabilities
+}
+
+
+lspconfig['sumneko_lua'].setup(lsp_defaults {
     settings = {
         Lua = {
             diagnostics = {
@@ -53,53 +57,18 @@ lspconfig['sumneko_lua'].setup({
         }
     }
 })
-
-lspconfig['pylsp'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig['rust_analyzer'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig['tsserver'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig['clangd'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig['csharp_ls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
+lspconfig['pylsp'].setup(lsp_defaults{})
+lspconfig['rust_analyzer'].setup(lsp_defaults{})
+lspconfig['clangd'].setup(lsp_defaults{})
+lspconfig['html'].setup(lsp_defaults{})
+lspconfig['cssls'].setup(lsp_defaults{})
+lspconfig['tsserver'].setup(lsp_defaults{})
+lspconfig['dartls'].setup(lsp_defaults{})
+lspconfig['gopls'].setup(lsp_defaults{})
+lspconfig['csharp_ls'].setup(lsp_defaults {
     filetypes = { "cs" },
     root_dir = util.root_pattern("*.sln") or util.root_pattern("*.csproj"),
     handlers = {
         ["textDocument/definition"] = require("csharpls_extended").handler,
     },
-})
-
-lspconfig['html'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig['cssls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig['dartls'].setup({
-    on_attach = on_attach,
-    capabilities = capabilities
-})
-
-lspconfig.gopls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities
 })

@@ -57,6 +57,8 @@ keymap.nnoremap(']b', ':bnext<CR>zz')
 keymap.nnoremap('[b', ':bprev<CR>zz')
 keymap.nnoremap(']t', ':tnext<CR>zz')
 keymap.nnoremap('[t', ':tprev<CR>zz')
+keymap.nnoremap(']n', ':next<CR>zz')
+keymap.nnoremap('[n', ':prev<CR>zz')
 
 -- scrolling down with left hand only gives me carpel tunnel
 keymap.nnoremap('<c-y>', '<c-d>')
