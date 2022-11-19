@@ -1,12 +1,7 @@
 local keymap = require("ewr.keymap")
 
-if vim.fn.exists(':NERDTreeWinSize') then
-    vim.g.NERDTreeWinSize = 25
-end
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
 
-keymap.nnoremap('<leader>dv', ':NERDTreeToggle<CR>',
-    { desc = "View tree of project" })
-
-keymap.nnoremap('<leader>fv', ':NERDTreeFind<CR>',
-    { desc = "View tree of current file" })
-
+keymap.nnoremap('<leader>dv', ':Ex<CR>', { desc = "View tree of project" })

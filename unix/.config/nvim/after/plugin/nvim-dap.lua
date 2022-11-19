@@ -4,6 +4,7 @@ local dap = require('dap')
 require("dapui").setup()
 
 require('dap-python').setup('~/miniconda3/envs/debugpy/bin/python')
+require('dap-python').test_runner = 'pytest'
 
 -- c, c++, rust {{{
 local lldb_path

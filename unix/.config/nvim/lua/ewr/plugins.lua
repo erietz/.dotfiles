@@ -13,7 +13,6 @@ return require('packer').startup(function()
             'nvim-lua/plenary.nvim'
         }
     }
-    use 'preservim/nerdtree'
     use {
         'nvim-telescope/telescope.nvim',
         requires = 'nvim-lua/plenary.nvim'
