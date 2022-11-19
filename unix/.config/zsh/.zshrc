@@ -1,12 +1,17 @@
-# Load terminal colors
+# profile zsh startup time
+# zmodload zsh/zprof
+
+# basic settings {{{
+
+# load terminal colors
 autoload -U colors && colors
 
-# Safety
+# safety
 set -o noclobber
 alias cp='cp -i'
 alias mv='mv -i'
 
-# tab completion----------------------------------------------------------------
+# tab completion
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -15,7 +20,9 @@ setopt globdots
 _comp_options+=(globdots)   # include hidden files
 setopt COMPLETE_ALIASES
 
-# keybindings-------------------------------------------------------------------
+# }}}
+# keybindings {{{
+
 bindkey -v  # vim
 export KEYTIMEOUT=1
 
@@ -34,37 +41,33 @@ bindkey '^e' edit-command-line
 # Expand aliases
 bindkey '^k' _expand_alias
 
-# load all source files---------------------------------------------------------
-load_configs() {
-    #local files=($@)
-    for file in $@;
-    do
-        [ -f $file ] && source $file #&& echo "sourced \t $file" || echo "$file has not been sourced"
-    done
-}
+# }}}
+# source other files {{{
 
-# - Computer specific zshrc files are named via hostname.
-# - Sometimes hostname adds a number if logged in twice
-local computer=$(hostname -s | sed 's/[0-9]//g')
 export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
 
 source_files=(
-    $ZDOTDIR/$computer.zsh
-    $ZDOTDIR/unix.zsh
-    $EWR_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-    $EWR_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
-    $EWR_PLUGIN_DIR/zsh-completions/zsh-completions.plugin.zsh
-    $EWR_PLUGIN_DIR/git-prompt.sh
+	$ZDOTDIR/$computer.zsh
+	$ZDOTDIR/unix.zsh
+	$EWR_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	$EWR_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
+	$EWR_PLUGIN_DIR/zsh-completions/zsh-completions.plugin.zsh
+	$EWR_PLUGIN_DIR/git-prompt.sh
 )
 
 case $OSTYPE in
-    darwin*) source_files+=($ZDOTDIR/mac.zsh) ;;
-    linux*) source_files+=($ZDOTDIR/linux.zsh) ;;
+	darwin*) source_files+=($ZDOTDIR/mac.zsh) ;;
+	linux*) source_files+=($ZDOTDIR/linux.zsh) ;;
 esac
 
-load_configs $source_files
+for file in $source_files;
+do
+	[ -f $file ] && source $file
+done
 
-# Prompt------------------------------------------------------------------------
+# }}}
+# prompt {{{
+
 local prompt=''
 prompt+='%{$fg[cyan]%}['    # [
 prompt+='%{$fg[green]%}%n'  # $USERNAME
@@ -78,4 +81,9 @@ prompt+='~ '                # ~
 prompt+='%{$reset_color%}'
 setopt PROMPT_SUBST ; PS1="${prompt}"
 
+# }}}
+
+# per machine settings that do not get tracked by git
 [ -f ~/.zshrc-extra ] && source ~/.zshrc-extra
+
+# zprof

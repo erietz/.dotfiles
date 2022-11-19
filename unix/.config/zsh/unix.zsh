@@ -1,5 +1,3 @@
-config_file="$HOME/.config/fuzzy/config.json"
-
 # ex - archive extractor
 # usage: ex <file>
 ex ()
@@ -37,6 +35,8 @@ newscript () {
     touch $1 && chmod +x $1 && nvim $1
 }
 
+config_file="$HOME/.config/fuzzy/config.json"
+
 fcd () {
     local dir=$(jq --raw-output --arg computer $computer '.global.directories[] , .[$computer].directories[]' $config_file | fzf)
     local dir=${(e)dir}
@@ -49,14 +49,6 @@ fhist () {
 
 viman () {
     vim -c "Man $1" -c 'silent only'
-}
-
-zathura () {
-    /usr/bin/zathura $1 &> /dev/null
-}
-
-okular () {
-    /usr/bin/okular $1 &> /dev/null
 }
 
 gpu () {
