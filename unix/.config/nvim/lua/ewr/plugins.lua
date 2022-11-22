@@ -13,10 +13,18 @@ return require('packer').startup(function()
             'nvim-lua/plenary.nvim'
         }
     }
-    use 'preservim/nerdtree'
     use {
         'nvim-telescope/telescope.nvim',
         requires = 'nvim-lua/plenary.nvim'
+    }
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        config = function()
+            require("nvim-tree").setup()
+        end
     }
 
     -- code running
@@ -33,8 +41,8 @@ return require('packer').startup(function()
         requires = 'nvim-treesitter/nvim-treesitter'
     }
     use 'lervag/vimtex'
-    use 'vim-pandoc/vim-pandoc'
-    use 'vim-pandoc/vim-pandoc-syntax'
+    -- use 'vim-pandoc/vim-pandoc'
+    -- use 'vim-pandoc/vim-pandoc-syntax'
     use 'editorconfig/editorconfig-vim'
     use 'neoclide/jsonc.vim'
     use 'erietz/vim-todo'

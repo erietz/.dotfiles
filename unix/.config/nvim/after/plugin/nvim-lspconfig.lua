@@ -15,19 +15,18 @@ local on_attach = function(client, bufnr)
     keymap.nnoremap('gd', vim.lsp.buf.definition, bufopts)
     keymap.nnoremap('gD', vim.lsp.buf.declaration, bufopts)
     keymap.nnoremap('gr', vim.lsp.buf.references, bufopts)
-    keymap.nnoremap('K', vim.lsp.buf.hover, bufopts)
     keymap.nnoremap('gi', vim.lsp.buf.implementation, bufopts)
-    keymap.nnoremap('<C-k>', vim.lsp.buf.signature_help, bufopts)
-    keymap.nnoremap('<C-j>', vim.lsp.buf.hover, bufopts)
-    keymap.nnoremap('<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
-    keymap.nnoremap('<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
-    keymap.nnoremap('<space>wl', function()
+    keymap.nnoremap('<leader>ls', vim.lsp.buf.signature_help, bufopts)
+    keymap.nnoremap('<leader>lh', vim.lsp.buf.hover, bufopts)
+    keymap.nnoremap('<leader>wa', vim.lsp.buf.add_workspace_folder, bufopts)
+    keymap.nnoremap('<leader>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
+    keymap.nnoremap('<leader>wl', function()
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, bufopts)
-    keymap.nnoremap('<space>D', vim.lsp.buf.type_definition, bufopts)
-    keymap.nnoremap('<space>rn', vim.lsp.buf.rename, bufopts)
-    keymap.nnoremap('<space>ca', vim.lsp.buf.code_action, bufopts)
-    keymap.nnoremap('<space>fm', vim.lsp.buf.format, bufopts)
+    keymap.nnoremap('<leader>lt', vim.lsp.buf.type_definition, bufopts)
+    keymap.nnoremap('<leader>lr', vim.lsp.buf.rename, bufopts)
+    keymap.nnoremap('<leader>la', vim.lsp.buf.code_action, bufopts)
+    keymap.nnoremap('<leader>lf', vim.lsp.buf.format, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
@@ -39,8 +38,7 @@ local lsp_defaults = spread{
     capabilities = capabilities
 }
 
-
-lspconfig['sumneko_lua'].setup(lsp_defaults {
+lspconfig.sumneko_lua.setup(lsp_defaults{
     settings = {
         Lua = {
             diagnostics = {
@@ -54,18 +52,32 @@ lspconfig['sumneko_lua'].setup(lsp_defaults {
                     [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
                 },
             },
+            -- Do not send telemetry data containing a randomized but unique identifier
+            telemetry = {
+                enable = false,
+            },
         }
     }
 })
-lspconfig['pylsp'].setup(lsp_defaults{})
-lspconfig['rust_analyzer'].setup(lsp_defaults{})
-lspconfig['clangd'].setup(lsp_defaults{})
-lspconfig['html'].setup(lsp_defaults{})
-lspconfig['cssls'].setup(lsp_defaults{})
-lspconfig['tsserver'].setup(lsp_defaults{})
-lspconfig['dartls'].setup(lsp_defaults{})
-lspconfig['gopls'].setup(lsp_defaults{})
-lspconfig['csharp_ls'].setup(lsp_defaults {
+lspconfig.pylsp.setup(lsp_defaults{
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = {
+                    maxLineLength = 100
+                }
+            }
+        }
+    }
+})
+lspconfig.rust_analyzer.setup(lsp_defaults{})
+lspconfig.clangd.setup(lsp_defaults{})
+lspconfig.html.setup(lsp_defaults{})
+lspconfig.cssls.setup(lsp_defaults{})
+lspconfig.tsserver.setup(lsp_defaults{})
+lspconfig.dartls.setup(lsp_defaults{})
+lspconfig.gopls.setup(lsp_defaults{})
+lspconfig.csharp_ls.setup(lsp_defaults{
     filetypes = { "cs" },
     root_dir = util.root_pattern("*.sln") or util.root_pattern("*.csproj"),
     handlers = {
