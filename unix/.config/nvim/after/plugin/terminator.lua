@@ -6,7 +6,7 @@ vim.g.terminator_repl_delimiter_regex = "--"
 vim.g.terminator_runfile_map = {
     ['scheme'] = 'racket',
     ['cs'] = 'dotnet run',
-    ['python'] = 'python',
+    ['python'] = 'python -u',
 }
 
 vim.g.terminator_repl_command = {
