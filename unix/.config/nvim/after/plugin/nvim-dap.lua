@@ -1,10 +1,17 @@
 local keymap = require("ewr.keymap")
 local dap = require('dap')
 
-require("dapui").setup()
+-- python {{{
 
+require("dapui").setup()
 require('dap-python').setup('~/miniconda3/envs/debugpy/bin/python')
 require('dap-python').test_runner = 'pytest'
+
+-- }}}
+
+-- go {{{
+require('dap-go').setup()
+-- }}}
 
 -- c, c++, rust {{{
 local lldb_path
@@ -109,18 +116,3 @@ keymap.nnoremap('<F8>', function()
 end,
     { silent = true, desc = "Debugger: toggle ui" })
 
--- Python
-keymap.nnoremap('<leader>dc', function()
-    require("dap-python").test_class()
-end,
-    { silent = true, desc = "Debugger: debug python test class" })
-
-keymap.nnoremap('<leader>dm', function()
-    require("dap-python").test_method()
-end,
-    { silent = true, desc = "Debugger: debug python test method" })
-
-keymap.vnoremap('<leader>ds', function()
-    require("dap-python").debug_selection()
-end,
-    { silent = true, desc = "Debugger: debug python selection" })

@@ -16,14 +16,14 @@ vim.opt.autoindent = true -- copy indent level last line when inserting new line
 
 -- two space non-tab languages
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "html", "css", "tex", "md", "pandoc", "dart", "javascript", "typescript", "typescriptreact" },
+    pattern = { "html", "css", "tex", "md", "pandoc", "dart", "javascript", "typescript", "typescriptreact", "json" },
     command = "setlocal tabstop=2 shiftwidth=2 expandtab"
 })
 
 -- space rather than tab languages
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "lua", "python" },
-  command = "setlocal expandtab"
+    pattern = { "lua", "python" },
+    command = "setlocal expandtab"
 })
 
 vim.opt.guicursor = '' -- Always use block cursor
@@ -59,41 +59,25 @@ vim.opt.spellfile = vim.fn.stdpath('config') .. 'spell/en.utf-8.add' -- Spelling
 
 vim.opt.backspace = 'indent,eol,start' -- Make backspace actually erase
 
--- Statusline-------------------------------------
-function Harpoon_status()
-  local status = require('harpoon.mark').status()
-  if status == '' then
-    return ''
-  end
-  return string.format('⥤ %s', status)
-end
-
-local status_line = '' .. -- break long string onto multiple lines
-    '%{luaeval("Harpoon_status()")} ' .. -- harpoon mark
-    '%<%f' .. -- filename
-    ' %h%m%r%=%-10.(%y%)' .. -- dont remember
-    ' %-14.(%l,%c%V%) %P' -- dont remember
-
--- vim.opt.statusline = status_line
 vim.opt.laststatus = 3 -- Last window always and ONLY has status line
---------------------------------------------------
 
 vim.opt.foldmethod = 'marker'
 
 -- For details see :h fo-table
 -- NOTE: running set formatoptions? indicates that these options are not
 -- entirely respected
-
 vim.opt.formatoptions = vim.opt.formatoptions
-    - "c" -- Do not wrap comments using textwidth
-    - "r" -- Insert comment on next line after pressing enter
-    + "o" -- Insert comment after pressing o or O
-    + "q" -- Allow formatting of comments with "gq"
-    + "n" -- Recognize numbered lists (markdown for example)
+- "c" -- Do not wrap comments using textwidth
+- "r" -- Insert comment on next line after pressing enter
++ "o" -- Insert comment after pressing o or O
++ "q" -- Allow formatting of comments with "gq"
++ "n" -- Recognize numbered lists (markdown for example)
 
-vim.cmd([[ autocmd BufNewFile,BufRead *.gnu,*.plot :set filetype=gnuplot ]])
+vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
+    pattern = {"*.gnu", "*.plot"},
+    command = ":set filetype=gnuplot"
+})
 
--- coc
 -- vim.opt.cmdheight = 2       -- more space for displaying messages
 vim.opt.updatetime = 300 -- better performance
 vim.opt.shortmess = vim.opt.shortmess + "c" -- dont pass messages to ins-completion-menu

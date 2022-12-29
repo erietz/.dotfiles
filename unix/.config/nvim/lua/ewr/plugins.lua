@@ -22,9 +22,7 @@ return require('packer').startup(function()
         requires = {
             'nvim-tree/nvim-web-devicons', -- optional, for file icons
         },
-        config = function()
-            require("nvim-tree").setup()
-        end
+        config = function() require("nvim-tree").setup() end
     }
 
     -- code running
@@ -86,27 +84,25 @@ return require('packer').startup(function()
     use 'mfussenegger/nvim-dap'
     use { 'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap' }
     use { 'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap' }
+    use { 'leoluz/nvim-dap-go', requires = 'mfussenegger/nvim-dap' }
 
     -- colors
     use {
         'norcalli/nvim-colorizer.lua',
         'gruvbox-community/gruvbox',
         'junegunn/seoul256.vim',
-        'chriskempson/base16-vim',
+        'RRethy/nvim-base16',
         'NLKNguyen/papercolor-theme',
         'lifepillar/vim-solarized8',
         'arzg/vim-colors-xcode',
     }
-    use { 'erietz/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
-    use 'p00f/nvim-ts-rainbow'
+    use { '/Users/ethan/git/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
 
     use {
-      'nvim-lualine/lualine.nvim',
-      disable = false,
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-      config = function()
-          require('lualine').setup()
-      end
+        'nvim-lualine/lualine.nvim',
+        disable = false,
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true },
+        config = function() require('lualine').setup() end
     }
 
     -- web dev

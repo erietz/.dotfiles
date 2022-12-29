@@ -18,17 +18,12 @@ require("rest-nvim").setup({
 
 keymap.nnoremap('<leader>rr', function()
     require('rest-nvim').run()
-    end,
-    { silent = true, desc = "rest-nvim: Run HTTP request" })
+end, { silent = true, desc = "rest-nvim: Run HTTP request" })
 
 keymap.nnoremap('<leader>rp', function()
     require('rest-nvim').run(true)
-    end,
-    { silent = true, desc = "rest-nvim: View parse curl command" }
-)
+end, { silent = true, desc = "rest-nvim: View parse curl command" })
 
 keymap.nnoremap('<leader>rl', function()
     require('rest-nvim').last()
-    end,
-    { silent = true, desc = "rest-nvim: Run last HTTP request" }
-)
+end, { silent = true, desc = "rest-nvim: Run last HTTP request" })

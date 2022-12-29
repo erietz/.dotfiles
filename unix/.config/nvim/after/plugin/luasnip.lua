@@ -1,12 +1,12 @@
 local luasnip = require("luasnip")
 local s = luasnip.snippet
-local sn = luasnip.snippet_node
 local t = luasnip.text_node
 local i = luasnip.insert_node
 local f = luasnip.function_node
 local c = luasnip.choice_node
-local d = luasnip.dynamic_node
-local r = luasnip.restore_node
+-- local sn = luasnip.snippet_node
+-- local d = luasnip.dynamic_node
+-- local r = luasnip.restore_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
 local types = require "luasnip.util.types"
@@ -27,27 +27,27 @@ luasnip.config.set_config({
 })
 
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
-  if luasnip.expand_or_jumpable() then
-    luasnip.expand_or_jump()
-  else
-    vim.cmd("wincmd k")
-  end
+    if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+    else
+        vim.cmd("wincmd k")
+    end
 end, { silent = true })
 
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
-  if luasnip.jumpable(-1) then
-    luasnip.jump(-1)
-  else
-    vim.cmd("wincmd j")
-  end
+    if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+    else
+        vim.cmd("wincmd j")
+    end
 end, { silent = true })
 
 vim.keymap.set("i", "<c-l>", function()
-  if luasnip.choice_active() then
-    luasnip.change_choice(1)
-  else
-    vim.cmd("wincmd l")
-  end
+    if luasnip.choice_active() then
+        luasnip.change_choice(1)
+    else
+        vim.cmd("wincmd l")
+    end
 end)
 
 vim.keymap.set("i", "<c-h>", require "luasnip.extras.select_choice")
@@ -91,7 +91,7 @@ luasnip.add_snippets("c", {
 int
 main(int argc, char *argv[])
 {
-	return EXIT_SUCCESS;
+    return EXIT_SUCCESS;
 }
 ]]),
     s("docstring", fmt([[
@@ -129,13 +129,13 @@ luasnip.add_snippets("cpp", {
 
 #endif // {gaurd}
 ]],
-    {
+        {
             gaurd = f(function()
                 return string.upper(vim.fn.expand("%:t:r")) .. "_H"
             end),
             contents = i(1, "")
-    }
-)),
+        }
+    )),
 })
 
 -- }}}
@@ -144,13 +144,13 @@ luasnip.add_snippets("cs", {
     s("main", fmt([[
 namespace {}
 {{
-	class {}
+    class {}
     {{
-		static void Main(string[] args)
+        static void Main(string[] args)
         {{
-			System.Console.WriteLine("Hello World!");
-		}}
-	}}
+            System.Console.WriteLine("Hello World!");
+        }}
+    }}
 }}
 ]],
         { i(1), i(2, "Program") }
@@ -200,15 +200,15 @@ class _[]State extends State<[]> {
   }
 }
 ]],
-      {
-        i(1, "MyWidget"),
-        rep(1),
-        rep(1),
-        rep(1),
-        rep(1),
-        rep(1),
-      },
-      { delimiters = "[]" })
+        {
+            i(1, "MyWidget"),
+            rep(1),
+            rep(1),
+            rep(1),
+            rep(1),
+            rep(1),
+        },
+        { delimiters = "[]" })
     ),
 })
 -- }}}
@@ -216,6 +216,21 @@ class _[]State extends State<[]> {
 
 luasnip.add_snippets("gitcommit", {
     s("idk", t("unhelpful commit message"))
+})
+
+-- }}}
+-- go {{{
+
+luasnip.add_snippets("go", {
+    s("err", t({
+        "if err != nil {",
+        "\tpanic(err)",
+        "}"
+    })),
+    s("got", fmt([[t.Errorf("got %v, wanted %v", {}, {})]], {
+        i(1, "got"),
+        i(2, "wanted")
+    }))
 })
 
 -- }}}
@@ -234,13 +249,13 @@ luasnip.add_snippets("make", {
 .DEFAULT_GOAL := help
 .PHONY: help
 help: ## Print this help message
-	@echo "----------------------------------------------------------------------"
-	@echo "Usage of this makefile"
-	@echo "----------------------------------------------------------------------"
-	@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sort | sed -e 's/\$$//' | sed -e 's/:.*##/:,/' | column -t -s ,
-	@echo
-	@echo "For a dry run use this command: make -n <target>"
-	@echo "----------------------------------------------------------------------"
+    @echo "----------------------------------------------------------------------"
+    @echo "Usage of this makefile"
+    @echo "----------------------------------------------------------------------"
+    @fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sort | sed -e 's/\$$//' | sed -e 's/:.*##/:,/' | column -t -s ,
+    @echo
+    @echo "For a dry run use this command: make -n <target>"
+    @echo "----------------------------------------------------------------------"
 ]]),
 })
 
@@ -316,12 +331,12 @@ luasnip.add_snippets("nasm", {
 -- python {{{
 
 luasnip.add_snippets("python", {
-  s("main", fmt([[
+    s("main", fmt([[
 if __name__ == "__main__":
     {}
 ]],
-    { i(1, "main()") })
-  )
+        { i(1, "main()") })
+    )
 })
 
 -- }}}
@@ -344,8 +359,8 @@ luasnip.add_snippets("tex", {
 \graphicspath{{images/}{plots/}{figures/}}
 \usepackage{hyperref}
 \hypersetup{
-	colorlinks=true,
-	linkcolor=blue
+    colorlinks=true,
+    linkcolor=blue
 }
 %\usepackage[style=chem-acs, autocite=superscript]{biblatex}
 %\addbibresource{ref.bib}
@@ -383,8 +398,8 @@ snippet preamble "Preamble" b
 \graphicspath{{images/}{plots/}{figures/}}
 \usepackage{hyperref}
 \hypersetup{
-	colorlinks=true,
-	linkcolor=blue
+    colorlinks=true,
+    linkcolor=blue
 }
 %\usepackage[style=chem-acs, autocite=superscript]{biblatex}
 %\addbibresource{ref.bib}
@@ -413,31 +428,31 @@ endsnippet
 
 snippet "beg(in)?" "begin{} / end{}" br
 \begin{${1:<environment>}}
-	${0:${VISUAL}}
+    ${0:${VISUAL}}
 \end{$1}
 endsnippet
 
 snippet nc "New Command"
-	\\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}
+    \\newcommand{\\${1:cmd}}[${2:opt}]{${3:realcmd}} ${0}
 endsnippet
 
 snippet "fig" "Figure environment" br
 \begin{figure}[${2:htpb}]
-	\centering
-	\includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
-	\caption{$0}
-	\label{fig:$5}
+    \centering
+    \includegraphics[width=${3:0.8}\linewidth]{${4:name.ext}}
+    \caption{$0}
+    \label{fig:$5}
 \end{figure}
 endsnippet
 
 snippet "tab(le)?" "Table environment" br
 \begin{table}[${1:htpb}]
-	\centering
-	\caption{${2:caption}}
-	\label{tab:${3:label}}
-	\begin{tabular}{${4:c}}
-	$0
-	\end{tabular}
+    \centering
+    \caption{${2:caption}}
+    \label{tab:${3:label}}
+    \begin{tabular}{${4:c}}
+    $0
+    \end{tabular}
 \end{table}
 endsnippet
 

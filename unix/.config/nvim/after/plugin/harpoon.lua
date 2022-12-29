@@ -26,26 +26,26 @@ local path = {
 }
 
 local harpoon_filetype_map = {
-    ["python"] = function()
+    python = function()
         return "python " .. path:absolute()
     end,
-    ["javascript"] = function()
+    javascript = function()
         return "node " .. path:absolute()
     end,
-    ["typescript"] = function()
+    typescript = function()
         return "ts-node " .. path:absolute()
     end,
-    ["lua"] = function()
+    lua = function()
         return "lua " .. path:absolute()
     end,
-    ["dart"] = function()
+    dart = function()
         return "dart " .. path:absolute()
     end,
-    ["c"] = function()
+    c = function()
         return "gcc " .. path:absolute() .. " -o " .. path:root_absolute() ..
             " && " .. path:root_absolute()
     end,
-    ["rust"] = function()
+    rust = function()
         return "cargo run"
     end
 }
@@ -64,31 +64,23 @@ end
 
 keymap.nnoremap('<leader>a', function()
     require('harpoon.mark').add_file()
-end,
-    {desc = "Harpoon: Adds mark for the current file"}
-)
+end, {desc = "Harpoon: Adds mark for the current file"})
 
 keymap.nnoremap('<leader>h', function()
     require('harpoon.ui').toggle_quick_menu()
-end,
-    { silent = true, desc = "Harpoon: Toggle quick menu" }
-)
+end, { silent = true, desc = "Harpoon: Toggle quick menu" })
 
 keymap.nnoremap('<leader>1', function()
     require('harpoon.ui').nav_file(1)
-end,
-    { silent = true, desc = "Harpoon: navigate to file 1" }
-)
+end, { silent = true, desc = "Harpoon: navigate to file 1" })
 
 keymap.nnoremap('<leader>2', function()
     require('harpoon.ui').nav_file(2)
-end,
-    { silent = true, desc = "Harpoon: navigate to file 2" })
+end, { silent = true, desc = "Harpoon: navigate to file 2" })
 
 keymap.nnoremap('<leader>3', function()
     require('harpoon.ui').nav_file(3)
-end,
-    { silent = true, desc = "Harpoon: navigate to file 3" })
+end, { silent = true, desc = "Harpoon: navigate to file 3" })
 
 keymap.nnoremap('<leader>4', function()
     require('harpoon.ui').nav_file(4)
@@ -102,17 +94,12 @@ end,
 
 keymap.nnoremap('<localleader>1', function()
     require('harpoon.term').gotoTerminal(1)
-end,
-    { silent = true, desc = "Harpoon: navigate to terminal 1" })
+end, { silent = true, desc = "Harpoon: navigate to terminal 1" })
 
 keymap.nnoremap('<localleader>2', function()
     require('harpoon.term').gotoTerminal(2)
-end,
-    { silent = true, desc = "Harpoon: navigate to terminal 2" })
+end, { silent = true, desc = "Harpoon: navigate to terminal 2" })
 
 keymap.nnoremap('<localleader>r', function()
     run_harpoon_cmd_and_navigate()
-end,
-    { desc = "Harpoon: Run the current file in the first harpoon terminal" }
-)
-
+end, { desc = "Harpoon: Run the current file in the first harpoon terminal" })

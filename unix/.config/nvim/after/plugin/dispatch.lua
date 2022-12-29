@@ -1,7 +1,18 @@
 local keymap = require("ewr.keymap")
 
-vim.cmd([[ autocmd Filetype markdown let b:dispatch = 'pandoc % -o %:r' . '.pdf']])
-vim.cmd([[ autocmd Filetype cs let b:dispatch = 'dotnet test']])
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "markdown",
+    callback = function()
+        vim.b.dispatch = 'pandoc % -o %:r' .. '.pdf'
+    end
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "cs",
+    callback = function()
+        vim.b.dispatch = 'dotnet test'
+    end
+})
 
 -- Dispatch
 keymap.nnoremap('<leader>mr', ':Make run<CR>', { silent = true })

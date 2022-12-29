@@ -12,6 +12,7 @@ cmp.setup({
         { name = "buffer" },
         { name = "path" },
         { name = 'orgmode' },
+        { name = 'nvim_lsp_signature_help' }
     }),
     mapping = cmp.mapping.preset.insert({
         ['<Tab>'] = cmp.mapping.select_next_item(),

@@ -9,10 +9,10 @@ cd $HOME
 
 GuiFont! JetBrainsMono NF:h13
 
-" get rid of ugly gui for autocompletion  
+" get rid of ugly gui for autocompletion
 GuiPopupmenu 0
 
-" get rid of ugly gui for autocompletion  
+" get rid of ugly gui for autocompletion
 GuiTabline 0
 
 " make cursor always a block

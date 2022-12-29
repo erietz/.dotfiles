@@ -1,15 +1,12 @@
 vim.opt.termguicolors = true    -- Better colors
 vim.opt.background = "dark"     -- Sets theme below
+-- vim.g.set3_bg = "hard"
 
-function Set_colorscheme()
-    if vim.api.nvim_get_option("background") == "dark" then
-        vim.g.gruvbox_contrast_dark = "soft"
-        vim.cmd("colorscheme set3")
-        -- vim.cmd("colorscheme xcodewwdc")
-        -- vim.cmd("colorscheme solarized8")
-    else
-        vim.cmd("colorscheme gruvbox")
-    end
+function SetColorScheme(color)
+    color = color or "set3"
+    vim.cmd.colorscheme(color)
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-Set_colorscheme()
+SetColorScheme()

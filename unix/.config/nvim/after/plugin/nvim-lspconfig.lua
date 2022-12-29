@@ -68,7 +68,23 @@ lspconfig.pylsp.setup(lsp_defaults{
                 }
             }
         }
-    }
+    },
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+
+        keymap.nnoremap('<leader>dc', function()
+            require("dap-python").test_class()
+        end, { silent = true, desc = "Debugger: debug python test class" })
+
+        keymap.nnoremap('<leader>dm', function()
+            require("dap-python").test_method()
+        end, { silent = true, desc = "Debugger: debug python test method" })
+
+        keymap.vnoremap('<leader>ds', function()
+            require("dap-python").debug_selection()
+        end, { silent = true, desc = "Debugger: debug python selection" })
+
+    end
 })
 lspconfig.rust_analyzer.setup(lsp_defaults{})
 lspconfig.clangd.setup(lsp_defaults{})
@@ -76,11 +92,26 @@ lspconfig.html.setup(lsp_defaults{})
 lspconfig.cssls.setup(lsp_defaults{})
 lspconfig.tsserver.setup(lsp_defaults{})
 lspconfig.dartls.setup(lsp_defaults{})
-lspconfig.gopls.setup(lsp_defaults{})
+lspconfig.gopls.setup(lsp_defaults{
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+
+        keymap.nnoremap('<leader>dn', function()
+            require('dap-go').debug_test()
+        end, { desc = "Debugger: debug nearest test" })
+
+        keymap.nnoremap('<leader>dl', function()
+            require('dap-go').debug_last_test()
+        end, { desc = "Debugger: debug last test" })
+
+    end
+})
 lspconfig.csharp_ls.setup(lsp_defaults{
     filetypes = { "cs" },
-    root_dir = util.root_pattern("*.sln") or util.root_pattern("*.csproj"),
+    root_dir = util.root_pattern("*.sln", "*.csproj"),
     handlers = {
         ["textDocument/definition"] = require("csharpls_extended").handler,
     },
 })
+lspconfig.texlab.setup(lsp_defaults{})
+
