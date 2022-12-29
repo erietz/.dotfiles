@@ -95,7 +95,7 @@ ctrl + alt - right : yabai -m window east --stack $(yabai -m query --windows --w
 # additional keybindings {{{
 
 # open a terminal if not already open
-alt - return : open -a /Applications/iTerm.app
+alt - return : open -a alacritty
 
 # }}}
 # Resize mode {{{

@@ -23,6 +23,3 @@
 	# On UNIX, if files exist locally with CRLF, convert CRLF to LF on commit.
 	# This should be set to `true` on Windows rather than `input`.
 	autocrlf = input
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential

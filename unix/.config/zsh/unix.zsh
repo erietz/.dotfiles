@@ -81,6 +81,9 @@ alias tm="tmux attach || tmux"
 alias tmux="tmux -f ${XDG_CONFIG_HOME}/tmux/tmux.conf"
 alias today='date +"%F"'
 alias vim="nvim"
+alias ca="conda activate"
+alias cda="conda deactivate"
+alias cad="conda activate dev"
 
 # Global aliases (expanded anywhere they appear in a command)
 alias -g :silent="1>/dev/null 2>/dev/null"

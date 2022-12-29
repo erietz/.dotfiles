@@ -85,6 +85,7 @@ export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
 export LESSHISTFILE="-"
 export IPYTHONDIR="$XDG_CONFIG_HOME/ipython"
 export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME/jupyter"
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 #-------------------------------------------------------------------------------
 

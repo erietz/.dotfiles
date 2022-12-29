@@ -19,12 +19,14 @@ font:
   normal:
     # family: Roboto Mono
     # family: Ubuntu Mono
-    family: JetBrains Mono
+    family: JetBrainsMono Nerd Font Mono
+    # family: UbuntuMono Nerd Font
     # family: JuliaMono
-  size: 12
+  size: 18
 
 window:
-  opacity: 1
+  opacity: 0.95
+  # decorations: None
 
 # TODO: Move these keybindings to a new alacritty.yml for windows and load
 # this file using an include section
@@ -53,8 +55,8 @@ schemes:
       black:   "#073642" # base02
       red:     "#dc322f" # red
       green:   "#859900" # green
-      yellow:  "#b58900" # yellow
       blue:    "#268bd2" # blue
+      yellow:  "#b58900" # yellow
       magenta: "#d33682" # magenta
       cyan:    "#2aa198" # cyan
       white:   "#eee8d5" # base2
@@ -124,32 +126,32 @@ schemes:
       cyan:    "#8ec07c"
       white:   "#ebdbb2"
 
-  voodoo: &voodoo
+  set3: &set3
     primary:
-      background: "#202224"
-      foreground: "#ededed"
+      background: "#2A2A2A"
+      foreground: "#d5d5d5"
     cursor:
       cursor: "#fbf1c7"
       text: "#282828"
 
     normal:
-      black:   "#202224"
-      red:     "#fc8d62"
-      green:   "#a6d854"
-      yellow:  "#ffd92f"
-      blue:    "#8da0cb"
-      magenta: "#e78ac3"
-      cyan:    "#66c2a5"
-      white:   "#ededed"
-    bright:
-      black:   "#928374"
+      black:   "#2A2A2A"
       red:     "#fb8072"
       green:   "#b3de69"
       yellow:  "#ffffb3"
       blue:    "#80b1d3"
       magenta: "#bebada"
       cyan:    "#8dd3c7"
-      white:   "#ededed"
+      white:   "#d5d5d5"
+    bright:
+      black:   "#888888"
+      red:     "#fc8d62"
+      green:   "#a6d854"
+      yellow:  "#ffd92f"
+      blue:    "#8da0cb"
+      magenta: "#e78ac3"
+      cyan:    "#66c2a5"
+      white:   "#d5d5d5"
 
   base16_eighties: &base16_eighties
     primary:
@@ -203,4 +205,4 @@ schemes:
       cyan:    '#3e999f'
       white:   '#f5f5f5'
 
-colors: *voodoo
+colors: *set3
