@@ -96,7 +96,7 @@ return require('packer').startup(function()
         'lifepillar/vim-solarized8',
         'arzg/vim-colors-xcode',
     }
-    use { '/Users/ethan/git/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+    use { 'erietz/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
 
     use {
         'nvim-lualine/lualine.nvim',
