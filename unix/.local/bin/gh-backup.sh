@@ -14,7 +14,7 @@ mkdir -p "$BACKUP_DIR"
 
 gh repo list "$GITHUB_HANDLE" --limit "$MAX_REPOS" | cut -d '/' -f2- | while read -r repo_name _; do
 	out_dir="${BACKUP_DIR}/$repo_name"
-	gh repo clone "$repo" "$out_dir" -- -q 2>/dev/null || (
+	gh repo clone "$repo_name" "$out_dir" -- -q 2>/dev/null || (
 		cd "$out_dir"
 		# Handle case where local checkout is on a non-main/master branch.
 		# Ignore checkout errors because some repos may have zero commits, so
