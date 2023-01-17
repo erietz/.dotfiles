@@ -86,6 +86,7 @@ lspconfig.pylsp.setup(lsp_defaults{
 
     end
 })
+lspconfig.bashls.setup{lsp_defaults{}}
 lspconfig.rust_analyzer.setup(lsp_defaults{})
 lspconfig.clangd.setup(lsp_defaults{})
 lspconfig.html.setup(lsp_defaults{})
