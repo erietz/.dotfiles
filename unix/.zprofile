@@ -4,7 +4,6 @@
 # Description:
 #
 #   - Settings for login shells
-#   - This file gets sourced "every time" as apposed to .zprofile
 #   - Other zsh config files are in ZDOTDIR for interactive shells
 #   - The order of sourcing operations is as follows
 #
@@ -33,8 +32,6 @@
 #              |/etc/zlogout    |    J      |           |      |
 #              +----------------+-----------+-----------+------+
 #
-# NOTE: If PATH is set in this file, it may get overwritten by /etc/zprofile.
-#       A possible work around would be to source ~/.zshenv in ~/.zprofile
 #-------------------------------------------------------------------------------
 
 export EWR_PLUGIN_DIR="${HOME}/.config/ewr-plugins"
@@ -104,4 +101,4 @@ elif [[ "$OSTYPE" =~ ^darwin ]]; then
     export CLICOLOR=1
 fi
 
-[ -f ~/.zshenv-extra ] && source ~/.zshenv-extra
+[ -f ~/.zprofile-extra ] && source ~/.zprofile-extra
