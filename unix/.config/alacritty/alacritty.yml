@@ -17,11 +17,8 @@ scrolling:
 
 font:
   normal:
-    # family: Roboto Mono
-    # family: Ubuntu Mono
-    family: JetBrainsMono Nerd Font Mono
-    # family: UbuntuMono Nerd Font
-    # family: JuliaMono
+    # family: JetBrainsMono Nerd Font Mono
+    family: FiraCode Nerd Font Mono
   size: 18
 
 window:

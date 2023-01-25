@@ -14,7 +14,7 @@ require("telescope").setup({
     }
 })
 
-keymap.nnoremap('<leader><Enter>', function()
+keymap.nnoremap('<leader>ff', function()
     require('telescope.builtin').find_files()
 end, { desc = "Telescope: find files" })
 

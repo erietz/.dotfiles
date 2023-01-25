@@ -13,10 +13,7 @@ return require('packer').startup(function()
             'nvim-lua/plenary.nvim'
         }
     }
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = 'nvim-lua/plenary.nvim'
-    }
+    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
     use {
         'nvim-tree/nvim-tree.lua',
         requires = {
@@ -39,8 +36,6 @@ return require('packer').startup(function()
         requires = 'nvim-treesitter/nvim-treesitter'
     }
     use 'lervag/vimtex'
-    -- use 'vim-pandoc/vim-pandoc'
-    -- use 'vim-pandoc/vim-pandoc-syntax'
     use 'editorconfig/editorconfig-vim'
     use 'neoclide/jsonc.vim'
     use 'erietz/vim-todo'
@@ -90,6 +85,7 @@ return require('packer').startup(function()
     use {
         'norcalli/nvim-colorizer.lua',
         'gruvbox-community/gruvbox',
+        'luisiacc/gruvbox-baby',
         'junegunn/seoul256.vim',
         'RRethy/nvim-base16',
         'NLKNguyen/papercolor-theme',

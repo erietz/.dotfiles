@@ -7,11 +7,12 @@ vim.g.terminator_runfile_map = {
     scheme = 'racket',
     cs = 'dotnet run',
     python = 'python3 -u',
+    typescript = 'npx ts-node',
 }
 
 vim.g.terminator_repl_command = {
     sql = 'mysql -u ethan -p',
-    typescript = 'ts-node',
+    typescript = 'npx ts-node',
 }
 
 keymap.nnoremap('<leader>ra', ':TerminatorRunAltCmd ')

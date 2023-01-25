@@ -50,8 +50,8 @@ path_prefix+=":$HOME/.gem/ruby/3.0.0/bin"
 export PATH="$path_prefix:$PATH"
 
 # Remote system may not have neovim
-hash nvim 2>/dev/null && export EDITOR="nvim" || export EDITOR="vim"
-hash nvim 2>/dev/null && export VISUAL="nvim" || export VISUAL="vim"
+command -v nvim >/dev/null && export EDITOR="nvim" || export EDITOR="vim"
+command -v nvim >/dev/null && export VISUAL="nvim" || export VISUAL="vim"
 
 export BROWSER="firefox"
 export TERMINAL="/bin/alacritty"
