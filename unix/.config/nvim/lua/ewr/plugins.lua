@@ -77,9 +77,22 @@ return require('packer').startup(function()
 
     -- debugging
     use 'mfussenegger/nvim-dap'
-    use { 'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap' }
-    use { 'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap' }
-    use { 'leoluz/nvim-dap-go', requires = 'mfussenegger/nvim-dap' }
+    use {'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap'}
+    use {'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap'}
+    use {'leoluz/nvim-dap-go', requires = 'mfussenegger/nvim-dap'}
+    use {
+        "mxsdev/nvim-dap-vscode-js",
+        requires = {
+            "mfussenegger/nvim-dap",
+            "microsoft/vscode-js-debug"
+        }
+    }
+
+    use {
+        "microsoft/vscode-js-debug",
+        opt = true,
+        run = "npm install --legacy-peer-deps && npm run compile"
+    }
 
     -- colors
     use {
