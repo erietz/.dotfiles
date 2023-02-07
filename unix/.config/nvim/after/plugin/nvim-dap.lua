@@ -21,6 +21,10 @@ for _, language in ipairs({ "typescript", "javascript" }) do
             name = "Launch file",
             program = "${file}",
             cwd = "${workspaceFolder}",
+            resolveSourceMapLocations =  {
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            }
         },
         {
             type = "pwa-node",

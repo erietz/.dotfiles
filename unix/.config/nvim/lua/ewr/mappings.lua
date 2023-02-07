@@ -84,8 +84,8 @@ keymap.nnoremap('<leader>ir', function()
   for i = start, stop, step do
     table.insert(list, i)
   end
-  list =  '[' .. table.concat(list, ', ') .. ']'
-  vim.cmd('normal a' .. list)
+  local array =  '[' .. table.concat(list, ', ') .. ']'
+  vim.cmd('normal a' .. array)
 end,
     { desc = "Insert a range using start, stop, step" }
 )
