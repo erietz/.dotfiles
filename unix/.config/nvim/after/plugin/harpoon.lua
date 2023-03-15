@@ -64,6 +64,7 @@ end
 
 keymap.nnoremap('<leader>a', function()
     require('harpoon.mark').add_file()
+    print('Harpoon mark added', path:absolute())
 end, {desc = "Harpoon: Adds mark for the current file"})
 
 keymap.nnoremap('<leader>h', function()

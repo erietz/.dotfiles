@@ -1,5 +1,35 @@
 local keymap = require("ewr.keymap")
 local dap = require('dap')
+local dapui = require("dapui")
+
+
+--[[
+
+TODO:
+
+- figure out how to clear the dap ui once you have stepped through all the
+breakpoints
+
+- auto open dapui when initially starting debugger with F5
+
+- show in status bar when debugger is running
+ 
+- auto switch windows when postman makes a request and land on breakpoint like
+vscode
+
+--]]
+
+dapui.setup()
+
+dap.listeners.after.event_initialized["dapui_config"] = function()
+	dapui.open()
+end
+dap.listeners.before.event_terminated["dapui_config"] = function()
+	dapui.close()
+end
+dap.listeners.before.event_exited["dapui_config"] = function()
+	dapui.close()
+end
 
 -- node {{{
 
@@ -54,7 +84,6 @@ end
 -- }}}
 -- python {{{
 
-require("dapui").setup()
 require('dap-python').setup('~/miniconda3/envs/debugpy/bin/python')
 require('dap-python').test_runner = 'pytest'
 
@@ -136,12 +165,12 @@ dap.configurations.cs = {
 -- }}}
 -- key mappings {{{
 
-keymap.nnoremap('<F5>',  function()
+keymap.nnoremap('<F5>', function()
     require('dap').continue()
 end,
     { silent = true, desc = "Debugger: continue to next break point" })
 
-keymap.nnoremap('<F9>',  function()
+keymap.nnoremap('<F9>', function()
     require('dap').toggle_breakpoint()
 end,
     { silent = true, desc = "Debugger: toggle break point" })
@@ -161,9 +190,27 @@ keymap.nnoremap('<F12>', function()
 end,
     { silent = true, desc = "Debugger: step out" })
 
+keymap.nnoremap('<F2>', function()
+    require('dap').list_breakpoints()
+end,
+    { silent = true, desc = "Debugger: list breakpoints" }
+)
+
+keymap.nnoremap('<F3>', function()
+    require('dap').clear_breakpoints()
+end,
+    { silent = true, desc = "Debugger: list breakpoints" }
+)
+
 -- UI
 keymap.nnoremap('<F8>', function()
     require("dapui").toggle()
 end,
     { silent = true, desc = "Debugger: toggle ui" })
 
+
+keymap.nnoremap('<leader>dl', function()
+    require('dap').run_last()
+end,
+    { silent = true, desc = "Debugger: run last" }
+)

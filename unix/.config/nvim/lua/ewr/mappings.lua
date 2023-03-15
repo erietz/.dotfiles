@@ -63,7 +63,10 @@ keymap.nnoremap('[n', ':prev<CR>zz')
 -- scrolling down with left hand only gives me carpel tunnel
 keymap.nnoremap('<c-y>', '<c-d>')
 
--- Scroll split
+-- zoom in on dapui buffer in new tab
+keymap.nnoremap('<c-t>', ':tabnew %<CR>')
+
+-- Scroll split emacs style
 keymap.nnoremap('<c-m-f>', '<c-w><c-w><c-d><c-w><c-w>')
 keymap.nnoremap('<c-m-b>', '<c-w><c-w><c-u><c-w><c-w>')
 

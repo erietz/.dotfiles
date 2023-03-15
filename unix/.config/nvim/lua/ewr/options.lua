@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- space rather than tab languages
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "lua", "python", "javascript", "typescript", "typescriptreact", "json" },
+    pattern = { "python", "typescriptreact", "json" },
     command = "setlocal expandtab"
 })
 
