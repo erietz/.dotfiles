@@ -11,8 +11,14 @@
 case $DESKTOP_SESSION in
     dwm)
 		${HOME}/.local/bin/dwm_login.sh
-		setxkbmap -option ctrl:nocaps
-		setxkbmap -option ctrl:swap_lalt_lctl
+
+		# NOTE: kinesis adv 360 kemaps are done on the hardware so this is no
+		# longer necessary
+		#
+		# set caps lock as a left control
+		# setxkbmap -option ctrl:nocaps
+		# setxkbmap -option ctrl:swap_lalt_lctl
+
 		;;
 esac
 

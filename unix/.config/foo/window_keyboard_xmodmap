@@ -1,3 +1,5 @@
+! TODO figure out this arcane syntax
+
 ! Swap windows key and alt
 remove mod1 = Alt_L
 remove mod4 = Super_L
@@ -5,3 +7,12 @@ keycode 133 = Alt_L
 keycode 64 = Super_L
 add mod1 = Alt_L  
 add mod4 = Super_L
+
+
+
+! free up right-Alt for remapping
+remove mod1 = Alt_R
+! Right-Alt remapped to Super
+clear mod4
+keycode 108 = Super_R
+add mod4 = Super_R
