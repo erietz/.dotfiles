@@ -1,4 +1,4 @@
 #!/bin/sh
 
-xmodmap ${HOME}/.Xmodmap
+# xmodmap ${HOME}/.Xmodmap
 xmodmap ${HOME}/.config/foo/window_keyboard_xmodmap
