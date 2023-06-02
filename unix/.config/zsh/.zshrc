@@ -79,7 +79,7 @@ prompt+='%{$fg[cyan]%}]'
 prompt+=$'\n'
 # prompt+='%{$fg[red]%} ⚛'
 # prompt+='%{$fg[yellow]%} ☯'
-prompt+='%{$fg[magenta]%}⚻ '
+prompt+='%{$fg[magenta]%}$ '
 prompt+='%{$reset_color%}'
 setopt PROMPT_SUBST ; PS1="${prompt}"
 

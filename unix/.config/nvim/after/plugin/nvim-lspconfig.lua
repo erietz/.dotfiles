@@ -27,6 +27,10 @@ local on_attach = function(client, bufnr)
 	keymap.nnoremap('<leader>lr', vim.lsp.buf.rename, bufopts)
 	keymap.nnoremap('<leader>la', vim.lsp.buf.code_action, bufopts)
 	keymap.nnoremap('<leader>lf', vim.lsp.buf.format, bufopts)
+
+	-- keymap.nnoremap('<leader>le', vim.lsp.diagnostic.setloclist, bufopts)
+	-- keymap.nnoremap(']e', vim.lsp.diagnostic.goto_next, bufopts)
+	-- keymap.nnoremap('[e', vim.lsp.diagnostic.goto_prev, bufopts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities(
@@ -114,3 +118,12 @@ lspconfig.csharp_ls.setup(lsp_defaults{
 })
 lspconfig.texlab.setup(lsp_defaults{})
 
+
+local null_ls = require("null-ls")
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.completion.spell,
+    },
+})

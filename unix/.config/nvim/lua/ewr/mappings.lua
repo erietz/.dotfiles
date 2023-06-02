@@ -105,7 +105,7 @@ keymap.nnoremap('<leader>-', [[80A-<ESC>81<BAR>d$_<CR>]], { silent = true })
 keymap.nnoremap('<leader>_', [[50A-<ESC>51<BAR>d$_<CR>]], { silent = true })
 
 -- Grep word
--- noremap('<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], { silent = true })
+keymap.nnoremap('<leader>gw', [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], { silent = true })
 keymap.nnoremap('<leader>psw', [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 keymap.nnoremap('<leader>pwu', [[:cfdo normal u]])
 
@@ -114,3 +114,15 @@ keymap.nnoremap('<leader>e', vim.diagnostic.open_float, { silent = true })
 keymap.nnoremap('[d', vim.diagnostic.goto_prev, { silent = true })
 keymap.nnoremap(']d', vim.diagnostic.goto_next, { silent = true })
 keymap.nnoremap('<leader>l', vim.diagnostic.setloclist, { silent = true })
+
+
+-- keymap.nnoremap('<leader>,', [[:'<,'>s/,/,\r/g ]], {});
+keymap.nnoremap('<leader>,', function()
+	local line1 = vim.api.nvim_buf_get_mark(0, "<")[1]
+	local line2 = vim.api.nvim_buf_get_mark(0, ">")[1]
+
+	print(vim.inspect(line1))
+	print(vim.inspect(line2))
+	-- local repl = vim.fn.substitute(line, '\a', "*", "g")
+	-- vim.fn.setline(".", repl)
+end, {});
