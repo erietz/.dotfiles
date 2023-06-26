@@ -60,6 +60,7 @@ return require('packer').startup(function()
 		'hrsh7th/cmp-path',
 		'hrsh7th/cmp-cmdline',
 		'hrsh7th/cmp-nvim-lsp-signature-help',
+		'hrsh7th/cmp-nvim-lua',
 
 		'saadparwaiz1/cmp_luasnip',  -- luasnip snippets
 		'Decodetalkers/csharpls-extended-lsp.nvim',
@@ -101,6 +102,7 @@ return require('packer').startup(function()
 
 	-- colors
 	use {
+		'neanias/everforest-nvim',
 		'norcalli/nvim-colorizer.lua',
 		'gruvbox-community/gruvbox',
 		'luisiacc/gruvbox-baby',

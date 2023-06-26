@@ -9,4 +9,14 @@ function SetColorScheme(color)
     -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-SetColorScheme("kanagawa")
+SetColorScheme("set3")
+-- SetColorScheme("seoul256")
+
+-- SetColorScheme("kanagawa-wave")
+-- SetColorScheme("kanagawa-dragon")
+
+-- require("everforest").setup({
+-- 	background = "hard"
+-- })
+
+-- SetColorScheme("everforest")
