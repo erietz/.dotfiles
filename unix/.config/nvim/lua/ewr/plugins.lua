@@ -8,21 +8,16 @@ return require('packer').startup(function()
 	-- managing files
 	use {
 		'ThePrimeagen/harpoon',
-		requires = {
-			'nvim-lua/popup.nvim',
-			'nvim-lua/plenary.nvim'
-		}
+		requires = { 'nvim-lua/popup.nvim', 'nvim-lua/plenary.nvim' }
 	}
 	use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
-	use { 'nvim-telescope/telescope-dap.nvim', config = function()
-		require('telescope').load_extension('dap')
-		end
+	use {
+		'nvim-telescope/telescope-dap.nvim',
+		config = function() require('telescope').load_extension('dap') end
 	}
 	use {
 		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons', -- optional, for file icons
-		},
+		requires = 'nvim-tree/nvim-web-devicons', -- optional, for file icons
 		config = function() require("nvim-tree").setup() end
 	}
 
@@ -49,29 +44,22 @@ return require('packer').startup(function()
 	use 'erietz/vim-todo'
 	use 'erietz/vim-doconce'
 	use 'bfrg/vim-jq'
-	use "lukas-reineke/indent-blankline.nvim"   -- reading yaml indented 2 spaces...
-
-	-- autocomplete
-	use {
-		'neovim/nvim-lspconfig', -- Configurations for Nvim LSP
-		'hrsh7th/nvim-cmp',
-		'hrsh7th/cmp-nvim-lsp',
-		'hrsh7th/cmp-buffer',
-		'hrsh7th/cmp-path',
-		'hrsh7th/cmp-cmdline',
-		'hrsh7th/cmp-nvim-lsp-signature-help',
-		'hrsh7th/cmp-nvim-lua',
-
-		'saadparwaiz1/cmp_luasnip',  -- luasnip snippets
-		'Decodetalkers/csharpls-extended-lsp.nvim',
-
-	}
+	use "lukas-reineke/indent-blankline.nvim" -- reading yaml indented 2 spaces...
 	use { 'jose-elias-alvarez/null-ls.nvim', requires = "nvim-lua/plenary.nvim" }
 
-	use {
-		'L3MON4D3/LuaSnip',
-		'rafamadriz/friendly-snippets'
-	}
+	-- autocomplete
+	use 'neovim/nvim-lspconfig'
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/cmp-nvim-lsp-signature-help'
+	use 'saadparwaiz1/cmp_luasnip'
+	use 'Decodetalkers/csharpls-extended-lsp.nvim'
+
+	use 'L3MON4D3/LuaSnip'
+	use 'rafamadriz/friendly-snippets'
 
 	-- text editing
 	use 'tpope/vim-commentary'
@@ -88,10 +76,10 @@ return require('packer').startup(function()
 
 	-- debugging
 	use 'mfussenegger/nvim-dap'
-	use {'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap'}
-	use {'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap'}
-	use {'leoluz/nvim-dap-go', requires = 'mfussenegger/nvim-dap'}
-	use {'mxsdev/nvim-dap-vscode-js', requires = 'mfussenegger/nvim-dap'}
+	use { 'rcarriga/nvim-dap-ui', requires = 'mfussenegger/nvim-dap' }
+	use { 'mfussenegger/nvim-dap-python', requires = 'mfussenegger/nvim-dap' }
+	use { 'leoluz/nvim-dap-go', requires = 'mfussenegger/nvim-dap' }
+	use { 'mxsdev/nvim-dap-vscode-js', requires = 'mfussenegger/nvim-dap' }
 
 	use {
 		"microsoft/vscode-js-debug",
@@ -101,37 +89,19 @@ return require('packer').startup(function()
 	}
 
 	-- colors
-	use {
-		'neanias/everforest-nvim',
-		'norcalli/nvim-colorizer.lua',
-		'gruvbox-community/gruvbox',
-		'luisiacc/gruvbox-baby',
-		'junegunn/seoul256.vim',
-		'RRethy/nvim-base16',
-		'NLKNguyen/papercolor-theme',
-		'lifepillar/vim-solarized8',
-		'arzg/vim-colors-xcode',
-		'rebelot/kanagawa.nvim',
-	}
-	use { "catppuccin/nvim", as = "catppuccin" }
 	use { 'erietz/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+	use 'norcalli/nvim-colorizer.lua'
+	use 'gruvbox-community/gruvbox'
+	use 'junegunn/seoul256.vim'
+	use { 'rose-pine/neovim', as = 'rose-pine' }
+	use "rebelot/kanagawa.nvim"
+	use "neanias/everforest-nvim"
 
 	use {
 		'nvim-lualine/lualine.nvim',
 		disable = false,
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-		config = function() require('lualine').setup({}) end
-	}
-
-	use {
-		"folke/zen-mode.nvim",
-		config = function()
-			require("zen-mode").setup {
-				window = {
-					width = 0.5,
-				}
-			}
-		end
+		config = function() require('lualine').setup {} end
 	}
 
 	-- web dev
@@ -145,8 +115,6 @@ return require('packer').startup(function()
 		use 'https://git.sr.ht/~soywod/himalaya-vim'
 	end
 
-	-- the dark side of the force
 	use 'nvim-orgmode/orgmode'
 
 end)
-
