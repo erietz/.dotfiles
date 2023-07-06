@@ -9,7 +9,7 @@ function SetColorScheme(color)
 	-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
--- SetColorScheme("set3")
+SetColorScheme("set3")
 -- SetColorScheme("seoul256")
 
 -- SetColorScheme("kanagawa-wave")
@@ -27,4 +27,4 @@ require('rose-pine').setup {
 
 
 -- SetColorScheme('rose-pine')
-SetColorScheme('kanagawa-wave')
+-- SetColorScheme('kanagawa-wave')

@@ -7,20 +7,23 @@ cmp.setup({
 			require("luasnip").lsp_expand(args.body)
 		end,
 	},
+
 	sources = cmp.config.sources({
+		{ name = 'nvim_lsp_signature_help' },
+		{ name = 'nvim_lua' },
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
+		{ name = "path" },
 		{
 			name = "buffer",
+			keyword_length = 5,
 			option = {
 				keyword_pattern = [[\k\+]],
 			}
 		},
-		{ name = "path" },
-		{ name = 'nvim_lua' },
 		{ name = 'orgmode' },
-		{ name = 'nvim_lsp_signature_help' },
 	}),
+
 	mapping = cmp.mapping.preset.insert({
 		['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
 		['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -32,4 +35,13 @@ cmp.setup({
 		['<C-g>'] = cmp.mapping.complete(),
 		['<C-e>'] = cmp.mapping.abort(),
 	}),
+
+	-- Add vim-dadbod-completion in sql files
+	_ = vim.cmd [[
+	  augroup DadbodSql
+		au!
+		autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer { sources = { { name = 'vim-dadbod-completion' } } }
+	  augroup END
+	]]
+
 })

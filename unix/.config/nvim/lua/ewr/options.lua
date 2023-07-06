@@ -78,6 +78,11 @@ vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
     command = ":set filetype=gnuplot"
 })
 
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = {"dbout"},
+    command = ":set nofoldenable"
+})
+
 -- vim.opt.cmdheight = 2       -- more space for displaying messages
 vim.opt.updatetime = 300 -- better performance
 vim.opt.shortmess = vim.opt.shortmess + "c" -- dont pass messages to ins-completion-menu

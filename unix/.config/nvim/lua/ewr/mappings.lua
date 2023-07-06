@@ -120,3 +120,9 @@ keymap.nnoremap('<leader>,', function()
 	-- local repl = vim.fn.substitute(line, '\a', "*", "g")
 	-- vim.fn.setline(".", repl)
 end, {});
+
+
+
+-- keymap.nnoremap('<leader>db', [[:%DB<CR>]]);
+keymap.nnoremap('<leader>db', [[vip:DB<CR>]]);
+keymap.vnoremap('<leader>db', [[:DB<CR>]]);

@@ -47,6 +47,11 @@ return require('packer').startup(function()
 	use "lukas-reineke/indent-blankline.nvim" -- reading yaml indented 2 spaces...
 	use { 'jose-elias-alvarez/null-ls.nvim', requires = "nvim-lua/plenary.nvim" }
 
+	use 'tpope/vim-dotenv'
+	use 'tpope/vim-dadbod'
+	use 'kristijanhusak/vim-dadbod-completion'
+	use 'kristijanhusak/vim-dadbod-ui'
+
 	-- autocomplete
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-cmp'
