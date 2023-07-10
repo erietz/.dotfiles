@@ -133,7 +133,7 @@ end
 -- }}}
 -- python {{{
 
-require('dap-python').setup('~/miniconda3/envs/debugpy/bin/python')
+require('dap-python').setup('~/miniconda/envs/debugpy/bin/python')
 require('dap-python').test_runner = 'pytest'
 
 -- }}}

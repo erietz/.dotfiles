@@ -28,3 +28,4 @@ require('rose-pine').setup {
 
 -- SetColorScheme('rose-pine')
 -- SetColorScheme('kanagawa-wave')
+SetColorScheme()

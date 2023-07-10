@@ -94,7 +94,7 @@ return require('packer').startup(function()
 	}
 
 	-- colors
-	use { 'erietz/set3.nvim', requires = 'tjdevries/colorbuddy.nvim' }
+	use { '/Users/ethan/git/set3.nvim/', requires = 'tjdevries/colorbuddy.nvim' }
 	use 'norcalli/nvim-colorizer.lua'
 	use 'gruvbox-community/gruvbox'
 	use 'junegunn/seoul256.vim'
