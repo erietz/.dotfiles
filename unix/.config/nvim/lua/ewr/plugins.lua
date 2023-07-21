@@ -98,7 +98,6 @@ return require('packer').startup(function()
 	use 'norcalli/nvim-colorizer.lua'
 	use 'gruvbox-community/gruvbox'
 	use 'junegunn/seoul256.vim'
-	use { 'rose-pine/neovim', as = 'rose-pine' }
 	use "rebelot/kanagawa.nvim"
 	use "neanias/everforest-nvim"
 

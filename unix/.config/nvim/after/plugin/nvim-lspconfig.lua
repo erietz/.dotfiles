@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
 	keymap.nnoremap('<leader>la', vim.lsp.buf.code_action, bufopts)
 	keymap.nnoremap('<leader>lf', vim.lsp.buf.format, bufopts)
 
-	keymap.nnoremap('<leader>e', vim.diagnostic.open_float, { silent = true })
+	keymap.nnoremap('<leader>ld', vim.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics()) , { silent = true })
 	keymap.nnoremap('[d', vim.diagnostic.goto_prev, { silent = true })
 	keymap.nnoremap(']d', vim.diagnostic.goto_next, { silent = true })
 	keymap.nnoremap('<leader>ll', vim.diagnostic.setloclist, { silent = true })
