@@ -59,6 +59,6 @@ keymap.nnoremap('<leader>.', function()
         find_command = { "fd", "--type", "f"},
         follow = true,
         hidden = true,
-        search_dirs = { vim.env.HOME .. "/.dotfiles/" }
+        search_dirs = { "$HOME/.dotfiles/" }
     })
 end, { desc = "Telescope: find through my dotfiles" })
