@@ -3,7 +3,15 @@ return {
 		'erietz/set3.nvim',
 		dependencies = 'tjdevries/colorbuddy.nvim'
 	},
-	'norcalli/nvim-colorizer.lua',
+	{
+		'norcalli/nvim-colorizer.lua',
+		opts = {
+			'css',
+			'javascript',
+			'html',
+			'i3config'
+		}
+	},
 	'gruvbox-community/gruvbox',
 	'junegunn/seoul256.vim',
 	"rebelot/kanagawa.nvim",
@@ -15,6 +23,6 @@ return {
 			'nvim-tree/nvim-web-devicons',
 			lazy = true
 		},
-		config = function() require('lualine').setup {} end
+		config = true
 	},
 }
