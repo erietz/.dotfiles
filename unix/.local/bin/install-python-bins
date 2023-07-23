@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# Python cli programs that I want installed everywhere regardless of if I am in
+# a conda environment or not. All packages end up in ~/.local/bin which is in
+# $PATH.
+
+set -x # echo on
+
+# Update conda
+conda update -y -n base -c defaults conda
+
+# Do not install anything else in base env as the base env is responsible for
+# managing conda itself. The only reason I install pipx in the base env is that
+# all programs installed via pipx will env up with a shebang referencing
+# ~/miniconda/bin/python. Therefore all pipx programs will use the same version
+# of python as the miniconda base env which is guaranteed to exist.
+
+# pipx will end up in ~/.local/bin
+conda run -n base python -m pip install --user pipx
+
+packages=(
+	"python-lsp-server"
+	"black"
+	"ruff"
+	"isort"
+	"ipython"
+	"jupyterlab"
+	"httpie"
+)
+
+for package in "${packages[@]}"; do
+	pipx install "$package"
+done
