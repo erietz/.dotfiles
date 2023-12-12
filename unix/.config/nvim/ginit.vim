@@ -5,15 +5,15 @@
 "-------------------------------------------------------------------------------
 
 " don't start in a rediculous directory
-cd $HOME
+" cd $HOME
 
-GuiFont! JetBrainsMono NF:h13
-
-" get rid of ugly gui for autocompletion
-GuiPopupmenu 0
+set guifont=FiraCode\ Nerd\ Font\ Mono:h18
 
 " get rid of ugly gui for autocompletion
-GuiTabline 0
+" GuiPopupmenu 0
+
+" get rid of ugly gui for autocompletion
+" GuiTabline 0
 
 " make cursor always a block
 set guicursor=i:block

@@ -16,4 +16,9 @@ function SetColorScheme(color, isDark, isTransparent)
 
 end
 
-SetColorScheme('gruvbox')
+-- SetColorScheme('gruvbox')
+SetColorScheme('kanagawa')
+-- SetColorScheme('catppuccin-latte')
+-- SetColorScheme('nightfox')
+-- SetColorScheme('dayfox')
+-- SetColorScheme('terafox')

@@ -10,5 +10,6 @@ return {
 	'tpope/vim-commentary',
 	'tpope/vim-surround',
 	'tpope/vim-repeat',
+	'tpope/vim-abolish',
 	'junegunn/vim-easy-align',
 }

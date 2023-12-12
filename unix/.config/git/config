@@ -21,7 +21,7 @@
 [pull]
 	# Refuse to merge and exit with a non-zero status unless the current HEAD
 	# is already up-to-date or the merge can be resolved as a fast-forward
-	ff=only
+	; ff=only
 [core]
 	# On UNIX, if files exist locally with CRLF, convert CRLF to LF on commit.
 	# This should be set to `true` on Windows rather than `input`.
