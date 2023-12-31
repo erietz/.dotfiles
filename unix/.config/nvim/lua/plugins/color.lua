@@ -13,10 +13,16 @@ return {
 		}
 	},
 	'gruvbox-community/gruvbox',
+	"EdenEast/nightfox.nvim",
+	'catppuccin/nvim',
 	'junegunn/seoul256.vim',
 	"rebelot/kanagawa.nvim",
 	"neanias/everforest-nvim",
 	"EdenEast/nightfox.nvim",
+	{
+		"ntk148v/habamax.nvim",
+		dependencies = { "rktjmp/lush.nvim" }
+	},
 	{
 		'nvim-lualine/lualine.nvim',
 		disable = false,

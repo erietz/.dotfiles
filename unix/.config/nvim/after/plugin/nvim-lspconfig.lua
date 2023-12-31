@@ -32,6 +32,7 @@ local on_attach = function(_, bufnr)
 	keymap.nnoremap('<leader>ld', function()
 		vim.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics())
 	end, { silent = true })
+	-- keymap.nnoremap('<leader>ld', function() vim.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics()) end, { silent = true })
 	keymap.nnoremap('[d', vim.diagnostic.goto_prev, { silent = true })
 	keymap.nnoremap(']d', vim.diagnostic.goto_next, { silent = true })
 	keymap.nnoremap('<leader>ll', vim.diagnostic.setloclist, { silent = true })
@@ -97,7 +98,6 @@ lspconfig.pylsp.setup(lsp_defaults{
 	end
 })
 lspconfig.bashls.setup{lsp_defaults{}}
-lspconfig.rust_analyzer.setup(lsp_defaults{})
 lspconfig.clangd.setup(lsp_defaults{})
 lspconfig.html.setup(lsp_defaults{})
 lspconfig.cssls.setup(lsp_defaults{})
@@ -134,5 +134,25 @@ null_ls.setup({
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.diagnostics.eslint,
         null_ls.builtins.completion.spell,
+        null_ls.builtins.diagnostics.ruff,
+        null_ls.builtins.formatting.black,
+        null_ls.builtins.formatting.isort,
     },
 })
+
+
+
+-- local rt = require("rust-tools")
+
+-- rt.setup({
+--   server = {
+--     on_attach = function(_, bufnr)
+--       -- Hover actions
+--       vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+--       -- Code action groups
+--       vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+--     end,
+--   },
+-- })
+
+lspconfig.rust_analyzer.setup(lsp_defaults{})
