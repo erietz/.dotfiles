@@ -1,11 +1,11 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = '\\'
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 vim.opt.termguicolors = true -- Better colors
 
 vim.opt.completeopt = "menu,menuone,noselect" -- Autocomplete menu
 vim.opt.hidden = true -- Change buffers without having to save
-vim.g.vimsyn_embed = 'lPr' -- Support embedded lua, python and ruby highlight
+vim.g.vimsyn_embed = "lPr" -- Support embedded lua, python and ruby highlight
 
 vim.opt.number = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
@@ -18,19 +18,19 @@ vim.opt.autoindent = true -- copy indent level last line when inserting new line
 
 -- two space non-tab languages
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
-    command = "setlocal tabstop=2 shiftwidth=2 expandtab"
+	pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
+	command = "setlocal tabstop=2 shiftwidth=2 expandtab",
 })
 
 -- space rather than tab languages
 vim.api.nvim_create_autocmd("FileType", {
-    pattern = { "python", "typescriptreact", "json" },
-    command = "setlocal expandtab"
+	pattern = { "python", "typescriptreact", "json" },
+	command = "setlocal expandtab",
 })
 
-vim.opt.guicursor = '' -- Always use block cursor
+vim.opt.guicursor = "" -- Always use block cursor
 vim.opt.scrolloff = 10 -- Adds ten lines between cursor and edge when scrolling
-vim.opt.colorcolumn = '80' -- Vertical column at 80 characters
+vim.opt.colorcolumn = "80" -- Vertical column at 80 characters
 
 vim.opt.ignorecase = true -- Case insensitive search
 vim.opt.smartcase = true -- Case sensitive search only when pattern has caps
@@ -45,44 +45,44 @@ vim.opt.list = true -- Show characters like spaces and tabs in buffer
 -- vim.opt.listchars = 'tab:→ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
 
 -- ascii only
-vim.opt.listchars = 'tab:..,trail:_,extends:>,precedes:<,nbsp:~'
+vim.opt.listchars = "tab:..,trail:_,extends:>,precedes:<,nbsp:~"
 
 vim.opt.wildmenu = true -- Show command line completions
-vim.opt.wildmode = 'longest:full,full'
-vim.opt.mouse = 'a' -- Mouse enabled in insert mode
+vim.opt.wildmode = "longest:full,full"
+vim.opt.mouse = "a" -- Mouse enabled in insert mode
 vim.opt.wrap = false -- Don't wrap long lines
 
 vim.opt.backup = false -- No backup files
 vim.opt.swapfile = false -- No swap files
-vim.opt.undodir = vim.fn.stdpath('data') .. '/undodir' -- /home/ethan/.local/share/nvim/undodir
+vim.opt.undodir = vim.fn.stdpath("data") .. "/undodir" -- /home/ethan/.local/share/nvim/undodir
 vim.opt.undofile = true -- Use undodir for persistent undo history
 
-vim.opt.spellfile = vim.fn.stdpath('config') .. 'spell/en.utf-8.add' -- Spelling
+vim.opt.spellfile = vim.fn.stdpath("config") .. "spell/en.utf-8.add" -- Spelling
 
-vim.opt.backspace = 'indent,eol,start' -- Make backspace actually erase
+vim.opt.backspace = "indent,eol,start" -- Make backspace actually erase
 
 vim.opt.laststatus = 3 -- Last window always and ONLY has status line
 
-vim.opt.foldmethod = 'marker'
+vim.opt.foldmethod = "marker"
 
 -- For details see :h fo-table
 -- NOTE: running set formatoptions? indicates that these options are not
 -- entirely respected
 vim.opt.formatoptions = vim.opt.formatoptions
-- "c" -- Do not wrap comments using textwidth
-- "r" -- Insert comment on next line after pressing enter
-+ "o" -- Insert comment after pressing o or O
-+ "q" -- Allow formatting of comments with "gq"
-+ "n" -- Recognize numbered lists (markdown for example)
+	- "c" -- Do not wrap comments using textwidth
+	- "r" -- Insert comment on next line after pressing enter
+	+ "o" -- Insert comment after pressing o or O
+	+ "q" -- Allow formatting of comments with "gq"
+	+ "n" -- Recognize numbered lists (markdown for example)
 
-vim.api.nvim_create_autocmd({"BufNewFile", "BufRead"}, {
-    pattern = {"*.gnu", "*.plot"},
-    command = ":set filetype=gnuplot"
+vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
+	pattern = { "*.gnu", "*.plot" },
+	command = ":set filetype=gnuplot",
 })
 
-vim.api.nvim_create_autocmd({"FileType"}, {
-    pattern = {"dbout"},
-    command = ":set nofoldenable"
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "dbout" },
+	command = ":set nofoldenable",
 })
 
 -- vim.opt.cmdheight = 2       -- more space for displaying messages

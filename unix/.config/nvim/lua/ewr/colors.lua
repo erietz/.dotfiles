@@ -13,9 +13,8 @@ function SetColorScheme(color, isDark, isTransparent)
 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	end
-
 end
 
 -- SetColorScheme('kanagawa')
-SetColorScheme('habamax')
--- SetColorScheme('habamax.nvim')
+-- SetColorScheme("habamax")
+SetColorScheme('habamax.nvim')

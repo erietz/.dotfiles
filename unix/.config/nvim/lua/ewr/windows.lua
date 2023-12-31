@@ -4,4 +4,4 @@
 -- vim.opt.shellquote = ''
 -- vim.opt.shellxquote = ''
 
-vim.env.FZF_DEFAULT_COMMAND = 'fd --hidden'
+vim.env.FZF_DEFAULT_COMMAND = "fd --hidden"

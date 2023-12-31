@@ -9,73 +9,80 @@ local c = luasnip.choice_node
 -- local r = luasnip.restore_node
 local fmt = require("luasnip.extras.fmt").fmt
 local rep = require("luasnip.extras").rep
-local types = require "luasnip.util.types"
+local types = require("luasnip.util.types")
 local parse_snippet = luasnip.parser.parse_snippet
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
 luasnip.config.set_config({
-    history = true,     -- jump back if you make a mistake
-    updateevents = "TextChanged,TextChangedI",  -- for dynamic snippets
-    ext_opts = {
-        [types.choiceNode] = {
-            active = {
-                virt_text = { { " <- Current Choice", "NonTest" } },
-            },
-        },
-    },
+	history = true, -- jump back if you make a mistake
+	updateevents = "TextChanged,TextChangedI", -- for dynamic snippets
+	ext_opts = {
+		[types.choiceNode] = {
+			active = {
+				virt_text = { { " <- Current Choice", "NonTest" } },
+			},
+		},
+	},
 })
 
 vim.keymap.set({ "i", "s" }, "<c-k>", function()
-    if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-    else
-        vim.cmd("wincmd k")
-    end
+	if luasnip.expand_or_jumpable() then
+		luasnip.expand_or_jump()
+	else
+		vim.cmd("wincmd k")
+	end
 end, { silent = true })
 
 vim.keymap.set({ "i", "s" }, "<c-j>", function()
-    if luasnip.jumpable(-1) then
-        luasnip.jump(-1)
-    else
-        vim.cmd("wincmd j")
-    end
+	if luasnip.jumpable(-1) then
+		luasnip.jump(-1)
+	else
+		vim.cmd("wincmd j")
+	end
 end, { silent = true })
 
 vim.keymap.set("i", "<c-l>", function()
-    if luasnip.choice_active() then
-        luasnip.change_choice(1)
-    else
-        vim.cmd("wincmd l")
-    end
+	if luasnip.choice_active() then
+		luasnip.change_choice(1)
+	else
+		vim.cmd("wincmd l")
+	end
 end)
 
-vim.keymap.set("i", "<c-h>", require "luasnip.extras.select_choice")
+vim.keymap.set("i", "<c-h>", require("luasnip.extras.select_choice"))
 vim.keymap.set("n", "<leader>ss", "<cmd>source ~/.config/nvim/lua/ewr/plugin_config/luasnip.lua<CR>")
 
 -- all {{{
 
 luasnip.add_snippets("all", {
 
-    s("today", {
-        f(function() return os.date("%Y-%m-%d") end),
-    }),
+	s("today", {
+		f(function()
+			return os.date("%Y-%m-%d")
+		end),
+	}),
 
-    s("about", fmt([[
+	s(
+		"about",
+		fmt(
+			[[
 Author:         Ethan Rietz
 Date:           {}
 Description:    {}
 {}
 ]],
-        { i(1, os.date("%Y-%m-%d")), i(2, ""), i(3, "") }
-    ))
-
+			{ i(1, os.date("%Y-%m-%d")), i(2, ""), i(3, "") }
+		)
+	),
 })
 
 -- }}}
 -- c {{{
 luasnip.add_snippets("c", {
-    parse_snippet("skeleton", [[
+	parse_snippet(
+		"skeleton",
+		[[
 /* headers */
 #include <stdio.h>
 #include <stdlib.h>
@@ -93,8 +100,12 @@ main(int argc, char *argv[])
 {
     return EXIT_SUCCESS;
 }
-]]),
-    s("docstring", fmt([[
+]]
+	),
+	s(
+		"docstring",
+		fmt(
+			[[
 /*
 *------------------------------------------------------------------------------
 * Function: {}()
@@ -110,18 +121,25 @@ main(int argc, char *argv[])
 *------------------------------------------------------------------------------
 */
 ]],
-        {
-            i(1, ""), rep(1), i(2, "..."),
-            i(3, "Any arguments are ignored."),
-            i(4, "Value does not change")
-        })),
+			{
+				i(1, ""),
+				rep(1),
+				i(2, "..."),
+				i(3, "Any arguments are ignored."),
+				i(4, "Value does not change"),
+			}
+		)
+	),
 })
 
 -- }}}
 -- c header -> c++ {{{
 
 luasnip.add_snippets("cpp", {
-    s("header-gaurd", fmt([[
+	s(
+		"header-gaurd",
+		fmt(
+			[[
 #ifndef {gaurd}
 #define {gaurd}
 
@@ -129,19 +147,23 @@ luasnip.add_snippets("cpp", {
 
 #endif // {gaurd}
 ]],
-        {
-            gaurd = f(function()
-                return string.upper(vim.fn.expand("%:t:r")) .. "_H"
-            end),
-            contents = i(1, "")
-        }
-    )),
+			{
+				gaurd = f(function()
+					return string.upper(vim.fn.expand("%:t:r")) .. "_H"
+				end),
+				contents = i(1, ""),
+			}
+		)
+	),
 })
 
 -- }}}
 -- cs {{{
 luasnip.add_snippets("cs", {
-    s("main", fmt([[
+	s(
+		"main",
+		fmt(
+			[[
 namespace {}
 {{
     class {}
@@ -153,14 +175,18 @@ namespace {}
     }}
 }}
 ]],
-        { i(1), i(2, "Program") }
-    ))
+			{ i(1), i(2, "Program") }
+		)
+	),
 })
 
 -- }}}
 -- dart/flutter {{{
 luasnip.add_snippets("dart", {
-    s("stateless-widget", fmt([[
+	s(
+		"stateless-widget",
+		fmt(
+			[[
 class <class_name> extends StatelessWidget {
   const <constructor_name><constructor_parameters>;
 
@@ -174,17 +200,21 @@ class <class_name> extends StatelessWidget {
   }
 }
 ]],
-        {
-            class_name = i(1, "MyWidget"),
-            constructor_name = rep(1),
-            constructor_parameters = c(2, {
-                t([[({Key? key}) : super(key: key)]]),
-                i(2, [[()]]),
-            })
-        },
-        { delimiters = "<>" })
-    ),
-    s("stateful-widget", fmt([[
+			{
+				class_name = i(1, "MyWidget"),
+				constructor_name = rep(1),
+				constructor_parameters = c(2, {
+					t([[({Key? key}) : super(key: key)]]),
+					i(2, [[()]]),
+				}),
+			},
+			{ delimiters = "<>" }
+		)
+	),
+	s(
+		"stateful-widget",
+		fmt(
+			[[
 class [] extends StatefulWidget {
   const []({Key? key}) : super(key: key);
 
@@ -200,52 +230,64 @@ class _[]State extends State<[]> {
   }
 }
 ]],
-        {
-            i(1, "MyWidget"),
-            rep(1),
-            rep(1),
-            rep(1),
-            rep(1),
-            rep(1),
-        },
-        { delimiters = "[]" })
-    ),
+			{
+				i(1, "MyWidget"),
+				rep(1),
+				rep(1),
+				rep(1),
+				rep(1),
+				rep(1),
+			},
+			{ delimiters = "[]" }
+		)
+	),
 })
 -- }}}
 -- gitcommit {{{
 
 luasnip.add_snippets("gitcommit", {
-    s("idk", t("unhelpful commit message"))
+	s("idk", t("unhelpful commit message")),
 })
 
 -- }}}
 -- go {{{
 
 luasnip.add_snippets("go", {
-    s("err", t({
-        "if err != nil {",
-        "\tpanic(err)",
-        "}"
-    })),
-    s("got", fmt([[t.Errorf("got %v, wanted %v", {}, {})]], {
-        i(1, "got"),
-        i(2, "wanted")
-    }))
+	s(
+		"err",
+		t({
+			"if err != nil {",
+			"\tpanic(err)",
+			"}",
+		})
+	),
+	s(
+		"got",
+		fmt([[t.Errorf("got %v, wanted %v", {}, {})]], {
+			i(1, "got"),
+			i(2, "wanted"),
+		})
+	),
 })
 
 -- }}}
 -- make {{{
 
 luasnip.add_snippets("make", {
-    s("python", t({
-        "test",
-        "\tpytest -rA -v",
-        "",
-        "clean",
-        "\trm -r __pycache__",
-        "\trm -r ./.pytest_cache",
-    })),
-    parse_snippet("help", [[
+	s(
+		"python",
+		t({
+			"test",
+			"\tpytest -rA -v",
+			"",
+			"clean",
+			"\trm -r __pycache__",
+			"\trm -r ./.pytest_cache",
+		})
+	),
+	parse_snippet(
+		"help",
+		[[
 .DEFAULT_GOAL := help
 .PHONY: help
 help: ## Print this help message
@@ -256,38 +298,37 @@ help: ## Print this help message
     @echo
     @echo "For a dry run use this command: make -n <target>"
     @echo "----------------------------------------------------------------------"
-]]),
+]]
+	),
 })
 
 -- }}}
 -- markdown {{{
 
 luasnip.add_snippets("markdown", {
-    parse_snippet(
-        "link", "[${1:Description}](${2:www.url.com})$0"
-    ),
-    parse_snippet(
-        "img", '![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0'
-    ),
-    parse_snippet(
-        "cb", [[
+	parse_snippet("link", "[${1:Description}](${2:www.url.com})$0"),
+	parse_snippet("img", '![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0'),
+	parse_snippet(
+		"cb",
+		[[
 ```${1:python}
 $2
 ```
 $0
 ]]
-    ),
-    parse_snippet(
-        "todo", "- [ ] ${1:item that needs done}"
-    ),
-    parse_snippet(
-        "fnt", [[
+	),
+	parse_snippet("todo", "- [ ] ${1:item that needs done}"),
+	parse_snippet(
+		"fnt",
+		[[
 [^${1:Footnote}]$0
 
 [^$1]: ${2:Text}
 ]]
-    ),
-    parse_snippet("preamble", [[
+	),
+	parse_snippet(
+		"preamble",
+		[[
 ---
 title: $1
 author: ${2:Ethan Rietz}
@@ -295,19 +336,23 @@ date: ${3:\today}
 ---
 
 $0
-]])
+]]
+	),
 })
 
 -- }}}
 -- pandoc {{{
 
-luasnip.filetype_extend("pandoc", {"markdown"})
+luasnip.filetype_extend("pandoc", { "markdown" })
 
 -- }}}
 -- nasm {{{
 
 luasnip.add_snippets("nasm", {
-    s("docstring", fmt([[
+	s(
+		"docstring",
+		fmt(
+			[[
 ; -----------------------------------------------------------------------------
 ; Name: {}
 ;
@@ -322,34 +367,46 @@ luasnip.add_snippets("nasm", {
 ; Returns: {}
 ; -----------------------------------------------------------------------------
 ]],
-        {
-            i(1), i(2, "Overall decription of procedure"), i(3), i(4), i(5), i(6)
-        }
-    ))
+			{
+				i(1),
+				i(2, "Overall decription of procedure"),
+				i(3),
+				i(4),
+				i(5),
+				i(6),
+			}
+		)
+	),
 })
 -- }}}
 -- python {{{
 
 luasnip.add_snippets("python", {
-    s("main", fmt([[
+	s(
+		"main",
+		fmt(
+			[[
 if __name__ == "__main__":
     {}
 ]],
-        { i(1, "main()") })
-    )
+			{ i(1, "main()") }
+		)
+	),
 })
 
 -- }}}
 -- sh {{{
 luasnip.add_snippets("sh", {
-    s("shebang", t({"#!/usr/bin/env bash", "", ""}))
+	s("shebang", t({ "#!/usr/bin/env bash", "", "" })),
 })
 
 -- }}}
 -- tex {{{
 
 luasnip.add_snippets("tex", {
-    parse_snippet("preamble", [[
+	parse_snippet(
+		"preamble",
+		[[
 \documentclass{article}
 \usepackage{geometry}
 \usepackage{amsmath,amsfonts,amssymb}
@@ -381,8 +438,9 @@ luasnip.add_snippets("tex", {
 $0
 
 \end{document}
-]]),
-    parse_snippet("up", [[ \usepackage{${1:package}}$0]]),
+]]
+	),
+	parse_snippet("up", [[ \usepackage{${1:package}}$0]]),
 })
 
 --[[
@@ -535,19 +593,22 @@ endsnippet
 -- texmath {{{
 
 local texmath_snippets = {
-    parse_snippet("frac", [[ \frac{${1:numerator}}{${2:denominator}}${0} ]]),
-    parse_snippet("E", [[ \times 10^{$1}$0 ]]),
-    parse_snippet("sum", [[ \sum\limits_{${1:n}}^{${2:\infty}}$0 ]]),
-    parse_snippet("*", [[ \times $0 ]]),
-    parse_snippet("()", [[ \left( $1 \right) $0 ]]),
-    parse_snippet("[]", [[ \left[ $1 \right] $0 ]]),
-    parse_snippet("{}", [[ \left{ $1 \right} $0 ]]),
-    parse_snippet("<>", [[ \left< $1 \right> $0 ]]),
-    parse_snippet("|>", [[ \left| $1 \right> $0 ]]),
-    parse_snippet("<|", [[ \left< $1 \right| $0 ]]),
-    parse_snippet("inline", [[ \($1\)$0 ]]),
-    parse_snippet("newline", [[ \[$1\] $0
-    ]])
+	parse_snippet("frac", [[ \frac{${1:numerator}}{${2:denominator}}${0} ]]),
+	parse_snippet("E", [[ \times 10^{$1}$0 ]]),
+	parse_snippet("sum", [[ \sum\limits_{${1:n}}^{${2:\infty}}$0 ]]),
+	parse_snippet("*", [[ \times $0 ]]),
+	parse_snippet("()", [[ \left( $1 \right) $0 ]]),
+	parse_snippet("[]", [[ \left[ $1 \right] $0 ]]),
+	parse_snippet("{}", [[ \left{ $1 \right} $0 ]]),
+	parse_snippet("<>", [[ \left< $1 \right> $0 ]]),
+	parse_snippet("|>", [[ \left| $1 \right> $0 ]]),
+	parse_snippet("<|", [[ \left< $1 \right| $0 ]]),
+	parse_snippet("inline", [[ \($1\)$0 ]]),
+	parse_snippet(
+		"newline",
+		[[ \[$1\] $0
+    ]]
+	),
 }
 
 luasnip.add_snippets("tex", texmath_snippets)
