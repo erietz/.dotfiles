@@ -15,6 +15,6 @@ function SetColorScheme(color, isDark, isTransparent)
 	end
 end
 
--- SetColorScheme('kanagawa')
+SetColorScheme('kanagawa')
 -- SetColorScheme("habamax")
-SetColorScheme('habamax.nvim')
+-- SetColorScheme('habamax.nvim')

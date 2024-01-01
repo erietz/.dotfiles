@@ -14,6 +14,10 @@ local function deep_copy(object)
 	return result
 end
 
+---Adds all of the values from the template table into the passed in table.
+---This is useful for example for providing a set of default options.
+---@param template table
+---@return function
 function M.spread(template)
 	return function(table)
 		local result = {}
