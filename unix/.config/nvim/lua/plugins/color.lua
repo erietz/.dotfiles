@@ -17,6 +17,7 @@ return {
 	"rebelot/kanagawa.nvim",
 	"neanias/everforest-nvim",
 	"EdenEast/nightfox.nvim",
+	{ 'kepano/flexoki-neovim', name = 'flexoki' },
 	{
 		'nvim-lualine/lualine.nvim',
 		disable = false,
@@ -31,4 +32,26 @@ return {
 		name = "catppuccin",
 		priority = 1000
 	},
+	-- Using lazy.nvim
+	{
+		'ribru17/bamboo.nvim',
+		lazy = false,
+		priority = 1000,
+		config = function()
+			require('bamboo').setup {
+				-- optional configuration here
+			}
+			require('bamboo').load()
+		end,
+	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine"
+	}
 }

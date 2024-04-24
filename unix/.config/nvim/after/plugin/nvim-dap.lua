@@ -97,7 +97,8 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 				"!**/node_modules/**"
 			},
 			skipFiles = {
-				"**/node_modules/**", "!**/node_modules/my-module/**",
+				"**/node_modules/**",
+				"!**/node_modules/my-module/**",
 				"<node_internals>/**",
 			}
 		},
@@ -108,7 +109,7 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 			processId = require'dap.utils'.pick_process,
 			cwd = "${workspaceFolder}",
 			skipFiles = {
-				"**/node_modules/**", "!**/node_modules/my-module/**",
+				-- "**/node_modules/**", "!**/node_modules/my-module/**",
 				"<node_internals>/**",
 			}
 		},

@@ -7,7 +7,7 @@ vim.g.terminator_runfile_map = {
     sh = 'bash',
     scheme = 'racket',
     cs = 'dotnet run',
-    python = 'python3 -u',
+    python = 'python -u',
     typescript = 'npx ts-node',
 }
 

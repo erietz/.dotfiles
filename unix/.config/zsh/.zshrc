@@ -20,6 +20,9 @@ setopt globdots
 _comp_options+=(globdots)   # include hidden files
 setopt COMPLETE_ALIASES
 
+# share history between tmux panes (i think)
+setopt inc_append_history
+
 # }}}
 # keybindings {{{
 
@@ -89,3 +92,11 @@ setopt PROMPT_SUBST ; PS1="${prompt}"
 [ -f ~/.zshrc-extra ] && source ~/.zshrc-extra
 
 # zprof
+
+function gitchob() {
+	if [ "$1" = "-r" ]; then
+		git branch -r | fzf | awk -F 'origin/' '{print $2}' | xargs git checkout -b
+	else
+		git branch | fzf | awk '{print $NF}' | xargs git checkout
+	fi
+}

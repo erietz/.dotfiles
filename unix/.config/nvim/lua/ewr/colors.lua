@@ -18,7 +18,16 @@ end
 
 -- SetColorScheme('gruvbox')
 SetColorScheme('kanagawa')
--- SetColorScheme('catppuccin-latte')
+-- SetColorScheme('catppuccin-latte', false)
 -- SetColorScheme('nightfox')
 -- SetColorScheme('dayfox')
 -- SetColorScheme('terafox')
+-- SetColorScheme('flexoki-dark')
+-- SetColorScheme('kanagawa-dragon')
+-- SetColorScheme('set3')
+-- SetColorScheme('seoul256')
+
+-- require("bamboo").load()
+-- SetColorScheme('bamboo', false)
+-- SetColorScheme("tokyonight")
+-- SetColorScheme('rose-pine-dawn')

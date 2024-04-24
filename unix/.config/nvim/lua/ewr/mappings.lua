@@ -33,6 +33,9 @@ end
 k.vnoremap('<leader>d', '"_d')
 k.nnoremap('<leader>d', '"_d')
 
+-- Paste on top of text without fudging registers
+k.vnoremap('<leader>p', '"_dP')
+
 -- ThePrimeagen
 k.nnoremap('<leader>sw', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 k.nnoremap('Y', 'y$')
