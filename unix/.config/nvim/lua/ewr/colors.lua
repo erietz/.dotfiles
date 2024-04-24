@@ -13,10 +13,8 @@ function SetColorScheme(color, isDark, isTransparent)
 		vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 	end
-
 end
 
--- SetColorScheme('gruvbox')
 SetColorScheme('kanagawa')
 -- SetColorScheme('catppuccin-latte', false)
 -- SetColorScheme('nightfox')
@@ -31,3 +29,5 @@ SetColorScheme('kanagawa')
 -- SetColorScheme('bamboo', false)
 -- SetColorScheme("tokyonight")
 -- SetColorScheme('rose-pine-dawn')
+-- SetColorScheme("habamax")
+-- SetColorScheme('habamax.nvim')

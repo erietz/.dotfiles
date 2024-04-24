@@ -12,9 +12,9 @@ vim.g.terminator_runfile_map = {
 }
 
 vim.g.terminator_repl_command = {
-    sql = 'mysql -u ethan -p',
-    typescript = 'npx ts-node',
+	sql = "mysql -u ethan -p",
+	typescript = "npx ts-node",
 }
 
-keymap.nnoremap('<leader>ra', ':TerminatorRunAltCmd ')
-keymap.nnoremap('<leader>oo', ':TerminatorOutputBufferToggle<CR>')
+keymap.nnoremap("<leader>ra", ":TerminatorRunAltCmd ")
+keymap.nnoremap("<leader>oo", ":TerminatorOutputBufferToggle<CR>")

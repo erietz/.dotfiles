@@ -51,8 +51,8 @@ shift + alt - k : yabai -m window --swap north
 shift + alt - l : yabai -m window --swap east
 
 # set gaps for ultrawide monitor
-alt - u : yabai -m config left_padding 800;\
-          yabai -m config right_padding 800;\
+alt - u : yabai -m config left_padding 900;\
+          yabai -m config right_padding 900;\
           yabai -m config top_padding 100;\
           yabai -m config bottom_padding 100
 
