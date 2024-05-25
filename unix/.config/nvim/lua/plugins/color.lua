@@ -16,7 +16,14 @@ return {
 	"EdenEast/nightfox.nvim",
 	"catppuccin/nvim",
 	"junegunn/seoul256.vim",
-	"rebelot/kanagawa.nvim",
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd[[colorscheme kanagawa]]
+		end,
+	},
 	"neanias/everforest-nvim",
 	"EdenEast/nightfox.nvim",
 	{ 'kepano/flexoki-neovim', name = 'flexoki' },
@@ -41,7 +48,7 @@ return {
 	-- Using lazy.nvim
 	{
 		'ribru17/bamboo.nvim',
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		config = function()
 			require('bamboo').setup {
@@ -52,12 +59,35 @@ return {
 	},
 	{
 		"folke/tokyonight.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		opts = {},
 	},
 	{
 		"rose-pine/neovim",
 		name = "rose-pine"
+	},
+	{
+		"craftzdog/solarized-osaka.nvim",
+		lazy = true,
+		priority = 1000,
+		config = function()
+			require("solarized-osaka").setup({
+				transparent = false,
+			})
+			vim.cmd [[colorscheme solarized-osaka]]
+		end,
+	},
+	{
+		'projekt0n/github-nvim-theme',
+		lazy = true,
+		priority = 1000,
+		config = function()
+			require('github-theme').setup({
+				-- ...
+			})
+
+			vim.cmd('colorscheme github_light')
+		end,
 	}
 }

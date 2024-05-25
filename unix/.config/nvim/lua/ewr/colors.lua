@@ -15,7 +15,7 @@ function SetColorScheme(color, isDark, isTransparent)
 	end
 end
 
-SetColorScheme('kanagawa')
+-- SetColorScheme('kanagawa')
 -- SetColorScheme('catppuccin-latte', false)
 -- SetColorScheme('nightfox')
 -- SetColorScheme('dayfox')
@@ -31,3 +31,7 @@ SetColorScheme('kanagawa')
 -- SetColorScheme('rose-pine-dawn')
 -- SetColorScheme("habamax")
 -- SetColorScheme('habamax.nvim')
+
+-- SetColorScheme('gruvbox')
+-- SetColorScheme('kanagawa')
+-- SetColorScheme('solarized-osaka')
