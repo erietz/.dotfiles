@@ -110,7 +110,7 @@ function _git-chob() {
 }
 
 zle -N _git-chob _git-chob
-bindkey '^b' _git-chob
+bindkey '^g' _git-chob
 
 function _git-chob-remote() {
 	git-chob -r
@@ -118,4 +118,4 @@ function _git-chob-remote() {
 }
 
 zle -N _git-chob-remote _git-chob-remote
-bindkey '^g' _git-chob-remote
+bindkey '^b' _git-chob-remote
