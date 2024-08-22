@@ -1,14 +1,14 @@
 return {
 	{
 		"mfussenegger/nvim-dap",
-		tag = "0.7.0"
+		tag = "0.7.0",
 	},
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = {
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
-		}
+		},
 	},
 	{
 		"mfussenegger/nvim-dap-python",

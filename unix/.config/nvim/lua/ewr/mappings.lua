@@ -33,7 +33,7 @@ k.vnoremap("<leader>d", '"_d')
 k.nnoremap("<leader>d", '"_d')
 
 -- Paste on top of text without fudging registers
-k.vnoremap('<leader>p', '"_dP')
+k.vnoremap("<leader>p", '"_dP')
 
 -- ThePrimeagen
 k.nnoremap("<leader>sw", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -129,7 +129,7 @@ function Scratch()
 	if vim.fn.bufexists("scratch") == 1 then
 		vim.cmd(":e scratch")
 	else
-		vim.cmd[[
+		vim.cmd([[
 			split
 			noswapfile hide enew
 			setlocal buftype=nofile
@@ -137,6 +137,6 @@ function Scratch()
 			"setlocal nobuflisted
 			"lcd ~
 			file scratch
-		]]
+		]])
 	end
 end

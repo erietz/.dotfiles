@@ -23,11 +23,10 @@ return {
 					end,
 				},
 
-
 				-- Filtering function to exclude words with spaces
 				formatting = {
 					format = function(entry, vim_item)
-						if string.match(vim_item.abbr, '%s') then
+						if string.match(vim_item.abbr, "%s") then
 							entry.filterText = nil
 							entry.abbr = nil
 						end

@@ -21,18 +21,20 @@ return {
 		lazy = false,
 		priority = 1000,
 		config = function()
-			vim.cmd[[colorscheme kanagawa]]
+			vim.cmd([[colorscheme kanagawa]])
 		end,
 	},
 	{
 		"phha/zenburn.nvim",
 		lazy = true,
 		priority = 1000,
-		config = function() require("zenburn").setup() end
+		config = function()
+			require("zenburn").setup()
+		end,
 	},
 	"neanias/everforest-nvim",
 	"EdenEast/nightfox.nvim",
-	{ 'kepano/flexoki-neovim', name = 'flexoki' },
+	{ "kepano/flexoki-neovim", name = "flexoki" },
 	{
 		"ntk148v/habamax.nvim",
 		dependencies = { "rktjmp/lush.nvim" },
@@ -52,19 +54,19 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.cmd[[colorscheme catppuccin-latte]]
-		end
+			vim.cmd([[colorscheme catppuccin-latte]])
+		end,
 	},
 	-- Using lazy.nvim
 	{
-		'ribru17/bamboo.nvim',
+		"ribru17/bamboo.nvim",
 		lazy = true,
 		priority = 1000,
 		config = function()
-			require('bamboo').setup {
+			require("bamboo").setup({
 				-- optional configuration here
-			}
-			require('bamboo').load()
+			})
+			require("bamboo").load()
 		end,
 	},
 	{
@@ -75,7 +77,7 @@ return {
 	},
 	{
 		"rose-pine/neovim",
-		name = "rose-pine"
+		name = "rose-pine",
 	},
 	{
 		"craftzdog/solarized-osaka.nvim",
@@ -85,19 +87,19 @@ return {
 			require("solarized-osaka").setup({
 				transparent = false,
 			})
-			vim.cmd [[colorscheme solarized-osaka]]
+			vim.cmd([[colorscheme solarized-osaka]])
 		end,
 	},
 	{
-		'projekt0n/github-nvim-theme',
+		"projekt0n/github-nvim-theme",
 		lazy = true,
 		priority = 1000,
 		config = function()
-			require('github-theme').setup({
+			require("github-theme").setup({
 				-- ...
 			})
 
-			vim.cmd('colorscheme github_light')
+			vim.cmd("colorscheme github_light")
 		end,
-	}
+	},
 }

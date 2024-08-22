@@ -38,7 +38,7 @@ end
 
 vim.opt.guicursor = "" -- Always use block cursor
 vim.opt.scrolloff = 10 -- Adds ten lines between cursor and edge when scrolling
-vim.opt.colorcolumn = "80" -- Vertical column at 80 characters
+vim.opt.colorcolumn = "80,120" -- Vertical column at 80 characters
 
 vim.opt.ignorecase = true -- Case insensitive search
 vim.opt.smartcase = true -- Case sensitive search only when pattern has caps

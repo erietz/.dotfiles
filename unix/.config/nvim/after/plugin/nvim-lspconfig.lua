@@ -102,7 +102,9 @@ lspconfig.vuels.setup(lsp_defaults({}))
 lspconfig.tsserver.setup(lsp_defaults({}))
 lspconfig.dartls.setup(lsp_defaults({}))
 lspconfig.sqlls.setup(lsp_defaults({
-	root_dir = function() return vim.loop.cwd() end,
+	root_dir = function()
+		return vim.loop.cwd()
+	end,
 }))
 lspconfig.gopls.setup(lsp_defaults({
 	on_attach = function(client, bufnr)
