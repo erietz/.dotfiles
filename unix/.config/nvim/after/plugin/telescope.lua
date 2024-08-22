@@ -13,6 +13,7 @@ require("telescope").setup({
 		},
 	},
 })
+require("telescope").load_extension("dap")
 
 keymap.nnoremap("<leader>ff", function()
 	require("telescope.builtin").find_files()
@@ -29,6 +30,10 @@ end, { desc = "Telescope: find git files" })
 keymap.nnoremap("<leader>fg", function()
 	require("telescope.builtin").live_grep()
 end, { desc = "Telescope: Live grep" })
+
+keymap.nnoremap("<leader>fp", function()
+	require("telescope.builtin").grep_string({ search = vim.fn.input("Grep > ") })
+end)
 
 keymap.nnoremap("<leader>fw", function()
 	require("telescope.builtin").grep_string()

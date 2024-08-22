@@ -105,7 +105,8 @@ k.nnoremap("<leader>-", [[80A-<ESC>81<BAR>d$_<CR>]], { silent = true })
 k.nnoremap("<leader>_", [[50A-<ESC>51<BAR>d$_<CR>]], { silent = true })
 
 -- Grep word
-k.nnoremap("<leader>gw", [[:Ggrep -q -I "\<C-r><C-w>\>" .<CR>]], { silent = true })
+k.nnoremap("<leader>gwp", [[:Ggrep -q -I <C-r><C-w> .<CR>]], { silent = false })
+k.nnoremap("<leader>gwf", [[:Ggrep -q -I <C-r><C-w> %<CR>]], { silent = false })
 k.nnoremap("<leader>psw", [[:cfdo %s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 k.nnoremap("<leader>pwu", [[:cfdo normal u]])
 
@@ -123,3 +124,19 @@ end, {})
 -- keymap.nnoremap('<leader>db', [[:%DB<CR>]]);
 k.nnoremap("<leader>db", [[vip:DB<CR>]])
 k.vnoremap("<leader>db", [[:DB<CR>]])
+
+function Scratch()
+	if vim.fn.bufexists("scratch") == 1 then
+		vim.cmd(":e scratch")
+	else
+		vim.cmd[[
+			split
+			noswapfile hide enew
+			setlocal buftype=nofile
+			setlocal bufhidden=hide
+			"setlocal nobuflisted
+			"lcd ~
+			file scratch
+		]]
+	end
+end

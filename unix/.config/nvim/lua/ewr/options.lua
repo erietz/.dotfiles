@@ -18,7 +18,7 @@ vim.opt.autoindent = true -- copy indent level last line when inserting new line
 
 -- two space non-tab languages
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "html", "css", "tex", "md", "pandoc", "dart" },
+	pattern = { "html", "css", "tex", "md", "pandoc", "dart", "javascript", "typescript" },
 	command = "setlocal tabstop=2 shiftwidth=2 expandtab",
 })
 
@@ -27,6 +27,14 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = { "python", "typescriptreact", "json" },
 	command = "setlocal expandtab",
 })
+
+function UseTabs()
+	vim.cmd("setlocal tabstop=4 shiftwidth=4 noexpandtab")
+end
+
+function UseSpaces()
+	vim.cmd("setlocal tabstop=2 shiftwidth=2 expandtab")
+end
 
 vim.opt.guicursor = "" -- Always use block cursor
 vim.opt.scrolloff = 10 -- Adds ten lines between cursor and edge when scrolling
@@ -50,9 +58,9 @@ vim.opt.list = true -- Show characters like spaces and tabs in buffer
 -- vim.opt.listchars = "tab:..,trail:_,extends:>,precedes:<,nbsp:~"
 
 vim.opt.listchars = {
-	tab = "..",
-	multispace = "_",
-	lead = ">",
+	tab = "| ",
+	-- multispace = "_",
+	-- lead = ">",
 	trail = "_",
 	extends = ">",
 	precedes = "<",

@@ -101,6 +101,9 @@ lspconfig.cssls.setup(lsp_defaults({}))
 lspconfig.vuels.setup(lsp_defaults({}))
 lspconfig.tsserver.setup(lsp_defaults({}))
 lspconfig.dartls.setup(lsp_defaults({}))
+lspconfig.sqlls.setup(lsp_defaults({
+	root_dir = function() return vim.loop.cwd() end,
+}))
 lspconfig.gopls.setup(lsp_defaults({
 	on_attach = function(client, bufnr)
 		on_attach(client, bufnr)
@@ -125,15 +128,18 @@ lspconfig.texlab.setup(lsp_defaults({}))
 
 local null_ls = require("null-ls")
 null_ls.setup({
-    sources = {
-        null_ls.builtins.completion.spell,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.diagnostics.mypy,
-        null_ls.builtins.diagnostics.ruff,
-        null_ls.builtins.formatting.black,
-        null_ls.builtins.formatting.isort,
-        null_ls.builtins.formatting.stylua,
-    },
+	sources = {
+		null_ls.builtins.completion.spell,
+		require("none-ls.diagnostics.eslint_d"),
+		-- null_ls.builtins.formatting.prettierd,
+		null_ls.builtins.formatting.prettier,
+		-- null_ls.builtins.diagnostics.eslint,
+		null_ls.builtins.diagnostics.mypy,
+		null_ls.builtins.diagnostics.ruff,
+		null_ls.builtins.formatting.black,
+		null_ls.builtins.formatting.isort,
+		null_ls.builtins.formatting.stylua,
+	},
 })
 
 -- local rt = require("rust-tools")

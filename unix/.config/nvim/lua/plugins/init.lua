@@ -4,6 +4,7 @@ return {
 	{
 		"NTBBloodbath/rest.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
+		enabled = false,
 	},
 	"junegunn/vader.vim",
 	{
@@ -14,7 +15,6 @@ return {
 		},
 		config = function(_, opts)
 			require("orgmode").setup(opts)
-			require("orgmode").setup_ts_grammar()
 		end,
 	},
 }

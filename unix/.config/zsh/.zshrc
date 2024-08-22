@@ -55,7 +55,7 @@ source_files=(
 	$EWR_PLUGIN_DIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	$EWR_PLUGIN_DIR/zsh-autosuggestions/zsh-autosuggestions.zsh
 	$EWR_PLUGIN_DIR/zsh-completions/zsh-completions.plugin.zsh
-	$EWR_PLUGIN_DIR/git-prompt.sh
+	# $EWR_PLUGIN_DIR/git-prompt.sh
 )
 
 case $OSTYPE in
@@ -71,20 +71,23 @@ done
 # }}}
 # prompt {{{
 
-local prompt=''
-# prompt+='%{$fg[cyan]%}['
-prompt+='%{$fg[green]%}%n'       # $USERNAME
-prompt+='%{$fg[white]%}@'        # @
-prompt+='%{$fg[yellow]%}%m '      # hostname (up to first .)
-prompt+='%{$fg[blue]%}%~'        # working directory ($HOME replaced by ~)
-prompt+='%{$fg[white]%}$(__git_ps1 " (%s)")'  # git branch
-# prompt+='%{$fg[cyan]%}]'
-# prompt+=$'\n'
-# prompt+='%{$fg[red]%} ⚛'
-# prompt+='%{$fg[yellow]%} ☯'
-prompt+='%{$fg[white]%}> '
-prompt+='%{$reset_color%}'
-setopt PROMPT_SUBST ; PS1="${prompt}"
+# local prompt=''
+# # prompt+='%{$fg[cyan]%}['
+# prompt+='%{$fg[green]%}%n'       # $USERNAME
+# prompt+='%{$fg[white]%}@'        # @
+# prompt+='%{$fg[yellow]%}%m '      # hostname (up to first .)
+# prompt+='%{$fg[blue]%}%~'        # working directory ($HOME replaced by ~)
+# prompt+='%{$fg[white]%}$(__git_ps1 " (%s)")'  # git branch
+# # prompt+='%{$fg[cyan]%}]'
+# # prompt+=$'\n'
+# # prompt+='%{$fg[red]%} ⚛'
+# # prompt+='%{$fg[yellow]%} ☯'
+# prompt+='%{$fg[white]%}> '
+# prompt+='%{$reset_color%}'
+# setopt PROMPT_SUBST ; PS1="${prompt}"
+
+
+eval "$(starship init zsh)"
 
 # }}}
 
@@ -93,10 +96,26 @@ setopt PROMPT_SUBST ; PS1="${prompt}"
 
 # zprof
 
-function gitchob() {
+function git-chob() {
 	if [ "$1" = "-r" ]; then
-		git branch -r | fzf | awk -F 'origin/' '{print $2}' | xargs git checkout -b
+		git branch -r | fzf | awk -F 'origin/' '{print $2}' | xargs -I {} git checkout -b "{}" "origin/{}"
 	else
 		git branch | fzf | awk '{print $NF}' | xargs git checkout
 	fi
 }
+
+function _git-chob() {
+	git-chob
+	zle reset-prompt
+}
+
+zle -N _git-chob _git-chob
+bindkey '^b' _git-chob
+
+function _git-chob-remote() {
+	git-chob -r
+	zle reset-prompt
+}
+
+zle -N _git-chob-remote _git-chob-remote
+bindkey '^g' _git-chob-remote

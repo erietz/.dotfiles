@@ -1,5 +1,8 @@
 return {
-	"mfussenegger/nvim-dap",
+	{
+		"mfussenegger/nvim-dap",
+		tag = "0.7.0"
+	},
 	{
 		"rcarriga/nvim-dap-ui",
 		dependencies = {

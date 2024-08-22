@@ -23,6 +23,18 @@ return {
 					end,
 				},
 
+
+				-- Filtering function to exclude words with spaces
+				formatting = {
+					format = function(entry, vim_item)
+						if string.match(vim_item.abbr, '%s') then
+							entry.filterText = nil
+							entry.abbr = nil
+						end
+						return vim_item
+					end,
+				},
+
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "nvim_lua" },
@@ -31,7 +43,7 @@ return {
 					{ name = "path" },
 					{
 						name = "buffer",
-						keyword_length = 3,
+						-- keyword_length = 3,
 						-- option = {
 						-- 	keyword_pattern = [[\k\+]],
 						-- }

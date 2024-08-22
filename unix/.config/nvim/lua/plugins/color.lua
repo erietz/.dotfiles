@@ -24,6 +24,12 @@ return {
 			vim.cmd[[colorscheme kanagawa]]
 		end,
 	},
+	{
+		"phha/zenburn.nvim",
+		lazy = true,
+		priority = 1000,
+		config = function() require("zenburn").setup() end
+	},
 	"neanias/everforest-nvim",
 	"EdenEast/nightfox.nvim",
 	{ 'kepano/flexoki-neovim', name = 'flexoki' },
@@ -41,9 +47,13 @@ return {
 		config = true,
 	},
 	{
+		lazy = true,
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
+		config = function()
+			vim.cmd[[colorscheme catppuccin-latte]]
+		end
 	},
 	-- Using lazy.nvim
 	{

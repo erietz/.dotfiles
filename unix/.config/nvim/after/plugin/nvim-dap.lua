@@ -12,7 +12,7 @@ breakpoints
 - auto open dapui when initially starting debugger with F5
 
 - show in status bar when debugger is running
- 
+
 - auto switch windows when postman makes a request and land on breakpoint like
 vscode
 
@@ -120,9 +120,33 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 			-- trace = true, -- include debugger info
 			runtimeExecutable = "node",
 			runtimeArgs = {
+				"--experimental-vm-modules",
 				"./node_modules/jest/bin/jest.js",
 				"--runInBand",
 			},
+			rootPath = "${workspaceFolder}",
+			cwd = "${workspaceFolder}",
+			console = "integratedTerminal",
+			internalConsoleOptions = "neverOpen",
+			skipFiles = {
+				"<node_internals>/**",
+			},
+		},
+		{
+			type = "pwa-node",
+			request = "launch",
+			name = "Debug Specific Jest Test",
+			-- trace = true, -- include debugger info
+			runtimeExecutable = "node",
+			runtimeArgs = function()
+				local testName = vim.fn.input("Test name: ")
+				return {
+					"--experimental-vm-modules",
+					"./node_modules/jest/bin/jest.js",
+					"--runInBand",
+					testName
+				}
+			end,
 			rootPath = "${workspaceFolder}",
 			cwd = "${workspaceFolder}",
 			console = "integratedTerminal",

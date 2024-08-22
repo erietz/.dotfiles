@@ -58,7 +58,7 @@ cmd open &{{
 # (also see 'man mv' for backup/overwrite options)
 cmd trash %set -f; mv $fx ~/.Trash
 
-map D trash
+# map D trash
 
 # define a custom 'delete' command
 # cmd delete ${{

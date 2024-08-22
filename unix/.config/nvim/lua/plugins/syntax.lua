@@ -6,9 +6,15 @@ return {
 	"erietz/vim-todo",
 	"erietz/vim-doconce",
 	"bfrg/vim-jq",
+	{
+		"nvimtools/none-ls.nvim",
+		dependencies = {
+			"nvimtools/none-ls-extras.nvim",
+		},
+	},
 	"lukas-reineke/indent-blankline.nvim", -- reading yaml indented 2 spaces...
 	{
-		"jose-elias-alvarez/null-ls.nvim",
+		"nvimtools/none-ls.nvim",
 		dependencies = "nvim-lua/plenary.nvim",
 	},
 }

@@ -3,3 +3,4 @@ channels:
   - conda-forge
   - defaults
 channel_priority: strict
+changeps1: false
