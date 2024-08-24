@@ -9,21 +9,21 @@ import tempfile
 import webbrowser
 
 bindings = []
-with open('/home/ethan/.config/i3/config', 'r') as f:
+with open("/home/ethan/.config/i3/config", "r") as f:
     for line in f:
-        if line.startswith('bindsym'):
+        if line.startswith("bindsym"):
             line = line.strip().split()
             key = line[1]
-            binding = ' '.join(line[2:])
+            binding = " ".join(line[2:])
             bindings.append((key, binding))
 
 df = pd.DataFrame(bindings)
 df = df.sort_values(by=0).reset_index(drop=True)
 
-outfile = tempfile.NamedTemporaryFile(suffix='.html', mode='wt', delete=False)
+outfile = tempfile.NamedTemporaryFile(suffix=".html", mode="wt", delete=False)
 print(outfile.name)
 
-css = '''
+css = """
 body {
     margin: 0;
     font-family: Helvetica;
@@ -62,9 +62,9 @@ table.dataframe td {
     background-color: #323232;
     color: lightgrey;
 }
-'''
+"""
 
-html = '''
+html = """
 <!DOCTYPE html>
 <html>
   <head>
@@ -76,9 +76,11 @@ html = '''
     {table}
   </body>
 </html>
-'''.format(css=css, table=df.to_html())
+""".format(
+    css=css, table=df.to_html()
+)
 
 outfile.write(html)
 outfile.close()
 
-webbrowser.open('file:///' + outfile.name)
+webbrowser.open("file:///" + outfile.name)

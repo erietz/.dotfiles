@@ -21,7 +21,7 @@ jobs:
         run: black --check .
 
       - name: Install stylua
-        run: sudo apt install -y stylua
+        run: cargo install stylua
 
       - name: Lua format check
         run: stylua -a --check .
