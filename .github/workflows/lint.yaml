@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  install_ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip' # caching pip dependencies
+        run: pip install black
+        run: black --check .
+
+      - name: Install Ansible
+        run: sudo apt install -y stylua
+        run: stylua -a --check .
