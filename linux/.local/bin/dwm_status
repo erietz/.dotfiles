@@ -4,37 +4,36 @@
 # Description : DWM Status Bar
 
 print_cpu() {
-    top -bn 1 | awk '/%Cpu/ {print $2 "% cpu"}'
+	top -bn 1 | awk '/%Cpu/ {print $2 "% cpu"}'
 }
 
 print_storage() {
-    df -Ht ext4 | awk '/dev/ {print $4 "/" $2}'
+	df -Ht ext4 | awk '/dev/ {print $4 "/" $2}'
 }
 
 print_memory() {
-    awk '/MemAvailable/ { printf "%.2f GiB", $2/1024/1024 }' /proc/meminfo
+	awk '/MemAvailable/ { printf "%.2f GiB", $2/1024/1024 }' /proc/meminfo
 }
 
 print_tempurature() {
-    [ -f /sys/class/thermal/thermal_zone0/temp ] || return 0
-    echo "$(head -c 2 /sys/class/thermal/thermal_zone0/temp)C"
+	[ -f /sys/class/thermal/thermal_zone0/temp ] || return 0
+	echo "$(head -c 2 /sys/class/thermal/thermal_zone0/temp)C"
 }
 
 print_battery() {
-    battery_file="/sys/class/power_supply/BAT*/capacity"
-    if [ -f "$battery_file" ]; then
-        awk '{ sum += $1 } END { print sum "% charge"}' "$battery_file"
-    else
-        echo "no bat"
-    fi
+	battery_file="/sys/class/power_supply/BAT*/capacity"
+	if [ -f "$battery_file" ]; then
+		awk '{ sum += $1 } END { print sum "% charge"}' "$battery_file"
+	else
+		echo "no bat"
+	fi
 }
 
 print_date() {
-    date "+%a %m-%d %T"
+	date "+%a %m-%d %T"
 }
 
-while true
-do
-    xsetroot -name " $(print_cpu) | $(print_storage) | $(print_memory) | $(print_tempurature) | $(print_battery) | $(print_date)"
-    sleep 1
+while true; do
+	xsetroot -name " $(print_cpu) | $(print_storage) | $(print_memory) | $(print_tempurature) | $(print_battery) | $(print_date)"
+	sleep 1
 done
