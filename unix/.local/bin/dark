@@ -1,5 +1,0 @@
-#!/bin/sh
-
-sed -i 's/colors: \*gruvbox_light/colors: \*gruvbox_dark/' /home/ethan/.config/alacritty/alacritty.yml
-
-sed -i 's/background = "light"/background = "dark"/' /home/ethan/.config/nvim/lua/ewr/colors.lua
