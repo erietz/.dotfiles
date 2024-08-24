@@ -26,8 +26,9 @@ ex ()
 # usage: b <int>
 b () {
     local string=""
-    for i in {1..$1}
+    for i in {1..$1}; do
         string+=$(printf "../")
+	done
     cd $string
 }
 
