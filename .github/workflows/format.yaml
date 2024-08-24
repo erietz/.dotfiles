@@ -1,4 +1,4 @@
-name: Lint
+name: Format
 
 on:
   push:
@@ -29,5 +29,7 @@ jobs:
       - name: Install shfmt
         run: go install mvdan.cc/sh/v3/cmd/shfmt@latest
 
-      - name: Lua format check
-        run: shfmt -l .
+      - name: Shell format check
+        run: |
+          export PATH=${PATH}:`go env GOPATH`/bin
+          shfmt -l .
