@@ -94,7 +94,9 @@ eval "$(starship init zsh)"
 # per machine settings that do not get tracked by git
 [ -f ~/.zshrc-extra ] && source ~/.zshrc-extra
 
-# zprof
+eval "$(direnv hook zsh)"
+
+# {{{ stuff
 
 function git-chob() {
 	if [ "$1" = "-r" ]; then
@@ -119,3 +121,7 @@ function _git-chob-remote() {
 
 zle -N _git-chob-remote _git-chob-remote
 bindkey '^b' _git-chob-remote
+
+# }}}
+
+# zprof
