@@ -26,10 +26,12 @@ jobs:
       - name: Lua format check
         run: stylua -a --check .
 
-      # - name: Install shfmt
-      #   run: go install mvdan.cc/sh/v3/cmd/shfmt@latest
+      - name: Install shfmt
+        run: go install mvdan.cc/sh/v3/cmd/shfmt@latest
 
-      # - name: Shell format check
-      #   run: |
-      #     export PATH=${PATH}:`go env GOPATH`/bin
-      #     shfmt -l .
+      - name: Shell format check
+        run: |
+          export PATH=${PATH}:`go env GOPATH`/bin
+          for file in $(shfmt -l . 2>&1 | awk -F ':' '{print $1}' | grep -v '\.zsh$'); do
+            shfmt -l "$file"
+          done
