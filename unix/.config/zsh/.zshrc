@@ -87,14 +87,12 @@ done
 # setopt PROMPT_SUBST ; PS1="${prompt}"
 
 
-eval "$(starship init zsh)"
 
 # }}}
 
 # per machine settings that do not get tracked by git
 [ -f ~/.zshrc-extra ] && source ~/.zshrc-extra
 
-eval "$(direnv hook zsh)"
 
 # {{{ stuff
 
@@ -123,5 +121,8 @@ zle -N _git-chob-remote _git-chob-remote
 bindkey '^b' _git-chob-remote
 
 # }}}
+
+command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
+command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
 
 # zprof
