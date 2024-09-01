@@ -15,3 +15,12 @@ right_format = "$all"
 [character] # The name of the module we are configuring is 'character'
 # U+1D713
 success_symbol = '[𝜓](bold bright-blue)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[direnv]
+disabled = false
+
+[sudo]
+disabled = false
+
+[memory_usage]
+disabled = false
