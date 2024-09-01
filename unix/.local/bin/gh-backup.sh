@@ -24,5 +24,5 @@ gh repo list "$GITHUB_HANDLE" --limit "$MAX_REPOS" | cut -d '/' -f2- | while rea
 
 		echo "$out_dir"
 		git pull
-		)
+	)
 done

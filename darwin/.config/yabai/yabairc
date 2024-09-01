@@ -46,16 +46,16 @@ yabai -m rule --add app="^System Preferences$" layer=above manage=off #sticky=on
 
 # Adds padding to sides if using ultrawide monitor
 if system_profiler SPDisplaysDataType | grep -i "ultrawide"; then
-    echo "ULTRAWIDE monitor detected... Adding padding to sides"
-    yabai -m config left_padding 800
-    yabai -m config right_padding 800
-    yabai -m config top_padding 100
-    yabai -m config bottom_padding 100
+	echo "ULTRAWIDE monitor detected... Adding padding to sides"
+	yabai -m config left_padding 800
+	yabai -m config right_padding 800
+	yabai -m config top_padding 100
+	yabai -m config bottom_padding 100
 else
-    yabai -m config left_padding 0
-    yabai -m config right_padding 0
-    yabai -m config top_padding 0
-    yabai -m config bottom_padding 0
+	yabai -m config left_padding 0
+	yabai -m config right_padding 0
+	yabai -m config top_padding 0
+	yabai -m config bottom_padding 0
 fi
 
 echo "yabai configuration loaded"
