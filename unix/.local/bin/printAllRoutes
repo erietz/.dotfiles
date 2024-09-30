@@ -1,0 +1,3 @@
+#!/bin/bash
+
+rg -o -U --no-heading "router\.(get|post|put|delete)\([\n]?\s*(?:['\"\`](.*)['\"\`])?" -r '$1 $2' | sort | sed 's;routes/;;' | sed 's;\(.*\)\.js:\(.*\) /\(.*\);\2 /\1/\3;'
