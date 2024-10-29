@@ -23,21 +23,10 @@ return {
 					end,
 				},
 
-				-- Filtering function to exclude words with spaces
-				formatting = {
-					format = function(entry, vim_item)
-						if string.match(vim_item.abbr, "%s") then
-							entry.filterText = nil
-							entry.abbr = nil
-						end
-						return vim_item
-					end,
-				},
-
-				sources = cmp.config.sources({
+				sources = {
 					{ name = "nvim_lsp" },
-					{ name = "nvim_lua" },
 					{ name = "nvim_lsp_signature_help" },
+					{ name = "nvim_lua" },
 					{ name = "luasnip" },
 					{ name = "path" },
 					{
@@ -48,7 +37,43 @@ return {
 						-- }
 					},
 					{ name = "orgmode" },
-				}),
+				},
+
+
+				-- -- Custom entry filtering
+				-- formatting = {
+				-- 	format = function(entry, vim_item)
+				-- 		if vim_item.abbr:match("%s") then
+				-- 			vim_item.abbr = ""
+				-- 		end
+				-- 		return vim_item
+				-- 	end,
+				-- },
+
+				-- Additional filtering at the source level
+				sorting = {
+					comparators = {
+						function(entry1, entry2)
+							local contains_space = function(e)
+								return e.completion_item.label:match("%s")
+							end
+							if contains_space(entry1) then
+								return false
+							elseif contains_space(entry2) then
+								return true
+							end
+							return nil
+						end,
+						cmp.config.compare.offset,
+						cmp.config.compare.exact,
+						cmp.config.compare.score,
+						cmp.config.compare.kind,
+						cmp.config.compare.sort_text,
+						cmp.config.compare.length,
+						cmp.config.compare.order,
+					},
+				},
+
 
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping.select_next_item(cmp_select),

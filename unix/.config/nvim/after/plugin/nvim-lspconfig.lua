@@ -17,6 +17,7 @@ local on_attach = function(_, bufnr)
 	keymap.nnoremap("gr", vim.lsp.buf.references, bufopts)
 	keymap.nnoremap("gi", vim.lsp.buf.implementation, bufopts)
 	keymap.nnoremap("<leader>ls", vim.lsp.buf.signature_help, bufopts)
+	keymap.inoremap("<C-s>", vim.lsp.buf.signature_help, bufopts)
 	keymap.nnoremap("<leader>lh", vim.lsp.buf.hover, bufopts)
 	keymap.nnoremap("<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
 	keymap.nnoremap("<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
@@ -42,7 +43,7 @@ local on_attach = function(_, bufnr)
 	-- keymap.nnoremap('[e', vim.lsp.diagnostic.goto_prev, bufopts)
 end
 
-local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local lsp_defaults = spread({
 	on_attach = on_attach,

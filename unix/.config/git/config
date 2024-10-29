@@ -9,6 +9,7 @@
 	ca = commit -a
 	br = branch
 	co = checkout
+	remaster = "git fetch && git rebase origin/master"
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p

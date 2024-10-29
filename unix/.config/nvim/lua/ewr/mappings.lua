@@ -140,3 +140,5 @@ function Scratch()
 		]])
 	end
 end
+
+vim.api.nvim_create_user_command('Scratch', Scratch, {})
