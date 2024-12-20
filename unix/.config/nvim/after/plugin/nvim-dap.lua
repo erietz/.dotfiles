@@ -144,6 +144,7 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 					"--experimental-vm-modules",
 					"./node_modules/jest/bin/jest.js",
 					"--runInBand",
+					"--testNamePattern",
 					testName,
 				}
 			end,
