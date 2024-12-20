@@ -12,4 +12,5 @@ return {
 	"tpope/vim-repeat",
 	"tpope/vim-abolish",
 	"junegunn/vim-easy-align",
+	"github/copilot.vim",
 }

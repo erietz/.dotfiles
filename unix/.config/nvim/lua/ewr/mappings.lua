@@ -142,3 +142,16 @@ function Scratch()
 end
 
 vim.api.nvim_create_user_command('Scratch', Scratch, {})
+
+function SearchToQuickfix()
+	local pattern = vim.fn.getreg("/")
+	if pattern == "" then
+		print("No search pattern")
+		return
+	end
+
+	vim.cmd("vimgrep /" .. pattern .. "/j %")
+	vim.cmd("copen")
+end
+
+k.nnoremap("<leader>/", SearchToQuickfix, { desc = "Search to quickfix" })

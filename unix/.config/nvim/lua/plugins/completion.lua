@@ -76,8 +76,8 @@ return {
 
 
 				mapping = cmp.mapping.preset.insert({
-					["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
-					["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
+					-- ["<Tab>"] = cmp.mapping.select_next_item(cmp_select),
+					-- ["<S-Tab>"] = cmp.mapping.select_prev_item(cmp_select),
 					["<C-n>"] = cmp.mapping.select_next_item(),
 					["<C-p>"] = cmp.mapping.select_prev_item(),
 					["<C-y>"] = cmp.mapping.confirm({ select = true }),

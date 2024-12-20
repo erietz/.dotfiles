@@ -100,7 +100,7 @@ lspconfig.clangd.setup(lsp_defaults({}))
 lspconfig.html.setup(lsp_defaults({}))
 lspconfig.cssls.setup(lsp_defaults({}))
 lspconfig.vuels.setup(lsp_defaults({}))
-lspconfig.tsserver.setup(lsp_defaults({}))
+lspconfig.ts_ls.setup(lsp_defaults({}))
 lspconfig.dartls.setup(lsp_defaults({}))
 lspconfig.sqlls.setup(lsp_defaults({
 	root_dir = function()

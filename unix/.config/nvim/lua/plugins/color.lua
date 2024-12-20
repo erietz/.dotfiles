@@ -12,13 +12,20 @@ return {
 			"i3config",
 		},
 	},
-	"gruvbox-community/gruvbox",
+	{
+		"gruvbox-community/gruvbox",
+		lazy = false,
+		priority = 1000,
+		config = function()
+			vim.cmd([[colorscheme gruvbox]])
+		end,
+	},
 	"EdenEast/nightfox.nvim",
 	"catppuccin/nvim",
 	"junegunn/seoul256.vim",
 	{
 		"rebelot/kanagawa.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		config = function()
 			vim.cmd([[colorscheme kanagawa]])
