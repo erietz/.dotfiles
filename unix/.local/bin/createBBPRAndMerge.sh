@@ -24,6 +24,10 @@ PR_ID=$(curl -s -X POST -H "Authorization: Bearer $TOKEN" \
 
 echo "Created PR with ID: $PR_ID"
 
+echo "Waiting for the pipeline to kick off..."
+sleep 60
+echo "Done waiting!"
+
 # Wait for the pipeline on the specific branch to succeed
 while true; do
 	RESPONSE=$(curl -s -X GET -H "Authorization: Bearer $TOKEN" \
