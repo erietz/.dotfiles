@@ -39,7 +39,6 @@ return {
 					{ name = "orgmode" },
 				},
 
-
 				-- -- Custom entry filtering
 				-- formatting = {
 				-- 	format = function(entry, vim_item)
@@ -73,7 +72,6 @@ return {
 						cmp.config.compare.order,
 					},
 				},
-
 
 				mapping = cmp.mapping.preset.insert({
 					-- ["<Tab>"] = cmp.mapping.select_next_item(cmp_select),

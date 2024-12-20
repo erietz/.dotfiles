@@ -141,7 +141,7 @@ function Scratch()
 	end
 end
 
-vim.api.nvim_create_user_command('Scratch', Scratch, {})
+vim.api.nvim_create_user_command("Scratch", Scratch, {})
 
 function SearchToQuickfix()
 	local pattern = vim.fn.getreg("/")
