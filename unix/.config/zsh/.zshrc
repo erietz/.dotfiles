@@ -120,6 +120,15 @@ function _git-chob-remote() {
 zle -N _git-chob-remote _git-chob-remote
 bindkey '^b' _git-chob-remote
 
+function _tmux-sessionizer() {
+	# tmux popup -E -d -w 80% -h 80% -c "#{pane_current_path}" "tmux-sessionizer"
+	tmux popup -E "tmux-sessionizer"
+	zle reset-prompt
+}
+
+zle -N _tmux-sessionizer _tmux-sessionizer
+bindkey '^p' _tmux-sessionizer
+
 # }}}
 
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"

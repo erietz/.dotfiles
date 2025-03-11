@@ -14,22 +14,22 @@ return {
 	},
 	{
 		"gruvbox-community/gruvbox",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		config = function()
 			vim.cmd([[colorscheme gruvbox]])
 		end,
 	},
 	"EdenEast/nightfox.nvim",
-	"catppuccin/nvim",
 	"junegunn/seoul256.vim",
 	{
 		"rebelot/kanagawa.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
-		config = function()
-			vim.cmd([[colorscheme kanagawa]])
-		end,
+		opts = {
+			transparent = false,
+			dimInactive = true,
+		},
 	},
 	{
 		"phha/zenburn.nvim",
@@ -61,7 +61,7 @@ return {
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
-			vim.cmd([[colorscheme catppuccin-latte]])
+			vim.cmd([[colorscheme catppuccin-frappe]])
 		end,
 	},
 	-- Using lazy.nvim
@@ -92,7 +92,7 @@ return {
 		priority = 1000,
 		config = function()
 			require("solarized-osaka").setup({
-				transparent = false,
+				transparent = true,
 			})
 			vim.cmd([[colorscheme solarized-osaka]])
 		end,
@@ -107,6 +107,15 @@ return {
 			})
 
 			vim.cmd("colorscheme github_light")
+		end,
+	},
+	{
+		"google/vim-colorscheme-primary",
+		lazy = true,
+		priority = 1000,
+		config = function()
+			vim.opt.background = "light"
+			vim.cmd([[colorscheme primary]])
 		end,
 	},
 }

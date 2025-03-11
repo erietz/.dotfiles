@@ -47,6 +47,9 @@ require("nvim-treesitter.configs").setup({
 	indent = {
 		enable = true,
 	},
+	injections = {
+		enable = true,
+	},
 	incremental_selection = {
 		enable = false,
 		keymaps = {

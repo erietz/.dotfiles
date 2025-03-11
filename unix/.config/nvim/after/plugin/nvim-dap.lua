@@ -96,8 +96,8 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 				"!**/node_modules/**",
 			},
 			skipFiles = {
-				"**/node_modules/**",
-				"!**/node_modules/my-module/**",
+				-- "**/node_modules/**",
+				-- "!**/node_modules/my-module/**",
 				"<node_internals>/**",
 			},
 		},
@@ -121,8 +121,9 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 			runtimeExecutable = "node",
 			runtimeArgs = {
 				"--experimental-vm-modules",
+				"--inspect-brk", -- Pauses execution before any code runs so you can attach a debugger.
 				"./node_modules/jest/bin/jest.js",
-				"--runInBand",
+				"--runInBand", -- Runs tests sequentially in a single process (important for debugging).
 			},
 			rootPath = "${workspaceFolder}",
 			cwd = "${workspaceFolder}",
@@ -130,6 +131,29 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 			internalConsoleOptions = "neverOpen",
 			skipFiles = {
 				"<node_internals>/**",
+			},
+		},
+		{
+			type = "pwa-node",
+			request = "launch",
+			name = "Debug Jest Tests Current File",
+			-- trace = true, -- include debugger info
+			runtimeExecutable = "node",
+			runtimeArgs = {
+				"--experimental-vm-modules",
+				"--inspect-brk", -- Pauses execution before any code runs so you can attach a debugger.
+				"./node_modules/jest/bin/jest.js",
+				"--runInBand", -- Runs tests sequentially in a single process (important for debugging).
+				"--testPathPattern",
+				"${file}",
+			},
+			rootPath = "${workspaceFolder}",
+			cwd = "${workspaceFolder}",
+			console = "integratedTerminal",
+			internalConsoleOptions = "neverOpen",
+			skipFiles = {
+				-- "<node_internals>/**",
+				-- "!**/node_modules/my-module/**",
 			},
 		},
 		{
@@ -143,6 +167,7 @@ for _, language in ipairs({ "typescript", "javascript" }) do
 				return {
 					"--experimental-vm-modules",
 					"./node_modules/jest/bin/jest.js",
+					"--inspect-brk", -- Pauses execution before any code runs so you can attach a debugger.
 					"--runInBand",
 					"--testNamePattern",
 					testName,

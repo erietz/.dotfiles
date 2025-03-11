@@ -15,13 +15,13 @@ function SetColorScheme(color, isDark, isTransparent)
 	end
 end
 
--- SetColorScheme('kanagawa')
+SetColorScheme('kanagawa')
 -- SetColorScheme('catppuccin-latte', false)
 -- SetColorScheme('nightfox')
 -- SetColorScheme('dayfox')
 -- SetColorScheme('terafox')
 -- SetColorScheme('flexoki-dark')
--- SetColorScheme('kanagawa-dragon')
+-- SetColorScheme('kanagawa')
 -- SetColorScheme('set3')
 -- SetColorScheme('seoul256')
 

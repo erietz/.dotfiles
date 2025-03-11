@@ -44,13 +44,13 @@ while true; do
 		exit 1
 	fi
 
-	sleep 60
+	sleep 20
 done
 
 
 
 # Merge the pull request
 curl -X POST -H "Authorization: Bearer $TOKEN" \
-	"https://api.bitbucket.org/2.0/repositories/$WORKSPACE/$REPO/pullrequests/$PR_ID/merge"
+	"https://api.bitbucket.org/2.0/repositories/$WORKSPACE/$REPO/pullrequests/$PR_ID/merge" | jq
 
 echo "Pull request merged!"
