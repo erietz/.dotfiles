@@ -93,6 +93,133 @@ done
 # per machine settings that do not get tracked by git
 [ -f ~/.zshrc-extra ] && source ~/.zshrc-extra
 
+# {{{ gnuplot
+
+function gplot() {
+	local type=${1:-"bar"}
+	local title=${2:-""}
+	local xlabel=${3:-""}
+	local ylabel=${4:-""}
+	local terminal=${5:-"qt"}
+
+	case $type in
+		bar)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set style data histogram;
+			set style fill solid;
+			set boxwidth 0.8;
+			set xtic rotate by -45 scale 0;
+			set offset 0,0,2,0;
+			plot '-' using 1:xtic(2) with boxes notitle"
+			;;
+		barh)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set style data histogram;
+			set style fill solid;
+			set boxwidth 0.8;
+			set ytics rotate;
+			set offset 2,0,0,0;
+			plot '-' using 1:ytic(2) with boxes notitle"
+			;;
+		line)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set grid;
+			plot '-' using 1:xtic(2) with linespoints lw 2 pt 7 notitle"
+			;;
+		scatter)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set grid;
+			plot '-' using 1:2 with points pt 7 ps 1.5 notitle"
+			;;
+		hist)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set style fill solid 0.5;
+			bin_width = 5;
+			bin_number(x) = floor(x/bin_width);
+			rounded(x) = bin_width * (bin_number(x) + 0.5);
+			set boxwidth bin_width * 0.9;
+			plot '-' using (rounded(\$1)):(1.0) smooth freq with boxes notitle"
+			;;
+		pie)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set size square 1,1;
+			set parametric;
+			set trange [0:2*pi];
+			set xrange [-1.5:1.5];
+			set yrange [-1.5:1.5];
+			set grid;
+			set angle degrees;
+			unset key;
+			unset border;
+			unset tics;
+			# Read data and compute percentages
+			plot '-' using (0):(0):(1):(column(1)*360/100):(column(1)) with circles lc variable title''
+			"
+			;;
+		heatmap)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set view map;
+			set palette defined (0 'blue', 0.5 'white', 1 'red');
+			set cblabel 'Value';
+			plot '-' using 1:2:3 with image notitle"
+			;;
+		area)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set grid;
+			set style fill transparent solid 0.5;
+			plot '-' using 1:xtic(2) with filledcurves x1 notitle"
+			;;
+		boxplot)
+			gnuplot -p -e "
+			set terminal $terminal size 800,600 font 'Helvetica,10';
+			set title '$title';
+			set xlabel '$xlabel';
+			set ylabel '$ylabel';
+			set style fill solid 0.5;
+			set style boxplot outliers pointtype 7;
+			set style data boxplot;
+			set boxwidth 0.5;
+			plot '-' using (1):1 notitle"
+			;;
+		*)
+			echo "Unknown plot type: $type"
+			echo "Available types: bar, barh, line, scatter, hist, pie, heatmap, area, boxplot"
+			return 1
+			;;
+	esac
+}
+
+# }}}
 
 # {{{ stuff
 
