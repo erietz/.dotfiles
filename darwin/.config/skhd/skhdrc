@@ -57,10 +57,10 @@ alt - u : yabai -m config left_padding 900 &;\
           yabai -m config bottom_padding 100 &
 
 # unset gaps for ultrawide monitor
-shift + alt - u : yabai -m config left_padding 0;\
-                  yabai -m config right_padding 0;\
-                  yabai -m config top_padding 0;\
-                  yabai -m config bottom_padding 0
+shift + alt - u : yabai -m config left_padding 150;\
+                  yabai -m config right_padding 150;\
+                  yabai -m config top_padding 50;\
+                  yabai -m config bottom_padding 50
 
 # balance size of windows
 shift + alt - 0 : yabai -m space --balance
