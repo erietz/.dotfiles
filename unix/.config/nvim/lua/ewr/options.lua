@@ -53,7 +53,7 @@ vim.opt.list = true -- Show characters like spaces and tabs in buffer
 -- vim.opt.listchars = 'tab:→ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
 
 -- ascii only
--- vim.opt.listchars = 'tab:| ,trail:_,extends:>,precedes:<,nbsp:~'
+vim.opt.listchars = 'tab:| ,trail:_,extends:>,precedes:<,nbsp:~'
 -- vim.opt.listchars = "tab:..,trail:_,extends:>,precedes:<,nbsp:~"
 -- vim.opt.listchars = "tab:..,trail:_,extends:>,precedes:<,nbsp:~"
 
@@ -66,6 +66,15 @@ vim.opt.listchars = {
 	precedes = "<",
 	nbsp = "~",
 }
+-- vim.opt.listchars = {
+-- 	tab = "..",
+-- 	multispace = "_",
+-- 	lead = "..",
+-- 	trail = "_",
+-- 	extends = "..",
+-- 	precedes = "<",
+-- 	nbsp = "~",
+-- }
 
 vim.opt.wildmenu = true -- Show command line completions
 vim.opt.wildmode = "longest:full,full"
