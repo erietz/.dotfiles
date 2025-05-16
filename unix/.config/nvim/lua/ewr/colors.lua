@@ -15,8 +15,9 @@ function SetColorScheme(color, isDark, isTransparent)
 	end
 end
 
-SetColorScheme('kanagawa')
+-- SetColorScheme('kanagawa', true)
 -- SetColorScheme('catppuccin-latte', false)
+-- SetColorScheme('solarized', false)
 -- SetColorScheme('nightfox')
 -- SetColorScheme('dayfox')
 -- SetColorScheme('terafox')
