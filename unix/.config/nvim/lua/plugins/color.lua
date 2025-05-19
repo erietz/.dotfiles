@@ -30,8 +30,7 @@ return {
 		end,
 	},
 	{
-		dir = "/Users/ethan/git/hub/chill.nvim",
-		name = "chill",
+		"erietz/chill.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
