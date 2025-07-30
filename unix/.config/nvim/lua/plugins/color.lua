@@ -31,19 +31,30 @@ return {
 	},
 	{
 		"erietz/chill.nvim",
-		lazy = false,
+		name = "chill",
+		lazy = true,
 		priority = 1000,
 		config = function()
 			local background = get_background()
-			require('chill').setup({
+			require("chill").setup({
 				variant = background, -- 'dark' or 'light'
-				contrast = 'normal', -- 'high' or 'normal'
+				contrast = "normal", -- 'high' or 'normal'
 				transparent = false, -- Enable transparent background
 				italics = true, -- Use italics for comments and certain syntax
 				dim_inactive = false, -- Dim inactive windows
 			})
-			vim.cmd.colorscheme 'chill'
-		end
+			vim.cmd.colorscheme("chill")
+		end,
+	},
+	{
+		"uloco/bluloco.nvim",
+		lazy = false,
+		priority = 1000,
+		dependencies = { "rktjmp/lush.nvim" },
+		config = function()
+			-- your optional config goes here, see below.
+			vim.cmd([[colorscheme bluloco]])
+		end,
 	},
 	{
 		"EdenEast/nightfox.nvim",
