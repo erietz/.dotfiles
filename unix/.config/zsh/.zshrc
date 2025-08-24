@@ -8,6 +8,7 @@ autoload -U colors && colors
 
 # safety
 set -o noclobber
+setopt append_create
 alias cp='cp -i'
 alias mv='mv -i'
 
@@ -20,8 +21,16 @@ setopt globdots
 _comp_options+=(globdots)   # include hidden files
 setopt COMPLETE_ALIASES
 
-# share history between tmux panes (i think)
-setopt inc_append_history
+# Make Zsh history shared and real-time across sessions
+setopt SHARE_HISTORY       # Share history between sessions
+setopt INC_APPEND_HISTORY  # Append history immediately, not on exit
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
+# Optional: Prevent overwriting history from other sessions
+setopt APPEND_HISTORY
+
 
 # }}}
 # keybindings {{{

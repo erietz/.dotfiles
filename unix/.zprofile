@@ -125,3 +125,4 @@ fi
 [ -f ~/.zprofile-extra ] && source ~/.zprofile-extra
 
 # }}}
+. "$HOME/.cargo/env"

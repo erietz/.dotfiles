@@ -55,7 +55,7 @@ end
 -- The Basics {{{
 -- Themes define colours, icons, font and wallpapers.
 beautiful.init(gears.filesystem.get_configuration_dir() .. "themes/default/theme.lua")
-beautiful.font = "JetBrains Mono 14"
+beautiful.font = "JetBrains Mono 16"
 
 -- size of notifications containing images
 naughty.config.defaults["icon_size"] = 100
@@ -688,7 +688,6 @@ end
 run_single_instance({
 	"nm-applet",
 	"xfce4-power-manager",
-	"pamac-tray",
 	"clipit",
 	"xautolock -time 10 -locker blurlock",
 	"pa-applet",

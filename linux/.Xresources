@@ -1,7 +1,7 @@
 !increases scale of everything for macbook pro
-Xft.dpi:       192
+/* Xft.dpi:       192 */
 !the number 192 is an integer multiple of 96
-!Xft.dpi:       96
+Xft.dpi:       96
 Xft.antialias: true
 Xft.hinting:   true
 Xft.rgba:      rgb

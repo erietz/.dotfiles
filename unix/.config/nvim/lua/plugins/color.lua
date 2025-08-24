@@ -1,3 +1,12 @@
+local function get_background()
+	local background = vim.env.BACKGROUND or vim.g.background or "dark"
+	if background == "light" then
+		return "light"
+	else
+		return "dark"
+	end
+end
+
 return {
 	{
 		"erietz/set3.nvim",
@@ -20,11 +29,62 @@ return {
 			vim.cmd([[colorscheme gruvbox]])
 		end,
 	},
-	"EdenEast/nightfox.nvim",
+	{
+		"erietz/chill.nvim",
+		name = "chill",
+		lazy = true,
+		priority = 1000,
+		config = function()
+			local background = get_background()
+			require("chill").setup({
+				variant = background, -- 'dark' or 'light'
+				contrast = "normal", -- 'high' or 'normal'
+				transparent = false, -- Enable transparent background
+				italics = true, -- Use italics for comments and certain syntax
+				dim_inactive = false, -- Dim inactive windows
+			})
+			vim.cmd.colorscheme("chill")
+		end,
+	},
+	{
+		"uloco/bluloco.nvim",
+		lazy = false,
+		priority = 1000,
+		dependencies = { "rktjmp/lush.nvim" },
+		config = function()
+			-- your optional config goes here, see below.
+			vim.cmd([[colorscheme bluloco]])
+		end,
+	},
+	{
+		"EdenEast/nightfox.nvim",
+		lazy = true,
+		priority = 1000,
+		config = function()
+			require("nightfox").setup({
+				transparent = true,
+				styles = {
+					comments = "italic",
+					keywords = "bold",
+					functions = "italic,bold",
+					variables = "italic",
+					conditionals = "italic",
+					operators = "bold",
+				},
+			})
+
+			local background = get_background()
+			if background == "light" then
+				vim.cmd([[colorscheme dayfox]])
+			else
+				vim.cmd([[colorscheme nightfox]])
+			end
+		end,
+	},
 	"junegunn/seoul256.vim",
 	{
 		"rebelot/kanagawa.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		opts = {
 			transparent = false,
@@ -85,6 +145,22 @@ return {
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+	},
+	{
+		"ishan9299/nvim-solarized-lua",
+		lazy = true,
+		priority = 1000,
+		config = function()
+			-- vim.g.solarized_italics = 1
+			-- vim.g.solarized_visibility = "high"
+			-- vim.g.solarized_diffmode = "normal"
+			-- vim.g.solarized_termtrans = 1
+			-- vim.g.solarized_borders = 1
+			-- vim.g.solarized_contrast = "high"
+			-- vim.g.solarized_underline = 1
+			vim.opt.background = "light"
+			vim.cmd([[colorscheme solarized]])
+		end,
 	},
 	{
 		"craftzdog/solarized-osaka.nvim",

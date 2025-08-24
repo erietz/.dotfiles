@@ -16,24 +16,30 @@ local theme = {}
 -- NOTE: this is also set in rc.lua since the height of the titlebar seems to
 -- get affected if modified here.
 theme.font = "sans 10"
+-- theme.font          = "JetBrains Mono 16"
 
-theme.bg_normal = "#282828"
-theme.bg_focus = "#504945"
-theme.bg_urgent = "#ff0000"
-theme.bg_minimize = "#444444"
-theme.bg_systray = theme.bg_normal
-theme.accent = "#fe8019"
+-- Backgrounds
+theme.bg_normal     = "#1e2b22"  -- muted deep forest
+theme.bg_focus      = "#2e4433"  -- subtle moss green
+theme.bg_urgent     = "#b33a3a"  -- earthy red for urgency
+theme.bg_minimize   = "#3a3f35"  -- desaturated charcoal
+theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal = "#aaaaaa"
-theme.fg_focus = "#ffffff"
-theme.fg_urgent = "#ffffff"
-theme.fg_minimize = "#ffffff"
+-- Accent
+theme.accent        = "#7fbc7c"  -- soft fern green (used for highlights)
 
-theme.useless_gap = dpi(4)
-theme.border_width = dpi(3)
-theme.border_normal = "#000000"
-theme.border_focus = "#535d6c"
-theme.border_marked = "#91231c"
+-- Foregrounds
+theme.fg_normal     = "#d0e0d0"  -- misty light greenish-gray
+theme.fg_focus      = "#ffffff"  -- crisp white focus text
+theme.fg_urgent     = "#ffffff"
+theme.fg_minimize   = "#cccccc"
+
+-- Borders
+theme.useless_gap   = dpi(4)
+theme.border_width  = dpi(3)
+theme.border_normal = "#141d17"  -- almost black with a green tint
+theme.border_focus  = "#7fbc7c"  -- match accent
+theme.border_marked = "#a1695f"  -- muted bark brown
 
 -- There are other variable sets
 -- overriding the default one when
