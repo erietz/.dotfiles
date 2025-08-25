@@ -1,6 +1,27 @@
 [tools]
+shfmt = "latest"
 stylua = "latest"
 
 [tasks."lint:lua"]
 description = "Lint all lua files"
+run = "stylua --check -a ."
+
+[tasks."lint:sh"]
+description = "Lint all shell files"
+run = """
+for file in $(shfmt -l . 2>&1 | awk -F ':' '{print $1}' | grep -v ".zsh$"); do
+	shfmt -l "$file"
+done
+"""
+
+[tasks."format:lua"]
+description = "Format all lua files"
 run = "stylua -a ."
+
+[tasks."format:sh"]
+description = "Format all shell files"
+run = """
+for file in $(shfmt -l . 2>&1 | awk -F ':' '{print $1}' | grep -v ".zsh$"); do
+	shfmt -w "$file"
+done
+"""

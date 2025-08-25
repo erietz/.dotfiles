@@ -9,8 +9,8 @@ DEST_BRANCH="preprod"
 
 # # Create a pull request
 PR_ID=$(curl -s -X POST -H "Authorization: Bearer $TOKEN" \
-     -H "Content-Type: application/json" \
-     -d '{
+	-H "Content-Type: application/json" \
+	-d '{
            "title": "Automated PR",
            "source": {
                "branch": {"name": "'"$SOURCE_BRANCH"'"}
@@ -20,7 +20,7 @@ PR_ID=$(curl -s -X POST -H "Authorization: Bearer $TOKEN" \
            },
            "close_source_branch": false
        }' \
-     "https://api.bitbucket.org/2.0/repositories/$WORKSPACE/$REPO/pullrequests" | jq -r '.id')
+	"https://api.bitbucket.org/2.0/repositories/$WORKSPACE/$REPO/pullrequests" | jq -r '.id')
 
 echo "Created PR with ID: $PR_ID"
 
@@ -46,8 +46,6 @@ while true; do
 
 	sleep 20
 done
-
-
 
 # Merge the pull request
 curl -X POST -H "Authorization: Bearer $TOKEN" \
