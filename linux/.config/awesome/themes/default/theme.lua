@@ -19,27 +19,27 @@ theme.font = "sans 10"
 -- theme.font          = "JetBrains Mono 16"
 
 -- Backgrounds
-theme.bg_normal     = "#1e2b22"  -- muted deep forest
-theme.bg_focus      = "#2e4433"  -- subtle moss green
-theme.bg_urgent     = "#b33a3a"  -- earthy red for urgency
-theme.bg_minimize   = "#3a3f35"  -- desaturated charcoal
-theme.bg_systray    = theme.bg_normal
+theme.bg_normal = "#1e2b22" -- muted deep forest
+theme.bg_focus = "#2e4433" -- subtle moss green
+theme.bg_urgent = "#b33a3a" -- earthy red for urgency
+theme.bg_minimize = "#3a3f35" -- desaturated charcoal
+theme.bg_systray = theme.bg_normal
 
 -- Accent
-theme.accent        = "#7fbc7c"  -- soft fern green (used for highlights)
+theme.accent = "#7fbc7c" -- soft fern green (used for highlights)
 
 -- Foregrounds
-theme.fg_normal     = "#d0e0d0"  -- misty light greenish-gray
-theme.fg_focus      = "#ffffff"  -- crisp white focus text
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#cccccc"
+theme.fg_normal = "#d0e0d0" -- misty light greenish-gray
+theme.fg_focus = "#ffffff" -- crisp white focus text
+theme.fg_urgent = "#ffffff"
+theme.fg_minimize = "#cccccc"
 
 -- Borders
-theme.useless_gap   = dpi(4)
-theme.border_width  = dpi(3)
-theme.border_normal = "#141d17"  -- almost black with a green tint
-theme.border_focus  = "#7fbc7c"  -- match accent
-theme.border_marked = "#a1695f"  -- muted bark brown
+theme.useless_gap = dpi(4)
+theme.border_width = dpi(3)
+theme.border_normal = "#141d17" -- almost black with a green tint
+theme.border_focus = "#7fbc7c" -- match accent
+theme.border_marked = "#a1695f" -- muted bark brown
 
 -- There are other variable sets
 -- overriding the default one when

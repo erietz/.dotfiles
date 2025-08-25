@@ -1,0 +1,6 @@
+[tools]
+stylua = "latest"
+
+[tasks."lint:lua"]
+description = "Lint all lua files"
+run = "stylua -a ."
