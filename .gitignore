@@ -10,3 +10,5 @@
 **/emacs/elpa
 **/emacs/auto-save-list
 **/*~
+
+**/*fish_variables
