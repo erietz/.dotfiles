@@ -268,7 +268,6 @@ bindkey '^p' _tmux-sessionizer
 # }}}
 
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
-command -v direnv >/dev/null 2>&1 && eval "$(direnv hook zsh)"
 command -v mise >/dev/null 2>&1 && eval "$(mise activate zsh)"
 
 # zprof

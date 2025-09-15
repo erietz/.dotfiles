@@ -48,7 +48,7 @@ return {
 	},
 	{
 		"uloco/bluloco.nvim",
-		lazy = false,
+		lazy = true,
 		priority = 1000,
 		dependencies = { "rktjmp/lush.nvim" },
 		config = function()
@@ -84,12 +84,20 @@ return {
 	"junegunn/seoul256.vim",
 	{
 		"rebelot/kanagawa.nvim",
-		lazy = true,
+		lazy = false,
 		priority = 1000,
 		opts = {
 			transparent = false,
 			dimInactive = true,
 		},
+		config = function()
+			local background = get_background()
+			if background == "light" then
+				vim.cmd([[colorscheme kanagawa-lotus]])
+			else
+				vim.cmd([[colorscheme kanagawa]])
+			end
+		end,
 	},
 	{
 		"phha/zenburn.nvim",
