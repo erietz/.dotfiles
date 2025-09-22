@@ -127,7 +127,16 @@ lspconfig.csharp_ls.setup(lsp_defaults({
 		["textDocument/definition"] = require("csharpls_extended").handler,
 	},
 }))
-lspconfig.texlab.setup(lsp_defaults({}))
+lspconfig.texlab.setup(lsp_defaults({
+	-- settings = {
+	-- 	texlab = {
+	-- 		latexFormatter = "latexindent",
+	-- 		latexindent = {
+	-- 			modifyLineBreaks = true,
+	-- 		},
+	-- 	},
+	-- },
+}))
 
 local null_ls = require("null-ls")
 null_ls.setup({
