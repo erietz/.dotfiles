@@ -24,4 +24,8 @@ if status is-interactive
 	if type -q mise
 		mise activate fish | source
 	end
+
+	if type -q fzf
+		fzf --fish | source
+	end
 end
