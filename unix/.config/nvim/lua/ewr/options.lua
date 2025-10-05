@@ -28,6 +28,12 @@ vim.api.nvim_create_autocmd("FileType", {
 	command = "setlocal expandtab",
 })
 
+vim.api.nvim_create_autocmd("TextYankPost", {
+	callback = function()
+		vim.highlight.on_yank({ higroup = "Visual", timeout = 300 })
+	end,
+})
+
 function UseTabs()
 	vim.cmd("setlocal tabstop=4 shiftwidth=4 noexpandtab")
 end
