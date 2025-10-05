@@ -11,6 +11,14 @@ return {
 	"tpope/vim-surround",
 	"tpope/vim-repeat",
 	"tpope/vim-abolish",
-	"junegunn/vim-easy-align",
+	{
+		"junegunn/vim-easy-align",
+		config = function()
+			local keymap = require("ewr.keymap")
+
+			keymap.nnoremap("ga", "<Plug>(EasyAlign)")
+			keymap.xnoremap("ga", "<Plug>(EasyAlign)")
+		end,
+	},
 	"github/copilot.vim",
 }

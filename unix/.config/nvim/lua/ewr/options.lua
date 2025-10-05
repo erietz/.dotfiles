@@ -34,14 +34,6 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-function UseTabs()
-	vim.cmd("setlocal tabstop=4 shiftwidth=4 noexpandtab")
-end
-
-function UseSpaces()
-	vim.cmd("setlocal tabstop=2 shiftwidth=2 expandtab")
-end
-
 vim.opt.guicursor = "" -- Always use block cursor
 vim.opt.scrolloff = 10 -- Adds ten lines between cursor and edge when scrolling
 vim.opt.colorcolumn = "80,120" -- Vertical column at 80 characters
@@ -52,35 +44,13 @@ vim.opt.incsearch = true -- Move window to search result while typing
 vim.opt.hlsearch = false -- Don't keep highlight after searching
 
 vim.opt.list = true -- Show characters like spaces and tabs in buffer
--- vim.opt.listchars = 'nbsp:¬,tab:»·,trail:·,extends:>' -- TODO make tab more visible
-
--- unicode may be slower
--- vim.opt.showbreak = '↪ '
--- vim.opt.listchars = 'tab:→ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
-
--- ascii only
-vim.opt.listchars = "tab:| ,trail:_,extends:>,precedes:<,nbsp:~"
--- vim.opt.listchars = "tab:..,trail:_,extends:>,precedes:<,nbsp:~"
--- vim.opt.listchars = "tab:..,trail:_,extends:>,precedes:<,nbsp:~"
-
 vim.opt.listchars = {
 	tab = "| ",
-	-- multispace = "_",
-	-- lead = ">",
 	trail = "_",
 	extends = ">",
 	precedes = "<",
 	nbsp = "~",
 }
--- vim.opt.listchars = {
--- 	tab = "..",
--- 	multispace = "_",
--- 	lead = "..",
--- 	trail = "_",
--- 	extends = "..",
--- 	precedes = "<",
--- 	nbsp = "~",
--- }
 
 vim.opt.wildmenu = true -- Show command line completions
 vim.opt.wildmode = "longest:full,full"
