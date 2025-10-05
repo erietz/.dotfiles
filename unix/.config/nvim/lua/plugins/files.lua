@@ -137,12 +137,7 @@ return {
 					return "dart " .. path:absolute()
 				end,
 				c = function()
-					return "gcc "
-						.. path:absolute()
-						.. " -o "
-						.. path:root_absolute()
-						.. " && "
-						.. path:root_absolute()
+					return "gcc " .. path:absolute() .. " -o " .. path:root_absolute() .. " && " .. path:root_absolute()
 				end,
 				rust = function()
 					return "cargo run"

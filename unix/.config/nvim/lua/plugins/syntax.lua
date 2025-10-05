@@ -30,5 +30,4 @@ return {
 		end,
 	},
 	"lukas-reineke/indent-blankline.nvim", -- reading yaml indented 2 spaces...
-
 }

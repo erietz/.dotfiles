@@ -74,7 +74,11 @@ return {
 
 			keymap.nnoremap("<leader>tv", ":TestVisit<CR>", { desc = "Test visit" })
 
-			keymap.nnoremap("<leader>tt", ":TestNearest -strategy=neovim<CR>", { desc = "Test nearest using neovim terminal" })
+			keymap.nnoremap(
+				"<leader>tt",
+				":TestNearest -strategy=neovim<CR>",
+				{ desc = "Test nearest using neovim terminal" }
+			)
 		end,
 	},
 	"tartansandal/vim-compiler-pytest",

@@ -312,7 +312,7 @@ help: ## Print this help message
 
 			luasnip.add_snippets("markdown", {
 				parse_snippet("link", "[${1:Description}](${2:www.url.com})$0"),
-				parse_snippet("img", "![${1:pic alt}](${2:path}${3/.+/ \"/}${3:opt title}${3/.+/\"/})$0"),
+				parse_snippet("img", '![${1:pic alt}](${2:path}${3/.+/ "/}${3:opt title}${3/.+/"/})$0'),
 				parse_snippet(
 					"cb",
 					[[
