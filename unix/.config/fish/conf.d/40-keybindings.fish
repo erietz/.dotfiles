@@ -17,5 +17,7 @@ end
 
 
 bind -M insert \cp tmux_sess
-bind -M insert \cg git_chob
-bind -M insert \cb git_chob_remote
+# bind -M insert \cg git_chob
+# bind -M insert \cb git_chob_remote
+bind -M insert \cg 'commandline -f repaint; git_chob'
+bind -M insert \cb 'commandline -f repaint; git_chob_remote'

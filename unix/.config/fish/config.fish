@@ -29,3 +29,25 @@ if status is-interactive
 		fzf --fish | source
 	end
 end
+
+
+function sp --description "Search in project with ripgrep + fzf + preview, open in nvim"
+    if test (count $argv) -eq 0
+        echo "Usage: sp <search-term>"
+        return 1
+    end
+
+    rg --no-heading --line-number --color=always $argv |
+    fzf --ansi \
+        --delimiter : \
+        --preview 'bat --style=numbers --color=always {1} --line-range {2}:+20' \
+        --preview-window=up:40%:wrap |
+    awk -F: '{print "+"$2" "$1}' |
+    xargs -r nvim
+end
+
+function sf --description "Search files in project with fzf + preview, open in nvim"
+    fd . |
+    fzf --preview 'bat --style=numbers --color=always {} | head -200' |
+    xargs -r nvim
+end
