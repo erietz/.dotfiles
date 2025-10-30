@@ -103,7 +103,17 @@ return {
 			lspconfig.html.setup(lsp_defaults)
 			lspconfig.cssls.setup(lsp_defaults)
 			lspconfig.vuels.setup(lsp_defaults)
-			lspconfig.ts_ls.setup(lsp_defaults)
+			lspconfig.ts_ls.setup(vim.tbl_deep_extend("force", lsp_defaults, {
+				on_attach = function(client, bufnr)
+					on_attach(client, bufnr)
+					keymap.nnoremap("<leader>li", function()
+						vim.lsp.buf.execute_command({
+							command = "_typescript.organizeImports",
+							arguments = { vim.api.nvim_buf_get_name(0) },
+						})
+					end, { desc = "Organize imports" })
+				end
+			}))
 			lspconfig.dartls.setup(lsp_defaults)
 			lspconfig.sqlls.setup(vim.tbl_deep_extend("force", lsp_defaults, {
 				root_dir = function()
