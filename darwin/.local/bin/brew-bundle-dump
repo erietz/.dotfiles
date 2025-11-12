@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-BREWFILE="$HOME/.dotfiles/unix/.config/Brewfile"
+BREWFILE="$HOME/.dotfiles/darwin/.config/Brewfile"
 
 brew bundle dump --file=$BREWFILE

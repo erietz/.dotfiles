@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 OS=$(uname -s)
-BREWFILE="$HOME/.dotfiles/unix/.config/Brewfile"
+BREWFILE="$HOME/.dotfiles/darwin/.config/Brewfile"
 
 main() {
 	stow_it unix
