@@ -51,53 +51,59 @@ return {
 				capabilities = capabilities,
 			}
 
-			vim.lsp.config("lua_ls", vim.tbl_deep_extend("force", lsp_defaults, {
-				settings = {
-					Lua = {
-						diagnostics = {
-							-- Get the language server to recognize the `vim` global
-							globals = { "vim" },
-						},
-						workspace = {
-							-- Make the server aware of Neovim runtime files
-							library = vim.api.nvim_get_runtime_file("", true),
-							checkThirdParty = false,
-						},
-						-- Do not send telemetry data containing a randomized but unique identifier
-						telemetry = {
-							enable = false,
-						},
-					},
-				},
-			}))
-			vim.lsp.enable("lua_ls")
-
-			vim.lsp.config("pylsp", vim.tbl_deep_extend("force", lsp_defaults, {
-				settings = {
-					pylsp = {
-						plugins = {
-							pycodestyle = {
-								maxLineLength = 100,
+			vim.lsp.config(
+				"lua_ls",
+				vim.tbl_deep_extend("force", lsp_defaults, {
+					settings = {
+						Lua = {
+							diagnostics = {
+								-- Get the language server to recognize the `vim` global
+								globals = { "vim" },
+							},
+							workspace = {
+								-- Make the server aware of Neovim runtime files
+								library = vim.api.nvim_get_runtime_file("", true),
+								checkThirdParty = false,
+							},
+							-- Do not send telemetry data containing a randomized but unique identifier
+							telemetry = {
+								enable = false,
 							},
 						},
 					},
-				},
-				on_attach = function(client, bufnr)
-					on_attach(client, bufnr)
+				})
+			)
+			vim.lsp.enable("lua_ls")
 
-					keymap.nnoremap("<leader>dc", function()
-						require("dap-python").test_class()
-					end, { silent = true, desc = "Debugger: debug python test class" })
+			vim.lsp.config(
+				"pylsp",
+				vim.tbl_deep_extend("force", lsp_defaults, {
+					settings = {
+						pylsp = {
+							plugins = {
+								pycodestyle = {
+									maxLineLength = 100,
+								},
+							},
+						},
+					},
+					on_attach = function(client, bufnr)
+						on_attach(client, bufnr)
 
-					keymap.nnoremap("<leader>dm", function()
-						require("dap-python").test_method()
-					end, { silent = true, desc = "Debugger: debug python test method" })
+						keymap.nnoremap("<leader>dc", function()
+							require("dap-python").test_class()
+						end, { silent = true, desc = "Debugger: debug python test class" })
 
-					keymap.vnoremap("<leader>ds", function()
-						require("dap-python").debug_selection({})
-					end, { silent = true, desc = "Debugger: debug python selection" })
-				end,
-			}))
+						keymap.nnoremap("<leader>dm", function()
+							require("dap-python").test_method()
+						end, { silent = true, desc = "Debugger: debug python test method" })
+
+						keymap.vnoremap("<leader>ds", function()
+							require("dap-python").debug_selection({})
+						end, { silent = true, desc = "Debugger: debug python selection" })
+					end,
+				})
+			)
 			vim.lsp.enable("pylsp")
 
 			vim.lsp.config("bashls", lsp_defaults)
@@ -115,53 +121,65 @@ return {
 			vim.lsp.config("vuels", lsp_defaults)
 			vim.lsp.enable("vuels")
 
-			vim.lsp.config("ts_ls", vim.tbl_deep_extend("force", lsp_defaults, {
-				on_attach = function(client, bufnr)
-					on_attach(client, bufnr)
-					keymap.nnoremap("<leader>li", function()
-						vim.lsp.buf.execute_command({
-							command = "_typescript.organizeImports",
-							arguments = { vim.api.nvim_buf_get_name(0) },
-						})
-					end, { desc = "Organize imports" })
-				end,
-			}))
+			vim.lsp.config(
+				"ts_ls",
+				vim.tbl_deep_extend("force", lsp_defaults, {
+					on_attach = function(client, bufnr)
+						on_attach(client, bufnr)
+						keymap.nnoremap("<leader>li", function()
+							vim.lsp.buf.execute_command({
+								command = "_typescript.organizeImports",
+								arguments = { vim.api.nvim_buf_get_name(0) },
+							})
+						end, { desc = "Organize imports" })
+					end,
+				})
+			)
 			vim.lsp.enable("ts_ls")
 
 			vim.lsp.config("dartls", lsp_defaults)
 			vim.lsp.enable("dartls")
 
-			vim.lsp.config("sqlls", vim.tbl_deep_extend("force", lsp_defaults, {
-				root_dir = function()
-					return vim.loop.cwd()
-				end,
-			}))
+			vim.lsp.config(
+				"sqlls",
+				vim.tbl_deep_extend("force", lsp_defaults, {
+					root_dir = function()
+						return vim.loop.cwd()
+					end,
+				})
+			)
 			vim.lsp.enable("sqlls")
 
-			vim.lsp.config("gopls", vim.tbl_deep_extend("force", lsp_defaults, {
-				on_attach = function(client, bufnr)
-					on_attach(client, bufnr)
+			vim.lsp.config(
+				"gopls",
+				vim.tbl_deep_extend("force", lsp_defaults, {
+					on_attach = function(client, bufnr)
+						on_attach(client, bufnr)
 
-					keymap.nnoremap("<leader>dn", function()
-						require("dap-go").debug_test()
-					end, { desc = "Debugger: debug nearest test" })
+						keymap.nnoremap("<leader>dn", function()
+							require("dap-go").debug_test()
+						end, { desc = "Debugger: debug nearest test" })
 
-					keymap.nnoremap("<leader>dl", function()
-						require("dap-go").debug_last_test()
-					end, { desc = "Debugger: debug last test" })
-				end,
-			}))
+						keymap.nnoremap("<leader>dl", function()
+							require("dap-go").debug_last_test()
+						end, { desc = "Debugger: debug last test" })
+					end,
+				})
+			)
 			vim.lsp.enable("gopls")
 
-			vim.lsp.config("csharp_ls", vim.tbl_deep_extend("force", lsp_defaults, {
-				filetypes = { "cs" },
-				root_dir = function(bufnr)
-					return vim.fs.root(bufnr, { "*.sln", "*.csproj", ".git" })
-				end,
-				handlers = {
-					["textDocument/definition"] = require("csharpls_extended").handler,
-				},
-			}))
+			vim.lsp.config(
+				"csharp_ls",
+				vim.tbl_deep_extend("force", lsp_defaults, {
+					filetypes = { "cs" },
+					root_dir = function(bufnr)
+						return vim.fs.root(bufnr, { "*.sln", "*.csproj", ".git" })
+					end,
+					handlers = {
+						["textDocument/definition"] = require("csharpls_extended").handler,
+					},
+				})
+			)
 			vim.lsp.enable("csharp_ls")
 
 			vim.lsp.config("texlab", lsp_defaults)

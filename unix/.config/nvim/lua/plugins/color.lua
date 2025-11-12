@@ -126,5 +126,5 @@ return {
 		},
 		config = true,
 	},
-	{ "EdenEast/nightfox.nvim" } -- lazy
+	{ "EdenEast/nightfox.nvim" }, -- lazy
 }

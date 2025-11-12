@@ -7,14 +7,14 @@ main() {
 	stow_it unix
 
 	case "$OS" in
-		Linux)
-			stow_it linux
-			;;
-		Darwin)
-			stow_it darwin
-			install_homebrew_packages
-			;;
-		*) echo "Unknown os" && exit 1 ;;
+	Linux)
+		stow_it linux
+		;;
+	Darwin)
+		stow_it darwin
+		install_homebrew_packages
+		;;
+	*) echo "Unknown os" && exit 1 ;;
 	esac
 }
 
