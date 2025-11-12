@@ -7,11 +7,11 @@ local priority = 1000
 
 local function is_sunny_outside()
 	local theme = vim.fn.systemlist("defaults read -g AppleInterfaceStyle 2>/dev/null")[1]
-	print(vim.inspect(theme))
 	if theme == "Dark" then
 		return false
 	else
-		return true
+		-- return true
+		return false
 	end
 end
 
@@ -126,4 +126,5 @@ return {
 		},
 		config = true,
 	},
+	{ "EdenEast/nightfox.nvim" } -- lazy
 }
