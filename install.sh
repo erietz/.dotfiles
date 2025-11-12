@@ -23,8 +23,8 @@ stow_it() {
 }
 
 install_homebrew_packages() {
-	echo "🧩 Installing Homebrew if not present..."
 	if ! command -v brew &>/dev/null; then
+		echo "🧩 Homebrew is not install... installing..."
 		/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	fi
 
