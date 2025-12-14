@@ -1,0 +1,10 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "/" ]
+run  = "cd /"
+desc = "Cd to /"
+
+[[mgr.prepend_keymap]]
+on = "!"
+for = "unix"
+run = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
