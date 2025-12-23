@@ -98,7 +98,7 @@ return {
 					end, { silent = true, desc = "Debugger: debug python selection" })
 				end,
 			}))
-			lspconfig.bashls.setup(lsp_defaults)
+			-- lspconfig.bashls.setup(lsp_defaults)
 			lspconfig.clangd.setup(lsp_defaults)
 			lspconfig.html.setup(lsp_defaults)
 			lspconfig.cssls.setup(lsp_defaults)

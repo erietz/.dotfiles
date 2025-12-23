@@ -18,6 +18,7 @@
 	ignore = update-index --assume-unchanged
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
+	unreleased = !bash -c 'comm -23 <(git branch -r --merged origin/develop | sort) <(git branch -r --merged origin/main | sort)'
 [init]
 	defaultBranch = main
 [pull]

@@ -673,6 +673,20 @@ endsnippet
 				-- Additional filtering at the source level
 				sorting = {
 					comparators = {
+						-- Prioritize LSP sources over buffer
+						function(entry1, entry2)
+							local lsp_sources = { nvim_lsp = true, nvim_lsp_signature_help = true }
+							local source1_is_lsp = lsp_sources[entry1.source.name]
+							local source2_is_lsp = lsp_sources[entry2.source.name]
+
+							if source1_is_lsp and not source2_is_lsp then
+								return true
+							elseif not source1_is_lsp and source2_is_lsp then
+								return false
+							end
+							return nil
+						end,
+						-- Filter out completions with spaces
 						function(entry1, entry2)
 							local contains_space = function(e)
 								return e.completion_item.label:match("%s")

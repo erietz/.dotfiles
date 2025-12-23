@@ -190,6 +190,9 @@ automatically-unhide-macos-hidden-apps = false
 	alt-g = 'exec-and-forget perl -i -pe "s/(\s*(inner|outer)\.(horizontal|vertical|left|right|top|bottom)\s*=\s*)[0-9]+/\${1}0/g" ~/.config/aerospace/aerospace.toml && aerospace reload-config'
 	alt-shift-g = 'exec-and-forget perl -i -pe "s/(\s*(inner|outer)\.(horizontal|vertical|left|right|top|bottom)\s*=\s*)[0-9]+/\${1}40/g" ~/.config/aerospace/aerospace.toml && aerospace reload-config'
 
+
+    alt-f = 'layout floating tiling'
+
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 [mode.service.binding]
