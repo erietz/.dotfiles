@@ -10,8 +10,7 @@ local function is_sunny_outside()
 	if theme == "Dark" then
 		return false
 	else
-		-- return true
-		return false
+		return true
 	end
 end
 
@@ -33,6 +32,20 @@ local function get_background()
 end
 
 return {
+	{
+		"junegunn/seoul256.vim",
+		lazy = false,
+		priority = priority,
+		config = function()
+			if get_background() == "light" then
+				vim.g.seoul256_background = 256
+				vim.cmd("colorscheme seoul256-light")
+			else
+				vim.g.seoul256_background = "dark"
+				vim.cmd("colorscheme seoul256")
+			end
+		end,
+	},
 	{
 		"gruvbox-community/gruvbox",
 		lazy = true,
@@ -85,7 +98,7 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		lazy = false,
+		lazy = true,
 		priority = priority,
 		config = function()
 			if get_background() == "light" then

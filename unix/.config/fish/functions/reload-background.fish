@@ -7,7 +7,8 @@ function reload-background
 	if test $BACKGROUND = "light"
 		fish_config theme choose "Tomorrow"
 	else if test $BACKGROUND = "dark"
-		fish_config theme choose "Tomorrow Night"
+		# fish_config theme choose "Tomorrow Night"
+		fish_config theme choose "Tomorrow"
 	end
 
 	# ghostty
