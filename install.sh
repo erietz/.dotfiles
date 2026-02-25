@@ -2,8 +2,24 @@
 
 OS=$(uname -s)
 BREWFILE="$HOME/.dotfiles/darwin/.config/Brewfile"
+INSTALL_PACKAGES=false
+
+
+parse_flags() {
+	while [[ "$1" == -* ]]; do
+		case "$1" in
+		--install-packages)
+			INSTALL_PACKAGES=true
+			shift
+			;;
+		*) echo "Unknown option: $1" && exit 1 ;;
+		esac
+	done
+}
 
 main() {
+	parse_flags "$@"
+
 	stow_it unix
 
 	case "$OS" in
@@ -12,7 +28,9 @@ main() {
 		;;
 	Darwin)
 		stow_it darwin
-		install_homebrew_packages
+		if [ "$INSTALL_PACKAGES" = true ]; then
+			install_packages_darwin
+		fi
 		;;
 	*) echo "Unknown os" && exit 1 ;;
 	esac
