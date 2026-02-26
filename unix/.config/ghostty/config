@@ -1,7 +1,7 @@
 # theme = builtin solarized dark
 
-theme = dark:Kanagawa Wave,light:Seoulbones Light
-# theme = dark:Kanagawa Wave,light:dayfox
+# theme = dark:Kanagawa Wave,light:Seoulbones Light
+theme = dark:Kanagawa Wave,light:dayfox
 # theme = dark:Catppuccin Frappe,light:Catppuccin Latte
 # theme = dark:Catppuccin Frappe,light:Builtin Solarized Light
 # theme = dark:Rose Pine Moon,light:Rose Pine Dawn

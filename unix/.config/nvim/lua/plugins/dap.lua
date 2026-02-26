@@ -157,6 +157,9 @@ return {
 	{
 		"mxsdev/nvim-dap-vscode-js",
 		dependencies = "mfussenegger/nvim-dap",
+		enabled = function()
+			return vim.fn.executable("node") == 1
+		end,
 		config = function()
 			require("dap-vscode-js").setup({
 				-- node_path = "node", -- Path of node executable. Defaults to $NODE_PATH, and then "node"
@@ -273,6 +276,9 @@ return {
 	{
 		"microsoft/vscode-js-debug",
 		lazy = true,
+		enabled = function()
+			return vim.fn.executable("node") == 1
+		end,
 		build = "npm install --legacy-peer-deps && npm run compile",
 		tag = "v1.74.1",
 	},

@@ -107,19 +107,27 @@ return {
 			vim.lsp.enable("pylsp")
 
 			vim.lsp.config("bashls", lsp_defaults)
-			vim.lsp.enable("bashls")
+			if vim.fn.executable("node") == 1 then
+				vim.lsp.enable("bashls")
+			end
 
 			vim.lsp.config("clangd", lsp_defaults)
 			vim.lsp.enable("clangd")
 
 			vim.lsp.config("html", lsp_defaults)
-			vim.lsp.enable("html")
+			if vim.fn.executable("node") == 1 then
+				vim.lsp.enable("html")
+			end
 
 			vim.lsp.config("cssls", lsp_defaults)
-			vim.lsp.enable("cssls")
+			if vim.fn.executable("node") == 1 then
+				vim.lsp.enable("cssls")
+			end
 
 			vim.lsp.config("vuels", lsp_defaults)
-			vim.lsp.enable("vuels")
+			if vim.fn.executable("node") == 1 then
+				vim.lsp.enable("vuels")
+			end
 
 			vim.lsp.config(
 				"ts_ls",
@@ -135,7 +143,9 @@ return {
 					end,
 				})
 			)
-			vim.lsp.enable("ts_ls")
+			if vim.fn.executable("node") == 1 then
+				vim.lsp.enable("ts_ls")
+			end
 
 			vim.lsp.config("dartls", lsp_defaults)
 			vim.lsp.enable("dartls")
@@ -148,7 +158,9 @@ return {
 					end,
 				})
 			)
-			vim.lsp.enable("sqlls")
+			if vim.fn.executable("node") == 1 then
+				vim.lsp.enable("sqlls")
+			end
 
 			vim.lsp.config(
 				"gopls",
