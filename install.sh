@@ -3,31 +3,26 @@
 OS=$(uname -s)
 BREWFILE="$HOME/.dotfiles/darwin/.config/Brewfile"
 INSTALL_PACKAGES=false
-
-
-parse_flags() {
-	while [[ "$1" == -* ]]; do
-		case "$1" in
-		--install-packages)
-			INSTALL_PACKAGES=true
-			shift
-			;;
-		*) echo "Unknown option: $1" && exit 1 ;;
-		esac
-	done
-}
+LINK_GUI_DOTFILES=false
 
 main() {
 	parse_flags "$@"
 
-	stow_it unix
+	stow_verbose unix
 
 	case "$OS" in
 	Linux)
-		stow_it linux
+		if [ -f /etc/arch-release ]; then
+			echo "Arch Linux detected."
+			stow_verbose arch
+		fi
+
+		if [ "$LINK_GUI_PACKAGES" = true ]; then
+			stow_verbose linux
+		fi
 		;;
 	Darwin)
-		stow_it darwin
+		stow_verbose darwin
 		if [ "$INSTALL_PACKAGES" = true ]; then
 			install_packages_darwin
 		fi
@@ -36,7 +31,24 @@ main() {
 	esac
 }
 
-stow_it() {
+parse_flags() {
+	while [[ "$#" -gt 0 ]]; do
+		case "$1" in
+		--install-packages)
+			INSTALL_PACKAGES=true
+			shift
+			;;
+		--gui)
+			LINK_GUI_DOTFILES=true
+			shift
+			;;
+		*) echo "Unknown option: $1" && exit 1 ;;
+		esac
+	done
+}
+
+
+stow_verbose() {
 	stow -v $1
 }
 

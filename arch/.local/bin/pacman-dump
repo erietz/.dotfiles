@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# vim: ft=bash
+
+BASE_DIR="${HOME}/.dotfiles/arch/.config/pacman"
+
+test -d "$BASE_DIR" || {
+	echo "directory does not exist... exiting"
+	exit 1
+}
+
+pacman -Qqen > "${BASE_DIR}/pkglist-official.txt"
+pacman -Qqem > "${BASE_DIR}/pkglist-aur.txt"

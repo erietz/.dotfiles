@@ -1,5 +1,8 @@
 return {
 	{
+		enabled = function()
+			return vim.fn.executable("node") == 1
+		end,
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
@@ -68,10 +71,16 @@ return {
 		end,
 	},
 	{
+		enabled = function()
+			return vim.fn.executable("node") == 1
+		end,
 		"nvim-treesitter/playground",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 	},
 	{
+		enabled = function()
+			return vim.fn.executable("node") == 1
+		end,
 		"nvim-treesitter/nvim-treesitter-context",
 		dependencies = "nvim-treesitter/nvim-treesitter",
 	},
