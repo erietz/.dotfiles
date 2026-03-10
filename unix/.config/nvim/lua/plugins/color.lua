@@ -33,7 +33,8 @@ end
 
 return {
 	{
-		dir = "/Users/ethan/git/isocon.nvim",
+		-- dir = "/Users/ethan/git/isocon.nvim",
+		"erietz/isocon.nvim",
 		lazy = false,
 		priority = priority,
 		config = function()
@@ -50,12 +51,8 @@ return {
 					contrast = 4.5,
 					bright_boost = 1.3,
 					hues = {
-						red = 30,
-						green = 130,
-						-- blue = 240,
-						-- yellow = 80,
+						green = 120,
 						magenta = 310,
-						-- cyan = 180,
 					},
 				})
 				vim.cmd("colorscheme isocon")

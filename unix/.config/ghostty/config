@@ -13,3 +13,6 @@ theme = dark:Kanagawa Wave,light:dayfox
 # font-family = "Monaco"
 font-family = "FiraCode Nerd Font Mono"
 # font-family = "JetBrainsMono Nerd Font Mono"
+
+background-opacity = 0.9
+background-blur-radius = 50
