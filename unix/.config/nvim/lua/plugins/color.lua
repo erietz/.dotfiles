@@ -33,8 +33,38 @@ end
 
 return {
 	{
-		"junegunn/seoul256.vim",
+		dir = "/Users/ethan/git/isocon.nvim",
 		lazy = false,
+		priority = priority,
+		config = function()
+			if get_background() == "light" then
+				require("isocon").setup({
+					background = "#fdf6e3",
+					contrast = 3.0,
+					bright_boost = 1.2,
+				})
+				vim.cmd("colorscheme isocon")
+			else
+				require("isocon").setup({
+					background = "#373945",
+					contrast = 4.5,
+					bright_boost = 1.3,
+					hues = {
+						red = 30,
+						green = 130,
+						-- blue = 240,
+						-- yellow = 80,
+						magenta = 310,
+						-- cyan = 180,
+					},
+				})
+				vim.cmd("colorscheme isocon")
+			end
+		end,
+	},
+	{
+		"junegunn/seoul256.vim",
+		lazy = true,
 		priority = priority,
 		config = function()
 			if get_background() == "light" then
