@@ -33,7 +33,8 @@ end
 
 return {
 	{
-		dir = "/Users/ethan/git/isocon.nvim",
+		-- dir = "/Users/ethan/git/isocon.nvim",
+		"erietz/isocon.nvim",
 		lazy = false,
 		priority = priority,
 		config = function()
