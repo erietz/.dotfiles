@@ -4,9 +4,9 @@ function reload-background
 	tmux source ~/.config/tmux/tmux.conf
 
 	# fish
-	if test $BACKGROUND = "light"
+	if test "$BACKGROUND" = "light"
 		fish_config theme choose "Tomorrow"
-	else if test $BACKGROUND = "dark"
+	else if test "$BACKGROUND" = "dark"
 		# fish_config theme choose "Tomorrow Night"
 		fish_config theme choose "Tomorrow"
 	end

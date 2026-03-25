@@ -42,20 +42,20 @@ return {
 					background = "#fdf6e3",
 					contrast = 3.0,
 					bright_boost = 1.2,
+					hues = {
+						green = 150,
+						magenta = 305,
+					},
 				})
 				vim.cmd("colorscheme isocon")
 			else
 				require("isocon").setup({
-					background = "#373945",
-					contrast = 4.5,
+					background = "#282c34",
+					contrast = 5.0,
 					bright_boost = 1.3,
 					hues = {
-						red = 30,
-						green = 130,
-						-- blue = 240,
-						-- yellow = 80,
-						magenta = 310,
-						-- cyan = 180,
+						green = 150,
+						magenta = 305,
 					},
 				})
 				vim.cmd("colorscheme isocon")
