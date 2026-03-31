@@ -32,3 +32,4 @@ abbr -a rcp 'rsync --progress --verbose --recursive'
 abbr -a sl 'ls'
 abbr -a l 'eza -l'
 abbr -a vim 'nvim'
+alias nvim-old "NVIM_APPNAME=nvim-old nvim"

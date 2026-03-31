@@ -33,7 +33,7 @@ return {
 					"javascript",
 					"jsdoc",
 					"json",
-					"latex",
+					-- "latex",
 					"lua",
 					"make",
 					-- "org",
