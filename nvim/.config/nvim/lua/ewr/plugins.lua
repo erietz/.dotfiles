@@ -108,3 +108,6 @@ require("blink.cmp").setup({
 		documentation = { auto_show = true },
 	},
 })
+
+vim.pack.add({ github.."stevearc/oil.nvim" })
+require("oil").setup()

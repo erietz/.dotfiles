@@ -15,7 +15,7 @@ vim.keymap.set("t", "<localleader><localleader>", [[<C-\><C-n><C-^>l]], { silent
 -- Toggle quickfix
 vim.keymap.set("n", "<leader>q", ":copen<CR>")
 vim.keymap.set("n", "<leader>w", ":lopen<CR>") -- "window specific quickfix
-vim.keymap.set("n", "<leader>c", ":cclose<bar>lclose<bar>TerminatorOutputBufferClose<CR>")
+vim.keymap.set("n", "<leader>c", ":cclose<bar>lclose<CR>")
 
 -- Yank to clipboard
 if vim.fn.has("mac") == 1 then

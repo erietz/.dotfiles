@@ -40,6 +40,10 @@
       "rev": "d7462543c9e366c0d196c7f67a945eaaf5d99414",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
     },
+    "oil.nvim": {
+      "rev": "0fcc83805ad11cf714a949c98c605ed717e0b83e",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
     "vim-fugitive": {
       "rev": "3b753cf8c6a4dcde6edee8827d464ba9b8c4a6f0",
       "src": "https://github.com/tpope/vim-fugitive"
