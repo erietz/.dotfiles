@@ -1,7 +1,7 @@
 {
   "plugins": {
     "blink.cmp": {
-      "rev": "ba9601b77e721d53d66e1486a30a05c6311cf535",
+      "rev": "302c8f859f843535b56e5542cede8318e2b6016e",
       "src": "https://github.com/saghen/blink.cmp"
     },
     "copilot.vim": {

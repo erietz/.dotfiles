@@ -97,7 +97,33 @@ vim.api.nvim_create_autocmd('FileType', {
 vim.pack.add({ github.."neovim/nvim-lspconfig" })
 vim.pack.add({ github.."github/copilot.vim" })
 
-vim.pack.add({ github.."saghen/blink.cmp" })
+vim.api.nvim_create_autocmd("PackChanged", {
+  callback = function(ev)
+    local spec = ev.data.spec
+    local kind = ev.data.kind
+    local path = ev.data.path
+
+    if spec.name == "blink.cmp" and (kind == "install" or kind == "update") then
+      vim.notify("Building blink.cmp (cargo build --release)...")
+
+      vim.system(
+        { "cargo", "build", "--release" },
+        { cwd = path },
+        function(obj)
+          if obj.code == 0 then
+            vim.notify("blink.cmp build complete")
+          else
+            vim.notify("blink.cmp build failed", vim.log.levels.ERROR)
+          end
+        end
+      )
+    end
+  end,
+})
+
+vim.pack.add({
+	{ src = github.."saghen/blink.cmp", name = "blink.cmp" },
+})
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
 	sources = {
