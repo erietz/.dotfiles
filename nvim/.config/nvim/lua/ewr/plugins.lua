@@ -95,3 +95,4 @@ vim.api.nvim_create_autocmd('FileType', {
 
 
 vim.pack.add({ github.."neovim/nvim-lspconfig" })
+vim.pack.add({ github.."github/copilot.vim" })

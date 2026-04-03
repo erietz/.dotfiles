@@ -27,6 +27,75 @@ vim.lsp.config("lua_ls", {
 })
 vim.lsp.enable("lua_ls")
 
+vim.lsp.config("bashls", {
+	cmd = "bash-language-server",
+})
+vim.lsp.enable("bashls")
+
+vim.lsp.config("clangd", {
+	cmd = "clangd",
+})
+vim.lsp.enable("clangd")
+
+vim.lsp.config("html", {
+	cmd = "html-languageserver",
+})
+vim.lsp.enable("html")
+
+vim.lsp.config("cssls", {
+	cmd = "css-languageserver",
+})
+vim.lsp.enable("cssls")
+
+vim.lsp.config("vuels", {
+	cmd = "vls",
+})
+vim.lsp.enable("vuels")
+
+vim.lsp.config("ts_ls", {
+	cmd = "typescript-language-server",
+})
+vim.lsp.enable("ts_ls")
+
+vim.lsp.config("dartls", {
+	cmd = "dart_language_server",
+})
+vim.lsp.enable("dartls")
+
+vim.lsp.config("sqlls", {
+	cmd = "sql-language-server",
+})
+vim.lsp.enable("sqlls")
+
+vim.lsp.config("texlab", {
+	cmd = "texlab",
+})
+vim.lsp.enable("texlab")
+
+vim.lsp.config("jsonls", {
+	cmd = "json-languageserver",
+})
+vim.lsp.enable("jsonls")
+
+vim.lsp.config("yamlls", {
+	cmd = "yaml-language-server",
+})
+vim.lsp.enable("yamlls")
+
+vim.lsp.config("gopls", {
+	cmd = "gopls",
+})
+vim.lsp.enable("gopls")
+
+vim.lsp.config("rust_analyzer", {
+	cmd = "rust-analyzer",
+})
+vim.lsp.enable("rust_analyzer")
+
+vim.lsp.config("pyright", {
+	cmd = "pyright-langserver",
+})
+vim.lsp.enable("pyright")
 
 vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
