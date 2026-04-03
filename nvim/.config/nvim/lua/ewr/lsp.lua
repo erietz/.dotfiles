@@ -1,3 +1,7 @@
+vim.lsp.config("*", {
+	capabilities = require("blink.cmp").get_lsp_capabilities({}, true),
+})
+
 vim.lsp.config("lua_ls", {
 	cmd = { "lua-language-server" },
 	filetypes = { "lua" },
@@ -28,72 +32,74 @@ vim.lsp.config("lua_ls", {
 vim.lsp.enable("lua_ls")
 
 vim.lsp.config("bashls", {
-	cmd = "bash-language-server",
+	cmd = { "bash-language-server", "start" },
 })
 vim.lsp.enable("bashls")
 
 vim.lsp.config("clangd", {
-	cmd = "clangd",
+	cmd = { "clangd" },
 })
 vim.lsp.enable("clangd")
 
 vim.lsp.config("html", {
-	cmd = "html-languageserver",
+	cmd = { "html-languageserver", "--stdio" },
 })
 vim.lsp.enable("html")
 
 vim.lsp.config("cssls", {
-	cmd = "css-languageserver",
+	cmd = { "css-languageserver", "--stdio" },
 })
 vim.lsp.enable("cssls")
 
 vim.lsp.config("vuels", {
-	cmd = "vls",
+	cmd = { "vls" },
 })
 vim.lsp.enable("vuels")
 
 vim.lsp.config("ts_ls", {
-	cmd = "typescript-language-server",
+	cmd = { "typescript-language-server", "--stdio" },
+	root_markers = { "package.json" },
+	filetypes = { 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' },
 })
 vim.lsp.enable("ts_ls")
 
 vim.lsp.config("dartls", {
-	cmd = "dart_language_server",
+	cmd = { "dart", "language-server", "--protocol=lsp" },
 })
 vim.lsp.enable("dartls")
 
 vim.lsp.config("sqlls", {
-	cmd = "sql-language-server",
+	cmd = { "sql-language-server", "up", "--method", "stdio" },
 })
 vim.lsp.enable("sqlls")
 
 vim.lsp.config("texlab", {
-	cmd = "texlab",
+	cmd = { "texlab" },
 })
 vim.lsp.enable("texlab")
 
 vim.lsp.config("jsonls", {
-	cmd = "json-languageserver",
+	cmd = { "json-languageserver", "--stdio" },
 })
 vim.lsp.enable("jsonls")
 
 vim.lsp.config("yamlls", {
-	cmd = "yaml-language-server",
+	cmd = { "yaml-language-server", "--stdio" },
 })
 vim.lsp.enable("yamlls")
 
 vim.lsp.config("gopls", {
-	cmd = "gopls",
+	cmd = { "gopls" },
 })
 vim.lsp.enable("gopls")
 
 vim.lsp.config("rust_analyzer", {
-	cmd = "rust-analyzer",
+	cmd = { "rust-analyzer" },
 })
 vim.lsp.enable("rust_analyzer")
 
 vim.lsp.config("pyright", {
-	cmd = "pyright-langserver",
+	cmd = { "pyright-langserver", "--stdio" },
 })
 vim.lsp.enable("pyright")
 
@@ -105,10 +111,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	if client == nil then
 		return
 	end
-
-    vim.lsp.completion.enable(true, client.id, bufnr, {
-      autotrigger = true,
-    })
 
 	vim.keymap.set("i", "<C-k>", vim.lsp.buf.hover)
 	vim.keymap.set("n", "<C-k>", vim.lsp.buf.hover)
