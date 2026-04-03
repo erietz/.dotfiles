@@ -43,12 +43,12 @@ vim.opt.listchars = {
 	nbsp = "~",
 }
 
- -- Autocomplete menu
+-- Autocomplete menu
 vim.opt.completeopt = {
 	"menu", -- Show the popup menu when there are multiple matches
 	"menuone", -- Show the popup even if there’s only one result
 	"noinsert", -- Don’t automatically insert the first match
-	"noselect" -- Don’t pre-select any item in the menu
+	"noselect", -- Don’t pre-select any item in the menu
 }
 vim.opt.shortmess:append("c") -- suppress messages like "match 1 of 5"
 vim.opt.wildmenu = true -- Show command line completions
@@ -69,7 +69,6 @@ vim.opt.formatoptions = vim.opt.formatoptions
 	+ "o" -- Insert comment after pressing o or O
 	+ "q" -- Allow formatting of comments with "gq"
 	+ "n" -- Recognize numbered lists (markdown for example)
-
 
 -- vim.opt.cmdheight = 2       -- more space for displaying messages
 -- vim.opt.updatetime = 300 -- better performance

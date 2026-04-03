@@ -1,11 +1,11 @@
-local github = 'https://github.com/'
+local github = "https://github.com/"
 
 vim.pack.add({
-	{ src = github.."tpope/vim-fugitive" },
-	{ src = github.."lewis6991/gitsigns.nvim"},
+	{ src = github .. "tpope/vim-fugitive" },
+	{ src = github .. "lewis6991/gitsigns.nvim" },
 })
 
-vim.pack.add({ github.."erietz/isocon.nvim" })
+vim.pack.add({ github .. "erietz/isocon.nvim" })
 local background = vim.env.BACKGROUND or vim.g.background
 if background == "light" then
 	require("isocon").setup({
@@ -32,26 +32,28 @@ else
 end
 
 vim.pack.add({
-	{ src = github.."nvim-lualine/lualine.nvim"},
-	{ src = github.."nvim-tree/nvim-web-devicons"}
+	{ src = github .. "nvim-lualine/lualine.nvim" },
+	{ src = github .. "nvim-tree/nvim-web-devicons" },
 })
 require("lualine").setup()
 
-vim.pack.add({ github.."ibhagwan/fzf-lua"})
+vim.pack.add({ github .. "ibhagwan/fzf-lua" })
 local fzf = require("fzf-lua")
-vim.keymap.set('n', '<leader>ff', fzf.files)
-vim.keymap.set('n', '<leader><Tab>', fzf.buffers)
-vim.keymap.set('n', '<c-p>', fzf.git_files)
-vim.keymap.set('n', '<leader>fg', fzf.live_grep)
-vim.keymap.set('n', '<leader>fi', fzf.builtin)
-vim.keymap.set('n', '<leader>.', function() fzf.files({ cwd = vim.env.HOME .. "/.dotfiles/" }) end)
+vim.keymap.set("n", "<leader>ff", fzf.files)
+vim.keymap.set("n", "<leader><Tab>", fzf.buffers)
+vim.keymap.set("n", "<c-p>", fzf.git_files)
+vim.keymap.set("n", "<leader>fg", fzf.live_grep)
+vim.keymap.set("n", "<leader>fi", fzf.builtin)
+vim.keymap.set("n", "<leader>.", function()
+	fzf.files({ cwd = vim.env.HOME .. "/.dotfiles/" })
+end)
 
-vim.pack.add({ github.."nvim-treesitter/nvim-treesitter" })
+vim.pack.add({ github .. "nvim-treesitter/nvim-treesitter" })
 
-require('nvim-treesitter').setup {
-  -- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
-  install_dir = vim.fn.stdpath('data') .. '/site'
-}
+require("nvim-treesitter").setup({
+	-- Directory to install parsers and queries to (prepended to `runtimepath` to have priority)
+	install_dir = vim.fn.stdpath("data") .. "/site",
+})
 
 local ts_languages = {
 	"bash",
@@ -83,46 +85,40 @@ local ts_languages = {
 }
 
 require("nvim-treesitter").install(ts_languages)
-vim.api.nvim_create_autocmd('FileType', {
+vim.api.nvim_create_autocmd("FileType", {
 	pattern = ts_languages,
 	callback = function()
 		vim.treesitter.start()
-		vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-		vim.wo[0][0].foldmethod = 'expr'
+		vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.wo[0][0].foldmethod = "expr"
 	end,
 })
 
-
-
-vim.pack.add({ github.."neovim/nvim-lspconfig" })
-vim.pack.add({ github.."github/copilot.vim" })
+vim.pack.add({ github .. "neovim/nvim-lspconfig" })
+vim.pack.add({ github .. "github/copilot.vim" })
 
 vim.api.nvim_create_autocmd("PackChanged", {
-  callback = function(ev)
-    local spec = ev.data.spec
-    local kind = ev.data.kind
-    local path = ev.data.path
+	callback = function(ev)
+		local spec = ev.data.spec
+		local kind = ev.data.kind
+		local path = ev.data.path
 
-    if spec.name == "blink.cmp" and (kind == "install" or kind == "update") then
-      vim.notify("Building blink.cmp (cargo build --release)...")
+		if spec.name == "blink.cmp" and (kind == "install" or kind == "update") then
+			vim.notify("Building blink.cmp (cargo build --release)...")
 
-      vim.system(
-        { "cargo", "build", "--release" },
-        { cwd = path },
-        function(obj)
-          if obj.code == 0 then
-            vim.notify("blink.cmp build complete")
-          else
-            vim.notify("blink.cmp build failed", vim.log.levels.ERROR)
-          end
-        end
-      )
-    end
-  end,
+			vim.system({ "cargo", "build", "--release" }, { cwd = path }, function(obj)
+				if obj.code == 0 then
+					vim.notify("blink.cmp build complete")
+				else
+					vim.notify("blink.cmp build failed", vim.log.levels.ERROR)
+				end
+			end)
+		end
+	end,
 })
 
 vim.pack.add({
-	{ src = github.."saghen/blink.cmp", name = "blink.cmp" },
+	{ src = github .. "saghen/blink.cmp", name = "blink.cmp" },
 })
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
@@ -135,5 +131,5 @@ require("blink.cmp").setup({
 	},
 })
 
-vim.pack.add({ github.."stevearc/oil.nvim" })
+vim.pack.add({ github .. "stevearc/oil.nvim" })
 require("oil").setup()

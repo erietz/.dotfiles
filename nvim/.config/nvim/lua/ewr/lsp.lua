@@ -59,7 +59,7 @@ vim.lsp.enable("vuels")
 vim.lsp.config("ts_ls", {
 	cmd = { "typescript-language-server", "--stdio" },
 	root_markers = { "package.json" },
-	filetypes = { 'typescript', 'javascript', 'typescriptreact', 'javascriptreact' },
+	filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
 })
 vim.lsp.enable("ts_ls")
 
@@ -104,43 +104,42 @@ vim.lsp.config("pyright", {
 vim.lsp.enable("pyright")
 
 vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(args)
-    local client = vim.lsp.get_client_by_id(args.data.client_id)
-    local bufnr = args.buf
+	callback = function(args)
+		local client = vim.lsp.get_client_by_id(args.data.client_id)
+		local bufnr = args.buf
 
-	if client == nil then
-		return
-	end
+		if client == nil then
+			return
+		end
 
-	vim.keymap.set("i", "<C-k>", vim.lsp.buf.hover)
-	vim.keymap.set("n", "<C-k>", vim.lsp.buf.hover)
+		vim.keymap.set("i", "<C-k>", vim.lsp.buf.hover)
+		vim.keymap.set("n", "<C-k>", vim.lsp.buf.hover)
 
+		local bufopts = { silent = true, buffer = bufnr }
+		vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+		vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+		vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
+		vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+		vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, bufopts)
+		vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help, bufopts)
+		vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, bufopts)
+		vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
+		vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
+		vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, bufopts)
+		vim.keymap.set("n", "<leader>wl", function()
+			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+		end, bufopts)
+		vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, bufopts)
+		vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, bufopts)
+		vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, bufopts)
+		vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, bufopts)
 
-	local bufopts = { silent = true, buffer = bufnr }
-	vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
-	vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
-	vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
-	vim.keymap.set("n", "<leader>ls", vim.lsp.buf.signature_help, bufopts)
-	vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help, bufopts)
-	vim.keymap.set("n", "<leader>lh", vim.lsp.buf.hover, bufopts)
-	vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, bufopts)
-	vim.keymap.set("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, bufopts)
-	vim.keymap.set("n", "<leader>ws", vim.lsp.buf.workspace_symbol, bufopts)
-	vim.keymap.set("n", "<leader>wl", function()
-		print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
-	end, bufopts)
-	vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, bufopts)
-	vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, bufopts)
-	vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, bufopts)
-	vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, bufopts)
-
-	vim.keymap.set("n", "<leader>ld", function()
-		vim.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics())
-	end, { silent = true })
-	-- vim.keymap.set("n", '<leader>ld', function() vim.lsp.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics()) end, { silent = true })
-	-- vim.keymap.set("n", "[d", vim.lsp.diagnostic.goto_prev, { silent = true })
-	-- vim.keymap.set("n", "]d", vim.lsp.diagnostic.goto_next, { silent = true })
-	vim.keymap.set("n", "<leader>ll", vim.diagnostic.setloclist, { silent = true })
-  end,
+		vim.keymap.set("n", "<leader>ld", function()
+			vim.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics())
+		end, { silent = true })
+		-- vim.keymap.set("n", '<leader>ld', function() vim.lsp.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics()) end, { silent = true })
+		-- vim.keymap.set("n", "[d", vim.lsp.diagnostic.goto_prev, { silent = true })
+		-- vim.keymap.set("n", "]d", vim.lsp.diagnostic.goto_next, { silent = true })
+		vim.keymap.set("n", "<leader>ll", vim.diagnostic.setloclist, { silent = true })
+	end,
 })
