@@ -41,6 +41,7 @@ vim.lsp.config("clangd", {
 })
 vim.lsp.enable("clangd")
 
+-- pnpm add -g vscode-langservers-extracted
 vim.lsp.config("html", {
 	cmd = { "html-languageserver", "--stdio" },
 })
@@ -56,6 +57,7 @@ vim.lsp.config("vuels", {
 })
 vim.lsp.enable("vuels")
 
+-- pnpm add -g typescript-language-server
 vim.lsp.config("ts_ls", {
 	cmd = { "typescript-language-server", "--stdio" },
 	root_markers = { "package.json" },
@@ -78,6 +80,7 @@ vim.lsp.config("texlab", {
 })
 vim.lsp.enable("texlab")
 
+-- pnpm add -g vscode-langservers-extracted
 vim.lsp.config("jsonls", {
 	cmd = { "json-languageserver", "--stdio" },
 })
@@ -102,6 +105,25 @@ vim.lsp.config("pyright", {
 	cmd = { "pyright-langserver", "--stdio" },
 })
 vim.lsp.enable("pyright")
+
+vim.lsp.config("eslint", {
+	cmd = { "vscode-eslint-language-server", "--stdio" },
+	filetypes = { "javascript", "javascriptreact", "javascript.jsx",
+		"typescript", "typescriptreact", "typescript.tsx", "vue" },
+	root_markers = { ".eslintrc", ".eslintrc.js", ".eslintrc.json",
+		".eslintrc.cjs", "eslint.config.js", "eslint.config.mjs",
+		"package.json" },
+	settings = {
+		validate = "on",
+		packageManager = "pnpm",
+		format = false,
+		codeAction = {
+			disableRuleComment = { enable = true },
+			showDocumentation = { enable = true },
+		},
+	},
+})
+vim.lsp.enable("eslint")
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	callback = function(args)
@@ -132,7 +154,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>lt", vim.lsp.buf.type_definition, bufopts)
 		vim.keymap.set("n", "<leader>lr", vim.lsp.buf.rename, bufopts)
 		vim.keymap.set("n", "<leader>la", vim.lsp.buf.code_action, bufopts)
-		vim.keymap.set("n", "<leader>lf", vim.lsp.buf.format, bufopts)
+		vim.keymap.set("n", "<leader>lf", function()
+			require("conform").format({ async = true, lsp_fallback = true })
+		end, bufopts)
 
 		vim.keymap.set("n", "<leader>ld", function()
 			vim.diagnostic.setqflist(vim.lsp.diagnostic.get_line_diagnostics())

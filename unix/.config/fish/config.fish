@@ -51,3 +51,10 @@ function sf --description "Search files in project with fzf + preview, open in n
     fzf --preview 'bat --style=numbers --color=always {} | head -200' |
     xargs -r nvim
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/ethan/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

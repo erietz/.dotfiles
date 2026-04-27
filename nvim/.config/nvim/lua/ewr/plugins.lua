@@ -7,6 +7,16 @@ vim.pack.add({
 
 vim.pack.add({ github .. "erietz/isocon.nvim" })
 local background = vim.env.BACKGROUND or vim.g.background
+
+local function is_dark()
+	local theme = vim.fn.systemlist("defaults read -g AppleInterfaceStyle 2>/dev/null")[1]
+	if theme == "Dark" then
+		return true
+	end
+	return false
+end
+
+local background = vim.env.BACKGROUND or vim.g.background or (is_dark() and "dark" or "light")
 if background == "light" then
 	require("isocon").setup({
 		background = "#fdf6e3",
@@ -35,7 +45,7 @@ vim.pack.add({
 	{ src = github .. "nvim-lualine/lualine.nvim" },
 	{ src = github .. "nvim-tree/nvim-web-devicons" },
 })
-require("lualine").setup()
+require("lualine").setup({})
 
 vim.pack.add({ github .. "ibhagwan/fzf-lua" })
 local fzf = require("fzf-lua")
@@ -120,6 +130,10 @@ vim.api.nvim_create_autocmd("PackChanged", {
 vim.pack.add({
 	{ src = github .. "saghen/blink.cmp", name = "blink.cmp" },
 })
+vim.pack.add({ github .. "neovim/nvim-lspconfig" })
+vim.pack.add({ github .. "github/copilot.vim" })
+
+vim.pack.add({ github .. "saghen/blink.cmp" })
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
 	sources = {
@@ -133,3 +147,23 @@ require("blink.cmp").setup({
 
 vim.pack.add({ github .. "stevearc/oil.nvim" })
 require("oil").setup()
+
+vim.pack.add({ github .. "stevearc/conform.nvim" })
+require("conform").setup({
+	formatters_by_ft = {
+		javascript = { "prettier" },
+		javascriptreact = { "prettier" },
+		typescript = { "prettier" },
+		typescriptreact = { "prettier" },
+		vue = { "prettier" },
+		css = { "prettier" },
+		html = { "prettier" },
+		json = { "prettier" },
+		yaml = { "prettier" },
+		markdown = { "prettier" },
+	},
+	format_on_save = {
+		timeout_ms = 500,
+		lsp_fallback = true,
+	},
+})
