@@ -49,7 +49,6 @@ parse_flags() {
 	done
 }
 
-
 stow_verbose() {
 	stow -v $1
 }

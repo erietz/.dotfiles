@@ -106,13 +106,31 @@ vim.lsp.config("pyright", {
 })
 vim.lsp.enable("pyright")
 
+vim.lsp.enable("zls")
+vim.lsp.config("zls", {
+	cmd = { "zls" },
+})
+
 vim.lsp.config("eslint", {
 	cmd = { "vscode-eslint-language-server", "--stdio" },
-	filetypes = { "javascript", "javascriptreact", "javascript.jsx",
-		"typescript", "typescriptreact", "typescript.tsx", "vue" },
-	root_markers = { ".eslintrc", ".eslintrc.js", ".eslintrc.json",
-		".eslintrc.cjs", "eslint.config.js", "eslint.config.mjs",
-		"package.json" },
+	filetypes = {
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"vue",
+	},
+	root_markers = {
+		".eslintrc",
+		".eslintrc.js",
+		".eslintrc.json",
+		".eslintrc.cjs",
+		"eslint.config.js",
+		"eslint.config.mjs",
+		"package.json",
+	},
 	settings = {
 		validate = "on",
 		packageManager = "pnpm",

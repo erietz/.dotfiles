@@ -1,6 +1,6 @@
 [user]
 	email = ewrietz@gmail.com
-	name = erietz
+	name = Ethan Rietz
 [alias]
 	su = !git branch --set-upstream-to="origin/$(git branch --show-current)"
 	st = status
@@ -19,6 +19,8 @@
 	unignore = update-index --no-assume-unchanged
 	ignored = !git ls-files -v | grep "^[[:lower:]]"
 	unreleased = !bash -c 'comm -23 <(git branch -r --merged origin/develop | sort) <(git branch -r --merged origin/main | sort)'
+	prune-merged = "!git branch --merged main | grep -vE '^\\*|^\\s*(main|master)\\s*$' | xargs -n1 git branch -d"
+	prune-stale = "!git fetch --prune && git branch -vv | awk '/: gone]/{print $1}' | xargs -n1 git branch -d"
 [init]
 	defaultBranch = main
 [pull]

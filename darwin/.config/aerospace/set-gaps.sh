@@ -6,8 +6,8 @@
 set -euo pipefail
 
 if [[ $# -ne 4 ]]; then
-    echo "Usage: $0 <inner-h> <inner-v> <outer-h> <outer-v>" >&2
-    exit 1
+	echo "Usage: $0 <inner-h> <inner-v> <outer-h> <outer-v>" >&2
+	exit 1
 fi
 
 config="$HOME/.config/aerospace/aerospace.toml"
@@ -18,13 +18,13 @@ tmp=$(mktemp)
 trap 'rm -f "$tmp"' EXIT
 
 INNER_H="$1" INNER_V="$2" OUTER_H="$3" OUTER_V="$4" \
-perl -pe '
+	perl -pe '
     s/^(\s*inner\.horizontal\s*=\s*)\d+/$1$ENV{INNER_H}/;
     s/^(\s*inner\.vertical\s*=\s*)\d+/$1$ENV{INNER_V}/;
     s/^(\s*outer\.(left|right)\s*=\s*)\d+/$1$ENV{OUTER_H}/;
     s/^(\s*outer\.(top|bottom)\s*=\s*)\d+/$1$ENV{OUTER_V}/;
-' "$config" > "$tmp"
+' "$config" >"$tmp"
 
-cat "$tmp" > "$config"
+cat "$tmp" >"$config"
 
 aerospace reload-config

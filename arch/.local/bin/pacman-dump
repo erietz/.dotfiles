@@ -9,5 +9,5 @@ test -d "$BASE_DIR" || {
 	exit 1
 }
 
-pacman -Qqen > "${BASE_DIR}/pkglist-official.txt"
-pacman -Qqem > "${BASE_DIR}/pkglist-aur.txt"
+pacman -Qqen >"${BASE_DIR}/pkglist-official.txt"
+pacman -Qqem >"${BASE_DIR}/pkglist-aur.txt"

@@ -5,6 +5,9 @@ vim.pack.add({
 	{ src = github .. "lewis6991/gitsigns.nvim" },
 })
 
+vim.pack.add({ github .. "tpope/vim-surround" })
+vim.pack.add({ github .. "tpope/vim-repeat" })
+
 vim.pack.add({ github .. "erietz/isocon.nvim" })
 local background = vim.env.BACKGROUND or vim.g.background
 
@@ -167,3 +170,6 @@ require("conform").setup({
 		lsp_fallback = true,
 	},
 })
+
+vim.pack.add({ github .. "brenoprata10/nvim-highlight-colors" })
+require("nvim-highlight-colors").setup({})
