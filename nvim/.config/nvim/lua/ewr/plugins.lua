@@ -111,7 +111,7 @@ vim.pack.add({ github .. "neovim/nvim-lspconfig" })
 vim.pack.add({ github .. "github/copilot.vim" })
 
 vim.pack.add({
-  { src = github .. "saghen/blink.cmp", name = "blink.cmp",version='v1.10.2' },
+	{ src = github .. "saghen/blink.cmp", name = "blink.cmp", version = "v1.10.2" },
 })
 require("blink.cmp").setup({
 	keymap = { preset = "default" },
@@ -126,7 +126,6 @@ require("blink.cmp").setup({
 
 vim.pack.add({ github .. "neovim/nvim-lspconfig" })
 vim.pack.add({ github .. "github/copilot.vim" })
-
 
 vim.pack.add({ github .. "stevearc/oil.nvim" })
 require("oil").setup()
