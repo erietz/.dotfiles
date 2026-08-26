@@ -15,3 +15,5 @@
 **/*.local.fish
 
 **/*ipython/
+**/*mise.local.toml
+**/*config.local.toml
