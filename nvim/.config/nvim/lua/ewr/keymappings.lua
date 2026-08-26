@@ -66,16 +66,6 @@ vim.keymap.set("n", "<c-y>", "<c-d>")
 -- zoom in on dapui buffer in new tab
 vim.keymap.set("n", "<c-t>", ":tabnew %<CR>")
 
--- Scroll split emacs style
-vim.keymap.set("n", "<c-m-f>", "<c-w><c-w><c-d><c-w><c-w>")
-vim.keymap.set("n", "<c-m-b>", "<c-w><c-w><c-u><c-w><c-w>")
-
--- Resize windows
-vim.keymap.set("n", "<Left>", ":vertical resize -2<CR>")
-vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>")
-vim.keymap.set("n", "<Up>", ":resize -2<CR>")
-vim.keymap.set("n", "<Down>", ":resize +2<CR>")
-
 vim.keymap.set("n", "<leader>ir", function()
 	local start = vim.fn.input("start: ")
 	local stop = vim.fn.input("stop: ")
@@ -141,7 +131,7 @@ end
 
 vim.api.nvim_create_user_command("Scratch", Scratch, {})
 
-function SearchToQuickfix()
+vim.keymap.set("n", "<leader>/", function()
 	local pattern = vim.fn.getreg("/")
 	if pattern == "" then
 		print("No search pattern")
@@ -150,6 +140,6 @@ function SearchToQuickfix()
 
 	vim.cmd("vimgrep /" .. pattern .. "/j %")
 	vim.cmd("copen")
-end
+end, { desc = "Search to quickfix" })
 
-vim.keymap.set("n", "<leader>/", SearchToQuickfix, { desc = "Search to quickfix" })
+vim.keymap.set('n', 'yp', function() vim.fn.setreg('+', vim.fn.expand('%')) end)
