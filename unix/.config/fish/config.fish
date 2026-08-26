@@ -58,3 +58,43 @@ if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# Run pi in an isolated Docker container while sharing the current project and
+# pi's settings/sessions. Project tools installed by mise persist in a volume.
+function pi --description "Run pi in a Docker container"
+    set -l docker_args --rm --init -i
+
+    if isatty stdin; and isatty stdout
+        set -a docker_args -t
+    end
+
+    set -a docker_args \
+        --mount "type=bind,source=$PWD,target=$PWD" \
+        --mount "type=bind,source=$HOME/.pi,target=/root/.pi" \
+        --mount "type=volume,source=pi-mise-data,target=/root/.local/share/mise" \
+        --workdir "$PWD"
+
+    # Linked Git worktrees keep their metadata in the main checkout's .git
+    # directory, outside the mounted worktree.
+    set -l git_common (command git rev-parse --path-format=absolute --git-common-dir 2>/dev/null)
+    if test -n "$git_common"; and not string match -q "$PWD/*" "$git_common"
+        set -a docker_args --mount "type=bind,source=$git_common,target=$git_common"
+    end
+
+    for name in GH_TOKEN ANTHROPIC_API_KEY OPENAI_API_KEY GEMINI_API_KEY GOOGLE_API_KEY
+        if set -q $name
+            set -a docker_args --env $name
+        end
+    end
+
+    docker run $docker_args pi-sandbox $argv
+end
+
+function pi-update --description "Rebuild the pi Docker image"
+    docker build \
+        --pull \
+        --no-cache \
+        -t pi-sandbox \
+        -f "$HOME/.config/pi-container/Dockerfile" \
+        "$HOME/.config/pi-container"
+end

@@ -1,8 +1,12 @@
-/.git/
+# macos desktop services from finder
 .DS_Store
+# root level python virtual environment
 /.venv/
+# root level node_modules
 /node_modules/
+# python cache files
 __pycache__/
-
-
-**/.claude/settings.local.json
+# editor automatic backup files
+*~
+# mise local settings
+mise.local.toml

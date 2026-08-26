@@ -9,7 +9,7 @@ vim.pack.add({ github .. "tpope/vim-surround" })
 vim.pack.add({ github .. "tpope/vim-repeat" })
 
 vim.pack.add({ github .. "erietz/isocon.nvim" })
-local background = vim.env.BACKGROUND or vim.g.background
+vim.pack.add({ github .. "folke/tokyonight.nvim" })
 
 local function is_dark()
 	local theme = vim.fn.systemlist("defaults read -g AppleInterfaceStyle 2>/dev/null")[1]
@@ -30,7 +30,6 @@ if background == "light" then
 			magenta = 305,
 		},
 	})
-	vim.cmd("colorscheme isocon")
 else
 	require("isocon").setup({
 		background = "#282c34",
@@ -41,8 +40,8 @@ else
 			magenta = 305,
 		},
 	})
-	vim.cmd("colorscheme isocon")
 end
+vim.cmd("colorscheme tokyonight-storm")
 
 vim.pack.add({
 	{ src = github .. "nvim-lualine/lualine.nvim" },
