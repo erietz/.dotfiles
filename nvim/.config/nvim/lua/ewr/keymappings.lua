@@ -142,4 +142,6 @@ vim.keymap.set("n", "<leader>/", function()
 	vim.cmd("copen")
 end, { desc = "Search to quickfix" })
 
-vim.keymap.set('n', 'yp', function() vim.fn.setreg('+', vim.fn.expand('%')) end)
+vim.keymap.set("n", "yp", function()
+	vim.fn.setreg("+", vim.fn.expand("%"))
+end)
