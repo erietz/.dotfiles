@@ -10,7 +10,6 @@ main() {
 
 	stow_verbose unix
 	stow_verbose nvim
-	stow_verbose nvim-old
 
 	case "$OS" in
 	Linux)

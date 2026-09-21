@@ -1,0 +1,39 @@
+# Keep any system-wide defaults (harmless if the file is absent)
+$include /etc/inputrc
+
+# vi editing mode for every readline program (bash, python, psql, etc.)
+set editing-mode vi
+
+# Make Ctrl-L clear the screen in every vi keymap
+set keymap vi-insert
+"\C-l": clear-screen
+set keymap vi-command
+"\C-l": clear-screen
+
+# Back to the shared keymap for the general settings below
+set keymap vi-insert
+
+# show whether you're in insert vs. command mode
+set show-mode-in-prompt on
+
+# tab-complete regardless of letter case
+set completion-ignore-case on
+
+# a single Tab lists all matches (no double-tap)
+set show-all-if-ambiguous on
+
+# color the completion list by file type, like `ls`
+set colored-stats on
+
+# highlight the already-typed part of a completion
+set colored-completion-prefix on
+
+# add a trailing / to completed symlinked dirs
+set mark-symlinked-directories on
+
+# silence the terminal beep
+set bell-style none
+
+# History search: type a prefix, then Up/Down to cycle only matching commands
+"\e[A": history-search-backward
+"\e[B": history-search-forward
