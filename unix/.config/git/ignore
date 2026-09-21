@@ -10,3 +10,5 @@ __pycache__/
 *~
 # mise local settings
 mise.local.toml
+
+**/.claude/.cc-writes/

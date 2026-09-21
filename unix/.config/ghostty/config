@@ -5,8 +5,8 @@ keybind = global:cmd+backquote=toggle_quick_terminal
 quick-terminal-position = center
 quick-terminal-size = 50%,50%
 
-# theme = dark:isocon-dark,light:isocon-light
-theme = dark:TokyoNight Storm,light:Tokyo Night Day
+theme = dark:isocon-dark,light:isocon-light
+# theme = dark:TokyoNight Storm,light:Tokyo Night Day
 # theme = dark:Kanagawa Wave,light:Seoulbones Light
 # theme = dark:Kanagawa Wave,light:dayfox
 # theme = dark:Catppuccin Frappe,light:Catppuccin Latte
@@ -24,5 +24,5 @@ font-size = 18
 font-family = "JetBrainsMono Nerd Font Mono"
 # font-family = "Hack Nerd Font"
 
-# background-opacity = 0.9
-# background-blur-radius = 50
+background-opacity = 0.95
+background-blur-radius = 60

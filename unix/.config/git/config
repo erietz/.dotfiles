@@ -21,6 +21,7 @@
 	unreleased = !bash -c 'comm -23 <(git branch -r --merged origin/develop | sort) <(git branch -r --merged origin/main | sort)'
 	prune-merged = "!git branch --merged main | grep -vE '^\\*|^\\s*(main|master)\\s*$' | xargs -n1 git branch -d"
 	prune-stale = "!git fetch --prune && git branch -vv | awk '/: gone]/{print $1}' | xargs -n1 git branch -d"
+	prune-worktrees = "!git worktree list --porcelain | awk '/^worktree / {print substr($0, 10)}' | tail -n +2 | xargs -t -n1 git worktree remove"
 [init]
 	defaultBranch = main
 [pull]

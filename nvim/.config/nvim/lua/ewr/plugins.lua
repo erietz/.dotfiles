@@ -22,26 +22,34 @@ end
 local background = vim.env.BACKGROUND or vim.g.background or (is_dark() and "dark" or "light")
 if background == "light" then
 	require("isocon").setup({
-		background = "#fdf6e3",
-		contrast = 3.0,
+		background = "#eef3ea",
+		contrast = 4.5,
 		bright_boost = 1.2,
 		hues = {
+			red = 25,
 			green = 150,
+			yellow = 85,
+			blue = 260,
 			magenta = 305,
+			cyan = 200,
 		},
 	})
 else
 	require("isocon").setup({
-		background = "#282c34",
-		contrast = 5.0,
+		background = "#062329",
+		contrast = 4.5,
 		bright_boost = 1.3,
 		hues = {
+			red = 0,
 			green = 150,
-			magenta = 305,
+			blue = 240,
+			yellow = 60,
+			magenta = 297,
+			cyan = 180,
 		},
 	})
 end
-vim.cmd("colorscheme tokyonight-storm")
+vim.cmd("colorscheme isocon")
 
 vim.pack.add({
 	{ src = github .. "nvim-lualine/lualine.nvim" },
@@ -51,6 +59,11 @@ require("lualine").setup({})
 
 vim.pack.add({ github .. "ibhagwan/fzf-lua" })
 local fzf = require("fzf-lua")
+fzf.setup({
+	winopts = {
+		fullscreen = true,
+	}
+})
 vim.keymap.set("n", "<leader>ff", fzf.files)
 vim.keymap.set("n", "<leader><Tab>", fzf.buffers)
 vim.keymap.set("n", "<c-p>", fzf.git_files)

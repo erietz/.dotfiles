@@ -31,5 +31,4 @@ abbr -a jlremote 'jupyter lab --no-browser --port=9876'
 abbr -a rcp 'rsync --progress --verbose --recursive'
 abbr -a sl 'ls'
 abbr -a l 'eza -l'
-abbr -a vim 'nvim'
 alias nvim-old "NVIM_APPNAME=nvim-old nvim"
