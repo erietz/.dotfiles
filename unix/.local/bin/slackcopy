@@ -1,0 +1,42 @@
+#!/bin/bash
+# slackcopy: turn markdown on the clipboard (or stdin) into rich text Slack can paste
+#
+# macOS: sets both HTML and the original markdown as plain text.
+# Linux: wl-copy (Wayland) / xclip (X11) can only offer one type, so HTML only.
+set -euo pipefail
+
+if [ "$(uname)" = Darwin ]; then
+  paste_cmd() { pbpaste; }
+elif [ -n "${WAYLAND_DISPLAY:-}" ]; then
+  paste_cmd() { wl-paste --no-newline; }
+elif [ -n "${DISPLAY:-}" ]; then
+  paste_cmd() { xclip -selection clipboard -o; }
+else
+  echo "slackcopy: no supported clipboard (need macOS, Wayland or X11)" >&2
+  exit 1
+fi
+
+# only read stdin when something is piped/redirected in; a non-tty stdin alone
+# (e.g. Claude Code's `!` shell) doesn't mean there's input
+if [ -p /dev/stdin ] || [ -f /dev/stdin ]; then
+  md=$(cat)
+else
+  md=$(paste_cmd)
+fi
+
+if [ -z "$md" ]; then
+  echo "slackcopy: nothing to convert (clipboard/stdin is empty)" >&2
+  exit 1
+fi
+
+html=$(printf '%s' "$md" | pandoc -f gfm -t html)
+
+if [ "$(uname)" = Darwin ]; then
+  html_hex=$(printf '%s' "$html" | hexdump -ve '1/1 "%.2x"')
+  txt_hex=$(printf '%s' "$md" | hexdump -ve '1/1 "%.2x"')
+  osascript -e "set the clipboard to {«class utf8»:«data utf8${txt_hex}», «class HTML»:«data HTML${html_hex}»}"
+elif [ -n "${WAYLAND_DISPLAY:-}" ]; then
+  printf '%s' "$html" | wl-copy --type text/html
+else
+  printf '%s' "$html" | xclip -selection clipboard -t text/html
+fi

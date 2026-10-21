@@ -18,7 +18,7 @@ main() {
 			stow_verbose arch
 		fi
 
-		if [ "$LINK_GUI_PACKAGES" = true ]; then
+		if [ "$LINK_GUI_DOTFILES" = true ]; then
 			stow_verbose linux
 		fi
 		;;
