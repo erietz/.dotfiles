@@ -1,0 +1,20 @@
+#!/bin/bash
+# slackcopy: turn markdown on the clipboard (or stdin) into rich text Slack can paste
+set -euo pipefail
+
+# only read stdin when something is piped/redirected in; a non-tty stdin alone
+# (e.g. Claude Code's `!` shell) doesn't mean there's input
+if [ -p /dev/stdin ] || [ -f /dev/stdin ]; then
+  md=$(cat)
+else
+  md=$(pbpaste)
+fi
+
+if [ -z "$md" ]; then
+  echo "slackcopy: nothing to convert (clipboard/stdin is empty)" >&2
+  exit 1
+fi
+
+html_hex=$(printf '%s' "$md" | pandoc -f gfm -t html | hexdump -ve '1/1 "%.2x"')
+txt_hex=$(printf '%s' "$md" | hexdump -ve '1/1 "%.2x"')
+osascript -e "set the clipboard to {«class utf8»:«data utf8${txt_hex}», «class HTML»:«data HTML${html_hex}»}"
