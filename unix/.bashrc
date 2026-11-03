@@ -72,6 +72,10 @@ HISTFILESIZE=200000        # commands to keep in the on-disk history file
 HISTCONTROL=ignoreboth     # skip duplicate and space-prefixed commands in history
 
 shopt -s histappend        # append to the history file on exit instead of overwriting
+
+# share history live across shells (tmux panes/windows): after every command,
+# append new lines to $HISTFILE (-a) and read lines other shells have added (-n)
+PROMPT_COMMAND="history -a; history -n${PROMPT_COMMAND:+; $PROMPT_COMMAND}"
 shopt -s checkwinsize      # keep $LINES/$COLUMNS accurate after a terminal resize
 shopt -s globstar          # let ** match files/dirs recursively in globs
 # shopt -s cdspell           # auto-correct minor typos in `cd` arguments
