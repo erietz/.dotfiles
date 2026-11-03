@@ -38,7 +38,17 @@ vim.lsp.enable("bashls")
 
 vim.lsp.config("clangd", {
 	cmd = { "clangd" },
+	filetypes = {
+		"c",
+		"cpp",
+		"objc",
+		"objcpp",
+		"cuda",
+		"proto",
+		"arduino",
+	},
 })
+
 vim.lsp.enable("clangd")
 
 -- pnpm add -g vscode-langservers-extracted

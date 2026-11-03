@@ -75,3 +75,5 @@ shopt -s histappend        # append to the history file on exit instead of overw
 shopt -s checkwinsize      # keep $LINES/$COLUMNS accurate after a terminal resize
 shopt -s globstar          # let ** match files/dirs recursively in globs
 # shopt -s cdspell           # auto-correct minor typos in `cd` arguments
+
+[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local

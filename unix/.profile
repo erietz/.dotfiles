@@ -15,3 +15,5 @@ fi
 # Disables other users from writing directly to your terminal with write(1).
 # The || true prevents failure from affecting shell startup.
 mesg n 2> /dev/null || true
+
+. "$HOME/.local/share/../bin/env"

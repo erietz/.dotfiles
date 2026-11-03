@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 vim.opt.number = true                                  -- Line numbers
-vim.opt.relativenumber = true                          -- Relative line numbers
+-- vim.opt.relativenumber = true                          -- Relative line numbers
 vim.opt.termguicolors = true                           -- Better colors
 vim.opt.hidden = true                                  -- Change buffers without having to save
 vim.opt.mouse = "a"                                    -- Mouse enabled in insert mode
@@ -102,4 +102,10 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 vim.api.nvim_create_autocmd({ "FileType" }, {
 	pattern = { "dbout" },
 	command = ":set nofoldenable",
+})
+
+-- spell check git files
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	pattern = { "gitcommit", "gitconfig" },
+	command = "setlocal spell",
 })
